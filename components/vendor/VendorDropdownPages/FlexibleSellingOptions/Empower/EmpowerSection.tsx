@@ -8,7 +8,7 @@ type EmpowerSectionProps = {
 
 export function EmpowerSection({ data }: EmpowerSectionProps) {
   return (
-    <section className="relative z-30 -mt-[100px] rounded-t-[5rem] bg-white px-6 py-16 sm:py-24">
+    <section className="relative z-30 -mt-[100px] rounded-t-[30px] sm:rounded-t-[5rem] bg-white px-6 py-16 sm:py-24">
       <div className="mx-auto max-w-7xl">
         {/* Title */}
         <h2 className="mb-12 max-w-3xl text-3xl font-normal text-black sm:mb-16 sm:text-4xl lg:text-5xl">

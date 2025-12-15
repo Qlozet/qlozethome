@@ -8,7 +8,7 @@ type HowItWorksSectionProps = {
 
 export function HowItWorksSection({ data }: HowItWorksSectionProps) {
   return (
-    <section className="bg-[#3d3d3d] rounded-t-[5rem] mt-[-100px] px-6 py-16 sm:py-24 z-20 relative pb-[200px] sm:pb-[200px]">
+    <section className="bg-[#3d3d3d] rounded-t-[30px] sm:rounded-t-[5rem] mt-[-100px] px-6 py-16 sm:py-24 z-20 relative pb-[200px] sm:pb-[200px]">
       <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16 xl:gap-20">
         {/* Left Content - Steps */}
         <div className="flex flex-col">

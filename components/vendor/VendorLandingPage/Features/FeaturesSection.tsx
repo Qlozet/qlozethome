@@ -11,7 +11,7 @@ export function VendorFeatures({ data }: FeaturesProps) {
   return (
     <section
       id={data.id}
-      className=" rounded-t-[5rem] mt-[-100px] relative z-10 scroll-mt-32 bg-[#1b1b1b] py-24 sm:py-32"
+      className=" rounded-t-[30px] sm:rounded-t-[5rem] mt-[-100px] relative z-10 scroll-mt-32 bg-[#1b1b1b] py-24 sm:py-32"
     >
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-20 px-6">
         <h2 className="text-center text-4xl font-bold text-white sm:text-5xl lg:text-6xl">

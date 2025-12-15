@@ -8,7 +8,7 @@ type DifferentiatorsSectionProps = {
 
 export function DifferentiatorsSection({ data }: DifferentiatorsSectionProps) {
   return (
-    <section className="bg-white rounded-t-[5rem] mt-[-100px] relative z-10 px-6 py-16 sm:py-24">
+    <section className="bg-white rounded-t-[30px] sm:rounded-t-[5rem] mt-[-100px] relative z-10 px-6 py-16 sm:py-24">
       <div className="mx-auto max-w-7xl">
         {/* Title */}
         <h2 className="mb-4 text-center text-3xl font-normal text-black sm:text-4xl lg:text-5xl">

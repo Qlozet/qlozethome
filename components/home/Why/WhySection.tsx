@@ -17,7 +17,7 @@ export function WhySection({ data, scrollPrompt }: WhySectionProps) {
   return (
     <section
       id={data.id}
-      className="relative -mt-[100px] rounded-t-[5rem] bg-white py-24 sm:py-32 scroll-mt-32"
+      className="relative -mt-[100px] rounded-t-[30px] sm:rounded-t-[5rem] bg-white py-24 sm:py-32 scroll-mt-32"
     >
       {scrollPrompt ? (
         <Link

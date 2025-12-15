@@ -19,7 +19,7 @@ type PrivateDesignSectionProps = {
 
 export function PrivateDesignSection({ data }: PrivateDesignSectionProps) {
   return (
-    <section className="relative z-30 -mt-[100px] rounded-t-[5rem] bg-[#3d3d3d] px-6 py-16 sm:py-24">
+    <section className="relative z-30 -mt-[100px] rounded-t-[30px] sm:rounded-t-[5rem] bg-[#3d3d3d] px-6 py-16 sm:py-24 pb-[100px] sm:pb-[100px]">
       <div className="mx-auto max-w-[1400px]">
         {/* Title */}
         <h2 className="mb-12 text-3xl font-normal text-white sm:text-4xl lg:mb-16 lg:text-5xl">

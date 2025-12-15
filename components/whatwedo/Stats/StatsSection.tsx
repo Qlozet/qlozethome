@@ -6,7 +6,7 @@ type StatsSectionProps = {
 
 export function StatsSection({ data }: StatsSectionProps) {
   return (
-    <section className="bg-[#3d3d3d] rounded-t-[5rem] mt-[-100px] relative z-10 px-6 py-20 sm:py-32 lg:py-40">
+    <section className="bg-[#3d3d3d] rounded-t-[30px] sm:rounded-t-[5rem] mt-[-100px] relative z-10 px-6 py-20 sm:py-32 lg:py-40">
       <div className="mx-auto max-w-[1400px]">
         {/* Title */}
         <h2 className="mb-16 max-w-2xl text-3xl font-normal text-white sm:mb-20 sm:text-4xl lg:mb-24 lg:text-5xl">

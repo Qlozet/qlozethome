@@ -16,7 +16,7 @@ type PerksSectionProps = {
 
 export function PerksSection({ data }: PerksSectionProps) {
   return (
-    <section className="w-full bg-white relative z-20 rounded-t-[5rem] mt-[-100px] px-6 pt-16  sm:px-12 sm:pt-24  lg:px-16">
+    <section className="w-full bg-white relative z-20 rounded-t-[30px] sm:rounded-t-[5rem] mt-[-100px] px-6 pt-16  sm:px-12 sm:pt-24  lg:px-16">
       <div className="mx-auto max-w-[1200px]">
 
 

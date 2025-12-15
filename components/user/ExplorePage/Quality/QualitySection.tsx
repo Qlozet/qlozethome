@@ -15,7 +15,7 @@ export function PillarsSection({ data }: PillarsSectionProps) {
   const activeTabData = data.tabs.find((tab) => tab.id === activeTab);
 
   return (
-    <section className="relative z-10 bg-[#3A3A3A] rounded-t-[5rem] mt-[-100px] px-6 py-16 sm:py-24 pb-[200px] sm:pb-[200px]">
+    <section className="relative z-10 bg-[#3A3A3A] rounded-t-[30px] sm:rounded-t-[5rem] mt-[-100px] px-6 py-16 sm:py-24 pb-[200px] sm:pb-[200px]">
       <div className="mx-auto max-w-7xl">
         {/* Title */}
         <h2 className="mb-4 text-center text-3xl font-normal text-white sm:text-4xl lg:text-5xl">

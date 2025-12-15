@@ -8,7 +8,7 @@ type WhatWeDoSectionProps = {
 
 export function WhatWeDoSection({ data }: WhatWeDoSectionProps) {
   return (
-    <section className="bg-white relative z-10 rounded-t-[5rem] mt-[-100px] px-6 py-16 sm:py-24 pb-[200px] sm:pb-[200px]">
+    <section className="bg-white relative z-10 rounded-t-[30px] sm:rounded-t-[5rem] mt-[-100px] px-6 py-16 sm:py-24 pb-[200px] sm:pb-[200px]">
       <div className="mx-auto max-w-7xl">
         {/* Title */}
         <h2 className="mb-4 text-center text-3xl font-normal text-black sm:text-4xl lg:text-5xl">

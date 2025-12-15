@@ -11,7 +11,7 @@ export function HighlightsSection({ data }: HighlightsSectionProps) {
   return (
     <section
       id={data.id}
-      className="scroll-mt-32 rounded-t-[5rem] bg-[#1b1b1b] pb-[200px] sm:pb-[200px] py-24 sm:py-32"
+      className="scroll-mt-32 rounded-t-[30px] sm:rounded-t-[5rem] bg-[#1b1b1b] pb-[200px] sm:pb-[200px] py-24 sm:py-32"
     >
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-6 text-white">
         {data.items.map((item, index) => {

@@ -11,7 +11,7 @@ type ShoppingSectionProps = {
 
 export function ShoppingSection({ data }: ShoppingSectionProps) {
   return (
-    <section id={data.id} className="bg-white -mt-[100px] rounded-t-[5rem] py-24 sm:py-32 scroll-mt-32">
+    <section id={data.id} className="bg-white -mt-[100px] rounded-t-[30px] sm:rounded-t-[5rem] py-24 sm:py-32 scroll-mt-32">
       <div className="mx-auto grid w-full max-w-6xl gap-12 px-6 lg:grid-cols-2 lg:items-center">
         <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-white">
           <Image
