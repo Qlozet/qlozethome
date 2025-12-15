@@ -12,7 +12,7 @@ export function EarlyAccessSection({ data }: EarlyAccessSectionProps) {
       id={data.id}
       className="scroll-mt-32 bg-white py-24 sm:py-32"
     >
-      <div className="mx-auto w-full max-w-[90rem] px-6">
+      <div className="mx-auto w-full max-w-[90rem] px-6 overflow-x-hidden">
         <div className="grid w-full items-stretch gap-8 rounded-4xl bg-[#ebeeee] p-6 shadow-[0_20px_60px_-40px_rgba(0,0,0,0.15)] lg:grid-cols-[1fr_1.1fr] lg:gap-12 lg:p-8">
           <div className="relative -m-6 h-full min-h-[400px] overflow-hidden lg:-m-8 lg:min-h-[550px]">
             <Image

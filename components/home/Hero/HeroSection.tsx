@@ -19,7 +19,7 @@ export function HeroSection({ data }: HeroSectionProps) {
         fill
         className="object-cover object-top opacity-70"
         priority
-        sizes="800vw"
+        sizes="100vw"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black" aria-hidden />
       <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center gap-12 px-6 py-32 text-center">

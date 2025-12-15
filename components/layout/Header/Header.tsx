@@ -28,7 +28,7 @@ export function Header({ data }: HeaderProps) {
         : "border-white/10 bg-black/40 backdrop-blur"
         }`}
     >
-      <div className="relative flex items-center justify-between pl-0 pr-6 py-4">
+      <div className="relative flex items-center justify-between gap-4 px-4 py-4 sm:px-6">
         <Link href={data.logo.href} className="flex items-center gap-2">
           <div className="relative h-8 w-28 sm:w-32">
             <Image
@@ -41,7 +41,7 @@ export function Header({ data }: HeaderProps) {
             />
           </div>
         </Link>
-        
+
         {/* Hamburger Button - Mobile Only */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -82,7 +82,7 @@ export function Header({ data }: HeaderProps) {
 
         {/* Desktop Navigation */}
         <nav
-          className={`hidden items-center gap-10 text-[13px] font-extrabold md:flex ${isCustomizePage ? "text-gray-700" : "text-white/80"
+          className={`hidden shrink-0items-center gap-10 text-[13px] font-extrabold md:flex ${isCustomizePage ? "text-gray-700" : "text-white/80"
             }`}
         >
           {data.links.map((link) => {
@@ -158,7 +158,7 @@ export function Header({ data }: HeaderProps) {
                           </div>
                         </div>
                         {/* Divider */}
-                        <div className="absolute bottom-8 left-1/2 top-8 w-px -translate-x-1/2 bg-gray-200" />
+                        <div className="hidden lg:absolute lg:bottom-8 lg:left-1/2 lg:top-8 lg:block lg:w-px lg:-translate-x-1/2 lg:bg-gray-200" />
                         {/* Vendors Column */}
                         <div className="flex flex-col gap-6">
                           <div className="flex items-center gap-3">
@@ -188,8 +188,9 @@ export function Header({ data }: HeaderProps) {
                                 href={feature.href}
                                 className="group flex items-start justify-between gap-3 rounded-lg p-2 transition hover:bg-gray-50"
                               >
-                                <div className="flex flex-col gap-1">
-                                  <h4 className="text-base font-semibold text-[#1b1b1b]">
+
+                                <div className="flex min-w-0 flex-1 flex-col gap-1">
+                                  <h4 className="wrap-break-word text-base font-semibold text-[#1b1b1b]">
                                     {feature.title}
                                   </h4>
                                   <p className="text-sm text-gray-500">
@@ -221,7 +222,7 @@ export function Header({ data }: HeaderProps) {
           })}
         </nav>
         <div
-          className={`hidden items-center gap-4 text-[0.65rem] font-semibold uppercase tracking-[0.35em] md:flex ${isCustomizePage ? "text-gray-700" : "text-white"
+          className={`hidden shrink-0 items-center gap-4 text-[0.65rem] font-semibold uppercase tracking-[0.35em] md:flex ${isCustomizePage ? "text-gray-700" : "text-white"
             }`}
         >
           <Link
@@ -256,7 +257,7 @@ export function Header({ data }: HeaderProps) {
                 {data.links.map((link) => {
                   const hasDropdown = "dropdown" in link && link.dropdown;
                   const isDropdownOpen = openDropdown === link.label;
-                  
+
                   return (
                     <div key={link.label} className="border-b border-gray-200/10 last:border-b-0">
                       {hasDropdown ? (
@@ -344,7 +345,7 @@ export function Header({ data }: HeaderProps) {
                     </div>
                   );
                 })}
-                
+
                 {/* Mobile CTA Buttons */}
                 <div className="mt-6 flex flex-col gap-3 border-t border-gray-200/10 pt-6">
                   <Link

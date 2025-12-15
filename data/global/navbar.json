@@ -11,7 +11,7 @@
     },
     {
       "label": "SERVICES",
-      "href": "#shopping",
+      "href": "#",
       "dropdown": {
         "shoppers": {
           "title": "Shoppers",
@@ -20,7 +20,7 @@
             {
               "title": "Shop with us",
               "description": "Your reliable handy tool.",
-              "href": "#shop"
+              "href": "/"
             },
             {
               "title": "Customize your outfit",
