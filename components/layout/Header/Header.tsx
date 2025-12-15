@@ -13,6 +13,7 @@ type HeaderProps = {
 
 export function Header({ data }: HeaderProps) {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const isCustomizePage = pathname?.includes("/customize") || pathname?.includes("/whatwedo") || pathname?.includes("/measurement") || pathname?.includes("/designyouroutfit") || pathname?.includes("/explore") || pathname?.includes("/flexiblesellingoptions") || pathname?.includes("/instantstorefront") || pathname?.includes("/aimeasurement") || pathname?.includes("/shipsmarter") || pathname?.includes("/clothinggenerator") || pathname?.includes("/chatwithcustomers") || pathname?.includes("/managesteps");
 
@@ -40,6 +41,29 @@ export function Header({ data }: HeaderProps) {
             />
           </div>
         </Link>
+        {/* Mobile Hamburger Button */}
+        <button
+          type="button"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className={`md:hidden flex flex-col gap-1.5 p-2 ${isCustomizePage ? "text-gray-700" : "text-white"}`}
+          aria-label="Toggle menu"
+        >
+          <span
+            className={`block h-0.5 w-6 transition-all ${
+              mobileMenuOpen ? "rotate-45 translate-y-2" : ""
+            } ${isCustomizePage ? "bg-gray-700" : "bg-white"}`}
+          />
+          <span
+            className={`block h-0.5 w-6 transition-all ${
+              mobileMenuOpen ? "opacity-0" : ""
+            } ${isCustomizePage ? "bg-gray-700" : "bg-white"}`}
+          />
+          <span
+            className={`block h-0.5 w-6 transition-all ${
+              mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+            } ${isCustomizePage ? "bg-gray-700" : "bg-white"}`}
+          />
+        </button>
         <nav
           className={`hidden items-center gap-10 text-[13px] font-extrabold md:flex ${isCustomizePage ? "text-gray-700" : "text-white/80"
             }`}
@@ -180,12 +204,12 @@ export function Header({ data }: HeaderProps) {
           })}
         </nav>
         <div
-          className={`flex items-center gap-4 text-[0.65rem] font-semibold uppercase tracking-[0.35em] ${isCustomizePage ? "text-gray-700" : "text-white"
+          className={`hidden md:flex items-center gap-4 text-[0.65rem] font-semibold uppercase tracking-[0.35em] ${isCustomizePage ? "text-gray-700" : "text-white"
             }`}
         >
           <Link
             href={data.secondary.href}
-            className={`hidden rounded-[8px] border px-5 py-2 transition md:inline-flex ${isCustomizePage
+            className={`rounded-[8px] border px-5 py-2 transition ${isCustomizePage
               ? "border-gray-300 hover:border-gray-400 hover:bg-gray-50"
               : "border-white/40 hover:border-white hover:bg-white/10"
               }`}
@@ -203,6 +227,87 @@ export function Header({ data }: HeaderProps) {
           </Link>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className={`md:hidden border-t ${isCustomizePage ? "border-gray-200 bg-white" : "border-white/10 bg-black/95 backdrop-blur"}`}>
+          <nav className="flex flex-col px-6 py-4 space-y-4">
+            {data.links.map((link) => {
+              const hasDropdown = "dropdown" in link && link.dropdown;
+              return (
+                <div key={link.label} className="flex flex-col">
+                  <Link
+                    href={link.href}
+                    className={`text-base font-semibold py-2 ${isCustomizePage ? "text-gray-900" : "text-white"}`}
+                    onClick={() => !hasDropdown && setMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                  {hasDropdown && (
+                    <div className="mt-2 ml-4 space-y-4">
+                      {/* Shoppers Section */}
+                      <div className="flex flex-col gap-3">
+                        <h4 className={`text-sm font-bold ${isCustomizePage ? "text-gray-900" : "text-white"}`}>
+                          {link.dropdown.shoppers.title}
+                        </h4>
+                        {link.dropdown.shoppers.features.map((feature: any, idx: number) => (
+                          <Link
+                            key={idx}
+                            href={feature.href}
+                            className={`text-sm py-1 ${isCustomizePage ? "text-gray-600" : "text-white/80"}`}
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {feature.title}
+                          </Link>
+                        ))}
+                      </div>
+                      {/* Vendors Section */}
+                      <div className={`flex flex-col gap-3 pt-2 border-t ${isCustomizePage ? "border-gray-200" : "border-white/10"}`}>
+                        <h4 className={`text-sm font-bold ${isCustomizePage ? "text-gray-900" : "text-white"}`}>
+                          {link.dropdown.vendors.title}
+                        </h4>
+                        {link.dropdown.vendors.features.map((feature: any, idx: number) => (
+                          <Link
+                            key={idx}
+                            href={feature.href}
+                            className={`text-sm py-1 ${isCustomizePage ? "text-gray-600" : "text-white/80"}`}
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {feature.title}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+            {/* Mobile CTA Buttons */}
+            <div className={`flex flex-col gap-3 pt-4 border-t ${isCustomizePage ? "border-gray-200" : "border-white/10"}`}>
+              <Link
+                href={data.secondary.href}
+                className={`rounded-[8px] border px-5 py-2 text-center text-[0.65rem] font-semibold uppercase tracking-[0.35em] transition ${isCustomizePage
+                  ? "border-gray-300 text-gray-700 hover:bg-gray-50"
+                  : "border-white/40 text-white hover:bg-white/10"
+                  }`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {data.secondary.label}
+              </Link>
+              <Link
+                href={data.cta.href}
+                className={`rounded-[8px] px-5 py-2 text-center text-[0.65rem] font-semibold uppercase tracking-[0.35em] transition ${isCustomizePage
+                  ? "bg-gray-900 text-white hover:bg-gray-800"
+                  : "bg-white text-black hover:bg-neutral-200"
+                  }`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {data.cta.label}
+              </Link>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
