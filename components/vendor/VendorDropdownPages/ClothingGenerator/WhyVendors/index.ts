@@ -1,3 +1,1 @@
-export { WhyVendorsSection } from "./WhyVendorsSection";
-
 

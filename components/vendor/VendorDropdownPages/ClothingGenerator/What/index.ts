@@ -1,3 +1,1 @@
-export { WhatSection } from "./WhatSection";
-
 

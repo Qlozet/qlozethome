@@ -1,3 +1,1 @@
-export { ClaritySection } from "./ClaritySection";
-
 

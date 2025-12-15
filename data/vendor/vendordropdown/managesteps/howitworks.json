@@ -2,28 +2,28 @@
   "title": "How it works",
   "steps": [
     {
-      "id": "accept",
+      "id": "define-stages",
       "icon": "/image/hierarchy.png",
-      "title": "Accept",
-      "description": "Confirm order, lead time, and deposit. Automatic acknowledgement to the customer."
+      "title": "Define your stages",
+      "description": "Set up workflow steps like Confirmed, Cutting, Sewing, QA, Ready to Ship—tailored to your process."
     },
     {
-      "id": "produce",
+      "id": "assign-orders",
       "icon": "/image/setting-4.png",
-      "title": "Produce",
-      "description": "Track cutting, stitching, fitting, and QA with timestamps and notes."
+      "title": "Assign orders",
+      "description": "Move items into stages manually or trigger them automatically based on actions like payment or measurement upload."
     },
     {
-      "id": "ship",
+      "id": "track-progress",
       "icon": "/image/chart.png",
-      "title": "Ship",
-      "description": "Print labels, push tracking, and capture proof-of-handoff or signature."
+      "title": "Track progress",
+      "description": "See real-time status for each order, identify bottlenecks, and reassign work as needed."
     },
     {
-      "id": "fit-aftercare",
+      "id": "notify-customers",
       "icon": "/image/shield-tick.png",
-      "title": "Fit & After-Care",
-      "description": "Customer confirms fit. Manage alterations, returns, or disputes in one place."
+      "title": "Notify customers",
+      "description": "Automatic updates at each milestone keep buyers informed without extra effort from your team."
     }
   ]
 }
