@@ -14,6 +14,7 @@ type HeaderProps = {
 export function Header({ data }: HeaderProps) {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState<string | null>(null);
   const pathname = usePathname();
   const isCustomizePage = pathname?.includes("/customize") || pathname?.includes("/whatwedo") || pathname?.includes("/measurement") || pathname?.includes("/designyouroutfit") || pathname?.includes("/explore") || pathname?.includes("/flexiblesellingoptions") || pathname?.includes("/instantstorefront") || pathname?.includes("/aimeasurement") || pathname?.includes("/shipsmarter") || pathname?.includes("/clothinggenerator") || pathname?.includes("/chatwithcustomers") || pathname?.includes("/managesteps");
 
@@ -234,16 +235,39 @@ export function Header({ data }: HeaderProps) {
           <nav className="flex flex-col px-6 py-4 space-y-4">
             {data.links.map((link) => {
               const hasDropdown = "dropdown" in link && link.dropdown;
+              const isMobileDropdownOpen = mobileDropdownOpen === link.label;
               return (
                 <div key={link.label} className="flex flex-col">
-                  <Link
-                    href={link.href}
-                    className={`text-base font-semibold py-2 ${isCustomizePage ? "text-gray-900" : "text-white"}`}
-                    onClick={() => !hasDropdown && setMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                  {hasDropdown && (
+                  {hasDropdown ? (
+                    <button
+                      type="button"
+                      onClick={() => setMobileDropdownOpen(isMobileDropdownOpen ? null : link.label)}
+                      className={`flex items-center justify-between text-base font-semibold py-2 ${isCustomizePage ? "text-gray-900" : "text-white"}`}
+                    >
+                      <span>{link.label}</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className={`h-5 w-5 transition-transform ${isMobileDropdownOpen ? "rotate-180" : ""}`}
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className={`text-base font-semibold py-2 ${isCustomizePage ? "text-gray-900" : "text-white"}`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  )}
+                  {hasDropdown && isMobileDropdownOpen && (
                     <div className="mt-2 ml-4 space-y-4">
                       {/* Shoppers Section */}
                       <div className="flex flex-col gap-3">
