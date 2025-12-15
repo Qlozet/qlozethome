@@ -1,0 +1,31 @@
+{
+  "title": "What makes Qlozet different",
+  "subtitle": "Four pillars unify our ecosystem—precision, personalization, productivity, and trust.",
+  "items": [
+    {
+      "id": "precision-fit",
+      "icon": "/image/ruler.png",
+      "title": "Precision Fit",
+      "description": "AI-assisted body measurement using computer vision anchors and regression models to estimate key girths and lengths with explainable overlays."
+    },
+    {
+      "id": "personalized-styles",
+      "icon": "/image/layer.png",
+      "title": "Personalized Styles",
+      "description": "Configurable style options (neckline, sleeves, length, closures, trims) with vendor-verified defaults and pricing logic."
+    },
+    {
+      "id": "unified-workflow",
+      "icon": "/image/cart.png",
+      "title": "Unified Workflow",
+      "description": "From inspiration to fabric selection, bespoke order, production tracking, QC, and delivery—managed in one place."
+    },
+    {
+      "id": "trust-safety",
+      "icon": "/image/tux.png",
+      "title": "Trust & Safety",
+      "description": "KYC'd vendors, QC checklists, dispute resolution, escrow options, and privacy-respecting data controls."
+    }
+  ]
+}
+

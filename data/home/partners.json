@@ -1,0 +1,30 @@
+{
+  "id": "partners",
+  "title": "Some of our brand partners",
+  "brands": [
+    {
+      "src": "/svg/sponsor1.svg",
+      "label": "Sponsor 1"
+    },
+    {
+      "src": "/svg/sponsor2.svg",
+      "label": "Sponsor 2"
+    },
+    {
+      "src": "/svg/sponsor3.svg",
+      "label": "Sponsor 3"
+    },
+    {
+      "src": "/svg/sponsor4.svg",
+      "label": "Sponsor 4"
+    },
+    {
+      "src": "/svg/sponsor5.svg",
+      "label": "Sponsor 5"
+    },
+    {
+      "src": "/svg/sponsor6.svg",
+      "label": "Sponsor 6"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "How it works",
+  "steps": [
+    {
+      "id": "input-concept",
+      "icon": "/image/brush.png",
+      "title": "Input your concept",
+      "description": "Describe the garment style, theme, or upload inspiration images—our AI interprets text and visuals."
+    },
+    {
+      "id": "ai-generates",
+      "icon": "/image/magicpen.png",
+      "title": "AI generates variations",
+      "description": "Within seconds, see multiple design options rendered in high quality with different cuts, colors, and details."
+    },
+    {
+      "id": "refine-customize",
+      "icon": "/image/setting-4.png",
+      "title": "Refine & customize",
+      "description": "Adjust specific elements—sleeve length, neckline, embellishments—to align with your vision or client needs."
+    },
+    {
+      "id": "export-produce",
+      "icon": "/image/verify.png",
+      "title": "Export & produce",
+      "description": "Download tech packs, share with manufacturers, or publish directly to your storefront for customer orders."
+    }
+  ]
+}
+
+

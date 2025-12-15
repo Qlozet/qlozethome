@@ -1,0 +1,30 @@
+{
+  "id": "vendor-how-it-works",
+  "title": "How it works",
+  "steps": [
+    {
+      "icon": "/image/people.png",
+      "title": "Sign Up",
+      "description": "Sign up to get access to your dashboard"
+    },
+    {
+      "icon": "/image/tux.png",
+      "title": "Upload Your Work",
+      "description": "Upload products and product photos and let them talk for you"
+    },
+    {
+      "icon": "/image/verify.png",
+      "title": "Get Verified",
+      "description": "Get accessed and verified by us"
+    },
+    {
+      "icon": "/image/moneyrecive.png",
+      "title": "Start Getting Paid",
+      "description": "Self explanatory"
+    }
+  ],
+  "image": {
+    "src": "/image/ipadframe.png",
+    "alt": "Qlozet vendor dashboard showing orders, earnings, and analytics"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "designyouroutfit",
+  "badge": "Customer",
+  "title": "Design your outfit—made to your exact taste",
+  "description": "Discover Qlozet’s AI-powered bespoke design feature that lets you visualize, customize, and create tailor-made outfits — all from your screen.",
+  "cta": {
+    "label": "Request a demo",
+    "href": "/demo"
+  },
+  "image": {
+    "src": "/image/orangebg.png",
+    "alt": "African fashion design patterns"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "managesteps",
+  "badge": "Qlozet For Vendors",
+  "title": "Manage every order step—from accept to fit confirmation",
+  "description": "Qlozet brings intake, production checkpoints, logistics, and after‑care into one clean workflow. Hit your SLAs, keep customers informed, and reduce refits.",
+  "cta": {
+    "label": "Request a demo",
+    "href": "/demo"
+  },
+  "image": {
+    "src": "/image/tealbg.png",
+    "alt": "Production management"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "explore",
+  "badge": "Customer",
+  "title": "Explore unique vendors & one‑of‑a‑kind catalogues",
+  "description": "Discover quality makers, limited drops, and customizable pieces tailored to your measurements. Shop by heritage style, occasion, or fabric—you’ll see live previews and transparent pricing.",
+  "cta": {
+    "label": "Request a demo",
+    "href": "/demo"
+  },
+  "image": {
+    "src": "/image/brownbg.png",
+    "alt": "African fashion design patterns"
+  }
+}

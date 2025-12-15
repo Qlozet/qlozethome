@@ -1,0 +1,102 @@
+{
+  "title": "Curated for quality & personality",
+  "subtitle": "From heritage craft to minimalist modern—discover editors’ lists tailored to your taste and fit.",
+  "tabs": [
+    {
+      "id": "customer",
+      "label": "Customer",
+      "items": [
+        {
+          "id": "personal-fit",
+          "icon": "/image/ruler.png",
+          "title": "Personal fit",
+          "description": "Fast measurement capture with guidance. Less guesswork, better outcomes."
+        },
+        {
+          "id": "custom-pieces",
+          "icon": "/image/tux.png",
+          "title": "Custom pieces",
+          "description": "Choose silhouettes, fabrics, and finishes. Preview with style overlays."
+        },
+        {
+          "id": "track-relax",
+          "icon": "/image/box.png",
+          "title": "Track & relax",
+          "description": "Production milestones, delivery ETAs, and after-care in one place."
+        }
+      ]
+    },
+    {
+      "id": "designers-tailor",
+      "label": "Designers & Tailor",
+      "items": [
+        {
+          "id": "instant-storefront",
+          "icon": "/image/layer.png",
+          "title": "Style templates",
+          "description": "Define defaults, options, and price rules per style with image tagging."
+        },
+        {
+          "id": "order-orchestration",
+          "icon": "/image/chart.png",
+          "title": "Analytics",
+          "description": "See top sellers, conversion funnels, and reorder alerts."
+        },
+        {
+          "id": "analytics-insights",
+          "icon": "/image/hierarchy.png",
+          "title": "Production ops",
+          "description": "Order pipeline, QC checklists, and team roles in a clean dashboard."
+        }
+      ]
+    },
+    {
+      "id": "fabric-accessories",
+      "label": "Fabric & Accessories",
+      "items": [
+        {
+          "id": "supplier-network",
+          "icon": "/image/building.png",
+          "title": "instant storefront",
+          "description": "Showcase fabrics, trims, and accessories. Manage stock and swatches."
+        },
+        {
+          "id": "material-catalog",
+          "icon": "/image/chart.png",
+          "title": "Analytics",
+          "description": "See top sellers, conversion funnels, and reorder alerts."
+        },
+        {
+          "id": "quality-assurance",
+          "icon": "/image/shield-tick.png",
+          "title": "Trust layer",
+          "description": "KYC, dispute flows, and payout protections for serious business."
+        }
+      ]
+    },
+    {
+      "id": "logistics",
+      "label": "Logistics",
+      "items": [
+        {
+          "id": "pickup-delivery",
+          "icon": "/image/shopping-cart.png",
+          "title": "Pickup & delivery",
+          "description": "Coordinate seamless pickups from vendors and deliveries to customers nationwide."
+        },
+        {
+          "id": "real-time-tracking",
+          "icon": "/image/chart.png",
+          "title": "Real-time tracking",
+          "description": "Monitor every package with live updates and accurate delivery estimates."
+        },
+        {
+          "id": "returns-support",
+          "icon": "/image/tux.png",
+          "title": "Returns & support",
+          "description": "Handle alterations, returns, and customer support with streamlined workflows."
+        }
+      ]
+    }
+  ]
+}

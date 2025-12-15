@@ -1,0 +1,41 @@
+{
+  "id": "vendor-tools",
+  "title": "Tools built for real ateliers",
+  "subtitle": "From parameterized style templates and fabric catalogs to QC checklists and milestone payouts— Qlozet streamlines your workflow so you can focus on the craft.",
+  "items": [
+    {
+      "icon": "/image/icon1.jpg",
+      "title": "Style Templates",
+      "description": "Parameterize necklines, sleeves, lengths, and embellishments with price impacts."
+    },
+    {
+      "icon": "/image/icon2.jpg",
+      "title": "Fabric & Accessories",
+      "description": "List fabric SKUs with yardage guidance; attach accessories or upsells per style."
+    },
+    {
+      "icon": "/image/icon3.jpg",
+      "title": "Fit Verification",
+      "description": "Auto flags for suspicious measurements and optional customer photo overlays."
+    },
+    {
+      "icon": "/image/icon4.jpg",
+      "title": "Proof & QC",
+      "description": "Capture cut tickets, mockups, and pre-ship photos against a checklist."
+    },
+    {
+      "icon": "/image/icon5.jpg",
+      "title": "Messaging & Briefs",
+      "description": "Chat with customers, confirm specs, and lock change requests by milestone."
+    },
+    {
+      "icon": "/image/icon6.jpg",
+      "title": "Analytics",
+      "description": "Lead time, on-time rate, revisions, and earnings—broken down by style and region."
+    }
+  ],
+  "image": {
+    "src": "/image/tailorwork.png",
+    "alt": "Designer working in atelier"
+  }
+}

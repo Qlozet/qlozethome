@@ -1,0 +1,14 @@
+{
+  "id": "aimmeasurement",
+  "badge": "Qlozet For Vendors",
+  "title": "AI measurements built for your workflow",
+  "description": "Collect fit‑ready measurements in a minute, map them to your blocks, and lock specs with confidence—no tape required.",
+  "cta": {
+    "label": "Request a demo",
+    "href": "/demo"
+  },
+  "image": {
+    "src": "/image/purplebg.png",
+    "alt": "AI measurement technology"
+  }
+}

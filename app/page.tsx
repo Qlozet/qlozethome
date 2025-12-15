@@ -1,65 +1,58 @@
-import Image from "next/image";
+import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
+import { DownloadSection } from "@/components/home/Download";
+import { EarlyAccessSection } from "@/components/home/EarlyAccess";
+import { FAQSection } from "@/components/home/FAQ";
+import { HeroSection } from "@/components/home/Hero";
+import { HighlightsSection } from "@/components/home/Highlights";
+import { PartnersSection } from "@/components/home/Partners";
+import { ProcessSection } from "@/components/home/Process";
+import { ShoppingSection } from "@/components/home/Shopping";
+import { WhySection } from "@/components/home/Why";
+import { VendorWorksSection } from "@/components/home/VendorWorks";
+
+import downloadData from "@/data/home/download.json";
+import earlyAccessData from "@/data/home/early-access.json";
+import faqData from "@/data/home/faq.json";
+import footerData from "@/data/global/footer.json";
+import heroData from "@/data/home/hero.json";
+import highlightsData from "@/data/home/highlights.json";
+import navbarData from "@/data/global/navbar.json";
+import partnersData from "@/data/home/partners.json";
+import processData from "@/data/home/process.json";
+import shoppingData from "@/data/home/shopping.json";
+import whyData from "@/data/home/why.json";
+import vendorWorksData from "@/data/home/vendor-works.json";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div id="top" className="bg-white text-zinc-900">
+      <Header data={navbarData} />
+      <main className="relative flex flex-col">
+        <div className="sticky top-0 z-0">
+          <HeroSection data={heroData} />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="sticky top-0 z-10">
+          <WhySection
+            data={whyData}
+            scrollPrompt={{ label: heroData.scrollPrompt.down, href: "#why-content" }}
+          />
+        </div>
+        <div className="sticky top-0 z-20">
+          <ProcessSection data={processData} />
+
+        </div>
+        <div className="sticky top-0 z-20">
+          <HighlightsSection data={highlightsData} />
+          <ShoppingSection data={shoppingData} />
+          <DownloadSection data={downloadData} />
+          <VendorWorksSection data={vendorWorksData} />
+          <PartnersSection data={partnersData} />
+          <FAQSection data={faqData} />
+          <EarlyAccessSection data={earlyAccessData} />
         </div>
       </main>
+      <Footer data={footerData} />
     </div>
   );
 }

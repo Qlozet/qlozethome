@@ -1,0 +1,35 @@
+{
+  "title": "How it works",
+  "steps": [
+    {
+      "id": "activate-measurement-requirement",
+      "title": "Activate measurement requirement",
+      "description": "Select in the product pages if measurements are required for the clothing.",
+      "icon": "/image/user.png"
+    },
+    {
+      "id": "receive-measurement-from-customers",
+      "title": "Receive Measurement From Customers",
+      "description": "See all your customers current measurements and body type insight to quicken and simplify the cloth development.",
+      "icon": "/image/setting-4.png"
+    },
+    {
+      "id": "create-your-size-guide",
+      "title": "Create Your Size Guide",
+      "description": "Set the charts, size ranges and the allowances for each clothing fit.",
+      "icon": "/image/shield-tick.png"
+    },
+    {
+      "id": "auto-review-calibrate",
+      "title": "Auto review & calibrate",
+      "description": "See the chart, auto-checks, and confidence ranges. Add notes or request specific re-shots.",
+      "icon": "/image/verify.png"
+    },
+    {
+      "id": "save-or-share-with-customers",
+      "title": "Save Or Share With Customers",
+      "description": "Save to your lookbook, or forward to a vendor for final adjustments and production confirmation.",
+      "icon": "/image/hierarchy.png"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+export { WhyVendorsSection } from "./WhyVendorsSection";
+
+

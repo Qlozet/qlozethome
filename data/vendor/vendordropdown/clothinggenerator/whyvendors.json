@@ -1,0 +1,41 @@
+{
+  "title": "Why vendors us it – save time, sell faster, and showcase your craft beautifully.",
+  "items": [
+    {
+      "id": "speed-to-market",
+      "image": "/image/orangeline.png",
+      "title": "Speed to market",
+      "description": "Go from idea to listing in a single session."
+    },
+    {
+      "id": "fit-aware-previews",
+      "image": "/image/orangetrianglegroup.png",
+      "title": "Fit-aware previews",
+      "description": "Leverage customer measurements to suggest size/fit notes."
+    },
+    {
+      "id": "brand-safety",
+      "image": "/image/orangehexagongroup.png",
+      "title": "Brand safety",
+      "description": "Style guidelines and filters keep visuals on-brand."
+    },
+    {
+      "id": "photo-assist",
+      "image": "/image/orangevector.png",
+      "title": "Photo assist",
+      "description": "Blend studio shots with AI for consistent catalogs."
+    },
+    {
+      "id": "option-overlays",
+      "image": "/image/controlgroup.png",
+      "title": "Option overlays",
+      "description": "Necklines, sleeves, trims appear as tappable tags in the UI."
+    },
+    {
+      "id": "auto-descriptions",
+      "image": "/image/orangegrade.png",
+      "title": "Auto descriptions",
+      "description": "Generate product copy and fashion tags you can edit."
+    }
+  ]
+}

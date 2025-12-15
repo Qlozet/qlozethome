@@ -1,0 +1,27 @@
+{
+  "id": "vendor-toolkit",
+  "title": "Vendor toolkit",
+  "tools": [
+    {
+      "icon": "/svg/hourglass.svg",
+      "title": "Product Templates",
+      "description": "Pre-built base styles you can extend with your unique options."
+    },
+    {
+      "icon": "/svg/paintbrush.svg",
+      "title": "Customization Rules",
+      "description": "Define neckline, sleeve, and trim variations—automatically priced."
+    },
+    {
+      "icon": "/svg/palette.svg",
+      "title": "Smart Pricing",
+      "description": "Set base price + add-ons per customization or fabric type."
+    },
+    {
+      "icon": "/svg/shield-check.svg",
+      "title": "Analytics",
+      "description": "Track which variants convert best and adjust offerings."
+    }
+  ]
+}
+

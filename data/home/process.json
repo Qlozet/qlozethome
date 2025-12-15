@@ -1,0 +1,27 @@
+{
+  "id": "process",
+  "eyebrow": "From scan to style in days",
+  "title": "Three simple steps tailored around you",
+  "description": "Measure once, customize endlessly, and receive your handcrafted outfit in record time.",
+  "steps": [
+    {
+      "title": "Measure",
+      "description": "Use your device to capture accurate body measurements in minutes with guided prompts and visual cues.",
+      "icon": "/image/measurer.png"
+    },
+    {
+      "title": "Pick a design",
+      "description": "Explore curated designer collections, filter by occasion, fabric, and mood, then customize every detail.",
+      "icon": "/image/picker.png"
+    },
+    {
+      "title": "Tailored & delivered",
+      "description": "Your custom outfit is handcrafted, quality-checked, and shipped directly to your doorstep.",
+      "icon": "/image/seam.png"
+    }
+  ],
+  "cta": {
+    "label": "Start Shopping",
+    "href": "#early-access"
+  }
+}

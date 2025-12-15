@@ -1,0 +1,29 @@
+{
+  "title": "How it works",
+  "steps": [
+    {
+      "id": "accept",
+      "icon": "/image/hierarchy.png",
+      "title": "Accept",
+      "description": "Confirm order, lead time, and deposit. Automatic acknowledgement to the customer."
+    },
+    {
+      "id": "produce",
+      "icon": "/image/setting-4.png",
+      "title": "Produce",
+      "description": "Track cutting, stitching, fitting, and QA with timestamps and notes."
+    },
+    {
+      "id": "ship",
+      "icon": "/image/chart.png",
+      "title": "Ship",
+      "description": "Print labels, push tracking, and capture proof-of-handoff or signature."
+    },
+    {
+      "id": "fit-aftercare",
+      "icon": "/image/shield-tick.png",
+      "title": "Fit & After-Care",
+      "description": "Customer confirms fit. Manage alterations, returns, or disputes in one place."
+    }
+  ]
+}

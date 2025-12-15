@@ -1,0 +1,14 @@
+{
+  "id": "instantstorefront",
+  "badge": "Qlozet For Vendors",
+  "title": "Instant Storefront",
+  "description": "A no‑code, shoppable profile for designers and tailors. List services, show your work, accept bookings and payments—everything in one link.",
+  "cta": {
+    "label": "Request a demo",
+    "href": "/demo"
+  },
+  "image": {
+    "src": "/image/brownbg.png",
+    "alt": "Instant storefront"
+  }
+}

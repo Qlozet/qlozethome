@@ -1,0 +1,14 @@
+{
+  "id": "whatwedo",
+  "badge": "Qlozet",
+  "title": "About Qlozet Ecosystem",
+  "description": "Qlozet connects customers, designers, tailors, fabric & accessories vendors, and logistics into a single, trusted workflow. From accurate body measurement to made‑to‑measure garments and storefronts, we power the full fashion lifecycle for Nigeria and the global diaspora.",
+  "cta": {
+    "label": "Request a demo",
+    "href": "/demo"
+  },
+  "image": {
+    "src": "/image/greenbg.png",
+    "alt": "African fashion design patterns"
+  }
+}

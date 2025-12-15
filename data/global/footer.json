@@ -1,0 +1,78 @@
+{
+  "id": "footer",
+  "logo": {
+    "src": "/image/logowhite.png",
+    "alt": "Qlozet"
+  },
+  "columns": [
+    {
+      "title": "Solutions",
+      "links": [
+        {
+          "label": "Qlozet for Vendors",
+          "href": "#shopping"
+        },
+        {
+          "label": "Brand Network",
+          "href": "#partners"
+        },
+        {
+          "label": "Smart Fit",
+          "href": "#highlights"
+        }
+      ]
+    },
+    {
+      "title": "Company",
+      "links": [
+        {
+          "label": "About",
+          "href": "#why"
+        },
+        {
+          "label": "Careers",
+          "href": "#"
+        },
+        {
+          "label": "Press",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "title": "Customer Care",
+      "links": [
+        {
+          "label": "Support",
+          "href": "#faq"
+        },
+        {
+          "label": "Track Orders",
+          "href": "#shopping"
+        },
+        {
+          "label": "Return Policy",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "title": "Tailor Your Region",
+      "links": [
+        {
+          "label": "United States",
+          "href": "#"
+        },
+        {
+          "label": "United Kingdom",
+          "href": "#"
+        },
+        {
+          "label": "Nigeria",
+          "href": "#"
+        }
+      ]
+    }
+  ],
+  "bottomText": "© 2025 Qlozet. All rights reserved."
+}

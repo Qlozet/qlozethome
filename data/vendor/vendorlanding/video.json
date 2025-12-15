@@ -1,0 +1,9 @@
+{
+  "id": "vendor-video",
+  "title": "Learn how Qlozet works in a nutshell. Watch a short introductory video",
+  "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  "thumbnail": {
+    "src": "/image/dashboard.png",
+    "alt": "Qlozet vendor dashboard interface"
+  }
+}

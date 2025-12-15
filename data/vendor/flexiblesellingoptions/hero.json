@@ -1,0 +1,14 @@
+{
+  "id": "flexiblesellingoptions",
+  "badge": "Qlozet For Vendors",
+  "title": "Flexible Selling Options for Creative Vendors",
+  "description": "Qlozet lets you design, customize, and price your products your way. Whether you're offering ready-to-wear or made-to-measure garments, you can define styles, add custom options, and manage pricing with full control.",
+  "cta": {
+    "label": "Request a demo",
+    "href": "/demo"
+  },
+  "image": {
+    "src": "/image/redbg.png",
+    "alt": "African fashion design patterns"
+  }
+}

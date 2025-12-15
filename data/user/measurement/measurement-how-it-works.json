@@ -1,0 +1,36 @@
+{
+  "title": "How it works",
+  "steps": [
+    {
+      "id": "set-up",
+      "icon": "/image/measurer.png",
+      "title": "Set up",
+      "description": "Stand ~2-3m from the camera. Wear fitted clothing. Good lighting helps."
+    },
+    {
+      "id": "set-height-weight-gender",
+      "icon": "/image/ruler.png",
+      "title": "Set height, weight & gender",
+      "description": "Enter your exact height, weight and gender."
+    },
+    {
+      "id": "capture-photos",
+      "icon": "/image/measurer.png",
+      "title": "Capture 2 Photos",
+      "description": "Front and side on a plain background. We'll guide your posture."
+    },
+    {
+      "id": "confirm",
+      "icon": "/image/verify.png",
+      "title": "Confirm",
+      "description": "Share with your vendor or use in checkout. They can request a recheck if needed."
+    },
+    {
+      "id": "review-save",
+      "icon": "/image/chart.png",
+      "title": "Review & Save",
+      "description": "See your chart, rename your profile, and share with a vendor only when ready."
+    }
+  ]
+}
+

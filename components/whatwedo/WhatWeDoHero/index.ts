@@ -1,0 +1,2 @@
+export { WhatWeDoHero } from "./WhatWeDoHeroSection";
+

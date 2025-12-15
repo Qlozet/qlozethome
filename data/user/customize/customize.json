@@ -1,0 +1,15 @@
+{
+  "id": "customize",
+  "badge": "Customer",
+  "title": "Make it yours—customize parts, fabrics, and finishes",
+  "description": "Pick a designer style you love, then personalize details like neckline, sleeves, length, and trims. See live previews, pricing updates, and fit tips as you go.",
+  "cta": {
+    "label": "Request a demo",
+    "href": "/demo"
+  },
+  "image": {
+    "src": "/image/redbg.png",
+    "alt": "African fashion design patterns"
+  }
+}
+

@@ -1,0 +1,41 @@
+{
+  "title": "A custom experience that's simple, visual, and accurate.",
+  "items": [
+    {
+      "id": "see-before-buy",
+      "image": "/image/orangecubegroup.png",
+      "title": "See it before you buy",
+      "description": "Live previews with your chosen options and fabrics."
+    },
+    {
+      "id": "fit-confidence",
+      "image": "/image/orangetrianglegroup.png",
+      "title": "Fit confidence",
+      "description": "Measurement-aware suggestions reduce guesswork."
+    },
+    {
+      "id": "trusted-makers",
+      "image": "/image/orangehexagongroup.png",
+      "title": "Trusted makers",
+      "description": "KYC'd vendors with quality checks and clear SLAs."
+    },
+    {
+      "id": "inspiration-friendly",
+      "image": "/image/orangegraphicelements.png",
+      "title": "Inspiration-friendly",
+      "description": "Upload a reference to guide your final look."
+    },
+    {
+      "id": "part-by-part-control",
+      "image": "/image/controlgroup.png",
+      "title": "Part-by-part control",
+      "description": "Choose details that match your taste and occasion."
+    },
+    {
+      "id": "transparent-pricing",
+      "image": "/image/pricegroup.png",
+      "title": "Transparent pricing",
+      "description": "See price updates as you switch options and fabrics."
+    }
+  ]
+}

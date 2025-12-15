@@ -1,0 +1,21 @@
+{
+  "title": "Integrations",
+  "subtitle": "Integrations, security, and compliance",
+  "features": [
+    {
+      "image": "/image/purplehex.png",
+      "title": "Data governance",
+      "description": "Measurements are encrypted in transit and at rest. Photos are not stored by default; consent required to retain."
+    },
+    {
+      "image": "/image/purpleconst.png",
+      "title": "API & Webhook",
+      "description": "Sync measurements, status, and proofs to your ERP or pattern software. Enterprise only."
+    },
+    {
+      "image": "/image/purpletriangle.png",
+      "title": "Team roles",
+      "description": "Control who can request, approve, or edit measurements. Audit logs capture every change."
+    }
+  ]
+}

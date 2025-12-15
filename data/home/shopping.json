@@ -1,0 +1,13 @@
+{
+  "id": "shopping",
+  "title": "Qlozet Shopping App",
+  "description": "The Qlozet Customer Web App offers a seamless made-to-measure fashion experience. Customers can explore curated collections from multiple vendors, input or upload AI-captured body measurements, customize outfit styles and fabrics, and place bespoke or ready-to-wear orders — all from one platform. It’s designed for convenience, personalization, and a clear overview of past orders, measurements, and vendor interactions.",
+  "image": {
+    "src": "/image/shopapp.png",
+    "alt": "Qlozet shopping app interface"
+  },
+  "cta": {
+    "label": "Start Shopping",
+    "href": "#early-access"
+  }
+}

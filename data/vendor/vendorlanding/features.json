@@ -1,0 +1,54 @@
+{
+  "id": "vendor-features",
+  "title": "Features",
+  "features": [
+    {
+      "title": "Data analysis tools",
+      "description": "From complex analytics to stunning visualizations, our advanced AI technology can help you extract valuable insights and make more data-driven decisions faster than ever before.",
+      "image": {
+        "src": "/image/graphsy.png",
+        "alt": "Data analysis dashboard showing demographics and orders by gender"
+      },
+      "cta": {
+        "label": "Discover how it works",
+        "href": "#how-it-works"
+      }
+    },
+    {
+      "title": "Flexible Selling Options",
+      "description": "Choose your preferred selling model - whether it's selling ready-to-wear items, offering made-to-order services, or providing customization& bespoke options,Qlozet accommodates various selling preferences.",
+      "image": {
+        "src": "/image/featsu.png",
+        "alt": "Product customization interface with drag and drop tags"
+      },
+      "cta": {
+        "label": "Discover how it works",
+        "href": "#how-it-works"
+      }
+    },
+    {
+      "title": "Instant Storefront",
+      "description": "No need for a separate website or app; flaunt your brand presence and connect with customers on Qlozet.",
+      "image": {
+        "src": "/image/storefront.png",
+        "alt": "Storefront preview showing vendor shop pages"
+      },
+      "cta": {
+        "label": "Discover how it works",
+        "href": "#how-it-works"
+      }
+    },
+    {
+      "title": "Hassle-Free Logistics",
+      "description": "Let Qlozet handle the logistics and delivery process, saving you time and effort in managing shipping and order fulfillment.",
+      "image": {
+        "src": "/image/logi.png",
+        "alt": "Woman receiving package delivery"
+      },
+      "cta": {
+        "label": "Discover how it works",
+        "href": "#how-it-works"
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "vendor-differentiators",
+  "eyebrow": "Four pillars unify our ecosystem—precision, personalization, productivity, and trust.",
+  "title": "What makes Qlozet different",
+  "cards": [
+    {
+      "icon": "/image/shop.png",
+      "title": "Instant storefront",
+      "description": "A public profile with styles, fabrics, and reviews—no coding required."
+    },
+    {
+      "icon": "/image/magicpen.png",
+      "title": "AI-fit confidence",
+      "description": "Reduced alterations with guided measurements and fit validation."
+    },
+    {
+      "icon": "/image/moneyrecive.png",
+      "title": "Milestone payouts",
+      "description": "Transparent escrow flow—deposit, in-progress, and completion releases."
+    },
+    {
+      "icon": "/image/settings.png",
+      "title": "Smart ops tools",
+      "description": "Order timelines, QC checklists, label printing, and logistics assistance."
+    }
+  ]
+}

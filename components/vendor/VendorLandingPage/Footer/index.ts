@@ -1,0 +1,1 @@
+export { VendorFooter } from "./Footer";

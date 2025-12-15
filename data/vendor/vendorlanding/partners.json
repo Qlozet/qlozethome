@@ -1,0 +1,13 @@
+{
+  "id": "vendor-partners",
+  "title": "Some of our brand partners",
+  "logos": [
+    { "name": "Adej", "src": "/image/logobrown.png" },
+    { "name": "Fabrizio", "src": "/image/logowhite.png" },
+    { "name": "Hill House", "src": "/image/lookers.png" },
+    { "name": "Artisanal Lab", "src": "/image/walkers.png" },
+    { "name": "Maison Tolu", "src": "/image/qlozetwhite1.png" }
+  ],
+  "note": "Qlozet vendors receive co-marketing support and featured placement inside our premium channels."
+}
+

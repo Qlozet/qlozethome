@@ -1,0 +1,1 @@
+export { VendorVideo } from "./VideoSection";

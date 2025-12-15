@@ -1,0 +1,27 @@
+{
+  "id": "why",
+  "eyebrow": "Four pillars in our ecosystem: precision, personalization, productivity, and trust.",
+  "title": "Why Qlozet",
+  "cards": [
+    {
+      "title": "Perfect Fit, Zero Guesswork",
+      "description": "AI-powered measurement assures precision for every garment, eliminating alterations and wasted returns.",
+      "icon": "/image/ruler.png"
+    },
+    {
+      "title": "Bespoke Quality",
+      "description": "Discover pieces crafted by global designers with uncompromised attention to fabric, finish, and feel.",
+      "icon": "/image/brush.png"
+    },
+    {
+      "title": "Vendor Empowerment",
+      "description": "Enable emerging labels with tools to showcase collections, manage orders, and reach fashion-forward shoppers.",
+      "icon": "/image/shop.png"
+    },
+    {
+      "title": "Global Reach",
+      "description": "Shop tailor-made looks from design studios worldwide, delivered securely to your door in record time.",
+      "icon": "/image/global.png"
+    }
+  ]
+}

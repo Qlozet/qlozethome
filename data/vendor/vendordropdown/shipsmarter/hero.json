@@ -1,0 +1,14 @@
+{
+  "id": "shipsmarter",
+  "badge": "Qlozet For Vendors",
+  "title": "Ship smarter—labels, pickups, tracking, and SLAs in one place",
+  "description": "Configure your zones and rates, print labels in a click, schedule pickups, and keep customers in the loop automatically. Qlozet logistics fits your operations—local or cross‑border.",
+  "cta": {
+    "label": "Request a demo",
+    "href": "/demo"
+  },
+  "image": {
+    "src": "/image/bluebg.png",
+    "alt": "Smart shipping solutions"
+  }
+}

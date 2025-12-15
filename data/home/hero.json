@@ -1,0 +1,17 @@
+{
+  "id": "hero",
+  "title": "Your Style, Your Way",
+  "description": "Your personal fashion world designed to make your shopping experience seamless",
+  "primaryAction": {
+    "label": "Coming Soon!",
+    "href": "#early-access"
+  },
+  "scrollPrompt": {
+    "up": "Scroll Up",
+    "down": "Scroll Down"
+  },
+  "image": {
+    "src": "/image/heroimage.png",
+    "alt": "Stylish woman showcasing Qlozet fashion"
+  }
+}

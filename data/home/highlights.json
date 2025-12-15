@@ -1,0 +1,50 @@
+{
+  "id": "highlights",
+  "items": [
+    {
+      "id": "fit-intelligence",
+      "eyebrow": "",
+      "title": "Fit intelligence, not guesswork",
+      "description": "Our hybrid computer-vision + regression pipeline estimates key body measurements from simple captures. Your data is encrypted and shared only with the designer fulfilling your order.",
+      "cta": {
+        "label": "Discover How it Works",
+        "href": "#shopping"
+      },
+      "image": {
+        "src": "/image/dashboard.png",
+        "alt": "Measurement dashboard preview"
+      },
+      "phoneImage": "/image/tabphone.png"
+    },
+    {
+      "id": "build-your-outfit",
+      "eyebrow": "",
+      "title": "Build your outfit from scratch your way",
+      "description": "Bring your dream outfit to life! With Qlozet’s Bespoke Feature, you can mix and match styles, fabrics, and fits — then watch as our AI instantly visualizes your unique design, tailored perfectly to your body. Your imagination becomes your personal designer.",
+      "cta": {
+        "label": "Start Shopping",
+        "href": "#early-access"
+      },
+      "image": {
+        "src": "/image/frame3web.png",
+        "alt": "Garment builder interface"
+      },
+      "phoneImage": "/image/tabphone2.png"
+    },
+    {
+      "id": "personalize-outfits",
+      "eyebrow": "",
+      "title": "Personalize your outfits",
+      "description": "Redefine your style, your way! With Qlozet’s Customization Feature, you can tweak every detail — from neckline and sleeve style to fabric texture and color — and see your look come alive in real time. It’s fashion that fits you, not the other way around.",
+      "cta": {
+        "label": "Manage Your Closet",
+        "href": "#shopping"
+      },
+      "image": {
+        "src": "/image/ladycard.png",
+        "alt": "Personalized outfits on mobile"
+      },
+      "phoneImage": "/image/tabphone3.png"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "What we do for you",
+  "subtitle": "Four pillars unify our ecosystem—precision, personalization, productivity, and trust.",
+  "images": [
+    {
+      "src": "/image/agbada.png",
+      "alt": "Custom agbada design"
+    },
+    {
+      "src": "/image/seun.png",
+      "alt": "Fashion model"
+    },
+    {
+      "src": "/image/totebag.png",
+      "alt": "Leather tote bag"
+    },
+    {
+      "src": "/image/fabrics.png",
+      "alt": "Fabric samples"
+    }
+  ]
+}
+

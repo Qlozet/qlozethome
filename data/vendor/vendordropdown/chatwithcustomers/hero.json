@@ -1,0 +1,14 @@
+{
+  "id": "chatwithcustomers",
+  "badge": "Qlozet For Vendors",
+  "title": "Chat with customers—right when it matters",
+  "description": "Time‑boxed chat windows open automatically at key stages—acceptance, measurements, fabric confirmation, fitting, and delivery—so conversations stay focused and on‑record.",
+  "cta": {
+    "label": "Request a demo",
+    "href": "/demo"
+  },
+  "image": {
+    "src": "/image/lilacbg.png",
+    "alt": "Customer chat interface"
+  }
+}

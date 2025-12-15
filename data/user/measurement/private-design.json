@@ -1,0 +1,32 @@
+{
+  "title": "Private by design",
+  "leftColumn": {
+    "items": [
+      {
+        "id": "no-photo-storage",
+        "title": "No photo storage by default.",
+        "description": "Images are processed, then discarded. You can opt in to save for faster re-measuring."
+      },
+      {
+        "id": "encrypted-profiles",
+        "title": "Encrypted profiles.",
+        "description": "Measurements are encrypted and only shared with vendors you approve."
+      },
+      {
+        "id": "flexible-sharing",
+        "title": "No photo storage by default.",
+        "description": "Share the full chart or a limited subset; revoke access at any time."
+      },
+      {
+        "id": "control-consent",
+        "title": "Control & consent.",
+        "description": "Images are processed, then discarded. You can opt in to save for faster re-measuring."
+      }
+    ]
+  },
+  "rightColumn": {
+    "title": "Accessibility & Guidance",
+    "description": "Step-by-step voice and on-screen prompts guide your posture. We support wheelchair users and seated poses."
+  }
+}
+

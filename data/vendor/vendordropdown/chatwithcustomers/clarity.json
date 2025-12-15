@@ -1,0 +1,41 @@
+{
+  "title": "Less drift, more clarity, everything on record.",
+  "items": [
+    {
+      "id": "operational-focus",
+      "image": "/image/lilacspiral.png",
+      "title": "Operational focus",
+      "description": "Chat tied to stages avoids endless threads and side DMs."
+    },
+    {
+      "id": "compliance-evidence",
+      "image": "/image/lilacline.png",
+      "title": "Compliance & evidence",
+      "description": "Time-stamped transcripts support dispute resolution."
+    },
+    {
+      "id": "fewer-tickets",
+      "image": "/image/lilacgraph.png",
+      "title": "Fewer tickets",
+      "description": "Nudges collect missing info before support is needed."
+    },
+    {
+      "id": "rich-context",
+      "image": "/image/lilaccube.png",
+      "title": "Rich context",
+      "description": "Attach measurements, sketches, and fabric photos inline."
+    },
+    {
+      "id": "multi-language",
+      "image": "/image/lilacglobe.png",
+      "title": "Multi-language",
+      "description": "Translate both ways to serve diaspora customers."
+    },
+    {
+      "id": "escalation-paths",
+      "image": "/image/lilacloop.png",
+      "title": "Escalation paths",
+      "description": "Flags and timers auto-escalate to admins when needed."
+    }
+  ]
+}

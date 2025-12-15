@@ -1,0 +1,35 @@
+{
+  "title": "How it works",
+  "steps": [
+    {
+      "id": "choose-base-style",
+      "icon": "/image/tux.png",
+      "title": "Choose your base style",
+      "description": "Select from categories like suits, dresses, kaftans, jumpsuits, or agbadas — each optimized for your gender and preferences."
+    },
+    {
+      "id": "customize-details",
+      "icon": "/image/setting-4.png",
+      "title": "Customize Details",
+      "description": "Pick sleeve types, neckline, length, and embellishments. You can preview how changes affect your design in real time."
+    },
+    {
+      "id": "pick-fabric",
+      "icon": "/image/verify.png",
+      "title": "Pick fabric",
+      "description": "Select fabric weight and colors; see instant previews."
+    },
+    {
+      "id": "generate-visual-preview",
+      "icon": "/image/magicpen.png",
+      "title": "Generate visual preview",
+      "description": "Qlozet's AI creates multiple render variations of your design using your color and fabric choices."
+    },
+    {
+      "id": "order-track",
+      "icon": "/image/shopping-cart.png",
+      "title": "Order & Track",
+      "description": "Add to cart and follow your order timeline all the way to delivery."
+    }
+  ]
+}

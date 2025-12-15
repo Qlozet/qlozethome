@@ -1,0 +1,19 @@
+{
+  "id": "vendor-faq",
+  "title": "Frequently asked questions",
+  "items": [
+    {
+      "question": "Who can join the vendor program?",
+      "answer": "Independent ateliers, bespoke fashion houses, and design collectives producing made-to-measure garments with verified fulfillment capacity."
+    },
+    {
+      "question": "How long does onboarding take?",
+      "answer": "Most teams launch in under 10 business days with help from our onboarding specialists and migration tools."
+    },
+    {
+      "question": "Can I integrate my existing tools?",
+      "answer": "Yes. We connect directly with collaboration suites, shipping partners, and payment providers through turnkey integrations."
+    }
+  ]
+}
+

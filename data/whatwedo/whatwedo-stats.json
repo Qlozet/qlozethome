@@ -1,0 +1,26 @@
+{
+  "title": "Built in Nigeria, designed for the world",
+  "stats": [
+    {
+      "id": "creators",
+      "value": "2,500+",
+      "label": "NG creators onboarded"
+    },
+    {
+      "id": "diaspora",
+      "value": "10k+",
+      "label": "Diaspora orders served"
+    },
+    {
+      "id": "refit",
+      "value": "45%",
+      "label": "Avg. refit reduction"
+    },
+    {
+      "id": "jobs",
+      "value": "5k+",
+      "label": "Local jobs supported"
+    }
+  ]
+}
+

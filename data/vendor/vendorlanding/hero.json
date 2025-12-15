@@ -1,0 +1,22 @@
+{
+  "id": "vendor-hero",
+  "badge": "Qlozet",
+  "title": "Empowering creators. Connecting worlds. Perfecting fit.",
+  "description": "Discover a connected fashion ecosystem that brings together designers, fabrics, and accessories — powered by AI measurement, clothing customization, and bespoke generation.",
+  "primaryAction": {
+    "label": "Sell With Us",
+    "href": "#vendor-cta"
+  },
+  "secondaryAction": {
+    "label": "Learn More",
+    "href": "#vendor-differentiators"
+  },
+  "scrollPrompt": {
+    "up": "Scroll Up",
+    "down": "Scroll Down"
+  },
+  "image": {
+    "src": "/image/headerImage.jpg",
+    "alt": "Fashion designer in red blazer"
+  }
+}

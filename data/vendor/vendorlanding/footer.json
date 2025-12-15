@@ -1,0 +1,14 @@
+{
+  "links": [
+    { "label": "Pricing", "href": "#vendor-features" },
+    { "label": "Security", "href": "#vendor-how-it-works" },
+    { "label": "Support", "href": "#vendor-faq" },
+    { "label": "Contact", "href": "#vendor-contact" }
+  ],
+  "social": [
+    { "label": "Instagram", "href": "https://instagram.com/qlozet" },
+    { "label": "LinkedIn", "href": "https://linkedin.com/company/qlozet" }
+  ],
+  "copyright": "© Qlozet {year}. Tailored infrastructure for fashion vendors."
+}
+

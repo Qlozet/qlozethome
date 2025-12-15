@@ -1,0 +1,14 @@
+{
+  "id": "clothinggenerator",
+  "badge": "Qlozet For Vendors",
+  "title": "Clothing Design Generator—turn ideas into visuals fast",
+  "description": "Generate on‑brand outfit visuals from prompts, fabric swatches, or reference photos. Measurement‑aware templates help you preview options and convert buyers faster.",
+  "cta": {
+    "label": "Request a demo",
+    "href": "/demo"
+  },
+  "image": {
+    "src": "/image/orangebg.png",
+    "alt": "AI clothing generator"
+  }
+}

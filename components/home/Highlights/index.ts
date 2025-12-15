@@ -1,0 +1,2 @@
+export { HighlightsSection } from "./HighlightsSection";
+

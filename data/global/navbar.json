@@ -1,0 +1,107 @@
+{
+  "logo": {
+    "src": "/image/logowhite.png",
+    "alt": "Qlozet",
+    "href": "/"
+  },
+  "links": [
+    {
+      "label": "WHAT WE DO",
+      "href": "/whatwedo"
+    },
+    {
+      "label": "SERVICES",
+      "href": "#shopping",
+      "dropdown": {
+        "shoppers": {
+          "title": "Shoppers",
+          "icon": "/image/prof.png",
+          "features": [
+            {
+              "title": "Shop with us",
+              "description": "Your reliable handy tool.",
+              "href": "#shop"
+            },
+            {
+              "title": "Customize your outfit",
+              "description": "Make your outfit yours",
+              "href": "/customize"
+            },
+            {
+              "title": "Body measurement AI",
+              "description": "Predicts your full measurement chart",
+              "href": "/measurement"
+            },
+            {
+              "title": "Design your outfit",
+              "description": "Grow your business online",
+              "href": "/designyouroutfit"
+            },
+            {
+              "title": "Explore unique vendors & catalogues",
+              "description": "Discover quality makers, limited drops, and custom pieces",
+              "href": "/explore"
+            }
+          ]
+        },
+        "vendors": {
+          "title": "Vendors",
+          "icon": "/image/vend.png",
+          "features": [
+            {
+              "title": "Flexible selling options",
+              "description": "Products, customization, & pricing",
+              "href": "/flexiblesellingoptions"
+            },
+            {
+              "title": "Instant Storefront",
+              "description": "Shoppable profile for vendors",
+              "href": "/instantstorefront"
+            },
+            {
+              "title": "AI Measurement built for you",
+              "description": "Collect fit-ready measurements in a minute",
+              "href": "/aimeasurement"
+            },
+            {
+              "title": "Ship Smarter",
+              "description": "Print labels in a click, schedule pickups, and keep customers in the loop automatically",
+              "href": "/shipsmarter"
+            },
+            {
+              "title": "Clothing Generator",
+              "description": "Generate on visuals from prompts, fabric swatches, or reference photos",
+              "href": "/clothinggenerator"
+            },
+            {
+              "title": "Chat with customers",
+              "description": "Time-boxed chat windows open automatically at key stages",
+              "href": "/chatwithcustomers"
+            },
+            {
+              "title": "Manage every order step",
+              "description": "Intake, production checkpoints, logistics, and after-care",
+              "href": "/managesteps"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "PRICING",
+      "href": "/pricing"
+    },
+    {
+      "label": "HOW IT WORKS",
+      "href": "/works"
+    }
+  ],
+  "secondary": {
+    "label": "Sign In",
+    "href": "/signin"
+  },
+  "cta": {
+    "label": "Join Waitlist",
+    "href": "#early-access"
+  }
+}

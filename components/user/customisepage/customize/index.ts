@@ -1,0 +1,2 @@
+export { CustomizeHero } from "./CustomizeHero";
+
