@@ -13,6 +13,7 @@ type HeaderProps = {
 
 export function Header({ data }: HeaderProps) {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const isCustomizePage = pathname?.includes("/customize") || pathname?.includes("/whatwedo") || pathname?.includes("/measurement") || pathname?.includes("/designyouroutfit") || pathname?.includes("/explore") || pathname?.includes("/flexiblesellingoptions") || pathname?.includes("/instantstorefront") || pathname?.includes("/aimeasurement") || pathname?.includes("/shipsmarter") || pathname?.includes("/clothinggenerator") || pathname?.includes("/chatwithcustomers") || pathname?.includes("/managesteps");
 
@@ -27,7 +28,7 @@ export function Header({ data }: HeaderProps) {
         : "border-white/10 bg-black/40 backdrop-blur"
         }`}
     >
-      <div className="flex items-center justify-between pl-0 pr-6 py-4">
+      <div className="relative flex items-center justify-between pl-0 pr-6 py-4">
         <Link href={data.logo.href} className="flex items-center gap-2">
           <div className="relative h-8 w-28 sm:w-32">
             <Image
@@ -40,6 +41,46 @@ export function Header({ data }: HeaderProps) {
             />
           </div>
         </Link>
+        
+        {/* Hamburger Button - Mobile Only */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className={`md:hidden p-2 ${isCustomizePage ? "text-gray-700" : "text-white"}`}
+          aria-label="Toggle menu"
+        >
+          {mobileMenuOpen ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-6 w-6"
+            >
+              <path d="M18 6L6 18" />
+              <path d="M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-6 w-6"
+            >
+              <path d="M3 12h18" />
+              <path d="M3 6h18" />
+              <path d="M3 18h18" />
+            </svg>
+          )}
+        </button>
+
+        {/* Desktop Navigation */}
         <nav
           className={`hidden items-center gap-10 text-[13px] font-extrabold md:flex ${isCustomizePage ? "text-gray-700" : "text-white/80"
             }`}
@@ -180,12 +221,12 @@ export function Header({ data }: HeaderProps) {
           })}
         </nav>
         <div
-          className={`flex items-center gap-4 text-[0.65rem] font-semibold uppercase tracking-[0.35em] ${isCustomizePage ? "text-gray-700" : "text-white"
+          className={`hidden items-center gap-4 text-[0.65rem] font-semibold uppercase tracking-[0.35em] md:flex ${isCustomizePage ? "text-gray-700" : "text-white"
             }`}
         >
           <Link
             href={data.secondary.href}
-            className={`hidden rounded-[8px] border px-5 py-2 transition md:inline-flex ${isCustomizePage
+            className={`rounded-[8px] border px-5 py-2 transition ${isCustomizePage
               ? "border-gray-300 hover:border-gray-400 hover:bg-gray-50"
               : "border-white/40 hover:border-white hover:bg-white/10"
               }`}
@@ -202,6 +243,135 @@ export function Header({ data }: HeaderProps) {
             {data.cta.label}
           </Link>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="absolute inset-x-0 top-full z-50 md:hidden">
+            <div className={`max-h-[calc(100vh-80px)] overflow-y-auto border-b ${isCustomizePage
+              ? "border-gray-200 bg-white"
+              : "border-white/10 bg-black/95 backdrop-blur"
+              }`}
+            >
+              <nav className="flex flex-col px-6 py-6">
+                {data.links.map((link) => {
+                  const hasDropdown = "dropdown" in link && link.dropdown;
+                  const isDropdownOpen = openDropdown === link.label;
+                  
+                  return (
+                    <div key={link.label} className="border-b border-gray-200/10 last:border-b-0">
+                      {hasDropdown ? (
+                        <>
+                          <button
+                            onClick={() => setOpenDropdown(isDropdownOpen ? null : link.label)}
+                            className={`flex w-full items-center justify-between py-4 text-left text-[13px] font-extrabold transition ${isCustomizePage ? "text-gray-700" : "text-white/80"
+                              }`}
+                          >
+                            <span>{link.label}</span>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              className={`h-5 w-5 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`}
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </button>
+                          {isDropdownOpen && (
+                            <div className="pb-4 pl-4">
+                              {/* Shoppers Section */}
+                              <div className="mb-6">
+                                <h3 className={`mb-4 text-base font-bold ${isCustomizePage ? "text-gray-900" : "text-white"}`}>
+                                  {link.dropdown.shoppers.title}
+                                </h3>
+                                <div className="flex flex-col gap-3">
+                                  {link.dropdown.shoppers.features.map((feature: any, idx: number) => (
+                                    <Link
+                                      key={idx}
+                                      href={feature.href}
+                                      onClick={() => setMobileMenuOpen(false)}
+                                      className="flex flex-col gap-1 rounded-lg p-3 transition hover:bg-gray-50/10"
+                                    >
+                                      <h4 className={`text-sm font-semibold ${isCustomizePage ? "text-gray-900" : "text-white"}`}>
+                                        {feature.title}
+                                      </h4>
+                                      <p className={`text-xs ${isCustomizePage ? "text-gray-600" : "text-white/70"}`}>
+                                        {feature.description}
+                                      </p>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                              {/* Vendors Section */}
+                              <div>
+                                <h3 className={`mb-4 text-base font-bold ${isCustomizePage ? "text-gray-900" : "text-white"}`}>
+                                  {link.dropdown.vendors.title}
+                                </h3>
+                                <div className="flex flex-col gap-3">
+                                  {link.dropdown.vendors.features.map((feature: any, idx: number) => (
+                                    <Link
+                                      key={idx}
+                                      href={feature.href}
+                                      onClick={() => setMobileMenuOpen(false)}
+                                      className="flex flex-col gap-1 rounded-lg p-3 transition hover:bg-gray-50/10"
+                                    >
+                                      <h4 className={`text-sm font-semibold ${isCustomizePage ? "text-gray-900" : "text-white"}`}>
+                                        {feature.title}
+                                      </h4>
+                                      <p className={`text-xs ${isCustomizePage ? "text-gray-600" : "text-white/70"}`}>
+                                        {feature.description}
+                                      </p>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={`block py-4 text-[13px] font-extrabold transition ${isCustomizePage ? "text-gray-700 hover:text-gray-900" : "text-white/80 hover:text-white"
+                            }`}
+                        >
+                          {link.label}
+                        </Link>
+                      )}
+                    </div>
+                  );
+                })}
+                
+                {/* Mobile CTA Buttons */}
+                <div className="mt-6 flex flex-col gap-3 border-t border-gray-200/10 pt-6">
+                  <Link
+                    href={data.secondary.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`rounded-[8px] border px-5 py-2 text-center text-[0.65rem] font-semibold uppercase tracking-[0.35em] transition ${isCustomizePage
+                      ? "border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50"
+                      : "border-white/40 text-white hover:border-white hover:bg-white/10"
+                      }`}
+                  >
+                    {data.secondary.label}
+                  </Link>
+                  <Link
+                    href={data.cta.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`rounded-[8px] px-5 py-2 text-center text-[0.65rem] font-semibold uppercase tracking-[0.35em] transition ${isCustomizePage
+                      ? "bg-gray-900 text-white hover:bg-gray-800"
+                      : "bg-white text-black hover:bg-neutral-200"
+                      }`}
+                  >
+                    {data.cta.label}
+                  </Link>
+                </div>
+              </nav>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
