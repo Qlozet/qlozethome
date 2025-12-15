@@ -17,7 +17,7 @@ import perksData from "@/data/user/explore/perks.json";
 
 export default function ExplorePage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen max-w-[90vw] mx-auto">
       <Header data={navbarData} />
       <ExploreHero data={exploreData} />
       <WhatWeDoSection data={whatWeDoData} />

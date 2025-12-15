@@ -19,7 +19,7 @@ import differentiatorsData from "@/data/whatwedo/whatwedo-differentiators.json";
 
 export default function WhatWeDoPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen max-w-[90vw] mx-auto">
       <Header data={navbarData} />
       <WhatWeDoHero data={whatwedoData} />
       <DifferentiatorsSection data={differentiatorsData} />

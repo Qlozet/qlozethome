@@ -45,27 +45,39 @@ export function Header({ data }: HeaderProps) {
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className={`md:hidden flex flex-col gap-1.5 p-2 ${isCustomizePage ? "text-gray-700" : "text-white"}`}
+          className={`md:hidden ${isCustomizePage ? "text-gray-700" : "text-white"}`}
           aria-label="Toggle menu"
         >
-          <span
-            className={`block h-0.5 w-6 transition-all duration-300 ${
-              mobileMenuOpen ? "rotate-45 translate-y-2" : ""
-            }`}
-            style={{ backgroundColor: "currentColor" }}
-          />
-          <span
-            className={`block h-0.5 w-6 transition-all duration-300 ${
-              mobileMenuOpen ? "opacity-0" : ""
-            }`}
-            style={{ backgroundColor: "currentColor" }}
-          />
-          <span
-            className={`block h-0.5 w-6 transition-all duration-300 ${
-              mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
-            }`}
-            style={{ backgroundColor: "currentColor" }}
-          />
+          {mobileMenuOpen ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-6 w-6"
+            >
+              <path d="M18 6L6 18" />
+              <path d="M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-6 w-6"
+            >
+              <path d="M3 12h18" />
+              <path d="M3 6h18" />
+              <path d="M3 18h18" />
+            </svg>
+          )}
         </button>
         <nav
           className={`hidden items-center gap-10 text-[13px] font-extrabold md:flex ${isCustomizePage ? "text-gray-700" : "text-white/80"
@@ -207,7 +219,7 @@ export function Header({ data }: HeaderProps) {
           })}
         </nav>
         <div
-          className={`hidden md:flex items-center gap-4 text-[0.65rem] font-semibold uppercase tracking-[0.35em] ${isCustomizePage ? "text-gray-700" : "text-white"
+          className={`hidden items-center gap-4 text-[0.65rem] font-semibold uppercase tracking-[0.35em] md:flex ${isCustomizePage ? "text-gray-700" : "text-white"
             }`}
         >
           <Link
@@ -234,22 +246,24 @@ export function Header({ data }: HeaderProps) {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div
-          className={`md:hidden border-t ${isCustomizePage ? "border-gray-200 bg-white" : "border-white/10 bg-black/95 backdrop-blur"
+          className={`md:hidden border-t ${isCustomizePage
+            ? "border-gray-200 bg-white"
+            : "border-white/10 bg-black/95 backdrop-blur"
             }`}
         >
-          <nav className="flex flex-col px-6 py-6 space-y-4">
+          <nav className="flex max-h-[calc(100vh-80px)] flex-col overflow-y-auto px-6 py-6">
             {data.links.map((link) => {
               const hasDropdown = "dropdown" in link && link.dropdown;
               const isDropdownOpen = openDropdown === link.label;
-
+              
               return (
-                <div key={link.label} className="flex flex-col">
+                <div key={link.label} className="border-b border-gray-200/10 last:border-b-0">
                   {hasDropdown ? (
                     <>
                       <button
                         type="button"
                         onClick={() => setOpenDropdown(isDropdownOpen ? null : link.label)}
-                        className={`flex items-center justify-between py-2 text-left text-[13px] font-extrabold ${isCustomizePage ? "text-gray-700" : "text-white/80"
+                        className={`flex w-full items-center justify-between py-4 text-left text-[13px] font-extrabold transition ${isCustomizePage ? "text-gray-700" : "text-white/80"
                           }`}
                       >
                         <span>{link.label}</span>
@@ -257,7 +271,7 @@ export function Header({ data }: HeaderProps) {
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className={`h-5 w-5 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`}
+                          className={`h-5 w-5 transition-transform ${isDropdownOpen ? "rotate-180" : ""} ${isCustomizePage ? "text-gray-700" : "text-white"}`}
                         >
                           <path
                             fillRule="evenodd"
@@ -267,10 +281,10 @@ export function Header({ data }: HeaderProps) {
                         </svg>
                       </button>
                       {isDropdownOpen && (
-                        <div className="mt-2 ml-4 space-y-6 pb-4">
+                        <div className="pb-4 pl-4">
                           {/* Shoppers Section */}
-                          <div className="flex flex-col gap-4">
-                            <h3 className={`text-sm font-bold ${isCustomizePage ? "text-gray-900" : "text-white"}`}>
+                          <div className="mb-6">
+                            <h3 className={`mb-3 text-sm font-bold uppercase ${isCustomizePage ? "text-gray-500" : "text-white/70"}`}>
                               {link.dropdown.shoppers.title}
                             </h3>
                             <div className="flex flex-col gap-3">
@@ -279,15 +293,12 @@ export function Header({ data }: HeaderProps) {
                                   key={idx}
                                   href={feature.href}
                                   onClick={() => setMobileMenuOpen(false)}
-                                  className={`flex flex-col gap-1 rounded-lg p-2 transition ${isCustomizePage
-                                    ? "hover:bg-gray-50"
-                                    : "hover:bg-white/10"
-                                    }`}
+                                  className={`block rounded-lg p-3 transition ${isCustomizePage ? "hover:bg-gray-50" : "hover:bg-white/10"}`}
                                 >
-                                  <h4 className={`text-sm font-semibold ${isCustomizePage ? "text-gray-900" : "text-white"}`}>
+                                  <h4 className={`text-sm font-semibold ${isCustomizePage ? "text-[#1b1b1b]" : "text-white"}`}>
                                     {feature.title}
                                   </h4>
-                                  <p className={`text-xs ${isCustomizePage ? "text-gray-600" : "text-white/70"}`}>
+                                  <p className={`mt-1 text-xs ${isCustomizePage ? "text-gray-500" : "text-white/70"}`}>
                                     {feature.description}
                                   </p>
                                 </Link>
@@ -295,8 +306,8 @@ export function Header({ data }: HeaderProps) {
                             </div>
                           </div>
                           {/* Vendors Section */}
-                          <div className="flex flex-col gap-4">
-                            <h3 className={`text-sm font-bold ${isCustomizePage ? "text-gray-900" : "text-white"}`}>
+                          <div>
+                            <h3 className={`mb-3 text-sm font-bold uppercase ${isCustomizePage ? "text-gray-500" : "text-white/70"}`}>
                               {link.dropdown.vendors.title}
                             </h3>
                             <div className="flex flex-col gap-3">
@@ -305,15 +316,12 @@ export function Header({ data }: HeaderProps) {
                                   key={idx}
                                   href={feature.href}
                                   onClick={() => setMobileMenuOpen(false)}
-                                  className={`flex flex-col gap-1 rounded-lg p-2 transition ${isCustomizePage
-                                    ? "hover:bg-gray-50"
-                                    : "hover:bg-white/10"
-                                    }`}
+                                  className={`block rounded-lg p-3 transition ${isCustomizePage ? "hover:bg-gray-50" : "hover:bg-white/10"}`}
                                 >
-                                  <h4 className={`text-sm font-semibold ${isCustomizePage ? "text-gray-900" : "text-white"}`}>
+                                  <h4 className={`text-sm font-semibold ${isCustomizePage ? "text-[#1b1b1b]" : "text-white"}`}>
                                     {feature.title}
                                   </h4>
-                                  <p className={`text-xs ${isCustomizePage ? "text-gray-600" : "text-white/70"}`}>
+                                  <p className={`mt-1 text-xs ${isCustomizePage ? "text-gray-500" : "text-white/70"}`}>
                                     {feature.description}
                                   </p>
                                 </Link>
@@ -327,7 +335,7 @@ export function Header({ data }: HeaderProps) {
                     <Link
                       href={link.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`py-2 text-[13px] font-extrabold ${isCustomizePage ? "text-gray-700" : "text-white/80"
+                      className={`block py-4 text-[13px] font-extrabold transition ${isCustomizePage ? "text-gray-700" : "text-white/80"
                         }`}
                     >
                       {link.label}
@@ -336,11 +344,12 @@ export function Header({ data }: HeaderProps) {
                 </div>
               );
             })}
-            <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
+            {/* Mobile CTA Buttons */}
+            <div className="mt-6 flex flex-col gap-3">
               <Link
                 href={data.secondary.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`rounded-[8px] border px-5 py-2 text-center text-[0.65rem] font-semibold uppercase tracking-[0.35em] transition ${isCustomizePage
+                className={`rounded-[8px] border px-5 py-3 text-center text-[0.65rem] font-semibold uppercase tracking-[0.35em] transition ${isCustomizePage
                   ? "border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50"
                   : "border-white/40 text-white hover:border-white hover:bg-white/10"
                   }`}
@@ -350,7 +359,7 @@ export function Header({ data }: HeaderProps) {
               <Link
                 href={data.cta.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`rounded-[8px] px-5 py-2 text-center text-[0.65rem] font-semibold uppercase tracking-[0.35em] transition ${isCustomizePage
+                className={`rounded-[8px] px-5 py-3 text-center text-[0.65rem] font-semibold uppercase tracking-[0.35em] transition ${isCustomizePage
                   ? "bg-gray-900 text-white hover:bg-gray-800"
                   : "bg-white text-black hover:bg-neutral-200"
                   }`}

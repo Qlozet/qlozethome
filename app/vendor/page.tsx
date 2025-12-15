@@ -26,7 +26,7 @@ import videoData from "@/data/vendor/vendorlanding/video.json";
 
 export default function VendorPage() {
   return (
-    <div id="top" className="bg-white text-[#1b1b1b]">
+    <div id="top" className="bg-white text-[#1b1b1b] max-w-[90vw] mx-auto">
       <Header data={navbarData} />
       <div className="sticky top-0 z-0">
         <VendorHero data={heroData} />

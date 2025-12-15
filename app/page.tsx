@@ -26,7 +26,7 @@ import vendorWorksData from "@/data/home/vendor-works.json";
 
 export default function Home() {
   return (
-    <div id="top" className="bg-white text-zinc-900">
+    <div id="top" className="bg-white text-zinc-900 max-2xl:max-w-[90vw] mx-auto">
       <Header data={navbarData} />
       <main className="relative flex flex-col">
         <div className="sticky top-0 z-0">

@@ -17,7 +17,7 @@ import vendorCTAData from "@/data/vendor/vendorlanding/cta.json";
 
 export default function DesignYourOutfitPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen max-w-[90vw] mx-auto">
       <Header data={navbarData} />
       <DesignYourOutfitHero data={designYourOutfitData} />
       <WhatsCustomizeSection data={whatYouCanCustomizeData} />

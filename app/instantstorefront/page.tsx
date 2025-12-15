@@ -15,7 +15,7 @@ import howItWorksData from "@/data/vendor/vendordropdown/instantstorefront/how-i
 
 export default function InstantStorefrontPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen max-w-[90vw] mx-auto">
       <Header data={navbarData} />
       <HeroSection data={heroData} />
       <WhySection data={whyData} />

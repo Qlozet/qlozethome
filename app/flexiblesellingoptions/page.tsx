@@ -18,7 +18,7 @@ import empowerData from "@/data/vendor/flexiblesellingoptions/empower.json";
 
 export default function FlexibleSellingOptionsPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen max-w-[90vw] mx-auto">
       <Header data={navbarData} />
       <HeroSection data={heroData} />
       <ToolkitSection data={toolkitData} />
