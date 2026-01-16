@@ -1,0 +1,38 @@
+{
+  "id": "bespoke",
+  "title": "Built for bespoke workflows and ready-to-wear alike.",
+  "features": [
+    {
+      "title": "Barcode & QR",
+      "description": "Auto-generate barcodes for internal staging and QA.",
+      "image": "/image/bluegeolines.png"
+    },
+    {
+      "title": "Route rules",
+      "description": "Smart routing by zone, weight, or SLA priority.",
+      "image": "/image/bluegeo.png"
+    },
+    {
+      "title": "Cross-border",
+      "description": "Commercial invoices and HS codes with templates.",
+      "image": "/image/blueloop.png"
+    },
+    {
+      "title": "Return flows",
+      "description": "Create return labels, authorize alterations, track back to workshop.",
+      "image": "/image/bluehex.png"
+    },
+    {
+      "title": "Exceptions",
+      "description": "Delay reasons, re-attempts, and customer notifications.",
+      "image": "/image/blueshape.png"
+    },
+    {
+      "title": "Multiple origins",
+      "description": "Manage pickups from stores, workshops, or partners.",
+      "image": "/image/bluegeolines.png"
+    }
+  ]
+}
+
+
