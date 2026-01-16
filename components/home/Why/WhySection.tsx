@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { SectionHeading } from "@/components/common/SectionHeading";
-
 type WhyData = typeof import("@/data/home/why.json");
 
 type WhySectionProps = {
@@ -17,7 +15,7 @@ export function WhySection({ data, scrollPrompt }: WhySectionProps) {
   return (
     <section
       id={data.id}
-      className="relative -mt-[100px] rounded-t-[30px] sm:rounded-t-[5rem] bg-white py-24 sm:py-32 scroll-mt-32"
+      className="relative z-10 -mt-[100px] rounded-t-[30px] sm:rounded-t-[5rem] bg-white px-6 py-16 pb-[200px] sm:py-24 sm:pb-[200px] scroll-mt-32"
     >
       {scrollPrompt ? (
         <Link
@@ -37,34 +35,40 @@ export function WhySection({ data, scrollPrompt }: WhySectionProps) {
           </svg>
         </Link>
       ) : null}
-      <div
-        id="why-content"
-        className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 pt-24"
-      >
-        <SectionHeading
-          eyebrow={data.eyebrow}
-          eyebrowPlacement="after"
-          title={data.title}
-          align="center"
-          theme="light"
-        />
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div id="why-content" className="mx-auto max-w-7xl">
+
+        <div className="pt-24 text-center">
+          <h2 className="mb-12 text-3xl font-normal text-black sm:mb-16 sm:text-4xl lg:text-5xl">
+            {data.title}
+          </h2>
+          {data.eyebrow ? (
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.4em] text-zinc-500">
+              {data.eyebrow}
+            </p>
+          ) : null}
+
+        </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {data.cards.map((card) => (
             <div
               key={card.title}
-              className="flex flex-col gap-4 rounded-3xl border border-zinc-200 bg-#BFBFBFFF p-6 shadow-[0_20px_60px_-40px_rgba(0,0,0,0.4)]"
+              className="rounded-3xl bg-gray-50 p-8 transition hover:bg-gray-100"
             >
-              <div className="relative mb-2 h-12 w-12 overflow-hidden rounded-[8px] bg-white">
-                <Image
-                  src={card.icon}
-                  alt={card.title}
-                  fill
-                  className="object-cover"
-                  sizes="48px"
-                />
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-white">
+                <div className="relative h-6 w-6">
+                  <Image
+                    src={card.icon}
+                    alt={`${card.title} icon`}
+                    fill
+                    className="object-contain"
+                    sizes="24px"
+                  />
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-zinc-900">{card.title}</h3>
-              <p className="text-sm leading-relaxed text-zinc-600">{card.description}</p>
+              <h3 className="mb-3 text-xl font-normal text-black">{card.title}</h3>
+              <p className="text-sm leading-relaxed text-gray-600">
+                {card.description}
+              </p>
             </div>
           ))}
         </div>

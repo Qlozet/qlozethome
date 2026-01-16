@@ -21,13 +21,13 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
           <div className="relative flex gap-6">
             {/* Arrow Column */}
             <div className="absolute left-0 top-0 flex h-full shrink-0 flex-col items-center">
-              <div className="relative h-full w-1">
+              <div className="relative h-full w-3">
                 <Image
                   src="/image/redarrow.png"
                   alt="Process flow arrow"
                   fill
-                  className="object-cover"
-                  sizes="4px"
+                  className="object-fill"
+                  sizes="12px"
                 />
               </div>
             </div>
