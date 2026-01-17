@@ -15,7 +15,7 @@ export function VendorVideo({ data }: VideoProps) {
   return (
     <section
       id={data.id}
-      className="scroll-mt-32 bg-[#d4d4d4] py-24 sm:py-32 lg:py-40"
+      className="scroll-mt-32 bg-[#ffffff] py-24 sm:py-32 lg:py-40"
     >
       <div className="mx-auto grid w-full max-w-380 items-center gap-12 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16 xl:gap-24">
         <div className="flex flex-col gap-6">

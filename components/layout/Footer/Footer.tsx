@@ -10,7 +10,7 @@ export function Footer({ data }: FooterProps) {
   return (
     <footer id={data.id} className="bg-white py-24">
       <div className="mx-auto w-full max-w-[95rem] px-6">
-        <div className="rounded-[3rem] bg-[#3A3A3A] px-8 py-12 text-white shadow-[0_35px_80px_-40px_rgba(60,44,34,0.8)] sm:px-12 sm:py-16">
+        <div className="rounded-[1.5rem] bg-[#3A3A3A] px-8 py-12 text-white shadow-[0_35px_80px_-40px_rgba(60,44,34,0.8)] sm:rounded-[3rem] sm:px-12 sm:py-16">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
             <div className="flex flex-col gap-4">
               <div className="relative h-10 w-32">

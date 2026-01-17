@@ -48,11 +48,14 @@ export function PartnersSection({ data }: PartnersSectionProps) {
         }
         
         .animate-scroll {
-          animation: scroll 30s linear infinite;
+          animation: scroll 20s linear infinite;
+          will-change: transform;
         }
-        
-        .animate-scroll:hover {
-          animation-play-state: paused;
+
+        @media (min-width: 640px) {
+          .animate-scroll {
+            animation-duration: 30s;
+          }
         }
       `}</style>
     </section>

@@ -41,11 +41,13 @@ export default function VendorPage() {
           <VendorIntegrations data={integrationsData} />
           <PartnersSection data={partnersData} />
           <FAQSection data={faqData} />
-          <VendorCTA data={vendorCtaData} />
+          <div className="-mt-30">
+            <VendorCTA data={vendorCtaData} />
+          </div>
         </div>
 
       </main>
-      <div className="relative z-30">
+      <div className="relative z-30 -mt-20">
         <Footer data={footerData} />
       </div>
 

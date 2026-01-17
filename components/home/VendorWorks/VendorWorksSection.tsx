@@ -9,7 +9,7 @@ type VendorWorksSectionProps = {
 export function VendorWorksSection({ data }: VendorWorksSectionProps) {
   return (
     <section id={data.id} className="scroll-mt-32 bg-[#3a3a3a] py-12 sm:py-12">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-8 px-6 sm:px-12">
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-6 px-6 text-center sm:flex-row sm:justify-between sm:gap-8 sm:px-12 sm:text-left">
         <div className="flex flex-col gap-2">
           <h2 className="text-2xl font-normal text-white sm:text-[20px] lg:text-[20px]">
             {data.title}

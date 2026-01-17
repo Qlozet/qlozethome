@@ -14,7 +14,7 @@ export function VendorCTA({ data }: CTAProps) {
       className="scroll-mt-32 bg-white py-24 sm:py-32"
     >
       <div className="mx-auto w-full max-w-[95rem] px-6">
-        <div className="grid w-full items-center gap-0 overflow-hidden rounded-4xl bg-[#e8e6e3] shadow-[0_20px_60px_-30px_rgba(0,0,0,0.15)] lg:grid-cols-2">
+        <div className="grid w-full items-center gap-0 overflow-hidden rounded-[1.5rem] bg-[#e8e6e3] shadow-[0_20px_60px_-30px_rgba(0,0,0,0.15)] sm:rounded-4xl lg:grid-cols-2">
           <div className="flex flex-col gap-8 p-8 sm:p-12 lg:p-16">
             <h2 className="text-4xl font-bold leading-tight text-[#1b1b1b] sm:text-5xl lg:text-[40px]">
               {data.title}

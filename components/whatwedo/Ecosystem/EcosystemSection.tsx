@@ -44,7 +44,7 @@ export function EcosystemSection({ data }: EcosystemSectionProps) {
 
                 {/* Content */}
                 <div className="flex flex-col">
-                  <h3 className="mb-1 text-lg font-semibold text-black">
+                  <h3 className="mb-1 text-lg font-normal text-black">
                     {stakeholder.title}
                   </h3>
                   <p className="text-sm leading-relaxed text-gray-600">
