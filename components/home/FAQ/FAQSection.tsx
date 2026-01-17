@@ -16,7 +16,7 @@ export function FAQSection({ data }: FAQSectionProps) {
   return (
     <section id={data.id} className="bg-white py-24 sm:py-32 scroll-mt-32 overflow-x-hidden">
       <div className="mx-auto w-full max-w-[90rem] px-4 sm:px-6">
-        <div className="relative mx-auto w-full max-w-full rounded-[3rem] bg-[#3a3a3a] px-6 py-10 text-white shadow-[0_35px_80px_-40px_rgba(58,58,58,0.6)] sm:px-12 sm:py-14 lg:px-16 lg:py-16">
+        <div className="relative mx-auto w-full max-w-full rounded-[1.5rem] bg-[#3a3a3a] px-6 py-10 text-white shadow-[0_35px_80px_-40px_rgba(58,58,58,0.6)] sm:px-12 sm:py-14 lg:px-16 lg:py-16">
           <div className="flex flex-col gap-12">
             <SectionHeading title={data.title} align="center" theme="dark" />
             <div className="flex flex-col divide-y divide-white/15 rounded-4xl border border-white/15 bg-white/5">
