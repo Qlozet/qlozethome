@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "badge": "AI Fit & Styling",
+    "title": "Perfect Fit. Effortless Style. Powered by AI.",
+    "description": "Your body is unique—your clothes should be too. Qlozet uses advanced AI to understand your body, your taste, and your lifestyle.",
+    "cta": {
+      "label": "Get Started",
+      "href": "/waitlist"
+    },
+    "image": {
+      "src": "/image/body2.png",
+      "alt": "AI Fit visualization"
+    }
+  },
+  "biometric": {
+    "badge": "AI Body Measurement",
+    "title": "Your Measurements. Instantly.",
+    "description": "Forget traditional measuring methods. With just your phone, Qlozet captures your body measurements in seconds—accurately and effortlessly.",
+    "features": [
+      "No tailor visits required",
+      "High-precision technology",
+      "Works anytime, anywhere",
+      "Securely saved to profile"
+    ]
+  },
+  "styling": {
+    "badge": "Personalized Styling",
+    "title": "Style That Understands You",
+    "description": "Qlozet’s AI Stylist goes beyond trends—it understands you. Every recommendation is tailored to fit your identity.",
+    "options": [
+      {
+        "title": "Daily Suggestions",
+        "description": "Fresh ideas every morning."
+      },
+      {
+        "title": "Occasion-based",
+        "description": "Perfect for events or work."
+      },
+      {
+        "title": "Style Evolution",
+        "description": "Adapts to your changing taste."
+      }
+    ]
+  },
+  "profile": {
+    "badge": "Digital Fit Profile",
+    "title": "Your Body, Digitally Remembered",
+    "description": "Once captured, Qlozet builds your personal fit profile—so every future order is faster, easier, and perfectly fitted.",
+    "benefits": [
+      "Saved for instant checkout",
+      "Consistent fit across vendors",
+      "No repeated input required"
+    ]
+  },
+  "confidence": {
+    "badge": "Fit Confidence",
+    "title": "Clothes That Actually Fit—The First Time",
+    "description": "Say goodbye to sizing confusion and returns. Qlozet ensures every piece is tailored to your exact body.",
+    "stats": [
+      "Better fit accuracy",
+      "Fewer returns",
+      "Confidence in every order"
+    ]
+  },
+  "experience": {
+    "badge": "Seamless Experience",
+    "title": "From Scan to Style in Minutes",
+    "description": "We’ve removed the friction from fashion. Simple. Fast. Powerful.",
+    "steps": [
+      "Scan your body",
+      "Get measurements",
+      "Receive styling",
+      "Shop instantly"
+    ]
+  },
+  "diversity": {
+    "badge": "Designed for Everyone",
+    "title": "Real People. Real Bodies. Real Style.",
+    "description": "Qlozet is built for diversity—across body types, cultures, and fashion preferences.",
+    "features": [
+      "Inclusive sizing and styling",
+      "African fashion support",
+      "Unique identity focus"
+    ]
+  },
+  "closing": {
+    "title": "The Future of Fashion Starts With You",
+    "description": "No more guessing. No more settling. Just perfectly fitted, beautifully styled clothing—every time.",
+    "cta": {
+      "label": "Start Your Fit Journey Today",
+      "href": "/waitlist"
+    }
+  }
+}

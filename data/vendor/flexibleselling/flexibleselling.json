@@ -1,0 +1,118 @@
+{
+  "hero": {
+    "badge": "Vendor Excellence",
+    "title": "Sell Your Way. No Restrictions.",
+    "description": "Every fashion business is different—and Qlozet is built to support that. Whether you sell ready-made pieces, custom designs, or both, you have full control over how you operate.",
+    "cta": {
+      "label": "Start Selling Your Way",
+      "href": "/waitlist"
+    },
+    "closing": "Flexible selling, designed for real fashion businesses."
+  },
+  "sections": [
+    {
+      "id": "models",
+      "badge": "Multiple Selling Models",
+      "title": "One Platform. Many Ways to Sell.",
+      "description": "Qlozet supports different types of fashion businesses—so you’re never forced into a single model.",
+      "features": [
+        "Sell ready-to-wear products",
+        "Offer made-to-measure custom clothing",
+        "Combine both seamlessly"
+      ],
+      "closing": "Adapt your business to your strengths."
+    },
+    {
+      "id": "customization",
+      "badge": "Customization Control",
+      "title": "Define How Customers Customize",
+      "description": "Choose exactly what parts of your designs customers can modify.",
+      "features": [
+        "Control style options (neckline, sleeves, fit, length)",
+        "Enable or restrict customization features",
+        "Maintain your creative direction"
+      ],
+      "closing": "You stay in control of your designs."
+    },
+    {
+      "id": "pricing",
+      "badge": "Flexible Pricing Structure",
+      "title": "Price Based on Value, Not Limits",
+      "description": "Set pricing that reflects your work and complexity.",
+      "features": [
+        "Base pricing for products",
+        "Add customization costs",
+        "Include rush fees or complexity charges"
+      ],
+      "closing": "Your pricing, your rules."
+    },
+    {
+      "id": "resources",
+      "badge": "Fabric & Resource Flexibility",
+      "title": "Work With What You Have—or Expand",
+      "description": "Qlozet allows flexible sourcing and collaboration.",
+      "features": [
+        "Use your own fabrics",
+        "Accept customer-selected fabrics",
+        "Collaborate with fabric vendors"
+      ],
+      "closing": "No limitations on how you create."
+    },
+    {
+      "id": "workflow",
+      "badge": "Order Workflow Control",
+      "title": "Control Your Workflow",
+      "description": "Decide how orders come to you.",
+      "features": [
+        "Accept direct orders",
+        "Review and approve requests",
+        "Option for bidding or quoting (if enabled)"
+      ],
+      "closing": "You choose how you work—not the platform."
+    },
+    {
+      "id": "adaptability",
+      "badge": "Business Style Adaptation",
+      "title": "Built Around You",
+      "description": "Whether you’re a solo tailor, a growing brand, or a large workshop—Qlozet adapts to your workflow.",
+      "features": [
+        "Works for small and large-scale vendors",
+        "Supports different production styles",
+        "Flexible for evolving businesses"
+      ],
+      "closing": "Grow without changing how you operate."
+    },
+    {
+      "id": "scaling",
+      "badge": "Scale at Your Own Pace",
+      "title": "Start Simple. Expand Easily.",
+      "description": "You don’t need everything at once—Qlozet grows with you.",
+      "features": [
+        "Begin with basic listings",
+        "Add customization over time",
+        "Expand your offerings as you grow"
+      ],
+      "closing": "Scale when you’re ready."
+    },
+    {
+      "id": "freedom",
+      "badge": "Freedom Without Complexity",
+      "title": "Flexible—but Still Simple",
+      "description": "Despite all the options, Qlozet keeps everything easy to manage.",
+      "features": [
+        "Clean, intuitive interface",
+        "No technical complexity",
+        "Everything in one place"
+      ],
+      "closing": "Powerful control, simplified."
+    }
+  ],
+  "closing": {
+    "title": "Your Business. Your Rules. Your Growth.",
+    "description": "Qlozet gives you the flexibility to run your fashion business exactly how you want—without compromise.",
+    "primaryAction": {
+      "label": "Start Selling Your Way on Qlozet",
+      "href": "/waitlist"
+    }
+  }
+}

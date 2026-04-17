@@ -1,0 +1,24 @@
+{
+  "id": "faq",
+  "title": "Frequently asked questions",
+  "items": [
+    {
+      "question": "What makes your measurements special?",
+      "answer": "Our AI-powered fit engine captures over 100 data points from a simple phone scan to deliver tailor-grade precision without studio visits."
+    },
+    {
+      "question": "How long does delivery take?",
+      "answer": "Custom pieces typically ship within 7-10 business days. We partner with trusted couriers to provide end-to-end tracking."
+    },
+    {
+      "question": "Can I collaborate with a stylist?",
+      "answer": "Absolutely. Schedule a virtual appointment inside the app to co-create outfits, finalize fabrics, and review fit adjustments."
+    },
+    {
+      "question": "Do you have a brand identity kit?",
+      "answer": "Yes. Designers receive asset packs, measurement guidelines, and distribution support to maintain brand consistency across experiences."
+    }
+  ]
+}
+
+

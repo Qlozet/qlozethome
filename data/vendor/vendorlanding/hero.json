@@ -1,0 +1,22 @@
+{
+  "id": "vendor-hero",
+  "badge": "FOR VENDORS",
+  "title": "The Future of Made-to-Measure. Scaled.",
+  "description": "Join a sophisticated fashion ecosystem where architectural fit meets global discovery. Empower your atelier with AI-driven measurement, seamless customization, and a borderless clientele.",
+  "primaryAction": {
+    "label": "Sell With Us",
+    "href": "#vendor-cta"
+  },
+  "secondaryAction": {
+    "label": "Learn More",
+    "href": "#vendor-differentiators"
+  },
+  "scrollPrompt": {
+    "up": "Scroll Up",
+    "down": "Scroll Down"
+  },
+  "image": {
+    "src": "/image/headerImage.jpg",
+    "alt": "Fashion designer in red blazer"
+  }
+}

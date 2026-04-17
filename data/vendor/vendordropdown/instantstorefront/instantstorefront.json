@@ -1,0 +1,125 @@
+{
+  "hero": {
+    "badge": "Digital Storefront & Sales",
+    "title": "Your Fashion Business—Fully Online.",
+    "description": "Build, manage, and grow your brand with a powerful digital storefront designed for fashion. No website. No complexity. No limits.",
+    "cta": {
+      "label": "Start Selling on Qlozet",
+      "href": "/waitlist"
+    },
+    "image": {
+      "src": "/image/fabric-1.jpg",
+      "alt": "Digital storefront preview"
+    }
+  },
+  "setup": {
+    "badge": "Instant Storefront",
+    "title": "Launch in Minutes, Not Months",
+    "description": "Create a professional online store without writing a single line of code. Focus on your craft—we handle the rest.",
+    "features": [
+      {
+        "title": "Beautiful Storefront",
+        "description": "Ready-to-use, professional design."
+      },
+      {
+        "title": "No Technical Setup",
+        "description": "Zero coding required."
+      },
+      {
+        "title": "Fully Optimized",
+        "description": "Mobile and web ready."
+      }
+    ]
+  },
+  "showcase": {
+    "badge": "Product Showcase",
+    "title": "Present Your Work at Its Best",
+    "description": "Upload and organize your products effortlessly. Your designs deserve to be seen.",
+    "items": [
+      "Clothing",
+      "Fabrics",
+      "Accessories"
+    ],
+    "image": {
+      "src": "/image/fabric-2.jpg",
+      "alt": "Product gallery"
+    }
+  },
+  "sales": {
+    "badge": "Built for Sales",
+    "title": "Turn Creativity Into Revenue",
+    "description": "Qlozet connects you with customers who are ready to buy. More exposure. More orders. More growth.",
+    "benefits": [
+      "Access a growing customer base",
+      "Receive ready-to-wear & custom orders",
+      "Increase visibility effortlessly"
+    ]
+  },
+  "pricing": {
+    "badge": "Flexible Pricing",
+    "title": "Price Your Work Your Way",
+    "description": "Maintain full control over how you charge for your products and services. You define your value—we support it.",
+    "options": [
+      {
+        "label": "Base Prices",
+        "description": "Set fixed rates for standard pieces."
+      },
+      {
+        "label": "Customization Costs",
+        "description": "Add fees for specific design tweaks."
+      },
+      {
+        "label": "Performance Fees",
+        "description": "Include rush or complexity surcharges."
+      }
+    ]
+  },
+  "reach": {
+    "badge": "Global Brand",
+    "title": "From Local Talent to Global Brand",
+    "description": "Expand beyond your immediate environment and reach customers everywhere. Your audience is no longer limited by location.",
+    "stats": [
+      "Regional Markets",
+      "International Exposure",
+      "Brand Visibility"
+    ]
+  },
+  "integrated": {
+    "badge": "Smart Experience",
+    "title": "Designed for Fashion Businesses",
+    "description": "Everything works together—so you don’t have to. Specialized tools for specialized creators.",
+    "tools": [
+      "Custom & Ready-to-Wear Support",
+      "Integrated Measurement Tools",
+      "Production & Delivery Sync"
+    ]
+  },
+  "direct": {
+    "badge": "Direct Access",
+    "title": "Connect With Real Buyers",
+    "description": "Build relationships with customers who value your work. It’s not just selling—it’s building a brand.",
+    "features": [
+      "Direct Order Management",
+      "Real-time Communication",
+      "Trust & Loyalty Building"
+    ]
+  },
+  "scalable": {
+    "badge": "Scalable Growth",
+    "title": "Simple, Powerful, Scalable",
+    "description": "Whether you’re just starting or scaling up, Qlozet adapts to you. Your growth, simplified.",
+    "phases": [
+      "Start Small",
+      "Grow Fast",
+      "Scale Globally"
+    ]
+  },
+  "closing": {
+    "title": "Your Store. Your Brand. Your Future.",
+    "description": "Qlozet gives you everything you need to succeed in modern fashion—without the usual barriers. Start building your brand today.",
+    "cta": {
+      "label": "Create Your Storefront Now",
+      "href": "/waitlist"
+    }
+  }
+}

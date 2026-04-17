@@ -1,0 +1,138 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Banknote, CheckCircle2, Clock, ArrowDown } from "lucide-react";
+
+type PayoutData = {
+  id: string;
+  badge: string;
+  title: string;
+  description: string;
+  features: string[];
+  closing: string;
+};
+
+type StructuredPayoutsSectionProps = {
+  data: PayoutData;
+};
+
+const MILESTONES = [
+  { phase: "Upfront Deposit", pct: "30%", status: "Released", active: true, amount: "₦25,500" },
+  { phase: "Production Confirmed", pct: "20%", status: "Released", active: true, amount: "₦17,000" },
+  { phase: "Order Complete", pct: "50%", status: "Pending", active: false, amount: "₦42,500" }
+];
+
+export function StructuredPayoutsSection({ data }: StructuredPayoutsSectionProps) {
+  return (
+    <section id={data.id} className="relative z-10 bg-white py-16 lg:py-48 overflow-hidden" data-theme="light">
+      <div className="mx-auto max-w-[94rem] px-6">
+        <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-32">
+          {/* Right: Content */}
+          <div className="flex flex-col gap-10 lg:w-1/2">
+            <div className="flex flex-col gap-6">
+              <motion.span initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40">{data.badge}</motion.span>
+              <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                className="font-display text-3xl font-medium leading-[1.1] tracking-tighter text-black sm:text-5xl lg:text-6xl">{data.title}</motion.h2>
+              <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
+                className="max-w-xl font-ui text-lg leading-relaxed text-black/40 lg:text-2xl">{data.description}</motion.p>
+            </div>
+            <div className="grid gap-4">
+              {data.features.map((feature, i) => (
+                <motion.div key={i} initial={{ opacity: 0, x: 10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 + i * 0.1 }} className="flex items-center gap-6 group">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-50 border border-black/5 group-hover:bg-black group-hover:text-white transition-all shadow-sm">
+                    <Banknote className="h-4 w-4" strokeWidth={1.5} />
+                  </div>
+                  <span className="font-display text-lg font-medium text-black/80">{feature}</span>
+                </motion.div>
+              ))}
+            </div>
+            <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="font-ui text-sm italic text-black/30">{data.closing}</motion.p>
+          </div>
+
+          {/* Left: Milestone Payout Pipeline */}
+          <div className="relative mt-12 lg:mt-0 lg:w-1/2">
+            <div className="relative mx-auto w-full max-w-[500px] rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-6 sm:p-8 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
+               
+               {/* Header */}
+               <div className="flex items-center justify-between pb-5 border-b border-black/5 mb-6">
+                  <div className="flex items-center gap-3">
+                     <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-black text-white">
+                        <Banknote className="h-3.5 w-3.5" />
+                     </div>
+                     <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black">Payout Schedule</span>
+                  </div>
+                  <div className="bg-white px-3 py-1.5 rounded-full border border-black/5 shadow-sm">
+                     <span className="font-mono text-[8px] font-bold text-black/60 uppercase tracking-widest">Order #4521</span>
+                  </div>
+               </div>
+
+               {/* Total */}
+               <div className="bg-white rounded-2xl border border-black/5 shadow-md p-5 mb-6 flex items-center justify-between">
+                  <div className="flex flex-col gap-1">
+                     <span className="font-mono text-[8px] font-bold text-black/40 uppercase tracking-widest">Total Order Value</span>
+                     <span className="font-display text-2xl font-bold text-black tracking-tight">₦85,000</span>
+                  </div>
+                  <div className="flex flex-col items-end gap-1">
+                     <span className="font-mono text-[8px] font-bold text-black/40 uppercase tracking-widest">Released</span>
+                     <span className="font-display text-lg font-bold text-emerald-600 tracking-tight">₦42,500</span>
+                  </div>
+               </div>
+
+               {/* Milestone Steps */}
+               <div className="flex flex-col gap-0">
+                  {MILESTONES.map((ms, i) => {
+                     const isLast = i === MILESTONES.length - 1;
+                     return (
+                        <div key={i}>
+                           <motion.div
+                              initial={{ opacity: 0, x: -20 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              whileHover={{ scale: 1.02, x: 5, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+                              viewport={{ once: true }}
+                              transition={{ delay: 0.3 + i * 0.15 }}
+                              className={`flex items-center gap-4 p-4 rounded-2xl border cursor-pointer transition-all duration-300 ${ms.active ? 'bg-white border-black/5 shadow-md hover:shadow-xl' : 'bg-zinc-50 border-black/[0.03] opacity-50'}`}
+                           >
+                              <div className={`h-10 w-10 rounded-xl flex items-center justify-center shrink-0 ${ms.active ? 'bg-emerald-500/10' : 'bg-zinc-100'}`}>
+                                 {ms.active ? <CheckCircle2 className="h-5 w-5 text-emerald-600" /> : <Clock className="h-5 w-5 text-black/20" />}
+                              </div>
+                              <div className="flex-1 flex flex-col gap-0.5">
+                                 <span className="font-display text-[10px] font-bold text-black uppercase tracking-wider">{ms.phase}</span>
+                                 <span className="font-mono text-[8px] text-black/40 uppercase tracking-widest">{ms.status}</span>
+                              </div>
+                              <div className="flex flex-col items-end gap-0.5">
+                                 <span className={`font-display text-sm font-bold ${ms.active ? 'text-emerald-600' : 'text-black/30'}`}>{ms.amount}</span>
+                                 <span className="font-mono text-[8px] font-bold text-black/20 uppercase tracking-widest">{ms.pct}</span>
+                              </div>
+                           </motion.div>
+                           
+                           {!isLast && (
+                              <div className="flex justify-center py-1.5">
+                                 <ArrowDown className="h-3 w-3 text-black/10" />
+                              </div>
+                           )}
+                        </div>
+                     );
+                  })}
+               </div>
+
+               {/* Progress Bar */}
+               <div className="mt-6 pt-5 border-t border-black/5">
+                  <div className="flex items-center justify-between mb-2">
+                     <span className="font-mono text-[8px] font-bold text-black/40 uppercase tracking-widest">Payout Progress</span>
+                     <span className="font-mono text-[9px] font-bold text-black/60">50%</span>
+                  </div>
+                  <div className="h-2 bg-zinc-200 rounded-full overflow-hidden">
+                     <motion.div initial={{ width: 0 }} whileInView={{ width: "50%" }} viewport={{ once: true }} transition={{ delay: 0.8, duration: 1, ease: "easeOut" }}
+                        className="h-full bg-black rounded-full"
+                     />
+                  </div>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1.5 w-1.5 rounded-full bg-black/10 shadow-sm" />
+    </section>
+  );
+}

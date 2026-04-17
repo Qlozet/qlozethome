@@ -1,0 +1,121 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { MessageSquare, Heart, ShieldCheck, User } from "lucide-react";
+
+const iconMap: any = {
+  "Direct Order Management": ShieldCheck,
+  "Real-time Communication": MessageSquare,
+  "Trust & Loyalty Building": Heart,
+};
+
+type DirectData = {
+  badge: string;
+  title: string;
+  description: string;
+  features: string[];
+};
+
+type DirectSectionProps = {
+  data: DirectData;
+};
+
+export function DirectSection({ data }: DirectSectionProps) {
+  return (
+    <section className="relative w-full bg-white py-24 lg:py-40" data-theme="light">
+      <div className="mx-auto max-w-[94rem] px-6">
+        <div className="flex flex-col gap-16 lg:flex-row lg:items-center">
+          {/* Left Column: Content */}
+          <div className="flex flex-col gap-12 lg:w-1/2">
+            <div className="flex flex-col gap-8">
+              <motion.span
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40"
+              >
+                {data.badge}
+              </motion.span>
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl lg:text-7xl"
+              >
+                {data.title}
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="max-w-xl font-ui text-lg leading-relaxed text-black/60 lg:text-2xl"
+              >
+                {data.description}
+              </motion.p>
+            </div>
+
+            <div className="flex flex-col gap-6">
+              {data.features.map((feature, index) => (
+                <motion.div
+                  key={feature}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 + index * 0.1 }}
+                  className="flex items-center gap-6 group"
+                >
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-50 border border-zinc-100 transition-all group-hover:bg-black group-hover:text-white">
+                    {(() => {
+                        const Icon = iconMap[feature] || MessageSquare;
+                        return <Icon className="h-5 w-5" strokeWidth={1.5} />;
+                    })()}
+                  </div>
+                  <span className="font-ui text-lg font-medium text-black/70 group-hover:text-black">
+                    {feature}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Column: Visual Chat/Interaction UI */}
+          <div className="lg:w-1/2 flex justify-center items-center">
+             <div className="relative w-full max-w-md p-10 bg-zinc-50 rounded-[3rem] border border-zinc-100 shadow-xl overflow-hidden group">
+                <div className="flex flex-col gap-6 relative z-10">
+                   <motion.div
+                     initial={{ opacity: 0, x: -20 }}
+                     whileInView={{ opacity: 1, x: 0 }}
+                     className="bg-white rounded-3xl p-6 shadow-sm border border-white/50 w-4/5 self-start"
+                   >
+                     <span className="font-ui text-sm text-black/60">Can I customize the sleeves on this piece?</span>
+                   </motion.div>
+                   
+                   <motion.div
+                     initial={{ opacity: 0, x: 20 }}
+                     whileInView={{ opacity: 1, x: 0 }}
+                     transition={{ delay: 0.2 }}
+                     className="bg-black rounded-3xl p-6 shadow-xl w-4/5 self-end"
+                   >
+                     <span className="font-ui text-sm text-white">Absolutely! Just list it in your measurement specification.</span>
+                   </motion.div>
+
+                   <motion.div
+                     initial={{ opacity: 0, scale: 0.95 }}
+                     whileInView={{ opacity: 1, scale: 1 }}
+                     transition={{ delay: 0.4 }}
+                     className="flex items-center gap-4 bg-emerald-50 text-emerald-700 px-6 py-4 rounded-2xl border border-emerald-100 self-center"
+                   >
+                     <ShieldCheck className="h-4 w-4" />
+                     <span className="font-display text-[10px] font-bold uppercase tracking-widest">New Order Confirmed</span>
+                   </motion.div>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-200/50 via-transparent to-transparent pointer-events-none" />
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

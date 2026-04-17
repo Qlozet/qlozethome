@@ -1,0 +1,106 @@
+{
+  "hero": {
+    "badge": "Revenue & Scale",
+    "title": "Earn Seamlessly. Grow Confidently.",
+    "description": "Qlozet gives you the tools to not only get paid—but to scale your business with confidence. From secure transactions to growth-driven features, everything is built to help you succeed.",
+    "cta": {
+      "label": "Start Earning on Qlozet",
+      "href": "/waitlist"
+    },
+    "closing": "Focus on your craft. We handle the rest."
+  },
+  "sections": [
+    {
+      "id": "payments",
+      "badge": "Secure Payments",
+      "title": "Fast. Safe. Reliable.",
+      "description": "Every transaction on Qlozet is designed with security and trust at its core.",
+      "features": [
+        "Secure payment processing",
+        "Multiple payment options for customers",
+        "Protected transactions for vendors"
+      ],
+      "closing": "Your earnings are safe—always."
+    },
+    {
+      "id": "payouts",
+      "badge": "Structured Payouts",
+      "title": "Clarity in Every Payment",
+      "description": "Get paid through a structured system designed for reliability and transparency.",
+      "features": [
+        "Clear breakdown of earnings",
+        "Milestone-based payouts (e.g., upfront + completion)",
+        "Consistent and trackable payments"
+      ],
+      "closing": "No confusion. No surprises."
+    },
+    {
+      "id": "growth",
+      "badge": "Built for Growth",
+      "title": "More Than Payments—A Growth Engine",
+      "description": "Qlozet helps you increase your revenue, not just collect it.",
+      "features": [
+        "Access to a growing customer base",
+        "Increased order opportunities",
+        "Tools designed to boost visibility"
+      ],
+      "closing": "Your growth is built into the platform."
+    },
+    {
+      "id": "visibility",
+      "badge": "Promotion & Visibility",
+      "title": "Get Seen. Get Chosen.",
+      "description": "Promote your products and reach more customers directly on Qlozet.",
+      "features": [
+        "Featured listings",
+        "Campaign and promotion tools",
+        "Increased product visibility"
+      ],
+      "closing": "Stand out where it matters most."
+    },
+    {
+      "id": "earnings",
+      "badge": "Transparent Earnings",
+      "title": "Know Exactly What You Earn",
+      "description": "Stay fully informed about your revenue and performance.",
+      "features": [
+        "Clear commission structure",
+        "Real-time earnings tracking",
+        "Full visibility into transactions"
+      ],
+      "closing": "What you earn is always clear."
+    },
+    {
+      "id": "scale",
+      "badge": "Scale Without Limits",
+      "title": "Grow Beyond Boundaries",
+      "description": "Qlozet enables you to expand your business across regions and markets.",
+      "features": [
+        "Reach local and international customers",
+        "Handle increased order volume with ease",
+        "Scale without operational complexity"
+      ],
+      "closing": "From small business to global brand."
+    },
+    {
+      "id": "simplicity",
+      "badge": "Financial Simplicity",
+      "title": "Less Stress. More Focus.",
+      "description": "We simplify the financial side of your business so you can focus on what matters.",
+      "features": [
+        "Automated payment flows",
+        "Organized financial tracking",
+        "Reduced administrative burden"
+      ],
+      "closing": "Run your business—without the headaches."
+    }
+  ],
+  "closing": {
+    "title": "Get Paid. Grow Faster. Scale Smarter.",
+    "description": "Qlozet turns your work into earnings—and your earnings into growth.",
+    "primaryAction": {
+      "label": "Start Selling & Earning Today",
+      "href": "/waitlist"
+    }
+  }
+}

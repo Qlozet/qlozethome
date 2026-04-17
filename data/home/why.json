@@ -1,0 +1,27 @@
+{
+  "id": "why",
+  "eyebrow": "The Qlozet Philosophy",
+  "title": "The New Standard of Personal Style",
+  "cards": [
+    {
+      "title": "Structural Precision",
+      "description": "Our AI engine maps your form with architectural accuracy, ensuring every garment feels like a second skin.",
+      "icon": "Ruler"
+    },
+    {
+      "title": "Curated Craftsmanship",
+      "description": "Discover exclusive collections defined by uncompromised fabrics and artisanal attention to detail.",
+      "icon": "Palette"
+    },
+    {
+      "title": "Empowering the Avant-Garde",
+      "description": "A sophisticated platform for visionary labels to showcase their craft and connect with a discerning global audience.",
+      "icon": "Sparkles"
+    },
+    {
+      "title": "Borderless Sourcing",
+      "description": "Direct access to independent design houses worldwide. Sophistication, delivered with speed and security.",
+      "icon": "Globe"
+    }
+  ]
+}

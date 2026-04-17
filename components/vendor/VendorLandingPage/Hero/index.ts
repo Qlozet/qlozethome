@@ -1,0 +1,1 @@
+export { VendorHero } from "./HeroSection";

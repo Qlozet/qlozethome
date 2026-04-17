@@ -1,0 +1,26 @@
+{
+  "id": "chatwithcustomers-why",
+  "title": "Why you will love it",
+  "tools": [
+    {
+      "icon": "Sparkles",
+      "title": "Smart Nudges",
+      "description": "Auto prompts for missing info— measurements, address, fabric choice."
+    },
+    {
+      "icon": "Languages",
+      "title": "Auto-Translate",
+      "description": "Translate messages inline to reduce friction."
+    },
+    {
+      "icon": "Zap",
+      "title": "Quick Templates",
+      "description": "One-tap replies for common requests and approvals."
+    },
+    {
+      "icon": "Users",
+      "title": "Roles & Mentions",
+      "description": "Loop-in teammates; @mention the right person to unblock work."
+    }
+  ]
+}

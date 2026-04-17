@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "id": "about-hero",
+    "title": "Defining the Digital Atelier",
+    "description": "Beyond the screen, we are building the registry for the modern wardrobe. A fusion of architectural precision and sartorial soul.",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop",
+      "alt": "Minimalist atelier workspace"
+    },
+    "scrollPrompt": {
+      "down": "Discover Our Story"
+    }
+  },
+  "story": {
+    "id": "our-story",
+    "tagline": "The Qlozet Narrative",
+    "title": "Redefining the relationship between person and garment.",
+    "paragraphs": [
+      "Qlozet was born from a simple observation: the digital world has failed the physical wardrobe. While everything else moved forward, our relationship with what we wear remained static, fragmented, and disconnected.",
+      "We envisioned a system where your style isn't just a collection of items, but a living data set—a digital twin of your sartorial identity. By combining advanced AI measurement with curator-led aesthetic intelligence, we've created the world's first true Digital Atelier.",
+      "Our mission is to empower individuals to own their fit, their style, and their data. From bespoke tailoring to curated designer drops, Qlozet is the architecture of modern fashion."
+    ]
+  },
+  "values": {
+    "id": "core-values",
+    "tagline": "The Pillars of our Practice",
+    "title": "Principles that guide our architectural approach to fashion.",
+    "cards": [
+      {
+        "title": "Architectural Precision",
+        "description": "We believe fit is the foundation. Our AI measurement engine treats the human form with the respect of a structural blueprint.",
+        "icon": "ruler"
+      },
+      {
+        "title": "Curated Soul",
+        "description": "Technology without taste is noise. We partner with the world's most visionary designers to ensure every drop has a story.",
+        "icon": "brush"
+      },
+      {
+        "title": "Circular Future",
+        "description": "The most sustainable garment is the one that fits perfectly and lasts for years. We design for longevity and resale.",
+        "icon": "global"
+      },
+      {
+        "title": "Digital Autonomy",
+        "description": "Your wardrobe data belongs to you. We provide the tools to manage, monetize, and master your collection.",
+        "icon": "shop"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Step into the Atelier.",
+    "description": "Experience the future of personal style today.",
+    "primaryAction": {
+      "label": "Join the Elite",
+      "href": "/signup"
+    },
+    "secondaryAction": {
+      "label": "Explore Works",
+      "href": "/works"
+    }
+  }
+}

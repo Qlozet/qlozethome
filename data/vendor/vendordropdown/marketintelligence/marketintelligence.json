@@ -1,0 +1,161 @@
+{
+  "hero": {
+    "badge": "Intelligence",
+    "title": "Smarter Decisions. Faster Growth.",
+    "description": "Qlozet gives you more than a storefront—it gives you intelligence. Understand your business, your customers, and your opportunities with AI-powered insights designed to help you grow.",
+    "cta": {
+      "label": "Unlock Insights",
+      "href": "#analytics"
+    },
+    "secondaryCta": {
+      "label": "Sell Smarter",
+      "href": "#"
+    },
+    "image": {
+      "src": "/image/analytics-hero.png",
+      "alt": "Business Intelligence Dashboard"
+    }
+  },
+  "analytics": {
+    "id": "analytics",
+    "badge": "Performance",
+    "title": "See What’s Driving Your Business",
+    "description": "Track your performance with clear, actionable data. Know what works—so you can do more of it.",
+    "features": [
+      {
+        "title": "Revenue and order trends",
+        "icon": "TrendingUp"
+      },
+      {
+        "title": "Best-selling products",
+        "icon": "Award"
+      },
+      {
+        "title": "Customer purchasing patterns",
+        "icon": "Repeat"
+      }
+    ]
+  },
+  "assistant": {
+    "badge": "AI Partner",
+    "title": "Your Smart Business Partner",
+    "description": "Get real-time recommendations tailored to your business. Like having a strategist built into your business.",
+    "features": [
+      {
+        "title": "Suggestions to improve sales",
+        "icon": "Sparkles"
+      },
+      {
+        "title": "Pricing and product optimization tips",
+        "icon": "Target"
+      },
+      {
+        "title": "Guidance based on your performance",
+        "icon": "Lightbulb"
+      }
+    ]
+  },
+  "customerInsights": {
+    "badge": "Customers",
+    "title": "Understand Your Customers Better",
+    "description": "Learn what your customers want—and deliver it consistently. The better you understand them, the better you sell.",
+    "features": [
+      {
+        "title": "Style and preference trends",
+        "icon": "Palette"
+      },
+      {
+        "title": "Buying behavior insights",
+        "icon": "BarChart3"
+      },
+      {
+        "title": "Repeat customer patterns",
+        "icon": "Users"
+      }
+    ]
+  },
+  "growth": {
+    "badge": "Opportunities",
+    "title": "Find What’s Next",
+    "description": "Qlozet helps you identify where your business can grow. Stay ahead—not behind.",
+    "features": [
+      {
+        "title": "Emerging trends in your niche",
+        "icon": "Zap"
+      },
+      {
+        "title": "Untapped product opportunities",
+        "icon": "Search"
+      },
+      {
+        "title": "Demand signals across the platform",
+        "icon": "Globe"
+      }
+    ]
+  },
+  "optimization": {
+    "badge": "Smart Ops",
+    "title": "Improve Without Guesswork",
+    "description": "Use data to refine how you operate. Every decision backed by insight.",
+    "features": [
+      {
+        "title": "Optimize pricing strategies",
+        "icon": "DollarSign"
+      },
+      {
+        "title": "Improve product offerings",
+        "icon": "PackageSearch"
+      },
+      {
+        "title": "Adjust based on real performance",
+        "icon": "Settings2"
+      }
+    ]
+  },
+  "learning": {
+    "badge": "Growth",
+    "title": "Your Business Gets Smarter Over Time",
+    "description": "The more you use Qlozet, the better the insights become. Growth that compounds.",
+    "features": [
+      {
+        "title": "AI adapts to your business",
+        "icon": "BrainCircuit"
+      },
+      {
+        "title": "Learns from customer interactions",
+        "icon": "MessageSquareText"
+      },
+      {
+        "title": "Improves recommendations continuously",
+        "icon": "RefreshCcw"
+      }
+    ]
+  },
+  "simplicity": {
+    "badge": "Clarity",
+    "title": "No Complexity. Just Clarity.",
+    "description": "You don’t need to be a data expert to benefit. Insight without overwhelm.",
+    "features": [
+      {
+        "title": "Easy-to-understand dashboards",
+        "icon": "LayoutDashboard"
+      },
+      {
+        "title": "Clear recommendations",
+        "icon": "CheckCircle2"
+      },
+      {
+        "title": "Actionable next steps",
+        "icon": "MoveRight"
+      }
+    ]
+  },
+  "closing": {
+    "title": "Turn Data Into Growth",
+    "description": "Qlozet transforms your business data into real opportunities. Make smarter decisions. Grow faster. Stay ahead of the competition.",
+    "cta": {
+      "label": "Start Growing with AI",
+      "href": "/waitlist"
+    }
+  }
+}

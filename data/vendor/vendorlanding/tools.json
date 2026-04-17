@@ -1,0 +1,41 @@
+{
+  "id": "vendor-tools",
+  "title": "Infrastructure for Modern Ateliers",
+  "subtitle": "From parametric style templates to digital fabric skus—Qlozet provides the technical foundation for artisanal growth.",
+  "items": [
+    {
+      "icon": "Component",
+      "title": "Parametric Design",
+      "description": "Define styles with dynamic inputs—necklines, sleeves, and textures—with automated pricing logic."
+    },
+    {
+      "icon": "Database",
+      "title": "Digital Materials Library",
+      "description": "Manage your fabric inventory with yardage intelligence and integrated material pairings."
+    },
+    {
+      "icon": "Shield",
+      "title": "Structural Integrity Checks",
+      "description": "Automated flags for measurement anomalies to ensure first-time-fit perfection."
+    },
+    {
+      "icon": "FileText",
+      "title": "Quality Documentation",
+      "description": "Maintain a visual record of cut tickets and pre-shipment benchmarks against a digital checklist."
+    },
+    {
+      "icon": "MessageSquare",
+      "title": "Sartorial Communication",
+      "description": "Direct client collaboration with version-controlled briefs and milestone sign-offs."
+    },
+    {
+      "icon": "TrendingUp",
+      "title": "Growth Intelligence",
+      "description": "Deep analytics on lead times, regional trends, and performance to scale your label with data."
+    }
+  ],
+  "image": {
+    "src": "/image/tailorwork.png",
+    "alt": "Designer working in atelier"
+  }
+}

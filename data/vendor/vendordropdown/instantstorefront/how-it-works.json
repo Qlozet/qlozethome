@@ -1,0 +1,29 @@
+{
+  "title": "How it works",
+  "steps": [
+    {
+      "id": "choose-base-style",
+      "icon": "UserPlus",
+      "title": "Sign up",
+      "description": "Sign up to get access to your dashboard "
+    },
+    {
+      "id": "customize-details",
+      "icon": "ImagePlus",
+      "title": "Upload your work",
+      "description": "Upload products and product photos and let them talk for you"
+    },
+    {
+      "id": "pick-fabric",
+      "icon": "BadgeCheck",
+      "title": "Get Verified",
+      "description": "Get accessed and verified by us "
+    },
+    {
+      "id": "generate-visual-preview",
+      "icon": "Banknote",
+      "title": "Start getting paid",
+      "description": "Self explanatory"
+    }
+  ]
+}

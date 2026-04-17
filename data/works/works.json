@@ -1,0 +1,12 @@
+{
+  "id": "how-it-works",
+  "title": "How it works",
+  "subtitle": "Web Platform for Vendors",
+  "description": "The Qlozet Vendor Platform empowers designers, tailors, and fabric sellers to showcase products, manage custom orders, receive AI-powered body measurements, and deliver personalized fashion experiences — all within one unified dashboard.",
+  "video": {
+    "thumbnail": "/image/dashboard.png",
+    "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "alt": "Qlozet vendor dashboard interface"
+  }
+}
+

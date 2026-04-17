@@ -1,0 +1,1 @@
+export { ExploreHero } from "./ExploreHeroSection";

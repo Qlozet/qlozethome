@@ -1,0 +1,54 @@
+{
+  "id": "vendor-features",
+  "title": "Features",
+  "features": [
+    {
+      "title": "Market Intelligence",
+      "description": "Translate complex order data into visual insights. Understand global silhouettes and regional preferences in real-time.",
+      "image": {
+        "src": "/image/graphsy.png",
+        "alt": "Data analysis dashboard showing demographics and orders by gender"
+      },
+      "cta": {
+        "label": "Discover how it works",
+        "href": "#how-it-works"
+      }
+    },
+    {
+      "title": "Adaptive Commerce Models",
+      "description": "Whether ready-to-wear or purely bespoke, our platform adapts to your studio's unique production philosophy.",
+      "image": {
+        "src": "/image/featsu.png",
+        "alt": "Product customization interface with drag and drop tags"
+      },
+      "cta": {
+        "label": "Discover how it works",
+        "href": "#how-it-works"
+      }
+    },
+    {
+      "title": "Global Digital Presence",
+      "description": "Establish your brand's authority within a curated network of designers, without the need for independent infrastructure.",
+      "image": {
+        "src": "/image/storefront.png",
+        "alt": "Storefront preview showing vendor shop pages"
+      },
+      "cta": {
+        "label": "Discover how it works",
+        "href": "#how-it-works"
+      }
+    },
+    {
+      "title": "Seamless Fulfillment",
+      "description": "Focus on the craft while we manage the complexities of global logistics, customs, and last-mile delivery.",
+      "image": {
+        "src": "/image/logi.png",
+        "alt": "Woman receiving package delivery"
+      },
+      "cta": {
+        "label": "Discover how it works",
+        "href": "#how-it-works"
+      }
+    }
+  ]
+}

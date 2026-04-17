@@ -1,0 +1,106 @@
+{
+  "hero": {
+    "badge": "Logistics & Delivery",
+    "title": "Deliver With Confidence. Every Time.",
+    "description": "Qlozet handles the complexity of logistics—so your products reach customers safely, efficiently, and on time. From pickup to delivery, we’ve got it covered.",
+    "cta": {
+      "label": "Start Delivering with Qlozet",
+      "href": "/waitlist"
+    },
+    "closing": "Precision in every package."
+  },
+  "sections": [
+    {
+      "id": "end-to-end",
+      "badge": "End-to-End Logistics",
+      "title": "From Vendor to Customer—Seamlessly",
+      "description": "Qlozet manages the entire delivery journey, ensuring a friction-free experience for both you and your customers.",
+      "features": [
+        "Pickup coordination",
+        "Shipping management",
+        "Final delivery to customer"
+      ],
+      "closing": "One system. Complete control."
+    },
+    {
+      "id": "network",
+      "badge": "Reliable Network",
+      "title": "Powered by Trusted Partners",
+      "description": "We work with reliable logistics providers to ensure every order arrives safely and on schedule.",
+      "features": [
+        "Dependable delivery partners",
+        "Wide coverage across regions",
+        "Consistent delivery performance"
+      ],
+      "closing": "Your reputation, protected."
+    },
+    {
+      "id": "tracking",
+      "badge": "Real-Time Tracking",
+      "title": "Track Every Movement",
+      "description": "Stay informed at every stage of the delivery process with integrated tracking tools.",
+      "features": [
+        "Live shipment tracking",
+        "Status updates in real time",
+        "Full visibility for you and your customers"
+      ],
+      "closing": "No uncertainty. Just clarity."
+    },
+    {
+      "id": "packaging",
+      "badge": "Branded Packaging",
+      "title": "Deliver Your Brand Experience",
+      "description": "Make every delivery feel premium and professional with our custom packaging solutions.",
+      "features": [
+        "Qlozet-branded packaging options",
+        "Clean, professional presentation",
+        "Enhanced customer experience"
+      ],
+      "closing": "Every delivery reflects quality."
+    },
+    {
+      "id": "simplicity",
+      "badge": "Simple Logistics",
+      "title": "No Complexity. No Stress.",
+      "description": "Qlozet removes the burden of managing logistics manually, automating the heavy lifting.",
+      "features": [
+        "Automated shipping processes",
+        "Integrated delivery system",
+        "Reduced operational effort"
+      ],
+      "closing": "Focus on production—we handle delivery."
+    },
+    {
+      "id": "fulfillment",
+      "badge": "Flexible Fulfillment",
+      "title": "Adapt to Your Workflow",
+      "description": "Whether you’re handling small or large volumes, our logistics system scales with you.",
+      "features": [
+        "Supports different delivery flows",
+        "Handles custom and ready-to-wear orders",
+        "Flexible for growing businesses"
+      ],
+      "closing": "Built to grow with you."
+    },
+    {
+      "id": "execution",
+      "badge": "Reliable Execution",
+      "title": "Consistency You Can Trust",
+      "description": "We prioritize reliability at every step of the logistics process for guaranteed performance.",
+      "features": [
+        "On-time delivery focus",
+        "Secure handling of products",
+        "Reduced delivery issues"
+      ],
+      "closing": "Because delivery is part of your brand."
+    }
+  ],
+  "closing": {
+    "title": "Deliver Better. Stress Less.",
+    "description": "With Qlozet, logistics becomes simple, reliable, and efficient.",
+    "primaryAction": {
+      "label": "Start Shipping with Confidence",
+      "href": "/waitlist"
+    }
+  }
+}

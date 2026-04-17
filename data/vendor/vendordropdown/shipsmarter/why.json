@@ -1,0 +1,28 @@
+{
+  "id": "shipsmarter-why",
+  "title": "Why you will love it",
+  "tools": [
+    {
+      "icon": "LayoutDashboard",
+      "title": "Streamlined workflows",
+      "description": "Manage labels, pickups, and tracking from one dashboard—no more switching between tools."
+    },
+    {
+      "icon": "Bell",
+      "title": "Automated updates",
+      "description": "Keep customers informed automatically with milestone notifications and exception alerts."
+    },
+    {
+      "icon": "Route",
+      "title": "Smart routing",
+      "description": "Route by zone, weight, or SLA priority to optimize delivery times and costs."
+    },
+    {
+      "icon": "Globe",
+      "title": "Cross-border ready",
+      "description": "Generate commercial invoices and HS codes with templates for international shipping."
+    }
+  ]
+}
+
+

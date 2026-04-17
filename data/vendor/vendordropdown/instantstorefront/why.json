@@ -1,0 +1,26 @@
+{
+  "id": "instant-storefront-why",
+  "title": "Why vendors love it",
+  "tools": [
+    {
+      "icon": "Rocket",
+      "title": "Launch in minutes",
+      "description": "Spin up a branded page with services, pricing, and a booking button—no code or plugins required."
+    },
+    {
+      "icon": "CreditCard",
+      "title": "Shoppable by default",
+      "description": "Escrow payments, milestone payouts, and order messaging are built in—so inquiries turn into orders."
+    },
+    {
+      "icon": "Link",
+      "title": "SEO + shareable link",
+      "description": "Get a clean .qz.store URL and metadata so your page looks great on Google and social."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Trust & Safety",
+      "description": "Spec‑lock, proofs, and tracking boost buyer confidence and reduce disputes."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Loved by our community",
+  "testimonials": [
+    {
+      "id": "testimonial-1",
+      "quote": "I got measured in a minute—my suit fit right out of the box."
+    },
+    {
+      "id": "testimonial-2",
+      "quote": "Shared my profile once; now every order is easy."
+    },
+    {
+      "id": "testimonial-3",
+      "quote": "No awkward measuring—just photos and done."
+    }
+  ]
+}

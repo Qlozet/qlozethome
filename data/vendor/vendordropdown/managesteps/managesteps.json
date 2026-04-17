@@ -1,0 +1,193 @@
+{
+  "hero": {
+    "badge": "Order & Production",
+    "title": "Manage Every Order. Deliver Every Detail.",
+    "description": "From custom designs to ready-to-wear pieces, Qlozet gives you full control over your orders and production process—without complexity. Everything organized. Everything clear. Everything on time.",
+    "cta": {
+      "label": "Manage Your Orders",
+      "href": "#order-management"
+    }
+  },
+  "orderManagement": {
+    "id": "order-management",
+    "badge": "Centralized",
+    "title": "All Your Orders in One Place",
+    "description": "No more scattered messages or manual tracking. Every order is organized in a single, easy-to-use dashboard.",
+    "features": [
+      {
+        "title": "View all incoming orders instantly",
+        "icon": "Inbox"
+      },
+      {
+        "title": "Separate custom and ready-to-wear orders",
+        "icon": "Split"
+      },
+      {
+        "title": "Clear order details at a glance",
+        "icon": "Eye"
+      }
+    ]
+  },
+  "measurements": {
+    "badge": "Specifications",
+    "title": "Everything You Need to Get It Right",
+    "description": "Access precise customer measurements and design specifications instantly. No guesswork. No errors.",
+    "features": [
+      {
+        "title": "Accurate body measurements provided",
+        "icon": "Ruler"
+      },
+      {
+        "title": "Detailed customization instructions",
+        "icon": "FileText"
+      },
+      {
+        "title": "Fabric and style references included",
+        "icon": "Swatch"
+      }
+    ]
+  },
+  "workflow": {
+    "badge": "The Pipeline",
+    "title": "Track Every Stage of Production",
+    "description": "Manage your workflow from start to finish with clear production stages. Know exactly where every order stands.",
+    "steps": [
+      {
+        "id": "received",
+        "title": "Order Received",
+        "description": "New orders arrive with full specifications and customer requirements.",
+        "icon": "Incoming"
+      },
+      {
+        "id": "production",
+        "title": "In Production",
+        "description": "Design and assembly focused on the customer's unique requirements.",
+        "icon": "Scissors"
+      },
+      {
+        "id": "quality",
+        "title": "Quality Check",
+        "description": "Rigorous inspection to ensure every detail meets our premium standards.",
+        "icon": "CheckCircle"
+      },
+      {
+        "id": "delivery",
+        "title": "Ready for Delivery",
+        "description": "Final product packaged and prepared for shipping to the customer.",
+        "icon": "Package"
+      }
+    ]
+  },
+  "queue": {
+    "badge": "Efficiency",
+    "title": "Stay Ahead of Deadlines",
+    "description": "Qlozet helps you manage your workload efficiently so you never fall behind. Work smarter—not harder.",
+    "features": [
+      {
+        "title": "Organized order queue",
+        "icon": "ListOrdered"
+      },
+      {
+        "title": "Deadline tracking",
+        "icon": "Clock"
+      },
+      {
+        "title": "Better production planning",
+        "icon": "Calendar"
+      }
+    ]
+  },
+  "collaboration": {
+    "badge": "Synergy",
+    "title": "Collaborate Seamlessly",
+    "description": "Work with other vendors to complete complex orders. Expand what you can deliver.",
+    "features": [
+      {
+        "title": "Coordinate with fabric suppliers",
+        "icon": "Users"
+      },
+      {
+        "title": "Partner with other designers",
+        "icon": "UserPlus"
+      },
+      {
+        "title": "Handle multi-source orders easily",
+        "icon": "Layers"
+      }
+    ]
+  },
+  "support": {
+    "badge": "Modern Ops",
+    "title": "Built to Support Your Process",
+    "description": "Qlozet adapts to how fashion production actually works. Designed for real-world fashion businesses.",
+    "features": [
+      {
+        "title": "Handles both custom and ready-made orders",
+        "icon": "Store"
+      },
+      {
+        "title": "Supports different production styles",
+        "icon": "Wand2"
+      },
+      {
+        "title": "Flexible to your workflow",
+        "icon": "Workflow"
+      }
+    ]
+  },
+  "performance": {
+    "badge": "Awareness",
+    "title": "Know How You’re Doing",
+    "description": "Stay informed on your production efficiency and order flow. Improve with every order.",
+    "features": [
+      {
+        "title": "Track order volume",
+        "icon": "BarChart3"
+      },
+      {
+        "title": "Monitor completion rates",
+        "icon": "Activity"
+      },
+      {
+        "title": "Identify bottlenecks",
+        "icon": "Gauge"
+      }
+    ]
+  },
+  "operations": {
+    "badge": "Simplicity",
+    "title": "Less Admin. More Creation.",
+    "description": "Qlozet removes the operational burden so you can focus on your craft. Spend less time managing—more time creating.",
+    "features": [
+      {
+        "title": "Reduced manual tracking",
+        "icon": "MonitorOff"
+      },
+      {
+        "title": "Clear communication flow",
+        "icon": "MessageSquare"
+      },
+      {
+        "title": "Everything in one system",
+        "icon": "Box"
+      }
+    ]
+  },
+  "closing": {
+    "id": "managesteps-cta",
+    "title": "Run Your Fashion Business Like a Pro",
+    "description": "With Qlozet, managing orders and production becomes simple, structured, and stress-free. Stay organized. Deliver on time. Grow with confidence.",
+    "primaryAction": {
+      "label": "Start Managing Your Orders",
+      "href": "/waitlist"
+    },
+    "secondaryAction": {
+      "label": "Learn More",
+      "href": "#"
+    },
+    "image": {
+      "src": "/image/managesteps-cta.png",
+      "alt": "Fashion production expert using Qlozet tools"
+    }
+  }
+}

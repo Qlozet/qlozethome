@@ -1,0 +1,41 @@
+{
+  "title": "Why it matters - Reduce admin, deliver on time, and protect your margins.",
+  "items": [
+    {
+      "id": "proactive-alerts",
+      "image": "/image/tealstar.png",
+      "title": "Proactive alerts",
+      "description": "SLA countdowns and reminders across your team."
+    },
+    {
+      "id": "real-time-status",
+      "image": "/image/tealoct.png",
+      "title": "Real-time status",
+      "description": "Customer gets updates automatically—fewer DMs and calls."
+    },
+    {
+      "id": "fewer-refits",
+      "image": "/image/tealgraph.png",
+      "title": "Fewer refits",
+      "description": "Measurement-aware orders reduce alterations and returns."
+    },
+    {
+      "id": "delightful-ux",
+      "image": "/image/tealwave.png",
+      "title": "Delightful UX",
+      "description": "Simple tables, quick actions, and clear history."
+    },
+    {
+      "id": "performance-insights",
+      "image": "/image/tealfall.png",
+      "title": "Performance insights",
+      "description": "On-time %, dispute rate, and fit confirmation trends."
+    },
+    {
+      "id": "connect-your-world",
+      "image": "/image/tealloop.png",
+      "title": "Connect Your World",
+      "description": "Connect carriers and payouts with a few clicks."
+    }
+  ]
+}

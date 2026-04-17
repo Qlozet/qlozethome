@@ -1,0 +1,30 @@
+{
+  "title": "What you can customize",
+  "items": [
+    {
+      "id": "base-silhouettes",
+      "icon": "Shirt",
+      "title": "Base Silhouettes",
+      "description": "Shirts, dresses, kaftans, suits, skirts, jumpsuits and more."
+    },
+    {
+      "id": "style-parts",
+      "icon": "Layers",
+      "title": "Style Parts",
+      "description": "Necklines, sleeves, hem lengths, closures, trims, pockets."
+    },
+    {
+      "id": "fabrics-colors",
+      "icon": "Palette",
+      "title": "Fabrics & Colors",
+      "description": "Pick fabric weight, pattern, and colorways—see it live."
+    },
+    {
+      "id": "fit-guidance",
+      "icon": "Ruler",
+      "title": "Fit Guidance",
+      "description": "Uses your AI measurements to suggest best options."
+    }
+  ]
+}
+

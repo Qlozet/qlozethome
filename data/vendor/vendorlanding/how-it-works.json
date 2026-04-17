@@ -1,0 +1,30 @@
+{
+  "id": "vendor-how-it-works",
+  "title": "How it works",
+  "steps": [
+    {
+      "icon": "UserPlus",
+      "title": "Sign Up",
+      "description": "Sign up to get access to your dashboard"
+    },
+    {
+      "icon": "UploadCloud",
+      "title": "Upload Your Work",
+      "description": "Upload products and product photos and let them talk for you"
+    },
+    {
+      "icon": "BadgeCheck",
+      "title": "Get Verified",
+      "description": "Get accessed and verified by us"
+    },
+    {
+      "icon": "DollarSign",
+      "title": "Start Getting Paid",
+      "description": "Receive secure payments directly to your preferred account as you grow your fashion business."
+    }
+  ],
+  "image": {
+    "src": "/image/ipadframe.png",
+    "alt": "Qlozet vendor dashboard showing orders, earnings, and analytics"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "title": "AI vs Manual vs Tailor visit",
+  "subtitle": "No special hardware needed—recent iOS & Android devices work fine.",
+  "comparisonTable": {
+    "rows": [
+      {
+        "method": "AI",
+        "speed": "AI: ~60s",
+        "accuracy": "AI: ±1.5 cm*",
+        "convenience": "AI: At home",
+        "reusable": "AI: Yes"
+      },
+      {
+        "method": "Manual",
+        "speed": "Manual: 10-20min",
+        "accuracy": "Manual: Varies",
+        "convenience": "Manual: Needs partner",
+        "reusable": "Manual: Manual notes"
+      },
+      {
+        "method": "Tailor visits",
+        "speed": "Tailor visits: 15-30min",
+        "accuracy": "Tailor visits: High",
+        "convenience": "Tailor visits: Travel",
+        "reusable": "Tailor visits: 15-30min"
+      }
+    ]
+  },
+  "features": [
+    {
+      "image": "/image/purpleshape.png",
+      "title": "Mobile-first",
+      "description": "Capture and review directly on your phone or tablet."
+    },
+    {
+      "image": "/image/purplegroup.png",
+      "title": "Assistive prompts",
+      "description": "We show helpful cues if lighting or posture needs a tweak."
+    },
+    {
+      "image": "/image/purpleobject.png",
+      "title": "Continuous upgrades",
+      "description": "The experience improves as we refine models and UX."
+    }
+  ]
+}
+

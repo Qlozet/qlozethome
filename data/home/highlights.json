@@ -1,0 +1,50 @@
+{
+  "id": "highlights",
+  "items": [
+    {
+      "id": "fit-intelligence",
+      "eyebrow": "",
+      "title": "Intelligent Fit, No Compromise",
+      "description": "Our computer-vision pipeline translates captures into precise body measurements. Your data remains yours, shared only to perfect your fit.",
+      "cta": {
+        "label": "Discover How it Works",
+        "href": "#shopping"
+      },
+      "image": {
+        "src": "/image/body2.png",
+        "alt": "Body measurement preview"
+      },
+      "phoneImage": "/image/body2.png"
+    },
+    {
+      "id": "build-your-outfit",
+      "eyebrow": "",
+      "title": "The Digital Atelier",
+      "description": "Bring your vision to life. Mix styles, textures, and silhouettes, then watch as our AI visualizes your unique design, tailored perfectly to you.",
+      "cta": {
+        "label": "Start Shopping",
+        "href": "#early-access"
+      },
+      "image": {
+        "src": "/image/bespoke-outfit-2.png",
+        "alt": "Garment builder interface"
+      },
+      "phoneImage": "/image/bespoke-outfit-2.png"
+    },
+    {
+      "id": "personalize-outfits",
+      "eyebrow": "",
+      "title": "Sartorial Autonomy",
+      "description": "Redefine your style on your own terms. Tweak every detail from neckline to fabric in real-time. It's fashion that fits you.",
+      "cta": {
+        "label": "Manage Your Closet",
+        "href": "#shopping"
+      },
+      "image": {
+        "src": "/image/custom-outfit-2.png",
+        "alt": "Personalized outfits on mobile"
+      },
+      "phoneImage": "/image/custom-outfit-2.png"
+    }
+  ]
+}

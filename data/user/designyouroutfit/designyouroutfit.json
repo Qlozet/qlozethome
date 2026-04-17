@@ -1,0 +1,193 @@
+{
+  "hero": {
+    "badge": "AI Design Engine",
+    "title": "From Idea to Outfit—Instantly.",
+    "description": "What if you could describe your outfit… and see it come to life? With Qlozet’s AI Design Engine, you can turn inspiration, ideas, and imagination into fully visualized fashion designs—ready to be created.",
+    "cta": {
+      "label": "Start Designing",
+      "href": "#inspiration"
+    }
+  },
+  "inspiration": {
+    "id": "inspiration",
+    "badge": "Create From Anything",
+    "title": "Your Ideas, Fully Realized",
+    "description": "Start with whatever you have—or nothing at all. Qlozet transforms your input into a complete outfit concept.",
+    "features": [
+      {
+        "title": "Describe your outfit in words",
+        "icon": "MessageSquareText"
+      },
+      {
+        "title": "Upload inspiration images",
+        "icon": "ImagePlus"
+      },
+      {
+        "title": "Select fabrics and styles",
+        "icon": "SwatchBook"
+      }
+    ]
+  },
+  "generation": {
+    "badge": "AI Generation",
+    "title": "Watch Your Outfit Come to Life",
+    "description": "Our AI generates detailed, realistic outfit designs tailored to your input. From concept to visual—within seconds.",
+    "features": [
+      {
+        "title": "High-quality visual renders",
+        "icon": "Sparkles"
+      },
+      {
+        "title": "Accurate interpretation of fabrics and styles",
+        "icon": "Target"
+      },
+      {
+        "title": "Multiple variations to explore",
+        "icon": "Layers"
+      }
+    ]
+  },
+  "precision": {
+    "badge": "Precision",
+    "title": "Designed Exactly How You Want It",
+    "description": "Qlozet ensures your design respects every detail. What you choose is what gets created—no surprises.",
+    "features": [
+      {
+        "title": "Use real fabric references",
+        "icon": "Scissors"
+      },
+      {
+        "title": "Apply specific embroidery styles",
+        "icon": "Palette"
+      },
+      {
+        "title": "Control design elements precisely",
+        "icon": "SlidersHorizontal"
+      }
+    ]
+  },
+  "production": {
+    "badge": "Production Ready",
+    "title": "Not Just Concepts—Real Clothing",
+    "description": "Every design generated is meant to be made. Designs aligned with real tailoring workflows.",
+    "features": [
+      {
+        "title": "Designs aligned with real tailoring workflows",
+        "icon": "Workflow"
+      },
+      {
+        "title": "Ready for vendor production",
+        "icon": "Store"
+      },
+      {
+        "title": "Seamlessly sent to the right designer",
+        "icon": "Send"
+      }
+    ]
+  },
+  "refinement": {
+    "badge": "Iteration",
+    "title": "Design Is a Process—We Make It Easy",
+    "description": "Iterate, adjust, and improve your outfit until it’s exactly right. You’re in full creative control.",
+    "features": [
+      {
+        "title": "Edit styles, fit, and details",
+        "icon": "PencilRuler"
+      },
+      {
+        "title": "Regenerate new variations",
+        "icon": "RefreshCcw"
+      },
+      {
+        "title": "Fine-tune every element",
+        "icon": "Gauge"
+      }
+    ]
+  },
+  "tailored": {
+    "badge": "Personalized",
+    "title": "Every Design Fits You",
+    "description": "Your generated outfit isn’t generic—it’s tailored to your measurements. Not just beautiful—accurate.",
+    "features": [
+      {
+        "title": "Integrated with your fit profile",
+        "icon": "UserCheck"
+      },
+      {
+        "title": "Designed with your proportions in mind",
+        "icon": "Ruler"
+      },
+      {
+        "title": "Better final results in production",
+        "icon": "CheckCircle2"
+      }
+    ]
+  },
+  "workflow": {
+    "badge": "Seamless Workflow",
+    "title": "From Idea to Order in Minutes",
+    "description": "Creation has never been this simple. Just follow the path to your dream outfit.",
+    "steps": [
+      {
+        "id": "input",
+        "title": "Input Inspiration",
+        "description": "Start with words, images, or fabric references.",
+        "icon": "Lightbulb"
+      },
+      {
+        "id": "generate",
+        "title": "Generate Design",
+        "description": "Watch the AI build your concept instantly.",
+        "icon": "Cpu"
+      },
+      {
+        "id": "refine",
+        "title": "Refine & Finalize",
+        "description": "Fine-tune every detail until it's perfect.",
+        "icon": "Wand2"
+      },
+      {
+        "id": "produce",
+        "title": "Send to Production",
+        "description": "Get it made by our expert tailoring network.",
+        "icon": "Gem"
+      }
+    ]
+  },
+  "creativity": {
+    "badge": "Creativity",
+    "title": "There Are No Boundaries Here",
+    "description": "Qlozet unlocks a new level of creative freedom. Fashion without limits.",
+    "features": [
+      {
+        "title": "Blend cultures, styles, and trends",
+        "icon": "Globe"
+      },
+      {
+        "title": "Experiment without risk",
+        "icon": "Zap"
+      },
+      {
+        "title": "Create designs you won’t find anywhere else",
+        "icon": "Stars"
+      }
+    ]
+  },
+  "closing": {
+    "id": "design-cta",
+    "title": "You Don’t Have to Imagine It Anymore.",
+    "description": "Now, you can see it. Refine it. Create it. Wear it. Qlozet is redefining how fashion is designed—by putting creativity directly in your hands.",
+    "primaryAction": {
+      "label": "Start Creating Your Outfit",
+      "href": "/waitlist"
+    },
+    "secondaryAction": {
+      "label": "Learn More",
+      "href": "#"
+    },
+    "image": {
+      "src": "/image/designyouroutfit-cta.png",
+      "alt": "Fashion design visualized by AI"
+    }
+  }
+}

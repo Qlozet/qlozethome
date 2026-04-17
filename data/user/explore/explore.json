@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "badge": "Fashion Discovery",
+    "title": "Discover Fashion You Won’t Find Anywhere Else.",
+    "description": "Explore a curated world of designers, fabrics, and styles—tailored to your taste and powered by Qlozet.",
+    "cta": {
+      "label": "Start Exploring",
+      "href": "#vendors"
+    }
+  },
+  "vendors": {
+    "id": "vendors",
+    "badge": "Discover Unique Vendors",
+    "title": "Meet the Creators Behind the Craft",
+    "description": "Qlozet connects you with talented designers, tailors, and fabric vendors from across regions.",
+    "features": [
+      "Independent designers and established brands",
+      "Verified vendors you can trust",
+      "Diverse styles and cultural influences"
+    ],
+    "closing": "Every piece has a story. Every vendor has a vision."
+  },
+  "catalogue": {
+    "id": "catalogue",
+    "badge": "Curated Fashion Catalogue",
+    "title": "Browse With Ease",
+    "description": "Explore a clean, organized catalogue designed to help you find exactly what you’re looking for.",
+    "features": [
+      "Clothing, fabrics, and accessories",
+      "Organized by categories and styles",
+      "Clean, visual browsing experience"
+    ],
+    "closing": "Find what you love—faster."
+  },
+  "discovery": {
+    "id": "discovery",
+    "badge": "Smart Discovery",
+    "title": "Fashion That Finds You",
+    "description": "Qlozet personalizes your experience so you discover styles that match your taste.",
+    "features": [
+      "AI-powered recommendations",
+      "Personalized feeds based on your preferences",
+      "Smart filtering and search"
+    ],
+    "closing": "Less searching. More discovering."
+  },
+  "ecosystem": {
+    "id": "ecosystem",
+    "badge": "More Than Just Clothing",
+    "title": "Everything Fashion—In One Place",
+    "description": "Qlozet brings together all elements of fashion into a single ecosystem.",
+    "features": [
+      "Shop fabrics for custom designs",
+      "Discover accessories to complete your look",
+      "Explore full outfit combinations"
+    ],
+    "closing": "It’s not just shopping—it’s building your style."
+  },
+  "inspiration": {
+    "id": "inspiration",
+    "badge": "Inspiration Everywhere",
+    "title": "Get Inspired",
+    "description": "Explore designs from vendors and creations from other users.",
+    "features": [
+      "Vendor showcases",
+      "User-generated designs",
+      "Trending styles and looks"
+    ],
+    "closing": "See it. Love it. Make it yours."
+  },
+  "experience": {
+    "id": "experience",
+    "badge": "Seamless Shopping Experience",
+    "title": "From Discovery to Checkout",
+    "description": "Once you find what you love, Qlozet makes it easy to act.",
+    "features": [
+      "Add to cart or customize instantly",
+      "Save items for later",
+      "Smooth and fast checkout"
+    ],
+    "closing": "Inspiration to action—without friction."
+  },
+  "personalization": {
+    "id": "personalization",
+    "badge": "Built Around You",
+    "title": "Your Taste. Your Feed.",
+    "description": "The more you explore, the better Qlozet understands you.",
+    "features": [
+      "Personalized catalogue experience",
+      "Recommendations evolve over time",
+      "Tailored to your style journey"
+    ],
+    "closing": "A catalogue that grows with you."
+  },
+  "closing": {
+    "title": "Your Next Favorite Outfit Is Waiting.",
+    "description": "Explore new designers. Discover new styles. Create your own. Qlozet brings fashion closer to you—than ever before.",
+    "primaryAction": {
+      "label": "Start Exploring Now",
+      "href": "/waitlist"
+    }
+  }
+}

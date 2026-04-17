@@ -1,0 +1,55 @@
+{
+  "title": "The Qlozet ecosystem",
+  "subtitle": "We bring every stakeholder into a value-sharing loop.",
+  "stakeholders": [
+    {
+      "id": "customers",
+      "icon": "/image/people.png",
+      "title": "Customers",
+      "description": "Personalized fit, custom design, transparent delivery and after-care."
+    },
+    {
+      "id": "designers-tailors",
+      "icon": "/image/tux.png",
+      "title": "Designers & Tailors",
+      "description": "Order pipeline, style templates, measurement guardrails, QC workflows."
+    },
+    {
+      "id": "fabric-accessories",
+      "icon": "/image/building.png",
+      "title": "Fabric & Accessories Vendors",
+      "description": "Instant storefronts, inventory sync, fabric swatches, trims, and pricing rules."
+    },
+    {
+      "id": "logistics-partners",
+      "icon": "/image/shopping-cart.png",
+      "title": "Logistics Partners",
+      "description": "Pickup requests, shipping labels, zone-based SLAs, and delivery status APIs."
+    }
+  ],
+  "orderFlow": {
+    "title": "How A Bespoke Order Flows",
+    "steps": [
+      {
+        "id": "step-1",
+        "text": "Capture measurements (photo + height) → verify with AI overlays."
+      },
+      {
+        "id": "step-2",
+        "text": "Choose a base style → tweak options (neck, sleeve, length, closures, trims)."
+      },
+      {
+        "id": "step-3",
+        "text": "Select fabric & accessories → pricing auto-updates with yardage & options."
+      },
+      {
+        "id": "step-4",
+        "text": "Vendor accepts with lead time → production tracker + QC checkpoints."
+      },
+      {
+        "id": "step-5",
+        "text": "Delivery & fit confirmation → alterations/after-care if needed."
+      }
+    ]
+  }
+}

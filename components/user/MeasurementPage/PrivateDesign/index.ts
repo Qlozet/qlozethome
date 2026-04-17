@@ -1,0 +1,2 @@
+export { PrivateDesignSection } from "./PrivateDesignSection";
+

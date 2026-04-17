@@ -1,0 +1,197 @@
+{
+  "hero": {
+    "badge": "Fashion Ecosystem",
+    "title": "Shop It. Customize It. Own It.",
+    "description": "Whether you want something ready to wear or something made just for you—Qlozet gives you both. One platform. Endless possibilities.",
+    "cta": {
+      "label": "Explore Fashion",
+      "href": "#marketplace"
+    }
+  },
+  "marketplace": {
+    "id": "marketplace",
+    "badge": "Ready-to-Wear",
+    "title": "Discover Fashion From Top Designers",
+    "description": "Browse a curated marketplace of clothing, fabrics, and accessories from trusted vendors and emerging designers.",
+    "features": [
+      {
+        "title": "Shop across multiple brands in one place",
+        "icon": "ShoppingCart"
+      },
+      {
+        "title": "Discover unique and premium designs",
+        "icon": "Sparkles"
+      },
+      {
+        "title": "Access clothing, fabrics, and accessories",
+        "icon": "Search"
+      }
+    ]
+  },
+  "custom": {
+    "badge": "Custom Clothing",
+    "title": "Made-to-Measure. Made for You.",
+    "description": "Design clothing that fits your exact body and your exact taste. No standard sizes. Just your size.",
+    "features": [
+      {
+        "title": "Customize styles (neckline, sleeves, fit, length)",
+        "icon": "PencilLine"
+      },
+      {
+        "title": "Choose fabrics and colors",
+        "icon": "SwatchBook"
+      },
+      {
+        "title": "Built using your saved measurements",
+        "icon": "UserCheck"
+      }
+    ]
+  },
+  "mixmatch": {
+    "badge": "Empowerment",
+    "title": "Create Without Limits",
+    "description": "Qlozet lets you combine elements from different vendors into one outfit. You’re not restricted—you're empowered.",
+    "features": [
+      {
+        "title": "Use fabric from one vendor",
+        "icon": "Scissors"
+      },
+      {
+        "title": "Choose a designer from another",
+        "icon": "UserPlus"
+      },
+      {
+        "title": "Build exactly what you envision",
+        "icon": "Zap"
+      }
+    ]
+  },
+  "style": {
+    "badge": "Personalized Style",
+    "title": "Your Style, Your Rules",
+    "description": "Every piece—whether ready-made or custom—can align with your personal style. Fashion that reflects who you are.",
+    "features": [
+      {
+        "title": "Adapt outfits to your preferences",
+        "icon": "SlidersHorizontal"
+      },
+      {
+        "title": "Customize existing designs",
+        "icon": "Settings2"
+      },
+      {
+        "title": "Create something entirely new",
+        "icon": "PenTool"
+      }
+    ]
+  },
+  "fit": {
+    "badge": "Personalized Fit",
+    "title": "Powered by Your Fit Profile",
+    "description": "Every custom piece is created using your saved measurements, ensuring a consistent and perfect fit.",
+    "features": [
+      {
+        "title": "No re-measuring",
+        "icon": "CheckCircle2"
+      },
+      {
+        "title": "No sizing confusion",
+        "icon": "HelpCircle"
+      },
+      {
+        "title": "Seamless ordering experience",
+        "icon": "Zap"
+      }
+    ]
+  },
+  "budget": {
+    "badge": "Affordability",
+    "title": "Customize to Your Budget",
+    "description": "High-end fashion is no longer out of reach. Qlozet empowers you to tailor your garments not just to your body, but to your exact price point.",
+    "features": [
+      {
+        "title": "Select fabrics based on your price range",
+        "icon": "Wallet"
+      },
+      {
+        "title": "Filter vendors by affordability tiers",
+        "icon": "Tags"
+      },
+      {
+        "title": "Full transparency on material and labor costs",
+        "icon": "Calculator"
+      },
+      {
+        "title": "Change your styles to adjust the price",
+        "icon": "Wand2"
+      }
+    ]
+  },
+  "experience": {
+    "badge": "Seamless Experience",
+    "title": "From Selection to Creation",
+    "description": "Whether you’re shopping or designing, Qlozet keeps it simple. Effortless from start to finish.",
+    "steps": [
+      {
+        "id": "selection",
+        "title": "Browse or design your outfit",
+        "description": "Find what you love or start from scratch.",
+        "icon": "LayoutGrid"
+      },
+      {
+        "id": "customize",
+        "title": "Customize if needed",
+        "description": "Adjust styles, fabrics, and fit specifications.",
+        "icon": "Wand2"
+      },
+      {
+        "id": "vendor",
+        "title": "Choose your preferred vendor",
+        "description": "Connect with top makers and designers.",
+        "icon": "Store"
+      },
+      {
+        "id": "order",
+        "title": "Place your order",
+        "description": "Experience smooth, secure checkout.",
+        "icon": "CreditCard"
+      }
+    ]
+  },
+  "ecosystem": {
+    "badge": "Global Reach",
+    "title": "A Global Fashion Ecosystem",
+    "description": "Qlozet connects customers with designers and vendors across regions—bringing diverse fashion styles into one platform.",
+    "features": [
+      {
+        "title": "Access African and global fashion",
+        "icon": "Globe"
+      },
+      {
+        "title": "Discover emerging designers",
+        "icon": "Dna"
+      },
+      {
+        "title": "Support creative talent worldwide",
+        "icon": "Heart"
+      }
+    ]
+  },
+  "closing": {
+    "id": "custom-ready-cta",
+    "title": "Why Choose Between Ready-Made and Custom?",
+    "description": "With Qlozet, you don’t have to. Shop what you love. Create what you imagine. Wear what truly fits.",
+    "primaryAction": {
+      "label": "Start Exploring Your Style",
+      "href": "/waitlist"
+    },
+    "secondaryAction": {
+      "label": "Design Your Outfit",
+      "href": "/designyouroutfit"
+    },
+    "image": {
+      "src": "/image/custom-outfit-2.png",
+      "alt": "Fashion variety on Qlozet"
+    }
+  }
+}

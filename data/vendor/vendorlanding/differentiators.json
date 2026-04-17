@@ -1,0 +1,27 @@
+{
+  "id": "vendor-differentiators",
+  "eyebrow": "The Qlozet Advantage",
+  "title": "Why Visionary Labels Choose Qlozet",
+  "cards": [
+    {
+      "icon": "Store",
+      "title": "Digital Atelier Presence",
+      "description": "A refined profile to showcase your collections, fabrics, and craft—zero technical overhead."
+    },
+    {
+      "icon": "Maximize",
+      "title": "Precision-Led Confidence",
+      "description": "Minimize alterations and returns with AI-guided measurements and structural fit validation."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Transparent Financial Flow",
+      "description": "Secure, milestone-based escrow ensures clarity from the first cut to final delivery."
+    },
+    {
+      "icon": "Workflow",
+      "title": "Architectural Workflow",
+      "description": "Intuitive order timelines, digital quality-control, and integrated logistics to streamline your practice."
+    }
+  ]
+}

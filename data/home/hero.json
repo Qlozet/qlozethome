@@ -1,0 +1,17 @@
+{
+  "id": "hero",
+  "title": "Your Style, Your Way",
+  "description": "Where advanced fit intelligence meets curated sartorial soul. Experience a digital atelier that truly understands the human form.",
+  "primaryAction": {
+    "label": "Request Early Access",
+    "href": "/waitlist"
+  },
+  "scrollPrompt": {
+    "up": "Scroll Up",
+    "down": "Scroll Down"
+  },
+  "image": {
+    "src": "/image/heroimage.png",
+    "alt": "Stylish woman showcasing Qlozet fashion"
+  }
+}

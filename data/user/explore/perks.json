@@ -1,0 +1,21 @@
+{
+  "title": "Explore Perks",
+  "subtitle": "Answer a few quick questions or use your saved measurements to tailor results.",
+  "features": [
+    {
+      "image": "/image/brown1.png",
+      "title": "Style & fit quiz",
+      "description": "2‑minute quiz that adapts to your preferences and body."
+    },
+    {
+      "image": "/image/brown2.png",
+      "title": "Use my measurements",
+      "description": "Apply your AI measurements to filter and suggest sizes."
+    },
+    {
+      "image": "/image/brown3.png",
+      "title": "Shop by parts",
+      "description": "Find pieces by neckline, sleeve, or length that flatter you."
+    }
+  ]
+}

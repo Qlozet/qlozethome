@@ -1,0 +1,13 @@
+{
+  "id": "shopping",
+  "title": "The Qlozet Experience",
+  "description": "A seamless journey from discovery to delivery. Explore curated designer drops, capture your measurements with AI ease, and manage your bespoke orders from a single, intuitive interface.",
+  "image": {
+    "src": "/image/shopapp.png",
+    "alt": "Qlozet shopping app interface"
+  },
+  "cta": {
+    "label": "Start Shopping",
+    "href": "#early-access"
+  }
+}

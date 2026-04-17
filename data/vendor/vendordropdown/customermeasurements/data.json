@@ -1,0 +1,117 @@
+{
+  "hero": {
+    "badge": "Precision Tailoring",
+    "title": "Every Measurement. Perfectly Captured.",
+    "description": "Qlozet gives you accurate customer measurements and detailed specifications—so you can deliver perfectly fitted clothing every time. No guesswork. No errors. Just precision.",
+    "cta": {
+      "label": "View Customer Details",
+      "href": "#customer-profile"
+    }
+  },
+  "sections": [
+    {
+      "id": "customer-profile",
+      "badge": "Section 1 — Complete Customer Profile",
+      "title": "Everything You Need, In One Place",
+      "description": "Access all relevant customer information instantly. Understand your customer before you start.",
+      "features": [
+        "Customer details and order history",
+        "Style preferences and notes",
+        "Previous designs and fittings"
+      ]
+    },
+    {
+      "id": "accurate-measurements",
+      "badge": "Section 2 — Accurate Body Measurements",
+      "title": "Precision You Can Trust",
+      "description": "Qlozet provides detailed, AI-generated body measurements ready for production. Built for accuracy. Designed for real production.",
+      "features": [
+        "Chest, waist, hips, shoulders, and more",
+        "Consistent measurement standards",
+        "Available in cm and inches"
+      ]
+    },
+    {
+      "id": "ai-insights",
+      "badge": "Section 3 — AI-Enhanced Measurement Insights",
+      "title": "More Than Just Numbers",
+      "description": "Qlozet goes beyond raw measurements to help you understand the body better. Helping you make better tailoring decisions.",
+      "features": [
+        "Proportion insights",
+        "Fit recommendations",
+        "Measurement consistency checks"
+      ]
+    },
+    {
+      "id": "design-specs",
+      "badge": "Section 4 — Design Specifications & Notes",
+      "title": "Clear Instructions for Every Order",
+      "description": "Get all customization details alongside measurements. Everything aligned—nothing missing.",
+      "features": [
+        "Style selections (neckline, sleeve, fit, etc.)",
+        "Fabric and material references",
+        "Customer-specific notes"
+      ]
+    },
+    {
+      "id": "consistency",
+      "badge": "Section 5 — Measurement Consistency",
+      "title": "Reliable Across Every Order",
+      "description": "Once a customer’s measurements are captured, they remain consistent across orders. Consistency builds confidence.",
+      "features": [
+        "No repeated measuring",
+        "Standardized sizing across vendors",
+        "Improved long-term accuracy"
+      ]
+    },
+    {
+      "id": "error-reduction",
+      "badge": "Section 6 — Error Reduction & Confidence",
+      "title": "Minimize Mistakes. Maximize Quality",
+      "description": "Accurate data reduces costly errors and rework. Get it right the first time.",
+      "features": [
+        "Fewer fitting issues",
+        "Reduced alterations",
+        "Higher customer satisfaction"
+      ]
+    },
+    {
+      "id": "history",
+      "badge": "Section 7 — Measurement History",
+      "title": "Track Changes Over Time",
+      "description": "View how customer measurements evolve. A smarter way to tailor repeat customers.",
+      "features": [
+        "Historical measurement data",
+        "Previous order references",
+        "Better long-term fit adjustments"
+      ]
+    },
+    {
+      "id": "integration",
+      "badge": "Section 8 — Seamless Integration",
+      "title": "Connected to Your Workflow",
+      "description": "Measurement data integrates directly into your order and production process. Everything flows together.",
+      "features": [
+        "Linked to every order",
+        "Accessible during production",
+        "No manual data transfer"
+      ]
+    }
+  ],
+  "conversion": {
+    "title": "Precision Is Your Advantage",
+    "description": "With Qlozet, you don’t just get measurements—you get confidence in every stitch. Deliver better fits. Reduce errors. Build trust with every customer.",
+    "primaryAction": {
+      "label": "Start Creating with Precision",
+      "href": "/waitlist"
+    },
+    "secondaryAction": {
+      "label": "Learn More",
+      "href": "#"
+    },
+    "image": {
+      "src": "/image/measurement-ai-app-screenshot.png",
+      "alt": "High tech tailoring and measurement visualization"
+    }
+  }
+}

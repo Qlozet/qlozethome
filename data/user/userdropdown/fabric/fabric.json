@@ -1,0 +1,118 @@
+{
+  "hero": {
+    "badge": "Start With the Fabric",
+    "title": "Build the Outfit.",
+    "description": "Every great outfit begins with the right fabric. Explore a curated collection of premium textiles—from bold statement prints to timeless classics—ready to bring your vision to life.",
+    "cta": {
+      "label": "Explore Fabrics",
+      "href": "/explore"
+    },
+    "closing": "Choose the fabric. Define the style."
+  },
+  "sections": [
+    {
+      "id": "discover",
+      "badge": "Discover Premium Fabrics",
+      "title": "A World of Textiles",
+      "description": "Browse fabrics sourced from trusted vendors and designers across regions.",
+      "features": [
+        "Ankara, lace, silk, cotton, and more",
+        "Unique prints and premium materials",
+        "Verified fabric vendors"
+      ],
+      "closing": "Each fabric tells a story."
+    },
+    {
+      "id": "find",
+      "badge": "Find Your Perfect Fabric",
+      "title": "Search, Filter, Discover",
+      "description": "Quickly find fabrics that match your vision.",
+      "features": [
+        "Filter by color, pattern, material, and style",
+        "Browse by occasion (casual, formal, traditional)",
+        "Smart search for faster discovery"
+      ],
+      "closing": "From idea to fabric—instantly."
+    },
+    {
+      "id": "details",
+      "badge": "See the Details",
+      "title": "Experience the Texture",
+      "description": "Zoom in and explore every detail before you choose.",
+      "features": [
+        "High-quality fabric visuals",
+        "Close-up texture views",
+        "Accurate representation of colors and patterns"
+      ],
+      "closing": "What you see is what you get."
+    },
+    {
+      "id": "use",
+      "badge": "Use Fabric Your Way",
+      "title": "From Fabric to Outfit",
+      "description": "Once you find the perfect fabric, you have full control over how you want to use it.",
+      "features": [
+        "Use it to design custom clothing",
+        "Pair it with your preferred designer",
+        "Save it for future inspiration"
+      ],
+      "closing": "Your fabric, your creation."
+    },
+    {
+      "id": "connect",
+      "badge": "Connect With Fabric Vendors",
+      "title": "Source From Trusted Vendors",
+      "description": "Buy or use fabrics directly from verified vendors on Qlozet.",
+      "features": [
+        "Transparent sourcing",
+        "Reliable quality",
+        "Seamless integration into your order"
+      ],
+      "closing": "Quality you can trust."
+    },
+    {
+      "id": "inspiration",
+      "badge": "Inspiration & Combinations",
+      "title": "See What’s Possible",
+      "description": "Get inspired by how fabrics come to life in real designs.",
+      "features": [
+        "Outfit examples using selected fabrics",
+        "Style suggestions and combinations",
+        "Trending fabric styles"
+      ],
+      "closing": "Imagine it. Create it. Wear it."
+    },
+    {
+      "id": "personalized",
+      "badge": "Personalized Fabric Discovery",
+      "title": "Fabrics Tailored to Your Taste",
+      "description": "Qlozet learns your preferences and shows fabrics you’re more likely to love.",
+      "features": [
+        "Personalized recommendations",
+        "Style-based suggestions",
+        "Evolving discovery experience"
+      ],
+      "closing": "The more you explore, the better it gets."
+    },
+    {
+      "id": "seamless",
+      "badge": "Seamless Experience",
+      "title": "From Fabric to Final Outfit",
+      "description": "Everything connects effortlessly within Qlozet.",
+      "features": [
+        "Add fabric directly to your design",
+        "Save and revisit anytime",
+        "Smooth transition to customization or checkout"
+      ],
+      "closing": "No friction. Just flow."
+    }
+  ],
+  "conversion": {
+    "title": "The Right Fabric Changes Everything",
+    "description": "Your outfit starts here. Choose better fabrics, create better designs, and wear something truly yours.",
+    "primaryAction": {
+      "label": "Start Exploring Fabrics",
+      "href": "/explore"
+    }
+  }
+}

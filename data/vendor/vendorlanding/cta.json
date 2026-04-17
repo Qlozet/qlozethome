@@ -1,0 +1,17 @@
+{
+  "id": "vendor-cta",
+  "title": "Join the Qlozet ecosystem",
+  "description": "Whether you're a designer, tailor, fabric or accessories vendor, or customer—Qlozet is your hub for made-to-measure fashion that fits bodies, cultures, and lives.",
+  "primaryAction": {
+    "label": "JOIN WAITLIST",
+    "href": "/vendor/waitlist"
+  },
+  "secondaryAction": {
+    "label": "START SHOPPING",
+    "href": "/shop"
+  },
+  "image": {
+    "src": "/image/seun.png",
+    "alt": "Fashion model in red dramatic outfit"
+  }
+}

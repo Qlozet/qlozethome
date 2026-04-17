@@ -1,0 +1,1 @@
+export { VendorCTA } from "./CTASection";

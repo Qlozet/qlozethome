@@ -1,0 +1,28 @@
+{
+  "id": "clothing-generator-what",
+  "title": "What you can create",
+  "tools": [
+    {
+      "icon": "/svg/hourglass.svg",
+      "title": "Design variations",
+      "description": "Generate multiple style options from a single concept or inspiration image."
+    },
+    {
+      "icon": "/svg/paintbrush.svg",
+      "title": "Custom patterns",
+      "description": "Create unique patterns and prints tailored to your brand aesthetic."
+    },
+    {
+      "icon": "/svg/palette.svg",
+      "title": "Fabric combinations",
+      "description": "Explore different fabric textures and color combinations visually."
+    },
+    {
+      "icon": "/svg/shield-check.svg",
+      "title": "Tech packs",
+      "description": "Export production-ready specifications for your manufacturing team."
+    }
+  ]
+}
+
+

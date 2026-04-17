@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "badge": "Logistics & Delivery",
+    "title": "From Design to Doorstep—Handled Perfectly.",
+    "description": "Once you’ve chosen your outfit, Qlozet takes care of everything else. From production to delivery, every step is managed with precision, transparency, and care.",
+    "cta": {
+      "label": "Track Your Order",
+      "href": "#tracking"
+    }
+  },
+  "sections": [
+    {
+      "id": "ordering",
+      "badge": "Section 1",
+      "title": "Effortless Ordering",
+      "subtitle": "Simple. Clear. Instant.",
+      "description": "Placing an order on Qlozet is designed to feel effortless—whether you're buying ready-to-wear or custom-made.",
+      "features": [
+        "Clear pricing and breakdowns",
+        "Easy vendor selection",
+        "Guided checkout experience"
+      ],
+      "footer": "Everything you need—nothing you don’t."
+    },
+    {
+      "id": "vendor",
+      "badge": "Section 2",
+      "title": "Smart Vendor Assignment",
+      "subtitle": "The Right Hands for Your Outfit",
+      "description": "Qlozet ensures your order goes to the best vendor for the job.",
+      "features": [
+        "Matched based on expertise",
+        "Optimized for speed and quality",
+        "Balanced vendor workload for efficiency"
+      ],
+      "footer": "Your outfit is always in expert hands."
+    },
+    {
+      "id": "production",
+      "badge": "Section 3",
+      "title": "Transparent Production Process",
+      "subtitle": "See Your Outfit Come to Life",
+      "description": "Stay informed as your outfit moves through each stage of production.",
+      "features": [
+        "Order received",
+        "In production",
+        "Quality check",
+        "Ready for delivery"
+      ],
+      "footer": "No more wondering—always knowing."
+    },
+    {
+      "id": "tracking",
+      "badge": "Section 4",
+      "title": "Real-Time Order Tracking",
+      "subtitle": "Track Every Step",
+      "description": "Monitor your order from start to finish with real-time updates.",
+      "features": [
+        "Live status updates",
+        "Delivery progress visibility",
+        "Notifications at every stage"
+      ],
+      "footer": "Your order, always within reach."
+    },
+    {
+      "id": "delivery",
+      "badge": "Section 5",
+      "title": "Reliable Delivery",
+      "subtitle": "Fast. Secure. Dependable.",
+      "description": "Qlozet partners with trusted logistics providers to ensure your outfit arrives safely and on time.",
+      "features": [
+        "Timely delivery",
+        "Secure handling",
+        "Wide delivery coverage"
+      ],
+      "footer": "Delivered with care—every time."
+    },
+    {
+      "id": "packaging",
+      "badge": "Section 6",
+      "title": "Premium Packaging Experience",
+      "subtitle": "More Than Delivery—An Experience",
+      "description": "Your outfit arrives in packaging designed to reflect quality and style.",
+      "features": [
+        "Clean, premium presentation",
+        "Branded packaging experience",
+        "Ready to wear or gift"
+      ],
+      "footer": "Because first impressions matter."
+    },
+    {
+      "id": "support",
+      "badge": "Section 7",
+      "title": "Trust & Support",
+      "subtitle": "We’ve Got You Covered",
+      "description": "Qlozet ensures a smooth experience—even when things need adjustment.",
+      "features": [
+        "Support for order issues",
+        "Clear communication channels",
+        "Resolution-focused approach"
+      ],
+      "footer": "Your satisfaction is our priority."
+    },
+    {
+      "id": "simplicity",
+      "badge": "Section 8",
+      "title": "End-to-End Simplicity",
+      "subtitle": "Everything, Connected",
+      "description": "From the moment you design or select your outfit to the moment it arrives—everything flows seamlessly.",
+      "features": [
+        "Unified platform experience",
+        "No switching between services",
+        "Fully integrated process"
+      ],
+      "footer": "One journey. One platform. Zero friction."
+    }
+  ],
+  "conversion": {
+    "title": "Fashion, Without the Hassle",
+    "description": "Qlozet removes the complexity from ordering custom and ready-to-wear clothing. All you have to do is choose. We handle the rest.",
+    "cta": {
+      "label": "Start Your Order Today",
+      "href": "/waitlist"
+    }
+  }
+}
