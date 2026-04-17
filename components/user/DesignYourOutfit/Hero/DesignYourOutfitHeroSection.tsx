@@ -5,10 +5,17 @@ import Link from "next/link";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
 
-type DesignYourOutfitData = typeof import("@/data/user/designyouroutfit/designyouroutfit.json");
+type HeroData = {
+  id?: string;
+  badge: string;
+  title: string;
+  description: string;
+  cta: { label: string; href: string };
+  image?: { src?: string; alt?: string };
+};
 
 type DesignYourOutfitHeroProps = {
-  data: DesignYourOutfitData;
+  data: HeroData;
 };
 
 export function DesignYourOutfitHero({ data }: DesignYourOutfitHeroProps) {
@@ -106,8 +113,8 @@ export function DesignYourOutfitHero({ data }: DesignYourOutfitHeroProps) {
           className="relative mt-12 w-full max-w-4xl overflow-hidden rounded-[3rem] bg-zinc-100 shadow-2xl shadow-black/5 aspect-[16/9]"
         >
           <Image
-            src={data.image.src || "/image/tailormeasuringtape.png"}
-            alt={data.image.alt || "Atelier Design"}
+            src={data.image?.src || "/image/tailormeasuringtape.png"}
+            alt={data.image?.alt || "Atelier Design"}
             fill
             className="object-cover grayscale"
             priority

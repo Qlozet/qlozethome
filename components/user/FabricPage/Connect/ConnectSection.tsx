@@ -108,7 +108,7 @@ export function ConnectSection({ data }: ConnectSectionProps) {
                      <motion.div 
                         key={i}
                         animate={{ rotate: 360 }}
-                        transition={{ duration: 20 + i * 5, repeat: Infinity, ease: "linear", reverse: i % 2 === 0 }}
+                        transition={{ duration: 20 + i * 5, repeat: Infinity, ease: "linear", repeatType: "reverse" }}
                         className="absolute h-full w-full flex items-center justify-center"
                         style={{ width: `${100 + i * 80}px`, height: `${100 + i * 80}px` }}
                      >

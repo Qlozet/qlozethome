@@ -131,7 +131,7 @@ export function RealTimeTrackingSection({ data }: RealTimeTrackingSectionProps) 
                    <motion.div
                       initial={{ offsetDistance: "0%" }}
                       animate={{ offsetDistance: "60%" }}
-                      transition={{ duration: 4, ease: "easeOut", fillMode: "forwards" }}
+                      transition={{ duration: 4, ease: "easeOut" }}
                       style={{ 
                          position: 'absolute',
                          top: 0,
