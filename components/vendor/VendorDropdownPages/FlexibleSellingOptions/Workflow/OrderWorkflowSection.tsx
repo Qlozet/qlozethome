@@ -1,7 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ListChecks, Zap, CheckCircle2, MessageSquare, ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Zap, CheckCircle2, MessageSquare, ListChecks,
+  ArrowRight, Package, Clock, Star, User, ShieldCheck
+} from "lucide-react";
+import { useState } from "react";
 
 type WorkflowData = {
   id: string;
@@ -16,147 +20,383 @@ type OrderWorkflowSectionProps = {
   data: WorkflowData;
 };
 
+const MODES = [
+  {
+    icon: Zap,
+    label: "Direct",
+    fullLabel: "Direct Orders",
+    tag: "Fastest",
+    tagStyle: "bg-emerald-50 text-emerald-600 border border-emerald-200",
+    accentColor: "bg-emerald-500",
+    summary: "Customer pays → instantly enters your production queue. Zero friction.",
+    steps: [
+      {
+        icon: User,
+        label: "Customer Orders",
+        note: "Adeola buys Silk Kaftan — Size M",
+        statusColor: "bg-zinc-100 text-black/40",
+        active: true,
+      },
+      {
+        icon: Zap,
+        label: "Auto-Accepted",
+        note: "Instantly added to queue",
+        statusColor: "bg-emerald-50 text-emerald-600",
+        active: true,
+      },
+      {
+        icon: Package,
+        label: "Production",
+        note: "You begin work",
+        statusColor: "bg-zinc-100 text-black/30",
+        active: false,
+      },
+    ],
+    orderPreview: {
+      id: "ORD-8821",
+      item: "Silk Ankara Kaftan",
+      size: "Size M",
+      status: "Auto-Accepted",
+      statusStyle: "bg-emerald-50 text-emerald-600",
+      time: "Just now",
+    },
+    benefit: "No back-and-forth. Orders flow straight to you.",
+  },
+  {
+    icon: CheckCircle2,
+    label: "Review",
+    fullLabel: "Review & Approve",
+    tag: "Recommended",
+    tagStyle: "bg-sky-50 text-sky-600 border border-sky-200",
+    accentColor: "bg-sky-500",
+    summary: "You review every incoming request before committing — full control over your workload.",
+    steps: [
+      {
+        icon: User,
+        label: "Request In",
+        note: "Client sends custom request",
+        statusColor: "bg-zinc-100 text-black/40",
+        active: true,
+      },
+      {
+        icon: ShieldCheck,
+        label: "You Review",
+        note: "Read details, check schedule",
+        statusColor: "bg-sky-50 text-sky-600",
+        active: true,
+      },
+      {
+        icon: CheckCircle2,
+        label: "Accept / Decline",
+        note: "Your decision",
+        statusColor: "bg-zinc-100 text-black/30",
+        active: false,
+      },
+    ],
+    orderPreview: {
+      id: "REQ-3304",
+      item: "3-Piece Agbada Set",
+      size: "Custom Measurements",
+      status: "Awaiting Review",
+      statusStyle: "bg-sky-50 text-sky-600",
+      time: "12 min ago",
+    },
+    benefit: "Never overcommit. Only take work you're ready for.",
+  },
+  {
+    icon: MessageSquare,
+    label: "Quote",
+    fullLabel: "Quote & Bid",
+    tag: "Custom Pricing",
+    tagStyle: "bg-amber-50 text-amber-600 border border-amber-200",
+    accentColor: "bg-amber-500",
+    summary: "Client describes what they need — you respond with a price offer. Both agree before anything starts.",
+    steps: [
+      {
+        icon: User,
+        label: "Request In",
+        note: "Client shares brief + budget",
+        statusColor: "bg-zinc-100 text-black/40",
+        active: true,
+      },
+      {
+        icon: MessageSquare,
+        label: "You Quote",
+        note: "Send your price & timeline",
+        statusColor: "bg-amber-50 text-amber-600",
+        active: true,
+      },
+      {
+        icon: Star,
+        label: "Client Accepts",
+        note: "Order confirmed — work begins",
+        statusColor: "bg-zinc-100 text-black/30",
+        active: false,
+      },
+    ],
+    orderPreview: {
+      id: "QUO-1190",
+      item: "Wedding Bridal Gown",
+      size: "Full Custom",
+      status: "Quote Sent",
+      statusStyle: "bg-amber-50 text-amber-600",
+      time: "2h ago",
+    },
+    benefit: "Set fair prices. No surprises for you or your client.",
+  },
+];
+
 export function OrderWorkflowSection({ data }: OrderWorkflowSectionProps) {
-  const workflows = [
-    {
-      icon: Zap,
-      label: "Direct Orders",
-      desc: "Customer orders, you produce. No approval step needed.",
-      tag: "Fastest",
-      tagColor: "bg-emerald-50 text-emerald-600 border-emerald-200",
-      steps: ["Order Placed", "Auto-Accepted", "Production Starts"],
-      active: true,
-    },
-    {
-      icon: CheckCircle2,
-      label: "Review & Approve",
-      desc: "Review each request before accepting. Full control over what you take on.",
-      tag: "Recommended",
-      tagColor: "bg-sky-50 text-sky-600 border-sky-200",
-      steps: ["Request In", "You Review", "Accept or Decline"],
-      active: false,
-    },
-    {
-      icon: MessageSquare,
-      label: "Quote & Bid",
-      desc: "Receive custom requests, send quotes, and negotiate before committing.",
-      tag: "Custom Pricing",
-      tagColor: "bg-amber-50 text-amber-600 border-amber-200",
-      steps: ["Request In", "You Quote", "Client Accepts"],
-      active: false,
-    },
-  ];
+  const [active, setActive] = useState(0);
+  const mode = MODES[active];
 
   return (
     <section id={data.id} className="relative z-10 bg-white py-16 lg:py-48 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col gap-16 lg:flex-row lg:items-center lg:gap-32">
-          {/* Left: Content */}
-          <div className="flex flex-col gap-10 lg:w-1/2">
+        <div className="flex flex-col gap-16 lg:flex-row lg:items-start lg:gap-28">
+
+          {/* ── LEFT: Content ── */}
+          <div className="flex flex-col gap-10 lg:w-[44%]">
             <div className="flex flex-col gap-6">
-              <motion.span initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40">{data.badge}</motion.span>
-              <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-3xl font-medium leading-[1.1] tracking-tighter text-black sm:text-5xl lg:text-6xl">{data.title}</motion.h2>
-              <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="max-w-xl font-ui text-lg leading-relaxed text-black/40 lg:text-2xl">{data.description}</motion.p>
+              <motion.span
+                initial={{ opacity: 0, x: -16 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40"
+              >
+                {data.badge}
+              </motion.span>
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="font-display text-3xl font-medium leading-[1.1] tracking-tighter text-black sm:text-5xl lg:text-6xl"
+              >
+                {data.title}
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="max-w-xl font-ui text-lg leading-relaxed text-black/40 lg:text-2xl"
+              >
+                {data.description}
+              </motion.p>
             </div>
+
+            {/* Feature list */}
             <div className="grid gap-4">
               {data.features.map((feature, i) => (
-                <motion.div key={i} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 + i * 0.1 }} className="flex items-center gap-6 group">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-50 border border-black/5 group-hover:bg-black group-hover:text-white transition-all shadow-sm"><ListChecks className="h-4 w-4" strokeWidth={1.5} /></div>
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 + i * 0.1 }}
+                  className="flex items-center gap-5 group"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-50 border border-black/5 group-hover:bg-black group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                    <ListChecks className="h-4 w-4" strokeWidth={1.5} />
+                  </div>
                   <span className="font-display text-lg font-medium text-black/80">{feature}</span>
                 </motion.div>
               ))}
             </div>
-            <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="font-ui text-sm italic text-black/30">{data.closing}</motion.p>
-          </div>
 
-          {/* Right: Three Workflow Lanes */}
-          <div className="relative lg:w-1/2">
+            {/* Mode selector buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="relative mx-auto w-full max-w-md flex flex-col gap-4"
+              transition={{ delay: 0.5 }}
+              className="flex flex-col gap-3"
             >
-              {workflows.map((wf, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 + i * 0.15 }}
-                  className={`rounded-2xl border shadow-lg p-6 transition-all duration-300 group cursor-pointer hover:shadow-xl hover:scale-[1.01] ${
-                    wf.active
-                      ? 'bg-black text-white border-black/20'
-                      : 'bg-white border-black/[0.06]'
-                  }`}
-                >
-                  {/* Header Row */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className={`h-9 w-9 rounded-xl flex items-center justify-center shadow-sm ${
-                        wf.active
-                          ? 'bg-white/15 text-white'
-                          : 'bg-zinc-50 border border-black/5 text-black/40 group-hover:bg-black group-hover:text-white group-hover:border-transparent'
-                      } transition-all duration-300`}>
-                        <wf.icon className="h-4 w-4" strokeWidth={1.5} />
-                      </div>
-                      <div className="flex flex-col gap-0.5">
-                        <span className={`font-display text-[11px] font-bold uppercase tracking-wider ${
-                          wf.active ? 'text-white' : 'text-black/70'
-                        }`}>{wf.label}</span>
-                        <span className={`font-ui text-[8px] leading-snug ${
-                          wf.active ? 'text-white/40' : 'text-black/25'
-                        }`}>{wf.desc}</span>
-                      </div>
-                    </div>
-                    <span className={`px-2.5 py-1 rounded-lg font-display text-[7px] font-bold uppercase tracking-wider border flex-shrink-0 ${
-                      wf.active
-                        ? 'bg-white/10 text-white/60 border-white/10'
-                        : wf.tagColor
-                    }`}>{wf.tag}</span>
-                  </div>
+              <span className="font-display text-[8px] font-bold uppercase tracking-[0.4em] text-black/20">Choose a workflow mode to see how it works</span>
+              <div className="flex gap-2">
+                {MODES.map((m, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setActive(i)}
+                    className={`flex-1 flex items-center justify-center gap-2 h-11 rounded-xl font-display text-[9px] font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer border ${
+                      active === i
+                        ? 'bg-black text-white border-black shadow-lg'
+                        : 'bg-zinc-50 text-black/30 border-black/[0.06] hover:border-black/20 hover:text-black/60'
+                    }`}
+                  >
+                    <m.icon className="h-3.5 w-3.5" strokeWidth={1.5} />
+                    {m.label}
+                  </button>
+                ))}
+              </div>
+            </motion.div>
 
-                  {/* Step Flow */}
-                  <div className={`flex items-center gap-2 ${wf.active ? '' : 'opacity-40 group-hover:opacity-70'} transition-opacity duration-300`}>
-                    {wf.steps.map((step, si) => (
-                      <div key={si} className="flex items-center gap-2 flex-1 min-w-0">
-                        <div className={`h-7 flex-1 rounded-lg flex items-center justify-center px-2 ${
-                          wf.active
-                            ? 'bg-white/10'
-                            : 'bg-zinc-50 border border-black/[0.04]'
-                        }`}>
-                          <span className={`font-display text-[7px] font-bold uppercase tracking-wider truncate ${
-                            wf.active ? 'text-white/60' : 'text-black/30'
-                          }`}>{step}</span>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="font-ui text-sm italic text-black/30"
+            >
+              {data.closing}
+            </motion.p>
+          </div>
+
+          {/* ── RIGHT: Interactive workflow illustration ── */}
+          <div className="relative lg:w-[56%]">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="relative mx-auto w-full max-w-lg"
+            >
+              {/* Card */}
+              <div className="rounded-[2.5rem] border border-black/[0.07] bg-white shadow-2xl shadow-black/[0.07] overflow-hidden">
+
+                {/* Card header — mode title + tag */}
+                <div className="px-7 pt-7 pb-5 border-b border-black/[0.05]">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={active}
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      transition={{ duration: 0.2 }}
+                      className="flex items-center justify-between"
+                    >
+                      <div className="flex items-center gap-3.5">
+                        <div className="h-10 w-10 rounded-xl bg-black text-white flex items-center justify-center shadow-sm">
+                          <mode.icon className="h-4.5 w-4.5" strokeWidth={1.5} />
                         </div>
-                        {si < wf.steps.length - 1 && (
-                          <ArrowRight className={`h-2.5 w-2.5 flex-shrink-0 ${
-                            wf.active ? 'text-white/20' : 'text-black/10'
-                          }`} />
-                        )}
+                        <div className="flex flex-col gap-0.5">
+                          <span className="font-display text-sm font-bold tracking-tight text-black">{mode.fullLabel}</span>
+                          <span className="font-ui text-[9px] text-black/30">{mode.summary}</span>
+                        </div>
                       </div>
-                    ))}
-                  </div>
+                      <span className={`px-3 py-1.5 rounded-xl font-display text-[7px] font-bold uppercase tracking-wider flex-shrink-0 ${mode.tagStyle}`}>
+                        {mode.tag}
+                      </span>
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
 
-                  {/* Active Indicator */}
-                  {wf.active && (
-                    <div className="flex items-center gap-2 mt-4 pt-3 border-t border-white/10">
-                      <div className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                      <span className="font-display text-[7px] font-bold uppercase tracking-widest text-white/30">Currently Selected</span>
-                    </div>
-                  )}
-                </motion.div>
-              ))}
+                {/* Live order preview */}
+                <div className="px-7 py-5 border-b border-black/[0.05] bg-zinc-50">
+                  <span className="font-display text-[7px] font-bold uppercase tracking-[0.4em] text-black/20 mb-3 block">Live Order Example</span>
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={active}
+                      initial={{ opacity: 0, scale: 0.97 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.97 }}
+                      transition={{ duration: 0.25 }}
+                      className="flex items-center justify-between rounded-2xl bg-white border border-black/[0.06] shadow-sm px-5 py-4 group hover:shadow-md transition-shadow"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="h-10 w-10 rounded-xl bg-zinc-50 border border-black/5 flex items-center justify-center flex-shrink-0">
+                          <Package className="h-4 w-4 text-black/20" strokeWidth={1.5} />
+                        </div>
+                        <div className="flex flex-col gap-0.5">
+                          <span className="font-display text-[11px] font-bold text-black/70">{mode.orderPreview.item}</span>
+                          <div className="flex items-center gap-2">
+                            <span className="font-mono text-[8px] text-black/20">{mode.orderPreview.id}</span>
+                            <span className="font-mono text-[8px] text-black/15">·</span>
+                            <span className="font-mono text-[8px] text-black/20">{mode.orderPreview.size}</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex flex-col items-end gap-1">
+                        <span className={`px-2.5 py-1 rounded-lg font-display text-[7px] font-bold uppercase tracking-wider ${mode.orderPreview.statusStyle}`}>
+                          {mode.orderPreview.status}
+                        </span>
+                        <div className="flex items-center gap-1">
+                          <Clock className="h-2.5 w-2.5 text-black/10" />
+                          <span className="font-mono text-[7px] text-black/15">{mode.orderPreview.time}</span>
+                        </div>
+                      </div>
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
 
-              {/* Bottom Note */}
+                {/* Step pipeline */}
+                <div className="px-7 py-5">
+                  <span className="font-display text-[7px] font-bold uppercase tracking-[0.4em] text-black/20 mb-4 block">How it flows</span>
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={active}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.25 }}
+                      className="flex items-stretch gap-0"
+                    >
+                      {mode.steps.map((step, si) => (
+                        <div key={si} className="flex items-center flex-1 min-w-0">
+                          {/* Step Node */}
+                          <div className={`flex-1 flex flex-col items-center text-center gap-2 px-2 py-4 rounded-2xl transition-all duration-300 ${
+                            step.active
+                              ? 'bg-zinc-50 border border-black/[0.05]'
+                              : 'bg-white border border-dashed border-black/[0.05] opacity-40'
+                          }`}>
+                            <div className={`h-9 w-9 rounded-xl flex items-center justify-center ${
+                              step.active
+                                ? 'bg-black text-white shadow-md'
+                                : 'bg-zinc-100 text-black/20'
+                            }`}>
+                              <step.icon className="h-4 w-4" strokeWidth={1.5} />
+                            </div>
+                            <div className="flex flex-col gap-0.5">
+                              <span className="font-display text-[8px] font-bold uppercase tracking-wider text-black/60 leading-tight">{step.label}</span>
+                              <span className="font-ui text-[7px] text-black/20 leading-snug">{step.note}</span>
+                            </div>
+                            {step.active && (
+                              <div className={`h-1 w-8 rounded-full ${mode.accentColor} opacity-70`} />
+                            )}
+                          </div>
+
+                          {/* Arrow connector */}
+                          {si < mode.steps.length - 1 && (
+                            <div className="flex-shrink-0 px-1">
+                              <ArrowRight className="h-3 w-3 text-black/10" />
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+
+                {/* Benefit callout */}
+                <div className="px-7 pb-7">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={active}
+                      initial={{ opacity: 0, y: 6 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.2, delay: 0.1 }}
+                      className="rounded-2xl bg-black text-white px-5 py-4 flex items-center gap-4"
+                    >
+                      <div className={`h-8 w-8 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0`}>
+                        <mode.icon className="h-3.5 w-3.5 text-white/50" strokeWidth={1.5} />
+                      </div>
+                      <p className="font-ui text-[10px] leading-relaxed text-white/60">{mode.benefit}</p>
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+              </div>
+
+              {/* Bottom note */}
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.7 }}
-                className="text-center pt-2"
+                className="text-center mt-5"
               >
-                <span className="font-display text-[7px] font-bold uppercase tracking-[0.5em] text-black/15">Switch anytime • No lock-in</span>
+                <span className="font-display text-[7px] font-bold uppercase tracking-[0.5em] text-black/15">
+                  Switch modes anytime · No lock-in
+                </span>
               </motion.div>
             </motion.div>
           </div>
