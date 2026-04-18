@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { DollarSign, Percent, TrendingUp, LucideIcon, Plus, Calculator } from "lucide-react";
+import { TrendingUp, DollarSign, Plus, ArrowRight } from "lucide-react";
 
 type PricingData = {
   id: string;
@@ -17,113 +17,123 @@ type FlexiblePricingSectionProps = {
 };
 
 export function FlexiblePricingSection({ data }: FlexiblePricingSectionProps) {
+  const layers = [
+    { label: "Base Garment", amount: 85, pct: 53, color: "bg-zinc-900", bgLight: "bg-zinc-900/5" },
+    { label: "Custom Sleeves", amount: 15, pct: 9, color: "bg-zinc-600", bgLight: "bg-zinc-600/5" },
+    { label: "Premium Fabric", amount: 35, pct: 22, color: "bg-zinc-500", bgLight: "bg-zinc-500/5" },
+    { label: "Rush Fee", amount: 25, pct: 16, color: "bg-zinc-400", bgLight: "bg-zinc-400/5" },
+  ];
+
   return (
     <section id={data.id} className="relative z-10 bg-white py-16 lg:py-48 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
+        <div className="flex flex-col gap-16 lg:flex-row lg:items-center lg:gap-32">
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
-              <motion.span 
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40"
-              >
-                {data.badge}
-              </motion.span>
-              
-              <motion.h2 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="font-display text-3xl font-medium leading-[1.1] tracking-tighter text-black sm:text-5xl lg:text-6xl"
-              >
-                {data.title}
-              </motion.h2>
-              
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/40 lg:text-2xl"
-              >
-                {data.description}
-              </motion.p>
+              <motion.span initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40">{data.badge}</motion.span>
+              <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-3xl font-medium leading-[1.1] tracking-tighter text-black sm:text-5xl lg:text-6xl">{data.title}</motion.h2>
+              <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="max-w-xl font-ui text-lg leading-relaxed text-black/40 lg:text-2xl">{data.description}</motion.p>
             </div>
-
             <div className="grid gap-4">
               {data.features.map((feature, i) => (
-                <motion.div 
-                  key={i}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 + i * 0.1 }}
-                  className="flex items-center gap-6 group"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-50 border border-black/5 group-hover:bg-black group-hover:text-white transition-all shadow-sm">
-                    <TrendingUp className="h-4 w-4" strokeWidth={1.5} />
-                  </div>
+                <motion.div key={i} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 + i * 0.1 }} className="flex items-center gap-6 group">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-50 border border-black/5 group-hover:bg-black group-hover:text-white transition-all shadow-sm"><TrendingUp className="h-4 w-4" strokeWidth={1.5} /></div>
                   <span className="font-display text-lg font-medium text-black/80">{feature}</span>
                 </motion.div>
               ))}
             </div>
-
-            <motion.p 
-               initial={{ opacity: 0 }}
-               whileInView={{ opacity: 1 }}
-               viewport={{ once: true }}
-               className="font-ui text-sm italic text-black/30"
-            >
-               {data.closing}
-            </motion.p>
+            <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="font-ui text-sm italic text-black/30">{data.closing}</motion.p>
           </div>
 
-          {/* Right: Simple Pricing Breakdown Mockup */}
-          <div className="relative mt-12 lg:mt-0 lg:w-1/2">
-             <div className="relative mx-auto h-[400px] lg:h-[500px] w-full max-w-md rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-10 flex flex-col gap-10 overflow-hidden transform items-center justify-center">
-                {/* Visualizing "Dynamic Costing" */}
-                <div className="flex flex-col gap-6 w-full h-full">
-                   <div className="flex items-center justify-between border-b border-black/5 pb-8">
-                       <div className="flex items-center gap-4">
-                          <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-black text-white">
-                             <Calculator className="h-4 w-4" />
-                          </div>
-                          <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black">Cost Calculator</span>
-                       </div>
-                   </div>
+          {/* Right: Price Builder Card */}
+          <div className="relative lg:w-1/2">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative mx-auto w-full max-w-sm rounded-[2.5rem] bg-white border border-black/[0.06] shadow-2xl overflow-hidden">
 
-                   <div className="flex-1 flex flex-col gap-4">
-                      {['Base Product', 'Custom Sleeves', 'Expedited Fee'].map((item, i) => (
-                         <div key={i} className="h-16 w-full rounded-2xl bg-white border border-black/[0.03] shadow-md p-6 flex items-center justify-between group hover:scale-[1.02] transition-transform duration-500">
-                             <span className="font-display text-[9px] font-bold uppercase tracking-widest text-black/40">{item}</span>
-                             <div className="flex items-center gap-2">
-                                <Plus className="h-3 w-3 text-black/20" />
-                                <div className="h-2 w-12 bg-black/5 rounded-full" />
-                             </div>
-                         </div>
-                      ))}
-                      
-                      {/* Subtotal Visual */}
-                      <div className="mt-auto h-24 w-full rounded-[2rem] bg-black shadow-2xl p-8 flex items-center justify-between transition-transform hover:scale-[1.02] duration-500">
-                         <div className="flex flex-col gap-1">
-                            <span className="font-display text-[10px] font-bold text-white uppercase tracking-widest">Total Value</span>
-                            <span className="font-ui text-[8px] text-white/40 italic">Dynamic calculation</span>
-                         </div>
-                         <div className="h-10 w-24 rounded-full bg-white/10 flex items-center justify-center">
-                            <div className="h-2 w-12 bg-white/40 rounded-full" />
-                         </div>
+              {/* Header */}
+              <div className="px-7 pt-7 pb-5 text-center border-b border-dashed border-black/10">
+                <span className="font-display text-[9px] font-bold uppercase tracking-[0.5em] text-black/25">Price Builder</span>
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3, type: "spring" }}
+                  className="mt-3 flex items-baseline justify-center gap-1"
+                >
+                  <span className="font-display text-5xl font-bold text-black tracking-tighter">$160</span>
+                </motion.div>
+                <span className="font-ui text-[9px] text-black/20 mt-1 block">Total Order Value</span>
+              </div>
+
+              {/* Line Items */}
+              <div className="px-6 py-5 flex flex-col gap-0">
+                {layers.map((layer, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: -15 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 + i * 0.1 }}
+                    className="flex items-center gap-4 py-3 group cursor-pointer border-b border-black/[0.03] last:border-b-0"
+                  >
+                    {/* Color Dot */}
+                    <div className={`h-3 w-3 rounded-full ${layer.color} group-hover:scale-125 transition-transform flex-shrink-0`} />
+
+                    {/* Bar + Label */}
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between mb-1.5">
+                        <div className="flex items-center gap-1.5">
+                          {i > 0 && <Plus className="h-2 w-2 text-black/10" />}
+                          <span className="font-display text-[9px] font-bold uppercase tracking-wider text-black/50 group-hover:text-black transition-colors">{layer.label}</span>
+                        </div>
+                        <span className="font-mono text-[12px] font-bold text-black/70">${layer.amount}</span>
                       </div>
-                   </div>
+                      <div className="h-2 bg-zinc-100 rounded-full overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${layer.pct}%` }}
+                          viewport={{ once: true }}
+                          transition={{ delay: 0.5 + i * 0.12, duration: 0.7, ease: "easeOut" }}
+                          className={`h-full rounded-full ${layer.color} group-hover:opacity-80 transition-opacity`}
+                        />
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Stacked Composite Bar */}
+              <div className="px-6 pb-5">
+                <div className="flex h-7 rounded-xl overflow-hidden shadow-inner border border-black/[0.04]">
+                  {layers.map((layer, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${layer.pct}%` }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.9 + i * 0.08, duration: 0.5 }}
+                      className={`h-full ${layer.color} relative group cursor-pointer`}
+                    >
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span className="font-display text-[6px] font-bold text-white uppercase tracking-wider">{layer.pct}%</span>
+                      </div>
+                    </motion.div>
+                  ))}
                 </div>
-             </div>
+              </div>
+
+              {/* Footer */}
+              <div className="px-7 py-5 bg-black text-white flex items-center justify-between">
+                <span className="font-display text-[8px] font-bold uppercase tracking-widest text-white/40">You set every layer</span>
+                <div className="flex items-center gap-1">
+                  <DollarSign className="h-3.5 w-3.5 text-white/40" />
+                  <span className="font-display text-lg font-bold text-white">160</span>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
-      
-      {/* Spine Marker */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1.5 w-1.5 rounded-full bg-black/10 shadow-sm" />
     </section>
   );
