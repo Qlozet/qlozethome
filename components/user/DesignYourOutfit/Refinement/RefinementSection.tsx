@@ -25,11 +25,11 @@ export function RefinementSection({ data }: RefinementSectionProps) {
   const [activeVersion, setActiveVersion] = useState(2);
 
   return (
-    <section className="relative w-full bg-white py-24 lg:py-48 overflow-hidden" data-theme="light">
+    <section className="relative w-full bg-white py-14 lg:py-48 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
           {/* Left: Iteration Console */}
-          <div className="relative order-2 lg:order-1 lg:w-1/2">
+          <div className="relative mt-8 order-2 lg:order-1 lg:mt-0 lg:w-1/2">
             <div className="relative mx-auto w-full max-w-[520px] rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-6 sm:p-8 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
                
                {/* Header */}

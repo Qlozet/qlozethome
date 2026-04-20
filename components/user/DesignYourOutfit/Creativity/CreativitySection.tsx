@@ -25,7 +25,7 @@ export function CreativitySection({ data }: CreativitySectionProps) {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
-    <section className="relative w-full bg-white py-24 lg:py-48" data-theme="light">
+    <section className="relative w-full bg-white py-14 lg:py-48" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col gap-16">
           {/* Header */}

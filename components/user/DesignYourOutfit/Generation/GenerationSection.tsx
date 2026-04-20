@@ -31,7 +31,7 @@ export function GenerationSection({ data }: GenerationSectionProps) {
   }, []);
 
   return (
-    <section className="relative w-full bg-[#0A0A0A] py-24 lg:py-48 overflow-hidden" data-theme="dark">
+    <section className="relative w-full bg-[#0A0A0A] py-14 lg:py-48 overflow-hidden" data-theme="dark">
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
 
       <div className="relative z-10 mx-auto max-w-[94rem] px-6">
@@ -62,7 +62,7 @@ export function GenerationSection({ data }: GenerationSectionProps) {
           </div>
 
           {/* Right: AI Generation Console */}
-          <div className="relative mt-12 lg:mt-0 lg:w-1/2">
+          <div className="relative mt-8 lg:mt-0 lg:w-1/2">
             <div className="relative mx-auto w-full max-w-[520px] rounded-[3rem] bg-white/[0.03] border border-white/10 shadow-2xl p-6 sm:p-8 overflow-hidden backdrop-blur-sm transition-all duration-500 hover:bg-white/[0.06]">
                
                {/* Console Header */}

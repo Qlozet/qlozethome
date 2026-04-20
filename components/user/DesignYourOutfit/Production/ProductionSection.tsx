@@ -22,7 +22,7 @@ const PIPELINE = [
 
 export function ProductionSection({ data }: ProductionSectionProps) {
   return (
-    <section className="relative w-full bg-zinc-50 py-24 lg:py-48" data-theme="light">
+    <section className="relative w-full bg-zinc-50 py-14 lg:py-48" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
           {/* Left: Content */}
@@ -51,7 +51,7 @@ export function ProductionSection({ data }: ProductionSectionProps) {
           </div>
 
           {/* Right: Production Pipeline */}
-          <div className="relative mt-12 lg:mt-0 lg:w-1/2">
+          <div className="relative mt-8 lg:mt-0 lg:w-1/2">
             <div className="relative mx-auto w-full max-w-[520px] rounded-[3rem] bg-white border border-black/5 shadow-2xl p-6 sm:p-8 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
                
                {/* Header */}

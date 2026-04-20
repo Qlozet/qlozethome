@@ -26,7 +26,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
   const mode = INPUT_MODES[activeMode];
 
   return (
-    <section id="inspiration" className="relative w-full bg-white py-24 lg:py-48" data-theme="light">
+    <section id="inspiration" className="relative w-full bg-white py-14 lg:py-48" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
           {/* Left: Interactive Input Builder */}
@@ -124,7 +124,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
           </div>
 
           {/* Right: Content */}
-          <div className="flex flex-col gap-12 order-1 lg:order-2 lg:w-1/2 lg:pl-16">
+          <div className="flex flex-col gap-8 mt-8 order-1 lg:order-2 lg:w-1/2 lg:pl-16 lg:mt-0">
             <div className="flex flex-col gap-8">
               <motion.span initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
                 className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40">{data.badge}</motion.span>
