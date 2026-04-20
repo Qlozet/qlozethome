@@ -23,9 +23,9 @@ const PRODUCT_SUGGESTIONS = [
 
 export function OptimizationSection({ data }: OptimizationSectionProps) {
   return (
-    <section className="relative z-10 bg-white px-6 py-24 lg:py-40" data-theme="light">
+    <section className="relative z-10 bg-white px-6 py-14 lg:py-40" data-theme="light">
       <div className="mx-auto max-w-[94rem]">
-        <div className="flex flex-col lg:flex-row lg:items-start lg:gap-24">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-24">
           {/* Left: Content */}
           <div className="flex flex-col gap-8 lg:w-5/12 lg:sticky lg:top-40">
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
@@ -56,10 +56,10 @@ export function OptimizationSection({ data }: OptimizationSectionProps) {
           </div>
 
           {/* Right: Optimization Console */}
-          <div className="mt-12 lg:mt-0 lg:w-7/12 flex flex-col gap-6">
+          <div className="mt-8 lg:mt-0 lg:w-7/12 flex flex-col gap-6">
             {/* Pricing Optimizer */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              className="rounded-[3rem] bg-zinc-50 border border-black/5 p-6 sm:p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-black/5 hover:-translate-y-1">
+              className="rounded-[2rem] sm:rounded-[3rem] bg-zinc-50 border border-black/5 p-5 sm:p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-black/5 hover:-translate-y-1">
               <div className="flex items-center justify-between mb-5">
                 <div className="flex items-center gap-3">
                   <div className="h-8 w-8 rounded-xl bg-black text-white flex items-center justify-center"><DollarSign className="h-3.5 w-3.5" /></div>
@@ -69,7 +69,7 @@ export function OptimizationSection({ data }: OptimizationSectionProps) {
                   <span className="font-mono text-[8px] font-bold text-emerald-600 uppercase tracking-widest">3 Suggestions</span>
                 </div>
               </div>
-              <div className="bg-white rounded-2xl border border-black/5 shadow-sm overflow-hidden">
+              <div className="bg-white rounded-2xl border border-black/5 shadow-sm overflow-x-auto">
                 {/* Table header */}
                 <div className="grid grid-cols-5 gap-2 px-5 py-3 border-b border-black/5 bg-zinc-50/50">
                   {["Product", "Current", "Suggested", "Impact", "Score"].map(h => (
@@ -100,7 +100,7 @@ export function OptimizationSection({ data }: OptimizationSectionProps) {
 
             {/* Product Suggestions */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }}
-              className="rounded-[3rem] bg-zinc-50 border border-black/5 p-6 sm:p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-black/5 hover:-translate-y-1">
+              className="rounded-[2rem] sm:rounded-[3rem] bg-zinc-50 border border-black/5 p-5 sm:p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-black/5 hover:-translate-y-1">
               <div className="flex items-center gap-3 mb-5">
                 <div className="h-8 w-8 rounded-xl bg-black text-white flex items-center justify-center"><PackageSearch className="h-3.5 w-3.5" /></div>
                 <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black">Product Improvements</span>

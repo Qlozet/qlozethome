@@ -17,11 +17,11 @@ const AI_MESSAGES = [
 
 export function AIAssistantSection({ data }: AssistantSectionProps) {
   return (
-    <section className="relative z-30 bg-[#050505] px-6 py-32 lg:py-48 overflow-hidden" data-theme="dark">
+    <section className="relative z-30 bg-[#050505] px-6 py-14 lg:py-48 overflow-hidden" data-theme="dark">
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
         style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.3) 0.5px, transparent 0.5px)', backgroundSize: '32px 32px' }} />
 
-      <div className="relative z-10 mx-auto flex max-w-[94rem] flex-col gap-16 lg:flex-row lg:items-start lg:gap-24">
+      <div className="relative z-10 mx-auto flex max-w-[94rem] flex-col gap-10 lg:flex-row lg:items-start lg:gap-24">
         {/* Left: Content */}
         <div className="lg:sticky lg:top-40 lg:w-5/12">
           <div className="flex flex-col gap-8">

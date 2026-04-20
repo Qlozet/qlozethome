@@ -30,10 +30,10 @@ const PURCHASE_PATTERNS = [
 
 export function AnalyticsSection({ data }: AnalyticsSectionProps) {
   return (
-    <section id={data.id} className="relative z-10 bg-white px-6 py-24 lg:py-40" data-theme="light">
+    <section id={data.id} className="relative z-10 bg-white px-6 py-14 lg:py-40" data-theme="light">
       <div className="mx-auto max-w-[94rem]">
         {/* Header */}
-        <div className="mb-16 flex flex-col gap-6 text-center items-center lg:mb-20">
+        <div className="mb-10 flex flex-col gap-6 text-center items-center lg:mb-20">
           <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
             className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/30">{data.badge}</motion.span>
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
@@ -46,7 +46,7 @@ export function AnalyticsSection({ data }: AnalyticsSectionProps) {
         <div className="grid gap-6 lg:grid-cols-3">
           {/* Card 1: Revenue & Order Trends */}
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="group rounded-[3rem] bg-zinc-50 border border-black/5 p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-black/5 hover:-translate-y-2 cursor-pointer">
+            className="group rounded-[2rem] sm:rounded-[3rem] bg-zinc-50 border border-black/5 p-5 sm:p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-black/5 hover:-translate-y-2 cursor-pointer">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-10 w-10 rounded-xl bg-black text-white flex items-center justify-center">
                 <TrendingUp className="h-4 w-4" />
@@ -83,7 +83,7 @@ export function AnalyticsSection({ data }: AnalyticsSectionProps) {
 
           {/* Card 2: Best-Selling Products */}
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-            className="group rounded-[3rem] bg-zinc-50 border border-black/5 p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-black/5 hover:-translate-y-2 cursor-pointer">
+            className="group rounded-[2rem] sm:rounded-[3rem] bg-zinc-50 border border-black/5 p-5 sm:p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-black/5 hover:-translate-y-2 cursor-pointer">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-10 w-10 rounded-xl bg-black text-white flex items-center justify-center">
                 <Award className="h-4 w-4" />
@@ -115,7 +115,7 @@ export function AnalyticsSection({ data }: AnalyticsSectionProps) {
 
           {/* Card 3: Customer Purchasing Patterns */}
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-            className="group rounded-[3rem] bg-zinc-50 border border-black/5 p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-black/5 hover:-translate-y-2 cursor-pointer">
+            className="group rounded-[2rem] sm:rounded-[3rem] bg-zinc-50 border border-black/5 p-5 sm:p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-black/5 hover:-translate-y-2 cursor-pointer">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-10 w-10 rounded-xl bg-black text-white flex items-center justify-center">
                 <Repeat className="h-4 w-4" />

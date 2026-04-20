@@ -38,7 +38,7 @@ export function HeroSection({ data }: HeroSectionProps) {
   ];
 
   return (
-    <section ref={containerRef} className="relative min-h-screen w-full overflow-hidden bg-white pt-32 pb-16 lg:pt-40 lg:pb-24" data-theme="light">
+    <section ref={containerRef} className="relative w-full overflow-hidden bg-white pt-24 pb-12 lg:min-h-screen lg:pt-40 lg:pb-24" data-theme="light">
       <div className="absolute inset-0 z-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #000 0.7px, transparent 0.7px)', backgroundSize: '24px 24px' }} />
 
       <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10 mx-auto w-full max-w-[94rem] px-6">
@@ -80,8 +80,8 @@ export function HeroSection({ data }: HeroSectionProps) {
           </div>
 
           {/* Right: Intelligence Dashboard */}
-          <motion.div style={{ y: y1 }} className="relative mt-16 lg:mt-0 lg:w-1/2">
-            <div className="relative mx-auto w-full max-w-[540px] rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-6 sm:p-8 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
+          <motion.div style={{ y: y1 }} className="relative mt-8 lg:mt-0 lg:w-1/2">
+            <div className="relative mx-auto w-full max-w-[540px] rounded-[2rem] sm:rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-5 sm:p-8 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
               {/* Header bar */}
               <div className="flex items-center justify-between pb-5 border-b border-black/5 mb-6">
                 <div className="flex items-center gap-3">

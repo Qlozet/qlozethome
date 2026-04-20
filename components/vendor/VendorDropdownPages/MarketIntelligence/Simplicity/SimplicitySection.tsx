@@ -11,13 +11,13 @@ type SimplicitySectionProps = { data: SimplicityData };
 
 export function SimplicitySection({ data }: SimplicitySectionProps) {
   return (
-    <section className="relative z-10 bg-white px-6 py-24 lg:py-40" data-theme="light">
+    <section className="relative z-10 bg-white px-6 py-14 lg:py-40" data-theme="light">
       <div className="mx-auto max-w-[94rem]">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-24">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-24">
           {/* Left: Dashboard Preview */}
           <div className="lg:w-7/12 order-2 lg:order-1">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              className="rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-6 sm:p-8 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
+              className="rounded-[2rem] sm:rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-5 sm:p-8 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
               
               {/* Dashboard Header */}
               <div className="flex items-center justify-between pb-5 border-b border-black/5 mb-6">
@@ -91,7 +91,7 @@ export function SimplicitySection({ data }: SimplicitySectionProps) {
           </div>
 
           {/* Right: Content */}
-          <div className="flex flex-col gap-8 lg:w-5/12 order-1 lg:order-2 mb-12 lg:mb-0">
+          <div className="flex flex-col gap-8 lg:w-5/12 order-1 lg:order-2 mb-8 lg:mb-0">
             <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
               className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/30">{data.badge}</motion.span>
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}

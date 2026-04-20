@@ -24,12 +24,12 @@ const INTERACTION_LOG = [
 
 export function LearningSection({ data }: LearningSectionProps) {
   return (
-    <section className="relative z-20 bg-[#0A0A0A] px-6 py-32 lg:py-48 overflow-hidden" data-theme="dark">
+    <section className="relative z-20 bg-[#0A0A0A] px-6 py-14 lg:py-48 overflow-hidden" data-theme="dark">
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.02),transparent)]" />
 
       <div className="relative z-10 mx-auto max-w-[94rem]">
         {/* Header */}
-        <div className="mb-16 flex flex-col gap-6 text-center items-center lg:mb-20">
+        <div className="mb-10 flex flex-col gap-6 text-center items-center lg:mb-20">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
             className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10">
             <BrainCircuit className="h-7 w-7 text-white/40" strokeWidth={1} />
@@ -45,7 +45,7 @@ export function LearningSection({ data }: LearningSectionProps) {
         <div className="grid gap-6 lg:grid-cols-2">
           {/* AI Accuracy Timeline */}
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="rounded-[3rem] bg-white/[0.03] border border-white/5 p-6 sm:p-8 transition-all duration-500 hover:bg-white/[0.06]">
+            className="rounded-[2rem] sm:rounded-[3rem] bg-white/[0.03] border border-white/5 p-5 sm:p-8 transition-all duration-500 hover:bg-white/[0.06]">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
                 <div className="h-8 w-8 rounded-xl bg-white text-black flex items-center justify-center"><BrainCircuit className="h-3.5 w-3.5" /></div>
@@ -88,7 +88,7 @@ export function LearningSection({ data }: LearningSectionProps) {
 
           {/* Learning from Interactions */}
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-            className="rounded-[3rem] bg-white/[0.03] border border-white/5 p-6 sm:p-8 transition-all duration-500 hover:bg-white/[0.06]">
+            className="rounded-[2rem] sm:rounded-[3rem] bg-white/[0.03] border border-white/5 p-5 sm:p-8 transition-all duration-500 hover:bg-white/[0.06]">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-8 w-8 rounded-xl bg-white text-black flex items-center justify-center"><MessageSquareText className="h-3.5 w-3.5" /></div>
               <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">Learning Log</span>
