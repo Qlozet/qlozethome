@@ -52,7 +52,7 @@ export function HeroSection({ data }: HeroSectionProps) {
   };
 
   return (
-    <section ref={containerRef} className="relative min-h-screen w-full overflow-hidden bg-white pt-32 lg:pt-40" data-theme="light">
+    <section ref={containerRef} className="relative w-full overflow-hidden bg-white pt-24 lg:min-h-screen lg:pt-40" data-theme="light">
       <div className="absolute top-0 right-0 w-1/2 h-[80vh] bg-zinc-50/50 -z-10 rounded-bl-[5rem]" />
 
       <motion.div
@@ -112,9 +112,9 @@ export function HeroSection({ data }: HeroSectionProps) {
           {/* Right Column: Hero Visual */}
           <motion.div
             style={{ y }}
-            className="relative mt-20 lg:mt-0 lg:w-2/5"
+            className="relative mt-8 lg:mt-0 lg:w-2/5"
           >
-            <div className="group relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-zinc-100 shadow-2xl shadow-black/10">
+            <div className="group relative aspect-[3/4] sm:aspect-[4/5] w-full overflow-hidden rounded-[2rem] sm:rounded-[3rem] bg-zinc-100 shadow-2xl shadow-black/10">
               <Image
                 src={data.image.src}
                 alt={data.image.alt}

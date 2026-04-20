@@ -22,7 +22,7 @@ type IntegratedSectionProps = {
 
 export function IntegratedSection({ data }: IntegratedSectionProps) {
   return (
-    <section className="relative w-full bg-zinc-50 py-24 lg:py-40" data-theme="light">
+    <section className="relative w-full bg-zinc-50 py-14 lg:py-40" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col gap-16 lg:flex-row lg:items-center">
           {/* Left Column: Tools Grids */}
@@ -38,14 +38,14 @@ export function IntegratedSection({ data }: IntegratedSectionProps) {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className={`flex flex-col gap-8 rounded-[3rem] p-10 shadow-xl border border-white/40 backdrop-blur-sm transition-all hover:scale-[1.03] ${
+                    className={`flex flex-col gap-6 rounded-[2rem] p-6 sm:p-8 shadow-xl border border-white/40 backdrop-blur-sm transition-all hover:scale-[1.03] ${
                       isFirst 
-                        ? "bg-white col-span-2 aspect-[16/6] flex-row items-center" 
-                        : "bg-white/80 aspect-square"
+                        ? "bg-white col-span-2 sm:aspect-[16/6] flex-row items-center" 
+                        : "bg-white/80 sm:aspect-square"
                     }`}
                   >
-                    <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-zinc-50 border border-zinc-100 shadow-sm">
-                      <Icon className="h-8 w-8 text-black opacity-80" strokeWidth={1.5} />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-zinc-50 border border-zinc-100 shadow-sm">
+                      <Icon className="h-6 w-6 text-black opacity-80" strokeWidth={1.5} />
                     </div>
                     <div className="flex flex-col gap-2">
                        <h3 className="font-display text-xl font-medium tracking-tight text-black">

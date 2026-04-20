@@ -22,9 +22,9 @@ type DirectSectionProps = {
 
 export function DirectSection({ data }: DirectSectionProps) {
   return (
-    <section className="relative w-full bg-white py-24 lg:py-40" data-theme="light">
+    <section className="relative w-full bg-white py-14 lg:py-40" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col gap-16 lg:flex-row lg:items-center">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
           {/* Left Column: Content */}
           <div className="flex flex-col gap-12 lg:w-1/2">
             <div className="flex flex-col gap-8">
@@ -82,7 +82,7 @@ export function DirectSection({ data }: DirectSectionProps) {
 
           {/* Right Column: Visual Chat/Interaction UI */}
           <div className="lg:w-1/2 flex justify-center items-center">
-             <div className="relative w-full max-w-md p-10 bg-zinc-50 rounded-[3rem] border border-zinc-100 shadow-xl overflow-hidden group">
+             <div className="relative w-full max-w-md p-6 sm:p-10 bg-zinc-50 rounded-[2rem] sm:rounded-[3rem] border border-zinc-100 shadow-xl overflow-hidden group">
                 <div className="flex flex-col gap-6 relative z-10">
                    <motion.div
                      initial={{ opacity: 0, x: -20 }}

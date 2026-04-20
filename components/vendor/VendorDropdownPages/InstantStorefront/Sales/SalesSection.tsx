@@ -16,13 +16,13 @@ type SalesSectionProps = {
 
 export function SalesSection({ data }: SalesSectionProps) {
   return (
-    <section className="relative w-full bg-white py-24 lg:py-40" data-theme="light">
+    <section className="relative w-full bg-white py-14 lg:py-40" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col gap-12 lg:flex-row lg:items-center">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
           {/* Left Column: Visual Map of Sales */}
           <div className="relative order-2 lg:order-1 lg:w-1/2">
-            <div className="flex aspect-video w-full items-center justify-center rounded-[3rem] bg-zinc-50 border border-zinc-100 shadow-xl overflow-hidden relative group">
-              <div className="flex flex-col gap-8 p-12">
+            <div className="flex items-center justify-center rounded-[2rem] bg-zinc-50 border border-zinc-100 shadow-xl overflow-hidden relative group">
+              <div className="flex flex-col gap-6 p-6 sm:p-12">
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}

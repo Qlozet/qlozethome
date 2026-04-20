@@ -22,7 +22,7 @@ type SetupSectionProps = {
 
 export function SetupSection({ data }: SetupSectionProps) {
   return (
-    <section className="relative w-full bg-white py-24 lg:py-40" data-theme="light">
+    <section className="relative w-full bg-white py-14 lg:py-40" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col gap-20 lg:flex-row lg:items-end lg:justify-between">
           <div className="flex max-w-3xl flex-col gap-8">

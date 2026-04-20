@@ -26,11 +26,11 @@ export function ReachSection({ data }: ReachSectionProps) {
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1, 0.8]);
 
   return (
-    <section ref={containerRef} className="relative w-full bg-white py-24 lg:py-40 overflow-hidden" data-theme="light">
+    <section ref={containerRef} className="relative w-full bg-white py-14 lg:py-40 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
           {/* Left Column: Content */}
-          <div className="flex flex-col gap-12 lg:w-1/2 order-2 lg:order-1">
+          <div className="flex flex-col gap-10 lg:w-1/2 order-2 lg:order-1">
             <div className="flex flex-col gap-8">
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
@@ -60,7 +60,7 @@ export function ReachSection({ data }: ReachSectionProps) {
               </motion.p>
             </div>
 
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               {data.stats.map((stat, index) => (
                 <motion.div
                   key={stat}
@@ -79,7 +79,7 @@ export function ReachSection({ data }: ReachSectionProps) {
           </div>
 
           {/* Right Column: Globe Visualization */}
-          <div className="relative lg:w-1/2 order-1 lg:order-2 flex justify-center items-center py-20 lg:py-0">
+          <div className="relative lg:w-1/2 order-1 lg:order-2 flex justify-center items-center py-8 sm:py-16 lg:py-0">
              <motion.div 
                style={{ rotate, scale }}
                className="relative w-full aspect-square max-w-md rounded-full bg-gradient-to-tr from-zinc-50 via-white to-zinc-100 shadow-2xl flex items-center justify-center border border-zinc-200"

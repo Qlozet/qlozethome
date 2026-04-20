@@ -26,7 +26,7 @@ export function ShowcaseSection({ data }: ShowcaseSectionProps) {
   const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
   return (
-    <section ref={containerRef} className="relative w-full bg-zinc-50 py-24 lg:py-40" data-theme="light">
+    <section ref={containerRef} className="relative w-full bg-zinc-50 py-14 lg:py-40" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
           {/* Left Column: Image with Parallax */}
@@ -45,7 +45,7 @@ export function ShowcaseSection({ data }: ShowcaseSectionProps) {
           </div>
 
           {/* Right Column: Content */}
-          <div className="flex flex-col gap-12 lg:w-1/2">
+          <div className="flex flex-col gap-8 mt-8 lg:mt-0 lg:w-1/2">
             <div className="flex flex-col gap-8">
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
