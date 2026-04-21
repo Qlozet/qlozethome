@@ -63,12 +63,10 @@ function ErrorBarChart() {
               {/* Bar */}
               <motion.div
                 className="w-full rounded-t-lg sm:rounded-t-xl relative overflow-hidden"
-                style={{ backgroundColor: stage.color }}
+                style={{ backgroundColor: stage.color, transformOrigin: "bottom" }}
                 initial={{ height: 0, scaleY: 0 }}
                 animate={inView ? { height: `${targetPct}%`, scaleY: 1 } : { height: 0, scaleY: 0 }}
                 transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 + i * 0.12 }}
-                // Important: scaleY from bottom, not top
-                style={{ backgroundColor: stage.color, transformOrigin: "bottom" }}
               >
                 {/* Shimmer */}
                 <motion.div
