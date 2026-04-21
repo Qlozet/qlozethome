@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { AlertTriangle, TrendingDown, CheckSquare } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 type SectionData = {
   id: string;
@@ -16,244 +16,90 @@ type ConfidenceSectionProps = {
   data: SectionData;
 };
 
-// ─── Chart constants ─────────────────────────────────────────────────────────
-// All coordinates live in SVG viewBox space — fully responsive on every screen.
-const VW = 500; // viewBox width
-const VH = 220; // viewBox height
-const PAD_L = 32; // left padding (y-axis label space)
-const PAD_R = 8;
-const PAD_T = 10;
-const PAD_B = 36; // bottom padding (x-axis label space)
+// ─── Bar chart data ────────────────────────────────────────────────────────────
+const stages = [
+  { label: "Manual",     value: 18.4, color: "#ef4444", textColor: "#dc2626" },
+  { label: "Hybrid",     value: 11.2, color: "#f59e0b", textColor: "#d97706" },
+  { label: "AI-Assist",  value: 5.6,  color: "#34d399", textColor: "#059669" },
+  { label: "Qlozet",     value: 1.2,  color: "#10b981", textColor: "#047857" },
+];
+const MAX_VAL = 20; // domain ceiling (%)
 
-const cL = PAD_L;
-const cR = VW - PAD_R;
-const cT = PAD_T;
-const cB = VH - PAD_B;
-const cW = cR - cL;
-const cH = cB - cT;
-
-// Stages: Manual → Hybrid → AI-Assisted → Qlozet System
-const stages = ["Manual", "Hybrid", "AI-Assist", "Qlozet"];
-// Error rates at each stage (%)
-const errorRates = [18.4, 11.2, 5.6, 1.2];
-// Bar max domain
-const maxVal = 20;
-
-function xBar(i: number, count: number) {
-  const gap = cW / count;
-  return cL + gap * i + gap * 0.15;
-}
-function barW(count: number) {
-  return (cW / count) * 0.7;
-}
-function yVal(v: number) {
-  return cT + cH - (v / maxVal) * cH;
-}
-function barH(v: number) {
-  return (v / maxVal) * cH;
-}
-
-// Y grid lines
-const yGridVals = [0, 5, 10, 15, 20];
-
-// Trend line connecting bar tops (center of each bar)
-function trendPath(count: number) {
-  return errorRates
-    .map((v, i) => {
-      const x = xBar(i, count) + barW(count) / 2;
-      const y = yVal(v);
-      return `${i === 0 ? "M" : "L"} ${x.toFixed(1)} ${y.toFixed(1)}`;
-    })
-    .join(" ");
-}
-
-// ─── Chart component ──────────────────────────────────────────────────────────
-function ErrorReductionChart() {
-  const ref = useRef<SVGSVGElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  const [drawn, setDrawn] = useState(false);
-
-  useEffect(() => {
-    if (inView) {
-      const t = setTimeout(() => setDrawn(true), 150);
-      return () => clearTimeout(t);
-    }
-  }, [inView]);
-
-  const n = stages.length;
-  const bW = barW(n);
-
-  // Color palette: red → yellow → light-green → emerald
-  const barColors = ["#ef4444", "#f59e0b", "#34d399", "#10b981"];
-  const labelColors = ["#ef4444", "#f59e0b", "#059669", "#059669"];
+// ─── Bar Chart (HTML-based — no SVG attribute animation quirks) ───────────────
+function ErrorBarChart() {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-40px" });
 
   return (
-    <svg
-      ref={ref}
-      viewBox={`0 0 ${VW} ${VH}`}
-      preserveAspectRatio="xMidYMid meet"
-      overflow="visible"
-      className="w-full"
-      style={{ height: "clamp(150px, 32vw, 230px)", display: "block" }}
-    >
-      <defs>
-        {barColors.map((color, i) => (
-          <linearGradient key={i} id={`barGrad${i}`} x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor={color} stopOpacity="0.9" />
-            <stop offset="100%" stopColor={color} stopOpacity="0.4" />
-          </linearGradient>
+    <div ref={ref} className="w-full">
+      {/* Chart area */}
+      <div className="relative flex items-end justify-around gap-2 sm:gap-4 px-2 sm:px-4" style={{ height: "clamp(120px, 24vw, 180px)" }}>
+
+        {/* Y-axis grid lines (absolute, behind bars) */}
+        {[0, 25, 50, 75, 100].map((pct) => (
+          <div
+            key={pct}
+            className="absolute left-0 right-0 border-t border-dashed border-black/[0.06]"
+            style={{ bottom: `${pct}%` }}
+          />
         ))}
-        <linearGradient id="trendGrad" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="#ef4444" />
-          <stop offset="100%" stopColor="#10b981" />
-        </linearGradient>
-      </defs>
 
-      {/* ── Y-axis grid + labels ─────────────────────────────────────── */}
-      {yGridVals.map((v) => (
-        <g key={v}>
-          <line
-            x1={cL} y1={yVal(v).toFixed(1)}
-            x2={cR} y2={yVal(v).toFixed(1)}
-            stroke="rgba(0,0,0,0.06)"
-            strokeWidth="1"
-            strokeDasharray={v === 0 ? "none" : "3 3"}
-          />
-          <text
-            x={(cL - 6).toFixed(1)}
-            y={yVal(v).toFixed(1)}
-            textAnchor="end"
-            dominantBaseline="middle"
-            fill="rgba(0,0,0,0.25)"
-            fontSize="9"
-            fontFamily="monospace"
+        {/* Bars */}
+        {stages.map((stage, i) => {
+          const targetPct = (stage.value / MAX_VAL) * 100;
+          return (
+            <div key={i} className="relative flex flex-col items-center gap-1 flex-1 min-w-0 h-full justify-end">
+              {/* Value label above bar */}
+              <motion.span
+                className="font-mono text-[9px] sm:text-[10px] font-bold tabular-nums"
+                style={{ color: stage.textColor }}
+                initial={{ opacity: 0, y: 6 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.5 + i * 0.12, duration: 0.3 }}
+              >
+                {stage.value}%
+              </motion.span>
+
+              {/* Bar */}
+              <motion.div
+                className="w-full rounded-t-lg sm:rounded-t-xl relative overflow-hidden"
+                style={{ backgroundColor: stage.color }}
+                initial={{ height: 0, scaleY: 0 }}
+                animate={inView ? { height: `${targetPct}%`, scaleY: 1 } : { height: 0, scaleY: 0 }}
+                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 + i * 0.12 }}
+                // Important: scaleY from bottom, not top
+                style={{ backgroundColor: stage.color, transformOrigin: "bottom" }}
+              >
+                {/* Shimmer */}
+                <motion.div
+                  className="absolute inset-0 bg-white/20"
+                  initial={{ x: "-100%" }}
+                  animate={inView ? { x: "200%" } : {}}
+                  transition={{ delay: 0.8 + i * 0.12, duration: 0.6, ease: "easeOut" }}
+                />
+              </motion.div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Baseline rule */}
+      <div className="h-px bg-black/10 mx-2 sm:mx-4 mt-0" />
+
+      {/* X-axis labels */}
+      <div className="flex justify-around px-2 sm:px-4 mt-2">
+        {stages.map((stage, i) => (
+          <span
+            key={i}
+            className="flex-1 text-center font-mono text-[8px] sm:text-[9px] min-w-0 truncate"
+            style={{ color: i === stages.length - 1 ? "#047857" : "rgba(0,0,0,0.3)",
+              fontWeight: i === stages.length - 1 ? 700 : 400 }}
           >
-            {v}%
-          </text>
-        </g>
-      ))}
-
-      {/* ── Bars ─────────────────────────────────────────────────────── */}
-      {errorRates.map((v, i) => {
-        const x = xBar(i, n);
-        const h = barH(v);
-        const y = cB - h;
-        return (
-          <g key={i}>
-            {/* Bar fill */}
-            <motion.rect
-              x={x.toFixed(1)}
-              y={cB.toFixed(1)} // start from bottom
-              width={bW.toFixed(1)}
-              height="0"
-              rx="4"
-              fill={`url(#barGrad${i})`}
-              animate={drawn ? { y: y.toFixed(1), height: h.toFixed(1) } : {}}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 + i * 0.12 }}
-            />
-            {/* Value label above bar */}
-            <motion.text
-              x={(x + bW / 2).toFixed(1)}
-              y={(y - 5).toFixed(1)}
-              textAnchor="middle"
-              fill={labelColors[i]}
-              fontSize="10"
-              fontFamily="monospace"
-              fontWeight="bold"
-              initial={{ opacity: 0 }}
-              animate={drawn ? { opacity: 1 } : {}}
-              transition={{ delay: 0.6 + i * 0.12, duration: 0.3 }}
-            >
-              {v}%
-            </motion.text>
-            {/* X-axis stage label */}
-            <text
-              x={(x + bW / 2).toFixed(1)}
-              y={(VH - 8).toFixed(1)}
-              textAnchor="middle"
-              fill={i === n - 1 ? "#059669" : "rgba(0,0,0,0.3)"}
-              fontSize="8.5"
-              fontFamily="monospace"
-              fontWeight={i === n - 1 ? "bold" : "normal"}
-            >
-              {stages[i]}
-            </text>
-          </g>
-        );
-      })}
-
-      {/* ── Trend line connecting bar tops ───────────────────────────── */}
-      <motion.path
-        d={trendPath(n)}
-        fill="none"
-        stroke="url(#trendGrad)"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeDasharray="5 4"
-        initial={{ pathLength: 0, opacity: 0 }}
-        animate={drawn ? { pathLength: 1, opacity: 1 } : {}}
-        transition={{ duration: 1.2, ease: "easeOut", delay: 0.9 }}
-      />
-
-      {/* ── Trend dots on bar tops ────────────────────────────────────── */}
-      {errorRates.map((v, i) => {
-        const cx = xBar(i, n) + bW / 2;
-        const cy = yVal(v);
-        return (
-          <motion.circle
-            key={`d${i}`}
-            cx={cx.toFixed(1)}
-            cy={cy.toFixed(1)}
-            r="4"
-            fill={barColors[i]}
-            stroke="white"
-            strokeWidth="2"
-            initial={{ scale: 0, opacity: 0 }}
-            animate={drawn ? { scale: 1, opacity: 1 } : {}}
-            transition={{ delay: 1.1 + i * 0.1, duration: 0.3, type: "spring", stiffness: 400 }}
-          />
-        );
-      })}
-
-      {/* ── Qlozet "target" callout on last bar ─────────────────────── */}
-      <motion.g
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={drawn ? { opacity: 1, scale: 1 } : {}}
-        transition={{ delay: 1.6, type: "spring", stiffness: 200 }}
-      >
-        {/* Callout bubble */}
-        <rect
-          x={(xBar(n - 1, n) + bW / 2 - 30).toFixed(1)}
-          y={(yVal(errorRates[n - 1]) - 34).toFixed(1)}
-          width="60"
-          height="20"
-          rx="6"
-          fill="#10b981"
-        />
-        <text
-          x={(xBar(n - 1, n) + bW / 2).toFixed(1)}
-          y={(yVal(errorRates[n - 1]) - 21).toFixed(1)}
-          textAnchor="middle"
-          dominantBaseline="middle"
-          fill="white"
-          fontSize="8.5"
-          fontFamily="monospace"
-          fontWeight="bold"
-        >
-          −93% vs Manual
-        </text>
-        {/* Callout arrow */}
-        <line
-          x1={(xBar(n - 1, n) + bW / 2).toFixed(1)}
-          y1={(yVal(errorRates[n - 1]) - 14).toFixed(1)}
-          x2={(xBar(n - 1, n) + bW / 2).toFixed(1)}
-          y2={(yVal(errorRates[n - 1]) - 2).toFixed(1)}
-          stroke="#10b981"
-          strokeWidth="1.5"
-        />
-      </motion.g>
-    </svg>
+            {stage.label}
+          </span>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -329,15 +175,18 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
               className="relative mx-auto w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-zinc-50 border border-black/5 shadow-2xl overflow-hidden"
             >
               {/* Subtle grid bg */}
-              <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: 'linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
+              <div
+                className="absolute inset-0 opacity-[0.025]"
+                style={{ backgroundImage: "linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px)", backgroundSize: "32px 32px" }}
+              />
 
               <div className="relative z-10 p-5 sm:p-8 flex flex-col gap-5">
 
                 {/* ── Card header ── */}
-                <div className="flex items-start justify-between">
+                <div className="flex items-start justify-between gap-4">
                   <div className="flex flex-col gap-1">
                     <span className="font-display text-[9px] font-bold uppercase tracking-[0.4em] text-black/30">Error Rate by Stage</span>
-                    <div className="flex items-baseline gap-2">
+                    <div className="flex items-baseline gap-2 flex-wrap">
                       <span className="font-display text-3xl sm:text-4xl font-medium text-black">1.2%</span>
                       <div className="flex items-center gap-1 bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded-full border border-emerald-100">
                         <TrendingDown className="h-3 w-3" />
@@ -348,32 +197,30 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
                   </div>
 
                   {/* Legend */}
-                  <div className="flex flex-col gap-1.5 items-end shrink-0">
-                    <div className="flex items-center gap-1.5">
-                      <div className="h-1.5 w-4 rounded-full" style={{ background: 'linear-gradient(to right, #ef4444, #10b981)' }} />
-                      <span className="font-mono text-[8px] text-black/30">Error Rate</span>
+                  <div className="flex flex-col gap-2 items-end shrink-0 pt-1">
+                    <div className="flex gap-1 items-center">
+                      {stages.map((s) => (
+                        <div key={s.label} className="h-2.5 w-2.5 rounded-sm" style={{ backgroundColor: s.color }} />
+                      ))}
                     </div>
-                    <div className="flex items-center gap-1.5">
-                      <div className="h-px w-4 border-t-2 border-dashed border-black/20" />
-                      <span className="font-mono text-[8px] text-black/30">Trend</span>
-                    </div>
+                    <span className="font-mono text-[7px] text-black/25 tracking-widest">Red → Green = Improvement</span>
                   </div>
                 </div>
 
                 {/* ── Chart ── */}
-                <div className="rounded-2xl bg-white border border-black/[0.04] shadow-sm px-3 sm:px-5 pt-4 pb-2">
-                  <ErrorReductionChart />
+                <div className="rounded-2xl bg-white border border-black/[0.05] shadow-sm pt-5 pb-3 px-3 sm:px-4">
+                  <ErrorBarChart />
                 </div>
 
                 {/* ── Bottom stat pills ── */}
                 <div className="grid grid-cols-3 gap-2 sm:gap-3">
                   {[
-                    { label: "Manual Error", value: "18.4%", color: "bg-red-50 text-red-600 border-red-100" },
-                    { label: "Reduction", value: "−93%", color: "bg-emerald-50 text-emerald-600 border-emerald-100" },
-                    { label: "Qlozet Rate", value: "1.2%", color: "bg-emerald-50 text-emerald-700 border-emerald-100" },
+                    { label: "Manual",    value: "18.4%", cls: "bg-red-50 text-red-600 border-red-100" },
+                    { label: "Reduction", value: "−93%",  cls: "bg-emerald-50 text-emerald-600 border-emerald-100" },
+                    { label: "Qlozet",    value: "1.2%",  cls: "bg-emerald-50 text-emerald-700 border-emerald-200" },
                   ].map((pill) => (
-                    <div key={pill.label} className={`flex flex-col items-center gap-0.5 rounded-xl border px-2 py-2 sm:px-3 sm:py-2.5 ${pill.color}`}>
-                      <span className="font-mono text-[8px] uppercase tracking-widest opacity-60">{pill.label}</span>
+                    <div key={pill.label} className={`flex flex-col items-center gap-0.5 rounded-xl border px-2 py-2 sm:px-3 sm:py-2.5 ${pill.cls}`}>
+                      <span className="font-mono text-[7px] sm:text-[8px] uppercase tracking-widest opacity-60">{pill.label}</span>
                       <span className="font-display text-sm sm:text-base font-bold">{pill.value}</span>
                     </div>
                   ))}
