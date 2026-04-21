@@ -24,7 +24,7 @@ export function FitProfileSection({ data }: FitProfileSectionProps) {
   return (
     <section className="relative w-full bg-white py-24 lg:py-40 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col gap-12 lg:flex-row lg:items-center">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
           {/* Left Column: Typography */}
           <div className="flex flex-col gap-12 lg:w-1/2">
             <div className="flex flex-col gap-8">
@@ -81,126 +81,86 @@ export function FitProfileSection({ data }: FitProfileSectionProps) {
           </div>
 
           {/* Right Column: Visual Profile UI */}
-          <div className="lg:w-1/2 flex justify-center items-center py-20 lg:py-0 w-full">
-             <div className="relative w-full max-w-[600px] aspect-[4/3] flex items-center justify-center">
+          <div className="lg:w-1/2 flex justify-center items-center py-8 lg:py-0 w-full">
+             <div className="relative w-full max-w-[560px] aspect-[4/3] flex items-center justify-center">
                 {/* Background Grid */}
                 <div className="absolute inset-0 z-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #000 1px, transparent 1px), linear-gradient(to bottom, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
-                {/* Solid Crisp Digital ID Card */}
-                <motion.div 
+                {/* Digital ID Card */}
+                <motion.div
                    initial={{ y: 30, opacity: 0 }}
                    whileInView={{ y: 0, opacity: 1 }}
                    transition={{ duration: 1, type: "spring", bounce: 0.2 }}
-                   className="relative w-full h-full max-h-[400px] bg-white border border-zinc-200 rounded-[2rem] sm:rounded-[3rem] shadow-2xl p-8 sm:p-12 flex flex-col justify-between overflow-hidden z-10"
+                   className="relative w-full h-full max-h-[380px] bg-white border border-zinc-200 rounded-[2rem] sm:rounded-[3rem] shadow-2xl p-6 sm:p-10 flex flex-col justify-between overflow-hidden z-10"
                 >
                    {/* Card Top / Header */}
                    <div className="flex justify-between items-start w-full relative z-20">
-                      <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-3">
                          {/* NFC / ID Icon */}
-                         <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center relative">
-                            <motion.div 
-                               initial={{ scale: 0.8, opacity: 0 }} 
-                               whileInView={{ scale: 1.5, opacity: 0 }} 
+                         <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center relative">
+                            <motion.div
+                               initial={{ scale: 0.8, opacity: 0 }}
+                               whileInView={{ scale: 1.5, opacity: 0 }}
                                transition={{ duration: 1.5, repeat: Infinity }}
-                               className="absolute w-12 h-12 rounded-full border border-black/50 pointer-events-none"
+                               className="absolute w-10 h-10 rounded-full border border-black/50 pointer-events-none"
                             />
-                            <UserCheck className="w-6 h-6 text-white" />
+                            <UserCheck className="w-5 h-5 text-white" />
                          </div>
                          <div className="flex flex-col">
-                            <span className="font-display text-sm sm:text-base font-bold uppercase tracking-widest text-black">QLOZET_ID</span>
-                            <span className="font-mono text-[9px] sm:text-[10px] text-zinc-400 tracking-wider">SYNC_V12.0</span>
+                            <span className="font-display text-sm font-bold uppercase tracking-widest text-black">QLOZET_ID</span>
+                            <span className="font-mono text-[9px] text-zinc-400 tracking-wider">SYNC_V12.0</span>
                          </div>
                       </div>
-                      
-                      <motion.div 
+
+                      <motion.div
                          initial={{ rotate: -90, opacity: 0 }}
                          whileInView={{ rotate: 0, opacity: 1 }}
                          transition={{ delay: 0.5, duration: 0.8 }}
                          className="flex gap-1"
                       >
-                         <ShieldCheck className="w-8 h-8 text-green-500" />
+                         <ShieldCheck className="w-7 h-7 text-green-500" />
                       </motion.div>
                    </div>
 
-                   {/* Card Center / Loading Skeleton vs Data */}
-                   <div className="flex gap-8 mt-12 relative z-20">
-                      {/* Avatar Placeholder */}
-                      <div className="w-32 h-40 sm:w-40 sm:h-48 bg-zinc-100 rounded-2xl overflow-hidden relative border border-black/5">
-                         <motion.img 
+                   {/* Card Center / Data */}
+                   <div className="flex gap-5 sm:gap-8 mt-6 relative z-20">
+                      {/* Avatar */}
+                      <div className="w-24 h-32 sm:w-36 sm:h-44 bg-zinc-100 rounded-2xl overflow-hidden relative border border-black/5 shrink-0">
+                         <motion.img
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             transition={{ delay: 0.8, duration: 1 }}
-                            src="/image/seun.png" 
-                            alt="Generated Avatar" 
+                            src="/image/seun.png"
+                            alt="Generated Avatar"
                             className="w-full h-full object-cover grayscale"
                          />
                          <div className="absolute inset-0 border border-black/10 rounded-2xl pointer-events-none" />
                       </div>
-                      
-                      {/* Measurement Data Syncing lines */}
-                      <div className="flex-1 flex flex-col justify-end gap-2 sm:gap-2.5 pb-2">
-                         <motion.div 
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 1.1, duration: 0.5 }}
-                            className="flex items-center justify-between"
-                         >
-                            <span className="font-mono text-[9px] sm:text-[10px] font-bold text-zinc-400">COLLAR</span>
-                            <span className="font-mono text-[10px] sm:text-xs font-bold text-black border-b border-black/10 border-dashed pb-0.5">38.0 CM</span>
-                         </motion.div>
 
-                         <motion.div 
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 1.2, duration: 0.5 }}
-                            className="flex items-center justify-between"
-                         >
-                            <span className="font-mono text-[9px] sm:text-[10px] font-bold text-zinc-400">SHOULDERS</span>
-                            <span className="font-mono text-[10px] sm:text-xs font-bold text-black border-b border-black/10 border-dashed pb-0.5">46.5 CM</span>
-                         </motion.div>
-                         
-                         <motion.div 
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 1.3, duration: 0.5 }}
-                            className="flex items-center justify-between"
-                         >
-                            <span className="font-mono text-[9px] sm:text-[10px] font-bold text-zinc-400">CHEST</span>
-                            <span className="font-mono text-[10px] sm:text-xs font-bold text-black border-b border-black/10 border-dashed pb-0.5">98.2 CM</span>
-                         </motion.div>
-                         
-                         <motion.div 
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 1.4, duration: 0.5 }}
-                            className="flex items-center justify-between"
-                         >
-                            <span className="font-mono text-[9px] sm:text-[10px] font-bold text-zinc-400">BICEP</span>
-                            <span className="font-mono text-[10px] sm:text-xs font-bold text-black border-b border-black/10 border-dashed pb-0.5">34.2 CM</span>
-                         </motion.div>
+                      {/* Measurement Data Rows */}
+                      <div className="flex-1 flex flex-col justify-end gap-1.5 sm:gap-2 pb-2 relative">
+                         {[
+                           { label: "COLLAR", value: "38.0 CM", delay: 1.1 },
+                           { label: "SHOULDERS", value: "46.5 CM", delay: 1.2 },
+                           { label: "CHEST", value: "98.2 CM", delay: 1.3 },
+                           { label: "BICEP", value: "34.2 CM", delay: 1.4 },
+                           { label: "WAIST", value: "82.0 CM", delay: 1.5 },
+                           { label: "INSEAM", value: "78.5 CM", delay: 1.6 },
+                         ].map((row) => (
+                           <motion.div
+                             key={row.label}
+                             initial={{ opacity: 0, x: -20 }}
+                             whileInView={{ opacity: 1, x: 0 }}
+                             transition={{ delay: row.delay, duration: 0.5 }}
+                             className="flex items-center justify-between"
+                           >
+                             <span className="font-mono text-[8px] sm:text-[10px] font-bold text-zinc-400">{row.label}</span>
+                             <span className="font-mono text-[9px] sm:text-xs font-bold text-black border-b border-black/10 border-dashed pb-0.5">{row.value}</span>
+                           </motion.div>
+                         ))}
 
-                         <motion.div 
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 1.5, duration: 0.5 }}
-                            className="flex items-center justify-between"
-                         >
-                            <span className="font-mono text-[9px] sm:text-[10px] font-bold text-zinc-400">WAIST</span>
-                            <span className="font-mono text-[10px] sm:text-xs font-bold text-black border-b border-black/10 border-dashed pb-0.5">82.0 CM</span>
-                         </motion.div>
-
-                         <motion.div 
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 1.6, duration: 0.5 }}
-                            className="flex items-center justify-between"
-                         >
-                            <span className="font-mono text-[9px] sm:text-[10px] font-bold text-zinc-400">INSEAM</span>
-                            <span className="font-mono text-[10px] sm:text-xs font-bold text-black border-b border-black/10 border-dashed pb-0.5">78.5 CM</span>
-                         </motion.div>
-                         
-                         {/* Scanning Laser Line inside the data box */}
-                         <motion.div 
+                         {/* Scanning Laser Line */}
+                         <motion.div
                             initial={{ top: 0, opacity: 0 }}
                             whileInView={{ top: "100%", opacity: [0, 1, 0] }}
                             transition={{ duration: 2, repeat: Infinity, ease: "linear", delay: 1 }}
@@ -209,17 +169,16 @@ export function FitProfileSection({ data }: FitProfileSectionProps) {
                       </div>
                    </div>
 
-                   {/* Card Scanning Watermark Background */}
-                   <motion.div 
+                   {/* Card Scanning Watermark */}
+                   <motion.div
                       initial={{ scale: 0.8, opacity: 0 }}
                       whileInView={{ scale: 1.5, opacity: 0.03 }}
                       transition={{ delay: 1, duration: 2, type: "spring" }}
                       className="absolute -right-10 -bottom-10 pointer-events-none z-0"
                    >
-                      <ShieldCheck className="w-64 h-64 text-black" />
+                      <ShieldCheck className="w-56 h-56 text-black" />
                    </motion.div>
                 </motion.div>
-
              </div>
           </div>
         </div>

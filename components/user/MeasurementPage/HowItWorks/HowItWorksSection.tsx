@@ -127,7 +127,7 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={imageVariants}
-          className="group relative flex aspect-square items-center justify-center overflow-hidden rounded-[4rem] border border-white/10 bg-black p-8 shadow-[0_0_60px_rgba(0,0,0,0.5)] lg:aspect-auto lg:h-[800px] lg:sticky lg:top-32"
+          className="group relative flex aspect-[4/3] sm:aspect-square items-center justify-center overflow-hidden rounded-[2rem] sm:rounded-[4rem] border border-white/10 bg-black p-4 sm:p-8 shadow-[0_0_60px_rgba(0,0,0,0.5)] lg:aspect-auto lg:h-[800px] lg:sticky lg:top-32"
         >
           {/* Tech Spec Corners */}
           <div className="absolute top-8 left-8 h-8 w-8 border-t-2 border-l-2 border-[#00F0FF]/50" />
@@ -137,7 +137,7 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
             src="/image/dresstab.png"
             alt="Digital Silhouette Generation"
             fill
-            className="object-contain p-16 mix-blend-screen opacity-70 grayscale transition-all duration-[2s] group-hover:scale-105 group-hover:opacity-100 group-hover:grayscale-0"
+            className="object-contain p-8 sm:p-16 mix-blend-screen opacity-70 grayscale transition-all duration-[2s] group-hover:scale-105 group-hover:opacity-100 group-hover:grayscale-0"
             sizes="(min-width: 1024px) 50vw, 100vw"
             priority
           />

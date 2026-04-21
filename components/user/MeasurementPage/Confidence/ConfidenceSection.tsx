@@ -18,7 +18,7 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
   return (
     <section className="relative w-full bg-black py-24 lg:py-40" data-theme="dark">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col gap-20">
+        <div className="flex flex-col gap-12 lg:gap-20">
           <div className="flex flex-col gap-8 text-center items-center mx-auto max-w-3xl">
             <motion.span
               initial={{ opacity: 0, scale: 0.9 }}
@@ -56,7 +56,7 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
                  whileInView={{ opacity: 1, y: 0 }}
                  viewport={{ once: true }}
                  transition={{ delay: 0.3 + index * 0.1 }}
-                 className="group relative flex flex-col gap-10 rounded-[3rem] border border-white/5 bg-white/5 p-12 transition-all hover:bg-white/10"
+                 className="group relative flex flex-col gap-8 sm:gap-10 rounded-[2rem] sm:rounded-[3rem] border border-white/5 bg-white/5 p-6 sm:p-12 transition-all hover:bg-white/10"
                >
                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-2xl transition-transform duration-500 group-hover:scale-110">
                     <ShieldCheck className="h-8 w-8 text-black" strokeWidth={1.5} />

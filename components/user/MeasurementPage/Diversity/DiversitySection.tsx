@@ -24,7 +24,7 @@ export function DiversitySection({ data }: DiversitySectionProps) {
   return (
     <section className="relative w-full bg-zinc-50 py-24 lg:py-40" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col gap-16 lg:flex-row lg:items-center">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
           {/* Left Column: Visual Grid of Styles */}
           <div className="lg:w-1/2">
              <div className="grid grid-cols-2 gap-4 sm:gap-6 group">
@@ -43,7 +43,7 @@ export function DiversitySection({ data }: DiversitySectionProps) {
                    whileInView={{ opacity: 1, y: 0 }}
                    viewport={{ once: true }}
                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                   className="aspect-[4/5] bg-zinc-200 rounded-[2rem] sm:rounded-[3rem] overflow-hidden translate-y-8 sm:translate-y-12 grayscale group-hover:grayscale-0 hover:!grayscale-0 transition-all duration-1000 delay-100 relative"
+                   className="aspect-[4/5] bg-zinc-200 rounded-[2rem] sm:rounded-[3rem] overflow-hidden sm:translate-y-12 grayscale group-hover:grayscale-0 hover:!grayscale-0 transition-all duration-1000 delay-100 relative"
                 >
                     <img src="/image/slim-girl-1.jpg" alt="Diversity Model 2" className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-1000" />
                 </motion.div>
@@ -53,7 +53,7 @@ export function DiversitySection({ data }: DiversitySectionProps) {
                    whileInView={{ opacity: 1, y: 0 }}
                    viewport={{ once: true }}
                    transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                   className="aspect-[4/5] bg-zinc-300 rounded-[2rem] sm:rounded-[3rem] overflow-hidden -translate-y-8 sm:-translate-y-12 grayscale group-hover:grayscale-0 hover:!grayscale-0 transition-all duration-1000 delay-200 relative"
+                   className="aspect-[4/5] bg-zinc-300 rounded-[2rem] sm:rounded-[3rem] overflow-hidden sm:-translate-y-12 grayscale group-hover:grayscale-0 hover:!grayscale-0 transition-all duration-1000 delay-200 relative"
                 >
                     <img src="/image/slim-man-2.jpg" alt="Diversity Model 3" className="w-full h-full object-cover object-top transform hover:scale-110 transition-transform duration-1000" />
                 </motion.div>
