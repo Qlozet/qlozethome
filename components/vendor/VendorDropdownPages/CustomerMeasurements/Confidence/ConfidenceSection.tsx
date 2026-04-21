@@ -1,7 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { AlertTriangle, TrendingDown, CheckSquare } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 type SectionData = {
   id: string;
@@ -15,15 +16,258 @@ type ConfidenceSectionProps = {
   data: SectionData;
 };
 
+// ─── Chart constants ─────────────────────────────────────────────────────────
+// All coordinates live in SVG viewBox space — fully responsive on every screen.
+const VW = 500; // viewBox width
+const VH = 220; // viewBox height
+const PAD_L = 32; // left padding (y-axis label space)
+const PAD_R = 8;
+const PAD_T = 10;
+const PAD_B = 36; // bottom padding (x-axis label space)
+
+const cL = PAD_L;
+const cR = VW - PAD_R;
+const cT = PAD_T;
+const cB = VH - PAD_B;
+const cW = cR - cL;
+const cH = cB - cT;
+
+// Stages: Manual → Hybrid → AI-Assisted → Qlozet System
+const stages = ["Manual", "Hybrid", "AI-Assist", "Qlozet"];
+// Error rates at each stage (%)
+const errorRates = [18.4, 11.2, 5.6, 1.2];
+// Bar max domain
+const maxVal = 20;
+
+function xBar(i: number, count: number) {
+  const gap = cW / count;
+  return cL + gap * i + gap * 0.15;
+}
+function barW(count: number) {
+  return (cW / count) * 0.7;
+}
+function yVal(v: number) {
+  return cT + cH - (v / maxVal) * cH;
+}
+function barH(v: number) {
+  return (v / maxVal) * cH;
+}
+
+// Y grid lines
+const yGridVals = [0, 5, 10, 15, 20];
+
+// Trend line connecting bar tops (center of each bar)
+function trendPath(count: number) {
+  return errorRates
+    .map((v, i) => {
+      const x = xBar(i, count) + barW(count) / 2;
+      const y = yVal(v);
+      return `${i === 0 ? "M" : "L"} ${x.toFixed(1)} ${y.toFixed(1)}`;
+    })
+    .join(" ");
+}
+
+// ─── Chart component ──────────────────────────────────────────────────────────
+function ErrorReductionChart() {
+  const ref = useRef<SVGSVGElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-60px" });
+  const [drawn, setDrawn] = useState(false);
+
+  useEffect(() => {
+    if (inView) {
+      const t = setTimeout(() => setDrawn(true), 150);
+      return () => clearTimeout(t);
+    }
+  }, [inView]);
+
+  const n = stages.length;
+  const bW = barW(n);
+
+  // Color palette: red → yellow → light-green → emerald
+  const barColors = ["#ef4444", "#f59e0b", "#34d399", "#10b981"];
+  const labelColors = ["#ef4444", "#f59e0b", "#059669", "#059669"];
+
+  return (
+    <svg
+      ref={ref}
+      viewBox={`0 0 ${VW} ${VH}`}
+      preserveAspectRatio="xMidYMid meet"
+      overflow="visible"
+      className="w-full"
+      style={{ height: "clamp(150px, 32vw, 230px)", display: "block" }}
+    >
+      <defs>
+        {barColors.map((color, i) => (
+          <linearGradient key={i} id={`barGrad${i}`} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor={color} stopOpacity="0.9" />
+            <stop offset="100%" stopColor={color} stopOpacity="0.4" />
+          </linearGradient>
+        ))}
+        <linearGradient id="trendGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stopColor="#ef4444" />
+          <stop offset="100%" stopColor="#10b981" />
+        </linearGradient>
+      </defs>
+
+      {/* ── Y-axis grid + labels ─────────────────────────────────────── */}
+      {yGridVals.map((v) => (
+        <g key={v}>
+          <line
+            x1={cL} y1={yVal(v).toFixed(1)}
+            x2={cR} y2={yVal(v).toFixed(1)}
+            stroke="rgba(0,0,0,0.06)"
+            strokeWidth="1"
+            strokeDasharray={v === 0 ? "none" : "3 3"}
+          />
+          <text
+            x={(cL - 6).toFixed(1)}
+            y={yVal(v).toFixed(1)}
+            textAnchor="end"
+            dominantBaseline="middle"
+            fill="rgba(0,0,0,0.25)"
+            fontSize="9"
+            fontFamily="monospace"
+          >
+            {v}%
+          </text>
+        </g>
+      ))}
+
+      {/* ── Bars ─────────────────────────────────────────────────────── */}
+      {errorRates.map((v, i) => {
+        const x = xBar(i, n);
+        const h = barH(v);
+        const y = cB - h;
+        return (
+          <g key={i}>
+            {/* Bar fill */}
+            <motion.rect
+              x={x.toFixed(1)}
+              y={cB.toFixed(1)} // start from bottom
+              width={bW.toFixed(1)}
+              height="0"
+              rx="4"
+              fill={`url(#barGrad${i})`}
+              animate={drawn ? { y: y.toFixed(1), height: h.toFixed(1) } : {}}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 + i * 0.12 }}
+            />
+            {/* Value label above bar */}
+            <motion.text
+              x={(x + bW / 2).toFixed(1)}
+              y={(y - 5).toFixed(1)}
+              textAnchor="middle"
+              fill={labelColors[i]}
+              fontSize="10"
+              fontFamily="monospace"
+              fontWeight="bold"
+              initial={{ opacity: 0 }}
+              animate={drawn ? { opacity: 1 } : {}}
+              transition={{ delay: 0.6 + i * 0.12, duration: 0.3 }}
+            >
+              {v}%
+            </motion.text>
+            {/* X-axis stage label */}
+            <text
+              x={(x + bW / 2).toFixed(1)}
+              y={(VH - 8).toFixed(1)}
+              textAnchor="middle"
+              fill={i === n - 1 ? "#059669" : "rgba(0,0,0,0.3)"}
+              fontSize="8.5"
+              fontFamily="monospace"
+              fontWeight={i === n - 1 ? "bold" : "normal"}
+            >
+              {stages[i]}
+            </text>
+          </g>
+        );
+      })}
+
+      {/* ── Trend line connecting bar tops ───────────────────────────── */}
+      <motion.path
+        d={trendPath(n)}
+        fill="none"
+        stroke="url(#trendGrad)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeDasharray="5 4"
+        initial={{ pathLength: 0, opacity: 0 }}
+        animate={drawn ? { pathLength: 1, opacity: 1 } : {}}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 0.9 }}
+      />
+
+      {/* ── Trend dots on bar tops ────────────────────────────────────── */}
+      {errorRates.map((v, i) => {
+        const cx = xBar(i, n) + bW / 2;
+        const cy = yVal(v);
+        return (
+          <motion.circle
+            key={`d${i}`}
+            cx={cx.toFixed(1)}
+            cy={cy.toFixed(1)}
+            r="4"
+            fill={barColors[i]}
+            stroke="white"
+            strokeWidth="2"
+            initial={{ scale: 0, opacity: 0 }}
+            animate={drawn ? { scale: 1, opacity: 1 } : {}}
+            transition={{ delay: 1.1 + i * 0.1, duration: 0.3, type: "spring", stiffness: 400 }}
+          />
+        );
+      })}
+
+      {/* ── Qlozet "target" callout on last bar ─────────────────────── */}
+      <motion.g
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={drawn ? { opacity: 1, scale: 1 } : {}}
+        transition={{ delay: 1.6, type: "spring", stiffness: 200 }}
+      >
+        {/* Callout bubble */}
+        <rect
+          x={(xBar(n - 1, n) + bW / 2 - 30).toFixed(1)}
+          y={(yVal(errorRates[n - 1]) - 34).toFixed(1)}
+          width="60"
+          height="20"
+          rx="6"
+          fill="#10b981"
+        />
+        <text
+          x={(xBar(n - 1, n) + bW / 2).toFixed(1)}
+          y={(yVal(errorRates[n - 1]) - 21).toFixed(1)}
+          textAnchor="middle"
+          dominantBaseline="middle"
+          fill="white"
+          fontSize="8.5"
+          fontFamily="monospace"
+          fontWeight="bold"
+        >
+          −93% vs Manual
+        </text>
+        {/* Callout arrow */}
+        <line
+          x1={(xBar(n - 1, n) + bW / 2).toFixed(1)}
+          y1={(yVal(errorRates[n - 1]) - 14).toFixed(1)}
+          x2={(xBar(n - 1, n) + bW / 2).toFixed(1)}
+          y2={(yVal(errorRates[n - 1]) - 2).toFixed(1)}
+          stroke="#10b981"
+          strokeWidth="1.5"
+        />
+      </motion.g>
+    </svg>
+  );
+}
+
+// ─── Section ──────────────────────────────────────────────────────────────────
 export function ConfidenceSection({ data }: ConfidenceSectionProps) {
   return (
     <section id={data.id} className="relative z-10 bg-white py-16 lg:py-48 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col gap-12 lg:flex-row-reverse lg:items-center lg:gap-32">
+
           {/* Right/Top: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
-              <motion.span 
+              <motion.span
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -31,8 +275,8 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
               >
                 {data.badge}
               </motion.span>
-              
-              <motion.h2 
+
+              <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -40,8 +284,8 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
               >
                 {data.title}
               </motion.h2>
-              
-              <motion.p 
+
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -54,10 +298,10 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
 
             <div className="grid gap-4">
               {data.features.map((feature, i) => {
-                 const icons = [AlertTriangle, TrendingDown, CheckSquare];
-                 const Icon = icons[i % icons.length];
-                 return (
-                  <motion.div 
+                const icons = [AlertTriangle, TrendingDown, CheckSquare];
+                const Icon = icons[i % icons.length];
+                return (
+                  <motion.div
                     key={i}
                     initial={{ opacity: 0, x: 10 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -75,101 +319,70 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
             </div>
           </div>
 
-          {/* Left/Bottom: Analytics/Error Reduction Chart */}
-          <div className="relative mt-12 lg:mt-0 lg:w-1/2">
-            <div className="relative mx-auto h-[400px] sm:h-[500px] lg:h-[600px] w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-zinc-50 border border-black/5 shadow-2xl p-4 sm:p-6 lg:p-10 flex flex-col pt-10 sm:pt-12 overflow-hidden">
-               
-               {/* Background Grid */}
-               <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+          {/* Left/Bottom: Chart Illustration */}
+          <div className="relative lg:mt-0 lg:w-1/2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="relative mx-auto w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-zinc-50 border border-black/5 shadow-2xl overflow-hidden"
+            >
+              {/* Subtle grid bg */}
+              <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: 'linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
 
-               {/* Chart Container */}
-               <div className="relative flex-1 bg-white border border-black/5 rounded-3xl shadow-sm p-6 flex flex-col z-10 w-full mt-4">
-                  
-                  {/* Header */}
-                  <div className="flex justify-between items-end mb-8">
-                     <div className="flex flex-col gap-1">
-                        <span className="font-display text-[10px] uppercase tracking-widest text-black/40 font-bold">Alteration Rate</span>
-                        <div className="flex items-center gap-2">
-                           <span className="font-display text-3xl font-medium text-black">1.2%</span>
-                           <div className="flex items-center gap-1 bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded-full border border-emerald-100">
-                              <TrendingDown className="h-3 w-3" />
-                              <span className="font-mono text-[9px] font-bold">84%</span>
-                           </div>
-                        </div>
-                     </div>
-                     <span className="font-mono text-[9px] text-black/30 uppercase tracking-widest">Post-Integration</span>
+              <div className="relative z-10 p-5 sm:p-8 flex flex-col gap-5">
+
+                {/* ── Card header ── */}
+                <div className="flex items-start justify-between">
+                  <div className="flex flex-col gap-1">
+                    <span className="font-display text-[9px] font-bold uppercase tracking-[0.4em] text-black/30">Error Rate by Stage</span>
+                    <div className="flex items-baseline gap-2">
+                      <span className="font-display text-3xl sm:text-4xl font-medium text-black">1.2%</span>
+                      <div className="flex items-center gap-1 bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded-full border border-emerald-100">
+                        <TrendingDown className="h-3 w-3" />
+                        <span className="font-mono text-[9px] font-bold">−93%</span>
+                      </div>
+                    </div>
+                    <span className="font-mono text-[9px] text-black/30 tracking-widest">with Qlozet System</span>
                   </div>
 
-                  {/* Graph Area */}
-                  <div className="flex-1 relative border-l border-b border-black/10 flex items-end">
-                     
-                     {/* Y-Axis labels */}
-                     <div className="absolute -left-6 inset-y-0 flex flex-col justify-between text-[8px] font-mono text-black/30">
-                        <span>15%</span>
-                        <span>10%</span>
-                        <span>5%</span>
-                        <span>0%</span>
-                     </div>
-
-                     {/* The Drop Line (Error Rate going down) */}
-                     <svg className="absolute inset-x-0 bottom-0 w-full h-[80%] overflow-visible">
-                        <defs>
-                           <linearGradient id="gradientLine" x1="0%" y1="0%" x2="100%" y2="0%">
-                              <stop offset="0%" stopColor="#ef4444" />
-                              <stop offset="50%" stopColor="#eab308" />
-                              <stop offset="100%" stopColor="#10b981" />
-                           </linearGradient>
-                           <linearGradient id="fillGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                              <stop offset="0%" stopColor="#10b981" stopOpacity="0.2" />
-                              <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
-                           </linearGradient>
-                        </defs>
-                        
-                        {/* Area Fill */}
-                        <motion.path 
-                           d="M 0,20 Q 50,20 100,100 T 200,180 T 300,220 L 300,300 L 0,300 Z"
-                           fill="url(#fillGradient)"
-                           initial={{ opacity: 0 }}
-                           whileInView={{ opacity: 1 }}
-                           viewport={{ once: true }}
-                           transition={{ duration: 1, delay: 0.5 }}
-                        />
-
-                        {/* Stroke Line */}
-                        <motion.path 
-                           d="M 0,20 Q 50,20 100,100 T 200,180 T 300,220"
-                           fill="none"
-                           stroke="url(#gradientLine)"
-                           strokeWidth="4"
-                           strokeLinecap="round"
-                           initial={{ pathLength: 0 }}
-                           whileInView={{ pathLength: 1 }}
-                           viewport={{ once: true }}
-                           transition={{ duration: 2, ease: "easeOut" }}
-                        />
-                     </svg>
-
-                     {/* Data Point (Current State) */}
-                     <motion.div 
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 2, type: "spring" }}
-                        className="absolute right-[5%] bottom-[12%] h-4 w-4 bg-white border-4 border-emerald-500 rounded-full shadow-lg z-20"
-                     />
+                  {/* Legend */}
+                  <div className="flex flex-col gap-1.5 items-end shrink-0">
+                    <div className="flex items-center gap-1.5">
+                      <div className="h-1.5 w-4 rounded-full" style={{ background: 'linear-gradient(to right, #ef4444, #10b981)' }} />
+                      <span className="font-mono text-[8px] text-black/30">Error Rate</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <div className="h-px w-4 border-t-2 border-dashed border-black/20" />
+                      <span className="font-mono text-[8px] text-black/30">Trend</span>
+                    </div>
                   </div>
+                </div>
 
-                  {/* X-Axis labels */}
-                  <div className="flex justify-between mt-4 text-[8px] font-mono text-black/30">
-                     <span>Manual</span>
-                     <span>Transition</span>
-                     <span className="text-emerald-600 font-bold">Qlozet System</span>
-                  </div>
+                {/* ── Chart ── */}
+                <div className="rounded-2xl bg-white border border-black/[0.04] shadow-sm px-3 sm:px-5 pt-4 pb-2">
+                  <ErrorReductionChart />
+                </div>
 
-               </div>
-               
-            </div>
+                {/* ── Bottom stat pills ── */}
+                <div className="grid grid-cols-3 gap-2 sm:gap-3">
+                  {[
+                    { label: "Manual Error", value: "18.4%", color: "bg-red-50 text-red-600 border-red-100" },
+                    { label: "Reduction", value: "−93%", color: "bg-emerald-50 text-emerald-600 border-emerald-100" },
+                    { label: "Qlozet Rate", value: "1.2%", color: "bg-emerald-50 text-emerald-700 border-emerald-100" },
+                  ].map((pill) => (
+                    <div key={pill.label} className={`flex flex-col items-center gap-0.5 rounded-xl border px-2 py-2 sm:px-3 sm:py-2.5 ${pill.color}`}>
+                      <span className="font-mono text-[8px] uppercase tracking-widest opacity-60">{pill.label}</span>
+                      <span className="font-display text-sm sm:text-base font-bold">{pill.value}</span>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            </motion.div>
           </div>
+
         </div>
       </div>
     </section>
