@@ -1,7 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Repeat, ShieldCheck, TrendingUp } from "lucide-react";
+import { motion, useInView } from "framer-motion";
+import { Repeat, ShieldCheck, TrendingUp, CheckCircle2, RefreshCw } from "lucide-react";
+import { useRef } from "react";
 
 type SectionData = {
   id: string;
@@ -15,15 +16,34 @@ type ConsistencySectionProps = {
   data: SectionData;
 };
 
+// ─── Consistency data ─────────────────────────────────────────────────────────
+const orders = [
+  { id: "ORD-4421", date: "Jan 2026", item: "Wool Blazer",    status: "Delivered" },
+  { id: "ORD-5882", date: "Feb 2026", item: "Linen Shirt",    status: "Delivered" },
+  { id: "ORD-6193", date: "Mar 2026", item: "Slim Trousers",  status: "In Production" },
+];
+
+// Measurements that stay consistent across all orders
+const measurements = [
+  { key: "Chest",   val: "94.2 cm" },
+  { key: "Waist",   val: "78.5 cm" },
+  { key: "Sleeve",  val: "65.0 cm" },
+  { key: "Inseam",  val: "80.2 cm" },
+];
+
 export function ConsistencySection({ data }: ConsistencySectionProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-60px" });
+
   return (
     <section id={data.id} className="relative z-10 bg-[#050505] py-16 lg:py-48 overflow-hidden text-white" data-theme="dark">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-32">
+
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
-              <motion.span 
+              <motion.span
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -31,8 +51,8 @@ export function ConsistencySection({ data }: ConsistencySectionProps) {
               >
                 {data.badge}
               </motion.span>
-              
-              <motion.h2 
+
+              <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -40,8 +60,8 @@ export function ConsistencySection({ data }: ConsistencySectionProps) {
               >
                 {data.title}
               </motion.h2>
-              
-              <motion.p 
+
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -56,9 +76,8 @@ export function ConsistencySection({ data }: ConsistencySectionProps) {
               {data.features.map((feature, i) => {
                 const icons = [Repeat, ShieldCheck, TrendingUp];
                 const Icon = icons[i % icons.length];
-                
                 return (
-                  <motion.div 
+                  <motion.div
                     key={i}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -76,104 +95,147 @@ export function ConsistencySection({ data }: ConsistencySectionProps) {
             </div>
           </div>
 
-          {/* Right: Sync & Consistency Visual */}
-          <div className="relative mt-12 lg:mt-0 lg:w-1/2">
-            <div className="relative mx-auto h-[450px] sm:h-[500px] lg:h-[600px] w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-zinc-900 border border-white/5 shadow-2xl overflow-hidden flex items-center justify-center">
-               
-               {/* Animated Node Graph Background */}
-               <div className="absolute inset-0 opacity-10 flex items-center justify-center">
-                  <motion.div 
-                     animate={{ rotate: 360 }}
-                     transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-                     className="w-[150%] h-[150%] border-[2px] border-dashed border-white/20 rounded-full"
-                  />
-                  <motion.div 
-                     animate={{ rotate: -360 }}
-                     transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-                     className="absolute w-[100%] h-[100%] border-[1px] border-white/10 rounded-full"
-                  />
-               </div>
+          {/* Right: Consistency Illustration */}
+          <div className="relative lg:mt-0 lg:w-1/2">
+            <motion.div
+              ref={ref}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="relative mx-auto w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-zinc-900 border border-white/5 shadow-2xl overflow-hidden"
+            >
+              {/* Background dot grid */}
+              <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "20px 20px" }} />
+              {/* Radial glow */}
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(16,185,129,0.07)_0%,transparent_65%)]" />
 
-               {/* Sync UI Elements */}
-               <div className="relative w-full h-full p-6 sm:p-10 flex flex-col justify-center items-center gap-12 z-10">
-                  
-                  {/* Central Database Icon */}
-                  <motion.div 
-                     initial={{ scale: 0 }}
-                     whileInView={{ scale: 1 }}
-                     viewport={{ once: true }}
-                     transition={{ type: "spring", bounce: 0.5 }}
-                     className="relative z-20 h-24 w-24 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center shadow-[0_0_50px_rgba(16,185,129,0.2)] backdrop-blur-md"
-                  >
-                     <ShieldCheck className="h-10 w-10 text-emerald-400" strokeWidth={1.5} />
-                     <div className="absolute -bottom-8 whitespace-nowrap bg-black text-white px-3 py-1 rounded-full border border-white/10 font-mono text-[9px] uppercase tracking-widest shadow-xl">
-                        Master Profile
-                     </div>
-                  </motion.div>
+              <div className="relative z-10 p-5 sm:p-8 flex flex-col gap-5">
 
-                  {/* Connected Order Nodes */}
-                  <div className="absolute inset-x-8 top-1/2 -translate-y-1/2 flex justify-between pointer-events-none">
-                     
-                     {/* Left Node (Order 1) */}
-                     <motion.div 
-                        initial={{ x: 50, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
-                        className="relative bg-zinc-800 border border-white/10 p-3 rounded-2xl shadow-2xl flex flex-col items-center gap-2 backdrop-blur-md"
-                     >
-                        <span className="font-mono text-[8px] text-zinc-400 uppercase tracking-widest">Order 01</span>
-                        <div className="bg-black px-2 py-1 rounded border border-white/5 font-mono text-[10px] text-emerald-400">SYNCED</div>
-                     </motion.div>
+                {/* ── Header ── */}
+                <div className="flex items-center justify-between gap-3">
+                  <div className="flex flex-col gap-0.5">
+                    <span className="font-mono text-[9px] uppercase tracking-widest text-white/30">Consistency Engine</span>
+                    <span className="font-display text-base sm:text-lg font-medium text-white leading-none">Profile Lock™</span>
+                  </div>
+                  <div className="flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1.5 shrink-0">
+                    <RefreshCw className="h-3 w-3 text-emerald-400" />
+                    <span className="font-mono text-[8px] font-bold text-emerald-400 uppercase tracking-widest">Auto-Synced</span>
+                  </div>
+                </div>
 
-                     {/* Right Node (Order 2) */}
-                     <motion.div 
-                        initial={{ x: -50, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.5 }}
-                        className="relative bg-zinc-800 border border-white/10 p-3 rounded-2xl shadow-2xl flex flex-col items-center gap-2 backdrop-blur-md"
-                     >
-                        <span className="font-mono text-[8px] text-zinc-400 uppercase tracking-widest">Order 02</span>
-                        <div className="bg-black px-2 py-1 rounded border border-white/5 font-mono text-[10px] text-emerald-400">SYNCED</div>
-                     </motion.div>
-
+                {/* ── Master measurement source ── */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.96 }}
+                  animate={inView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ delay: 0.2, duration: 0.5 }}
+                  className="rounded-2xl border border-emerald-500/20 bg-emerald-500/8 p-4"
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-500/15 border border-emerald-500/25">
+                        <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" />
+                      </div>
+                      <span className="font-display text-[10px] font-bold uppercase tracking-widest text-emerald-400">Master Profile · CUST-8820</span>
+                    </div>
+                    <div className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   </div>
 
-                  {/* Connection Beams (Animated SVG Lines) */}
-                  <svg className="absolute inset-0 w-full h-full pointer-events-none z-10" style={{ filter: 'drop-shadow(0 0 8px rgba(16,185,129,0.5))' }}>
-                     <motion.path 
-                        d="M 80,300 L 220,300"
-                        stroke="#10b981"
-                        strokeWidth="2"
-                        strokeDasharray="5 5"
-                        initial={{ pathLength: 0 }}
-                        whileInView={{ pathLength: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 0.4 }}
-                     />
-                     <motion.path 
-                        d="M 380,300 L 280,300"
-                        stroke="#10b981"
-                        strokeWidth="2"
-                        strokeDasharray="5 5"
-                        initial={{ pathLength: 0 }}
-                        whileInView={{ pathLength: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 0.6 }}
-                     />
-                     
-                     {/* Data packets flowing */}
-                     <motion.circle cx="80" cy="300" r="3" fill="#fff" animate={{ cx: [80, 220] }} transition={{ duration: 1.5, repeat: Infinity, ease: "linear", delay: 1 }} />
-                     <motion.circle cx="380" cy="300" r="3" fill="#fff" animate={{ cx: [380, 280] }} transition={{ duration: 1.5, repeat: Infinity, ease: "linear", delay: 1.5 }} />
-                  </svg>
+                  {/* Measurement values grid */}
+                  <div className="grid grid-cols-4 gap-2">
+                    {measurements.map((m, i) => (
+                      <motion.div
+                        key={m.key}
+                        initial={{ opacity: 0, y: 6 }}
+                        animate={inView ? { opacity: 1, y: 0 } : {}}
+                        transition={{ delay: 0.35 + i * 0.08 }}
+                        className="flex flex-col gap-1 rounded-xl bg-black/30 border border-white/5 p-2.5 text-center"
+                      >
+                        <span className="font-mono text-[7px] sm:text-[8px] uppercase tracking-widest text-white/30">{m.key}</span>
+                        <span className="font-display text-[11px] sm:text-xs font-bold text-emerald-300 leading-none tabular-nums">{m.val}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
 
-               </div>
+                {/* ── "Applied to" label with connector ── */}
+                <div className="flex items-center gap-3">
+                  <div className="h-px flex-1 bg-white/5" />
+                  <div className="flex items-center gap-1.5 shrink-0">
+                    <Repeat className="h-3 w-3 text-white/25" />
+                    <span className="font-mono text-[8px] uppercase tracking-widest text-white/25">Applied consistently to</span>
+                  </div>
+                  <div className="h-px flex-1 bg-white/5" />
+                </div>
 
-               {/* Overlay Vignette */}
-               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent pointer-events-none" />
-            </div>
+                {/* ── Order rows ── */}
+                <div className="flex flex-col gap-2.5">
+                  {orders.map((order, i) => (
+                    <motion.div
+                      key={order.id}
+                      initial={{ opacity: 0, x: 16 }}
+                      animate={inView ? { opacity: 1, x: 0 } : {}}
+                      transition={{ delay: 0.5 + i * 0.15, duration: 0.45 }}
+                      className="rounded-2xl border border-white/6 bg-white/[0.03] p-3.5 sm:p-4"
+                    >
+                      <div className="flex items-center justify-between gap-3 mb-3">
+                        <div className="flex flex-col gap-0.5 min-w-0">
+                          <span className="font-display text-sm font-bold text-white leading-none">{order.item}</span>
+                          <span className="font-mono text-[8px] text-white/30 uppercase tracking-widest">{order.id} · {order.date}</span>
+                        </div>
+                        <span className={`shrink-0 font-mono text-[8px] uppercase tracking-widest px-2 py-1 rounded-full border
+                          ${order.status === "Delivered"
+                            ? "border-emerald-500/25 bg-emerald-500/10 text-emerald-400"
+                            : "border-amber-500/25 bg-amber-500/10 text-amber-400"
+                          }`}
+                        >
+                          {order.status}
+                        </span>
+                      </div>
+
+                      {/* Measurement echoes — same values, with a check mark */}
+                      <div className="grid grid-cols-4 gap-1.5">
+                        {measurements.map((m, j) => (
+                          <motion.div
+                            key={m.key}
+                            initial={{ opacity: 0 }}
+                            animate={inView ? { opacity: 1 } : {}}
+                            transition={{ delay: 0.65 + i * 0.15 + j * 0.05 }}
+                            className="flex flex-col gap-1 rounded-lg bg-white/[0.04] border border-white/5 p-2 text-center"
+                          >
+                            <span className="font-mono text-[6px] sm:text-[7px] uppercase tracking-widest text-white/25">{m.key}</span>
+                            <span className="font-display text-[10px] sm:text-[11px] font-bold text-white/60 leading-none tabular-nums">{m.val}</span>
+                          </motion.div>
+                        ))}
+                      </div>
+
+                      {/* Match confirmation */}
+                      <div className="flex items-center gap-1.5 mt-2.5">
+                        <CheckCircle2 className="h-3 w-3 text-emerald-500" />
+                        <span className="font-mono text-[8px] text-emerald-500/70">Measurements matched from master profile</span>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* ── Footer ── */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={inView ? { opacity: 1 } : {}}
+                  transition={{ delay: 1.2 }}
+                  className="flex items-center justify-between rounded-2xl border border-white/5 bg-white/[0.02] px-4 py-3"
+                >
+                  <span className="font-mono text-[8px] text-white/25 uppercase tracking-widest">Zero measurement re-entry</span>
+                  <div className="flex items-center gap-1.5">
+                    <span className="font-mono text-[8px] text-emerald-400 font-bold">100% Match Rate</span>
+                    <ShieldCheck className="h-3 w-3 text-emerald-400" />
+                  </div>
+                </motion.div>
+
+              </div>
+            </motion.div>
           </div>
+
         </div>
       </div>
     </section>
