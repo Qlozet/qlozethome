@@ -19,7 +19,7 @@ export function ConsistencySection({ data }: ConsistencySectionProps) {
   return (
     <section id={data.id} className="relative z-10 bg-[#050505] py-16 lg:py-48 overflow-hidden text-white" data-theme="dark">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-32">
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">

@@ -19,7 +19,7 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
   return (
     <section id={data.id} className="relative z-10 bg-white py-16 lg:py-48 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-32">
+        <div className="flex flex-col gap-12 lg:flex-row-reverse lg:items-center lg:gap-32">
           {/* Right/Top: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
@@ -77,7 +77,7 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
 
           {/* Left/Bottom: Analytics/Error Reduction Chart */}
           <div className="relative mt-12 lg:mt-0 lg:w-1/2">
-            <div className="relative mx-auto h-[450px] sm:h-[500px] lg:h-[600px] w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-zinc-50 border border-black/5 shadow-2xl p-6 lg:p-10 flex flex-col pt-12 overflow-hidden">
+            <div className="relative mx-auto h-[400px] sm:h-[500px] lg:h-[600px] w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-zinc-50 border border-black/5 shadow-2xl p-4 sm:p-6 lg:p-10 flex flex-col pt-10 sm:pt-12 overflow-hidden">
                
                {/* Background Grid */}
                <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px)', backgroundSize: '40px 40px' }} />

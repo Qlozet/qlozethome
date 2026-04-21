@@ -19,7 +19,7 @@ export function HistorySection({ data }: HistorySectionProps) {
   return (
     <section id={data.id} className="relative z-10 bg-zinc-50 py-16 lg:py-48 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-32">
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
@@ -78,7 +78,7 @@ export function HistorySection({ data }: HistorySectionProps) {
 
           {/* Right: History Timeline Visual */}
           <div className="relative mt-12 lg:mt-0 lg:w-1/2">
-            <div className="relative mx-auto h-[450px] sm:h-[500px] lg:h-[600px] w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-white shadow-2xl p-6 sm:p-10 flex border border-black/5 overflow-hidden">
+            <div className="relative mx-auto min-h-[380px] sm:h-[500px] lg:h-[600px] w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-white shadow-2xl p-6 sm:p-10 flex border border-black/5 overflow-hidden">
                
                {/* Animated Timeline Line */}
                <div className="absolute left-10 sm:left-14 top-10 bottom-10 w-px bg-black/10">

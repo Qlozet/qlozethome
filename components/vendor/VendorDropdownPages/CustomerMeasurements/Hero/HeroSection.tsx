@@ -40,7 +40,7 @@ export function HeroSection({ data }: HeroSectionProps) {
         transition={{ duration: 0.8 }}
         className="relative z-10 mx-auto w-full max-w-[94rem] px-6"
       >
-        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-20">
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-20">
           {/* Left Column: Text */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6 ">
@@ -97,7 +97,7 @@ export function HeroSection({ data }: HeroSectionProps) {
           {/* Right Column: Visual Component */}
           <motion.div
             style={{ y, opacity }}
-            className="relative mt-20 lg:mt-0 lg:w-1/2"
+            className="relative lg:mt-0 lg:w-1/2"
           >
             <div className="relative aspect-square w-full max-w-lg mx-auto">
                <motion.div 
@@ -137,7 +137,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.8, type: "spring" }}
-                  className="absolute -right-8 top-1/4 bg-zinc-900 border border-white/10 px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3"
+                  className="absolute top-1/4 right-0 sm:-right-8 bg-zinc-900 border border-white/10 px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3"
                >
                   <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
                   <div className="flex flex-col">
@@ -150,7 +150,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1, type: "spring" }}
-                  className="absolute -left-4 bottom-1/4 bg-zinc-900 border border-white/10 px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3"
+                  className="absolute bottom-1/4 left-0 sm:-left-4 bg-zinc-900 border border-white/10 px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3"
                >
                   <div className="flex flex-col text-right">
                      <span className="font-mono text-[8px] text-zinc-400 tracking-widest uppercase">Format</span>

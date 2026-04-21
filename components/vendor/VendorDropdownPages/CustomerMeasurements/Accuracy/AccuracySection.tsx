@@ -19,7 +19,7 @@ export function AccuracySection({ data }: AccuracySectionProps) {
   return (
     <section id={data.id} className="relative z-10 bg-white py-16 lg:py-48 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-32">
+        <div className="flex flex-col gap-12 lg:flex-row-reverse lg:items-center lg:gap-32">
           {/* Right: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
@@ -78,7 +78,7 @@ export function AccuracySection({ data }: AccuracySectionProps) {
 
           {/* Left: Interactive Scan Visual */}
           <div className="relative mt-12 lg:mt-0 lg:w-1/2">
-            <div className="relative mx-auto h-[550px] lg:h-[650px] w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-zinc-950 shadow-2xl overflow-hidden flex flex-col pt-8 sm:pt-12 items-center">
+            <div className="relative mx-auto h-[420px] sm:h-[550px] lg:h-[650px] w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-zinc-950 shadow-2xl overflow-hidden flex flex-col pt-8 sm:pt-12 items-center">
                
                {/* Grid Background */}
                <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
@@ -128,7 +128,7 @@ export function AccuracySection({ data }: AccuracySectionProps) {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.5 + (i * 0.2) }}
-                        className="absolute right-[-60px] flex items-center gap-2"
+                        className="absolute right-0 sm:right-[-60px] flex items-center gap-2"
                         style={{ top: node.y }}
                      >
                         <div className="w-12 h-px bg-emerald-500/50 relative">

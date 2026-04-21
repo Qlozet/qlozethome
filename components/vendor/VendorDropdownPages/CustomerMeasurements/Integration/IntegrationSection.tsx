@@ -19,7 +19,7 @@ export function IntegrationSection({ data }: IntegrationSectionProps) {
   return (
     <section id={data.id} className="relative z-10 bg-[#050505] py-16 lg:py-48 overflow-hidden text-white" data-theme="dark">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-32">
+        <div className="flex flex-col gap-12 lg:flex-row-reverse lg:items-center lg:gap-32">
           {/* Right/Top: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
@@ -77,7 +77,7 @@ export function IntegrationSection({ data }: IntegrationSectionProps) {
 
           {/* Left/Bottom: Integration Network Visual */}
           <div className="relative mt-12 lg:mt-0 lg:w-1/2">
-            <div className="relative mx-auto h-[450px] sm:h-[500px] lg:h-[600px] w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-zinc-900 border border-white/5 shadow-2xl overflow-hidden flex flex-col justify-center items-center">
+            <div className="relative mx-auto h-[420px] sm:h-[500px] lg:h-[600px] w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-zinc-900 border border-white/5 shadow-2xl overflow-hidden flex flex-col justify-center items-center">
                
                {/* Radial Grid Background */}
                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-800 to-zinc-950 opacity-80" />
@@ -113,7 +113,7 @@ export function IntegrationSection({ data }: IntegrationSectionProps) {
                      viewport={{ once: true }}
                      transition={{ delay: satellite.delay, duration: 1 }}
                      className="absolute top-1/2 left-1/2 z-30"
-                     style={{ transform: `translate(-50%, -50%) rotate(${satellite.rotation}deg) translateY(-150px) rotate(-${satellite.rotation}deg)` }}
+                     style={{ transform: `translate(-50%, -50%) rotate(${satellite.rotation}deg) translateY(-110px) rotate(-${satellite.rotation}deg)` }}
                   >
                      <div className="flex flex-col items-center gap-2 group cursor-default">
                         <div className="w-12 h-12 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:border-emerald-400 group-hover:bg-emerald-500/10 transition-all">

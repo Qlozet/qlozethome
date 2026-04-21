@@ -19,7 +19,7 @@ export function SpecsSection({ data }: SpecsSectionProps) {
   return (
     <section id={data.id} className="relative z-10 bg-zinc-50 py-16 lg:py-48 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-32">
+        <div className="flex flex-col gap-12 lg:flex-row-reverse lg:items-center lg:gap-32">
           {/* Right/Top: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
@@ -77,7 +77,7 @@ export function SpecsSection({ data }: SpecsSectionProps) {
 
           {/* Left/Bottom: Spec Sheet Visual */}
           <div className="relative mt-12 lg:mt-0 lg:w-1/2">
-            <div className="relative mx-auto h-[500px] sm:h-[550px] lg:h-[650px] w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-white border border-black/5 shadow-2xl overflow-hidden p-6 sm:p-10 flex flex-col pt-12 group">
+            <div className="relative mx-auto min-h-[480px] sm:h-[550px] lg:h-[650px] w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-white border border-black/5 shadow-2xl overflow-hidden p-5 sm:p-6 lg:p-10 flex flex-col pt-10 sm:pt-12 group">
                
                {/* Background Header Pattern */}
                <div className="absolute top-0 inset-x-0 h-32 bg-zinc-900 border-b border-black/10 flex items-center px-8 z-0">
