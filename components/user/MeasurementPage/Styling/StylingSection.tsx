@@ -24,7 +24,7 @@ export function StylingSection({ data }: StylingSectionProps) {
   return (
     <section className="relative w-full bg-zinc-50 py-24 lg:py-40" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col gap-12 lg:gap-20">
+        <div className="flex flex-col gap-20">
           {/* Header Content */}
           <div className="flex flex-col gap-8 text-center items-center mx-auto max-w-3xl">
             <motion.span
@@ -56,7 +56,7 @@ export function StylingSection({ data }: StylingSectionProps) {
           </div>
 
           {/* Feature Grid with Outfit Card Visualization */}
-          <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
              {data.options.map((option, index) => {
                const Icon = iconMap[option.title] || Sparkles;
                return (
@@ -66,22 +66,22 @@ export function StylingSection({ data }: StylingSectionProps) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + index * 0.1 }}
-                  className="group relative flex flex-col gap-8 sm:gap-10 rounded-[2rem] sm:rounded-[3rem] border border-black/5 bg-white p-6 sm:p-12 transition-all hover:scale-[1.03] hover:shadow-2xl shadow-black/5 overflow-hidden"
+                  className="group relative flex flex-col gap-10 rounded-[3rem] border border-black/5 bg-white p-12 transition-all hover:scale-[1.03] hover:shadow-2xl shadow-black/5 overflow-hidden"
                 >
-                  <div className="flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-zinc-50 border border-zinc-100 transition-transform duration-500 group-hover:scale-110">
-                    <Icon className="h-7 w-7 sm:h-8 sm:w-8 text-black opacity-40" strokeWidth={1.5} />
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-zinc-50 border border-zinc-100 transition-transform duration-500 group-hover:scale-110">
+                    <Icon className="h-8 w-8 text-black opacity-40" strokeWidth={1.5} />
                   </div>
-                  <div className="flex flex-col gap-3 sm:gap-4">
-                    <h3 className="font-display text-xl sm:text-2xl font-medium tracking-tight text-black group-hover:text-black transition-colors">
+                  <div className="flex flex-col gap-4">
+                    <h3 className="font-display text-2xl font-medium tracking-tight text-black group-hover:text-black transition-colors">
                       {option.title}
                     </h3>
-                    <p className="font-ui text-base sm:text-lg leading-relaxed text-black/40">
+                    <p className="font-ui text-lg leading-relaxed text-black/40">
                       {option.description}
                     </p>
                   </div>
-
+                  
                   {/* Digital Suggestion Tag */}
-                  <div className="absolute top-6 right-6 sm:top-8 sm:right-8 flex items-center gap-2 px-3 py-1 bg-black text-white rounded-full opacity-0 translate-y-4 transition-all group-hover:opacity-100 group-hover:translate-y-0">
+                  <div className="absolute top-8 right-8 flex items-center gap-2 px-3 py-1 bg-black text-white rounded-full opacity-0 translate-y-4 transition-all group-hover:opacity-100 group-hover:translate-y-0">
                     <div className="h-1 w-1 rounded-full bg-[#00F0FF] animate-pulse" />
                     <span className="font-display text-[8px] font-bold uppercase tracking-widest">AI Match: 99%</span>
                   </div>

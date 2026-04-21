@@ -67,9 +67,9 @@ export function CompareSection({ data }: CompareSectionProps) {
         </div>
 
         {/* Digital Twin Splitter */}
-        <motion.div variants={itemVariants} className="mb-14 sm:mb-32 grid gap-6 sm:gap-8 lg:grid-cols-2">
+        <motion.div variants={itemVariants} className="mb-32 grid gap-8 lg:grid-cols-2">
           {/* Left: Standard Method (Dimmed) */}
-          <div className="relative flex flex-col gap-6 sm:gap-8 rounded-[2rem] sm:rounded-[3rem] border border-white/5 bg-white/[0.02] p-6 sm:p-14 opacity-60 transition-opacity duration-500 hover:opacity-100">
+          <div className="relative flex flex-col gap-8 rounded-[3rem] border border-white/5 bg-white/[0.02] p-10 opacity-60 transition-opacity duration-500 hover:opacity-100 sm:p-14">
             <h3 className="font-display text-3xl font-medium tracking-tight text-white/50">{oldMethod.method}</h3>
             
             <div className="flex flex-col gap-8">
@@ -105,7 +105,7 @@ export function CompareSection({ data }: CompareSectionProps) {
           </div>
 
           {/* Right: Digital Twin (Glowing) */}
-          <div className="relative flex flex-col gap-6 sm:gap-8 rounded-[2rem] sm:rounded-[3rem] border border-[#00F0FF]/30 bg-black p-6 sm:p-14 shadow-[0_0_60px_rgba(0,240,255,0.1)]">
+          <div className="relative flex flex-col gap-8 rounded-[3rem] border border-[#00F0FF]/30 bg-black p-10 shadow-[0_0_60px_rgba(0,240,255,0.1)] sm:p-14">
             <div className="absolute left-0 top-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#00F0FF] to-transparent" />
             <h3 className="font-display text-3xl font-medium tracking-tight text-white">{newMethod.method}</h3>
             
