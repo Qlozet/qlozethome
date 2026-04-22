@@ -115,7 +115,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                      <span className="font-display text-[9px] font-bold text-white uppercase tracking-widest">AI Preview</span>
-                     <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                     <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
                         <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest">Generated</span>
                      </div>
                   </div>

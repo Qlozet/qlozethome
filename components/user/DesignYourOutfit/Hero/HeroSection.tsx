@@ -134,7 +134,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 1.2 }}
-                    className="absolute top-5 left-5 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full border border-black/5 shadow-md flex items-center gap-2 transition-transform duration-300 group-hover:scale-105"
+                    className="absolute top-5 left-5 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-black/5 shadow-md flex items-center gap-2 transition-transform duration-300 group-hover:scale-105"
                   >
                     <Sparkles className="h-3 w-3 text-black" />
                     <span className="font-display text-[8px] font-bold text-black uppercase tracking-widest">AI Generated</span>
