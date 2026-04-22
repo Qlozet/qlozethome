@@ -47,7 +47,7 @@ export default function Home() {
         <VendorWorksSection data={vendorWorksData} />
 
         {/* Ecosystem & Community */}
-        <PartnersSection data={partnersData} dark={true} />
+        <PartnersSection data={partnersData} dark={false} />
         <FAQSection data={faqData} />
         <EarlyAccessSection data={earlyAccessData} />
       </main>
