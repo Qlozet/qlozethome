@@ -27,12 +27,13 @@ export function PartnersSection({ data, dark = false }: PartnersSectionProps) {
   };
 
   return (
-    <section id={data.id} className={`scroll-mt-32 py-24 sm:py-32 ${dark ? 'bg-[#3A3A3A]' : 'bg-zinc-50'}`} data-theme={dark ? "dark" : "light"}>
+    <section id={data.id} className={`scroll-mt-32 py-24 sm:py-32 overflow-hidden ${dark ? 'bg-[#3A3A3A]' : 'bg-zinc-50'}`} data-theme={dark ? "dark" : "light"}>
+      {/* Heading — constrained */}
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="mx-auto flex w-full max-w-[94rem] flex-col gap-16 px-4 sm:px-6"
+        className="mx-auto w-full max-w-[94rem] px-4 sm:px-6 mb-16"
       >
         <motion.h2
           variants={fadeUpVariants}
@@ -40,27 +41,36 @@ export function PartnersSection({ data, dark = false }: PartnersSectionProps) {
         >
           {data.title}
         </motion.h2>
-        <motion.div
-          variants={fadeUpVariants}
-          className="relative w-full overflow-hidden"
-        >
-          <div className="flex animate-scroll gap-12">
-            {duplicatedBrands.map((brand, index) => (
-              <div
-                key={`${brand.src}-${index}`}
-                className={`flex h-16 w-[180px] shrink-0 items-center justify-center grayscale transition hover:grayscale-0 ${dark ? 'invert mix-blend-screen hover:invert-0 hover:mix-blend-normal' : ''}`}
-              >
-                <Image
-                  src={brand.src}
-                  alt={brand.label}
-                  width={180}
-                  height={64}
-                  className="h-auto max-h-16 w-auto max-w-full object-contain"
-                />
-              </div>
-            ))}
-          </div>
-        </motion.div>
+      </motion.div>
+
+      {/* Scroll strip — full width, edge to edge */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="relative w-full"
+      >
+        {/* Fade masks */}
+        <div className={`pointer-events-none absolute inset-y-0 left-0 z-10 w-24 sm:w-40 bg-gradient-to-r ${dark ? 'from-[#3A3A3A]' : 'from-zinc-50'} to-transparent`} />
+        <div className={`pointer-events-none absolute inset-y-0 right-0 z-10 w-24 sm:w-40 bg-gradient-to-l ${dark ? 'from-[#3A3A3A]' : 'from-zinc-50'} to-transparent`} />
+
+        <div className="flex animate-scroll gap-12 w-max">
+          {duplicatedBrands.map((brand, index) => (
+            <div
+              key={`${brand.src}-${index}`}
+              className={`flex h-16 w-[180px] shrink-0 items-center justify-center grayscale transition hover:grayscale-0 ${dark ? 'invert mix-blend-screen hover:invert-0 hover:mix-blend-normal' : ''}`}
+            >
+              <Image
+                src={brand.src}
+                alt={brand.label}
+                width={180}
+                height={64}
+                className="h-auto max-h-16 w-auto max-w-full object-contain"
+              />
+            </div>
+          ))}
+        </div>
       </motion.div>
       <style jsx>{`
         @keyframes scroll {
