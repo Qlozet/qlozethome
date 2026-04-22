@@ -27,7 +27,7 @@ export function PartnersSection({ data, dark = false }: PartnersSectionProps) {
   };
 
   return (
-    <section id={data.id} className={`scroll-mt-32 py-24 sm:py-32 ${dark ? 'bg-[#3A3A3A]' : 'bg-white'}`} data-theme={dark ? "dark" : "light"}>
+    <section id={data.id} className={`scroll-mt-32 py-24 sm:py-32 ${dark ? 'bg-[#3A3A3A]' : 'bg-zinc-50'}`} data-theme={dark ? "dark" : "light"}>
       <motion.div
         initial="hidden"
         whileInView="visible"
