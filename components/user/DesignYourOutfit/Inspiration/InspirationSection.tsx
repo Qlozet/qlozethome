@@ -42,7 +42,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                      <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black">Design Input</span>
                   </div>
                   <div className="bg-white px-3 py-1.5 rounded-full border border-black/5 shadow-sm">
-                     <span className="font-mono text-[8px] font-bold text-black/60 uppercase tracking-widest">Step 1 of 4</span>
+                     <span className="font-mono text-[8px] font-bold text-black/60 uppercase tracking-widest leading-none">Step 1 of 4</span>
                   </div>
                </div>
 
@@ -116,7 +116,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                   <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                      <span className="font-display text-[9px] font-bold text-white uppercase tracking-widest">AI Preview</span>
                      <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                        <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest">Generated</span>
+                        <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest leading-none">Generated</span>
                      </div>
                   </div>
                </motion.div>

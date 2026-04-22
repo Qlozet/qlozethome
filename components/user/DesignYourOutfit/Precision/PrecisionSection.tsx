@@ -68,7 +68,7 @@ export function PrecisionSection({ data }: PrecisionSectionProps) {
                   {/* Floating measurement callouts */}
                   <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.5 }}
                      className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-black/5 shadow-sm">
-                     <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest">Precision Mode</span>
+                     <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest leading-none">Precision Mode</span>
                   </motion.div>
                </div>
 

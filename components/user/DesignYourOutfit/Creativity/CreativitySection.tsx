@@ -65,7 +65,7 @@ export function CreativitySection({ data }: CreativitySectionProps) {
                     {/* Fusion Label */}
                     <div className="absolute top-6 left-6">
                       <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-black/5 shadow-sm">
-                        <span className="font-display text-[8px] font-bold text-black uppercase tracking-widest">{fusion.label}</span>
+                        <span className="font-display text-[8px] font-bold text-black uppercase tracking-widest leading-none">{fusion.label}</span>
                       </div>
                     </div>
 

@@ -137,7 +137,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                     className="absolute top-5 left-5 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-black/5 shadow-md flex items-center gap-2 transition-transform duration-300 group-hover:scale-105"
                   >
                     <Sparkles className="h-3 w-3 text-black" />
-                    <span className="font-display text-[8px] font-bold text-black uppercase tracking-widest">AI Generated</span>
+                    <span className="font-display text-[8px] font-bold text-black uppercase tracking-widest leading-none">AI Generated</span>
                   </motion.div>
                   
                   {/* Bottom overlay info */}
@@ -147,7 +147,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                       <span className="font-mono text-[8px] text-white/60">Generated in 8 seconds</span>
                     </div>
                     <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                      <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest">View</span>
+                      <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest leading-none">View</span>
                     </div>
                   </div>
                 </div>

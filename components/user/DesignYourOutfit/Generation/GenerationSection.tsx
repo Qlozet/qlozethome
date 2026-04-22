@@ -76,7 +76,7 @@ export function GenerationSection({ data }: GenerationSectionProps) {
                   </div>
                   <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full border shadow-sm ${generating ? 'bg-amber-500/10 border-amber-500/20' : 'bg-emerald-500/10 border-emerald-500/20'}`}>
                      <div className={`h-2 w-2 rounded-full animate-pulse ${generating ? 'bg-amber-500' : 'bg-emerald-500'}`} />
-                     <span className={`font-mono text-[8px] font-bold uppercase tracking-widest ${generating ? 'text-amber-400' : 'text-emerald-400'}`}>
+                     <span className={`font-mono text-[8px] font-bold uppercase tracking-widest leading-none ${generating ? 'text-amber-400' : 'text-emerald-400'}`}>
                         {generating ? 'Generating...' : 'Complete'}
                      </span>
                   </div>
@@ -106,7 +106,7 @@ export function GenerationSection({ data }: GenerationSectionProps) {
                            <span className="font-mono text-[8px] text-white/60">AI Confidence: {VARIATIONS[activeVar].confidence}</span>
                         </div>
                         <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                           <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest">Select</span>
+                           <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest leading-none">Select</span>
                         </div>
                      </div>
                   </motion.div>
