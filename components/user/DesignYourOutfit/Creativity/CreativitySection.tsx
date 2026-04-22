@@ -83,7 +83,7 @@ export function CreativitySection({ data }: CreativitySectionProps) {
                     {/* Bottom Info */}
                     <div className="absolute bottom-6 left-6 right-6">
                       <div className="flex items-center gap-4 mb-3">
-                        <div className="h-10 w-10 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                        <div className="h-10 w-10 shrink-0 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
                           <Icon className="h-5 w-5 text-white" />
                         </div>
                         <h3 className="font-display text-lg font-bold text-white tracking-tight">{feature?.title || fusion.label}</h3>
