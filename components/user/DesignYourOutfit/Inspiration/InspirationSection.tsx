@@ -138,7 +138,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                 const Icon = iconMap[feature.icon] || MessageSquareText;
                 return (
                   <motion.div key={feature.title} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 + index * 0.1 }} className="flex items-center gap-6 group">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-50 border border-black/5 transition-all group-hover:bg-black group-hover:text-white shadow-sm">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-zinc-50 border border-black/5 transition-all group-hover:bg-black group-hover:text-white shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
                     <span className="font-display text-lg font-medium text-black/80">{feature.title}</span>
