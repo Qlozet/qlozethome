@@ -97,7 +97,7 @@ export function DetailsSection({ data }: DetailsSectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-6 group"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-50 border border-black/5 group-hover:bg-black group-hover:text-white transition-all shadow-sm">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-zinc-50 border border-black/5 group-hover:bg-black group-hover:text-white transition-all shadow-sm">
                     <Eye className="h-4 w-4" strokeWidth={1.5} />
                   </div>
                   <span className="font-display text-lg font-medium text-black/80">{feature}</span>
@@ -162,7 +162,7 @@ export function DetailsSection({ data }: DetailsSectionProps) {
                />
 
                <div className="absolute bottom-8 left-8 flex items-center gap-3 z-30 pointer-events-none">
-                  <div className="h-10 w-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
+                  <div className="h-10 w-10 shrink-0 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
                      <span className="font-mono text-[10px] text-emerald-400">40X</span>
                   </div>
                   <div className="flex flex-col">
