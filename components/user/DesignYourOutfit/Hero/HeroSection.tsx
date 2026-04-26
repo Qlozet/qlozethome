@@ -51,7 +51,7 @@ export function HeroSection({ data }: HeroSectionProps) {
 
       <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10 mx-auto w-full max-w-[94rem] px-6">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-16">
-          
+
           {/* Left: Text Content */}
           <div className="flex flex-col gap-10 lg:w-1/2 lg:pt-8">
             <div className="flex flex-col gap-8">
@@ -116,7 +116,7 @@ export function HeroSection({ data }: HeroSectionProps) {
           {/* Right: Editorial Image Collage */}
           <div className="relative mt-16 lg:mt-0 lg:w-1/2 flex items-center justify-center">
             <div className="relative w-full max-w-[560px] h-[600px] lg:h-[700px]">
-              
+
               {/* Main Hero Image */}
               <motion.div
                 style={{ y: y1 }}
@@ -126,9 +126,9 @@ export function HeroSection({ data }: HeroSectionProps) {
                 className="absolute inset-x-0 top-0 z-10 group cursor-pointer"
               >
                 <div className="relative aspect-[3/4] w-[75%] mx-auto rounded-[3rem] overflow-hidden shadow-2xl shadow-black/15 border border-black/5 transition-all duration-700 group-hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.3)] group-hover:scale-[1.02] group-hover:rotate-0">
-                  <Image src="/image/custom-outfit-2.png" alt="AI Generated Outfit" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" priority />
+                  <Image src="/image/blue-bespoke-2.png" alt="AI Generated Outfit" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" priority />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                  
+
                   {/* Floating badge */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -139,7 +139,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                     <Sparkles className="h-3 w-3 text-black" />
                     <span className="font-display text-[8px] font-bold text-black uppercase tracking-widest leading-none">AI Generated</span>
                   </motion.div>
-                  
+
                   {/* Bottom overlay info */}
                   <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between opacity-0 translate-y-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
                     <div className="flex flex-col gap-1">
@@ -162,9 +162,9 @@ export function HeroSection({ data }: HeroSectionProps) {
                 className="absolute left-0 bottom-16 z-20 w-[42%] group cursor-pointer"
               >
                 <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl shadow-black/15 border border-black/5 transition-all duration-700 group-hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.3)] group-hover:scale-105 group-hover:rotate-0">
-                  <Image src="/image/bespoke-dress-1.png" alt="Bespoke Design" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                  <Image src="/image/custom-outfit-0.png" alt="Bespoke Design" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-                  
+
                   <div className="absolute bottom-4 left-4 right-4 opacity-0 translate-y-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
                     <span className="font-display text-[8px] font-bold text-white uppercase tracking-widest">Silk Evening Gown</span>
                   </div>
