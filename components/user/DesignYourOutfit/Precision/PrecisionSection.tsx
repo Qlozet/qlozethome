@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Scissors, Palette, SlidersHorizontal } from "lucide-react";
 import { useState } from "react";
 
@@ -16,16 +16,45 @@ type PrecisionData = {
 type PrecisionSectionProps = { data: PrecisionData };
 
 const CONTROLS = [
-  { label: "Neckline", value: "V-Neck", options: ["Round", "V-Neck", "Square"] },
-  { label: "Sleeve Length", value: "3/4", options: ["Short", "3/4", "Full"] },
-  { label: "Embroidery", value: "Gold Thread", options: ["None", "Silver", "Gold Thread"] },
-  { label: "Fit", value: "Tailored", options: ["Loose", "Regular", "Tailored"] }
+  { label: "Neckline",      value: "V-Neck",     options: ["Round", "V-Neck", "Square"] },
+  { label: "Sleeve Length", value: "3/4",         options: ["Short", "3/4", "Full"] },
+  { label: "Embroidery",    value: "Gold Thread", options: ["None", "Silver", "Gold Thread"] },
+  { label: "Fit",           value: "Tailored",    options: ["Loose", "Regular", "Tailored"] },
 ];
+
+/**
+ * Image map keyed by "Neckline-SleeveLength".
+ * We have 9 combos (3×3) mapped to the 9 brown kaftan variants.
+ * Embroidery & Fit subtly shift within the same image family.
+ */
+const IMAGE_MAP: Record<string, string> = {
+  // Round neckline
+  "Round-Short":  "/image/bespoke-kaftan-brown-1.png",
+  "Round-3/4":    "/image/bespoke-kaftan-brown-2.png",
+  "Round-Full":   "/image/bespoke-kaftan-brown-3.png",
+  // V-Neck
+  "V-Neck-Short": "/image/bespoke-kaftan-brown-4.png",
+  "V-Neck-3/4":   "/image/bespoke-kaftan-brown-5.png",
+  "V-Neck-Full":  "/image/bespoke-kaftan-brown-6.png",
+  // Square neckline
+  "Square-Short": "/image/bespoke-kaftan-brown-7.png",
+  "Square-3/4":   "/image/bespoke-kaftan-brown-8.png",
+  "Square-Full":  "/image/bespoke-kaftan-milk-1.png",
+};
+
+function getImage(controls: Record<string, number>): string {
+  const neckline = CONTROLS[0].options[controls["Neckline"] ?? 1];
+  const sleeve   = CONTROLS[1].options[controls["Sleeve Length"] ?? 1];
+  return IMAGE_MAP[`${neckline}-${sleeve}`] ?? "/image/bespoke-kaftan-brown-4.png";
+}
 
 export function PrecisionSection({ data }: PrecisionSectionProps) {
   const [activeControls, setActiveControls] = useState(
     CONTROLS.reduce((acc, c) => ({ ...acc, [c.label]: c.options.indexOf(c.value) }), {} as Record<string, number>)
   );
+
+  const currentImage = getImage(activeControls);
+  const imageKey = `${activeControls["Neckline"]}-${activeControls["Sleeve Length"]}`;
 
   return (
     <section className="relative w-full bg-white py-14 lg:py-48" data-theme="light">
@@ -59,44 +88,55 @@ export function PrecisionSection({ data }: PrecisionSectionProps) {
           {/* Left: Design Control Panel */}
           <div className="relative mt-8 lg:mt-0 lg:w-1/2">
             <div className="relative mx-auto w-full max-w-[520px] rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
-               
-               {/* Product Preview */}
-               <div className="relative aspect-[4/3] overflow-hidden">
-                  <img src="/image/custom-outfit-3.webp" alt="Design Preview" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-50 via-transparent to-transparent" />
-                  
-                  {/* Floating measurement callouts */}
-                  <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.5 }}
-                     className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-black/5 shadow-sm">
-                     <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest leading-none">Precision Mode</span>
-                  </motion.div>
-               </div>
 
-               {/* Controls */}
-               <div className="p-6 sm:p-8 flex flex-col gap-4">
-                  <span className="font-mono text-[8px] font-bold text-zinc-400 uppercase tracking-widest">Design Controls</span>
-                  
-                  {CONTROLS.map((ctrl, i) => (
-                     <motion.div key={ctrl.label} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 + i * 0.08 }}
-                        className="flex items-center gap-4"
-                     >
-                        <span className="font-display text-[10px] font-bold text-black uppercase tracking-wider w-24 shrink-0">{ctrl.label}</span>
-                        <div className="flex-1 flex gap-1.5">
-                           {ctrl.options.map((opt, j) => (
-                              <motion.button
-                                 key={opt}
-                                 onClick={() => setActiveControls(prev => ({ ...prev, [ctrl.label]: j }))}
-                                 whileHover={{ scale: 1.05 }}
-                                 whileTap={{ scale: 0.95 }}
-                                 className={`flex-1 py-2 rounded-lg font-mono text-[8px] font-bold uppercase tracking-widest transition-all ${activeControls[ctrl.label] === j ? 'bg-black text-white shadow-md' : 'bg-white text-black/40 border border-black/5 hover:border-black/15'}`}
-                              >
-                                 {opt}
-                              </motion.button>
-                           ))}
-                        </div>
-                     </motion.div>
-                  ))}
-               </div>
+              {/* Product Preview — cross-fades on option change */}
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={imageKey}
+                    src={currentImage}
+                    alt="Design Preview"
+                    initial={{ opacity: 0, scale: 1.04 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.97 }}
+                    transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                    className="w-full h-full object-cover absolute inset-0"
+                  />
+                </AnimatePresence>
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-50 via-transparent to-transparent" />
+
+                {/* Badge */}
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.5 }}
+                  className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-black/5 shadow-sm">
+                  <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest leading-none">Precision Mode</span>
+                </motion.div>
+              </div>
+
+              {/* Controls */}
+              <div className="p-6 sm:p-8 flex flex-col gap-4">
+                <span className="font-mono text-[8px] font-bold text-zinc-400 uppercase tracking-widest">Design Controls</span>
+
+                {CONTROLS.map((ctrl, i) => (
+                  <motion.div key={ctrl.label} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 + i * 0.08 }}
+                    className="flex items-center gap-4"
+                  >
+                    <span className="font-display text-[10px] font-bold text-black uppercase tracking-wider w-24 shrink-0">{ctrl.label}</span>
+                    <div className="flex-1 flex gap-1.5">
+                      {ctrl.options.map((opt, j) => (
+                        <motion.button
+                          key={opt}
+                          onClick={() => setActiveControls(prev => ({ ...prev, [ctrl.label]: j }))}
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className={`flex-1 py-2 rounded-lg font-mono text-[8px] font-bold uppercase tracking-widest transition-all ${activeControls[ctrl.label] === j ? 'bg-black text-white shadow-md' : 'bg-white text-black/40 border border-black/5 hover:border-black/15'}`}
+                        >
+                          {opt}
+                        </motion.button>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -104,3 +144,4 @@ export function PrecisionSection({ data }: PrecisionSectionProps) {
     </section>
   );
 }
+

@@ -16,9 +16,9 @@ type RefinementData = {
 type RefinementSectionProps = { data: RefinementData };
 
 const ITERATIONS = [
-  { version: "v1.0", image: "/image/custom-outfit-1.png", changes: "Initial concept" },
-  { version: "v1.1", image: "/image/custom-outfit-2.png", changes: "Adjusted neckline, gold embroidery added" },
-  { version: "v2.0", image: "/image/custom-outfit-4.webp", changes: "Final — sleeve length refined, fit perfected" }
+  { version: "v1.0", image: "/image/bespoke-kaftan-pattern.png", changes: "Initial concept" },
+  { version: "v1.1", image: "/image/bespoke-kaftan-brown-8.png", changes: "Adjusted neckline, gold embroidery added" },
+  { version: "v2.0", image: "/image/bespoke-kaftan-blue-1.png", changes: "Final — sleeve length refined, fit perfected" }
 ];
 
 export function RefinementSection({ data }: RefinementSectionProps) {
@@ -31,62 +31,62 @@ export function RefinementSection({ data }: RefinementSectionProps) {
           {/* Left: Iteration Console */}
           <div className="relative mt-8 order-2 lg:order-1 lg:mt-0 lg:w-1/2">
             <div className="relative mx-auto w-full max-w-[520px] rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-6 sm:p-8 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
-               
-               {/* Header */}
-               <div className="flex items-center justify-between pb-5 border-b border-black/5 mb-6">
-                  <div className="flex items-center gap-3">
-                     <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-black text-white">
-                        <RefreshCcw className="h-3.5 w-3.5" />
-                     </div>
-                     <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black">Design History</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                     <motion.button onClick={() => setActiveVersion(v => Math.max(0, v - 1))} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
-                        className="h-8 w-8 rounded-lg bg-white border border-black/5 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
-                        <Undo2 className="h-3 w-3 text-black/40" />
-                     </motion.button>
-                     <motion.button onClick={() => setActiveVersion(v => Math.min(ITERATIONS.length - 1, v + 1))} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
-                        className="h-8 w-8 rounded-lg bg-white border border-black/5 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
-                        <Redo2 className="h-3 w-3 text-black/40" />
-                     </motion.button>
-                  </div>
-               </div>
 
-               {/* Active Version Preview */}
-               <AnimatePresence mode="wait">
-                  <motion.div
-                     key={activeVersion}
-                     initial={{ opacity: 0, x: 20 }}
-                     animate={{ opacity: 1, x: 0 }}
-                     exit={{ opacity: 0, x: -20 }}
-                     transition={{ duration: 0.3 }}
-                     className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-black/5 shadow-md mb-5 group cursor-pointer"
+              {/* Header */}
+              <div className="flex items-center justify-between pb-5 border-b border-black/5 mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-black text-white">
+                    <RefreshCcw className="h-3.5 w-3.5" />
+                  </div>
+                  <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black">Design History</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <motion.button onClick={() => setActiveVersion(v => Math.max(0, v - 1))} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
+                    className="h-8 w-8 rounded-lg bg-white border border-black/5 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                    <Undo2 className="h-3 w-3 text-black/40" />
+                  </motion.button>
+                  <motion.button onClick={() => setActiveVersion(v => Math.min(ITERATIONS.length - 1, v + 1))} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
+                    className="h-8 w-8 rounded-lg bg-white border border-black/5 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                    <Redo2 className="h-3 w-3 text-black/40" />
+                  </motion.button>
+                </div>
+              </div>
+
+              {/* Active Version Preview */}
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeVersion}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-black/5 shadow-md mb-5 group cursor-pointer"
+                >
+                  <img src={ITERATIONS[activeVersion].image} alt={ITERATIONS[activeVersion].version} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-black/5 shadow-sm">
+                    <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest leading-none">{ITERATIONS[activeVersion].version}</span>
+                  </div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <span className="font-ui text-[10px] text-white/80">{ITERATIONS[activeVersion].changes}</span>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Version Timeline */}
+              <div className="flex gap-2">
+                {ITERATIONS.map((iter, i) => (
+                  <motion.button
+                    key={i}
+                    onClick={() => setActiveVersion(i)}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`flex-1 py-2.5 rounded-xl font-mono text-[8px] font-bold uppercase tracking-widest transition-all ${i === activeVersion ? 'bg-black text-white shadow-lg' : 'bg-white text-black/40 border border-black/5 hover:border-black/15'}`}
                   >
-                     <img src={ITERATIONS[activeVersion].image} alt={ITERATIONS[activeVersion].version} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                     <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-black/5 shadow-sm">
-                        <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest leading-none">{ITERATIONS[activeVersion].version}</span>
-                     </div>
-                     <div className="absolute bottom-4 left-4 right-4">
-                        <span className="font-ui text-[10px] text-white/80">{ITERATIONS[activeVersion].changes}</span>
-                     </div>
-                  </motion.div>
-               </AnimatePresence>
-
-               {/* Version Timeline */}
-               <div className="flex gap-2">
-                  {ITERATIONS.map((iter, i) => (
-                     <motion.button
-                        key={i}
-                        onClick={() => setActiveVersion(i)}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className={`flex-1 py-2.5 rounded-xl font-mono text-[8px] font-bold uppercase tracking-widest transition-all ${i === activeVersion ? 'bg-black text-white shadow-lg' : 'bg-white text-black/40 border border-black/5 hover:border-black/15'}`}
-                     >
-                        {iter.version}
-                     </motion.button>
-                  ))}
-               </div>
+                    {iter.version}
+                  </motion.button>
+                ))}
+              </div>
             </div>
           </div>
 

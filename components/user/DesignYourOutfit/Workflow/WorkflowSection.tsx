@@ -12,9 +12,9 @@ type WorkflowSectionProps = { data: WorkflowData };
 
 const STEP_IMAGES = [
   "/image/fabric-swatch-2.jpg",
-  "/image/custom-outfit-2.png",
-  "/image/custom-outfit-4.webp",
-  "/image/bespoke-dress-1.png"
+  "/image/blue-bespoke-2.png",
+  "/image/orange-bespoke-1.png",
+  "/image/custom-outfit-4.webp"
 ];
 
 export function WorkflowSection({ data }: WorkflowSectionProps) {
@@ -52,12 +52,12 @@ export function WorkflowSection({ data }: WorkflowSectionProps) {
                     className={`flex items-center gap-5 p-5 rounded-2xl cursor-pointer transition-all duration-300 ${isActive ? 'bg-black text-white shadow-2xl scale-[1.02]' : 'bg-white text-black border border-black/5 shadow-sm hover:shadow-md hover:scale-[1.01]'}`}
                   >
                     <div className={`h-12 w-12 rounded-xl flex items-center justify-center shrink-0 transition-all ${isActive ? 'bg-white/10' : 'bg-zinc-50 border border-black/5'}`}>
-                       <Icon className={`h-5 w-5 ${isActive ? 'text-white' : 'text-black/40'}`} />
+                      <Icon className={`h-5 w-5 ${isActive ? 'text-white' : 'text-black/40'}`} />
                     </div>
                     <div className="flex-1 flex flex-col gap-1">
-                       <span className={`font-mono text-[8px] font-bold uppercase tracking-widest ${isActive ? 'text-white/40' : 'text-black/30'}`}>Phase 0{i + 1}</span>
-                       <span className={`font-display text-sm font-bold uppercase tracking-wider ${isActive ? 'text-white' : 'text-black'}`}>{step.title}</span>
-                       <span className={`font-ui text-[10px] leading-relaxed ${isActive ? 'text-white/60' : 'text-black/40'}`}>{step.description}</span>
+                      <span className={`font-mono text-[8px] font-bold uppercase tracking-widest ${isActive ? 'text-white/40' : 'text-black/30'}`}>Phase 0{i + 1}</span>
+                      <span className={`font-display text-sm font-bold uppercase tracking-wider ${isActive ? 'text-white' : 'text-black'}`}>{step.title}</span>
+                      <span className={`font-ui text-[10px] leading-relaxed ${isActive ? 'text-white/60' : 'text-black/40'}`}>{step.description}</span>
                     </div>
                     {isActive && <ArrowRight className="h-4 w-4 text-white/40 shrink-0" />}
                   </motion.div>
@@ -76,14 +76,14 @@ export function WorkflowSection({ data }: WorkflowSectionProps) {
               >
                 <img src={STEP_IMAGES[activeStep]} alt={data.steps[activeStep].title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                
+
                 <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-black/5 shadow-sm">
-                   <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest leading-none">Phase 0{activeStep + 1}</span>
+                  <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest leading-none">Phase 0{activeStep + 1}</span>
                 </div>
-                
+
                 <div className="absolute bottom-8 left-8 right-8">
-                   <h3 className="font-display text-2xl font-bold text-white tracking-tight mb-2">{data.steps[activeStep].title}</h3>
-                   <p className="font-ui text-sm text-white/60">{data.steps[activeStep].description}</p>
+                  <h3 className="font-display text-2xl font-bold text-white tracking-tight mb-2">{data.steps[activeStep].title}</h3>
+                  <p className="font-ui text-sm text-white/60">{data.steps[activeStep].description}</p>
                 </div>
               </motion.div>
             </div>
