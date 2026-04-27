@@ -100,7 +100,7 @@ export function PrecisionSection({ data }: PrecisionSectionProps) {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.97 }}
                     transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                    className="w-full h-full object-cover absolute inset-0"
+                    className="w-full h-full object-cover object-top absolute inset-0"
                   />
                 </AnimatePresence>
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-50 via-transparent to-transparent" />
