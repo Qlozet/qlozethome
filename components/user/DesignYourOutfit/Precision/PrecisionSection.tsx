@@ -16,42 +16,50 @@ type PrecisionData = {
 type PrecisionSectionProps = { data: PrecisionData };
 
 const CONTROLS = [
-  { label: "Neckline",      value: "V-Neck",     options: ["Round", "V-Neck", "Square"] },
-  { label: "Sleeve Length", value: "3/4",         options: ["Short", "3/4", "Full"] },
+  { label: "Neckline",      value: "Round",   options: ["Round", "Mandarin", "V-Neck"] },
+  { label: "Sleeve Length", value: "Short",   options: ["Sleeveless", "Short", "Full"] },
   { label: "Embroidery",    value: "Gold Thread", options: ["None", "Silver", "Gold Thread"] },
   { label: "Fit",           value: "Tailored",    options: ["Loose", "Regular", "Tailored"] },
 ];
 
 /**
- * Image map keyed by "Neckline-SleeveLength".
- * We have 9 combos (3×3) mapped to the 9 brown kaftan variants.
- * Embroidery & Fit subtly shift within the same image family.
+ * Image map keyed by "Neckline-Sleeve" — confirmed by visual analysis.
+ *   milk-1  = Round    + Short      (round collar with trim, elbow sleeves)
+ *   brown-1 = Mandarin + Sleeveless (band collar, no sleeve)
+ *   brown-2 = Mandarin + Full       (band collar, wrist sleeves)
+ *   brown-3 = Mandarin + Full       (band collar, wrist sleeves, alt embroidery)
+ *   brown-4 = Mandarin + Short      (band collar, elbow sleeves)
+ *   brown-5 = Mandarin + Short      (band collar, elbow sleeves, alt)
+ *   brown-6 = V-Neck   + Full       (V-neck, wrist sleeves, heavy embroidery)
+ *   brown-7 = V-Neck   + Full       (V-neck, wrist sleeves, alt)
+ *   brown-8 = V-Neck   + Short      (V-neck, elbow sleeves)
  */
 const IMAGE_MAP: Record<string, string> = {
-  // Round neckline
-  "Round-Short":  "/image/bespoke-kaftan-brown-1.png",
-  "Round-3/4":    "/image/bespoke-kaftan-brown-2.png",
-  "Round-Full":   "/image/bespoke-kaftan-brown-3.png",
+  // Round collar (milk-1 is the only Round-collar image)
+  "Round-Sleeveless": "/image/bespoke-kaftan-milk-1.png", // closest available
+  "Round-Short":      "/image/bespoke-kaftan-milk-1.png",
+  "Round-Full":       "/image/bespoke-kaftan-milk-1.png", // closest available
+  // Mandarin / Band collar
+  "Mandarin-Sleeveless": "/image/bespoke-kaftan-brown-1.png",
+  "Mandarin-Short":      "/image/bespoke-kaftan-brown-4.png",
+  "Mandarin-Full":       "/image/bespoke-kaftan-brown-2.png",
   // V-Neck
-  "V-Neck-Short": "/image/bespoke-kaftan-brown-4.png",
-  "V-Neck-3/4":   "/image/bespoke-kaftan-brown-5.png",
-  "V-Neck-Full":  "/image/bespoke-kaftan-brown-6.png",
-  // Square neckline
-  "Square-Short": "/image/bespoke-kaftan-brown-7.png",
-  "Square-3/4":   "/image/bespoke-kaftan-brown-8.png",
-  "Square-Full":  "/image/bespoke-kaftan-milk-1.png",
+  "V-Neck-Sleeveless": "/image/bespoke-kaftan-brown-8.png", // closest available
+  "V-Neck-Short":      "/image/bespoke-kaftan-brown-8.png",
+  "V-Neck-Full":       "/image/bespoke-kaftan-brown-6.png",
 };
 
 function getImage(controls: Record<string, number>): string {
-  const neckline = CONTROLS[0].options[controls["Neckline"] ?? 1];
+  const neckline = CONTROLS[0].options[controls["Neckline"] ?? 0];
   const sleeve   = CONTROLS[1].options[controls["Sleeve Length"] ?? 1];
-  return IMAGE_MAP[`${neckline}-${sleeve}`] ?? "/image/bespoke-kaftan-brown-4.png";
+  return IMAGE_MAP[`${neckline}-${sleeve}`] ?? "/image/bespoke-kaftan-milk-1.png";
 }
 
 export function PrecisionSection({ data }: PrecisionSectionProps) {
   const [activeControls, setActiveControls] = useState(
     CONTROLS.reduce((acc, c) => ({ ...acc, [c.label]: c.options.indexOf(c.value) }), {} as Record<string, number>)
   );
+
 
   const currentImage = getImage(activeControls);
   const imageKey = `${activeControls["Neckline"]}-${activeControls["Sleeve Length"]}`;
