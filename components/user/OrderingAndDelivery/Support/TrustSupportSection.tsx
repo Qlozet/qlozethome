@@ -63,7 +63,7 @@ export function TrustSupportSection({ data }: TrustSupportSectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-6 group"
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-zinc-50 border border-black/5 group-hover:bg-black group-hover:text-white transition-all">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#EDEAEA] border border-black/5 group-hover:bg-black group-hover:text-white transition-all">
                     <ShieldCheck className="h-5 w-5" />
                   </div>
                   <span className="font-ui text-lg text-black/70">{feature}</span>
@@ -88,7 +88,7 @@ export function TrustSupportSection({ data }: TrustSupportSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="relative mx-auto w-full max-w-sm rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-8 flex flex-col gap-6 overflow-hidden min-h-[450px] transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2"
+              className="relative mx-auto w-full max-w-sm rounded-[3rem] bg-[#EDEAEA] border border-black/5 shadow-2xl p-8 flex flex-col gap-6 overflow-hidden min-h-[450px] transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2"
             >
               {/* Header */}
               <div className="flex items-center justify-between">
@@ -96,7 +96,7 @@ export function TrustSupportSection({ data }: TrustSupportSectionProps) {
                   <LifeBuoy className="h-6 w-6 text-black/40" />
                   <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black/40">24/7 Concierge</span>
                 </div>
-                <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                <div className="h-2 w-2 rounded-full bg-[#3E1C01] animate-pulse" />
               </div>
 
               {/* Message Bubbles */}
@@ -147,19 +147,19 @@ export function TrustSupportSection({ data }: TrustSupportSectionProps) {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 2.2, type: "spring", stiffness: 200 }}
-                  className="mx-auto flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20"
+                  className="mx-auto flex items-center gap-2 px-4 py-2 rounded-full bg-[#3E1C01]/10 border border-[#3E1C01]/20"
                 >
-                  <CheckCircle2 className="h-3 w-3 text-emerald-500" />
-                  <span className="font-mono text-[8px] font-bold text-emerald-600 uppercase tracking-widest leading-none">Issue Resolved</span>
+                  <CheckCircle2 className="h-3 w-3 text-[#3E1C01]" />
+                  <span className="font-mono text-[8px] font-bold text-[#3E1C01] uppercase tracking-widest leading-none">Issue Resolved</span>
                 </motion.div>
               </div>
 
               {/* Action Buttons */}
               <div className="mt-auto grid grid-cols-2 gap-3 pb-4">
-                <Link href="/waitlist" className="flex h-12 w-full items-center justify-center rounded-2xl bg-white border border-black/5 text-black font-display text-[8px] font-bold uppercase tracking-widest hover:bg-zinc-50 transition-all">
+                <Link href="/waitlist" className="flex h-12 w-full items-center justify-center rounded-2xl bg-white border border-black/5 text-black font-display text-[8px] font-bold uppercase tracking-widest hover:bg-[#EDEAEA] transition-all">
                   Instant Chat
                 </Link>
-                <Link href="/waitlist" className="flex h-12 w-full items-center justify-center rounded-2xl bg-white border border-black/5 text-black font-display text-[8px] font-bold uppercase tracking-widest hover:bg-zinc-50 transition-all">
+                <Link href="/waitlist" className="flex h-12 w-full items-center justify-center rounded-2xl bg-white border border-black/5 text-black font-display text-[8px] font-bold uppercase tracking-widest hover:bg-[#EDEAEA] transition-all">
                   Submit Ticket
                 </Link>
               </div>

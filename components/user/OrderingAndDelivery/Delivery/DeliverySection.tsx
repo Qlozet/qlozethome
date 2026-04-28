@@ -62,7 +62,7 @@ export function DeliverySection({ data }: DeliverySectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-4 group"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-zinc-50 border border-black/5 group-hover:bg-black group-hover:text-white transition-all">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#EDEAEA] border border-black/5 group-hover:bg-black group-hover:text-white transition-all">
                     {i === 0 ? <Clock4 className="h-4 w-4" /> :
                      i === 1 ? <ShieldCheck className="h-4 w-4" /> :
                      <Globe className="h-4 w-4" />}
@@ -109,7 +109,7 @@ export function DeliverySection({ data }: DeliverySectionProps) {
                   <div className="flex flex-col gap-3">
                     <div className="flex justify-between items-center">
                       <span className="font-mono text-[8px] text-white/40 uppercase tracking-widest">Delivery Progress</span>
-                      <span className="font-mono text-[9px] font-bold text-emerald-400">78%</span>
+                      <span className="font-mono text-[9px] font-bold text-[#EDEAEA]">78%</span>
                     </div>
                     <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
                       <motion.div
@@ -117,7 +117,7 @@ export function DeliverySection({ data }: DeliverySectionProps) {
                         whileInView={{ width: "78%" }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.5, duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-                        className="h-full bg-emerald-500 rounded-full"
+                        className="h-full bg-[#3E1C01] rounded-full"
                       />
                     </div>
                   </div>
@@ -138,10 +138,10 @@ export function DeliverySection({ data }: DeliverySectionProps) {
                         transition={{ delay: 0.6 + i * 0.1 }}
                         className="flex-1 flex flex-col items-center gap-2"
                       >
-                        <div className={`h-8 w-8 rounded-lg flex items-center justify-center ${step.done ? 'bg-emerald-500/20' : 'bg-white/5'}`}>
-                          <step.icon className={`h-3.5 w-3.5 ${step.done ? 'text-emerald-400' : 'text-white/20'}`} />
+                        <div className={`h-8 w-8 rounded-lg flex items-center justify-center ${step.done ? 'bg-[#EDEAEA]/20' : 'bg-white/5'}`}>
+                          <step.icon className={`h-3.5 w-3.5 ${step.done ? 'text-[#EDEAEA]' : 'text-white/20'}`} />
                         </div>
-                        <span className={`font-mono text-[6px] font-bold uppercase tracking-widest ${step.done ? 'text-emerald-400' : 'text-white/20'}`}>
+                        <span className={`font-mono text-[6px] font-bold uppercase tracking-widest ${step.done ? 'text-[#EDEAEA]' : 'text-white/20'}`}>
                           {step.label}
                         </span>
                       </motion.div>
@@ -176,7 +176,7 @@ export function DeliverySection({ data }: DeliverySectionProps) {
                 className="absolute -bottom-4 -right-4 h-20 w-20 bg-white rounded-full shadow-2xl border border-black/5 flex items-center justify-center p-4 z-20"
               >
                 <div className="flex flex-col items-center gap-1 text-center">
-                  <ShieldCheck className="h-5 w-5 text-emerald-500" />
+                  <ShieldCheck className="h-5 w-5 text-[#3E1C01]" />
                   <span className="font-display text-[6px] font-bold uppercase tracking-widest leading-tight">Secured</span>
                 </div>
               </motion.div>

@@ -20,7 +20,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="relative rounded-[4rem] bg-zinc-900 px-8 py-20 text-center shadow-2xl lg:px-20 lg:py-32 overflow-hidden">
           {/* Background Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-transparent opacity-50" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#3E1C01]/10 via-transparent to-transparent opacity-50" />
 
           <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-10">
             <motion.div
@@ -29,7 +29,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
               viewport={{ once: true }}
               className="flex items-center gap-3 rounded-full bg-white/5 border border-white/10 px-6 py-2"
             >
-              <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+              <div className="h-2 w-2 rounded-full bg-[#3E1C01] animate-pulse" />
               <span className="font-display text-[10px] font-bold uppercase tracking-[0.3em] text-white/60">Ready to Ship Globally</span>
             </motion.div>
 

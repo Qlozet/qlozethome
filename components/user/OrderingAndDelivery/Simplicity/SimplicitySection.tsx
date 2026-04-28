@@ -20,12 +20,12 @@ const FLOW_NODES = [
   { icon: Sparkles, label: "Design", color: "bg-black" },
   { icon: Package, label: "Produce", color: "bg-zinc-700" },
   { icon: Truck, label: "Transit", color: "bg-zinc-600" },
-  { icon: CheckCircle2, label: "Deliver", color: "bg-emerald-500" },
+  { icon: CheckCircle2, label: "Deliver", color: "bg-[#3E1C01]" },
 ];
 
 export function SimplicitySection({ data }: SimplicitySectionProps) {
   return (
-    <section id="simplicity" className="relative w-full bg-zinc-50 py-24 lg:py-40 overflow-hidden" data-theme="light">
+    <section id="simplicity" className="relative w-full bg-[#EDEAEA] py-24 lg:py-40 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-32">
           {/* Left: Content */}

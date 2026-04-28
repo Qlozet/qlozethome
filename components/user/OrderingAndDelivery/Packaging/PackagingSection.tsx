@@ -19,7 +19,7 @@ type PackagingSectionProps = {
 
 export function PackagingSection({ data }: PackagingSectionProps) {
   return (
-    <section id="packaging" className="relative w-full bg-zinc-50 py-24 lg:py-40" data-theme="light">
+    <section id="packaging" className="relative w-full bg-[#EDEAEA] py-24 lg:py-40" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-32">
           {/* Left: Content */}
@@ -115,7 +115,7 @@ export function PackagingSection({ data }: PackagingSectionProps) {
                 whileHover={{ rotate: -2, scale: 1.05 }}
                 className="relative aspect-square w-full rounded-[2.5rem] bg-zinc-900 shadow-2xl p-8 flex flex-col items-center justify-center text-center gap-4"
               >
-                <Star className="h-8 w-8 text-amber-400 fill-amber-400" />
+                <Star className="h-8 w-8 text-[#3E1C01] fill-[#3E1C01]" />
                 <span className="font-display text-[8px] font-bold uppercase tracking-[0.2em] text-white/40">Verified Quality</span>
                 <div className="h-1 w-12 bg-white/10 rounded-full" />
               </motion.div>

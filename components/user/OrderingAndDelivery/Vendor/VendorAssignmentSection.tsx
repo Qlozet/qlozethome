@@ -69,7 +69,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
   const vendor = VENDORS[selectedVendor];
 
   return (
-    <section id="vendor" className="relative w-full bg-zinc-50 py-24 lg:py-40 overflow-hidden" data-theme="light">
+    <section id="vendor" className="relative w-full bg-[#EDEAEA] py-24 lg:py-40 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6 relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
           {/* Right: Content */}
@@ -152,9 +152,9 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                     </div>
                     <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black">Vendor Match</span>
                   </div>
-                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-                    <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="font-mono text-[8px] font-bold text-emerald-600 uppercase tracking-widest leading-none">AI Matching</span>
+                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#3E1C01]/10 border border-[#3E1C01]/20">
+                    <div className="h-1.5 w-1.5 rounded-full bg-[#3E1C01] animate-pulse" />
+                    <span className="font-mono text-[8px] font-bold text-[#3E1C01] uppercase tracking-widest leading-none">AI Matching</span>
                   </div>
                 </div>
 
@@ -171,7 +171,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                         className={`relative flex items-center gap-4 p-4 rounded-2xl cursor-pointer transition-all duration-300 ${
                           isSelected
                             ? "bg-black text-white shadow-xl"
-                            : "bg-zinc-50 text-black border border-black/5 hover:bg-zinc-100"
+                            : "bg-[#EDEAEA] text-black border border-black/5 hover:bg-zinc-100"
                         }`}
                       >
                         {/* Avatar */}
@@ -185,14 +185,14 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2">
                             <span className="font-display text-sm font-bold truncate">{v.name}</span>
-                            {i === 0 && <Zap className={`h-3 w-3 shrink-0 ${isSelected ? "text-emerald-400 fill-emerald-400" : "text-emerald-500 fill-emerald-500"}`} />}
+                            {i === 0 && <Zap className={`h-3 w-3 shrink-0 ${isSelected ? "text-[#EDEAEA] fill-[#EDEAEA]" : "text-[#3E1C01] fill-[#3E1C01]"}`} />}
                           </div>
                           <span className={`font-ui text-[10px] ${isSelected ? "text-white/50" : "text-black/40"}`}>{v.specialty}</span>
                         </div>
 
                         {/* Match Score */}
                         <div className="flex flex-col items-end shrink-0">
-                          <span className={`font-mono text-lg font-bold ${isSelected ? "text-emerald-400" : "text-emerald-600"}`}>{v.match}%</span>
+                          <span className={`font-mono text-lg font-bold ${isSelected ? "text-[#EDEAEA]" : "text-[#3E1C01]"}`}>{v.match}%</span>
                           <span className={`font-mono text-[7px] uppercase tracking-widest ${isSelected ? "text-white/30" : "text-black/30"}`}>Match</span>
                         </div>
 
@@ -200,7 +200,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                         {isSelected && (
                           <motion.div
                             layoutId="vendorCheck"
-                            className="absolute -right-1 -top-1 h-6 w-6 rounded-full bg-emerald-500 flex items-center justify-center border-2 border-white shadow-lg"
+                            className="absolute -right-1 -top-1 h-6 w-6 rounded-full bg-[#3E1C01] flex items-center justify-center border-2 border-white shadow-lg"
                           >
                             <Check className="h-3 w-3 text-white" />
                           </motion.div>
@@ -220,7 +220,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                     transition={{ duration: 0.3 }}
                     className="px-6 sm:px-8 pb-6 sm:pb-8"
                   >
-                    <div className="p-5 rounded-2xl bg-zinc-50 border border-black/5 flex flex-col gap-4">
+                    <div className="p-5 rounded-2xl bg-[#EDEAEA] border border-black/5 flex flex-col gap-4">
                       {/* Skills */}
                       <div className="flex flex-wrap gap-1.5">
                         {vendor.skills.map((skill) => (
@@ -233,7 +233,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                       {/* Stats Row */}
                       <div className="flex items-center gap-6">
                         <div className="flex items-center gap-1.5">
-                          <Star className="h-3 w-3 text-amber-400 fill-amber-400" />
+                          <Star className="h-3 w-3 text-[#3E1C01] fill-[#3E1C01]" />
                           <span className="font-display text-xs font-bold text-black">{vendor.rating}</span>
                         </div>
                         <div className="h-3 w-px bg-black/10" />
@@ -254,7 +254,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                 whileInView={{ scale: 1, rotate: -6 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
-                className="absolute -top-3 -left-3 z-20 px-5 py-3 bg-emerald-500 text-white rounded-2xl shadow-2xl font-display text-[10px] font-bold uppercase tracking-widest border-4 border-white"
+                className="absolute -top-3 -left-3 z-20 px-5 py-3 bg-[#3E1C01] text-white rounded-2xl shadow-2xl font-display text-[10px] font-bold uppercase tracking-widest border-4 border-white"
               >
                 Best Match
               </motion.div>

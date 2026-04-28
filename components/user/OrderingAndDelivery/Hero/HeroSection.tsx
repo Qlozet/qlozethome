@@ -118,7 +118,7 @@ export function HeroSection({ data }: HeroSectionProps) {
               className="relative mx-auto w-full max-w-lg"
             >
               {/* Main Journey Card */}
-              <div className="rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-8 sm:p-10 overflow-hidden">
+              <div className="rounded-[3rem] bg-[#EDEAEA] border border-black/5 shadow-2xl p-8 sm:p-10 overflow-hidden">
                 {/* Header */}
                 <div className="flex items-center justify-between pb-6 border-b border-black/5 mb-8">
                   <div className="flex items-center gap-3">
@@ -130,9 +130,9 @@ export function HeroSection({ data }: HeroSectionProps) {
                       <span className="font-mono text-[8px] text-black/30 uppercase tracking-widest">QL-294-ZX</span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-                    <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="font-mono text-[8px] font-bold text-emerald-600 uppercase tracking-widest leading-none">Live</span>
+                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#3E1C01]/10 border border-[#3E1C01]/20">
+                    <div className="h-1.5 w-1.5 rounded-full bg-[#3E1C01] animate-pulse" />
+                    <span className="font-mono text-[8px] font-bold text-[#3E1C01] uppercase tracking-widest leading-none">Live</span>
                   </div>
                 </div>
 
@@ -156,7 +156,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                   <div className="absolute top-5 left-5 right-5 h-0.5 bg-black/5 z-0" />
                   {/* Progress Line (filled) */}
                   <motion.div
-                    className="absolute top-5 left-5 h-0.5 bg-emerald-500 z-0"
+                    className="absolute top-5 left-5 h-0.5 bg-[#3E1C01] z-0"
                     animate={{ width: `${(activeStep / 3) * (100 - 10)}%` }}
                     transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                   />
@@ -170,7 +170,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                         <motion.div
                           animate={{
                             scale: isActive ? 1.15 : 1,
-                            backgroundColor: isComplete ? "#10b981" : isActive ? "#000" : "#f4f4f5",
+                            backgroundColor: isComplete ? "#3E1C01" : isActive ? "#000" : "#EDEAEA",
                           }}
                           transition={{ duration: 0.4 }}
                           className="h-10 w-10 rounded-full flex items-center justify-center border-2 border-white shadow-md"
@@ -181,7 +181,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                             <Icon className={`h-4 w-4 ${isActive ? "text-white" : "text-black/30"}`} />
                           )}
                         </motion.div>
-                        <span className={`font-mono text-[7px] font-bold uppercase tracking-widest ${isActive ? "text-black" : isComplete ? "text-emerald-600" : "text-black/25"}`}>
+                        <span className={`font-mono text-[7px] font-bold uppercase tracking-widest ${isActive ? "text-black" : isComplete ? "text-[#3E1C01]" : "text-black/25"}`}>
                           {step.label}
                         </span>
                       </div>

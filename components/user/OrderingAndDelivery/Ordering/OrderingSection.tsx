@@ -62,7 +62,7 @@ export function OrderingSection({ data }: OrderingSectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-4 group"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-zinc-50 border border-black/5 group-hover:bg-black group-hover:text-white transition-all">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#EDEAEA] border border-black/5 group-hover:bg-black group-hover:text-white transition-all">
                     <Check className="h-4 w-4" />
                   </div>
                   <span className="font-ui text-lg text-black/70">{feature}</span>
@@ -87,7 +87,7 @@ export function OrderingSection({ data }: OrderingSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="relative mx-auto w-full max-w-md rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-8 flex flex-col gap-6 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2"
+              className="relative mx-auto w-full max-w-md rounded-[3rem] bg-[#EDEAEA] border border-black/5 shadow-2xl p-8 flex flex-col gap-6 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2"
             >
               {/* Checkout Header */}
               <div className="flex items-center justify-between pb-6 border-b border-black/5">
@@ -95,9 +95,9 @@ export function OrderingSection({ data }: OrderingSectionProps) {
                   <ShoppingBag className="h-5 w-5 text-black/40" />
                   <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black/40">Bag / 01 Item</span>
                 </div>
-                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-                  <ShieldCheck className="h-3.5 w-3.5 text-emerald-500" />
-                  <span className="font-mono text-[7px] font-bold uppercase tracking-widest text-emerald-600 leading-none">Secured</span>
+                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-[#3E1C01]/10 border border-[#3E1C01]/20">
+                  <ShieldCheck className="h-3.5 w-3.5 text-[#3E1C01]" />
+                  <span className="font-mono text-[7px] font-bold uppercase tracking-widest text-[#3E1C01] leading-none">Secured</span>
                 </div>
               </div>
 
@@ -128,9 +128,9 @@ export function OrderingSection({ data }: OrderingSectionProps) {
                 transition={{ delay: 0.4 }}
                 className="flex items-center gap-3 p-4 rounded-2xl bg-white border border-black/5"
               >
-                <Sparkles className="h-4 w-4 text-emerald-500" />
+                <Sparkles className="h-4 w-4 text-[#3E1C01]" />
                 <span className="font-ui text-[10px] text-black/60">Express Delivery</span>
-                <span className="ml-auto font-display text-[10px] font-bold text-emerald-600 uppercase tracking-widest">FREE</span>
+                <span className="ml-auto font-display text-[10px] font-bold text-[#3E1C01] uppercase tracking-widest">FREE</span>
               </motion.div>
 
               {/* Pricing Summary */}
@@ -147,7 +147,7 @@ export function OrderingSection({ data }: OrderingSectionProps) {
                 </div>
                 <div className="flex justify-between font-ui text-[10px] uppercase tracking-widest text-black/40">
                   <span>Logistics & Transit</span>
-                  <span className="text-emerald-500 font-bold">FREE</span>
+                  <span className="text-[#3E1C01] font-bold">FREE</span>
                 </div>
                 <div className="flex justify-between font-display text-lg font-bold text-black pt-2">
                   <span>Total Amount</span>
