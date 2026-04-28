@@ -31,15 +31,13 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-24">
           {/* Left Side: Illustration / Image */}
           <div className="relative order-2 lg:order-1 lg:w-1/2">
-            <div className="relative aspect-square w-full max-w-lg mx-auto rounded-[5rem] bg-zinc-50 border border-black/5 shadow-2xl p-6 group">
-              <div className="relative h-full w-full rounded-[4rem] overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000">
-                <Image
-                  src={"/image/bespoke-outfit-2.png"}
-                  alt={data.image.alt}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+            <div className="relative aspect-square w-full max-w-lg mx-auto rounded-[5rem] bg-zinc-50 border border-black/5 shadow-2xl overflow-hidden group">
+              <Image
+                src={"/image/bespoke-outfit-2.png"}
+                alt={data.image.alt}
+                fill
+                className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+              />
 
               {/* Technical Annotation */}
               <motion.div
