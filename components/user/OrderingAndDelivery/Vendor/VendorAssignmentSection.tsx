@@ -69,7 +69,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
   const vendor = VENDORS[selectedVendor];
 
   return (
-    <section id="vendor" className="relative w-full bg-[#EDEAEA] py-24 lg:py-40 overflow-hidden" data-theme="light">
+    <section id="vendor" className="relative w-full bg-zinc-50 py-24 lg:py-40 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6 relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
           {/* Right: Content */}

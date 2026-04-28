@@ -19,7 +19,7 @@ type PackagingSectionProps = {
 
 export function PackagingSection({ data }: PackagingSectionProps) {
   return (
-    <section id="packaging" className="relative w-full bg-[#EDEAEA] py-24 lg:py-40" data-theme="light">
+    <section id="packaging" className="relative w-full bg-zinc-50 py-24 lg:py-40" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-32">
           {/* Left: Content */}
