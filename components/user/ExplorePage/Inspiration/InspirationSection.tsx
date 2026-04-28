@@ -30,9 +30,9 @@ export function InspirationSection({ data }: InspirationSectionProps) {
   const col2 = [LOOKBOOK_ITEMS[1], LOOKBOOK_ITEMS[3], LOOKBOOK_ITEMS[5]];
 
   return (
-    <section id={data.id} className="relative z-10 bg-white py-32 lg:py-48" data-theme="light">
+    <section id={data.id} className="relative z-10 bg-white py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
+        <div className="flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-24">
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
@@ -92,7 +92,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
           </div>
 
           {/* Right: Community Lookbook Masonry */}
-          <div className="relative mt-20 lg:mt-0 lg:w-1/2">
+          <div className="relative mt-10 lg:mt-0 lg:w-1/2">
              <div className="relative mx-auto w-full max-w-[500px] rounded-[3rem] bg-zinc-50 border border-[#3A3A3A]/5 shadow-2xl p-5 sm:p-6 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
                 
                 {/* Header */}

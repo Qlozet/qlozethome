@@ -27,9 +27,9 @@ type CatalogueSectionProps = {
 
 export function CatalogueSection({ data }: CatalogueSectionProps) {
   return (
-    <section id={data.id} className="relative z-10 bg-white py-32 lg:py-48" data-theme="light">
+    <section id={data.id} className="relative z-10 bg-white py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-32">
+        <div className="flex flex-col lg:flex-row-reverse lg:items-center gap-10 lg:gap-24">
           {/* Right: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
@@ -89,7 +89,7 @@ export function CatalogueSection({ data }: CatalogueSectionProps) {
           </div>
 
           {/* Left: Visual Product Grid */}
-          <div className="relative mt-20 lg:mt-0 lg:w-1/2">
+          <div className="relative mt-10 lg:mt-0 lg:w-1/2">
              <div className="relative mx-auto w-full max-w-[500px] rounded-[3rem] bg-zinc-50 border border-[#3A3A3A]/5 shadow-2xl p-6 sm:p-8 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
                 
                 {/* Filter Header */}

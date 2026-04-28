@@ -93,9 +93,9 @@ export function StyleEcosystemSection({ data }: StyleEcosystemSectionProps) {
   };
 
   return (
-    <section id={data.id} className="relative z-10 bg-white py-32 lg:py-48" data-theme="light">
+    <section id={data.id} className="relative z-10 bg-white py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-32">
+        <div className="flex flex-col lg:flex-row-reverse lg:items-center gap-10 lg:gap-24">
           {/* Right: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
@@ -155,7 +155,7 @@ export function StyleEcosystemSection({ data }: StyleEcosystemSectionProps) {
           </div>
 
           {/* Left: Interactive Fashion Triptych Stack */}
-          <div className="relative mt-20 lg:mt-0 lg:w-1/2">
+          <div className="relative mt-10 lg:mt-0 lg:w-1/2">
              <div 
                 className="relative mx-auto w-full max-w-[500px] h-[520px] flex items-center justify-center cursor-pointer"
                 onMouseLeave={() => setFocusedIndex(null)}
