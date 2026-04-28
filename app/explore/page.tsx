@@ -18,14 +18,14 @@ import exploreData from "@/data/user/explore/explore.json";
 
 export default function ExplorePage() {
   return (
-    <div className="bg-white text-zinc-900 selection:bg-black selection:text-white">
+    <div className="bg-white text-zinc-900 selection:bg-[#3A3A3A] selection:text-white">
       <Header data={navbarData} />
       
       <main className="relative min-h-screen w-full">
         {/* Continuous Journey Line (Braided Thread - spine of the page) */}
         <div className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 z-0 hidden lg:block overflow-hidden">
            {/* Braided Thread Visual - Textured thin line */}
-           <div className="h-full w-full bg-[repeating-linear-gradient(to_bottom,transparent,transparent_4px,#000_4px,#000_8px)] opacity-[0.03]" />
+           <div className="h-full w-full bg-[repeating-linear-gradient(to_bottom,transparent,transparent_4px,#3A3A3A_4px,#3A3A3A_8px)] opacity-[0.03]" />
         </div>
 
         <div className="relative z-10 space-y-0">

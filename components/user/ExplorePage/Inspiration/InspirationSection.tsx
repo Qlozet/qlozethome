@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Camera, Heart, TrendingUp, Eye } from "lucide-react";
+import { Camera, Heart, TrendingUp, Eye, Check } from "lucide-react";
 
 const LOOKBOOK_ITEMS = [
   { image: "/image/bespoke-outfit-1.webp", likes: "2.4k", aspect: "aspect-[3/4]", tag: null },
@@ -40,7 +40,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
@@ -49,7 +49,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -59,13 +59,13 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/40 lg:text-2xl"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
             </div>
 
-            <div className="grid gap-4">
+            <div className="flex flex-col gap-3">
               {data.features.map((feature, i) => (
                 <motion.div 
                   key={i}
@@ -73,12 +73,10 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 + i * 0.1 }}
-                  className="flex items-center gap-6 group"
+                  className="flex items-center gap-3"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-zinc-50 border border-black/5 group-hover:bg-black group-hover:text-white transition-all shadow-sm">
-                    <Camera className="h-4 w-4" strokeWidth={1.5} />
-                  </div>
-                  <span className="font-display text-lg font-medium text-black/80">{feature}</span>
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10"><Check className="h-3.5 w-3.5 text-[#3A3A3A]" /></span>
+                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -87,7 +85,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                viewport={{ once: true }}
-               className="font-ui text-sm italic text-black/30"
+               className="font-ui text-sm italic text-[#3A3A3A]/30"
             >
                {data.closing}
             </motion.p>
@@ -95,13 +93,13 @@ export function InspirationSection({ data }: InspirationSectionProps) {
 
           {/* Right: Community Lookbook Masonry */}
           <div className="relative mt-20 lg:mt-0 lg:w-1/2">
-             <div className="relative mx-auto w-full max-w-[500px] rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-5 sm:p-6 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
+             <div className="relative mx-auto w-full max-w-[500px] rounded-[3rem] bg-zinc-50 border border-[#3A3A3A]/5 shadow-2xl p-5 sm:p-6 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
                 
                 {/* Header */}
-                <div className="flex items-center justify-between pb-4 mb-4 border-b border-black/5">
+                <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#3A3A3A]/5">
                    <div className="flex items-center gap-3">
-                      <Eye className="h-4 w-4 text-black/40" />
-                      <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black">Community Lookbook</span>
+                      <Eye className="h-4 w-4 text-[#3A3A3A]/40" />
+                      <span className="font-display text-[10px] font-bold uppercase tracking-widest text-[#3A3A3A]">Community Lookbook</span>
                    </div>
                    <div className="flex items-center gap-1.5">
                       <TrendingUp className="h-3 w-3 text-emerald-500" />
@@ -121,7 +119,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                             whileHover={{ y: -6, scale: 1.03, transition: { type: "spring", stiffness: 300, damping: 20 } }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.15 + i * 0.1, duration: 0.5 }}
-                            className={`relative ${item.aspect} rounded-xl bg-white border border-black/5 shadow-md overflow-hidden group cursor-pointer`}
+                            className={`relative ${item.aspect} rounded-xl bg-white border border-[#3A3A3A]/5 shadow-md overflow-hidden group cursor-pointer`}
                          >
                             <img src={item.image} alt="" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent group-hover:from-black/60 transition-all duration-300" />
@@ -129,7 +127,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                             {item.tag && (
                                <div className="absolute top-2 left-2">
                                   <div className="bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full">
-                                     <span className="font-mono text-[7px] font-bold text-black uppercase tracking-widest">{item.tag}</span>
+                                     <span className="font-mono text-[7px] font-bold text-[#3A3A3A] uppercase tracking-widest">{item.tag}</span>
                                   </div>
                                </div>
                             )}
@@ -159,7 +157,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                             whileHover={{ y: -6, scale: 1.03, transition: { type: "spring", stiffness: 300, damping: 20 } }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.25 + i * 0.1, duration: 0.5 }}
-                            className={`relative ${item.aspect} rounded-xl bg-white border border-black/5 shadow-md overflow-hidden group cursor-pointer`}
+                            className={`relative ${item.aspect} rounded-xl bg-white border border-[#3A3A3A]/5 shadow-md overflow-hidden group cursor-pointer`}
                          >
                             <img src={item.image} alt="" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent group-hover:from-black/60 transition-all duration-300" />
@@ -167,7 +165,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                             {item.tag && (
                                <div className="absolute top-2 left-2">
                                   <div className="bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full">
-                                     <span className="font-mono text-[7px] font-bold text-black uppercase tracking-widest">{item.tag}</span>
+                                     <span className="font-mono text-[7px] font-bold text-[#3A3A3A] uppercase tracking-widest">{item.tag}</span>
                                   </div>
                                </div>
                             )}
@@ -194,7 +192,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
       
       {/* Node Marker on Spine */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
-         <div className="w-px h-1 rounded-full bg-black/20" />
+         <div className="w-px h-1 rounded-full bg-[#3A3A3A]/20" />
       </div>
     </section>
   );

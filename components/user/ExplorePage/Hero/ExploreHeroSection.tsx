@@ -94,7 +94,7 @@ export function ExploreHero({ data }: ExploreHeroProps) {
         <motion.div variants={itemVariants} className="mt-16 flex flex-col gap-6 sm:flex-row sm:items-center">
           <Link
             href={data.cta.href}
-            className="group relative inline-flex h-14 items-center justify-center overflow-hidden bg-[#1A1A1A] px-10 text-xs font-bold uppercase tracking-[0.2em] text-white transition-all hover:bg-black hover:px-12"
+            className="group relative inline-flex h-14 items-center justify-center overflow-hidden bg-[#1A1A1A] px-10 text-xs font-bold uppercase tracking-[0.2em] text-white transition-all hover:bg-[#3A3A3A] hover:px-12"
           >
             <span className="relative z-10">{data.cta.label}</span>
           </Link>

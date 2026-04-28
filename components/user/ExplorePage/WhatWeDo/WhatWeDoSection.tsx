@@ -89,7 +89,7 @@ export function WhatWeDoSection({ data }: WhatWeDoSectionProps) {
               <div className="absolute inset-0 bg-gradient-to-t from-[#3A3A3A]/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               
               {/* Subtle Border */}
-              <div className="absolute inset-0 rounded-[2.5rem] border border-black/5 transition-colors duration-500 group-hover:border-black/10" />
+              <div className="absolute inset-0 rounded-[2.5rem] border border-[#3A3A3A]/5 transition-colors duration-500 group-hover:border-[#3A3A3A]/10" />
               
               <div className="absolute bottom-8 left-8 right-8 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                 <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-white">

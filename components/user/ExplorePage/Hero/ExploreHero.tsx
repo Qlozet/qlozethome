@@ -62,21 +62,21 @@ export function ExploreHero({ data }: ExploreHeroProps) {
             <div className="flex flex-col gap-6">
               <motion.span 
                 variants={itemVariants}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
               
               <motion.h1
                 variants={itemVariants}
-                className="font-display text-4xl font-medium leading-[1] tracking-tighter text-black sm:text-6xl lg:text-7xl xl:text-8xl"
+                className="font-display text-4xl font-medium leading-[1] tracking-tighter text-[#3A3A3A] sm:text-6xl lg:text-7xl xl:text-8xl"
               >
                 {data.title}
               </motion.h1>
               
               <motion.p
                 variants={itemVariants}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/40 sm:text-2xl"
+                className="max-w-xl font-ui text-lg leading-relaxed text-[#3A3A3A]/40 sm:text-2xl"
               >
                 {data.description}
               </motion.p>
@@ -88,7 +88,7 @@ export function ExploreHero({ data }: ExploreHeroProps) {
             >
               <Link
                 href={data.cta.href}
-                className="group relative inline-flex h-16 items-center justify-center gap-4 overflow-hidden rounded-full bg-black px-12 text-[11px] font-bold uppercase tracking-[0.35em] text-white transition-all hover:scale-[1.02] active:scale-95 shadow-2xl"
+                className="group relative inline-flex h-16 items-center justify-center gap-4 overflow-hidden rounded-full bg-[#3A3A3A] px-12 text-[11px] font-bold uppercase tracking-[0.35em] text-white transition-all hover:scale-[1.02] active:scale-95 shadow-2xl"
               >
                 <span className="relative z-10">{data.cta.label}</span>
                 <ArrowRight className="h-4 w-4 relative z-10 transition-transform group-hover:translate-x-1" />
@@ -105,14 +105,14 @@ export function ExploreHero({ data }: ExploreHeroProps) {
                    initial={{ opacity: 0, y: 40, scale: 0.9 }}
                    animate={{ opacity: 1, y: 0, scale: 1 }}
                    transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                   className="absolute top-0 left-0 w-[60%] h-[75%] rounded-[2.5rem] overflow-hidden shadow-2xl border border-black/5 z-20"
+                   className="absolute top-0 left-0 w-[60%] h-[75%] rounded-[2.5rem] overflow-hidden shadow-2xl border border-[#3A3A3A]/5 z-20"
                 >
                    <img src={HERO_IMAGES[0].src} alt={HERO_IMAGES[0].alt} className="w-full h-full object-cover" />
                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
                    <div className="absolute bottom-5 left-5 right-5">
                       <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full inline-flex items-center gap-2 shadow-sm">
                          <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                         <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest">New Arrivals</span>
+                         <span className="font-mono text-[8px] font-bold text-[#3A3A3A] uppercase tracking-widest">New Arrivals</span>
                       </div>
                    </div>
                 </motion.div>
@@ -155,7 +155,7 @@ export function ExploreHero({ data }: ExploreHeroProps) {
                    initial={{ opacity: 0, scale: 0.8 }}
                    animate={{ opacity: 1, scale: 1 }}
                    transition={{ duration: 0.6, delay: 1, type: "spring" }}
-                   className="absolute top-[40%] right-[35%] z-40 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-black/5 px-5 py-3 flex items-center gap-3"
+                   className="absolute top-[40%] right-[35%] z-40 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-[#3A3A3A]/5 px-5 py-3 flex items-center gap-3"
                 >
                    <div className="flex -space-x-2">
                       <div className="h-7 w-7 rounded-full bg-zinc-200 border-2 border-white overflow-hidden">
@@ -164,13 +164,13 @@ export function ExploreHero({ data }: ExploreHeroProps) {
                       <div className="h-7 w-7 rounded-full bg-zinc-300 border-2 border-white overflow-hidden">
                          <img src="/image/seun.png" alt="" className="w-full h-full object-cover" />
                       </div>
-                      <div className="h-7 w-7 rounded-full bg-black border-2 border-white flex items-center justify-center">
+                      <div className="h-7 w-7 rounded-full bg-[#3A3A3A] border-2 border-white flex items-center justify-center">
                          <span className="text-[7px] font-bold text-white">+50</span>
                       </div>
                    </div>
                    <div className="flex flex-col">
-                      <span className="font-display text-[10px] font-bold text-black">200+ Designers</span>
-                      <span className="font-mono text-[7px] text-black/40 uppercase tracking-widest">Active Now</span>
+                      <span className="font-display text-[10px] font-bold text-[#3A3A3A]">200+ Designers</span>
+                      <span className="font-mono text-[7px] text-[#3A3A3A]/40 uppercase tracking-widest">Active Now</span>
                    </div>
                 </motion.div>
              </div>
@@ -180,8 +180,8 @@ export function ExploreHero({ data }: ExploreHeroProps) {
 
       {/* Start of Spine Journey */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
-        <div className="w-px h-24 bg-black/5" />
-        <div className="w-2 h-2 rounded-full bg-black/10" />
+        <div className="w-px h-24 bg-[#3A3A3A]/5" />
+        <div className="w-2 h-2 rounded-full bg-[#3A3A3A]/10" />
       </div>
     </section>
   );

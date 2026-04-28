@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { Shirt, Scissors, Gem, Shapes } from "lucide-react";
+import { Shirt, Scissors, Gem, Shapes, Check } from "lucide-react";
 import { useState } from "react";
 
 const PILLARS = [
@@ -103,7 +103,7 @@ export function StyleEcosystemSection({ data }: StyleEcosystemSectionProps) {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
@@ -112,7 +112,7 @@ export function StyleEcosystemSection({ data }: StyleEcosystemSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -122,13 +122,13 @@ export function StyleEcosystemSection({ data }: StyleEcosystemSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/40 lg:text-2xl"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
             </div>
 
-            <div className="grid gap-4">
+            <div className="flex flex-col gap-3">
               {data.features.map((feature, i) => (
                 <motion.div 
                   key={i}
@@ -136,12 +136,10 @@ export function StyleEcosystemSection({ data }: StyleEcosystemSectionProps) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 + i * 0.1 }}
-                  className="flex items-center gap-6 group"
+                  className="flex items-center gap-3"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-zinc-50 border border-black/5 group-hover:bg-black group-hover:text-white transition-all shadow-sm">
-                    <Shapes className="h-4 w-4" strokeWidth={1.5} />
-                  </div>
-                  <span className="font-display text-lg font-medium text-black/80">{feature}</span>
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10"><Check className="h-3.5 w-3.5 text-[#3A3A3A]" /></span>
+                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -150,7 +148,7 @@ export function StyleEcosystemSection({ data }: StyleEcosystemSectionProps) {
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                viewport={{ once: true }}
-               className="font-ui text-sm italic text-black/30"
+               className="font-ui text-sm italic text-[#3A3A3A]/30"
             >
                {data.closing}
             </motion.p>
@@ -192,7 +190,7 @@ export function StyleEcosystemSection({ data }: StyleEcosystemSectionProps) {
                             damping: 25,
                             mass: 0.8
                          }}
-                         className="absolute rounded-[2rem] bg-white border border-black/5 shadow-2xl overflow-hidden w-[260px] sm:w-[280px] h-[370px] sm:h-[400px]"
+                         className="absolute rounded-[2rem] bg-white border border-[#3A3A3A]/5 shadow-2xl overflow-hidden w-[260px] sm:w-[280px] h-[370px] sm:h-[400px]"
                          style={{ 
                             zIndex: style.zIndex,
                             left: `calc(50% - 140px)`,
@@ -206,15 +204,15 @@ export function StyleEcosystemSection({ data }: StyleEcosystemSectionProps) {
                             
                             {/* Category Badge */}
                             <div className="absolute top-4 left-4">
-                               <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-black/5 shadow-sm flex items-center gap-2">
-                                  <Icon className="h-3 w-3 text-black" />
-                                  <span className="font-display text-[8px] font-bold text-black uppercase tracking-widest">{pillar.label}</span>
+                               <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-[#3A3A3A]/5 shadow-sm flex items-center gap-2">
+                                  <Icon className="h-3 w-3 text-[#3A3A3A]" />
+                                  <span className="font-display text-[8px] font-bold text-[#3A3A3A] uppercase tracking-widest">{pillar.label}</span>
                                </div>
                             </div>
 
                             {/* Item Count */}
                             <div className="absolute bottom-3 right-3">
-                               <div className="bg-black/60 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                               <div className="bg-[#3A3A3A]/60 backdrop-blur-sm px-2.5 py-1 rounded-full">
                                   <span className="font-mono text-[8px] font-bold text-white uppercase tracking-widest">{pillar.count} items</span>
                                </div>
                             </div>
@@ -223,12 +221,12 @@ export function StyleEcosystemSection({ data }: StyleEcosystemSectionProps) {
                          {/* Info Footer */}
                          <div className="p-5 flex flex-col gap-2">
                             <div className="flex items-center justify-between">
-                               <span className="font-display text-sm font-bold text-black uppercase tracking-wider">{pillar.label}</span>
-                               <div className="h-9 w-9 rounded-full bg-zinc-50 border border-black/5 flex items-center justify-center shadow-sm">
-                                  <Icon className="h-4 w-4 text-black/30" />
+                               <span className="font-display text-sm font-bold text-[#3A3A3A] uppercase tracking-wider">{pillar.label}</span>
+                               <div className="h-9 w-9 rounded-full bg-zinc-50 border border-[#3A3A3A]/5 flex items-center justify-center shadow-sm">
+                                  <Icon className="h-4 w-4 text-[#3A3A3A]/30" />
                                </div>
                             </div>
-                            <span className="font-ui text-[11px] text-black/40 leading-relaxed">{pillar.description}</span>
+                            <span className="font-ui text-[11px] text-[#3A3A3A]/40 leading-relaxed">{pillar.description}</span>
                          </div>
                       </motion.div>
                    );
@@ -251,7 +249,7 @@ export function StyleEcosystemSection({ data }: StyleEcosystemSectionProps) {
       
       {/* Node Marker on Spine */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
-         <div className="w-px h-1 rounded-full bg-black/20" />
+         <div className="w-px h-1 rounded-full bg-[#3A3A3A]/20" />
       </div>
     </section>
   );
