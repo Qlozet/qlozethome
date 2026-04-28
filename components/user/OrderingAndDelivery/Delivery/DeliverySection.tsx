@@ -117,7 +117,7 @@ export function DeliverySection({ data }: DeliverySectionProps) {
                         whileInView={{ width: "78%" }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.5, duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-                        className="h-full bg-[#3E1C01] rounded-full"
+                        className="h-full bg-white rounded-full"
                       />
                     </div>
                   </div>
