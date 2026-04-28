@@ -62,7 +62,7 @@ export function DeliverySection({ data }: DeliverySectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-4 group"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#EDEAEA] border border-black/5 group-hover:bg-black group-hover:text-white transition-all">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-zinc-50 border border-black/5 group-hover:bg-black group-hover:text-white transition-all">
                     {i === 0 ? <Clock4 className="h-4 w-4" /> :
                      i === 1 ? <ShieldCheck className="h-4 w-4" /> :
                      <Globe className="h-4 w-4" />}

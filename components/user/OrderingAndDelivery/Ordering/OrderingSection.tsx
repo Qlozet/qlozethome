@@ -62,7 +62,7 @@ export function OrderingSection({ data }: OrderingSectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-4 group"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#EDEAEA] border border-black/5 group-hover:bg-black group-hover:text-white transition-all">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-zinc-50 border border-black/5 group-hover:bg-black group-hover:text-white transition-all">
                     <Check className="h-4 w-4" />
                   </div>
                   <span className="font-ui text-lg text-black/70">{feature}</span>
@@ -87,7 +87,7 @@ export function OrderingSection({ data }: OrderingSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="relative mx-auto w-full max-w-md rounded-[3rem] bg-[#EDEAEA] border border-black/5 shadow-2xl p-8 flex flex-col gap-6 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2"
+              className="relative mx-auto w-full max-w-md rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-8 flex flex-col gap-6 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2"
             >
               {/* Checkout Header */}
               <div className="flex items-center justify-between pb-6 border-b border-black/5">

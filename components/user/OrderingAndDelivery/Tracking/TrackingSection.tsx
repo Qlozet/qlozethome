@@ -99,7 +99,7 @@ export function TrackingSection({ data }: TrackingSectionProps) {
             >
               <div className="relative rounded-[3rem] bg-white border border-black/5 p-8 shadow-2xl flex flex-col gap-6 overflow-hidden min-h-[500px] transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
                 {/* Search Header */}
-                <div className="flex items-center gap-3 p-4 rounded-2xl bg-[#EDEAEA] border border-black/5">
+                <div className="flex items-center gap-3 p-4 rounded-2xl bg-zinc-50 border border-black/5">
                   <Search className="h-4 w-4 text-black/20" />
                   <span className="font-mono text-[9px] uppercase tracking-widest text-black/40">QL-294-ZX</span>
                   <div className="ml-auto flex items-center gap-2">
@@ -109,7 +109,7 @@ export function TrackingSection({ data }: TrackingSectionProps) {
                 </div>
 
                 {/* Route Map */}
-                <div className="relative flex-1 rounded-[2rem] bg-[#EDEAEA] border border-black/5 overflow-hidden min-h-[260px]">
+                <div className="relative flex-1 rounded-[2rem] bg-zinc-50 border border-black/5 overflow-hidden min-h-[260px]">
                   {/* Grid background */}
                   <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, black 0.5px, transparent 0)', backgroundSize: '24px 24px' }} />
 

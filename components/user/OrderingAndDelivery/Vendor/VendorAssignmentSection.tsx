@@ -171,7 +171,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                         className={`relative flex items-center gap-4 p-4 rounded-2xl cursor-pointer transition-all duration-300 ${
                           isSelected
                             ? "bg-black text-white shadow-xl"
-                            : "bg-[#EDEAEA] text-black border border-black/5 hover:bg-zinc-100"
+                            : "bg-zinc-50 text-black border border-black/5 hover:bg-zinc-100"
                         }`}
                       >
                         {/* Avatar */}
@@ -220,7 +220,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                     transition={{ duration: 0.3 }}
                     className="px-6 sm:px-8 pb-6 sm:pb-8"
                   >
-                    <div className="p-5 rounded-2xl bg-[#EDEAEA] border border-black/5 flex flex-col gap-4">
+                    <div className="p-5 rounded-2xl bg-zinc-50 border border-black/5 flex flex-col gap-4">
                       {/* Skills */}
                       <div className="flex flex-wrap gap-1.5">
                         {vendor.skills.map((skill) => (

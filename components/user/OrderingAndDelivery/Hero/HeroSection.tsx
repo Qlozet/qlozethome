@@ -118,7 +118,7 @@ export function HeroSection({ data }: HeroSectionProps) {
               className="relative mx-auto w-full max-w-lg"
             >
               {/* Main Journey Card */}
-              <div className="rounded-[3rem] bg-[#EDEAEA] border border-black/5 shadow-2xl p-8 sm:p-10 overflow-hidden">
+              <div className="rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-8 sm:p-10 overflow-hidden">
                 {/* Header */}
                 <div className="flex items-center justify-between pb-6 border-b border-black/5 mb-8">
                   <div className="flex items-center gap-3">

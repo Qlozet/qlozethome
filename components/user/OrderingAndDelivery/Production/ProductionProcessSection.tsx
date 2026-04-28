@@ -124,7 +124,7 @@ export function ProductionProcessSection({ data }: ProductionProcessSectionProps
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="relative mx-auto w-full max-w-[460px]"
             >
-              <div className="relative rounded-[3rem] bg-[#EDEAEA] border border-black/5 shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
+              <div className="relative rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
                 {/* Live Preview Image */}
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <AnimatePresence mode="wait">
@@ -183,12 +183,12 @@ export function ProductionProcessSection({ data }: ProductionProcessSectionProps
                         className={`flex items-center gap-4 p-3.5 rounded-xl cursor-pointer transition-all duration-300 ${
                           isActive
                             ? "bg-black text-white shadow-lg"
-                            : "bg-white border border-black/5 hover:bg-[#EDEAEA]"
+                            : "bg-white border border-black/5 hover:bg-zinc-50"
                         }`}
                       >
                         {/* Status Icon */}
                         <div className={`h-9 w-9 rounded-lg flex items-center justify-center shrink-0 ${
-                          isActive ? "bg-white/10" : isComplete ? "bg-[#3E1C01]/10" : "bg-[#EDEAEA]"
+                          isActive ? "bg-white/10" : isComplete ? "bg-[#3E1C01]/10" : "bg-zinc-50"
                         }`}>
                           {isComplete && !isActive ? (
                             <CheckCircle2 className="h-4 w-4 text-[#3E1C01]" />
