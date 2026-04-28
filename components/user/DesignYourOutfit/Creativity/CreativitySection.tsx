@@ -16,8 +16,8 @@ type CreativityData = {
 type CreativitySectionProps = { data: CreativityData };
 
 const STYLE_FUSIONS = [
-  { label: "Ankara × Minimalism", image: "/image/ankara.png", tags: ["West African", "Modern", "Clean Lines"] },
-  { label: "Agbada × Contemporary", image: "/image/agbada-outfit.png", tags: ["Traditional", "Avant-Garde", "Luxury"] },
+  { label: "Ankara × Minimalism", image: "/image/bespoke-ankara-2.png", tags: ["West African", "Modern", "Clean Lines"] },
+  { label: "Agbada × Contemporary", image: "/image/bespoke-agbada-lime.webp", tags: ["Traditional", "Avant-Garde", "Luxury"] },
   { label: "Bespoke × Streetwear", image: "/image/bespoke-dress-2.png", tags: ["Custom Fit", "Urban", "Bold"] }
 ];
 
@@ -44,7 +44,7 @@ export function CreativitySection({ data }: CreativitySectionProps) {
               const feature = data.features[i];
               const Icon = feature ? (iconMap[feature.icon] || Sparkles) : Sparkles;
               const isHovered = hoveredCard === i;
-              
+
               return (
                 <motion.div
                   key={i}
@@ -61,7 +61,7 @@ export function CreativitySection({ data }: CreativitySectionProps) {
                   <div className="relative aspect-[3/4] overflow-hidden">
                     <img src={fusion.image} alt={fusion.label} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                    
+
                     {/* Fusion Label */}
                     <div className="absolute top-6 left-6">
                       <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-black/5 shadow-sm">
@@ -70,7 +70,7 @@ export function CreativitySection({ data }: CreativitySectionProps) {
                     </div>
 
                     {/* Tags (appear on hover) */}
-                    <motion.div 
+                    <motion.div
                       initial={false}
                       animate={{ y: isHovered ? 0 : 20, opacity: isHovered ? 1 : 0 }}
                       className="absolute top-16 left-6 flex flex-wrap gap-1.5"
@@ -79,7 +79,7 @@ export function CreativitySection({ data }: CreativitySectionProps) {
                         <span key={tag} className="bg-white/20 backdrop-blur-sm px-2.5 py-1 rounded-full font-mono text-[7px] font-bold text-white uppercase tracking-widest">{tag}</span>
                       ))}
                     </motion.div>
-                    
+
                     {/* Bottom Info */}
                     <div className="absolute bottom-6 left-6 right-6">
                       <div className="flex items-center gap-4 mb-3">

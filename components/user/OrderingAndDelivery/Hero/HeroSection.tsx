@@ -1,8 +1,8 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
-import { Package, Truck, ArrowRight, Activity } from "lucide-react";
+import { useRef, useState, useEffect } from "react";
+import { Package, Truck, ArrowRight, Sparkles, CheckCircle2, MapPin } from "lucide-react";
 import Link from "next/link";
 
 type HeroData = {
@@ -16,6 +16,13 @@ type HeroSectionProps = {
   data: HeroData;
 };
 
+const JOURNEY_STEPS = [
+  { label: "Designed", icon: Sparkles, time: "Mon 10:24 AM" },
+  { label: "Producing", icon: Package, time: "Tue 2:15 PM" },
+  { label: "In Transit", icon: Truck, time: "Wed 8:00 AM" },
+  { label: "Delivered", icon: MapPin, time: "Est. Thu" },
+];
+
 export function HeroSection({ data }: HeroSectionProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -26,73 +33,57 @@ export function HeroSection({ data }: HeroSectionProps) {
   const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as any },
-    },
-  };
+  // Animate through journey steps
+  const [activeStep, setActiveStep] = useState(0);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveStep((prev) => (prev < 3 ? prev + 1 : 0));
+    }, 2500);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section ref={containerRef} className="relative min-h-screen w-full overflow-hidden bg-white pt-32 lg:pt-40" data-theme="light">
-      {/* Dynamic Logistics Background */}
+      {/* Subtle dot grid */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)', backgroundSize: '40px 40px' }} />
-        
-        {/* Animated Waypoints Path */}
-        <svg className="absolute inset-0 w-full h-full opacity-[0.05]" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <motion.path
-            d="M -10,50 Q 25,20 50,50 T 110,50"
-            fill="none"
-            stroke="black"
-            strokeWidth="0.1"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-          />
-        </svg>
       </div>
 
       <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
         className="relative z-10 mx-auto w-full max-w-[94rem] px-6"
       >
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-20">
           {/* Left Column: Text */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
-              <motion.div variants={itemVariants} className="flex items-center gap-3">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="flex items-center gap-3"
+              >
                 <div className="h-px w-8 bg-black/20" />
                 <span className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40">
                   {data.badge}
                 </span>
-                <Activity className="h-3 w-3 text-emerald-500 animate-pulse" />
               </motion.div>
 
               <motion.h1
-                variants={itemVariants}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                 className="max-w-3xl font-display text-5xl font-medium leading-[1.05] tracking-tighter text-black sm:text-7xl lg:text-8xl"
               >
                 {data.title}
               </motion.h1>
 
               <motion.p
-                variants={itemVariants}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
                 className="max-w-xl font-ui text-lg leading-relaxed text-black/60 sm:text-2xl"
               >
                 {data.description}
@@ -100,7 +91,9 @@ export function HeroSection({ data }: HeroSectionProps) {
             </div>
 
             <motion.div
-              variants={itemVariants}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
               className="flex flex-col gap-8 sm:flex-row sm:items-center"
             >
               <Link
@@ -110,79 +103,117 @@ export function HeroSection({ data }: HeroSectionProps) {
                 <span className="relative z-10">{data.cta.label}</span>
                 <div className="absolute inset-0 z-0 bg-gradient-to-r from-zinc-800 to-black opacity-0 transition-opacity group-hover:opacity-100" />
               </Link>
-              
-              <div className="flex items-center gap-4 text-black/40">
-                <Truck className="h-5 w-5" />
-                <span className="font-display text-[9px] font-bold uppercase tracking-widest italic">Seamless Transit</span>
-              </div>
             </motion.div>
           </div>
 
-          {/* Right Column: Visual Component */}
+          {/* Right Column: Journey Tracker Console */}
           <motion.div
             style={{ y, opacity }}
             className="relative mt-20 lg:mt-0 lg:w-1/2"
           >
-            <div className="relative aspect-square w-full max-w-lg mx-auto">
-              {/* Central Parcel Metaphor */}
-              <motion.div 
-                animate={{ 
-                  y: [0, -15, 0],
-                  rotate: [2, -2, 2]
-                }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute inset-0 flex items-center justify-center"
-              >
-                <div className="relative h-64 w-64 md:h-80 md:w-80">
-                  {/* Glassmorphism Shipping Card */}
-                  <div className="absolute -inset-10 flex items-center justify-center">
-                    <div className="h-full w-full rounded-[4rem] bg-zinc-50/50 backdrop-blur-3xl border border-black/5 shadow-2xl rotate-6" />
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="relative mx-auto w-full max-w-lg"
+            >
+              {/* Main Journey Card */}
+              <div className="rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-8 sm:p-10 overflow-hidden">
+                {/* Header */}
+                <div className="flex items-center justify-between pb-6 border-b border-black/5 mb-8">
+                  <div className="flex items-center gap-3">
+                    <div className="h-8 w-8 rounded-xl bg-black flex items-center justify-center">
+                      <Package className="h-3.5 w-3.5 text-white" />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black">Order Tracker</span>
+                      <span className="font-mono text-[8px] text-black/30 uppercase tracking-widest">QL-294-ZX</span>
+                    </div>
                   </div>
-                  
-                  {/* The 'Box' visual */}
-                  <div className="relative h-full w-full rounded-[3rem] bg-zinc-900 shadow-2xl flex items-center justify-center overflow-hidden">
-                     <Package className="h-32 w-32 text-white/10" />
-                     <div className="absolute bottom-8 left-8 flex flex-col gap-1">
-                        <span className="font-mono text-[8px] text-white/40 uppercase tracking-widest">Tracking ID: QL-294-ZX</span>
-                        <div className="h-1 w-24 bg-white/5 rounded-full overflow-hidden">
-                           <motion.div 
-                              initial={{ width: "0%" }}
-                              animate={{ width: "65%" }}
-                              transition={{ duration: 2, delay: 1 }}
-                              className="h-full bg-emerald-500" 
-                           />
-                        </div>
-                     </div>
-                     {/* QR/Barcode detail */}
-                     <div className="absolute top-8 right-8 flex gap-1">
-                        {[...Array(4)].map((_, i) => (
-                           <div key={i} className="w-0.5 h-6 bg-white/20" />
-                        ))}
-                     </div>
+                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                    <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="font-mono text-[8px] font-bold text-emerald-600 uppercase tracking-widest leading-none">Live</span>
                   </div>
                 </div>
-              </motion.div>
 
-              {/* Waypoint Markers */}
-              <motion.div 
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 1.2 }}
-                className="absolute top-1/4 -right-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-xl border border-black/5 rotate-12"
+                {/* Product Preview Row */}
+                <div className="flex gap-4 p-4 rounded-2xl bg-white border border-black/5 mb-8">
+                  <div className="h-16 w-16 rounded-xl bg-zinc-100 overflow-hidden shrink-0">
+                    <img src="/image/bespoke-kaftan-brown-4.png" alt="Order item" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex flex-col justify-center gap-1 min-w-0">
+                    <span className="font-display text-sm font-bold text-black truncate">Bespoke Kaftan</span>
+                    <span className="font-ui text-[10px] text-black/40">Custom Tailored · Brown</span>
+                  </div>
+                  <div className="ml-auto flex items-center">
+                    <span className="font-display text-sm font-bold text-black">$240</span>
+                  </div>
+                </div>
+
+                {/* Journey Timeline */}
+                <div className="relative flex items-center justify-between mb-8">
+                  {/* Progress Line (background) */}
+                  <div className="absolute top-5 left-5 right-5 h-0.5 bg-black/5 z-0" />
+                  {/* Progress Line (filled) */}
+                  <motion.div
+                    className="absolute top-5 left-5 h-0.5 bg-emerald-500 z-0"
+                    animate={{ width: `${(activeStep / 3) * (100 - 10)}%` }}
+                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                  />
+
+                  {JOURNEY_STEPS.map((step, i) => {
+                    const Icon = step.icon;
+                    const isComplete = i < activeStep;
+                    const isActive = i === activeStep;
+                    return (
+                      <div key={i} className="relative z-10 flex flex-col items-center gap-2">
+                        <motion.div
+                          animate={{
+                            scale: isActive ? 1.15 : 1,
+                            backgroundColor: isComplete ? "#10b981" : isActive ? "#000" : "#f4f4f5",
+                          }}
+                          transition={{ duration: 0.4 }}
+                          className="h-10 w-10 rounded-full flex items-center justify-center border-2 border-white shadow-md"
+                        >
+                          {isComplete ? (
+                            <CheckCircle2 className="h-4 w-4 text-white" />
+                          ) : (
+                            <Icon className={`h-4 w-4 ${isActive ? "text-white" : "text-black/30"}`} />
+                          )}
+                        </motion.div>
+                        <span className={`font-mono text-[7px] font-bold uppercase tracking-widest ${isActive ? "text-black" : isComplete ? "text-emerald-600" : "text-black/25"}`}>
+                          {step.label}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Estimated Arrival Footer */}
+                <div className="flex items-center justify-between p-4 rounded-2xl bg-black text-white">
+                  <div className="flex flex-col gap-0.5">
+                    <span className="font-mono text-[8px] text-white/40 uppercase tracking-widest">Estimated Arrival</span>
+                    <span className="font-display text-sm font-bold">Thursday, 3:00 PM</span>
+                  </div>
+                  <div className="h-10 w-10 rounded-xl bg-white/10 flex items-center justify-center">
+                    <ArrowRight className="h-4 w-4 text-white" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating accent pill */}
+              <motion.div
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-xl border border-black/5 px-4 py-3 flex items-center gap-2"
               >
-                 <ArrowRight className="h-6 w-6 text-black/20" />
+                <Truck className="h-4 w-4 text-black/30" />
+                <span className="font-mono text-[8px] font-bold uppercase tracking-widest text-black/40">Seamless Transit</span>
               </motion.div>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </motion.div>
-
-      {/* Segmented Progress Line at Bottom */}
-      <div className="absolute bottom-0 left-0 w-full h-24 flex items-center px-10 gap-4 opacity-10">
-         {[...Array(12)].map((_, i) => (
-            <div key={i} className="flex-1 h-px bg-black" />
-         ))}
-      </div>
     </section>
   );
 }

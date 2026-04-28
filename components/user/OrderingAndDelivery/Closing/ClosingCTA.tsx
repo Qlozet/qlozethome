@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Package, Truck, CheckCircle } from "lucide-react";
+import { ArrowRight, Package, Truck, CheckCircle, Clock } from "lucide-react";
 import Link from "next/link";
 
 type ConversionData = {
@@ -18,10 +18,10 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
   return (
     <section className="relative w-full bg-white py-24 lg:py-40 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="relative rounded-[4rem] bg-zinc-900 px-8 py-20 text-center shadow-2xl lg:px-20 lg:py-32">
-          {/* Animated Background Gradient */}
+        <div className="relative rounded-[4rem] bg-zinc-900 px-8 py-20 text-center shadow-2xl lg:px-20 lg:py-32 overflow-hidden">
+          {/* Background Gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-transparent opacity-50" />
-          
+
           <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-10">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -69,52 +69,34 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
               </Link>
             </motion.div>
 
-            {/* Logistics Footer Stats */}
+            {/* Stats Grid */}
             <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 w-full border-t border-white/5 pt-10">
-               {[
-                 { label: "Transit Time", value: "3-5 Days", icon: Clock },
-                 { label: "Network", value: "Global", icon: Truck },
-                 { label: "Handling", value: "Premium", icon: Package },
-                 { label: "Satisfaction", value: "100%", icon: CheckCircle }
-               ].map((stat, i) => {
-                 const Icon = stat.icon;
-                 return (
-                  <div key={i} className="flex flex-col items-center gap-2">
-                     <Icon className="h-5 w-5 text-white/20" />
-                     <span className="font-display text-[8px] font-bold uppercase tracking-widest text-white/40">{stat.label}</span>
-                     <span className="font-mono text-sm text-white/80">{stat.value}</span>
-                  </div>
-                 );
-               })}
+              {[
+                { label: "Transit Time", value: "3-5 Days", icon: Clock },
+                { label: "Network", value: "Global", icon: Truck },
+                { label: "Handling", value: "Premium", icon: Package },
+                { label: "Satisfaction", value: "100%", icon: CheckCircle }
+              ].map((stat, i) => {
+                const Icon = stat.icon;
+                return (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 + i * 0.1 }}
+                    className="flex flex-col items-center gap-2"
+                  >
+                    <Icon className="h-5 w-5 text-white/20" />
+                    <span className="font-display text-[8px] font-bold uppercase tracking-widest text-white/40">{stat.label}</span>
+                    <span className="font-mono text-sm text-white/80">{stat.value}</span>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </div>
       </div>
-
-      {/* Extreme Bottom Hand-written note */}
-      <div className="mt-20 px-6 text-center opacity-30">
-        <span className="font-display text-[9px] font-black uppercase tracking-widest text-black/20 italic">Validated for Quality & Speed / Study 2024-C</span>
-      </div>
     </section>
-  );
-}
-
-// Mocking Clock because I forgot to import it
-function Clock(props: any) {
-  return (
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      width="24" height="24" 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="2" 
-      strokeLinecap="round" 
-      strokeLinejoin="round" 
-      {...props}
-    >
-      <circle cx="12" cy="12" r="10" />
-      <polyline points="12 6 12 12 16 14" />
-    </svg>
   );
 }
