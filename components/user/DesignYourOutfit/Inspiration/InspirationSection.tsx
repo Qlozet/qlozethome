@@ -47,7 +47,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                </div>
 
                {/* Mode Switcher Tabs */}
-               <div className="flex gap-2 mb-6">
+               <div className="flex flex-col gap-2 mb-6 sm:flex-row">
                   {INPUT_MODES.map((m, i) => {
                      const Icon = m.icon;
                      return (
