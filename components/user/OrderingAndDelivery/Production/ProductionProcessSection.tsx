@@ -1,7 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { CheckCircle2, Circle, Clock, Ruler } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { CheckCircle2, Circle, Clock, Scissors, Ruler, Shirt, PackageCheck } from "lucide-react";
+import { useState, useEffect } from "react";
 
 type SectionData = {
   badge: string;
@@ -16,13 +17,49 @@ type ProductionProcessSectionProps = {
   data: SectionData;
 };
 
+const STEPS = [
+  {
+    title: "Order Received",
+    description: "Your design specs have been received by the atelier",
+    icon: PackageCheck,
+    time: "Mon 10:24 AM",
+    image: "/image/bespoke-kaftan-pattern.png",
+  },
+  {
+    title: "Fabric Cutting",
+    description: "Precision cutting of your selected fabric underway",
+    icon: Scissors,
+    time: "Tue 2:15 PM",
+    image: "/image/fabric-swatch-2.jpg",
+  },
+  {
+    title: "Tailoring & Assembly",
+    description: "Master tailor hand-stitching your bespoke piece",
+    icon: Ruler,
+    time: "In Progress",
+    image: "/image/bespoke-kaftan-brown-4.png",
+  },
+  {
+    title: "Quality Inspection",
+    description: "Final fit check and finishing details",
+    icon: Shirt,
+    time: "Est: Tomorrow",
+    image: "/image/bespoke-kaftan-brown-2.png",
+  },
+];
+
 export function ProductionProcessSection({ data }: ProductionProcessSectionProps) {
-  const steps = [
-    { title: "Order received", status: "complete", time: "Mon 10:24 AM" },
-    { title: "In production", status: "active", time: "In Progress" },
-    { title: "Quality check", status: "pending", time: "Est: 2h" },
-    { title: "Ready for delivery", status: "pending", time: "Est: Tomorrow" },
-  ];
+  const [activeStep, setActiveStep] = useState(0);
+
+  // Auto-advance through steps
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveStep((prev) => (prev + 1) % STEPS.length);
+    }, 3500);
+    return () => clearInterval(timer);
+  }, []);
+
+  const completedUpTo = 2; // Steps 0 and 1 are "complete" in the demo
 
   return (
     <section id="production" className="relative w-full bg-white py-24 lg:py-40" data-theme="light">
@@ -78,102 +115,123 @@ export function ProductionProcessSection({ data }: ProductionProcessSectionProps
             </motion.p>
           </div>
 
-          {/* Right: Production Timeline */}
+          {/* Right: Production Console */}
           <div className="relative mt-20 lg:mt-0 lg:w-1/2">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="relative mx-auto w-full max-w-md"
+              className="relative mx-auto w-full max-w-[460px]"
             >
-              <div className="relative rounded-[3rem] bg-zinc-50 border border-black/5 p-8 shadow-2xl overflow-hidden min-h-[500px] flex flex-col gap-8 transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
-                {/* Status Header */}
-                <div className="flex items-center justify-between">
-                  <div className="flex flex-col gap-1">
-                    <span className="font-mono text-[9px] uppercase tracking-widest text-black/40">Production Monitor</span>
-                    <span className="font-display text-xs font-bold text-black italic">Live Feed</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
+              <div className="relative rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
+                {/* Live Preview Image */}
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={activeStep}
+                      src={STEPS[activeStep].image}
+                      alt={STEPS[activeStep].title}
+                      initial={{ opacity: 0, scale: 1.05 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.97 }}
+                      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                      className="w-full h-full object-cover object-top absolute inset-0"
+                    />
+                  </AnimatePresence>
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-50 via-zinc-50/30 to-transparent" />
+
+                  {/* Status Badge */}
+                  <div className="absolute top-5 left-5 flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-black/5 shadow-sm">
                     <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="font-display text-[8px] font-bold uppercase tracking-widest text-emerald-600 leading-none">Active</span>
+                    <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest leading-none">Live Feed</span>
                   </div>
-                </div>
 
-                {/* Vertical Timeline */}
-                <div className="relative flex flex-col gap-10 pl-12 pr-4 pt-4">
-                  {/* Background line */}
-                  <div className="absolute left-[2.35rem] top-8 bottom-8 w-px bg-black/5" />
-                  {/* Animated progress line */}
-                  <motion.div
-                    className="absolute left-[2.35rem] top-8 w-px bg-emerald-500"
-                    initial={{ height: 0 }}
-                    whileInView={{ height: "35%" }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-                  />
-
-                  {steps.map((step, i) => (
+                  {/* Step Label */}
+                  <AnimatePresence mode="wait">
                     <motion.div
-                      key={i}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.3 + i * 0.15 }}
-                      className="relative flex items-center justify-between group"
+                      key={activeStep}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="absolute bottom-4 left-5 right-5"
                     >
-                      {/* Step Indicator */}
-                      <div className="absolute -left-[1.85rem] flex h-8 w-8 items-center justify-center rounded-full bg-white border border-black/5 shadow-sm z-10">
-                        {step.status === 'complete' ? (
-                          <CheckCircle2 className="h-4 w-4 text-emerald-500" />
-                        ) : step.status === 'active' ? (
-                          <motion.div
-                            animate={{ scale: [1, 1.2, 1] }}
-                            transition={{ duration: 2, repeat: Infinity }}
-                          >
-                            <Clock className="h-4 w-4 text-black" />
-                          </motion.div>
-                        ) : (
-                          <Circle className="h-4 w-4 text-black/10" />
-                        )}
-                      </div>
-
-                      <div className={`flex flex-col gap-0.5 ${step.status === 'pending' ? 'opacity-30' : 'opacity-100'}`}>
-                        <span className="font-display text-sm font-bold text-black italic lg:text-base">{step.title}</span>
-                        <span className="font-mono text-[9px] text-black/40 uppercase tracking-widest">{step.time}</span>
-                      </div>
-
-                      {step.status === 'active' && (
-                        <motion.div
-                          animate={{ scale: [1, 1.1, 1] }}
-                          transition={{ duration: 2, repeat: Infinity }}
-                          className="h-10 w-10 shrink-0 rounded-full bg-black/5 flex items-center justify-center border border-black/5"
-                        >
-                          <Ruler className="h-4 w-4 text-black/40" />
-                        </motion.div>
-                      )}
+                      <span className="font-display text-sm font-bold text-black">{STEPS[activeStep].description}</span>
                     </motion.div>
-                  ))}
+                  </AnimatePresence>
                 </div>
 
-                {/* Footer */}
-                <div className="mt-auto pt-6 border-t border-black/5 flex justify-between items-end">
-                  <div className="flex flex-col gap-2">
-                    <div className="flex gap-1">
-                      {[...Array(4)].map((_, i) => (
+                {/* Timeline Steps */}
+                <div className="p-6 sm:p-8 flex flex-col gap-3">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-mono text-[9px] uppercase tracking-widest text-black/40">Production Status</span>
+                    <span className="font-mono text-[9px] font-bold text-black">BATCH #72-A</span>
+                  </div>
+
+                  {STEPS.map((step, i) => {
+                    const Icon = step.icon;
+                    const isComplete = i < completedUpTo;
+                    const isActive = i === activeStep;
+                    const isPending = i >= completedUpTo;
+
+                    return (
+                      <motion.div
+                        key={i}
+                        onClick={() => setActiveStep(i)}
+                        whileHover={{ scale: 1.01 }}
+                        whileTap={{ scale: 0.99 }}
+                        className={`flex items-center gap-4 p-3.5 rounded-xl cursor-pointer transition-all duration-300 ${
+                          isActive
+                            ? "bg-black text-white shadow-lg"
+                            : "bg-white border border-black/5 hover:bg-zinc-50"
+                        }`}
+                      >
+                        {/* Status Icon */}
+                        <div className={`h-9 w-9 rounded-lg flex items-center justify-center shrink-0 ${
+                          isActive ? "bg-white/10" : isComplete ? "bg-emerald-500/10" : "bg-zinc-50"
+                        }`}>
+                          {isComplete && !isActive ? (
+                            <CheckCircle2 className="h-4 w-4 text-emerald-500" />
+                          ) : isActive ? (
+                            <motion.div animate={{ rotate: [0, 10, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+                              <Icon className="h-4 w-4 text-white" />
+                            </motion.div>
+                          ) : (
+                            <Circle className="h-4 w-4 text-black/10" />
+                          )}
+                        </div>
+
+                        {/* Step Info */}
+                        <div className={`flex-1 min-w-0 ${isPending && !isActive ? "opacity-40" : ""}`}>
+                          <span className={`font-display text-xs font-bold ${isActive ? "text-white" : "text-black"}`}>{step.title}</span>
+                        </div>
+
+                        {/* Time */}
+                        <span className={`font-mono text-[8px] uppercase tracking-widest shrink-0 ${
+                          isActive ? "text-white/40" : isComplete ? "text-emerald-600" : "text-black/25"
+                        }`}>
+                          {step.time}
+                        </span>
+                      </motion.div>
+                    );
+                  })}
+
+                  {/* Progress Footer */}
+                  <div className="flex items-center gap-3 pt-4 mt-2 border-t border-black/5">
+                    <div className="flex gap-1 flex-1">
+                      {STEPS.map((_, i) => (
                         <motion.div
                           key={i}
                           initial={{ width: 0 }}
-                          whileInView={{ width: "1.5rem" }}
+                          whileInView={{ width: "100%" }}
                           viewport={{ once: true }}
-                          transition={{ delay: 1 + i * 0.15 }}
-                          className={`h-1 rounded-full ${i <= 1 ? 'bg-emerald-500' : 'bg-black/5'}`}
+                          transition={{ delay: 0.8 + i * 0.15 }}
+                          className={`h-1 flex-1 rounded-full ${i < completedUpTo ? "bg-emerald-500" : i === completedUpTo ? "bg-emerald-500/30" : "bg-black/5"}`}
                         />
                       ))}
                     </div>
-                    <span className="font-display text-[9px] font-bold uppercase tracking-widest text-black/40">55% Complete</span>
+                    <span className="font-display text-[9px] font-bold uppercase tracking-widest text-black/40 shrink-0">55%</span>
                   </div>
-                  <span className="font-mono text-[9px] text-black">BATCH #72-A</span>
                 </div>
               </div>
             </motion.div>
