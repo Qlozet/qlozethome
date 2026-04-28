@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Check } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
@@ -76,6 +77,19 @@ function HighlightItem({ item, index, containerVariants, itemVariants }: { item:
             {item.description}
           </motion.p>
         </div>
+
+        {item.bullets && item.bullets.length > 0 && (
+          <motion.ul variants={itemVariants} className="flex flex-col gap-3">
+            {item.bullets.map((bullet: string, i: number) => (
+              <li key={i} className="flex items-center gap-3">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10">
+                  <Check className="h-3.5 w-3.5 text-[#3A3A3A]" />
+                </span>
+                <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{bullet}</span>
+              </li>
+            ))}
+          </motion.ul>
+        )}
         
         <motion.div variants={itemVariants} className="flex">
           <Link

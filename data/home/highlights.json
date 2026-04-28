@@ -2,49 +2,104 @@
   "id": "highlights",
   "items": [
     {
-      "id": "fit-intelligence",
+      "id": "ai-fit-styling",
       "eyebrow": "",
-      "title": "Intelligent Fit, No Compromise",
-      "description": "Our computer-vision pipeline translates captures into precise body measurements. Your data remains yours, shared only to perfect your fit.",
+      "title": "Perfect Fit. Smarter Style.",
+      "description": "Your body is unique — your clothes should be too. Our AI captures precise measurements and pairs them with personalized styling, so every piece fits like it was made for you.",
       "cta": {
-        "label": "Discover How it Works",
-        "href": "#shopping"
+        "label": "Get Your Perfect Fit",
+        "href": "/measurement"
       },
       "image": {
         "src": "/image/body2.png",
-        "alt": "Body measurement preview"
+        "alt": "AI body measurement and fit preview"
       },
-      "phoneImage": "/image/body2.png"
+      "phoneImage": "/image/body2.png",
+      "bullets": [
+        "AI-powered body measurements",
+        "Personalized outfit recommendations",
+        "Saved fit profile for every order"
+      ]
     },
     {
-      "id": "build-your-outfit",
+      "id": "custom-ready-to-wear",
       "eyebrow": "",
-      "title": "The Digital Atelier",
-      "description": "Bring your vision to life. Mix styles, textures, and silhouettes, then watch as our AI visualizes your unique design, tailored perfectly to you.",
+      "title": "Shop or Create — Your Choice",
+      "description": "Browse curated collections from top designers or design your own outfit from scratch. Mix fabrics, styles, and preferences to create something truly yours.",
       "cta": {
-        "label": "Start Shopping",
-        "href": "#early-access"
-      },
-      "image": {
-        "src": "/image/bespoke-outfit-2.png",
-        "alt": "Garment builder interface"
-      },
-      "phoneImage": "/image/bespoke-outfit-2.png"
-    },
-    {
-      "id": "personalize-outfits",
-      "eyebrow": "",
-      "title": "Sartorial Autonomy",
-      "description": "Redefine your style on your own terms. Tweak every detail from neckline to fabric in real-time. It's fashion that fits you.",
-      "cta": {
-        "label": "Manage Your Closet",
-        "href": "#shopping"
+        "label": "Explore Fashion",
+        "href": "/explore"
       },
       "image": {
         "src": "/image/custom-outfit-2.png",
-        "alt": "Personalized outfits on mobile"
+        "alt": "Curated collections and custom clothing"
       },
-      "phoneImage": "/image/custom-outfit-2.png"
+      "phoneImage": "/image/custom-outfit-2.png",
+      "bullets": [
+        "Ready-to-wear from top designers",
+        "Fully customized clothing",
+        "Mix fabrics, styles, and preferences"
+      ]
+    },
+    {
+      "id": "ai-design-creation",
+      "eyebrow": "",
+      "title": "Turn Ideas Into Outfits",
+      "description": "Describe it. Generate it. Wear it. Use AI to bring your fashion ideas to life — upload inspiration or fabric swatches and preview your design before it goes into production.",
+      "cta": {
+        "label": "Start Designing",
+        "href": "/designyouroutfit"
+      },
+      "image": {
+        "src": "/image/bespoke-outfit-2.png",
+        "alt": "AI-powered outfit design and creation"
+      },
+      "phoneImage": "/image/bespoke-outfit-2.png",
+      "bullets": [
+        "Create designs with AI",
+        "Upload inspiration or fabric",
+        "Preview before production"
+      ]
+    },
+    {
+      "id": "explore-catalogue",
+      "eyebrow": "",
+      "title": "Discover What's Possible",
+      "description": "Explore fabrics, designers, and styles from across the platform. Browse unique vendors and curated collections, premium fabrics and materials, and find endless inspiration for your next look.",
+      "cta": {
+        "label": "Browse Catalogue",
+        "href": "/explore"
+      },
+      "image": {
+        "src": "/image/fabrics.png",
+        "alt": "Fabric catalogue and designer collections"
+      },
+      "phoneImage": "/image/fabrics.png",
+      "bullets": [
+        "Unique vendors and collections",
+        "Premium fabrics and materials",
+        "Endless inspiration"
+      ]
+    },
+    {
+      "id": "seamless-delivery",
+      "eyebrow": "",
+      "title": "From Design to Doorstep",
+      "description": "We handle everything after you choose your outfit. From smart vendor matching to real-time order tracking and reliable delivery — your bespoke piece arrives exactly as promised.",
+      "cta": {
+        "label": "Learn More",
+        "href": "#process"
+      },
+      "image": {
+        "src": "/image/shippingPartners.png",
+        "alt": "Seamless ordering and delivery tracking"
+      },
+      "phoneImage": "/image/shippingPartners.png",
+      "bullets": [
+        "Smart vendor matching",
+        "Real-time order tracking",
+        "Reliable delivery"
+      ]
     }
   ]
 }
