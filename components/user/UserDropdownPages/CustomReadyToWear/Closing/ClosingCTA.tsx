@@ -71,7 +71,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="relative overflow-hidden rounded-[4rem] bg-black text-white shadow-3xl min-h-[600px] flex flex-col lg:flex-row lg:items-center"
+          className="relative overflow-hidden rounded-[4rem] bg-[#3A3A3A] text-white shadow-3xl min-h-[600px] flex flex-col lg:flex-row lg:items-center"
         >
           {/* Background Decorative Mesh */}
           <div className="absolute inset-0 opacity-20 pointer-events-none">
@@ -102,7 +102,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
               <motion.div variants={itemVariants} className="flex flex-col gap-4 sm:flex-row sm:items-center">
                 <Link
                   href={data.primaryAction.href}
-                  className="inline-flex h-18 items-center justify-center rounded-full bg-white px-14 py-6 text-xs font-bold uppercase tracking-[0.35em] text-black transition-all hover:scale-[1.05] active:scale-[0.98] shadow-2xl"
+                  className="inline-flex h-18 items-center justify-center rounded-full bg-white px-14 py-6 text-xs font-bold uppercase tracking-[0.35em] text-[#3A3A3A] transition-all hover:scale-[1.05] active:scale-[0.98] shadow-2xl"
                 >
                   {data.primaryAction.label}
                 </Link>
@@ -142,7 +142,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
       
       {/* End of Journey Marker */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center">
-         <div className="w-4 h-4 rounded-full bg-black/5 ring-8 ring-black/[0.02]" />
+         <div className="w-4 h-4 rounded-full bg-[#3A3A3A]/5 ring-8 ring-black/[0.02]" />
       </div>
     </section>
   );

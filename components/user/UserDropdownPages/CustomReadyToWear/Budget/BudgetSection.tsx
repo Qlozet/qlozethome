@@ -1,48 +1,30 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { Wallet, Tags, Calculator, Wand2, LucideIcon, TrendingDown, ArrowRightLeft, DollarSign } from "lucide-react";
-import { useState, useEffect } from "react";
+import { Check, ChevronDown, Minus, Plus } from "lucide-react";
+import { useState, useMemo } from "react";
 
-const iconMap: Record<string, LucideIcon> = {
-  Wallet: Wallet,
-  Tags: Tags,
-  Calculator: Calculator,
-  Wand2: Wand2
-};
-
-const BUDGET_TIERS = [
-  {
-    id: 1,
-    name: "Luxury Reserve",
-    price: 1250,
-    materials: "Italian Silk & Gold Thread",
-    vendor: "Master Tailor (Elite)",
-    style: "Hand-Stitched Embroidery & Lining",
-    turnaround: "14 Days",
-    color: "bg-black"
-  },
-  {
-    id: 2,
-    name: "Standard Custom",
-    price: 450,
-    materials: "Premium Turkish Cotton",
-    vendor: "Senior Tailor (Pro)",
-    style: "Standard Embellishments",
-    turnaround: "7 Days",
-    color: "bg-blue-500"
-  },
-  {
-    id: 3,
-    name: "Accessible Build",
-    price: 180,
-    materials: "Durable Poly-Blend",
-    vendor: "Apprentice Maker",
-    style: "Minimalist Base Pattern",
-    turnaround: "21 Days",
-    color: "bg-emerald-500"
-  }
+/* ── Configurable options with price impacts ── */
+const SLEEVE_OPTIONS = [
+  { label: "Short Sleeve", price: 0 },
+  { label: "3/4 Sleeve", price: 15 },
+  { label: "Long Sleeve", price: 35 }
 ];
+
+const FABRIC_OPTIONS = [
+  { label: "Poly-Blend", price: 0, img: "/image/fabric-swatch-3.jpg" },
+  { label: "Turkish Cotton", price: 80, img: "/image/fabric-swatch-2.jpg" },
+  { label: "Italian Silk", price: 220, img: "/image/fabric-swatch-1.jpg" }
+];
+
+const ACCESSORIES = [
+  { label: "Embroidery", price: 60, active: true },
+  { label: "Gold Buttons", price: 40, active: false },
+  { label: "Inner Lining", price: 30, active: true },
+  { label: "Monogram", price: 25, active: false }
+];
+
+const BASE_PRICE = 120;
 
 type Feature = {
   title: string;
@@ -61,195 +43,249 @@ type BudgetSectionProps = {
 };
 
 export function BudgetSection({ data }: BudgetSectionProps) {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [sleeveIdx, setSleeveIdx] = useState(2);
+  const [fabricIdx, setFabricIdx] = useState(1);
+  const [accessories, setAccessories] = useState(
+    ACCESSORIES.map((a) => a.active)
+  );
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((current) => (current + 1) % BUDGET_TIERS.length);
-    }, 4500);
-    return () => clearInterval(interval);
-  }, []);
+  const toggleAccessory = (idx: number) => {
+    setAccessories((prev) => prev.map((v, i) => (i === idx ? !v : v)));
+  };
 
-  const tier = BUDGET_TIERS[activeIndex];
+  const totalPrice = useMemo(() => {
+    const accPrice = accessories.reduce(
+      (sum, active, i) => sum + (active ? ACCESSORIES[i].price : 0),
+      0
+    );
+    return BASE_PRICE + SLEEVE_OPTIONS[sleeveIdx].price + FABRIC_OPTIONS[fabricIdx].price + accPrice;
+  }, [sleeveIdx, fabricIdx, accessories]);
+
+  const fabric = FABRIC_OPTIONS[fabricIdx];
 
   return (
-    <section className="relative z-10 bg-zinc-50 py-32 lg:py-48 mt-1 border-y border-black/5" data-theme="light">
+    <section className="relative z-10 bg-zinc-50 py-24 sm:py-32 border-y border-[#3A3A3A]/5" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
+        <div className="flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-24">
           {/* Left: Content */}
-          <div className="flex flex-col gap-10 lg:w-1/2">
-            <div className="flex flex-col gap-6">
-              <motion.div 
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="inline-flex h-10 w-40 items-center justify-center border-2 border-black/10 bg-white font-display text-[9px] font-bold uppercase tracking-[0.3em] text-black/40 shadow-sm"
-              >
-                {data.badge}
-              </motion.div>
-              
-              <motion.h2 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl"
-              >
-                {data.title}
-              </motion.h2>
-              
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/50 lg:text-2xl"
-              >
-                {data.description}
-              </motion.p>
-            </div>
+          <div className="flex flex-col gap-6 lg:w-1/2 lg:sticky lg:top-32 lg:self-start">
+            <motion.span
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+            >
+              {data.badge}
+            </motion.span>
 
-            <div className="grid gap-4">
-              {data.features.map((feature, i) => {
-                const Icon = iconMap[feature.icon] || Calculator;
-                return (
-                  <motion.div 
-                    key={i}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 + i * 0.1 }}
-                    className="flex items-center gap-6 group"
-                  >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white border border-black/5 group-hover:bg-black group-hover:text-white transition-all shadow-sm">
-                      <Icon className="h-5 w-5" strokeWidth={1.5} />
-                    </div>
-                    <span className="font-display text-lg font-medium text-black/80">{feature.title}</span>
-                  </motion.div>
-                );
-              })}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
+            >
+              {data.title}
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+            >
+              {data.description}
+            </motion.p>
+
+            <div className="flex flex-col gap-3 mt-2">
+              {data.features.map((feature, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 + i * 0.1 }}
+                  className="flex items-center gap-3"
+                >
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10">
+                    <Check className="h-3.5 w-3.5 text-[#3A3A3A]" />
+                  </span>
+                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature.title}</span>
+                </motion.div>
+              ))}
             </div>
           </div>
 
-          {/* Right: Dynamic Pricing Engine */}
-          <div className="relative mt-20 lg:mt-0 lg:w-1/2 flex justify-center items-center py-10 lg:py-0 pointer-events-none">
-             
-             <div className="relative w-full max-w-[550px] aspect-[4/5] sm:aspect-square rounded-[3rem] bg-white border border-black/5 shadow-2xl p-4 sm:p-8 flex flex-col sm:flex-row gap-6 items-center">
-                
-                {/* 1. Static Garment Viewport */}
-                <div className="relative w-full sm:w-[45%] h-[280px] sm:h-full rounded-[2rem] bg-zinc-100 shadow-inner border border-black/5 overflow-hidden">
-                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10" />
-                   <img
-                     src="/image/agbada-outfit.png"
-                     className="absolute inset-0 w-full h-full object-cover"
-                     alt="Style Template"
-                   />
-                   
-                   {/* Overlay HUD */}
-                   <div className="absolute bottom-4 left-4 right-4 z-20 flex justify-between items-end">
-                      <div className="flex flex-col">
-                         <span className="font-mono text-[8px] text-white/70 font-bold uppercase tracking-widest">Base Template</span>
-                         <span className="font-display text-[12px] font-bold text-white uppercase tracking-widest">Agbada 042</span>
-                      </div>
-                      <div className="bg-white/20 backdrop-blur-md px-2 py-1 rounded-md border border-white/10">
-                         <TrendingDown className="h-4 w-4 text-emerald-400" />
-                      </div>
-                   </div>
+          {/* Right: Live Price Configurator */}
+          <div className="relative mt-10 lg:mt-0 lg:w-1/2 flex justify-center pointer-events-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, type: "spring" }}
+              className="w-full max-w-[440px] rounded-3xl bg-white border border-[#3A3A3A]/5 shadow-2xl overflow-hidden"
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between px-5 py-3 border-b border-[#3A3A3A]/5 bg-[#3A3A3A]/[0.02]">
+                <div className="flex items-center gap-3">
+                  <div className="flex gap-1.5">
+                    <div className="h-2 w-2 rounded-full bg-[#3A3A3A]/10" />
+                    <div className="h-2 w-2 rounded-full bg-[#3A3A3A]/10" />
+                    <div className="h-2 w-2 rounded-full bg-[#3A3A3A]/10" />
+                  </div>
+                  <span className="font-mono text-[8px] font-bold text-[#3A3A3A]/30 uppercase tracking-widest">
+                    Style Configurator
+                  </span>
                 </div>
+                <span className="font-mono text-[7px] font-bold text-emerald-600 uppercase tracking-widest flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse inline-block" />
+                  Live
+                </span>
+              </div>
 
-                {/* 2. Live Pricing Slider Dashboard */}
-                <div className="flex-1 w-full flex flex-col gap-6">
-                   <div className="flex flex-col gap-1 border-b border-black/5 pb-4">
-                      <span className="font-mono text-[9px] text-zinc-400 font-bold uppercase tracking-widest">Active Quotation</span>
-                      <AnimatePresence mode="wait">
-                         <motion.div 
-                            key={tier.id}
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -10 }}
-                            className="flex items-center gap-2"
-                         >
-                            <DollarSign className="h-5 w-5 text-black" strokeWidth={3} />
-                            <span className="font-display text-4xl sm:text-5xl font-bold text-black tracking-tight">{tier.price}</span>
-                         </motion.div>
-                      </AnimatePresence>
-                   </div>
+              {/* ── Live Price ── */}
+              <div className="px-5 pt-5 pb-3 flex items-end justify-between border-b border-[#3A3A3A]/5">
+                <div>
+                  <span className="font-mono text-[7px] text-[#3A3A3A]/25 font-bold uppercase tracking-widest block mb-1">Your Price</span>
+                  <div className="flex items-baseline gap-0.5">
+                    <span className="font-display text-[11px] text-[#3A3A3A]/30">$</span>
+                    <AnimatePresence mode="wait">
+                      <motion.span
+                        key={totalPrice}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.25 }}
+                        className="font-display text-5xl font-bold text-[#3A3A3A] tracking-tighter"
+                      >
+                        {totalPrice}
+                      </motion.span>
+                    </AnimatePresence>
+                  </div>
+                </div>
+                <span className="font-mono text-[7px] text-[#3A3A3A]/15 uppercase tracking-widest pb-2">Updates live</span>
+              </div>
 
-                   {/* Changing parameters */}
-                   <div className="flex flex-col gap-4">
-                      {/* Material Spec */}
-                      <div className="flex flex-col gap-2">
-                         <span className="font-mono text-[8px] sm:text-[9px] font-bold text-zinc-400 uppercase tracking-widest">Fabric Choice</span>
-                         <AnimatePresence mode="wait">
-                            <motion.div 
-                               key={tier.materials}
-                               initial={{ opacity: 0, x: 20 }}
-                               animate={{ opacity: 1, x: 0 }}
-                               exit={{ opacity: 0, x: -20 }}
-                               className="bg-zinc-50 border border-black/5 px-3 py-2 rounded-xl flex items-center justify-between"
-                            >
-                               <span className="font-display text-[10px] sm:text-[11px] font-bold text-black">{tier.materials}</span>
-                               <ArrowRightLeft className="h-3 w-3 text-zinc-300" />
-                            </motion.div>
-                         </AnimatePresence>
+              {/* ── Fabric Selector ── */}
+              <div className="px-5 pt-4 pb-3">
+                <span className="font-mono text-[7px] font-bold text-[#3A3A3A]/25 uppercase tracking-widest block mb-2.5">Fabric</span>
+                <div className="flex gap-2.5">
+                  {FABRIC_OPTIONS.map((f, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setFabricIdx(idx)}
+                      className={`relative flex-1 aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer transition-all duration-300
+                        ${idx === fabricIdx
+                          ? 'ring-2 ring-[#3A3A3A] ring-offset-2 shadow-lg scale-[1.02]'
+                          : 'opacity-60 hover:opacity-80 hover:scale-[1.01]'
+                        }`}
+                    >
+                      {/* Full-bleed fabric image */}
+                      <img src={f.img} className="absolute inset-0 w-full h-full object-cover" alt={f.label} />
+                      {/* Dark gradient overlay at bottom */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                      {/* Name + Price on the gradient */}
+                      <div className="absolute bottom-0 left-0 right-0 p-2.5 flex flex-col gap-0.5">
+                        <span className="font-display text-[8px] sm:text-[9px] font-bold text-white uppercase tracking-wider leading-tight">
+                          {f.label}
+                        </span>
+                        <span className="font-mono text-[7px] text-white/50">
+                          {f.price === 0 ? 'Base' : `+$${f.price}`}
+                        </span>
                       </div>
+                    </button>
+                  ))}
+                </div>
+              </div>
 
-                      {/* Vendor Spec */}
-                      <div className="flex flex-col gap-2">
-                         <span className="font-mono text-[8px] sm:text-[9px] font-bold text-zinc-400 uppercase tracking-widest">Artisan Level</span>
-                         <AnimatePresence mode="wait">
-                            <motion.div 
-                               key={tier.vendor}
-                               initial={{ opacity: 0, x: 20 }}
-                               animate={{ opacity: 1, x: 0 }}
-                               exit={{ opacity: 0, x: -20 }}
-                               className="bg-zinc-50 border border-black/5 px-3 py-2 rounded-xl flex items-center justify-between"
-                            >
-                               <span className="font-display text-[10px] sm:text-[11px] font-bold text-black">{tier.vendor}</span>
-                               <ArrowRightLeft className="h-3 w-3 text-zinc-300" />
-                            </motion.div>
-                         </AnimatePresence>
-                      </div>
-
-                      {/* Style Spec */}
-                      <div className="flex flex-col gap-2">
-                         <span className="font-mono text-[8px] sm:text-[9px] font-bold text-zinc-400 uppercase tracking-widest">Style Complexity</span>
-                         <AnimatePresence mode="wait">
-                            <motion.div 
-                               key={tier.style}
-                               initial={{ opacity: 0, x: 20 }}
-                               animate={{ opacity: 1, x: 0 }}
-                               exit={{ opacity: 0, x: -20 }}
-                               className="bg-zinc-50 border border-black/5 px-3 py-2 rounded-xl flex items-center justify-between"
-                            >
-                               <span className="font-display text-[10px] sm:text-[11px] font-bold text-black">{tier.style}</span>
-                               <ArrowRightLeft className="h-3 w-3 text-zinc-300" />
-                            </motion.div>
-                         </AnimatePresence>
-                      </div>
-                      
-                      {/* Process Indicator */}
-                      <div className="h-1.5 w-full bg-zinc-100 rounded-full mt-2 overflow-hidden">
-                         <motion.div 
-                            key={tier.id}
-                            initial={{ width: "0%" }}
-                            animate={{ width: "100%" }}
-                            transition={{ duration: 4.5, ease: "linear" }}
-                            className={`h-full ${tier.color} rounded-full`}
-                         />
-                      </div>
-                   </div>
-
-                   {/* Footer Tag */}
-                   <div className="mt-auto flex justify-center">
-                      <span className="bg-emerald-500/10 text-emerald-600 px-4 py-1.5 rounded-full font-mono text-[8px] font-bold uppercase tracking-widest border border-emerald-500/20">
-                         Budget Algorithm Active
+              {/* ── Sleeve Length ── */}
+              <div className="px-5 py-3">
+                <span className="font-mono text-[7px] font-bold text-[#3A3A3A]/25 uppercase tracking-widest block mb-2.5">Sleeve Length</span>
+                <div className="flex gap-2">
+                  {SLEEVE_OPTIONS.map((s, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setSleeveIdx(idx)}
+                      className={`flex-1 rounded-xl py-2.5 px-2 text-center border transition-all duration-200 cursor-pointer
+                        ${idx === sleeveIdx
+                          ? 'border-[#3A3A3A] bg-[#3A3A3A] text-white shadow-sm'
+                          : 'border-[#3A3A3A]/5 hover:border-[#3A3A3A]/15 text-[#3A3A3A]/40'
+                        }`}
+                    >
+                      <span className="font-display text-[9px] font-bold block">{s.label}</span>
+                      <span className={`font-mono text-[7px] mt-0.5 block ${idx === sleeveIdx ? 'text-white/50' : 'text-[#3A3A3A]/20'}`}>
+                        {s.price === 0 ? 'Base' : `+$${s.price}`}
                       </span>
-                   </div>
+                    </button>
+                  ))}
                 </div>
+              </div>
 
-             </div>
+              {/* ── Accessories Toggles ── */}
+              <div className="px-5 pt-2 pb-4">
+                <span className="font-mono text-[7px] font-bold text-[#3A3A3A]/25 uppercase tracking-widest block mb-2.5">Accessories</span>
+                <div className="grid grid-cols-2 gap-2">
+                  {ACCESSORIES.map((acc, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => toggleAccessory(idx)}
+                      className={`flex items-center justify-between rounded-xl py-2.5 px-3 border transition-all duration-200 cursor-pointer
+                        ${accessories[idx]
+                          ? 'border-[#3A3A3A]/15 bg-[#3A3A3A]/[0.04]'
+                          : 'border-[#3A3A3A]/5 hover:border-[#3A3A3A]/10'
+                        }`}
+                    >
+                      <div className="flex items-center gap-2">
+                        <div className={`h-4 w-4 rounded-md flex items-center justify-center transition-all
+                          ${accessories[idx] ? 'bg-[#3A3A3A]' : 'bg-[#3A3A3A]/5 border border-[#3A3A3A]/10'}`}>
+                          {accessories[idx] && <Check className="h-2.5 w-2.5 text-white" strokeWidth={3} />}
+                        </div>
+                        <span className={`font-display text-[9px] font-bold
+                          ${accessories[idx] ? 'text-[#3A3A3A]' : 'text-[#3A3A3A]/30'}`}>
+                          {acc.label}
+                        </span>
+                      </div>
+                      <span className={`font-mono text-[7px] ${accessories[idx] ? 'text-[#3A3A3A]/50' : 'text-[#3A3A3A]/15'}`}>
+                        +${acc.price}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* ── Summary Footer ── */}
+              <div className="px-5 pb-5 pt-1">
+                <div className="rounded-2xl bg-[#3A3A3A] p-4 flex items-center justify-between">
+                  <div className="flex flex-col gap-0.5">
+                    <span className="font-mono text-[7px] text-white/30 font-bold uppercase tracking-widest">Estimated Total</span>
+                    <div className="flex items-baseline gap-0.5">
+                      <span className="font-display text-[10px] text-white/40">$</span>
+                      <AnimatePresence mode="wait">
+                        <motion.span
+                          key={totalPrice}
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ duration: 0.2 }}
+                          className="font-display text-2xl font-bold text-white tracking-tight"
+                        >
+                          {totalPrice}
+                        </motion.span>
+                      </AnimatePresence>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 bg-white/10 rounded-xl px-4 py-2.5 border border-white/5">
+                    <span className="font-display text-[9px] font-bold text-white uppercase tracking-wider">Proceed</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
+      </div>
+
+      {/* Node Marker on Spine */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
+        <div className="w-1 h-1 rounded-full bg-[#3A3A3A]/20" />
       </div>
     </section>
   );

@@ -1,8 +1,7 @@
 "use client";
 
-import { useRef } from "react";
-import { LayoutGrid, Wand2, Store, CreditCard, Gem, LucideIcon } from "lucide-react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { LayoutGrid, Wand2, Store, CreditCard, Gem, LucideIcon, ArrowDown } from "lucide-react";
+import { motion } from "framer-motion";
 
 const iconMap: Record<string, LucideIcon> = {
   LayoutGrid: LayoutGrid,
@@ -31,100 +30,131 @@ type ExperienceSectionProps = {
 
 export function ExperienceSection({ data }: ExperienceSectionProps) {
   return (
-    <section id="experience" className="relative z-20 bg-white py-32 lg:py-48" data-theme="light">
+    <section id="experience" className="relative z-20 bg-white py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        {/* Section Header */}
-        <div className="mb-32 flex flex-col items-center gap-10 text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center gap-6"
-          >
-             {/* Section 'Label' Marker */}
-             <div className="flex h-12 w-32 items-center justify-center border-2 border-black/10 bg-zinc-50 font-display text-[10px] font-bold uppercase tracking-[0.3em] text-black/40 shadow-sm">
-                {data.badge}
-             </div>
-             
-             <h2 className="max-w-4xl font-display text-5xl font-medium leading-[1.1] tracking-tight text-black sm:text-7xl lg:text-8xl">
-               {data.title}
-             </h2>
-             
-             <p className="max-w-2xl font-ui text-lg text-black/50 sm:text-xl md:text-2xl">
-               {data.description}
-             </p>
-          </motion.div>
-        </div>
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-24">
 
-        {/* Alternating Experience Timeline */}
-        <div className="flex flex-col gap-32 lg:gap-48">
-          {data.steps.map((step, index) => {
-             const Icon = iconMap[step.icon] || Gem;
-             const isEven = index % 2 === 0;
-             
-             return (
-               <div 
-                 key={step.id} 
-                 className={`flex flex-col lg:items-center lg:gap-32 ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
-               >
-                 {/* Content Side */}
-                 <div className="flex flex-col gap-10 lg:w-1/2">
-                   <div className="flex flex-col gap-6">
-                     <motion.div 
-                        initial={{ opacity: 0, x: isEven ? -20 : 20 }}
+          {/* Left: Text Content */}
+          <div className="flex flex-col gap-6 lg:w-1/2 lg:sticky lg:top-32 lg:self-start">
+            <motion.span
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+            >
+              {data.badge}
+            </motion.span>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
+            >
+              {data.title}
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+            >
+              {data.description}
+            </motion.p>
+          </div>
+
+          {/* Right: Journey Pipeline */}
+          <div className="lg:w-1/2">
+            <div className="relative mx-auto w-full max-w-[460px]">
+              {/* Vertical Connector Line */}
+              <div className="absolute left-7 top-12 bottom-12 w-px bg-gradient-to-b from-[#3A3A3A]/10 via-[#3A3A3A]/5 to-transparent hidden sm:block" />
+
+              <div className="flex flex-col gap-0">
+                {data.steps.map((step, index) => {
+                  const Icon = iconMap[step.icon] || Gem;
+                  const isLast = index === data.steps.length - 1;
+
+                  return (
+                    <div key={step.id}>
+                      <motion.div
+                        initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="font-display text-sm font-bold uppercase tracking-[0.4em] text-black/20"
-                     >
-                        Phase 0{index + 1}
-                     </motion.div>
-                     <motion.h3 
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="font-display text-4xl font-medium tracking-tight text-black sm:text-6xl"
-                     >
-                        {step.title}
-                     </motion.h3>
-                     <motion.p 
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                        className="max-w-xl font-ui text-lg leading-relaxed text-black/40 sm:text-xl"
-                     >
-                        {step.description}
-                     </motion.p>
-                   </div>
-                 </div>
+                        transition={{ delay: 0.1 + index * 0.12, duration: 0.5, type: "spring" }}
+                        className={`relative flex items-start gap-5 rounded-2xl p-5 transition-all duration-300 cursor-default group
+                          ${isLast
+                            ? 'bg-[#3A3A3A] shadow-2xl shadow-[#3A3A3A]/20'
+                            : 'bg-white border border-[#3A3A3A]/5 shadow-sm hover:shadow-lg hover:border-[#3A3A3A]/10 hover:-translate-y-0.5'
+                          }`}
+                      >
+                        {/* Step Number + Icon */}
+                        <div className={`relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl transition-transform duration-500 group-hover:scale-105
+                          ${isLast ? 'bg-white/10' : 'bg-[#3A3A3A]/[0.04] border border-[#3A3A3A]/5'}`}
+                        >
+                          <Icon className={`h-5 w-5 ${isLast ? 'text-white/70' : 'text-[#3A3A3A]/40'}`} strokeWidth={1.5} />
+                          <span className={`absolute -top-1.5 -right-1.5 flex h-5 w-5 items-center justify-center rounded-full text-[8px] font-bold
+                            ${isLast ? 'bg-white text-[#3A3A3A]' : 'bg-[#3A3A3A] text-white'}`}
+                          >
+                            {index + 1}
+                          </span>
+                        </div>
 
-                 {/* Visual Side - Tech Mockup Aesthetic */}
-                 <div className="mt-12 lg:mt-0 lg:w-1/2 flex items-center justify-center">
-                    <motion.div 
-                       initial={{ opacity: 0, scale: 0.9 }}
-                       whileInView={{ opacity: 1, scale: 1 }}
-                       viewport={{ once: true }}
-                       className="relative h-96 w-96 rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl flex items-center justify-center group overflow-hidden"
-                    >
-                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.02),transparent)]" />
-                       <div className="relative z-10 flex h-24 w-24 items-center justify-center rounded-3xl bg-white shadow-xl group-hover:scale-110 transition-transform duration-700">
-                          <Icon className="h-10 w-10 text-black/40" strokeWidth={1.5} />
-                       </div>
-                       
-                       {/* Decorative tech lines */}
-                       <div className="absolute top-1/2 left-0 right-0 h-px bg-black opacity-[0.03] group-hover:opacity-[0.06] transition-opacity" />
-                       <div className="absolute top-0 bottom-0 left-1/2 w-px bg-black opacity-[0.03] group-hover:opacity-[0.06] transition-opacity" />
-                    </motion.div>
-                 </div>
-               </div>
-             )
-          })}
+                        {/* Step Info */}
+                        <div className="flex flex-col gap-1.5 pt-1">
+                          <span className={`font-display text-sm font-bold tracking-tight sm:text-base
+                            ${isLast ? 'text-white' : 'text-[#3A3A3A]'}`}
+                          >
+                            {step.title}
+                          </span>
+                          <span className={`font-ui text-xs leading-relaxed sm:text-sm
+                            ${isLast ? 'text-white/50' : 'text-[#3A3A3A]/40'}`}
+                          >
+                            {step.description}
+                          </span>
+                        </div>
+                      </motion.div>
+
+                      {/* Connector Arrow */}
+                      {!isLast && (
+                        <motion.div
+                          initial={{ opacity: 0, scaleY: 0 }}
+                          whileInView={{ opacity: 1, scaleY: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: 0.3 + index * 0.12, duration: 0.3 }}
+                          className="flex justify-center py-2 origin-top"
+                        >
+                          <div className="flex flex-col items-center gap-0.5">
+                            <div className="w-px h-4 bg-[#3A3A3A]/10" />
+                            <ArrowDown className="h-3 w-3 text-[#3A3A3A]/15" />
+                          </div>
+                        </motion.div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Footer Label */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.8 }}
+                className="mt-6 flex items-center justify-center"
+              >
+                <span className="font-mono text-[8px] font-bold text-[#3A3A3A]/20 uppercase tracking-widest">Effortless from start to finish</span>
+              </motion.div>
+            </div>
+          </div>
+
         </div>
       </div>
-      
+
       {/* Node Marker on Spine */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
-         <div className="w-1 h-1 rounded-full bg-black/20" />
+        <div className="w-1 h-1 rounded-full bg-[#3A3A3A]/20" />
       </div>
     </section>
   );
