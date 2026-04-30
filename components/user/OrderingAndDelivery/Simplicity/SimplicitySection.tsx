@@ -17,17 +17,17 @@ type SimplicitySectionProps = {
 };
 
 const FLOW_NODES = [
-  { icon: Sparkles, label: "Design", color: "bg-black" },
-  { icon: Package, label: "Produce", color: "bg-zinc-700" },
-  { icon: Truck, label: "Transit", color: "bg-zinc-600" },
+  { icon: Sparkles, label: "Design", color: "bg-[#3A3A3A]" },
+  { icon: Package, label: "Produce", color: "bg-zinc-600" },
+  { icon: Truck, label: "Transit", color: "bg-zinc-500" },
   { icon: CheckCircle2, label: "Deliver", color: "bg-[#3E1C01]" },
 ];
 
 export function SimplicitySection({ data }: SimplicitySectionProps) {
   return (
-    <section id="simplicity" className="relative w-full bg-zinc-50 py-24 lg:py-40 overflow-hidden" data-theme="light">
+    <section id="simplicity" className="relative w-full bg-[#F9F9F8] py-24 sm:py-32 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-32">
+        <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-24">
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
@@ -35,7 +35,7 @@ export function SimplicitySection({ data }: SimplicitySectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
@@ -43,17 +43,17 @@ export function SimplicitySection({ data }: SimplicitySectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl"
               >
                 {data.title}
-                <span className="block mt-2 text-2xl text-black/40 font-ui font-normal tracking-normal">{data.subtitle}</span>
+                <span className="block mt-2 text-xl text-[#3A3A3A]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/60 lg:text-2xl"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -69,12 +69,12 @@ export function SimplicitySection({ data }: SimplicitySectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-6 group"
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white border border-black/5 group-hover:bg-black group-hover:text-white transition-all">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all">
                     {i === 0 ? <Layout className="h-4 w-4" /> :
                      i === 1 ? <Layers className="h-4 w-4" /> :
                      <RefreshCcw className="h-4 w-4" />}
                   </div>
-                  <span className="font-ui text-lg text-black/70 italic">{feature}</span>
+                  <span className="font-ui text-sm text-[#3A3A3A]/70 italic sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>

@@ -22,7 +22,7 @@ const iconMap: any = {
 
 export function StylingSection({ data }: StylingSectionProps) {
   return (
-    <section className="relative w-full bg-zinc-50 py-24 lg:py-40" data-theme="light">
+    <section className="relative w-full bg-[#F9F9F8] py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col gap-20">
           {/* Header Content */}
@@ -31,7 +31,7 @@ export function StylingSection({ data }: StylingSectionProps) {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40"
+              className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
             >
               {data.badge}
             </motion.span>
@@ -40,7 +40,7 @@ export function StylingSection({ data }: StylingSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl lg:text-7xl"
+              className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
             >
               {data.title}
             </motion.h2>
@@ -49,7 +49,7 @@ export function StylingSection({ data }: StylingSectionProps) {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="max-w-xl font-ui text-lg leading-relaxed text-black/60 lg:text-2xl"
+              className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
             >
               {data.description}
             </motion.p>
@@ -68,7 +68,7 @@ export function StylingSection({ data }: StylingSectionProps) {
                   transition={{ delay: 0.3 + index * 0.1 }}
                   className="group relative flex flex-col gap-10 rounded-[3rem] border border-black/5 bg-white p-12 transition-all hover:scale-[1.03] hover:shadow-2xl shadow-black/5 overflow-hidden"
                 >
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-zinc-50 border border-zinc-100 transition-transform duration-500 group-hover:scale-110">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#F9F9F8] border border-[#3A3A3A]/5 transition-transform duration-500 group-hover:scale-110">
                     <Icon className="h-8 w-8 text-black opacity-40" strokeWidth={1.5} />
                   </div>
                   <div className="flex flex-col gap-4">
@@ -81,7 +81,7 @@ export function StylingSection({ data }: StylingSectionProps) {
                   </div>
                   
                   {/* Digital Suggestion Tag */}
-                  <div className="absolute top-8 right-8 flex items-center gap-2 px-3 py-1 bg-black text-white rounded-full opacity-0 translate-y-4 transition-all group-hover:opacity-100 group-hover:translate-y-0">
+                  <div className="absolute top-8 right-8 flex items-center gap-2 px-3 py-1 bg-[#3A3A3A] text-white rounded-full opacity-0 translate-y-4 transition-all group-hover:opacity-100 group-hover:translate-y-0">
                     <div className="h-1 w-1 rounded-full bg-[#00F0FF] animate-pulse" />
                     <span className="font-display text-[8px] font-bold uppercase tracking-widest">AI Match: 99%</span>
                   </div>

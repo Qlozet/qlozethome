@@ -22,7 +22,7 @@ const iconMap: any = {
 
 export function DiversitySection({ data }: DiversitySectionProps) {
   return (
-    <section className="relative w-full bg-zinc-50 py-24 lg:py-40" data-theme="light">
+    <section className="relative w-full bg-[#F9F9F8] py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col gap-16 lg:flex-row lg:items-center">
           {/* Left Column: Visual Grid of Styles */}
@@ -77,7 +77,7 @@ export function DiversitySection({ data }: DiversitySectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
@@ -86,7 +86,7 @@ export function DiversitySection({ data }: DiversitySectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl lg:text-7xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -95,7 +95,7 @@ export function DiversitySection({ data }: DiversitySectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/60 lg:text-2xl"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -112,7 +112,7 @@ export function DiversitySection({ data }: DiversitySectionProps) {
                      transition={{ delay: 0.3 + index * 0.1 }}
                      className="flex items-center gap-4 p-6 bg-white border border-black/5 rounded-2xl"
                    >
-                     <div className="h-10 w-10 flex items-center justify-center bg-zinc-50 border border-zinc-100 rounded-xl">
+                     <div className="h-10 w-10 flex items-center justify-center bg-[#F9F9F8] border border-[#3A3A3A]/5 rounded-xl">
                         <Icon className="h-5 w-5 text-black opacity-40" />
                      </div>
                      <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black/60">{feature}</span>

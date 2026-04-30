@@ -26,9 +26,9 @@ const WAYPOINTS = [
 
 export function TrackingSection({ data }: TrackingSectionProps) {
   return (
-    <section id="tracking" className="relative w-full bg-zinc-50 py-24 lg:py-40 overflow-hidden" data-theme="light">
+    <section id="tracking" className="relative w-full bg-[#F9F9F8] py-24 sm:py-32 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-32">
+        <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-24">
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
@@ -36,7 +36,7 @@ export function TrackingSection({ data }: TrackingSectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
@@ -44,17 +44,17 @@ export function TrackingSection({ data }: TrackingSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl"
               >
                 {data.title}
-                <span className="block mt-2 text-2xl text-black/40 font-ui font-normal tracking-normal">{data.subtitle}</span>
+                <span className="block mt-2 text-xl text-[#3A3A3A]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/60 lg:text-2xl"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -70,10 +70,10 @@ export function TrackingSection({ data }: TrackingSectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-4 group"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-white border border-black/5 group-hover:bg-black group-hover:text-white transition-all">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-white border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all">
                     <Navigation className="h-4 w-4" />
                   </div>
-                  <span className="font-ui text-lg text-black/70">{feature}</span>
+                  <span className="font-ui text-sm text-[#3A3A3A]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -146,7 +146,7 @@ export function TrackingSection({ data }: TrackingSectionProps) {
                           <MapPin className="h-4 w-4 text-[#3E1C01]" />
                         </div>
                       ) : (
-                        <div className={`h-3.5 w-3.5 rounded-full shadow-lg border-2 border-white ${i === 0 ? 'bg-black' : 'bg-[#3E1C01]/40'}`} />
+                        <div className={`h-3.5 w-3.5 rounded-full shadow-lg border-2 border-white ${i === 0 ? 'bg-[#3A3A3A]' : 'bg-[#3E1C01]/40'}`} />
                       )}
                       <span className="font-mono text-[6px] font-bold uppercase tracking-widest text-black/40 whitespace-nowrap">{wp.label}</span>
                     </motion.div>
@@ -161,7 +161,7 @@ export function TrackingSection({ data }: TrackingSectionProps) {
                     transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", times: [0, 0.35, 0.65, 1] }}
                     className="absolute h-6 w-6 -translate-x-1/2 -translate-y-1/2 z-10"
                   >
-                    <div className="h-full w-full rounded-full bg-black shadow-lg flex items-center justify-center">
+                    <div className="h-full w-full rounded-full bg-[#3A3A3A] shadow-lg flex items-center justify-center">
                       <Navigation className="h-2.5 w-2.5 text-white rotate-45" />
                     </div>
                     <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 h-1 w-4 bg-black/20 rounded-full blur-sm" />

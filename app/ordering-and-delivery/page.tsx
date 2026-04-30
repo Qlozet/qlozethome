@@ -29,7 +29,7 @@ export default function OrderingAndDeliveryPage() {
         {/* Journey Sections */}
         <div className="relative">
           {/* Continuous Journey Line (Dotted Trace) */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px border-l-2 border-dotted border-black/10 -translate-x-1/2 z-0 hidden lg:block" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-px border-l-2 border-dotted border-[#3A3A3A]/10 -translate-x-1/2 z-0 hidden lg:block" />
           
           <OrderingSection data={data.sections[0]} />
           <VendorAssignmentSection data={data.sections[1]} />

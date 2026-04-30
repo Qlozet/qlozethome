@@ -62,9 +62,9 @@ export function ProductionProcessSection({ data }: ProductionProcessSectionProps
   const completedUpTo = 2; // Steps 0 and 1 are "complete" in the demo
 
   return (
-    <section id="production" className="relative w-full bg-white py-24 lg:py-40" data-theme="light">
+    <section id="production" className="relative w-full bg-white py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-24">
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
@@ -72,7 +72,7 @@ export function ProductionProcessSection({ data }: ProductionProcessSectionProps
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
@@ -80,17 +80,17 @@ export function ProductionProcessSection({ data }: ProductionProcessSectionProps
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl"
               >
                 {data.title}
-                <span className="block mt-2 text-2xl text-black/40 font-ui font-normal tracking-normal">{data.subtitle}</span>
+                <span className="block mt-2 text-xl text-[#3A3A3A]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/60 lg:text-2xl"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -182,7 +182,7 @@ export function ProductionProcessSection({ data }: ProductionProcessSectionProps
                         whileTap={{ scale: 0.99 }}
                         className={`flex items-center gap-4 p-3.5 rounded-xl cursor-pointer transition-all duration-300 ${
                           isActive
-                            ? "bg-black text-white shadow-lg"
+                            ? "bg-[#3A3A3A] text-white shadow-lg"
                             : "bg-white border border-black/5 hover:bg-zinc-50"
                         }`}
                       >

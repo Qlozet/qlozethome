@@ -16,14 +16,14 @@ type ClosingSectionProps = {
 
 export function ClosingSection({ data }: ClosingSectionProps) {
   return (
-    <section className="relative w-full bg-white py-24 lg:py-48 overflow-hidden" data-theme="light">
+    <section className="relative w-full bg-white py-24 sm:py-32 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6 text-center">
         <div className="flex flex-col gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="flex h-20 w-20 items-center justify-center rounded-3xl bg-zinc-50 border border-zinc-100 shadow-xl"
+            className="flex h-20 w-20 items-center justify-center rounded-3xl bg-[#F9F9F8] border border-[#3A3A3A]/5 shadow-xl"
           >
             <Sparkles className="h-10 w-10 text-black/20" />
           </motion.div>
@@ -33,7 +33,7 @@ export function ClosingSection({ data }: ClosingSectionProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tighter text-black sm:text-7xl lg:text-[6.5rem]"
+            className="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl lg:text-[6.5rem]"
           >
             {data.title}
           </motion.h2>
@@ -43,7 +43,7 @@ export function ClosingSection({ data }: ClosingSectionProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="max-w-2xl font-ui text-lg leading-relaxed text-black/60 lg:text-2xl"
+            className="max-w-2xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
           >
             {data.description}
           </motion.p>
@@ -57,7 +57,7 @@ export function ClosingSection({ data }: ClosingSectionProps) {
           >
             <Link
               href={data.cta.href}
-              className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-black px-12 text-[10px] font-bold uppercase tracking-[0.3em] text-white shadow-2xl transition-all hover:scale-[1.05] active:scale-95"
+              className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-[#3A3A3A] px-12 text-[10px] font-bold uppercase tracking-[0.3em] text-white shadow-2xl transition-all hover:scale-[1.05] active:scale-95"
             >
               <span className="relative z-10">{data.cta.label}</span>
               <div className="absolute inset-0 z-0 bg-gradient-to-r from-zinc-800 to-black opacity-0 transition-opacity group-hover:opacity-100" />

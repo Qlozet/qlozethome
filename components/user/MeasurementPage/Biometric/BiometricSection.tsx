@@ -16,9 +16,9 @@ type BiometricSectionProps = {
 
 export function BiometricSection({ data }: BiometricSectionProps) {
   return (
-    <section id="biometric" className="relative w-full bg-white py-24 lg:py-40" data-theme="light">
+    <section id="biometric" className="relative w-full bg-white py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-32">
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-24">
           {/* Left Column: Visual Scanner Grid */}
           <div className="relative order-2 lg:order-1 lg:w-1/2">
             <div className="relative aspect-square w-full max-w-lg mx-auto rounded-[3rem] bg-zinc-50 border border-zinc-100 shadow-xl overflow-hidden group">
@@ -205,7 +205,7 @@ export function BiometricSection({ data }: BiometricSectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
@@ -214,7 +214,7 @@ export function BiometricSection({ data }: BiometricSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl lg:text-7xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -223,7 +223,7 @@ export function BiometricSection({ data }: BiometricSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/60 lg:text-2xl"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -239,10 +239,10 @@ export function BiometricSection({ data }: BiometricSectionProps) {
                   transition={{ delay: 0.3 + index * 0.1 }}
                   className="flex items-center gap-6"
                 >
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-50 border border-zinc-100">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F9F9F8] border border-[#3A3A3A]/5">
                     <CheckCircle2 className="h-4 w-4 text-black opacity-40" strokeWidth={1.5} />
                   </div>
-                  <span className="font-ui text-lg text-black/70">
+                  <span className="font-ui text-sm text-[#3A3A3A]/70 sm:text-base">
                     {feature}
                   </span>
                 </motion.div>

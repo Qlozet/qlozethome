@@ -16,7 +16,7 @@ type ClosingCTAProps = {
 
 export function ClosingCTA({ data }: ClosingCTAProps) {
   return (
-    <section className="relative w-full bg-white py-24 lg:py-40 overflow-hidden" data-theme="light">
+    <section className="relative w-full bg-white py-24 sm:py-32 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="relative rounded-[4rem] bg-zinc-900 px-8 py-20 text-center shadow-2xl lg:px-20 lg:py-32 overflow-hidden">
           {/* Background Gradient */}
@@ -38,7 +38,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-tight tracking-tighter text-white sm:text-7xl lg:text-8xl"
+                className="font-display text-4xl font-medium leading-tight tracking-tight text-white sm:text-7xl lg:text-8xl"
               >
                 {data.title}
               </motion.h2>
@@ -47,7 +47,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="mx-auto max-w-2xl font-ui text-lg leading-relaxed text-white/60 lg:text-2xl"
+                className="mx-auto max-w-2xl font-ui text-base leading-relaxed text-white/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>

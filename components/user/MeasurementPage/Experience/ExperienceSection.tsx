@@ -23,7 +23,7 @@ const iconMap: any = {
 
 export function ExperienceSection({ data }: ExperienceSectionProps) {
   return (
-    <section className="relative w-full bg-white py-24 lg:py-40" data-theme="light">
+    <section className="relative w-full bg-white py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col gap-20">
           <div className="flex flex-col gap-8 text-center items-center mx-auto max-w-3xl">
@@ -31,7 +31,7 @@ export function ExperienceSection({ data }: ExperienceSectionProps) {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40"
+              className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
             >
               {data.badge}
             </motion.span>
@@ -40,7 +40,7 @@ export function ExperienceSection({ data }: ExperienceSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl lg:text-7xl"
+              className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
             >
               {data.title}
             </motion.h2>
@@ -49,7 +49,7 @@ export function ExperienceSection({ data }: ExperienceSectionProps) {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="max-w-xl font-ui text-lg leading-relaxed text-black/60 lg:text-2xl"
+              className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
             >
               {data.description}
             </motion.p>
@@ -65,7 +65,7 @@ export function ExperienceSection({ data }: ExperienceSectionProps) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + index * 0.15 }}
-                  className="group relative flex flex-col gap-10 rounded-[3rem] border border-black/5 bg-zinc-50 p-10 transition-all hover:bg-black hover:text-white"
+                  className="group relative flex flex-col gap-10 rounded-[3rem] border border-[#3A3A3A]/5 bg-[#F9F9F8] p-10 transition-all hover:bg-[#3A3A3A] hover:text-white"
                 >
                   <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-2xl transition-transform duration-500 group-hover:scale-110">
                     <Icon className="h-8 w-8 text-black" strokeWidth={1.5} />

@@ -16,7 +16,7 @@ type ConfidenceSectionProps = {
 
 export function ConfidenceSection({ data }: ConfidenceSectionProps) {
   return (
-    <section className="relative w-full bg-black py-24 lg:py-40" data-theme="dark">
+    <section className="relative w-full bg-[#0A0A0A] py-24 sm:py-32" data-theme="dark">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col gap-20">
           <div className="flex flex-col gap-8 text-center items-center mx-auto max-w-3xl">
@@ -24,7 +24,7 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-white/40"
+              className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-white/40"
             >
               {data.badge}
             </motion.span>
@@ -33,7 +33,7 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-white sm:text-6xl lg:text-7xl"
+              className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl"
             >
               {data.title}
             </motion.h2>
@@ -42,7 +42,7 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="max-w-xl font-ui text-lg leading-relaxed text-white/50 lg:text-2xl"
+              className="max-w-xl font-ui text-base leading-relaxed text-white/50 sm:text-lg"
             >
               {data.description}
             </motion.p>

@@ -69,9 +69,9 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
   const vendor = VENDORS[selectedVendor];
 
   return (
-    <section id="vendor" className="relative w-full bg-zinc-50 py-24 lg:py-40 overflow-hidden" data-theme="light">
+    <section id="vendor" className="relative w-full bg-[#F9F9F8] py-24 sm:py-32 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-24">
           {/* Right: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2 order-2 lg:order-2">
             <div className="flex flex-col gap-6">
@@ -79,7 +79,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
@@ -87,17 +87,17 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl"
               >
                 {data.title}
-                <span className="block mt-2 text-2xl text-black/40 font-ui font-normal tracking-normal">{data.subtitle}</span>
+                <span className="block mt-2 text-xl text-[#3A3A3A]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/60 lg:text-2xl"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -117,7 +117,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                     <Star className="h-5 w-5 text-zinc-900" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="font-display text-lg font-bold text-black">{feature}</span>
+                    <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
                     <div className="h-0.5 w-12 bg-black/10 mt-1" />
                   </div>
                 </motion.div>
@@ -147,7 +147,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                 {/* Console Header */}
                 <div className="flex items-center justify-between p-6 sm:p-8 pb-0">
                   <div className="flex items-center gap-3">
-                    <div className="h-8 w-8 rounded-xl bg-black flex items-center justify-center">
+                    <div className="h-8 w-8 rounded-xl bg-[#3A3A3A] flex items-center justify-center">
                       <Zap className="h-3.5 w-3.5 text-white" />
                     </div>
                     <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black">Vendor Match</span>
@@ -170,7 +170,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                         whileTap={{ scale: 0.99 }}
                         className={`relative flex items-center gap-4 p-4 rounded-2xl cursor-pointer transition-all duration-300 ${
                           isSelected
-                            ? "bg-black text-white shadow-xl"
+                            ? "bg-[#3A3A3A] text-white shadow-xl"
                             : "bg-zinc-50 text-black border border-black/5 hover:bg-zinc-100"
                         }`}
                       >
