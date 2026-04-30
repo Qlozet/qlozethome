@@ -20,7 +20,7 @@ export function BespokeSection({ data }: BespokeSectionProps) {
   const contentY = useTransform(scrollYProgress, [0, 1], ["10%", "-10%"]);
 
   return (
-    <section ref={containerRef} id="bespoke" className="relative z-30 overflow-hidden bg-[#FAFAFA] px-6 py-32 lg:py-48">
+    <section ref={containerRef} id="bespoke" className="relative z-30 overflow-hidden bg-[#F9F9F8] px-6 py-24 sm:py-32">
       {/* Massive Background Marquee */}
       <div className="absolute left-0 top-1/2 z-0 flex w-full -translate-y-1/2 -rotate-3 select-none whitespace-nowrap opacity-[0.03] mix-blend-multiply">
         <motion.div
@@ -37,10 +37,10 @@ export function BespokeSection({ data }: BespokeSectionProps) {
       <div className="relative z-10 mx-auto max-w-[94rem]">
         {/* Title Group */}
         <div className="mb-24 flex flex-col items-center gap-6 text-center lg:mb-40">
-          <span className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40">
+          <span className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40">
              Logistics Elite
           </span>
-          <h2 className="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tighter text-black sm:text-7xl lg:text-[5.5rem]">
+          <h2 className="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl lg:text-[5.5rem]">
             {data.title}
           </h2>
         </div>

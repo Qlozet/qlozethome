@@ -27,14 +27,14 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
   const pathHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section ref={containerRef} id="how-it-works" className="relative z-20 overflow-hidden bg-[#050505] px-6 py-32 lg:py-48">
+    <section ref={containerRef} id="how-it-works" className="relative z-20 overflow-hidden bg-[#050505] px-6 py-24 sm:py-32">
       <div className="mx-auto max-w-[94rem]">
         {/* Title Group */}
         <div className="mb-24 flex flex-col items-center gap-6 text-center lg:mb-32">
-          <span className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-white/30">
+          <span className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-white/30">
             The Process
           </span>
-          <h2 className="font-display text-5xl font-medium tracking-tighter text-white sm:text-7xl lg:text-[5.5rem]">
+          <h2 className="font-display text-5xl font-medium tracking-tight text-white sm:text-7xl lg:text-[5.5rem]">
             {data.title}
           </h2>
         </div>

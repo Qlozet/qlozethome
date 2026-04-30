@@ -30,7 +30,7 @@ const PLATFORM_SIGNALS = [
 
 export function GrowthSection({ data }: GrowthSectionProps) {
   return (
-    <section className="relative z-20 bg-[#050505] px-6 py-14 lg:py-48 overflow-hidden" data-theme="dark">
+    <section className="relative z-20 bg-[#050505] px-6 py-24 sm:py-32 overflow-hidden" data-theme="dark">
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
         style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
 
@@ -38,9 +38,9 @@ export function GrowthSection({ data }: GrowthSectionProps) {
         {/* Header */}
         <div className="mb-10 flex flex-col gap-6 text-center items-center lg:mb-20">
           <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-            className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-white/30">{data.badge}</motion.span>
+            className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-white/30">{data.badge}</motion.span>
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="max-w-3xl font-display text-4xl font-medium leading-[1.05] tracking-tighter text-white sm:text-6xl lg:text-7xl">{data.title}</motion.h2>
+            className="max-w-3xl font-display text-4xl font-medium leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">{data.title}</motion.h2>
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
             className="max-w-xl font-ui text-lg text-white/40">{data.description}</motion.p>
         </div>
@@ -50,7 +50,7 @@ export function GrowthSection({ data }: GrowthSectionProps) {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="group rounded-[2rem] sm:rounded-[3rem] bg-white/[0.03] border border-white/5 p-5 sm:p-8 transition-all duration-500 hover:bg-white/[0.08] hover:border-white/10 hover:-translate-y-2 cursor-pointer">
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-10 w-10 rounded-xl bg-white text-black flex items-center justify-center"><Zap className="h-4 w-4" /></div>
+              <div className="h-10 w-10 rounded-xl bg-white text-[#3A3A3A] flex items-center justify-center"><Zap className="h-4 w-4" /></div>
               <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">{data.features[0]?.title}</span>
             </div>
             <div className="bg-white/[0.03] rounded-2xl border border-white/5 p-5">
@@ -74,7 +74,7 @@ export function GrowthSection({ data }: GrowthSectionProps) {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
             className="group rounded-[2rem] sm:rounded-[3rem] bg-white/[0.03] border border-white/5 p-5 sm:p-8 transition-all duration-500 hover:bg-white/[0.08] hover:border-white/10 hover:-translate-y-2 cursor-pointer">
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-10 w-10 rounded-xl bg-white text-black flex items-center justify-center"><Search className="h-4 w-4" /></div>
+              <div className="h-10 w-10 rounded-xl bg-white text-[#3A3A3A] flex items-center justify-center"><Search className="h-4 w-4" /></div>
               <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">{data.features[1]?.title}</span>
             </div>
             <div className="bg-white/[0.03] rounded-2xl border border-white/5 p-5">
@@ -105,7 +105,7 @@ export function GrowthSection({ data }: GrowthSectionProps) {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
             className="group rounded-[2rem] sm:rounded-[3rem] bg-white/[0.03] border border-white/5 p-5 sm:p-8 transition-all duration-500 hover:bg-white/[0.08] hover:border-white/10 hover:-translate-y-2 cursor-pointer">
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-10 w-10 rounded-xl bg-white text-black flex items-center justify-center"><Globe className="h-4 w-4" /></div>
+              <div className="h-10 w-10 rounded-xl bg-white text-[#3A3A3A] flex items-center justify-center"><Globe className="h-4 w-4" /></div>
               <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">{data.features[2]?.title}</span>
             </div>
             <div className="bg-white/[0.03] rounded-2xl border border-white/5 p-5">

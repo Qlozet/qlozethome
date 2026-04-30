@@ -18,9 +18,9 @@ type RealTimeTrackingSectionProps = {
 
 export function RealTimeTrackingSection({ data }: RealTimeTrackingSectionProps) {
   return (
-    <section id={data.id} className="relative z-10 bg-white py-16 lg:py-48 overflow-hidden" data-theme="light">
+    <section id={data.id} className="relative z-10 bg-white py-24 sm:py-32 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col gap-16 lg:flex-row lg:items-center lg:gap-32">
+        <div className="flex flex-col gap-16 lg:flex-row lg:items-center lg:gap-24">
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
@@ -28,7 +28,7 @@ export function RealTimeTrackingSection({ data }: RealTimeTrackingSectionProps) 
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
@@ -37,7 +37,7 @@ export function RealTimeTrackingSection({ data }: RealTimeTrackingSectionProps) 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-3xl font-medium leading-[1.1] tracking-tighter text-black sm:text-5xl lg:text-6xl"
+                className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-5xl lg:text-6xl"
               >
                 {data.title}
               </motion.h2>
@@ -47,7 +47,7 @@ export function RealTimeTrackingSection({ data }: RealTimeTrackingSectionProps) 
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/40 lg:text-2xl"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/40 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -63,10 +63,10 @@ export function RealTimeTrackingSection({ data }: RealTimeTrackingSectionProps) 
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-6 group"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-50 border border-black/5 group-hover:bg-black group-hover:text-white transition-all shadow-sm">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#F9F9F8] border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all shadow-sm">
                     <History className="h-4 w-4" strokeWidth={1.5} />
                   </div>
-                  <span className="font-display text-lg font-medium text-black/80">{feature}</span>
+                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -119,7 +119,7 @@ export function RealTimeTrackingSection({ data }: RealTimeTrackingSectionProps) 
                    
                    {/* Destination Pin */}
                    <div className="absolute top-[50px] left-[350px] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-1">
-                      <div className="h-6 w-6 bg-black rounded-full shadow-xl flex items-center justify-center">
+                      <div className="h-6 w-6 bg-[#3A3A3A] rounded-full shadow-xl flex items-center justify-center">
                          <MapPin className="h-3 w-3 text-white" />
                       </div>
                       <div className="bg-white px-2 py-1 rounded-md shadow-md border border-black/5">
@@ -190,7 +190,7 @@ export function RealTimeTrackingSection({ data }: RealTimeTrackingSectionProps) 
                    initial={{ opacity: 0, y: 100 }}
                    whileInView={{ opacity: 1, y: 0 }}
                    transition={{ delay: 0.5, type: "spring", stiffness: 100 }}
-                   className="absolute bottom-6 inset-x-6 z-40 bg-black text-white shadow-2xl p-5 rounded-[2rem] border border-white/10"
+                   className="absolute bottom-6 inset-x-6 z-40 bg-[#3A3A3A] text-white shadow-2xl p-5 rounded-[2rem] border border-white/10"
                 >
                    <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">

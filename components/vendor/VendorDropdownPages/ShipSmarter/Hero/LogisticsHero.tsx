@@ -56,21 +56,21 @@ export function LogisticsHero({ data }: LogisticsHeroProps) {
             <div className="flex flex-col gap-8">
               <motion.span 
                 variants={itemVariants}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
               
               <motion.h1
                 variants={itemVariants}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl lg:text-7xl xl:text-8xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl xl:text-8xl"
               >
                 {data.title}
               </motion.h1>
               
               <motion.p
                 variants={itemVariants}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/40 sm:text-2xl"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/40 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -82,7 +82,7 @@ export function LogisticsHero({ data }: LogisticsHeroProps) {
             >
               <Link
                 href={data.cta.href}
-                className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-black px-12 text-[11px] font-bold uppercase tracking-[0.35em] text-white transition-all hover:scale-[1.02] active:scale-95 shadow-2xl"
+                className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-[#3A3A3A] px-12 text-[11px] font-bold uppercase tracking-[0.35em] text-white transition-all hover:scale-[1.02] active:scale-95 shadow-2xl"
               >
                 <span className="relative z-10">{data.cta.label}</span>
               </Link>
@@ -152,7 +152,7 @@ export function LogisticsHero({ data }: LogisticsHeroProps) {
                             <div className="absolute left-6 -translate-x-1/2 h-16 w-16 bg-black/[0.03] rounded-full blur-xl animate-pulse" />
                          )}
 
-                         <div className={`h-12 w-12 lg:h-14 lg:w-14 rounded-2xl flex items-center justify-center transition-all duration-700 shadow-xl z-20 border bg-white group-hover/step:scale-110 group-hover/step:bg-black group-hover/step:text-white ${i === 0 ? 'border-black/20 shadow-black/5' : 'border-black/5'}`}>
+                         <div className={`h-12 w-12 lg:h-14 lg:w-14 rounded-2xl flex items-center justify-center transition-all duration-700 shadow-xl z-20 border bg-white group-hover/step:scale-110 group-hover/step:bg-[#3A3A3A] group-hover/step:text-white ${i === 0 ? 'border-[#3A3A3A]/20 shadow-[#3A3A3A]/5' : 'border-[#3A3A3A]/5'}`}>
                             <step.icon className={`h-5 w-5 lg:h-6 lg:w-6 ${i === 0 ? 'text-black' : 'text-zinc-500'} group-hover/step:text-white transition-colors`} strokeWidth={1.5} />
                          </div>
 
@@ -189,7 +189,7 @@ export function LogisticsHero({ data }: LogisticsHeroProps) {
 
       {/* Delivery Path Entry */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
-        <div className="w-1.5 h-1.5 rounded-full bg-black shadow-sm" />
+        <div className="w-1.5 h-1.5 rounded-full bg-[#3A3A3A] shadow-sm" />
       </div>
     </section>
   );

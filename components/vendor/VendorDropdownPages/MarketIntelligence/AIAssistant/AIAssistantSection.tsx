@@ -17,7 +17,7 @@ const AI_MESSAGES = [
 
 export function AIAssistantSection({ data }: AssistantSectionProps) {
   return (
-    <section className="relative z-30 bg-[#050505] px-6 py-14 lg:py-48 overflow-hidden" data-theme="dark">
+    <section className="relative z-30 bg-[#050505] px-6 py-24 sm:py-32 overflow-hidden" data-theme="dark">
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
         style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.3) 0.5px, transparent 0.5px)', backgroundSize: '32px 32px' }} />
 
@@ -30,9 +30,9 @@ export function AIAssistantSection({ data }: AssistantSectionProps) {
               <BrainCircuit className="h-7 w-7 text-white/40" strokeWidth={1} />
             </motion.div>
             <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-              className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-white/30">{data.badge}</motion.span>
+              className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-white/30">{data.badge}</motion.span>
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              className="font-display text-4xl font-medium leading-[1.05] tracking-tighter text-white sm:text-6xl lg:text-7xl">{data.title}</motion.h2>
+              className="font-display text-4xl font-medium leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">{data.title}</motion.h2>
             <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
               className="max-w-md font-ui text-lg text-white/40">{data.description}</motion.p>
             
@@ -42,7 +42,7 @@ export function AIAssistantSection({ data }: AssistantSectionProps) {
                 const Icon = iconMap[feature.icon] || Sparkles;
                 return (
                   <div key={i} className="flex items-center gap-4 group">
-                    <div className="h-9 w-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+                    <div className="h-9 w-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-[#3A3A3A] transition-all">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
                     <span className="font-display text-sm font-medium text-white/60 group-hover:text-white transition-colors">{feature.title}</span>
@@ -62,7 +62,7 @@ export function AIAssistantSection({ data }: AssistantSectionProps) {
             <div className="flex items-center justify-between pb-5 border-b border-white/5 mb-6">
               <div className="flex items-center gap-3">
                 <motion.div animate={{ rotate: [0, 360] }} transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                  className="h-8 w-8 rounded-xl bg-white text-black flex items-center justify-center">
+                  className="h-8 w-8 rounded-xl bg-white text-[#3A3A3A] flex items-center justify-center">
                   <Sparkles className="h-3.5 w-3.5" />
                 </motion.div>
                 <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">AI Assistant</span>

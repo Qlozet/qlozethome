@@ -41,21 +41,21 @@ export function WhySection({ data }: WhySectionProps) {
   };
 
   return (
-    <section id="why" className="relative z-10 bg-white px-6 py-24 sm:py-32 lg:py-48">
+    <section id="why" className="relative z-10 bg-white px-6 py-24 sm:py-32">
       <motion.div 
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="mx-auto flex max-w-[94rem] flex-col gap-20 lg:flex-row lg:items-start lg:gap-32"
+        className="mx-auto flex max-w-[94rem] flex-col gap-20 lg:flex-row lg:items-start lg:gap-24"
       >
         {/* Left Sticky Title Group */}
         <div className="lg:sticky lg:top-40 lg:w-5/12">
           <div className="flex flex-col gap-8">
-            <motion.span variants={itemVariants} className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40">
+            <motion.span variants={itemVariants} className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40">
               The Impact
             </motion.span>
-            <motion.h2 variants={itemVariants} className="font-display text-5xl font-medium leading-[1.05] tracking-tighter text-black sm:text-7xl lg:text-[5.5rem]">
+            <motion.h2 variants={itemVariants} className="font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl lg:text-[5.5rem]">
               {data.title}
             </motion.h2>
           </div>
@@ -69,7 +69,7 @@ export function WhySection({ data }: WhySectionProps) {
               <motion.div
                 key={tool.title}
                 variants={itemVariants}
-                className="group flex flex-col gap-10 rounded-[3rem] bg-zinc-50 p-10 shadow-xl shadow-zinc-200/20 transition-all duration-700 hover:-translate-y-2 hover:bg-white hover:shadow-2xl hover:shadow-black/5 lg:p-14"
+                className="group flex flex-col gap-10 rounded-[3rem] bg-[#F9F9F8] p-10 shadow-xl shadow-zinc-200/20 transition-all duration-700 hover:-translate-y-2 hover:bg-white hover:shadow-2xl hover:shadow-[#3A3A3A]/5 lg:p-14"
               >
                 <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-black/5 transition-transform duration-700 group-hover:scale-110">
                   <div className="h-10 w-10 text-black/40 transition-colors duration-700 group-hover:text-black">
@@ -97,7 +97,7 @@ export function WhySection({ data }: WhySectionProps) {
               <motion.div
                 key={tool.title}
                 variants={itemVariants}
-                className="group flex flex-col gap-10 rounded-[3rem] bg-zinc-50 p-10 shadow-xl shadow-zinc-200/20 transition-all duration-700 hover:-translate-y-2 hover:bg-white hover:shadow-2xl hover:shadow-black/5 lg:p-14"
+                className="group flex flex-col gap-10 rounded-[3rem] bg-[#F9F9F8] p-10 shadow-xl shadow-zinc-200/20 transition-all duration-700 hover:-translate-y-2 hover:bg-white hover:shadow-2xl hover:shadow-[#3A3A3A]/5 lg:p-14"
               >
                 <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-black/5 transition-transform duration-700 group-hover:scale-110">
                   <div className="h-10 w-10 text-black/40 transition-colors duration-700 group-hover:text-black">

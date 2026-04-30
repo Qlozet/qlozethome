@@ -16,7 +16,7 @@ type ClosingCTAProps = {
 
 export function ClosingCTA({ data }: ClosingCTAProps) {
   return (
-    <section className="relative z-30 overflow-hidden bg-white px-6 py-32 lg:py-48" data-theme="light">
+    <section className="relative z-30 overflow-hidden bg-white px-6 py-24 sm:py-32" data-theme="light">
       {/* Background Decorative Element */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.02),transparent)]" />
       
@@ -26,7 +26,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="flex h-16 w-16 items-center justify-center rounded-3xl bg-black shadow-2xl"
+            className="flex h-16 w-16 items-center justify-center rounded-3xl bg-[#3A3A3A] shadow-2xl"
           >
             <Sparkles className="h-8 w-8 text-white" />
           </motion.div>
@@ -36,7 +36,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-display text-5xl font-medium leading-[1.05] tracking-tight text-black sm:text-7xl lg:text-[6rem]"
+              className="font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl lg:text-[6rem]"
             >
               {data.title}
             </motion.h2>
@@ -57,7 +57,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
           >
             <Link
               href={data.cta.href}
-              className="group relative inline-flex h-20 items-center justify-center overflow-hidden rounded-full bg-black px-12 text-[12px] font-bold uppercase tracking-[0.4em] text-white transition-all hover:scale-[1.02] active:scale-95"
+              className="group relative inline-flex h-20 items-center justify-center overflow-hidden rounded-full bg-[#3A3A3A] px-12 text-[12px] font-bold uppercase tracking-[0.4em] text-white transition-all hover:scale-[1.02] active:scale-95"
             >
               <span className="relative z-10 flex items-center gap-4">
                 {data.cta.label}
@@ -76,7 +76,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
             className="mt-8 flex flex-wrap justify-center gap-x-12 gap-y-6"
           >
             {["Make smarter decisions.", "Grow faster.", "Stay ahead of the competition."].map((benefit) => (
-              <div key={benefit} className="flex items-center gap-3 font-display text-[10px] font-bold uppercase tracking-[0.2em] text-black/30">
+              <div key={benefit} className="flex items-center gap-3 font-display text-[10px] font-bold uppercase tracking-[0.2em] text-[#3A3A3A]/30">
                 <div className="h-1 w-1 rounded-full bg-black/20" />
                 {benefit}
               </div>

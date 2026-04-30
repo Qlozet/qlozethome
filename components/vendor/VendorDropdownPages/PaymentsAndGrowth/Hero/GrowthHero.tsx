@@ -45,37 +45,37 @@ export function GrowthHero({ data }: GrowthHeroProps) {
               <motion.span variants={itemVariants} className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40">
                 {data.badge}
               </motion.span>
-              <motion.h1 variants={itemVariants} className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl lg:text-7xl xl:text-8xl">
+              <motion.h1 variants={itemVariants} className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl xl:text-8xl">
                 {data.title}
               </motion.h1>
-              <motion.p variants={itemVariants} className="max-w-xl font-ui text-lg leading-relaxed text-black/40 sm:text-2xl">
+              <motion.p variants={itemVariants} className="max-w-xl font-ui text-lg leading-relaxed text-[#3A3A3A]/40 sm:text-2xl">
                 {data.description}
               </motion.p>
             </div>
 
             <motion.div variants={itemVariants} className="flex flex-col gap-6 sm:flex-row sm:items-center">
-              <Link href={data.cta.href} className="group relative inline-flex h-16 items-center justify-center gap-4 overflow-hidden rounded-full bg-black px-12 text-[11px] font-bold uppercase tracking-[0.35em] text-white transition-all hover:scale-[1.02] active:scale-95 shadow-2xl">
+              <Link href={data.cta.href} className="group relative inline-flex h-16 items-center justify-center gap-4 overflow-hidden rounded-full bg-[#3A3A3A] px-12 text-[11px] font-bold uppercase tracking-[0.35em] text-white transition-all hover:scale-[1.02] active:scale-95 shadow-2xl">
                 <span className="relative z-10">{data.cta.label}</span>
                 <ArrowRight className="h-4 w-4 relative z-10 transition-transform group-hover:translate-x-1" />
               </Link>
             </motion.div>
 
-            <motion.p variants={itemVariants} className="font-ui text-sm italic text-black/30">
+            <motion.p variants={itemVariants} className="font-ui text-sm italic text-[#3A3A3A]/30">
               {data.closing}
             </motion.p>
           </div>
 
           {/* Right: Revenue Dashboard */}
           <div className="relative mt-12 lg:mt-0 lg:w-1/2 flex items-center justify-center">
-             <div className="relative w-full max-w-[520px] rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-6 sm:p-8 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
+             <div className="relative w-full max-w-[520px] rounded-[3rem] bg-[#F9F9F8] border border-[#3A3A3A]/5 shadow-2xl p-6 sm:p-8 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
                 
                 {/* Dashboard Header */}
                 <div className="flex items-center justify-between pb-5 border-b border-black/5 mb-6">
                    <div className="flex items-center gap-3">
-                      <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-black text-white">
+                      <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-[#3A3A3A] text-white">
                          <BarChart3 className="h-3.5 w-3.5" />
                       </div>
-                      <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black">Revenue Overview</span>
+                      <span className="font-display text-[10px] font-bold uppercase tracking-widest text-[#3A3A3A]">Revenue Overview</span>
                    </div>
                    <div className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full border border-black/5 shadow-sm">
                       <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -89,10 +89,10 @@ export function GrowthHero({ data }: GrowthHeroProps) {
                       className="bg-white rounded-2xl border border-black/5 shadow-md p-5 flex flex-col gap-2 cursor-pointer hover:shadow-xl transition-shadow"
                    >
                       <div className="flex items-center gap-2">
-                         <DollarSign className="h-3.5 w-3.5 text-black/30" />
-                         <span className="font-mono text-[8px] font-bold text-black/40 uppercase tracking-widest">This Month</span>
+                         <DollarSign className="h-3.5 w-3.5 text-[#3A3A3A]/30" />
+                         <span className="font-mono text-[8px] font-bold text-[#3A3A3A]/40 uppercase tracking-widest">This Month</span>
                       </div>
-                      <span className="font-display text-2xl font-bold text-black tracking-tight">₦4.2M</span>
+                      <span className="font-display text-2xl font-bold text-[#3A3A3A] tracking-tight">₦4.2M</span>
                       <div className="flex items-center gap-1.5">
                          <TrendingUp className="h-3 w-3 text-emerald-500" />
                          <span className="font-mono text-[9px] font-bold text-emerald-600">+24%</span>
@@ -103,10 +103,10 @@ export function GrowthHero({ data }: GrowthHeroProps) {
                       className="bg-white rounded-2xl border border-black/5 shadow-md p-5 flex flex-col gap-2 cursor-pointer hover:shadow-xl transition-shadow"
                    >
                       <div className="flex items-center gap-2">
-                         <Wallet className="h-3.5 w-3.5 text-black/30" />
-                         <span className="font-mono text-[8px] font-bold text-black/40 uppercase tracking-widest">Orders</span>
+                         <Wallet className="h-3.5 w-3.5 text-[#3A3A3A]/30" />
+                         <span className="font-mono text-[8px] font-bold text-[#3A3A3A]/40 uppercase tracking-widest">Orders</span>
                       </div>
-                      <span className="font-display text-2xl font-bold text-black tracking-tight">186</span>
+                      <span className="font-display text-2xl font-bold text-[#3A3A3A] tracking-tight">186</span>
                       <div className="flex items-center gap-1.5">
                          <TrendingUp className="h-3 w-3 text-emerald-500" />
                          <span className="font-mono text-[9px] font-bold text-emerald-600">+18%</span>
@@ -119,8 +119,8 @@ export function GrowthHero({ data }: GrowthHeroProps) {
                    className="bg-white rounded-2xl border border-black/5 shadow-md p-5 mb-6"
                 >
                    <div className="flex items-center justify-between mb-4">
-                      <span className="font-mono text-[8px] font-bold text-black/40 uppercase tracking-widest">Revenue Trend</span>
-                      <span className="font-mono text-[8px] font-bold text-black/20 uppercase tracking-widest">Last 6 months</span>
+                      <span className="font-mono text-[8px] font-bold text-[#3A3A3A]/40 uppercase tracking-widest">Revenue Trend</span>
+                      <span className="font-mono text-[8px] font-bold text-[#3A3A3A]/20 uppercase tracking-widest">Last 6 months</span>
                    </div>
                    <div className="flex items-end gap-2 h-24">
                       {[35, 48, 42, 65, 58, 82].map((h, i) => (
@@ -130,13 +130,13 @@ export function GrowthHero({ data }: GrowthHeroProps) {
                             whileInView={{ height: `${h}%` }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.6 + i * 0.08, duration: 0.6, ease: "easeOut" }}
-                            className={`flex-1 rounded-lg ${i === 5 ? 'bg-black' : 'bg-zinc-200'} transition-colors duration-300 hover:bg-black/80 cursor-pointer`}
+                            className={`flex-1 rounded-lg ${i === 5 ? 'bg-[#3A3A3A]' : 'bg-zinc-200'} transition-colors duration-300 hover:bg-[#3A3A3A]/80 cursor-pointer`}
                          />
                       ))}
                    </div>
                    <div className="flex justify-between mt-3">
                       {["Jul", "Aug", "Sep", "Oct", "Nov", "Dec"].map(m => (
-                         <span key={m} className="font-mono text-[7px] font-bold text-black/20 uppercase flex-1 text-center">{m}</span>
+                         <span key={m} className="font-mono text-[7px] font-bold text-[#3A3A3A]/20 uppercase flex-1 text-center">{m}</span>
                       ))}
                    </div>
                 </motion.div>
@@ -149,7 +149,7 @@ export function GrowthHero({ data }: GrowthHeroProps) {
                       <DollarSign className="h-4 w-4 text-emerald-600" />
                    </div>
                    <div className="flex-1 flex flex-col gap-0.5">
-                      <span className="font-display text-[10px] font-bold text-black uppercase tracking-wider">Custom Suit Order</span>
+                      <span className="font-display text-[10px] font-bold text-[#3A3A3A] uppercase tracking-wider">Custom Suit Order</span>
                       <span className="font-mono text-[8px] text-black/40">Just now — Milestone 1 Released</span>
                    </div>
                    <span className="font-display text-sm font-bold text-emerald-600">+₦85K</span>

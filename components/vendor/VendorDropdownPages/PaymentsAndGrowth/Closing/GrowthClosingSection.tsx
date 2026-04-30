@@ -16,9 +16,9 @@ type GrowthClosingSectionProps = {
 
 export function GrowthClosingSection({ data }: GrowthClosingSectionProps) {
   return (
-    <section className="relative overflow-hidden bg-white py-32 lg:py-48" data-theme="light">
+    <section className="relative overflow-hidden bg-white py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="relative overflow-hidden rounded-[4rem] bg-black p-12 lg:p-32 shadow-3xl">
+        <div className="relative overflow-hidden rounded-[4rem] bg-[#3A3A3A] p-12 lg:p-32 shadow-3xl">
           <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent)]" />
           
           <div className="relative z-10 flex flex-col items-center text-center gap-12 lg:gap-16">
@@ -36,7 +36,7 @@ export function GrowthClosingSection({ data }: GrowthClosingSectionProps) {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-5xl font-medium leading-[1] tracking-tighter text-white sm:text-7xl lg:text-8xl"
+                className="font-display text-5xl font-medium leading-[1] tracking-tight text-white sm:text-7xl lg:text-8xl"
               >
                 {data.title}
               </motion.h2>
@@ -46,7 +46,7 @@ export function GrowthClosingSection({ data }: GrowthClosingSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="mx-auto max-w-2xl font-ui text-lg leading-relaxed text-white/40 lg:text-2xl"
+                className="mx-auto max-w-2xl font-ui text-base leading-relaxed text-white/40 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -61,7 +61,7 @@ export function GrowthClosingSection({ data }: GrowthClosingSectionProps) {
             >
               <Link 
                 href={data.primaryAction.href}
-                className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-white px-12 text-[11px] font-bold uppercase tracking-[0.35em] text-black transition-all hover:scale-[1.05] active:scale-95 shadow-3xl"
+                className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-white px-12 text-[11px] font-bold uppercase tracking-[0.35em] text-[#3A3A3A] transition-all hover:scale-[1.05] active:scale-95 shadow-3xl"
               >
                 <span className="relative z-10">{data.primaryAction.label}</span>
                 <ArrowRight className="relative z-10 ml-3 h-4 w-4 transition-transform group-hover:translate-x-1" />
