@@ -18,17 +18,17 @@ type FindSectionProps = {
 
 export function FindSection({ data }: FindSectionProps) {
   return (
-    <section id={data.id} className="relative z-10 bg-zinc-50 py-16 lg:py-48 overflow-hidden" data-theme="light">
+    <section id={data.id} className="relative z-10 bg-[#F9F9F8] py-24 sm:py-32 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-32">
+        <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-24">
           {/* Right/Top: Content */}
-          <div className="flex flex-col gap-10 lg:w-1/2">
+          <div className="flex flex-col gap-6 lg:w-1/2">
             <div className="flex flex-col gap-6">
               <motion.span 
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
@@ -37,7 +37,7 @@ export function FindSection({ data }: FindSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-3xl font-medium leading-[1.1] tracking-tighter text-black sm:text-5xl lg:text-6xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -47,13 +47,13 @@ export function FindSection({ data }: FindSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/40 lg:text-2xl"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
             </div>
 
-            <div className="grid gap-4">
+            <div className="flex flex-col gap-3 mt-2">
               {data.features.map((feature, i) => (
                 <motion.div 
                   key={i}
@@ -61,12 +61,10 @@ export function FindSection({ data }: FindSectionProps) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 + i * 0.1 }}
-                  className="flex items-center gap-6 group"
+                  className="flex items-center gap-3"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white border border-black/5 group-hover:bg-black group-hover:text-white transition-all shadow-sm">
-                    <Search className="h-4 w-4" strokeWidth={1.5} />
-                  </div>
-                  <span className="font-display text-lg font-medium text-black/80">{feature}</span>
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10"><Check className="h-3.5 w-3.5 text-[#3A3A3A]" /></span>
+                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -75,14 +73,14 @@ export function FindSection({ data }: FindSectionProps) {
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                viewport={{ once: true }}
-               className="font-ui text-sm italic text-black/30"
+               className="font-ui text-sm italic text-[#3A3A3A]/30"
             >
                {data.closing}
             </motion.p>
           </div>
 
           {/* Left/Bottom: Editorial Search Interface Visual */}
-          <div className="relative mt-12 lg:mt-0 lg:w-1/2">
+          <div className="relative mt-10 lg:mt-0 lg:w-1/2">
             <div className="relative mx-auto min-h-[450px] sm:h-[500px] lg:h-[600px] w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-zinc-50 border border-black/5 shadow-2xl p-6 lg:p-8 flex flex-col gap-6">
                
                {/* Search Bar Animation */}
@@ -106,7 +104,7 @@ export function FindSection({ data }: FindSectionProps) {
                      <motion.div 
                         animate={{ opacity: [1, 0, 1] }}
                         transition={{ duration: 0.8, repeat: Infinity }}
-                        className="absolute h-4 w-0.5 bg-emerald-500 z-20"
+                        className="absolute h-4 w-0.5 bg-[#3E1C01] z-20"
                         style={{ left: 'calc(100% - 2px)' }} // Roughly position the cursor, though dynamic tracking is complex in pure CSS without a width tween. We'll just rely on the reveal block
                      />
                   </div>

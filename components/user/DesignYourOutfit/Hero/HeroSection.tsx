@@ -56,28 +56,28 @@ export function HeroSection({ data }: HeroSectionProps) {
           <div className="flex flex-col gap-10 lg:w-1/2 lg:pt-8">
             <div className="flex flex-col gap-8">
               <motion.div variants={itemVariants} className="flex items-center gap-4">
-                <div className="h-8 w-8 rounded-lg bg-black flex items-center justify-center">
+                <div className="h-8 w-8 rounded-lg bg-[#3A3A3A] flex items-center justify-center">
                   <Wand2 className="h-3.5 w-3.5 text-white" />
                 </div>
-                <span className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40">
+                <span className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40">
                   {data.badge}
                 </span>
               </motion.div>
 
               <motion.h1 variants={itemVariants}
-                className="max-w-2xl font-display text-5xl font-medium leading-[1.02] tracking-tighter text-black sm:text-7xl lg:text-[6.5rem]">
+                className="max-w-2xl font-display text-5xl font-medium leading-[1.02] tracking-tight text-[#3A3A3A] sm:text-7xl lg:text-[6.5rem]">
                 {data.title}
               </motion.h1>
 
               <motion.p variants={itemVariants}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/40 sm:text-xl">
+                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg">
                 {data.description}
               </motion.p>
             </div>
 
             <motion.div variants={itemVariants} className="flex flex-col gap-6 sm:flex-row sm:items-center">
               <Link href={data.cta.href}
-                className="group relative inline-flex h-16 items-center justify-center gap-4 overflow-hidden rounded-full bg-black px-12 text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-all hover:scale-[1.03] active:scale-95 shadow-2xl shadow-black/20">
+                className="group relative inline-flex h-16 items-center justify-center gap-4 overflow-hidden rounded-full bg-[#3A3A3A] px-12 text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-all hover:scale-[1.03] active:scale-95 shadow-2xl shadow-black/20">
                 <span className="relative z-10">{data.cta.label}</span>
                 <ArrowRight className="h-4 w-4 relative z-10 transition-transform group-hover:translate-x-1" />
                 <div className="absolute inset-0 z-0 bg-gradient-to-r from-zinc-800 to-black opacity-0 transition-opacity group-hover:opacity-100" />
@@ -88,7 +88,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                   { icon: Sparkles, label: "AI-Powered" },
                   { icon: Layers, label: "Multi-Variation" },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2 text-black/25">
+                  <div key={i} className="flex items-center gap-2 text-[#3A3A3A]/25">
                     <item.icon className="h-3.5 w-3.5" />
                     <span className="font-display text-[8px] font-bold uppercase tracking-widest">{item.label}</span>
                   </div>
@@ -197,8 +197,8 @@ export function HeroSection({ data }: HeroSectionProps) {
                 className="absolute right-4 top-4 z-30 bg-white rounded-2xl shadow-xl border border-black/5 p-4 flex flex-col gap-2 cursor-pointer transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:-translate-y-1"
               >
                 <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="font-mono text-[7px] font-bold text-emerald-600 uppercase tracking-widest">Live</span>
+                  <div className="h-2 w-2 rounded-full bg-[#3E1C01] animate-pulse" />
+                  <span className="font-mono text-[7px] font-bold text-[#3E1C01] uppercase tracking-widest">Live</span>
                 </div>
                 <span className="font-display text-lg font-bold text-black tracking-tight">3 Variations</span>
                 <span className="font-mono text-[7px] text-black/30 uppercase tracking-widest">Ready to refine</span>

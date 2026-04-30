@@ -31,30 +31,30 @@ export function GenerationSection({ data }: GenerationSectionProps) {
   }, []);
 
   return (
-    <section className="relative w-full bg-[#0A0A0A] py-14 lg:py-48 overflow-hidden" data-theme="dark">
+    <section className="relative w-full bg-[#0A0A0A] py-24 sm:py-32 overflow-hidden" data-theme="dark">
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
 
       <div className="relative z-10 mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-24">
           {/* Left: Content */}
-          <div className="flex flex-col gap-10 lg:w-1/2">
+          <div className="flex flex-col gap-6 lg:w-1/2">
             <div className="flex flex-col gap-8">
               <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-white/40">{data.badge}</motion.span>
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">{data.badge}</motion.span>
               <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-white sm:text-6xl lg:text-7xl">{data.title}</motion.h2>
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl">{data.title}</motion.h2>
               <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-white/40 lg:text-2xl">{data.description}</motion.p>
+                className="max-w-xl font-ui text-base leading-relaxed text-white/40 sm:text-lg">{data.description}</motion.p>
             </div>
             <div className="flex flex-col gap-5">
               {data.features.map((feature, i) => {
                 const Icon = iconMap[feature.icon] || Sparkles;
                 return (
-                  <motion.div key={feature.title} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 + i * 0.1 }} className="flex items-center gap-6 group">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:bg-white group-hover:text-black transition-all shadow-sm">
+                  <motion.div key={feature.title} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 + i * 0.1 }} className="flex items-center gap-4 group">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 border border-white/10 text-white group-hover:bg-white group-hover:text-black transition-all shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
-                    <span className="font-display text-lg font-medium text-white/70 group-hover:text-white transition-colors">{feature.title}</span>
+                    <span className="font-ui text-sm font-medium text-white/70 group-hover:text-white transition-colors sm:text-base">{feature.title}</span>
                   </motion.div>
                 );
               })}
@@ -74,9 +74,9 @@ export function GenerationSection({ data }: GenerationSectionProps) {
                   </motion.div>
                   <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">AI Engine</span>
                 </div>
-                <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full border shadow-sm ${generating ? 'bg-amber-500/10 border-amber-500/20' : 'bg-emerald-500/10 border-emerald-500/20'}`}>
-                  <div className={`h-2 w-2 rounded-full animate-pulse ${generating ? 'bg-amber-500' : 'bg-emerald-500'}`} />
-                  <span className={`font-mono text-[8px] font-bold uppercase tracking-widest leading-none ${generating ? 'text-amber-400' : 'text-emerald-400'}`}>
+                <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full border shadow-sm ${generating ? 'bg-amber-500/10 border-amber-500/20' : 'bg-white/10 border-white/20'}`}>
+                  <div className={`h-2 w-2 rounded-full animate-pulse ${generating ? 'bg-amber-500' : 'bg-white'}`} />
+                  <span className={`font-mono text-[8px] font-bold uppercase tracking-widest leading-none ${generating ? 'text-amber-400' : 'text-white/80'}`}>
                     {generating ? 'Generating...' : 'Complete'}
                   </span>
                 </div>

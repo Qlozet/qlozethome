@@ -26,9 +26,9 @@ export function InspirationSection({ data }: InspirationSectionProps) {
    const mode = INPUT_MODES[activeMode];
 
    return (
-      <section id="inspiration" className="relative w-full bg-white py-14 lg:py-48" data-theme="light">
+      <section id="inspiration" className="relative w-full bg-white py-24 sm:py-32" data-theme="light">
          <div className="mx-auto max-w-[94rem] px-6">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:gap-24">
                {/* Left: Interactive Input Builder */}
                <div className="relative mt-16 order-2 lg:order-1 lg:mt-0 lg:w-1/2">
                   <div className="relative mx-auto w-full max-w-[520px] rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-6 sm:p-8 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
@@ -36,7 +36,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                      {/* Header */}
                      <div className="flex items-center justify-between pb-5 border-b border-black/5 mb-6">
                         <div className="flex items-center gap-3">
-                           <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-black text-white">
+                           <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-[#3A3A3A] text-white">
                               <MessageSquareText className="h-3.5 w-3.5" />
                            </div>
                            <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black">Design Input</span>
@@ -56,7 +56,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                                  onClick={() => setActiveMode(i)}
                                  whileHover={{ scale: 1.03 }}
                                  whileTap={{ scale: 0.97 }}
-                                 className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-display text-[9px] font-bold uppercase tracking-widest transition-all ${i === activeMode ? 'bg-black text-white shadow-lg' : 'bg-white text-black/40 border border-black/5 hover:border-black/10'}`}
+                                 className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-display text-[9px] font-bold uppercase tracking-widest transition-all ${i === activeMode ? 'bg-[#3A3A3A] text-white shadow-lg' : 'bg-white text-black/40 border border-black/5 hover:border-black/10'}`}
                               >
                                  <Icon className="h-3 w-3" />
                                  {m.label}
@@ -80,7 +80,7 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                               </div>
                               <div className="flex items-center gap-2">
                                  <div className="h-1.5 flex-1 bg-zinc-100 rounded-full overflow-hidden">
-                                    <motion.div animate={{ width: ["0%", "65%"] }} transition={{ duration: 2, delay: 0.5 }} className="h-full bg-black rounded-full" />
+                                    <motion.div animate={{ width: ["0%", "65%"] }} transition={{ duration: 2, delay: 0.5 }} className="h-full bg-[#3A3A3A] rounded-full" />
                                  </div>
                                  <span className="font-mono text-[8px] font-bold text-black/30">typing...</span>
                               </div>
@@ -124,24 +124,24 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                </div>
 
                {/* Right: Content */}
-               <div className="flex flex-col gap-8 mt-8 order-1 lg:order-2 lg:w-1/2 lg:pl-16 lg:mt-0">
-                  <div className="flex flex-col gap-8">
+               <div className="flex flex-col gap-6 mt-8 order-1 lg:order-2 lg:w-1/2 lg:pl-16 lg:mt-0">
+                  <div className="flex flex-col gap-6">
                      <motion.span initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-                        className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40">{data.badge}</motion.span>
+                        className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40">{data.badge}</motion.span>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                        className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl lg:text-7xl">{data.title}</motion.h2>
+                        className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl">{data.title}</motion.h2>
                      <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-                        className="max-w-xl font-ui text-lg leading-relaxed text-black/40 lg:text-2xl">{data.description}</motion.p>
+                        className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg">{data.description}</motion.p>
                   </div>
                   <div className="flex flex-col gap-6">
                      {data.features.map((feature, index) => {
                         const Icon = iconMap[feature.icon] || MessageSquareText;
                         return (
-                           <motion.div key={feature.title} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 + index * 0.1 }} className="flex items-center gap-6 group">
-                              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-zinc-50 border border-black/5 transition-all group-hover:bg-black group-hover:text-white shadow-sm">
+                           <motion.div key={feature.title} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 + index * 0.1 }} className="flex items-center gap-4 group">
+                              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#F9F9F8] border border-[#3A3A3A]/5 transition-all group-hover:bg-[#3A3A3A] group-hover:text-white shadow-sm">
                                  <Icon className="h-4 w-4" strokeWidth={1.5} />
                               </div>
-                              <span className="font-display text-lg font-medium text-black/80">{feature.title}</span>
+                              <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature.title}</span>
                            </motion.div>
                         );
                      })}

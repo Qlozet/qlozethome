@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShieldCheck, Store, BadgeCheck } from "lucide-react";
+import { ShieldCheck, Store, BadgeCheck, Check } from "lucide-react";
 
 type ConnectData = {
   id: string;
@@ -18,17 +18,17 @@ type ConnectSectionProps = {
 
 export function ConnectSection({ data }: ConnectSectionProps) {
   return (
-    <section id={data.id} className="relative z-10 bg-white py-16 lg:py-48 overflow-hidden" data-theme="light">
+    <section id={data.id} className="relative z-10 bg-white py-24 sm:py-32 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-24">
           {/* Left: Content */}
-          <div className="flex flex-col gap-10 lg:w-1/2">
+          <div className="flex flex-col gap-6 lg:w-1/2">
             <div className="flex flex-col gap-6">
               <motion.span 
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
@@ -37,7 +37,7 @@ export function ConnectSection({ data }: ConnectSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-3xl font-medium leading-[1.1] tracking-tighter text-black sm:text-5xl lg:text-6xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -47,13 +47,13 @@ export function ConnectSection({ data }: ConnectSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/40 lg:text-2xl"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
             </div>
 
-            <div className="grid gap-4">
+            <div className="flex flex-col gap-3 mt-2">
               {data.features.map((feature, i) => (
                 <motion.div 
                   key={i}
@@ -61,12 +61,10 @@ export function ConnectSection({ data }: ConnectSectionProps) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 + i * 0.1 }}
-                  className="flex items-center gap-6 group"
+                  className="flex items-center gap-3"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-zinc-50 border border-black/5 group-hover:bg-black group-hover:text-white transition-all shadow-sm">
-                    <ShieldCheck className="h-4 w-4" strokeWidth={1.5} />
-                  </div>
-                  <span className="font-display text-lg font-medium text-black/80">{feature}</span>
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10"><Check className="h-3.5 w-3.5 text-[#3A3A3A]" /></span>
+                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -75,14 +73,14 @@ export function ConnectSection({ data }: ConnectSectionProps) {
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                viewport={{ once: true }}
-               className="font-ui text-sm italic text-black/30"
+               className="font-ui text-sm italic text-[#3A3A3A]/30"
             >
                {data.closing}
             </motion.p>
           </div>
 
           {/* Right: Vendor Network Visual */}
-          <div className="relative mt-12 lg:mt-0 lg:w-1/2">
+          <div className="relative mt-10 lg:mt-0 lg:w-1/2">
             <div className="relative mx-auto h-[500px] lg:h-[600px] w-full max-w-xl rounded-[3.5rem] bg-zinc-900 border border-black/5 shadow-2xl overflow-hidden flex items-center justify-center p-8">
                
                {/* Background Map / Grid */}
@@ -94,9 +92,9 @@ export function ConnectSection({ data }: ConnectSectionProps) {
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ type: "spring", duration: 1.5 }}
-                  className="relative z-20 h-24 w-24 rounded-full bg-emerald-500 flex items-center justify-center shadow-[0_0_50px_rgba(16,185,129,0.3)] ring-8 ring-emerald-500/20"
+                  className="relative z-20 h-24 w-24 rounded-full bg-white flex items-center justify-center shadow-[0_0_50px_rgba(255,255,255,0.2)] ring-8 ring-white/20"
                >
-                  <ShieldCheck className="h-10 w-10 text-white" />
+                  <ShieldCheck className="h-10 w-10 text-[#3A3A3A]" />
                   <div className="absolute top-full mt-4 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 whitespace-nowrap">
                      <span className="font-display text-[9px] font-bold text-white uppercase tracking-widest">Verified Network</span>
                   </div>
@@ -124,7 +122,7 @@ export function ConnectSection({ data }: ConnectSectionProps) {
                            <div className="flex flex-col">
                               <span className="font-display text-[8px] font-bold text-white uppercase tracking-widest">Vendor {i + 1}</span>
                               <div className="flex items-center gap-1">
-                                 <BadgeCheck className="h-3 w-3 text-emerald-400" />
+                                 <BadgeCheck className="h-3 w-3 text-white" />
                                  <span className="font-mono text-[7px] text-zinc-400 uppercase">Tier 1</span>
                               </div>
                            </div>
@@ -135,10 +133,10 @@ export function ConnectSection({ data }: ConnectSectionProps) {
 
                {/* Connecting Beams */}
                <svg className="absolute inset-0 h-full w-full pointer-events-none opacity-20">
-                  <motion.circle cx="50%" cy="50%" r="40%" fill="none" stroke="#10b981" strokeWidth="1" strokeDasharray="4 4" 
+                  <motion.circle cx="50%" cy="50%" r="40%" fill="none" stroke="#EDEAEA" strokeWidth="1" strokeDasharray="4 4" 
                      animate={{ rotate: 360 }} transition={{ duration: 60, repeat: Infinity, ease: "linear" }} style={{ transformOrigin: "center" }}
                   />
-                  <motion.circle cx="50%" cy="50%" r="20%" fill="none" stroke="#10b981" strokeWidth="1" strokeDasharray="4 4" 
+                  <motion.circle cx="50%" cy="50%" r="20%" fill="none" stroke="#EDEAEA" strokeWidth="1" strokeDasharray="4 4" 
                      animate={{ rotate: -360 }} transition={{ duration: 40, repeat: Infinity, ease: "linear" }} style={{ transformOrigin: "center" }}
                   />
                </svg>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Workflow, ArrowDownToLine, MousePointer2 } from "lucide-react";
+import { Workflow, ArrowDownToLine, MousePointer2, Check as CheckIcon } from "lucide-react";
 
 type SeamlessData = {
   id: string;
@@ -18,17 +18,17 @@ type SeamlessSectionProps = {
 
 export function SeamlessSection({ data }: SeamlessSectionProps) {
   return (
-    <section id={data.id} className="relative z-10 bg-zinc-50 py-16 lg:py-48 overflow-hidden" data-theme="light">
+    <section id={data.id} className="relative z-10 bg-[#F9F9F8] py-24 sm:py-32 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-32">
+        <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-24">
           {/* Right/Top: Content */}
-          <div className="flex flex-col gap-10 lg:w-1/2">
+          <div className="flex flex-col gap-6 lg:w-1/2">
             <div className="flex flex-col gap-6">
               <motion.span 
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
@@ -37,7 +37,7 @@ export function SeamlessSection({ data }: SeamlessSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-3xl font-medium leading-[1.1] tracking-tighter text-black sm:text-5xl lg:text-6xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -47,13 +47,13 @@ export function SeamlessSection({ data }: SeamlessSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/40 lg:text-2xl"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
             </div>
 
-            <div className="grid gap-4">
+            <div className="flex flex-col gap-3 mt-2">
               {data.features.map((feature, i) => (
                 <motion.div 
                   key={i}
@@ -61,12 +61,10 @@ export function SeamlessSection({ data }: SeamlessSectionProps) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 + i * 0.1 }}
-                  className="flex items-center gap-6 group"
+                  className="flex items-center gap-3"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white border border-black/5 group-hover:bg-black group-hover:text-white transition-all shadow-sm">
-                    <Workflow className="h-4 w-4" strokeWidth={1.5} />
-                  </div>
-                  <span className="font-display text-lg font-medium text-black/80">{feature}</span>
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10"><CheckIcon className="h-3.5 w-3.5 text-[#3A3A3A]" /></span>
+                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -75,14 +73,14 @@ export function SeamlessSection({ data }: SeamlessSectionProps) {
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                viewport={{ once: true }}
-               className="font-ui text-sm italic text-black/30"
+               className="font-ui text-sm italic text-[#3A3A3A]/30"
             >
                {data.closing}
             </motion.p>
           </div>
 
           {/* Left/Bottom: Frictionless Flow Visual */}
-          <div className="relative mt-12 lg:mt-0 lg:w-1/2">
+          <div className="relative mt-10 lg:mt-0 lg:w-1/2">
             <div className="relative mx-auto h-[500px] lg:h-[600px] w-full max-w-xl rounded-[3.5rem] bg-white border border-black/5 shadow-2xl overflow-hidden flex flex-col pt-12 items-center">
                
                {/* Input Terminal (Fabric Selected) */}
@@ -90,10 +88,10 @@ export function SeamlessSection({ data }: SeamlessSectionProps) {
                   initial={{ y: -20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
-                  className="w-48 bg-emerald-50 border border-emerald-100 rounded-2xl shadow-sm p-3 flex items-center justify-between z-20"
+                  className="w-48 bg-[#EDEAEA] border border-[#3E1C01]/10 rounded-2xl shadow-sm p-3 flex items-center justify-between z-20"
                >
-                  <span className="font-display text-[9px] font-bold text-emerald-800 uppercase tracking-widest">Fabric Picked</span>
-                  <div className="h-4 w-4 rounded-full bg-emerald-500 flex items-center justify-center">
+                  <span className="font-display text-[9px] font-bold text-[#3E1C01] uppercase tracking-widest">Fabric Picked</span>
+                  <div className="h-4 w-4 rounded-full bg-[#3E1C01] flex items-center justify-center">
                      <Check className="h-2 w-2 text-white" />
                   </div>
                </motion.div>
@@ -103,7 +101,7 @@ export function SeamlessSection({ data }: SeamlessSectionProps) {
                   <motion.div 
                      animate={{ y: [0, 48] }}
                      transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-                     className="absolute top-0 left-[-2px] w-[5px] h-[10px] bg-emerald-500 rounded-full"
+                     className="absolute top-0 left-[-2px] w-[5px] h-[10px] bg-[#3E1C01] rounded-full"
                   />
                </div>
 
@@ -124,7 +122,7 @@ export function SeamlessSection({ data }: SeamlessSectionProps) {
                   </div>
                   
                   {/* Streaming Lines going to left and right */}
-                  <div className="absolute -left-10 bottom-6 w-20 h-px bg-emerald-500/50 rotate-45 pointer-events-none" />
+                  <div className="absolute -left-10 bottom-6 w-20 h-px bg-white/30 rotate-45 pointer-events-none" />
                   <div className="absolute -right-10 bottom-6 w-20 h-px bg-white/20 -rotate-45 pointer-events-none" />
                </motion.div>
 
@@ -136,7 +134,7 @@ export function SeamlessSection({ data }: SeamlessSectionProps) {
                      
                      {/* Animated dashed paths */}
                      <motion.path 
-                        d="M 96,0 Q 96,30 20,64" fill="none" stroke="#10b981" strokeWidth="2"
+                        d="M 96,0 Q 96,30 20,64" fill="none" stroke="#3E1C01" strokeWidth="2"
                         initial={{ pathLength: 0 }}
                         animate={{ pathLength: 1 }}
                         transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
@@ -154,7 +152,7 @@ export function SeamlessSection({ data }: SeamlessSectionProps) {
                      className="w-32 bg-white rounded-2xl shadow-xl border border-black/5 p-4 flex flex-col items-center gap-2"
                   >
                      <div className="h-8 w-8 rounded-full bg-zinc-50 border border-black/5 flex items-center justify-center">
-                        <ArrowDownToLine className="h-3 w-3 text-emerald-500" />
+                        <ArrowDownToLine className="h-3 w-3 text-[#3E1C01]" />
                      </div>
                      <span className="font-display text-[8px] font-bold text-black uppercase tracking-widest text-center">Design Studio</span>
                   </motion.div>
@@ -178,7 +176,7 @@ export function SeamlessSection({ data }: SeamlessSectionProps) {
                   <motion.div 
                      animate={{ y: ["0%", "100%"] }}
                      transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                     className="w-full h-[200%] bg-[linear-gradient(to_bottom,transparent,rgba(16,185,129,0.03),transparent)]" 
+                     className="w-full h-[200%] bg-[linear-gradient(to_bottom,transparent,rgba(62,28,1,0.03),transparent)]" 
                   />
                </div>
 
