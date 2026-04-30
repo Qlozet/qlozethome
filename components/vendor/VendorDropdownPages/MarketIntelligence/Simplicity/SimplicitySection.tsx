@@ -108,7 +108,7 @@ export function SimplicitySection({ data }: SimplicitySectionProps) {
                     <div className="h-10 w-10 rounded-xl bg-[#F9F9F8] border border-black/5 flex items-center justify-center group-hover:bg-[#3A3A3A] group-hover:text-white transition-all shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
-                    <span className="font-display text-lg font-medium text-black/70 group-hover:text-[#3A3A3A] transition-colors">{feature.title}</span>
+                    <span className="font-display text-lg font-medium text-black/70 group-hover:text-[#1A1A1A] transition-colors">{feature.title}</span>
                   </div>
                 );
               })}

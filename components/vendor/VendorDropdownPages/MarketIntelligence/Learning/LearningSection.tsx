@@ -48,7 +48,7 @@ export function LearningSection({ data }: LearningSectionProps) {
             className="rounded-[2rem] sm:rounded-[3rem] bg-white/[0.03] border border-white/5 p-5 sm:p-8 transition-all duration-500 hover:bg-white/[0.06]">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
-                <div className="h-8 w-8 rounded-xl bg-white text-[#3A3A3A] flex items-center justify-center"><BrainCircuit className="h-3.5 w-3.5" /></div>
+                <div className="h-8 w-8 rounded-xl bg-white text-[#1A1A1A] flex items-center justify-center"><BrainCircuit className="h-3.5 w-3.5" /></div>
                 <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">AI Accuracy Growth</span>
               </div>
               <div className="flex items-center gap-1.5 bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20">
@@ -90,7 +90,7 @@ export function LearningSection({ data }: LearningSectionProps) {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
             className="rounded-[2rem] sm:rounded-[3rem] bg-white/[0.03] border border-white/5 p-5 sm:p-8 transition-all duration-500 hover:bg-white/[0.06]">
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-8 w-8 rounded-xl bg-white text-[#3A3A3A] flex items-center justify-center"><MessageSquareText className="h-3.5 w-3.5" /></div>
+              <div className="h-8 w-8 rounded-xl bg-white text-[#1A1A1A] flex items-center justify-center"><MessageSquareText className="h-3.5 w-3.5" /></div>
               <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">Learning Log</span>
             </div>
 
@@ -118,7 +118,7 @@ export function LearningSection({ data }: LearningSectionProps) {
                 const Icon = iconMap[feature.icon] || RefreshCcw;
                 return (
                   <div key={i} className="flex items-center gap-3 group">
-                    <div className="h-7 w-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-[#3A3A3A] transition-all">
+                    <div className="h-7 w-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-white group-hover:text-[#1A1A1A] transition-all">
                       <Icon className="h-3 w-3" strokeWidth={1.5} />
                     </div>
                     <span className="font-display text-[9px] font-bold text-white/40 uppercase tracking-wider group-hover:text-white/70 transition-colors">{feature.title}</span>

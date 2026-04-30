@@ -48,7 +48,7 @@ export function OptimizationSection({ data }: OptimizationSectionProps) {
                     <div className="h-9 w-9 rounded-xl bg-[#F9F9F8] border border-black/5 flex items-center justify-center group-hover:bg-[#3A3A3A] group-hover:text-white transition-all">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
-                    <span className="font-display text-sm font-medium text-[#3A3A3A]/60 group-hover:text-[#3A3A3A] transition-colors">{feature.title}</span>
+                    <span className="font-display text-sm font-medium text-[#3A3A3A]/60 group-hover:text-[#1A1A1A] transition-colors">{feature.title}</span>
                   </div>
                 );
               })}

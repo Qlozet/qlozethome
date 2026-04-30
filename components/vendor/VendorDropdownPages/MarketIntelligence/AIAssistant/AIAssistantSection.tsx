@@ -42,7 +42,7 @@ export function AIAssistantSection({ data }: AssistantSectionProps) {
                 const Icon = iconMap[feature.icon] || Sparkles;
                 return (
                   <div key={i} className="flex items-center gap-4 group">
-                    <div className="h-9 w-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-[#3A3A3A] transition-all">
+                    <div className="h-9 w-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-white group-hover:text-[#1A1A1A] transition-all">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
                     <span className="font-display text-sm font-medium text-white/60 group-hover:text-white transition-colors">{feature.title}</span>
@@ -62,7 +62,7 @@ export function AIAssistantSection({ data }: AssistantSectionProps) {
             <div className="flex items-center justify-between pb-5 border-b border-white/5 mb-6">
               <div className="flex items-center gap-3">
                 <motion.div animate={{ rotate: [0, 360] }} transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                  className="h-8 w-8 rounded-xl bg-white text-[#3A3A3A] flex items-center justify-center">
+                  className="h-8 w-8 rounded-xl bg-white text-[#1A1A1A] flex items-center justify-center">
                   <Sparkles className="h-3.5 w-3.5" />
                 </motion.div>
                 <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">AI Assistant</span>
