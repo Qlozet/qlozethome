@@ -80,11 +80,6 @@
               "href": "/chatwithcustomers"
             },
             {
-              "title": "Manage every order step",
-              "description": "Intake, production checkpoints, logistics, and after-care",
-              "href": "/managesteps"
-            },
-            {
               "title": "Customer & Measurement",
               "description": "Manage profiles, specifications, and precision data",
               "href": "/customermeasurements"

@@ -16,7 +16,7 @@ export function Header({ data }: HeaderProps) {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const isCustomizePage = pathname?.includes("/waitlist") || pathname?.includes("/whatwedo") || pathname?.includes("/measurement") || pathname?.includes("/designyouroutfit") || pathname?.includes("/explore") || pathname?.includes("/flexiblesellingoptions") || pathname?.includes("/instantstorefront") || pathname?.includes("/shipsmarter") || pathname?.includes("/clothinggenerator") || pathname?.includes("/chatwithcustomers") || pathname?.includes("/managesteps") || pathname?.includes("/ordering-and-delivery") || pathname?.includes("/custom-ready-to-wear") || pathname?.includes("/fabric") || pathname?.includes("/customermeasurements") || pathname?.includes("/paymentsandgrowth") || pathname?.includes("/marketintelligence");
+  const isCustomizePage = pathname?.includes("/waitlist") || pathname?.includes("/whatwedo") || pathname?.includes("/measurement") || pathname?.includes("/designyouroutfit") || pathname?.includes("/explore") || pathname?.includes("/flexiblesellingoptions") || pathname?.includes("/instantstorefront") || pathname?.includes("/shipsmarter") || pathname?.includes("/clothinggenerator") || pathname?.includes("/chatwithcustomers") || pathname?.includes("/ordering-and-delivery") || pathname?.includes("/custom-ready-to-wear") || pathname?.includes("/fabric") || pathname?.includes("/customermeasurements") || pathname?.includes("/paymentsandgrowth") || pathname?.includes("/marketintelligence");
 
   // Determine if we are on a vendor-related page (where pricing should be visible)
   const isVendorPage = pathname?.includes("/vendor") || 
@@ -25,7 +25,7 @@ export function Header({ data }: HeaderProps) {
                        pathname?.includes("/shipsmarter") || 
                        pathname?.includes("/clothinggenerator") || 
                        pathname?.includes("/chatwithcustomers") || 
-                       pathname?.includes("/managesteps") ||
+
                        pathname?.includes("/customermeasurements") ||
                        pathname?.includes("/paymentsandgrowth") ||
                        pathname?.includes("/marketintelligence") ||

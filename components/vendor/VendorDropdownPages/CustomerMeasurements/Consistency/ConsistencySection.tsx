@@ -36,9 +36,9 @@ export function ConsistencySection({ data }: ConsistencySectionProps) {
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section id={data.id} className="relative z-10 bg-[#050505] py-16 lg:py-48 overflow-hidden text-white" data-theme="dark">
+    <section id={data.id} className="relative z-10 bg-[#050505] py-24 sm:py-32 overflow-hidden text-white" data-theme="dark">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-32">
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-24">
 
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
@@ -56,7 +56,7 @@ export function ConsistencySection({ data }: ConsistencySectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-3xl font-medium leading-[1.1] tracking-tighter sm:text-5xl lg:text-6xl"
+                className="font-display text-3xl font-medium leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl"
               >
                 {data.title}
               </motion.h2>
@@ -66,7 +66,7 @@ export function ConsistencySection({ data }: ConsistencySectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-white/50 lg:text-2xl"
+                className="max-w-xl font-ui text-base leading-relaxed text-white/50 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -85,7 +85,7 @@ export function ConsistencySection({ data }: ConsistencySectionProps) {
                     transition={{ delay: 0.2 + i * 0.1 }}
                     className="flex items-center gap-6 group"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:bg-emerald-500 group-hover:border-emerald-400 group-hover:text-black transition-all shadow-sm">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:bg-white group-hover:border-white/30 group-hover:text-[#1A1A1A] transition-all shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
                     <span className="font-display text-lg font-medium text-white/80">{feature}</span>
@@ -118,9 +118,9 @@ export function ConsistencySection({ data }: ConsistencySectionProps) {
                     <span className="font-mono text-[9px] uppercase tracking-widest text-white/30">Consistency Engine</span>
                     <span className="font-display text-base sm:text-lg font-medium text-white leading-none">Profile Lock™</span>
                   </div>
-                  <div className="flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1.5 shrink-0">
-                    <RefreshCw className="h-3 w-3 text-emerald-400" />
-                    <span className="font-mono text-[8px] font-bold text-emerald-400 uppercase tracking-widest">Auto-Synced</span>
+                  <div className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 shrink-0">
+                    <RefreshCw className="h-3 w-3 text-white/70" />
+                    <span className="font-mono text-[8px] font-bold text-white/70 uppercase tracking-widest">Auto-Synced</span>
                   </div>
                 </div>
 
@@ -129,16 +129,16 @@ export function ConsistencySection({ data }: ConsistencySectionProps) {
                   initial={{ opacity: 0, scale: 0.96 }}
                   animate={inView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ delay: 0.2, duration: 0.5 }}
-                  className="rounded-2xl border border-emerald-500/20 bg-emerald-500/8 p-4"
+                  className="rounded-2xl border border-white/15 bg-white/8 p-4"
                 >
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-2">
-                      <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-500/15 border border-emerald-500/25">
-                        <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" />
+                      <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-white/15 border border-white/20">
+                        <ShieldCheck className="h-3.5 w-3.5 text-white/70" />
                       </div>
-                      <span className="font-display text-[10px] font-bold uppercase tracking-widest text-emerald-400">Master Profile · CUST-8820</span>
+                      <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white/70">Master Profile · CUST-8820</span>
                     </div>
-                    <div className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-white/60 animate-pulse" />
                   </div>
 
                   {/* Measurement values grid */}
@@ -152,7 +152,7 @@ export function ConsistencySection({ data }: ConsistencySectionProps) {
                         className="flex flex-col gap-1 rounded-xl bg-black/30 border border-white/5 p-2.5 text-center"
                       >
                         <span className="font-mono text-[7px] sm:text-[8px] uppercase tracking-widest text-white/30">{m.key}</span>
-                        <span className="font-display text-[11px] sm:text-xs font-bold text-emerald-300 leading-none tabular-nums">{m.val}</span>
+                        <span className="font-display text-[11px] sm:text-xs font-bold text-white/80 leading-none tabular-nums">{m.val}</span>
                       </motion.div>
                     ))}
                   </div>
@@ -185,7 +185,7 @@ export function ConsistencySection({ data }: ConsistencySectionProps) {
                         </div>
                         <span className={`shrink-0 font-mono text-[8px] uppercase tracking-widest px-2 py-1 rounded-full border
                           ${order.status === "Delivered"
-                            ? "border-emerald-500/25 bg-emerald-500/10 text-emerald-400"
+                            ? "border-white/20 bg-white/10 text-white/70"
                             : "border-amber-500/25 bg-amber-500/10 text-amber-400"
                           }`}
                         >
@@ -211,8 +211,8 @@ export function ConsistencySection({ data }: ConsistencySectionProps) {
 
                       {/* Match confirmation */}
                       <div className="flex items-center gap-1.5 mt-2.5">
-                        <CheckCircle2 className="h-3 w-3 text-emerald-500" />
-                        <span className="font-mono text-[8px] text-emerald-500/70">Measurements matched from master profile</span>
+                        <CheckCircle2 className="h-3 w-3 text-white/80" />
+                        <span className="font-mono text-[8px] text-white/80/70">Measurements matched from master profile</span>
                       </div>
                     </motion.div>
                   ))}
@@ -227,8 +227,8 @@ export function ConsistencySection({ data }: ConsistencySectionProps) {
                 >
                   <span className="font-mono text-[8px] text-white/25 uppercase tracking-widest">Zero measurement re-entry</span>
                   <div className="flex items-center gap-1.5">
-                    <span className="font-mono text-[8px] text-emerald-400 font-bold">100% Match Rate</span>
-                    <ShieldCheck className="h-3 w-3 text-emerald-400" />
+                    <span className="font-mono text-[8px] text-white/70 font-bold">100% Match Rate</span>
+                    <ShieldCheck className="h-3 w-3 text-white/70" />
                   </div>
                 </motion.div>
 

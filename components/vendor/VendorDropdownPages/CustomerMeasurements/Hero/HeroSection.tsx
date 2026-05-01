@@ -38,7 +38,7 @@ export function HeroSection({ data }: HeroSectionProps) {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:28px_28px]" />
-        <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-emerald-500 opacity-[0.06] blur-[100px]" />
+        <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-white opacity-[0.06] blur-[100px]" />
       </div>
 
       <motion.div
@@ -59,15 +59,15 @@ export function HeroSection({ data }: HeroSectionProps) {
                 className="flex items-center gap-3"
               >
                 <div className="h-px w-8 bg-white/20" />
-                <span className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-white/40">{data.badge}</span>
-                <ScanFace className="h-3 w-3 text-emerald-500 animate-pulse" />
+                <span className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">{data.badge}</span>
+                <ScanFace className="h-3 w-3 text-white/80 animate-pulse" />
               </motion.div>
 
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="font-display text-5xl font-medium leading-[1.05] tracking-tighter text-white sm:text-7xl lg:text-8xl"
+                className="font-display text-5xl font-medium leading-[1.05] tracking-tight text-white sm:text-7xl lg:text-8xl"
               >
                 {data.title}
               </motion.h1>
@@ -89,7 +89,7 @@ export function HeroSection({ data }: HeroSectionProps) {
             >
               <Link
                 href={data.cta.href}
-                className="group inline-flex h-14 items-center gap-3 rounded-full bg-white px-10 text-[10px] font-bold uppercase tracking-[0.4em] text-black shadow-[0_0_40px_rgba(255,255,255,0.08)] transition-all hover:scale-105 active:scale-95"
+                className="group inline-flex h-14 items-center gap-3 rounded-full bg-white px-10 text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A] shadow-[0_0_40px_rgba(255,255,255,0.08)] transition-all hover:scale-105 active:scale-95"
               >
                 {data.cta.label}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -118,12 +118,12 @@ export function HeroSection({ data }: HeroSectionProps) {
                 {/* Top bar */}
                 <div className="flex items-center justify-between border-b border-white/6 px-5 py-4">
                   <div className="flex items-center gap-2">
-                    <ScanFace className="h-4 w-4 text-emerald-400" />
+                    <ScanFace className="h-4 w-4 text-white/70" />
                     <span className="font-mono text-[9px] uppercase tracking-widest text-white/40">Body Scan</span>
                   </div>
-                  <div className="flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-1">
-                    <div className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                    <span className="font-mono text-[8px] font-bold uppercase tracking-widest text-emerald-400">Active</span>
+                  <div className="flex items-center gap-1.5 rounded-full border border-white/15 bg-white/10 px-2.5 py-1">
+                    <div className="h-1.5 w-1.5 rounded-full bg-white/60 animate-pulse" />
+                    <span className="font-mono text-[8px] font-bold uppercase tracking-widest text-white/70">Active</span>
                   </div>
                 </div>
 
@@ -147,19 +147,19 @@ export function HeroSection({ data }: HeroSectionProps) {
                   <motion.div
                     animate={{ top: ["0%", "100%", "0%"] }}
                     transition={{ duration: 2.6, repeat: Infinity, ease: "linear" }}
-                    className="absolute left-0 right-0 h-px bg-emerald-400 shadow-[0_0_10px_rgba(16,185,129,0.6)]"
+                    className="absolute left-0 right-0 h-px bg-white/60 shadow-[0_0_10px_rgba(16,185,129,0.6)]"
                   />
 
                   {/* Corner brackets */}
                   {["top-2.5 left-2.5 border-t border-l", "top-2.5 right-2.5 border-t border-r",
                     "bottom-2.5 left-2.5 border-b border-l", "bottom-2.5 right-2.5 border-b border-r"
                   ].map((cls, i) => (
-                    <div key={i} className={`absolute h-3.5 w-3.5 border-emerald-500/50 ${cls}`} />
+                    <div key={i} className={`absolute h-3.5 w-3.5 border-white/30 ${cls}`} />
                   ))}
 
                   {/* Points label */}
                   <div className="absolute bottom-2 right-3">
-                    <span className="font-mono text-[8px] text-emerald-400/70">142 pts</span>
+                    <span className="font-mono text-[8px] text-white/70/70">142 pts</span>
                   </div>
                 </div>
 
@@ -174,7 +174,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                       className="flex items-center justify-between rounded-xl bg-white/[0.04] border border-white/5 px-3.5 py-2.5"
                     >
                       <div className="flex items-center gap-2">
-                        <CheckCircle2 className="h-3 w-3 text-emerald-500 shrink-0" />
+                        <CheckCircle2 className="h-3 w-3 text-white/80 shrink-0" />
                         <span className="font-mono text-[9px] uppercase tracking-widest text-white/40">{m.label}</span>
                       </div>
                       <span className="font-display text-sm font-bold text-white">{m.value}</span>
@@ -202,12 +202,12 @@ export function HeroSection({ data }: HeroSectionProps) {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1.5, type: "spring", stiffness: 120 }}
-                className="absolute -right-2 sm:-right-8 bottom-1/4 flex items-center gap-3 rounded-2xl border border-emerald-500/20 bg-emerald-950/90 px-4 py-3 shadow-2xl backdrop-blur-xl"
+                className="absolute -right-2 sm:-right-8 bottom-1/4 flex items-center gap-3 rounded-2xl border border-white/15 bg-[#1A1A1A]/90 px-4 py-3 shadow-2xl backdrop-blur-xl"
               >
-                <ShieldCheck className="h-4 w-4 text-emerald-400" />
+                <ShieldCheck className="h-4 w-4 text-white/70" />
                 <div className="flex flex-col">
-                  <span className="font-mono text-[7px] uppercase tracking-widest text-emerald-400/50">Profile</span>
-                  <span className="font-display text-sm font-bold text-emerald-300">Saved</span>
+                  <span className="font-mono text-[7px] uppercase tracking-widest text-white/70/50">Profile</span>
+                  <span className="font-display text-sm font-bold text-white/80">Saved</span>
                 </div>
               </motion.div>
 

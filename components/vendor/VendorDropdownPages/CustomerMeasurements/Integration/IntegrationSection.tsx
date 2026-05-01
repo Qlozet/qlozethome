@@ -34,7 +34,7 @@ const integrations = [
 function DataPacket({ delay }: { delay: number }) {
   return (
     <motion.div
-      className="absolute left-0 top-1/2 -translate-y-1/2 h-1 w-4 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(16,185,129,0.8)]"
+      className="absolute left-0 top-1/2 -translate-y-1/2 h-1 w-4 rounded-full bg-white/60 shadow-[0_0_6px_rgba(255,255,255,0.4)]"
       animate={{ left: ["0%", "100%"] }}
       transition={{ duration: 1.4, repeat: Infinity, delay, ease: "linear", repeatDelay: 0.6 }}
     />
@@ -52,26 +52,26 @@ function IntegrationNode({
       initial={{ opacity: 0, y: 10 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay, duration: 0.5 }}
-      className="relative flex items-center gap-3 rounded-2xl border border-white/8 bg-white/[0.04] px-3 py-3 backdrop-blur-sm hover:border-emerald-500/30 hover:bg-emerald-500/5 transition-all group"
+      className="relative flex items-center gap-3 rounded-2xl border border-white/8 bg-white/[0.04] px-3 py-3 backdrop-blur-sm hover:border-white/20 hover:bg-white/5 transition-all group"
     >
       {/* Icon */}
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 group-hover:bg-emerald-500/10 group-hover:border-emerald-500/30 transition-all">
-        <Icon className="h-4 w-4 text-white/60 group-hover:text-emerald-400 transition-colors" strokeWidth={1.5} />
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 group-hover:bg-white/10 group-hover:border-white/20 transition-all">
+        <Icon className="h-4 w-4 text-white/60 group-hover:text-white/70 transition-colors" strokeWidth={1.5} />
       </div>
 
       {/* Label + status */}
       <div className="flex flex-col min-w-0">
         <span className="font-display text-sm font-medium text-white/80 leading-none mb-0.5">{label}</span>
-        <span className="font-mono text-[8px] uppercase tracking-widest text-emerald-400">{status}</span>
+        <span className="font-mono text-[8px] uppercase tracking-widest text-white/70">{status}</span>
       </div>
 
       {/* Live indicator */}
       <div className="ml-auto flex items-center gap-1.5 shrink-0">
-        <div className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+        <div className="h-1.5 w-1.5 rounded-full bg-white/60 animate-pulse" />
       </div>
 
       {/* Connection line to hub (right edge) */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 h-px w-3 bg-emerald-500/20 group-hover:bg-emerald-500/50 transition-colors" />
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 h-px w-3 bg-white/20 group-hover:bg-white/50 transition-colors" />
     </motion.div>
   );
 }
@@ -82,9 +82,9 @@ export function IntegrationSection({ data }: IntegrationSectionProps) {
   const inView = useInView(cardRef, { once: true, margin: "-60px" });
 
   return (
-    <section id={data.id} className="relative z-10 bg-[#050505] py-16 lg:py-48 overflow-hidden text-white" data-theme="dark">
+    <section id={data.id} className="relative z-10 bg-[#050505] py-24 sm:py-32 overflow-hidden text-white" data-theme="dark">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col gap-12 lg:flex-row-reverse lg:items-center lg:gap-32">
+        <div className="flex flex-col gap-12 lg:flex-row-reverse lg:items-center lg:gap-24">
 
           {/* Right/Top: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
@@ -102,7 +102,7 @@ export function IntegrationSection({ data }: IntegrationSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-3xl font-medium leading-[1.1] tracking-tighter sm:text-5xl lg:text-6xl"
+                className="font-display text-3xl font-medium leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl"
               >
                 {data.title}
               </motion.h2>
@@ -112,7 +112,7 @@ export function IntegrationSection({ data }: IntegrationSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-white/50 lg:text-2xl"
+                className="max-w-xl font-ui text-base leading-relaxed text-white/50 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -131,7 +131,7 @@ export function IntegrationSection({ data }: IntegrationSectionProps) {
                     transition={{ delay: 0.2 + i * 0.1 }}
                     className="flex items-center gap-6 group"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:bg-emerald-500 group-hover:border-emerald-400 group-hover:text-black transition-all shadow-sm">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:bg-white group-hover:border-white/30 group-hover:text-[#1A1A1A] transition-all shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
                     <span className="font-display text-lg font-medium text-white/80">{feature}</span>
@@ -164,9 +164,9 @@ export function IntegrationSection({ data }: IntegrationSectionProps) {
                     <span className="font-mono text-[9px] uppercase tracking-widest text-white/30">Qlozet Sync Engine</span>
                     <span className="font-display text-lg font-medium text-white leading-none">Integration Hub</span>
                   </div>
-                  <div className="flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5">
-                    <Zap className="h-3 w-3 text-emerald-400" />
-                    <span className="font-mono text-[9px] font-bold text-emerald-400 uppercase tracking-widest">All Systems Live</span>
+                  <div className="flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5">
+                    <Zap className="h-3 w-3 text-white/70" />
+                    <span className="font-mono text-[9px] font-bold text-white/70 uppercase tracking-widest">All Systems Live</span>
                   </div>
                 </div>
 
@@ -183,7 +183,7 @@ export function IntegrationSection({ data }: IntegrationSectionProps) {
                   {/* Center: Hub node + animated pipes */}
                   <div className="flex flex-col items-center gap-2 shrink-0">
                     {/* Top pipe */}
-                    <div className="relative h-8 w-px bg-emerald-500/15 overflow-hidden">
+                    <div className="relative h-8 w-px bg-white/15 overflow-hidden">
                       <DataPacket delay={0.0} />
                     </div>
 
@@ -192,19 +192,19 @@ export function IntegrationSection({ data }: IntegrationSectionProps) {
                       initial={{ scale: 0 }}
                       animate={inView ? { scale: 1 } : {}}
                       transition={{ delay: 0.1, type: "spring", stiffness: 200 }}
-                      className="relative flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl border border-emerald-500/30 bg-black shadow-[0_0_40px_rgba(16,185,129,0.2)]"
+                      className="relative flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl border border-white/20 bg-[#3A3A3A] shadow-[0_0_40px_rgba(255,255,255,0.1)]"
                     >
-                      <DatabaseZap className="h-6 w-6 sm:h-7 sm:w-7 text-emerald-400" />
+                      <DatabaseZap className="h-6 w-6 sm:h-7 sm:w-7 text-white/70" />
                       {/* Ping ring */}
-                      <div className="absolute inset-0 rounded-2xl border border-emerald-500/40 animate-[ping_2.5s_ease-in-out_infinite]" />
+                      <div className="absolute inset-0 rounded-2xl border border-white/30 animate-[ping_2.5s_ease-in-out_infinite]" />
                       {/* Label */}
-                      <div className="absolute -bottom-6 whitespace-nowrap rounded-full bg-emerald-500 px-2 py-0.5">
+                      <div className="absolute -bottom-6 whitespace-nowrap rounded-full bg-white px-2 py-0.5">
                         <span className="font-mono text-[7px] font-bold text-white uppercase tracking-widest">Core</span>
                       </div>
                     </motion.div>
 
                     {/* Bottom pipe */}
-                    <div className="relative h-10 w-px bg-emerald-500/15 mt-2 overflow-hidden">
+                    <div className="relative h-10 w-px bg-white/15 mt-2 overflow-hidden">
                       <DataPacket delay={0.7} />
                     </div>
                   </div>
@@ -226,10 +226,10 @@ export function IntegrationSection({ data }: IntegrationSectionProps) {
                 >
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-mono text-[8px] uppercase tracking-widest text-white/30">Live Activity</span>
-                    <div className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-white/60 animate-pulse" />
                   </div>
                   {[
-                    { msg: "Measurement synced → Production queue", time: "now",   color: "text-emerald-400" },
+                    { msg: "Measurement synced → Production queue", time: "now",   color: "text-white/70" },
                     { msg: "Order ORD-7921 profile matched",         time: "2s",   color: "text-white/50" },
                     { msg: "Shipper notified: size data ready",      time: "14s",  color: "text-white/40" },
                   ].map((item, i) => (
@@ -241,7 +241,7 @@ export function IntegrationSection({ data }: IntegrationSectionProps) {
                       className="flex items-center justify-between gap-3"
                     >
                       <div className="flex items-center gap-2 min-w-0">
-                        <ArrowRight className="h-3 w-3 shrink-0 text-emerald-500/50" />
+                        <ArrowRight className="h-3 w-3 shrink-0 text-white/80/50" />
                         <span className={`font-mono text-[9px] truncate ${item.color}`}>{item.msg}</span>
                       </div>
                       <span className="font-mono text-[8px] text-white/20 shrink-0">{item.time}</span>

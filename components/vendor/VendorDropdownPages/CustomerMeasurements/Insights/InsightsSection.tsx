@@ -17,9 +17,9 @@ type InsightsSectionProps = {
 
 export function InsightsSection({ data }: InsightsSectionProps) {
   return (
-    <section id={data.id} className="relative z-10 bg-[#050505] py-16 lg:py-48 overflow-hidden text-white" data-theme="dark">
+    <section id={data.id} className="relative z-10 bg-[#050505] py-24 sm:py-32 overflow-hidden text-white" data-theme="dark">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-32">
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-24">
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
@@ -36,7 +36,7 @@ export function InsightsSection({ data }: InsightsSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-3xl font-medium leading-[1.1] tracking-tighter sm:text-5xl lg:text-6xl"
+                className="font-display text-3xl font-medium leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl"
               >
                 {data.title}
               </motion.h2>
@@ -46,7 +46,7 @@ export function InsightsSection({ data }: InsightsSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-white/50 lg:text-2xl"
+                className="max-w-xl font-ui text-base leading-relaxed text-white/50 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -66,7 +66,7 @@ export function InsightsSection({ data }: InsightsSectionProps) {
                     transition={{ delay: 0.2 + i * 0.1 }}
                     className="flex items-center gap-6 group"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:bg-emerald-500 group-hover:border-emerald-400 group-hover:text-black transition-all shadow-sm">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:bg-white group-hover:border-white/30 group-hover:text-[#1A1A1A] transition-all shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
                     <span className="font-display text-lg font-medium text-white/80">{feature}</span>
@@ -95,14 +95,14 @@ export function InsightsSection({ data }: InsightsSectionProps) {
                      className="w-full bg-black/40 backdrop-blur-md rounded-2xl border border-white/10 p-4 flex justify-between items-center"
                   >
                      <div className="flex items-center gap-3">
-                        <BrainCircuit className="h-5 w-5 text-emerald-400" />
+                        <BrainCircuit className="h-5 w-5 text-white/70" />
                         <div className="flex flex-col">
                            <span className="font-mono text-[10px] text-zinc-400 uppercase tracking-widest">Analysis Engine</span>
                            <span className="font-display text-sm font-bold text-white">Posture & Proportion</span>
                         </div>
                      </div>
-                     <div className="px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
-                        <span className="font-mono text-[8px] text-emerald-400 font-bold uppercase tracking-wider">Online</span>
+                     <div className="px-3 py-1 bg-white/10 border border-white/15 rounded-full">
+                        <span className="font-mono text-[8px] text-white/70 font-bold uppercase tracking-wider">Online</span>
                      </div>
                   </motion.div>
 
@@ -118,8 +118,8 @@ export function InsightsSection({ data }: InsightsSectionProps) {
                         className="bg-zinc-800/80 backdrop-blur-sm border border-white/10 rounded-2xl p-5 shadow-2xl relative z-20 group hover:border-white/20 transition-colors mr-12"
                      >
                         <div className="flex justify-between items-start mb-3">
-                           <span className="font-display text-[10px] uppercase tracking-widest text-emerald-400 font-bold">Fit Recommendation</span>
-                           <CheckSquare className="h-4 w-4 text-white/30 group-hover:text-emerald-400 transition-colors" />
+                           <span className="font-display text-[10px] uppercase tracking-widest text-white/70 font-bold">Fit Recommendation</span>
+                           <CheckSquare className="h-4 w-4 text-white/30 group-hover:text-white/70 transition-colors" />
                         </div>
                         <p className="font-ui text-white text-sm">Shoulder slope detected at 15°. Recommend adjusting armhole depth by +1.5cm for optimal mobility.</p>
                      </motion.div>
@@ -152,7 +152,7 @@ export function InsightsSection({ data }: InsightsSectionProps) {
                      <motion.div 
                         animate={{ left: ['-100%', '100%'] }}
                         transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                        className="absolute inset-y-0 w-1/3 bg-emerald-500/50 shadow-[0_0_10px_rgba(16,185,129,0.8)]"
+                        className="absolute inset-y-0 w-1/3 bg-white/50 shadow-[0_0_10px_rgba(255,255,255,0.4)]"
                      />
                   </motion.div>
                   <div className="text-center">

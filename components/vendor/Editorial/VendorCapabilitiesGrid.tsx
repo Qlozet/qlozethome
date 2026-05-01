@@ -16,14 +16,15 @@ export function VendorCapabilitiesGrid() {
       bgImage: "/image/storefront.png"
     },
     {
-      title: "Smart Order & Production",
-      desc: "Stay organized and deliver every order with confidence.",
-      bullets: ["Centralized order dashboard", "Track production stages"],
-      link: "/managesteps",
+      title: "Customer & Measurement",
+      desc: "Manage profiles, specifications, and precision data.",
+      bullets: ["Client profiles", "Measurement history"],
+      link: "/customermeasurements",
       delay: 0.2,
       colSpan: "lg:col-span-4",
       bgImage: "/image/leather.jpg"
     },
+
     {
       title: "AI Business Insights",
       desc: "Make smarter decisions with AI-powered analytics.",
