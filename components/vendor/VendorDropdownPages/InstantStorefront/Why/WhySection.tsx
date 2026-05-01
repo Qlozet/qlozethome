@@ -51,16 +51,16 @@ export function WhySection({ data }: WhySectionProps) {
       >
         {/* Architectural Title Group */}
         <div className="mb-24 flex flex-col gap-6 lg:mb-32">
-          <motion.span variants={itemVariants} className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40">
+          <motion.span variants={itemVariants} className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40">
             The Benefits
           </motion.span>
-          <motion.h2 variants={itemVariants} className="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tighter text-black sm:text-7xl">
+          <motion.h2 variants={itemVariants} className="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl">
             {data.title}
           </motion.h2>
         </div>
 
         {/* Architectural Bento Grid */}
-        <div className="grid border-t border-l border-black/20 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid border-t border-l border-[#3A3A3A]/20 sm:grid-cols-2 lg:grid-cols-3">
           {data.tools.map((tool, index) => {
             const isLarge = index === 0;
             const isWide = index === 3;
@@ -74,11 +74,11 @@ export function WhySection({ data }: WhySectionProps) {
               <motion.div
                 key={tool.title}
                 variants={itemVariants}
-                className={`group relative flex flex-col justify-between overflow-hidden border-b border-r border-black/20 bg-white p-10 transition-colors duration-500 hover:bg-[#050505] lg:p-16 ${gridClasses}`}
+                className={`group relative flex flex-col justify-between overflow-hidden border-b border-r border-[#3A3A3A]/20 bg-white p-10 transition-colors duration-500 hover:bg-[#050505] lg:p-16 ${gridClasses}`}
               >
                 {/* Icon Container */}
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center border border-black/10 bg-[#FAFAFA] transition-all duration-500 group-hover:border-white/10 group-hover:bg-white/5 lg:h-20 lg:w-20">
-                  <div className="h-8 w-8 text-black opacity-80 transition-colors duration-500 group-hover:text-white lg:h-10 lg:w-10">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center border border-[#3A3A3A]/10 bg-[#FAFAFA] transition-all duration-500 group-hover:border-white/10 group-hover:bg-white/5 lg:h-20 lg:w-20">
+                  <div className="h-8 w-8 text-[#3A3A3A] opacity-80 transition-colors duration-500 group-hover:text-white lg:h-10 lg:w-10">
                     {(() => {
                       const Icon = iconMap[tool.icon] || Rocket;
                       return <Icon className="h-full w-full stroke-[1]" />;
@@ -88,10 +88,10 @@ export function WhySection({ data }: WhySectionProps) {
 
                 {/* Text Content */}
                 <div className="flex flex-col gap-6 pt-12">
-                  <h3 className={`font-display font-medium tracking-tight text-black transition-colors duration-500 group-hover:text-white ${isLarge ? 'text-4xl lg:text-5xl' : 'text-2xl lg:text-3xl'}`}>
+                  <h3 className={`font-display font-medium tracking-tight text-[#3A3A3A] transition-colors duration-500 group-hover:text-white ${isLarge ? 'text-4xl lg:text-5xl' : 'text-2xl lg:text-3xl'}`}>
                     {tool.title}
                   </h3>
-                  <p className={`font-ui leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60 ${isLarge ? 'max-w-md text-lg lg:text-xl' : 'text-base lg:text-lg'}`}>
+                  <p className={`font-ui leading-relaxed text-[#3A3A3A]/60 transition-colors duration-500 group-hover:text-white/60 ${isLarge ? 'max-w-md text-lg lg:text-xl' : 'text-base lg:text-lg'}`}>
                     {tool.description}
                   </p>
                 </div>

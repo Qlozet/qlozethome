@@ -15,16 +15,16 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
   const [openStep, setOpenStep] = useState<string | null>(data.steps[0].id);
 
   return (
-    <section id="how-it-works" className="relative z-20 bg-[#050505] px-6 py-24 sm:py-32 lg:py-48">
+    <section id="how-it-works" className="relative z-20 bg-[#050505] px-6 py-24 sm:py-24 sm:py-32">
       <div className="mx-auto grid max-w-[94rem] gap-12 lg:grid-cols-2 lg:gap-24">
         {/* Left Content - Accordion Timeline */}
         <div className="flex flex-col gap-16 lg:pt-16">
           <div className="flex flex-col gap-6">
-            <span className="inline-flex items-center gap-3 font-display text-[10px] font-bold uppercase tracking-[0.5em] text-white/40">
+            <span className="inline-flex items-center gap-3 font-display text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">
               <div className="h-px w-6 bg-white/20" />
               The Process
             </span>
-            <h2 className="font-display text-5xl font-medium leading-[1.05] tracking-tighter text-white sm:text-7xl">
+            <h2 className="font-display text-5xl font-medium leading-[1.05] tracking-tight text-white sm:text-7xl">
               {data.title}
             </h2>
           </div>

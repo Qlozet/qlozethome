@@ -46,10 +46,10 @@ export function HeroSection({ data }: HeroSectionProps) {
       
       {/* Massive Marquee Typography Background */}
       <motion.div style={{ opacity }} className="absolute inset-0 flex flex-col justify-center gap-4 text-[#050505]/[0.03] pointer-events-none select-none overflow-hidden">
-        <motion.div style={{ x: marqueeX1 }} className="flex whitespace-nowrap font-display text-[20vw] font-bold leading-none tracking-tighter">
+        <motion.div style={{ x: marqueeX1 }} className="flex whitespace-nowrap font-display text-[20vw] font-bold leading-none tracking-tight">
            FLEXIBLE SELLING OPTIONS FLEXIBLE SELLING OPTIONS FLEXIBLE SELLING OPTIONS
         </motion.div>
-        <motion.div style={{ x: marqueeX2 }} className="flex whitespace-nowrap font-display text-[20vw] font-bold leading-none tracking-tighter">
+        <motion.div style={{ x: marqueeX2 }} className="flex whitespace-nowrap font-display text-[20vw] font-bold leading-none tracking-tight">
            ADAPTIVE MODULARITY ADAPTIVE MODULARITY ADAPTIVE MODULARITY ADAPTIVE MODULARITY
         </motion.div>
       </motion.div>
@@ -63,20 +63,20 @@ export function HeroSection({ data }: HeroSectionProps) {
       >
         <motion.div 
           variants={itemVariants}
-          className="flex w-full flex-col items-center gap-10 rounded-[3rem] border border-black/5 bg-white/70 p-10 backdrop-blur-3xl shadow-[0_40px_80px_rgba(0,0,0,0.05)] sm:p-16 lg:p-24"
+          className="flex w-full flex-col items-center gap-10 rounded-[3rem] border border-[#3A3A3A]/5 bg-white/70 p-10 backdrop-blur-3xl shadow-[0_40px_80px_rgba(0,0,0,0.05)] sm:p-16 lg:p-24"
         >
           <div className="flex flex-col items-center gap-6">
-            <span className="inline-flex w-fit items-center gap-3 rounded-full border border-black/10 bg-black/5 px-6 py-2 font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/60">
+            <span className="inline-flex w-fit items-center gap-3 rounded-full border border-[#3A3A3A]/10 bg-[#3A3A3A]/5 px-6 py-2 font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/60">
               <div className="h-1.5 w-1.5 rounded-full bg-[#FF6A3D] animate-pulse" />
               {data.badge}
             </span>
             
-            <h1 className="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tighter text-black sm:text-7xl lg:text-[7rem] lg:leading-[0.95]">
+            <h1 className="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl lg:text-[7rem] lg:leading-[0.95]">
               {data.title}
             </h1>
           </div>
 
-          <p className="max-w-2xl font-ui text-lg leading-relaxed text-black/60 lg:text-xl">
+          <p className="max-w-2xl font-ui text-lg leading-relaxed text-[#3A3A3A]/60 lg:text-xl">
             {data.description}
           </p>
           
@@ -89,7 +89,7 @@ export function HeroSection({ data }: HeroSectionProps) {
             </Link>
             <Link
               href="#toolkit"
-              className="group inline-flex h-14 items-center justify-center gap-3 rounded-full px-8 text-xs font-bold uppercase tracking-[0.2em] text-black/50 transition-colors hover:bg-black/5 hover:text-black"
+              className="group inline-flex h-14 items-center justify-center gap-3 rounded-full px-8 text-xs font-bold uppercase tracking-[0.2em] text-[#3A3A3A]/50 transition-colors hover:bg-[#3A3A3A]/5 hover:text-[#3A3A3A]"
             >
               Explore Toolkits
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 transition-transform group-hover:translate-x-1">

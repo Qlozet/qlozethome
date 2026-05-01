@@ -21,7 +21,7 @@ export function ToolkitSection({ data }: ToolkitSectionProps) {
   };
 
   return (
-    <section id="toolkit" className="relative z-10 bg-white px-6 py-20 sm:py-32 lg:py-40">
+    <section id="toolkit" className="relative z-10 bg-white px-6 py-24 sm:py-32 lg:py-40">
       <motion.div 
         variants={containerVariants}
         initial="hidden"
@@ -31,11 +31,11 @@ export function ToolkitSection({ data }: ToolkitSectionProps) {
       >
         {/* Title Group */}
         <div className="mb-20 flex flex-col gap-6 md:mb-28">
-          <motion.span variants={itemVariants} className="inline-flex items-center gap-3 font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40">
-            <div className="h-px w-6 bg-black/20" />
+          <motion.span variants={itemVariants} className="inline-flex items-center gap-3 font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40">
+            <div className="h-px w-6 bg-[#3A3A3A]/20" />
             The Toolkit
           </motion.span>
-          <motion.h2 variants={itemVariants} className="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tighter text-black sm:text-7xl">
+          <motion.h2 variants={itemVariants} className="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl">
             {data.title}
           </motion.h2>
         </div>
@@ -44,9 +44,9 @@ export function ToolkitSection({ data }: ToolkitSectionProps) {
         <div className="flex flex-wrap gap-4 sm:gap-6 lg:gap-8">
           {data.tools.map((tool, index) => {
             const isDark = index % 3 === 0; // Every 3rd pill is high contrast dark mode
-            const bgClass = isDark ? "bg-[#050505] text-white" : "bg-white text-black border border-black/5 shadow-[0_10px_30px_rgba(0,0,0,0.03)]";
+            const bgClass = isDark ? "bg-[#050505] text-white" : "bg-white text-[#3A3A3A] border border-[#3A3A3A]/5 shadow-[0_10px_30px_rgba(0,0,0,0.03)]";
             const iconColor = isDark ? "text-white" : "text-[#050505]";
-            const descColor = isDark ? "text-white/60" : "text-black/60";
+            const descColor = isDark ? "text-white/60" : "text-[#3A3A3A]/60";
 
             return (
               <motion.div
@@ -56,7 +56,7 @@ export function ToolkitSection({ data }: ToolkitSectionProps) {
               >
                 {/* Icon Container with specific pill styling */}
                 <div className="flex items-center gap-6">
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-black/5 group-hover:bg-[#FF6A3D] transition-colors duration-500">
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/5 group-hover:bg-[#FF6A3D] transition-colors duration-500">
                     <Icon name={tool.icon} className={`h-7 w-7 transition-colors duration-500 ${iconColor} group-hover:text-white`} />
                   </div>
                   <h3 className="font-display text-2xl font-medium tracking-tight sm:text-3xl lg:text-4xl">

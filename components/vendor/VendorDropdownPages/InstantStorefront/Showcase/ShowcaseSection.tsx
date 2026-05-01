@@ -26,9 +26,9 @@ export function ShowcaseSection({ data }: ShowcaseSectionProps) {
   const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
   return (
-    <section ref={containerRef} className="relative w-full bg-zinc-50 py-14 lg:py-40" data-theme="light">
+    <section ref={containerRef} className="relative w-full bg-[#F9F9F8] py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-24">
           {/* Left Column: Image with Parallax */}
           <div className="relative lg:w-1/2">
             <div className="relative aspect-square w-full overflow-hidden rounded-[4rem] shadow-2xl">
@@ -51,7 +51,7 @@ export function ShowcaseSection({ data }: ShowcaseSectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
@@ -60,7 +60,7 @@ export function ShowcaseSection({ data }: ShowcaseSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl lg:text-7xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -69,7 +69,7 @@ export function ShowcaseSection({ data }: ShowcaseSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/60 lg:text-2xl"
+                className="max-w-xl font-ui text-lg leading-relaxed text-[#3A3A3A]/60 lg:text-2xl"
               >
                 {data.description}
               </motion.p>
@@ -83,7 +83,7 @@ export function ShowcaseSection({ data }: ShowcaseSectionProps) {
               className="flex flex-wrap gap-4"
             >
               {data.items.map((item) => (
-                <div key={item} className="rounded-full border border-black/10 bg-white px-8 py-4 font-display text-[10px] font-bold uppercase tracking-widest text-black shadow-sm transition-all hover:scale-[1.05] hover:border-black/20">
+                <div key={item} className="rounded-full border border-[#3A3A3A]/10 bg-white px-8 py-4 font-display text-[10px] font-bold uppercase tracking-widest text-[#3A3A3A] shadow-sm transition-all hover:scale-[1.05] hover:border-[#3A3A3A]/20">
                   {item}
                 </div>
               ))}

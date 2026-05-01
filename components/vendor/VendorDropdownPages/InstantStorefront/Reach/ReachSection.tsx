@@ -26,9 +26,9 @@ export function ReachSection({ data }: ReachSectionProps) {
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1, 0.8]);
 
   return (
-    <section ref={containerRef} className="relative w-full bg-white py-14 lg:py-40 overflow-hidden" data-theme="light">
+    <section ref={containerRef} className="relative w-full bg-white py-24 sm:py-32 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-32">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-24">
           {/* Left Column: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2 order-2 lg:order-1">
             <div className="flex flex-col gap-8">
@@ -36,7 +36,7 @@ export function ReachSection({ data }: ReachSectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
@@ -45,7 +45,7 @@ export function ReachSection({ data }: ReachSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl lg:text-7xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -54,7 +54,7 @@ export function ReachSection({ data }: ReachSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/60 lg:text-2xl"
+                className="max-w-xl font-ui text-lg leading-relaxed text-[#3A3A3A]/60 lg:text-2xl"
               >
                 {data.description}
               </motion.p>
@@ -68,11 +68,11 @@ export function ReachSection({ data }: ReachSectionProps) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + index * 0.1 }}
-                  className="flex flex-col gap-2 rounded-2xl bg-zinc-50 p-6 border border-zinc-100 transition-colors hover:bg-zinc-100"
+                  className="flex flex-col gap-2 rounded-2xl bg-[#F9F9F8] p-6 border border-zinc-100 transition-colors hover:bg-zinc-100"
                 >
-                  <BarChart3 className="h-5 w-5 text-black/30" />
-                  <span className="font-display text-[10px] font-bold uppercase tracking-[0.2em] text-black/40">Market</span>
-                  <span className="font-display text-lg font-medium text-black">{stat}</span>
+                  <BarChart3 className="h-5 w-5 text-[#3A3A3A]/30" />
+                  <span className="font-display text-[10px] font-bold uppercase tracking-[0.2em] text-[#3A3A3A]/40">Market</span>
+                  <span className="font-display text-lg font-medium text-[#3A3A3A]">{stat}</span>
                 </motion.div>
               ))}
             </div>
@@ -84,7 +84,7 @@ export function ReachSection({ data }: ReachSectionProps) {
                style={{ rotate, scale }}
                className="relative w-full aspect-square max-w-md rounded-full bg-gradient-to-tr from-zinc-50 via-white to-zinc-100 shadow-2xl flex items-center justify-center border border-zinc-200"
              >
-                <Globe className="h-1/2 w-1/2 text-black opacity-[0.03] absolute" strokeWidth={0.5} />
+                <Globe className="h-1/2 w-1/2 text-[#3A3A3A] opacity-[0.03] absolute" strokeWidth={0.5} />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.8),transparent)] pointer-events-none" />
                 
                 {/* Floating "Markers" */}
@@ -100,7 +100,7 @@ export function ReachSection({ data }: ReachSectionProps) {
                       repeat: Infinity,
                       ease: "easeInOut"
                     }}
-                    className="absolute h-3 w-3 rounded-full bg-black/10 border border-black/20"
+                    className="absolute h-3 w-3 rounded-full bg-[#3A3A3A]/10 border border-[#3A3A3A]/20"
                     style={{
                       top: `${20 + Math.random() * 60}%`,
                       left: `${20 + Math.random() * 60}%`,

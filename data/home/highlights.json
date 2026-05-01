@@ -91,10 +91,10 @@
         "href": "#process"
       },
       "image": {
-        "src": "/image/shippingPartners.png",
+        "src": "/image/happy-delivery.jpg",
         "alt": "Seamless ordering and delivery tracking"
       },
-      "phoneImage": "/image/shippingPartners.png",
+      "phoneImage": "/image/happy-delivery.jpg",
       "bullets": [
         "Smart vendor matching",
         "Real-time order tracking",

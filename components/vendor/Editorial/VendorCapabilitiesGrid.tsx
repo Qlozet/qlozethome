@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
 
 export function VendorCapabilitiesGrid() {
@@ -64,7 +64,7 @@ export function VendorCapabilitiesGrid() {
   ];
 
   return (
-    <section className="relative py-24 sm:py-40 bg-zinc-50 overflow-hidden" data-theme="light">
+    <section className="relative py-24 sm:py-40 bg-[#F9F9F8] overflow-hidden" data-theme="light">
       <div className="mx-auto w-full max-w-[94rem] px-6">
         
         {/* Header */}
@@ -73,7 +73,7 @@ export function VendorCapabilitiesGrid() {
                initial={{ opacity: 0, y: 20 }}
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
-               className="font-display text-4xl sm:text-6xl lg:text-7xl font-medium tracking-tighter text-black max-w-3xl leading-[1]"
+               className="font-display max-w-4xl text-5xl sm:text-7xl font-medium tracking-tight text-[#3A3A3A] max-w-3xl leading-[1]"
             >
                Everything You Need to Succeed.
             </motion.h2>
@@ -82,7 +82,7 @@ export function VendorCapabilitiesGrid() {
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
                transition={{ delay: 0.2 }}
-               className="font-mono text-xs uppercase tracking-[0.2em] text-zinc-400 pb-2"
+               className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40 pb-2"
             >
                02 // The Capabilities
             </motion.p>
@@ -116,15 +116,17 @@ export function VendorCapabilitiesGrid() {
 
                    <ul className="space-y-4 mb-12">
                       {card.bullets.map((bullet, idx) => (
-                         <li key={idx} className="flex items-center gap-4">
-                            <div className="w-[1px] h-3 bg-white/50" />
-                            <span className="text-white/80 font-ui text-sm sm:text-base uppercase tracking-wider text-[10px] sm:text-xs">{bullet}</span>
+                         <li key={idx} className="flex items-center gap-3">
+                            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/10">
+                               <Check className="h-3.5 w-3.5 text-white" />
+                            </span>
+                            <span className="font-ui text-sm font-medium text-white/70 sm:text-base">{bullet}</span>
                          </li>
                       ))}
                    </ul>
 
                    <div className="mt-auto pt-8 flex border-t border-white/20">
-                      <Link href={card.link} className="inline-flex items-center gap-2 text-sm font-bold font-mono tracking-widest uppercase text-white hover:text-zinc-300 transition-colors">
+                      <Link href={card.link} className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] text-white hover:text-zinc-300 transition-colors">
                          Explore <ArrowRight className="h-4 w-4" />
                       </Link>
                    </div>

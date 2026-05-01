@@ -22,7 +22,7 @@ type IntegratedSectionProps = {
 
 export function IntegratedSection({ data }: IntegratedSectionProps) {
   return (
-    <section className="relative w-full bg-zinc-50 py-14 lg:py-40" data-theme="light">
+    <section className="relative w-full bg-[#F9F9F8] py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col gap-16 lg:flex-row lg:items-center">
           {/* Left Column: Tools Grids */}
@@ -44,14 +44,14 @@ export function IntegratedSection({ data }: IntegratedSectionProps) {
                         : "bg-white/80 sm:aspect-square"
                     }`}
                   >
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-zinc-50 border border-zinc-100 shadow-sm">
-                      <Icon className="h-6 w-6 text-black opacity-80" strokeWidth={1.5} />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#F9F9F8] border border-zinc-100 shadow-sm">
+                      <Icon className="h-6 w-6 text-[#3A3A3A] opacity-80" strokeWidth={1.5} />
                     </div>
                     <div className="flex flex-col gap-2">
-                       <h3 className="font-display text-xl font-medium tracking-tight text-black">
+                       <h3 className="font-display text-xl font-medium tracking-tight text-[#3A3A3A]">
                          {tool}
                        </h3>
-                       {!isFirst && <span className="font-ui text-sm text-black/40">Integrated by Default</span>}
+                       {!isFirst && <span className="font-ui text-sm text-[#3A3A3A]/40">Integrated by Default</span>}
                     </div>
                   </motion.div>
                 );
@@ -68,7 +68,7 @@ export function IntegratedSection({ data }: IntegratedSectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
@@ -77,7 +77,7 @@ export function IntegratedSection({ data }: IntegratedSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl lg:text-7xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -86,7 +86,7 @@ export function IntegratedSection({ data }: IntegratedSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/60 lg:text-2xl"
+                className="max-w-xl font-ui text-lg leading-relaxed text-[#3A3A3A]/60 lg:text-2xl"
               >
                 {data.description}
               </motion.p>

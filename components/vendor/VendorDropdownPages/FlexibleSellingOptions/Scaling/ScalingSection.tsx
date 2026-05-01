@@ -45,24 +45,24 @@ export function ScalingSection({ data }: ScalingSectionProps) {
   ];
 
   return (
-    <section id={data.id} className="relative z-10 bg-white py-16 lg:py-48 overflow-hidden" data-theme="light">
+    <section id={data.id} className="relative z-10 bg-white py-24 sm:py-32 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
-        <div className="flex flex-col gap-16 lg:flex-row lg:items-center lg:gap-32">
+        <div className="flex flex-col gap-16 lg:flex-row lg:items-center lg:gap-24">
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
-              <motion.span initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40">{data.badge}</motion.span>
-              <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-3xl font-medium leading-[1.1] tracking-tighter text-black sm:text-5xl lg:text-6xl">{data.title}</motion.h2>
-              <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="max-w-xl font-ui text-lg leading-relaxed text-black/40 lg:text-2xl">{data.description}</motion.p>
+              <motion.span initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40">{data.badge}</motion.span>
+              <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-5xl lg:text-6xl">{data.title}</motion.h2>
+              <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/40 sm:text-lg">{data.description}</motion.p>
             </div>
             <div className="grid gap-4">
               {data.features.map((feature, i) => (
                 <motion.div key={i} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 + i * 0.1 }} className="flex items-center gap-6 group">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-50 border border-black/5 group-hover:bg-black group-hover:text-white transition-all shadow-sm"><TrendingUp className="h-4 w-4" strokeWidth={1.5} /></div>
-                  <span className="font-display text-lg font-medium text-black/80">{feature}</span>
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#F9F9F8] border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all shadow-sm"><TrendingUp className="h-4 w-4" strokeWidth={1.5} /></div>
+                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
-            <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="font-ui text-sm italic text-black/30">{data.closing}</motion.p>
+            <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="font-ui text-sm italic text-[#3A3A3A]/30">{data.closing}</motion.p>
           </div>
 
           {/* Right: Growth Timeline */}
@@ -87,8 +87,8 @@ export function ScalingSection({ data }: ScalingSectionProps) {
                         transition={{ delay: 0.3 + i * 0.15, type: "spring", stiffness: 300 }}
                         className={`h-10 w-10 rounded-full flex items-center justify-center z-10 shadow-lg ${
                           m.done
-                            ? 'bg-black text-white'
-                            : 'bg-zinc-100 border-2 border-dashed border-black/10 text-black/20'
+                            ? 'bg-[#3A3A3A] text-white'
+                            : 'bg-zinc-100 border-2 border-dashed border-[#3A3A3A]/10 text-[#3A3A3A]/20'
                         }`}
                       >
                         {m.done ? <CheckCircle2 className="h-4 w-4" /> : <Lock className="h-3.5 w-3.5" />}
@@ -102,7 +102,7 @@ export function ScalingSection({ data }: ScalingSectionProps) {
                               whileInView={{ height: "100%" }}
                               viewport={{ once: true }}
                               transition={{ delay: 0.5 + i * 0.15, duration: 0.4 }}
-                              className="absolute top-0 left-0 right-0 bg-black"
+                              className="absolute top-0 left-0 right-0 bg-[#3A3A3A]"
                             />
                           )}
                         </div>
@@ -112,21 +112,21 @@ export function ScalingSection({ data }: ScalingSectionProps) {
                     {/* Card */}
                     <div className={`flex-1 mb-5 rounded-2xl border p-5 transition-all duration-300 group cursor-pointer ${
                       m.done
-                        ? 'bg-white border-black/[0.06] shadow-lg hover:shadow-xl hover:border-black/15 hover:scale-[1.01]'
-                        : 'bg-zinc-50/50 border-dashed border-black/[0.06] opacity-50'
+                        ? 'bg-white border-[#3A3A3A]/[0.06] shadow-lg hover:shadow-xl hover:border-[#3A3A3A]/15 hover:scale-[1.01]'
+                        : 'bg-[#F9F9F8]/50 border-dashed border-[#3A3A3A]/[0.06] opacity-50'
                     }`}>
                       {/* Card Header */}
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-2.5">
-                          <span className="font-mono text-[9px] font-bold text-black/10">{m.stage}</span>
-                          <span className="font-display text-[10px] font-bold uppercase tracking-wider text-black/70">{m.label}</span>
+                          <span className="font-mono text-[9px] font-bold text-[#3A3A3A]/10">{m.stage}</span>
+                          <span className="font-display text-[10px] font-bold uppercase tracking-wider text-[#3A3A3A]/70">{m.label}</span>
                         </div>
-                        <div className={`h-7 w-7 rounded-lg flex items-center justify-center ${m.done ? 'bg-zinc-50 border border-black/5' : 'bg-zinc-100'}`}>
-                          <m.icon className="h-3.5 w-3.5 text-black/25" strokeWidth={1.5} />
+                        <div className={`h-7 w-7 rounded-lg flex items-center justify-center ${m.done ? 'bg-[#F9F9F8] border border-[#3A3A3A]/5' : 'bg-zinc-100'}`}>
+                          <m.icon className="h-3.5 w-3.5 text-[#3A3A3A]/25" strokeWidth={1.5} />
                         </div>
                       </div>
 
-                      <p className="font-ui text-[8px] text-black/25 mb-3">{m.desc}</p>
+                      <p className="font-ui text-[8px] text-[#3A3A3A]/25 mb-3">{m.desc}</p>
 
                       {/* Feature Tags */}
                       <div className="flex flex-wrap gap-1.5">
@@ -139,8 +139,8 @@ export function ScalingSection({ data }: ScalingSectionProps) {
                             transition={{ delay: 0.5 + i * 0.1 + j * 0.05 }}
                             className={`px-2.5 py-1.5 rounded-lg font-display text-[7px] font-bold uppercase tracking-wider ${
                               m.done
-                                ? 'bg-zinc-50 border border-black/5 text-black/40'
-                                : 'bg-zinc-100 text-black/10'
+                                ? 'bg-[#F9F9F8] border border-[#3A3A3A]/5 text-[#3A3A3A]/40'
+                                : 'bg-zinc-100 text-[#3A3A3A]/10'
                             }`}
                           >
                             {item}
@@ -160,13 +160,13 @@ export function ScalingSection({ data }: ScalingSectionProps) {
                 transition={{ delay: 0.8 }}
                 className="text-center pt-3"
               >
-                <span className="font-display text-[7px] font-bold uppercase tracking-[0.5em] text-black/15">Unlock features as you grow</span>
+                <span className="font-display text-[7px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/15">Unlock features as you grow</span>
               </motion.div>
             </motion.div>
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1.5 w-1.5 rounded-full bg-black/10 shadow-sm" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1.5 w-1.5 rounded-full bg-[#3A3A3A]/10 shadow-sm" />
     </section>
   );
 }

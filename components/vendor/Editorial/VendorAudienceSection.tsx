@@ -54,7 +54,7 @@ export function VendorAudienceSection() {
                  onMouseLeave={() => setHoveredIndex(null)}
                  className="group py-6 sm:py-10 flex justify-between items-center cursor-pointer opacity-100"
               >
-                 <span className={`font-display text-4xl sm:text-6xl lg:text-8xl tracking-tighter transition-all duration-500 ${hoveredIndex === i ? 'text-white translate-x-4 sm:translate-x-8' : (hoveredIndex !== null ? 'text-white/20' : 'text-white/80')} `}>
+                 <span className={`font-display text-4xl sm:text-6xl lg:text-8xl tracking-tight transition-all duration-500 ${hoveredIndex === i ? 'text-white translate-x-4 sm:translate-x-8' : (hoveredIndex !== null ? 'text-white/20' : 'text-white/80')} `}>
                      {item.title}
                  </span>
                  <span className={`hidden sm:block font-mono text-xs uppercase tracking-widest transition-opacity duration-300 ${hoveredIndex === i ? 'opacity-100' : 'opacity-0'}`}>

@@ -53,7 +53,7 @@ export function HeroSection({ data }: HeroSectionProps) {
 
   return (
     <section ref={containerRef} className="relative w-full overflow-hidden bg-white pt-24 lg:min-h-screen lg:pt-40" data-theme="light">
-      <div className="absolute top-0 right-0 w-1/2 h-[80vh] bg-zinc-50/50 -z-10 rounded-bl-[5rem]" />
+      <div className="absolute top-0 right-0 w-1/2 h-[80vh] bg-[#F9F9F8]/50 -z-10 rounded-bl-[5rem]" />
 
       <motion.div
         variants={containerVariants}
@@ -67,7 +67,7 @@ export function HeroSection({ data }: HeroSectionProps) {
             <div className="flex flex-col gap-8">
               <motion.span
                 variants={itemVariants}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
@@ -75,7 +75,7 @@ export function HeroSection({ data }: HeroSectionProps) {
               <div className="relative">
                 <motion.h1
                   variants={itemVariants}
-                  className="relative z-10 max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tighter text-black sm:text-7xl lg:text-[5.5rem]"
+                  className="relative z-10 max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl lg:text-[5.5rem]"
                 >
                   {data.title}
                 </motion.h1>
@@ -83,13 +83,13 @@ export function HeroSection({ data }: HeroSectionProps) {
                   initial={{ width: 0 }}
                   animate={{ width: "100px" }}
                   transition={{ delay: 1, duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="absolute -left-12 top-1/2 h-px bg-black/10 hidden xl:block"
+                  className="absolute -left-12 top-1/2 h-px bg-[#3A3A3A]/10 hidden xl:block"
                 />
               </div>
 
               <motion.p
                 variants={itemVariants}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/60 sm:text-2xl"
+                className="max-w-xl font-ui text-lg leading-relaxed text-[#3A3A3A]/60 sm:text-2xl"
               >
                 {data.description}
               </motion.p>
@@ -101,7 +101,7 @@ export function HeroSection({ data }: HeroSectionProps) {
             >
               <Link
                 href={data.cta.href}
-                className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-black px-10 text-[10px] font-bold uppercase tracking-[0.3em] text-white transition-all hover:scale-[1.02] active:scale-95"
+                className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-[#3A3A3A] px-10 text-[10px] font-bold uppercase tracking-[0.3em] text-white transition-all hover:scale-[1.02] active:scale-95"
               >
                 <span className="relative z-10">{data.cta.label}</span>
                 <div className="absolute inset-0 z-0 bg-gradient-to-r from-zinc-800 to-black opacity-0 transition-opacity group-hover:opacity-100" />
@@ -132,14 +132,14 @@ export function HeroSection({ data }: HeroSectionProps) {
               transition={{ delay: 1.2, duration: 1 }}
               className="absolute -right-8 bottom-12 z-20 hidden items-center gap-4 rounded-3xl bg-white/80 p-6 backdrop-blur-xl border border-white/20 shadow-2xl lg:flex"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-black text-white">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#3A3A3A] text-white">
                 <Store className="h-6 w-6" />
               </div>
               <div className="flex flex-col pr-4">
-                <span className="font-display text-[10px] font-bold uppercase tracking-wider text-black/40">Status</span>
+                <span className="font-display text-[10px] font-bold uppercase tracking-wider text-[#3A3A3A]/40">Status</span>
                 <div className="flex items-center gap-2">
-                  <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="font-display text-sm font-bold text-black">Store Live</span>
+                  <div className="h-1.5 w-1.5 rounded-full bg-[#F9F9F8]0 animate-pulse" />
+                  <span className="font-display text-sm font-bold text-[#3A3A3A]">Store Live</span>
                 </div>
               </div>
             </motion.div>

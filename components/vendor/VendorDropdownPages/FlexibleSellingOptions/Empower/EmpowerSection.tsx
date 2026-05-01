@@ -21,7 +21,7 @@ export function EmpowerSection({ data }: EmpowerSectionProps) {
   };
 
   return (
-    <section id="empower" className="relative z-30 bg-[#FAFAFA] px-6 py-24 sm:py-32 lg:py-48">
+    <section id="empower" className="relative z-30 bg-[#FAFAFA] px-6 py-24 sm:py-24 sm:py-32">
       <motion.div 
         variants={containerVariants}
         initial="hidden"
@@ -31,11 +31,11 @@ export function EmpowerSection({ data }: EmpowerSectionProps) {
       >
         {/* Title Group */}
         <div className="mb-24 flex flex-col items-center gap-6 text-center md:mb-40">
-          <motion.span variants={itemVariants} className="inline-flex items-center gap-3 font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40">
-            <div className="h-px w-6 bg-black/20" />
+          <motion.span variants={itemVariants} className="inline-flex items-center gap-3 font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40">
+            <div className="h-px w-6 bg-[#3A3A3A]/20" />
             Empowerment
           </motion.span>
-          <motion.h2 variants={itemVariants} className="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tighter text-black sm:text-7xl">
+          <motion.h2 variants={itemVariants} className="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl">
             {data.title}
           </motion.h2>
         </div>
@@ -64,15 +64,15 @@ export function EmpowerSection({ data }: EmpowerSectionProps) {
                 </div>
 
                 {/* Overlapping Glass Content Box */}
-                <div className={`relative z-20 flex w-[90%] flex-col gap-6 rounded-[2.5rem] border border-black/5 bg-white/70 p-8 shadow-[0_40px_80px_rgba(0,0,0,0.05)] backdrop-blur-2xl sm:p-12 lg:w-[45%] lg:p-16 ${isRight ? "-mt-16 lg:-mr-24 lg:mt-0" : "-mt-16 lg:-ml-24 lg:mt-0"}`}>
-                  <span className="pointer-events-none absolute -top-12 right-8 select-none font-display text-[8rem] font-bold leading-none tracking-tighter text-black/5 lg:-top-16 lg:text-[10rem]">
+                <div className={`relative z-20 flex w-[90%] flex-col gap-6 rounded-[2.5rem] border border-[#3A3A3A]/5 bg-white/70 p-8 shadow-[0_40px_80px_rgba(0,0,0,0.05)] backdrop-blur-2xl sm:p-12 lg:w-[45%] lg:p-16 ${isRight ? "-mt-16 lg:-mr-24 lg:mt-0" : "-mt-16 lg:-ml-24 lg:mt-0"}`}>
+                  <span className="pointer-events-none absolute -top-12 right-8 select-none font-display text-[8rem] font-bold leading-none tracking-tight text-[#3A3A3A]/5 lg:-top-16 lg:text-[10rem]">
                     0{index + 1}
                   </span>
                   
-                  <h3 className="relative z-10 font-display text-3xl font-medium tracking-tight text-black sm:text-4xl lg:text-5xl">
+                  <h3 className="relative z-10 font-display text-3xl font-medium tracking-tight text-[#3A3A3A] sm:text-4xl lg:text-5xl">
                     {item.title}
                   </h3>
-                  <p className="relative z-10 font-ui text-lg leading-relaxed text-black/60 lg:text-xl">
+                  <p className="relative z-10 font-ui text-lg leading-relaxed text-[#3A3A3A]/60 lg:text-xl">
                     {item.description}
                   </p>
                 </div>

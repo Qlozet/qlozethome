@@ -40,7 +40,7 @@ export function VendorEditorialHero() {
         </motion.div>
 
         {/* Hero Title */}
-        <h1 className="max-w-6xl font-display text-5xl font-medium leading-[1.05] tracking-tighter sm:text-7xl lg:text-[7rem] text-balance mb-12">
+        <h1 className="max-w-6xl font-display text-5xl font-medium leading-[0.95] tracking-tighter text-white sm:text-7xl lg:text-[8.5rem] text-balance mb-12">
           {titleWords.map((word, i) => (
             <motion.span
               key={i}
@@ -60,7 +60,7 @@ export function VendorEditorialHero() {
              initial={{ opacity: 0, y: 20 }}
              animate={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-             className="lg:col-span-8 flex flex-col gap-6 text-xl sm:text-2xl lg:text-3xl text-zinc-300 font-ui"
+             className="lg:col-span-8 flex flex-col gap-6 font-ui text-lg leading-relaxed text-white/40 sm:text-2xl lg:text-3xl"
            >
              <p className="text-white max-w-3xl">
                Sell your designs, reach new customers, and grow your brand—all on one platform. No website. No complexity. Just results.
@@ -79,7 +79,7 @@ export function VendorEditorialHero() {
            >
              <Link 
                href="/auth/vendor/register"
-               className="group flex flex-col items-center justify-center w-32 h-32 sm:w-40 sm:h-40 bg-white text-black rounded-full font-mono font-bold text-[10px] sm:text-xs uppercase tracking-widest transition-transform hover:scale-105 active:scale-95"
+               className="group flex flex-col items-center justify-center w-32 h-32 sm:w-40 sm:h-40 bg-white text-[#3A3A3A] rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] transition-transform hover:scale-105 active:scale-95"
              >
                Start<br/>Selling
                <ArrowRight className="mt-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

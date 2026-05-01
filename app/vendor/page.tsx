@@ -13,7 +13,7 @@ import footerData from "@/data/global/footer.json";
 
 export default function VendorPage() {
   return (
-    <div id="top" className="bg-white text-black selection:bg-emerald-500 selection:text-white overflow-x-hidden w-full">
+    <div id="top" className="bg-white text-[#3A3A3A] selection:bg-[#3A3A3A] selection:text-white overflow-x-hidden w-full">
       <Header data={navbarData} />
 
       <main className="flex flex-col w-full">

@@ -22,7 +22,7 @@ type DirectSectionProps = {
 
 export function DirectSection({ data }: DirectSectionProps) {
   return (
-    <section className="relative w-full bg-white py-14 lg:py-40" data-theme="light">
+    <section className="relative w-full bg-white py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
           {/* Left Column: Content */}
@@ -32,7 +32,7 @@ export function DirectSection({ data }: DirectSectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
               >
                 {data.badge}
               </motion.span>
@@ -41,7 +41,7 @@ export function DirectSection({ data }: DirectSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tighter text-black sm:text-6xl lg:text-7xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -50,7 +50,7 @@ export function DirectSection({ data }: DirectSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/60 lg:text-2xl"
+                className="max-w-xl font-ui text-lg leading-relaxed text-[#3A3A3A]/60 lg:text-2xl"
               >
                 {data.description}
               </motion.p>
@@ -66,13 +66,13 @@ export function DirectSection({ data }: DirectSectionProps) {
                   transition={{ delay: 0.3 + index * 0.1 }}
                   className="flex items-center gap-6 group"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-50 border border-zinc-100 transition-all group-hover:bg-black group-hover:text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F9F9F8] border border-zinc-100 transition-all group-hover:bg-[#3A3A3A] group-hover:text-white">
                     {(() => {
                         const Icon = iconMap[feature] || MessageSquare;
                         return <Icon className="h-5 w-5" strokeWidth={1.5} />;
                     })()}
                   </div>
-                  <span className="font-ui text-lg font-medium text-black/70 group-hover:text-black">
+                  <span className="font-ui text-lg font-medium text-[#3A3A3A]/70 group-hover:text-[#3A3A3A]">
                     {feature}
                   </span>
                 </motion.div>
@@ -82,21 +82,21 @@ export function DirectSection({ data }: DirectSectionProps) {
 
           {/* Right Column: Visual Chat/Interaction UI */}
           <div className="lg:w-1/2 flex justify-center items-center">
-             <div className="relative w-full max-w-md p-6 sm:p-10 bg-zinc-50 rounded-[2rem] sm:rounded-[3rem] border border-zinc-100 shadow-xl overflow-hidden group">
+             <div className="relative w-full max-w-md p-6 sm:p-10 bg-[#F9F9F8] rounded-[2rem] sm:rounded-[3rem] border border-zinc-100 shadow-xl overflow-hidden group">
                 <div className="flex flex-col gap-6 relative z-10">
                    <motion.div
                      initial={{ opacity: 0, x: -20 }}
                      whileInView={{ opacity: 1, x: 0 }}
                      className="bg-white rounded-3xl p-6 shadow-sm border border-white/50 w-4/5 self-start"
                    >
-                     <span className="font-ui text-sm text-black/60">Can I customize the sleeves on this piece?</span>
+                     <span className="font-ui text-sm text-[#3A3A3A]/60">Can I customize the sleeves on this piece?</span>
                    </motion.div>
                    
                    <motion.div
                      initial={{ opacity: 0, x: 20 }}
                      whileInView={{ opacity: 1, x: 0 }}
                      transition={{ delay: 0.2 }}
-                     className="bg-black rounded-3xl p-6 shadow-xl w-4/5 self-end"
+                     className="bg-[#3A3A3A] rounded-3xl p-6 shadow-xl w-4/5 self-end"
                    >
                      <span className="font-ui text-sm text-white">Absolutely! Just list it in your measurement specification.</span>
                    </motion.div>

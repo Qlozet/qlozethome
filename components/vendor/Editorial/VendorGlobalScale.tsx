@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Check } from "lucide-react";
 
 export function VendorGlobalScale() {
   const globalPoints = [
@@ -16,10 +17,10 @@ export function VendorGlobalScale() {
   ];
 
   return (
-    <section className="relative py-32 sm:py-48 bg-white overflow-hidden border-b border-black/10" data-theme="light">
+    <section className="relative py-32 sm:py-48 bg-white overflow-hidden border-b border-[#3A3A3A]/10" data-theme="light">
       <div className="mx-auto w-full max-w-[94rem] px-6">
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-24">
            
            {/* Section 4: Global Reach */}
            <motion.div 
@@ -28,21 +29,23 @@ export function VendorGlobalScale() {
              viewport={{ once: true }}
              className="flex flex-col"
            >
-              <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-black/50 mb-8 block border-l-2 border-black pl-4">04 // Grow Beyond Your Location</span>
+              <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#3A3A3A]/50 mb-8 block border-l-2 border-[#3A3A3A] pl-4">04 // Grow Beyond Your Location</span>
               
-              <h3 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium mb-8 leading-[1.1] tracking-tighter">
+              <h3 className="font-display max-w-4xl text-5xl sm:text-7xl font-medium mb-8 leading-[1.1] tracking-tight">
                  Reach Customers<br/>Everywhere.
               </h3>
               
-              <p className="text-zinc-500 font-ui text-xl mb-12 max-w-sm">
+              <p className="font-ui text-base leading-relaxed text-[#3A3A3A]/50 sm:text-lg mb-12 max-w-sm">
                  Qlozet connects you to a global audience—so your business isn’t limited by location.
               </p>
 
               <ul className="space-y-6 mb-16 flex-1">
                  {globalPoints.map((point, i) => (
-                    <li key={i} className="flex items-center gap-4">
-                       <div className="w-8 h-[1px] bg-black/20" />
-                       <span className="text-black font-display text-lg sm:text-xl font-medium">{point}</span>
+                    <li key={i} className="flex items-center gap-3">
+                       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10">
+                          <Check className="h-4 w-4 text-[#3A3A3A]" />
+                       </span>
+                       <span className="text-[#3A3A3A] font-display text-lg sm:text-xl font-medium">{point}</span>
                     </li>
                  ))}
               </ul>
@@ -60,16 +63,19 @@ export function VendorGlobalScale() {
              transition={{ delay: 0.2 }}
              className="flex flex-col"
            >
-              <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-black/50 mb-8 block border-l-2 border-black pl-4">05 // Scaling Made Easy</span>
+              <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#3A3A3A]/50 mb-8 block border-l-2 border-[#3A3A3A] pl-4">05 // Scaling Made Easy</span>
               
-              <h3 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium mb-8 leading-[1.1] tracking-tighter">
+              <h3 className="font-display max-w-4xl text-5xl sm:text-7xl font-medium mb-8 leading-[1.1] tracking-tight">
                  Start Simple.<br/>Scale Fast.
               </h3>
 
               <div className="space-y-8 mb-16 flex-1 pt-4">
                  {scalePoints.map((point, i) => (
-                    <div key={i} className="flex flex-col gap-2">
-                       <span className="text-black font-display text-2xl sm:text-3xl font-medium">{point}</span>
+                    <div key={i} className="flex items-center gap-3">
+                       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10">
+                          <Check className="h-4 w-4 text-[#3A3A3A]" />
+                       </span>
+                       <span className="text-[#3A3A3A] font-display text-2xl sm:text-3xl font-medium">{point}</span>
                     </div>
                  ))}
               </div>
