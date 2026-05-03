@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import { Check, CheckCircle2 } from "lucide-react";
 
 type SalesData = {
   badge: string;
@@ -70,7 +70,7 @@ export function SalesSection({ data }: SalesSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
+                className="font-display max-w-4xl text-5xl sm:text-7xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A]"
               >
                 {data.title}
               </motion.h2>
@@ -79,7 +79,7 @@ export function SalesSection({ data }: SalesSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="max-w-xl font-ui text-lg leading-relaxed text-[#3A3A3A]/60 lg:text-2xl"
+                className="font-ui text-base leading-relaxed text-[#3A3A3A]/50 sm:text-lg max-w-xl"
               >
                 {data.description}
               </motion.p>
@@ -95,10 +95,10 @@ export function SalesSection({ data }: SalesSectionProps) {
                   transition={{ delay: 0.3 + index * 0.1 }}
                   className="flex items-center gap-6"
                 >
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F9F9F8] border border-zinc-100">
-                    <CheckCircle2 className="h-4 w-4 text-[#3A3A3A] opacity-40" strokeWidth={1.5} />
-                  </div>
-                  <span className="font-ui text-lg text-[#3A3A3A]/70">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10">
+                    <Check className="h-3.5 w-3.5 text-[#3A3A3A]" strokeWidth={2} />
+                  </span>
+                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">
                     {benefit}
                   </span>
                 </motion.div>

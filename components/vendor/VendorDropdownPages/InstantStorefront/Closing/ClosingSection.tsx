@@ -33,7 +33,7 @@ export function ClosingSection({ data }: ClosingSectionProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="max-w-2xl font-ui text-lg leading-relaxed text-[#3A3A3A]/60 lg:text-2xl"
+            className="font-ui text-base leading-relaxed text-[#3A3A3A]/50 sm:text-lg max-w-2xl"
           >
             {data.description}
           </motion.p>

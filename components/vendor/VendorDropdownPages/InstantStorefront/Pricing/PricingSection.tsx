@@ -39,7 +39,7 @@ export function PricingSection({ data }: PricingSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl"
+              className="font-display max-w-4xl text-5xl sm:text-7xl font-medium leading-[1.05] tracking-tight text-white"
             >
               {data.title}
             </motion.h2>
