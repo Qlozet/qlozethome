@@ -84,7 +84,7 @@ export function ReachSection({ data }: ReachSectionProps) {
                style={{ rotate, scale }}
                className="relative w-full aspect-square max-w-md rounded-full bg-gradient-to-tr from-zinc-50 via-white to-zinc-100 shadow-2xl flex items-center justify-center border border-zinc-200"
              >
-                <Globe className="h-1/2 w-1/2 text-[#3A3A3A] opacity-[0.03] absolute" strokeWidth={0.5} />
+                <Globe className="h-1/2 w-1/2 text-[#3A3A3A] opacity-20 absolute" strokeWidth={1} />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.8),transparent)] pointer-events-none" />
                 
                 {/* Floating "Markers" */}

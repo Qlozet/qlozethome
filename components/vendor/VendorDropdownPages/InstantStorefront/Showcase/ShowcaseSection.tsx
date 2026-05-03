@@ -31,16 +31,16 @@ export function ShowcaseSection({ data }: ShowcaseSectionProps) {
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-24">
           {/* Left Column: Image with Parallax */}
           <div className="relative lg:w-1/2">
-            <div className="relative aspect-square w-full overflow-hidden rounded-[4rem] shadow-2xl">
+            <div className="group relative aspect-square w-full overflow-hidden rounded-[4rem] shadow-2xl">
               <motion.div style={{ y, height: "120%", marginTop: "-10%" }} className="relative w-full">
                 <Image
                   src={data.image.src}
                   alt={data.image.alt}
                   fill
-                  className="object-cover grayscale brightness-90 transition-all duration-1000 hover:grayscale-0 hover:brightness-100"
+                  className="object-cover grayscale brightness-90 transition-all duration-1000 group-hover:grayscale-0 group-hover:brightness-100"
                 />
               </motion.div>
-              <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-transparent pointer-events-none" />
             </div>
           </div>
 
