@@ -5,7 +5,7 @@
     "description": "Every fashion business is different—and Qlozet is built to support that. Whether you sell ready-made pieces, custom designs, or both, you have full control over how you operate.",
     "cta": {
       "label": "Start Selling Your Way",
-      "href": "/waitlist"
+      "href": "/vendor/waitlist"
     },
     "closing": "Flexible selling, designed for real fashion businesses."
   },
@@ -112,7 +112,7 @@
     "description": "Qlozet gives you the flexibility to run your fashion business exactly how you want—without compromise.",
     "primaryAction": {
       "label": "Start Selling Your Way on Qlozet",
-      "href": "/waitlist"
+      "href": "/vendor/waitlist"
     }
   }
 }

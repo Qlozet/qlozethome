@@ -5,7 +5,7 @@
     "description": "Build, manage, and grow your brand with a powerful digital storefront designed for fashion. No website. No complexity. No limits.",
     "cta": {
       "label": "Start Selling on Qlozet",
-      "href": "/waitlist"
+      "href": "/vendor/waitlist"
     },
     "image": {
       "src": "/image/fabric-1.jpg",
@@ -119,7 +119,7 @@
     "description": "Qlozet gives you everything you need to succeed in modern fashion—without the usual barriers. Start building your brand today.",
     "cta": {
       "label": "Create Your Storefront Now",
-      "href": "/waitlist"
+      "href": "/vendor/waitlist"
     }
   }
 }

@@ -5,7 +5,7 @@
     "description": "Qlozet handles the complexity of logistics—so your products reach customers safely, efficiently, and on time. From pickup to delivery, we’ve got it covered.",
     "cta": {
       "label": "Start Delivering with Qlozet",
-      "href": "/waitlist"
+      "href": "/vendor/waitlist"
     },
     "closing": "Precision in every package."
   },
@@ -100,7 +100,7 @@
     "description": "With Qlozet, logistics becomes simple, reliable, and efficient.",
     "primaryAction": {
       "label": "Start Shipping with Confidence",
-      "href": "/waitlist"
+      "href": "/vendor/waitlist"
     }
   }
 }

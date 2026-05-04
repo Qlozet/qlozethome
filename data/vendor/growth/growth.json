@@ -5,7 +5,7 @@
     "description": "Qlozet gives you the tools to not only get paid—but to scale your business with confidence. From secure transactions to growth-driven features, everything is built to help you succeed.",
     "cta": {
       "label": "Start Earning on Qlozet",
-      "href": "/waitlist"
+      "href": "/vendor/waitlist"
     },
     "closing": "Focus on your craft. We handle the rest."
   },
@@ -100,7 +100,7 @@
     "description": "Qlozet turns your work into earnings—and your earnings into growth.",
     "primaryAction": {
       "label": "Start Selling & Earning Today",
-      "href": "/waitlist"
+      "href": "/vendor/waitlist"
     }
   }
 }

@@ -103,7 +103,7 @@
     "description": "With Qlozet, you don’t just get measurements—you get confidence in every stitch. Deliver better fits. Reduce errors. Build trust with every customer.",
     "primaryAction": {
       "label": "Start Creating with Precision",
-      "href": "/waitlist"
+      "href": "/vendor/waitlist"
     },
     "secondaryAction": {
       "label": "Learn More",

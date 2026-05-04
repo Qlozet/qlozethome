@@ -36,6 +36,8 @@ export function Header({ data }: HeaderProps) {
     ? data.links 
     : data.links.filter(link => link.label !== "PRICING");
 
+  const ctaHref = isVendorPage ? "/vendor/waitlist" : data.cta.href;
+
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -316,7 +318,7 @@ export function Header({ data }: HeaderProps) {
             {data.secondary.label}
           </Link>
           <Link
-            href={data.cta.href}
+            href={ctaHref}
             className={`rounded-full px-8 py-3.5 shadow-2xl transition-all duration-500 hover:scale-105 active:scale-95 ${navTheme.btnPrimary}`}
           >
             {data.cta.label}
@@ -463,7 +465,7 @@ export function Header({ data }: HeaderProps) {
                     {data.secondary.label}
                   </Link>
                   <Link
-                    href={data.cta.href}
+                    href={ctaHref}
                     onClick={() => setMobileMenuOpen(false)}
                     className={`rounded-full px-6 py-4 text-center font-display text-[10px] font-bold uppercase tracking-[0.3em] transition-all duration-300 shadow-xl active:scale-95 ${navTheme.mobileBtnPri}`}
                   >

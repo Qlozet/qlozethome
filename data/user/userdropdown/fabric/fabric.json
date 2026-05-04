@@ -4,8 +4,8 @@
     "title": "Build the Outfit.",
     "description": "Every great outfit begins with the right fabric. Explore a curated collection of premium textiles—from bold statement prints to timeless classics—ready to bring your vision to life.",
     "cta": {
-      "label": "Explore Fabrics",
-      "href": "/explore"
+      "label": "Join Waitlist",
+      "href": "/waitlist"
     },
     "closing": "Choose the fabric. Define the style."
   },
@@ -111,8 +111,8 @@
     "title": "The Right Fabric Changes Everything",
     "description": "Your outfit starts here. Choose better fabrics, create better designs, and wear something truly yours.",
     "primaryAction": {
-      "label": "Start Exploring Fabrics",
-      "href": "/explore"
+      "label": "Join Waitlist",
+      "href": "/waitlist"
     }
   }
 }
