@@ -67,7 +67,7 @@ export function ProductCarousel() {
       {/* Fixed UI Layer */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
       
-      <div className="absolute bottom-12 left-12 right-12 flex items-end justify-between text-white z-10">
+      <div className="absolute bottom-8 left-8 right-8 flex flex-col sm:flex-row sm:items-end justify-between gap-6 text-white z-10 sm:bottom-12 sm:left-12 sm:right-12">
         <div className="flex flex-col gap-2">
           {/* Category - Fixed with subtle fade */}
           <motion.span
