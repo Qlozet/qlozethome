@@ -15,7 +15,7 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
   const [openStep, setOpenStep] = useState<string | null>(data.steps[0].id);
 
   return (
-    <section id="how-it-works" className="relative z-20 bg-[#050505] px-6 py-24 sm:py-24 sm:py-32">
+    <section id="how-it-works" className="relative z-20 bg-[#050505] px-6 md:px-10 lg:px-10 py-24 sm:py-24 sm:py-32">
       <div className="mx-auto grid max-w-[94rem] gap-12 lg:grid-cols-2 lg:gap-24">
         {/* Left Content - Accordion Timeline */}
         <div className="flex flex-col gap-16 lg:pt-16">

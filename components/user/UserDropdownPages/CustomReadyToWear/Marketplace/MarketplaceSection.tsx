@@ -29,7 +29,7 @@ type MarketplaceSectionProps = {
 export function MarketplaceSection({ data }: MarketplaceSectionProps) {
   return (
     <section id={data.id} className="relative z-10 bg-white py-24 sm:py-32" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-6">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-24">
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
@@ -100,7 +100,7 @@ export function MarketplaceSection({ data }: MarketplaceSectionProps) {
                 </div>
 
                 {/* Collection Items - Auto Scrolling Vertical Grid */}
-                <div className="absolute inset-0 top-24 sm:top-28 bottom-0 overflow-hidden z-10 w-full px-6 sm:px-8 pb-4" style={{ WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 5%, black 85%, transparent)' }}>
+                <div className="absolute inset-0 top-24 sm:top-28 bottom-0 overflow-hidden z-10 w-full px-6 md:px-10 lg:px-10 sm:px-8 pb-4" style={{ WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 5%, black 85%, transparent)' }}>
                    <motion.div
                      animate={{ y: [0, -1200] }}
                      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}

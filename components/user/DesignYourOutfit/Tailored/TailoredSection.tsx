@@ -25,7 +25,7 @@ const MEASUREMENTS = [
 export function TailoredSection({ data }: TailoredSectionProps) {
   return (
     <section className="relative w-full bg-white py-24 sm:py-32" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-6">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-24">
           {/* Left: Fit Profile */}
           <div className="relative mt-8 order-2 lg:order-1 lg:mt-0 lg:w-1/2">

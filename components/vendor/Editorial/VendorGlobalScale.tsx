@@ -18,7 +18,7 @@ export function VendorGlobalScale() {
 
   return (
     <section className="relative py-32 sm:py-48 bg-white overflow-hidden border-b border-[#3A3A3A]/10" data-theme="light">
-      <div className="mx-auto w-full max-w-[94rem] px-6">
+      <div className="mx-auto w-full max-w-[94rem] px-6 md:px-10 lg:px-10">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-24">
            

@@ -27,7 +27,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
       {/* Drafting Grid Texture */}
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
-      <div className="mx-auto max-w-[94rem] px-6">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-24">
           {/* Left Side: Illustration / Image */}
           <div className="relative order-2 lg:order-1 lg:w-1/2">

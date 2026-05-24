@@ -111,7 +111,7 @@ export function Header({ data }: HeaderProps) {
     <header
       className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-700 w-full ${navTheme.headerBg}`}
     >
-      <div className="mx-auto flex max-w-[94rem] items-center justify-between gap-4 px-6 py-4 w-full">
+      <div className="mx-auto flex max-w-[94rem] items-center justify-between gap-4 px-6 md:px-10 lg:px-10 py-4 w-full">
         <Link href={data.logo.href} className="flex items-center gap-2">
           <div className="relative h-8 w-28 sm:w-32">
             <Image
@@ -128,7 +128,7 @@ export function Header({ data }: HeaderProps) {
         {/* Hamburger Button - Mobile Only */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className={`md:hidden p-2 ${navTheme.hamburger}`}
+          className={`min-[1200px]:hidden p-2 ${navTheme.hamburger}`}
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? (
@@ -165,7 +165,7 @@ export function Header({ data }: HeaderProps) {
 
         {/* Desktop Navigation */}
         <nav
-          className={`font-display hidden shrink-0 items-center gap-12 text-[11px] md:flex absolute left-1/2 -translate-x-1/2 ${navTheme.textBase}`}
+          className={`font-display hidden shrink-0 items-center gap-12 text-[11px] min-[1200px]:flex absolute left-1/2 -translate-x-1/2 ${navTheme.textBase}`}
         >
           {filteredLinks.map((link) => {
             const hasDropdown = "dropdown" in link && link.dropdown;
@@ -309,7 +309,7 @@ export function Header({ data }: HeaderProps) {
           })}
         </nav>
         <div
-          className={`font-display hidden shrink-0 items-center gap-4 text-[10px] font-bold uppercase tracking-[0.3em] md:flex ${navTheme.textBase}`}
+          className={`font-display hidden shrink-0 items-center gap-4 text-[10px] font-bold uppercase tracking-[0.3em] min-[1200px]:flex ${navTheme.textBase}`}
         >
           <Link
             href={data.secondary.href}
@@ -327,7 +327,7 @@ export function Header({ data }: HeaderProps) {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="absolute inset-x-0 top-full z-50 md:hidden">
+          <div className="absolute inset-x-0 top-full z-50 min-[1200px]:hidden">
             <div className={`max-h-[calc(100vh-80px)] overflow-y-auto border-b transition-all duration-500 ${navTheme.mobileBg}`}
             >
               <nav className="flex flex-col px-8 py-10 gap-2">

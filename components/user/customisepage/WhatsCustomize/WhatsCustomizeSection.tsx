@@ -34,7 +34,7 @@ export function WhatsCustomizeSection({ data }: WhatsCustomizeSectionProps) {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="mx-auto max-w-[94rem] px-6"
+        className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10"
       >
         {/* Title Group - Drafting Header */}
         <div className="mb-20 flex flex-col gap-6 border-b border-black/10 pb-12 lg:mb-32">

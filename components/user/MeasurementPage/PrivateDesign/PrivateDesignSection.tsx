@@ -36,7 +36,7 @@ export function PrivateDesignSection({ data }: PrivateDesignSectionProps) {
   const icons = [Shield, Fingerprint, EyeOff];
 
   return (
-    <section id="private-design" className="relative z-30 overflow-hidden bg-[#0A0A0A] px-6 py-24 sm:py-32 lg:py-40">
+    <section id="private-design" className="relative z-30 overflow-hidden bg-[#0A0A0A] px-6 md:px-10 lg:px-10 py-24 sm:py-32 lg:py-40">
       {/* Encryption Pattern Background */}
       <div className="absolute inset-0 z-0 opacity-[0.02]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
 

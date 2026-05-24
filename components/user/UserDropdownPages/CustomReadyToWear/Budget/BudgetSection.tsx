@@ -65,7 +65,7 @@ export function BudgetSection({ data }: BudgetSectionProps) {
 
   return (
     <section className="relative z-10 bg-zinc-50 py-24 sm:py-32 border-y border-[#3A3A3A]/5" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-6">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-24">
           {/* Left: Content */}
           <div className="flex flex-col gap-6 lg:w-1/2 lg:sticky lg:top-32 lg:self-start">

@@ -34,7 +34,7 @@ export function WhyVendorsSection({ data }: WhyVendorsSectionProps) {
   };
 
   return (
-    <section id="why-vendors" className="relative z-30 bg-[#050505] px-6 py-32 lg:py-48" data-theme="dark">
+    <section id="why-vendors" className="relative z-30 bg-[#050505] px-6 md:px-10 lg:px-10 py-32 lg:py-48" data-theme="dark">
       <motion.div 
         variants={containerVariants}
         initial="hidden"

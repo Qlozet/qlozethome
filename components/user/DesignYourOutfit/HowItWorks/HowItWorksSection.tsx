@@ -30,7 +30,7 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
   };
 
   return (
-    <section id="how-it-works" className="relative z-20 overflow-hidden bg-[#0A0A0A] px-6 py-32 sm:py-48">
+    <section id="how-it-works" className="relative z-20 overflow-hidden bg-[#0A0A0A] px-6 md:px-10 lg:px-10 py-32 sm:py-48">
       {/* Background Atmosphere */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/5 via-[#0A0A0A] to-[#0A0A0A]" />
 

@@ -48,7 +48,7 @@ export function LogisticsHero({ data }: LogisticsHeroProps) {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="mx-auto w-full max-w-[94rem] px-6"
+        className="mx-auto w-full max-w-[94rem] px-6 md:px-10 lg:px-10"
       >
         <div className="flex flex-col gap-16 lg:flex-row lg:items-center lg:gap-24">
           {/* Left: Content */}

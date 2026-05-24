@@ -55,7 +55,7 @@ export function DesignYourOutfitHero({ data }: DesignYourOutfitHeroProps) {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-20 mx-auto flex max-w-5xl flex-col items-center gap-12 px-6 text-center"
+        className="relative z-20 mx-auto flex max-w-5xl flex-col items-center gap-12 px-6 md:px-10 lg:px-10 text-center"
       >
         {/* Editorial Badge */}
         <motion.div variants={itemVariants} className="flex flex-col items-center gap-6">

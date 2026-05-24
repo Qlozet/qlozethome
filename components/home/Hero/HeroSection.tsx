@@ -66,7 +66,7 @@ export function HeroSection({ data }: HeroSectionProps) {
 
       {/* Content Layer - Unified Absolute Layout */}
       <div className="absolute inset-0 mx-auto z-10 w-full max-w-[94rem]">
-        <div className="flex h-full flex-col justify-center gap-12 px-6 pt-20">
+        <div className="flex h-full flex-col justify-center gap-12 px-6 md:px-10 lg:px-10 pt-20">
           <motion.div 
             variants={containerVariants}
             initial="hidden"

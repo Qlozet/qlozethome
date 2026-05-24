@@ -30,7 +30,7 @@ const PLATFORM_SIGNALS = [
 
 export function GrowthSection({ data }: GrowthSectionProps) {
   return (
-    <section className="relative z-20 bg-[#050505] px-6 py-24 sm:py-32 overflow-hidden" data-theme="dark">
+    <section className="relative z-20 bg-[#050505] px-6 md:px-10 lg:px-10 py-24 sm:py-32 overflow-hidden" data-theme="dark">
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
         style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
 

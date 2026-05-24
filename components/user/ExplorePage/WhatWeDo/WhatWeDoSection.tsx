@@ -33,7 +33,7 @@ export function WhatWeDoSection({ data }: WhatWeDoSectionProps) {
   };
 
   return (
-    <section id="what-we-do" className="relative z-10 bg-white px-6 py-24 sm:py-32">
+    <section id="what-we-do" className="relative z-10 bg-white px-6 md:px-10 lg:px-10 py-24 sm:py-32">
       <div className="mx-auto max-w-[94rem]">
         {/* Title Group */}
         <motion.div 

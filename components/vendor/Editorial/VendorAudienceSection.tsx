@@ -35,7 +35,7 @@ export function VendorAudienceSection() {
 
       <div className="absolute inset-0 bg-black/40 z-0 pointer-events-none" />
 
-      <div className="mx-auto w-full max-w-[94rem] px-6 relative z-10">
+      <div className="mx-auto w-full max-w-[94rem] px-6 md:px-10 lg:px-10 relative z-10">
         
         <div className="mb-16 sm:mb-24 flex justify-between items-end border-b border-white/20 pb-8">
             <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-white/50">03 // The Creators</span>

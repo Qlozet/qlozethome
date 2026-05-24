@@ -23,7 +23,7 @@ const PIPELINE = [
 export function ProductionSection({ data }: ProductionSectionProps) {
   return (
     <section className="relative w-full bg-[#F9F9F8] py-24 sm:py-32" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-6">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-24">
           {/* Left: Content */}
           <div className="flex flex-col gap-6 lg:w-1/2">

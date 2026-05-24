@@ -33,7 +33,7 @@ export function ExperienceSection({ data }: ExperienceSectionProps) {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="relative z-10 mx-auto max-w-[94rem] px-6"
+        className="relative z-10 mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10"
       >
         {/* Title Group */}
         <div className="mb-24 flex flex-col items-center gap-6 text-center lg:mb-40">

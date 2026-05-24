@@ -25,7 +25,7 @@ export function VendorEditorialHero() {
          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
       </motion.div>
 
-      <div className="w-full max-w-[94rem] mx-auto px-6 relative z-10 pb-16 sm:pb-24 pt-32">
+      <div className="w-full max-w-[94rem] mx-auto px-6 md:px-10 lg:px-10 relative z-10 pb-16 sm:pb-24 pt-32">
         
         {/* Badge */}
         <motion.div 

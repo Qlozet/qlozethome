@@ -15,7 +15,7 @@ type WhatSectionProps = {
 
 export function WhatSection({ data }: WhatSectionProps) {
   return (
-    <section id="what" className="relative z-10 bg-white px-6 py-20 lg:py-40" data-theme="light">
+    <section id="what" className="relative z-10 bg-white px-6 md:px-10 lg:px-10 py-20 lg:py-40" data-theme="light">
       <div className="mx-auto max-w-[94rem]">
         {/* Title Group */}
         <div className="mb-24 flex flex-col items-center gap-8 text-center lg:mb-32">

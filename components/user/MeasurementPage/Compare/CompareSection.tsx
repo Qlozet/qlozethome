@@ -42,7 +42,7 @@ export function CompareSection({ data }: CompareSectionProps) {
   const newMethod = data.comparisonTable.rows[1];
 
   return (
-    <section id="compare" className="relative z-20 overflow-hidden bg-[#050505] px-6 py-24 sm:py-32">
+    <section id="compare" className="relative z-20 overflow-hidden bg-[#050505] px-6 md:px-10 lg:px-10 py-24 sm:py-32">
       {/* Biometric background glow */}
       <div className="absolute inset-0 z-0 flex items-center justify-center opacity-20 pointer-events-none">
         <div className="h-[600px] w-[600px] rounded-full bg-[#00F0FF] blur-[150px]" />

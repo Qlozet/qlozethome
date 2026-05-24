@@ -52,7 +52,7 @@ export function AboutHero({ data }: AboutHeroProps) {
   };
 
   return (
-    <section ref={ref} id={data.id} className="relative h-[80vh] w-full overflow-hidden bg-black sm:h-[90vh]" data-theme="dark">
+    <section ref={ref} id={data.id} className="relative min-h-[80vh] w-full overflow-hidden bg-black sm:min-h-[90vh]" data-theme="dark">
       {/* Parallax Background */}
       <motion.div 
         style={{ y, opacity }}
@@ -70,8 +70,7 @@ export function AboutHero({ data }: AboutHeroProps) {
       </motion.div>
 
       {/* Content */}
-      <div className="absolute inset-0 z-10 mx-auto w-full max-w-[94rem]">
-        <div className="flex h-full flex-col justify-end gap-12 pb-24 px-6">
+      <div className="relative z-10 mx-auto flex w-full max-w-[94rem] min-h-[80vh] sm:min-h-[90vh] flex-col justify-center gap-12 pb-32 pt-32 px-6 md:px-10 lg:px-10">
           <motion.div 
             variants={containerVariants}
             initial="hidden"
@@ -99,7 +98,6 @@ export function AboutHero({ data }: AboutHeroProps) {
               {data.description}
             </motion.p>
           </motion.div>
-        </div>
       </div>
 
       {/* Scroll Prompt */}

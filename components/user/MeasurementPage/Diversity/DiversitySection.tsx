@@ -23,7 +23,7 @@ const iconMap: any = {
 export function DiversitySection({ data }: DiversitySectionProps) {
   return (
     <section className="relative w-full bg-[#F9F9F8] py-24 sm:py-32" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-6">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col gap-16 lg:flex-row lg:items-center">
           {/* Left Column: Visual Grid of Styles */}
           <div className="lg:w-1/2">

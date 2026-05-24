@@ -26,7 +26,7 @@ export function CreativitySection({ data }: CreativitySectionProps) {
 
   return (
     <section className="relative w-full bg-white py-24 sm:py-32" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-6">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col gap-16">
           {/* Header */}
           <div className="flex flex-col gap-8 text-center items-center mx-auto max-w-3xl">

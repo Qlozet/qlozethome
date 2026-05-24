@@ -26,7 +26,7 @@ export function TestimonialsSection({ data }: TestimonialsSectionProps) {
   };
 
   return (
-    <section id="testimonials" className="relative z-40 overflow-hidden bg-[#0A0A0A] px-6 py-24 sm:py-32 lg:py-48">
+    <section id="testimonials" className="relative z-40 overflow-hidden bg-[#0A0A0A] px-6 md:px-10 lg:px-10 py-24 sm:py-32 lg:py-48">
       {/* Node Network Background */}
       <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at center, #00F0FF 2px, transparent 2px)', backgroundSize: '60px 60px' }} />
 

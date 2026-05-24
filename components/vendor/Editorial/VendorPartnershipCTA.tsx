@@ -20,7 +20,7 @@ export function VendorPartnershipCTA() {
          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
       </div>
 
-      <div className="mx-auto w-full max-w-[94rem] px-6 relative z-10">
+      <div className="mx-auto w-full max-w-[94rem] px-6 md:px-10 lg:px-10 relative z-10">
         
         {/* Section 7: Built for Your Success */}
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 mb-32 lg:mb-48 border-b border-white/20 pb-24 lg:pb-32">

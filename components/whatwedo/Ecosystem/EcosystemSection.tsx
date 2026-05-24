@@ -11,7 +11,7 @@ type EcosystemSectionProps = {
 
 export function EcosystemSection({ data }: EcosystemSectionProps) {
   return (
-    <section className="bg-white px-6 pt-8 pb-8 sm:pt-12 sm:pb-16" data-theme="light">
+    <section className="bg-white px-6 md:px-10 lg:px-10 pt-8 pb-8 sm:pt-12 sm:pb-16" data-theme="light">
       <div className="mx-auto grid max-w-[90rem] gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-32">
         {/* Left Content - Stakeholders */}
         <motion.div 

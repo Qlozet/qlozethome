@@ -41,7 +41,7 @@ export function WhySection({ data }: WhySectionProps) {
   };
 
   return (
-    <section id="why" className="relative z-10 bg-white px-6 py-32 lg:py-48" data-theme="light">
+    <section id="why" className="relative z-10 bg-white px-6 md:px-10 lg:px-10 py-32 lg:py-48" data-theme="light">
       <motion.div 
         variants={containerVariants}
         initial="hidden"

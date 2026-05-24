@@ -27,7 +27,7 @@ const WAYPOINTS = [
 export function TrackingSection({ data }: TrackingSectionProps) {
   return (
     <section id="tracking" className="relative w-full bg-[#F9F9F8] py-24 sm:py-32 overflow-hidden" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-6">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-24">
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">

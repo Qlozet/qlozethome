@@ -41,7 +41,7 @@ export function HeroSection({ data }: HeroSectionProps) {
     <section ref={containerRef} className="relative w-full overflow-hidden bg-white pt-24 pb-12 lg:min-h-screen lg:pt-40 lg:pb-24" data-theme="light">
       <div className="absolute inset-0 z-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #000 0.7px, transparent 0.7px)', backgroundSize: '24px 24px' }} />
 
-      <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10 mx-auto w-full max-w-[94rem] px-6">
+      <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10 mx-auto w-full max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-16">
           {/* Left: Text */}
           <div className="flex flex-col gap-10 lg:w-1/2 lg:pt-8">

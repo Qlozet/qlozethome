@@ -70,7 +70,7 @@ export function HeroSection({ data }: HeroSectionProps) {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center justify-center px-6 text-center"
+        className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center justify-center px-6 md:px-10 lg:px-10 text-center"
       >
         <div className="flex flex-col items-center gap-8">
           <motion.span 

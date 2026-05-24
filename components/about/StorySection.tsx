@@ -12,8 +12,8 @@ type StorySectionProps = {
 
 export function StorySection({ data }: StorySectionProps) {
   return (
-    <section id={data.id} className="relative z-10 bg-white px-6 py-24 sm:py-32 scroll-mt-32" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-4 sm:px-6">
+    <section id={data.id} className="relative z-10 bg-white px-6 md:px-10 lg:px-10 py-24 sm:py-32 scroll-mt-32" data-theme="light">
+      <div className="mx-auto max-w-[94rem] px-4 sm:px-6 md:px-10 lg:px-10">
         <div className="grid gap-16 lg:grid-cols-2">
           {/* Tagline & Title */}
           <motion.div 

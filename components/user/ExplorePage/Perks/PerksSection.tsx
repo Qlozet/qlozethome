@@ -29,7 +29,7 @@ export function PerksSection({ data }: PerksSectionProps) {
   };
 
   return (
-    <section id="perks" className="relative z-30 bg-[#F9F9F8] px-6 py-32 sm:py-48">
+    <section id="perks" className="relative z-30 bg-[#F9F9F8] px-6 md:px-10 lg:px-10 py-32 sm:py-48">
       <motion.div 
         variants={containerVariants}
         initial="hidden"

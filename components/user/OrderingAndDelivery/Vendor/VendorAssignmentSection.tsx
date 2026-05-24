@@ -70,7 +70,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
 
   return (
     <section id="vendor" className="relative w-full bg-[#F9F9F8] py-24 sm:py-32 overflow-hidden" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-6 relative z-10">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10 relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-24">
           {/* Right: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2 order-2 lg:order-2">

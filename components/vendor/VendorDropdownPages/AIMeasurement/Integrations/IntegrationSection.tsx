@@ -16,7 +16,7 @@ type IntegrationSectionProps = {
 
 export function IntegrationSection({ data }: IntegrationSectionProps) {
   return (
-    <section id="integrations" className="relative z-20 bg-white px-6 py-32 lg:py-48" data-theme="light">
+    <section id="integrations" className="relative z-20 bg-white px-6 md:px-10 lg:px-10 py-32 lg:py-48" data-theme="light">
       <div className="mx-auto grid max-w-[94rem] gap-24 lg:grid-cols-[0.8fr_1.2fr]">
         {/* Left Column: Title Block */}
         <div className="flex flex-col gap-8 lg:sticky lg:top-40 lg:h-fit">

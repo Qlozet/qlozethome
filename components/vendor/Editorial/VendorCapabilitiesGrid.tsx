@@ -65,7 +65,7 @@ export function VendorCapabilitiesGrid() {
 
    return (
       <section className="relative py-24 sm:py-40 bg-[#F9F9F8] overflow-hidden" data-theme="light">
-         <div className="mx-auto w-full max-w-[94rem] px-6">
+         <div className="mx-auto w-full max-w-[94rem] px-6 md:px-10 lg:px-10">
 
             {/* Header */}
             <div className="mb-16 sm:mb-24 flex flex-col lg:flex-row justify-between items-end gap-8">

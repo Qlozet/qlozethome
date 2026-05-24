@@ -58,7 +58,7 @@ export function CustomizeHero({ data }: CustomizeHeroProps) {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 mx-auto flex max-w-5xl flex-col items-center gap-8 px-6 text-center lg:gap-10"
+        className="relative z-10 mx-auto flex max-w-5xl flex-col items-center gap-8 px-6 md:px-10 lg:px-10 text-center lg:gap-10"
       >
         <motion.span variants={itemVariants} className="inline-flex items-center gap-3 rounded-full border border-black/10 bg-white/80 px-6 py-2 pb-2 backdrop-blur-md">
           <div className="h-1.5 w-1.5 rounded-full bg-[#FF6A3D] animate-pulse" />

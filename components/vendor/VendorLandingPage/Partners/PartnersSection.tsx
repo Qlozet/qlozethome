@@ -43,7 +43,7 @@ export function VendorPartners({ data }: PartnersProps) {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="mx-auto flex w-full max-w-7xl flex-col gap-16 px-6"
+        className="mx-auto flex w-full max-w-7xl flex-col gap-16 px-6 md:px-10 lg:px-10"
       >
         <motion.h2 variants={itemVariants} className="text-center text-4xl font-bold text-black sm:text-5xl lg:font-display tracking-tight text-6xl">
           {data.title}

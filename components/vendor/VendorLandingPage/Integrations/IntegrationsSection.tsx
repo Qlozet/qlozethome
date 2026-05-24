@@ -40,7 +40,7 @@ export function VendorIntegrations({ data }: IntegrationsProps) {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="mx-auto w-full max-w-[94rem] px-4 sm:px-6"
+        className="mx-auto w-full max-w-[94rem] px-4 sm:px-6 md:px-10 lg:px-10"
       >
         <div className="flex flex-col items-center gap-12 border-y border-white/5 py-24 text-center">
           <motion.div variants={itemVariants} className="relative">

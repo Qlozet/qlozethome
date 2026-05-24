@@ -47,7 +47,7 @@ export function VendorCTA({ data, dark = false }: CTAProps) {
 
   return (
     <section id={data.id} className={`scroll-mt-32 py-12 pb-24 sm:pb-32 ${dark ? 'bg-[#050505]' : 'bg-white'}`} data-theme={dark ? "dark" : "light"}>
-      <div className="mx-auto max-w-[94rem] px-4 sm:px-6">
+      <div className="mx-auto max-w-[94rem] px-4 sm:px-6 md:px-10 lg:px-10">
         <motion.div 
           ref={containerRef}
           variants={containerVariants}

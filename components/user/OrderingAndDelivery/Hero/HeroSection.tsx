@@ -53,7 +53,7 @@ export function HeroSection({ data }: HeroSectionProps) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 mx-auto w-full max-w-[94rem] px-6"
+        className="relative z-10 mx-auto w-full max-w-[94rem] px-6 md:px-10 lg:px-10"
       >
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-20">
           {/* Left Column: Text */}

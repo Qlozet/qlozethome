@@ -40,7 +40,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
         </svg>
       </div>
 
-      <div className="mx-auto max-w-4xl px-6 relative z-10 text-center flex flex-col items-center">
+      <div className="mx-auto max-w-4xl px-6 md:px-10 lg:px-10 relative z-10 text-center flex flex-col items-center">
          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

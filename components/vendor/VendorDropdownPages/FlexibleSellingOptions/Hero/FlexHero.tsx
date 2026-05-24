@@ -66,7 +66,7 @@ export function FlexHero({ data }: FlexHeroProps) {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 mx-auto w-full max-w-[94rem] px-6"
+        className="relative z-10 mx-auto w-full max-w-[94rem] px-6 md:px-10 lg:px-10"
       >
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-20 xl:gap-28">
 

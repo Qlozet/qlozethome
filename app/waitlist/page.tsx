@@ -10,7 +10,7 @@ export default function CustomerWaitlistPage() {
     <div className="min-h-screen bg-white text-black selection:bg-black selection:text-white">
       <Header data={navbarData} />
       
-      <main className="mx-auto flex w-full max-w-[94rem] flex-col px-6 py-24 sm:py-32 lg:py-48" data-theme="light">
+      <main className="mx-auto flex w-full max-w-[94rem] flex-col px-6 md:px-10 lg:px-10 py-24 sm:py-32 lg:py-48" data-theme="light">
         <div className="grid gap-24 lg:grid-cols-[1.4fr_1fr] lg:items-center">
           
           {/* Left Side: Product Showcase */}

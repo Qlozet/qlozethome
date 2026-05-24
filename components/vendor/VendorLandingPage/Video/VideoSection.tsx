@@ -43,7 +43,7 @@ export function VendorVideo({ data }: VideoProps) {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="mx-auto w-full max-w-[94rem] px-6"
+        className="mx-auto w-full max-w-[94rem] px-6 md:px-10 lg:px-10"
       >
         <div className="grid w-full items-center gap-16 lg:grid-cols-[0.8fr,1.2fr] lg:gap-24">
           {/* Header Column */}

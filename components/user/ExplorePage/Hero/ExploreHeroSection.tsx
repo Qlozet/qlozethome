@@ -34,7 +34,7 @@ export function ExploreHero({ data }: ExploreHeroProps) {
   };
 
   return (
-    <section ref={containerRef} id={data.id} className="relative flex min-h-[100svh] w-full flex-col items-center justify-center overflow-hidden bg-[#F9F9F8] px-6 pt-32 pb-20">
+    <section ref={containerRef} id={data.id} className="relative flex min-h-[100svh] w-full flex-col items-center justify-center overflow-hidden bg-[#F9F9F8] px-6 md:px-10 lg:px-10 pt-32 pb-20">
       
       {/* Gallery Frame (Image Layer) */}
       <motion.div 

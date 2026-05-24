@@ -18,7 +18,7 @@ type HowItWorksSectionProps = {
 
 export function HowItWorksSection({ data }: HowItWorksSectionProps) {
   return (
-    <section id="how-it-works" className="relative z-20 overflow-hidden bg-[#FAFAFA] px-6 py-24 sm:py-32 lg:py-48" data-theme="light">
+    <section id="how-it-works" className="relative z-20 overflow-hidden bg-[#FAFAFA] px-6 md:px-10 lg:px-10 py-24 sm:py-32 lg:py-48" data-theme="light">
       <div className="mx-auto max-w-[94rem]">
         {/* Title Group */}
         <div className="mb-24 flex flex-col items-center gap-6 text-center md:mb-32">

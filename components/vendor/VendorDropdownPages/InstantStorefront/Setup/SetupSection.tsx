@@ -23,7 +23,7 @@ type SetupSectionProps = {
 export function SetupSection({ data }: SetupSectionProps) {
   return (
     <section className="relative w-full bg-white py-24 sm:py-32" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-6">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col gap-20 lg:flex-row lg:items-end lg:justify-between">
           <div className="flex max-w-3xl flex-col gap-8">
             <motion.span

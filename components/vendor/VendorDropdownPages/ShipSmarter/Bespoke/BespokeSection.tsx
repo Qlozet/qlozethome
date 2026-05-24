@@ -20,7 +20,7 @@ export function BespokeSection({ data }: BespokeSectionProps) {
   const contentY = useTransform(scrollYProgress, [0, 1], ["10%", "-10%"]);
 
   return (
-    <section ref={containerRef} id="bespoke" className="relative z-30 overflow-hidden bg-[#F9F9F8] px-6 py-24 sm:py-32">
+    <section ref={containerRef} id="bespoke" className="relative z-30 overflow-hidden bg-[#F9F9F8] px-6 md:px-10 lg:px-10 py-24 sm:py-32">
       {/* Massive Background Marquee */}
       <div className="absolute left-0 top-1/2 z-0 flex w-full -translate-y-1/2 -rotate-3 select-none whitespace-nowrap opacity-[0.03] mix-blend-multiply">
         <motion.div

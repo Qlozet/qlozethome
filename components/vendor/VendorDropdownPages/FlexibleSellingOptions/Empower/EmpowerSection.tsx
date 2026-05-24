@@ -21,7 +21,7 @@ export function EmpowerSection({ data }: EmpowerSectionProps) {
   };
 
   return (
-    <section id="empower" className="relative z-30 bg-[#FAFAFA] px-6 py-24 sm:py-24 sm:py-32">
+    <section id="empower" className="relative z-30 bg-[#FAFAFA] px-6 md:px-10 lg:px-10 py-24 sm:py-24 sm:py-32">
       <motion.div 
         variants={containerVariants}
         initial="hidden"

@@ -27,7 +27,7 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
   const pathHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section ref={containerRef} id="how-it-works" className="relative z-20 overflow-hidden bg-[#050505] px-6 py-24 sm:py-32">
+    <section ref={containerRef} id="how-it-works" className="relative z-20 overflow-hidden bg-[#050505] px-6 md:px-10 lg:px-10 py-24 sm:py-32">
       <div className="mx-auto max-w-[94rem]">
         {/* Title Group */}
         <div className="mb-24 flex flex-col items-center gap-6 text-center lg:mb-32">

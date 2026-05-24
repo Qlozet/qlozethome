@@ -16,7 +16,7 @@ type ClosingCTAProps = {
 
 export function ClosingCTA({ data }: ClosingCTAProps) {
   return (
-    <section className="relative z-30 overflow-hidden bg-white px-6 py-24 sm:py-32" data-theme="light">
+    <section className="relative z-30 overflow-hidden bg-white px-6 md:px-10 lg:px-10 py-24 sm:py-32" data-theme="light">
       {/* Background Decorative Element */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.02),transparent)]" />
       

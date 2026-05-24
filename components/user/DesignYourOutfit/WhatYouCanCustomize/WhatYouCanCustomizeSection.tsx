@@ -28,7 +28,7 @@ export function WhatsCustomizeSection({ data }: WhatsCustomizeSectionProps) {
   };
 
   return (
-    <section id="customize" className="relative z-10 overflow-hidden bg-white px-6 py-32 sm:py-40">
+    <section id="customize" className="relative z-10 overflow-hidden bg-white px-6 md:px-10 lg:px-10 py-32 sm:py-40">
       <motion.div 
         variants={containerVariants}
         initial="hidden"

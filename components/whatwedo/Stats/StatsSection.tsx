@@ -73,7 +73,7 @@ function Counter({ value, label }: { value: string; label: string }) {
 
 export function StatsSection({ data }: StatsSectionProps) {
   return (
-    <section id="impact" className="relative z-10 bg-[#3A3A3A] px-6 py-24 sm:py-32 lg:py-48" data-theme="dark">
+    <section id="impact" className="relative z-10 bg-[#3A3A3A] px-6 md:px-10 lg:px-10 py-24 sm:py-32 lg:py-48" data-theme="dark">
       <div className="mx-auto max-w-[90rem]">
         {/* Title Group */}
         <div className="mb-24 flex flex-col gap-6">

@@ -11,7 +11,7 @@ export function VendorWhyQlozet() {
 
   return (
     <section className="relative py-24 sm:py-24 sm:py-32 bg-white overflow-hidden text-[#3A3A3A] border-b border-[#3A3A3A]/5" data-theme="light">
-      <div className="mx-auto w-full max-w-[94rem] px-6">
+      <div className="mx-auto w-full max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
 
           {/* Left: Vintage Photo Collage */}

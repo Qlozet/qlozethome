@@ -26,7 +26,7 @@ type SmartDiscoverySectionProps = {
 export function SmartDiscoverySection({ data }: SmartDiscoverySectionProps) {
   return (
     <section id={data.id} className="relative z-10 bg-white py-24 sm:py-32" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-6">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-24">
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">

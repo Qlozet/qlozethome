@@ -69,7 +69,7 @@ export function HeroSection({ data }: HeroSectionProps) {
         initial="hidden"
         animate="visible"
         style={{ opacity, scale }}
-        className="relative z-10 mx-auto flex w-full max-w-[94rem] flex-col px-6 text-center"
+        className="relative z-10 mx-auto flex w-full max-w-[94rem] flex-col px-6 md:px-10 lg:px-10 text-center"
       >
         <div className="flex flex-col items-center gap-8 justify-center">
             <motion.span 

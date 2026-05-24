@@ -11,7 +11,7 @@ type DifferentiatorsSectionProps = {
 
 export function DifferentiatorsSection({ data }: DifferentiatorsSectionProps) {
   return (
-    <section id="edge" className="relative z-10 bg-white px-6 pt-8 pb-20 sm:pt-12 sm:pb-32" data-theme="light">
+    <section id="edge" className="relative z-10 bg-white px-6 md:px-10 lg:px-10 pt-8 pb-20 sm:pt-12 sm:pb-32" data-theme="light">
       <div className="mx-auto max-w-[90rem]">
         {/* Title Group */}
         <div className="mb-20 flex flex-col items-center gap-6 text-center">

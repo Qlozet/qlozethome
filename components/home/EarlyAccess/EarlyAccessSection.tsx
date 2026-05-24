@@ -9,7 +9,7 @@ type EarlyAccessSectionProps = {
 export function EarlyAccessSection({ data }: EarlyAccessSectionProps) {
   return (
     <section id={data.id} className="scroll-mt-32 bg-[#F8F8F8] py-24 sm:py-32" data-theme="light">
-      <div className="mx-auto w-full max-w-[94rem] px-4 sm:px-6">
+      <div className="mx-auto w-full max-w-[94rem] px-4 sm:px-6 md:px-10 lg:px-10">
         <div className="relative overflow-hidden rounded-[3rem] bg-white p-8 shadow-2xl shadow-black/5 border border-black/5 lg:p-16">
           <div className="grid w-full items-center gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
             {/* Image Column */}

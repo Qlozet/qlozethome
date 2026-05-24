@@ -22,7 +22,7 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
 
   return (
     <section id="how-it-works" className="relative z-20 bg-white py-24 sm:py-32 lg:py-40" data-theme="light">
-      <div className="mx-auto grid max-w-[94rem] gap-16 px-6 lg:grid-cols-[1fr_1fr] lg:gap-24">
+      <div className="mx-auto grid max-w-[94rem] gap-16 px-6 md:px-10 lg:px-10 lg:grid-cols-[1fr_1fr] lg:gap-24">
 
         {/* Left Content - Blueprint Steps */}
         <motion.div

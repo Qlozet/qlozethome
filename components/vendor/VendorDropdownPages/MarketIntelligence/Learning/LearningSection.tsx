@@ -24,7 +24,7 @@ const INTERACTION_LOG = [
 
 export function LearningSection({ data }: LearningSectionProps) {
   return (
-    <section className="relative z-20 bg-[#0A0A0A] px-6 py-24 sm:py-32 overflow-hidden" data-theme="dark">
+    <section className="relative z-20 bg-[#0A0A0A] px-6 md:px-10 lg:px-10 py-24 sm:py-32 overflow-hidden" data-theme="dark">
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.02),transparent)]" />
 
       <div className="relative z-10 mx-auto max-w-[94rem]">

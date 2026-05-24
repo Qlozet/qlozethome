@@ -41,7 +41,7 @@ export function VendorFeatures({ data }: FeaturesProps) {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="mx-auto flex w-full max-w-[94rem] flex-col gap-24 px-6"
+        className="mx-auto flex w-full max-w-[94rem] flex-col gap-24 px-6 md:px-10 lg:px-10"
       >
         <div className="flex flex-col gap-8 max-w-3xl">
           <motion.span variants={itemVariants} className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/30">

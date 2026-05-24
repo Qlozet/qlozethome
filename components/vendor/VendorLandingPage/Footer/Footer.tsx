@@ -11,7 +11,7 @@ export function VendorFooter({ data }: VendorFooterProps) {
 
   return (
     <footer className="bg-[#3A3A3A] py-20 text-white">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 md:px-10 lg:px-10">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
           <Link href="/" className="font-display text-4xl font-medium tracking-[0.3em] transition-opacity hover:opacity-80">
             QLZT

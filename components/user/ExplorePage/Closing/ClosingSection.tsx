@@ -27,7 +27,7 @@ export function ClosingSection({ data }: ClosingSectionProps) {
 
   return (
     <section ref={containerRef} className="relative overflow-hidden bg-white py-32 lg:py-48" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-6">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="relative overflow-hidden rounded-[4rem] bg-[#3A3A3A] p-12 lg:p-32">
           <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent)]" />
           

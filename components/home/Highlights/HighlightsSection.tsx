@@ -36,7 +36,7 @@ export function HighlightsSection({ data }: HighlightsSectionProps) {
       className="scroll-mt-32 bg-white py-24 sm:py-32"
       data-theme="light"
     >
-      <div className="mx-auto flex w-full max-w-[94rem] flex-col gap-20 px-6 sm:gap-32">
+      <div className="mx-auto flex w-full max-w-[94rem] flex-col gap-20 px-6 md:px-10 lg:px-10 sm:gap-32">
         {data.items.map((item, index) => (
           <HighlightItem key={item.id} item={item} index={index} containerVariants={containerVariants} itemVariants={itemVariants} />
         ))}

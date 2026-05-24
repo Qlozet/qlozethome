@@ -19,7 +19,7 @@ type ReliableExecutionSectionProps = {
 export function ReliableExecutionSection({ data }: ReliableExecutionSectionProps) {
   return (
     <section id={data.id} className="relative z-10 bg-white py-24 sm:py-32 overflow-hidden" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-6">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col gap-16 lg:flex-row lg:items-center lg:gap-24">
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">

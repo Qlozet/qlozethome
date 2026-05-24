@@ -29,7 +29,7 @@ export function PillarsSection({ data }: PillarsSectionProps) {
   };
 
   return (
-    <section id="explore-quality" className="relative z-20 overflow-hidden bg-[#050505] px-6 py-32 sm:py-48">
+    <section id="explore-quality" className="relative z-20 overflow-hidden bg-[#050505] px-6 md:px-10 lg:px-10 py-32 sm:py-48">
       {/* Subtle Studio Glow */}
       <div className="absolute top-0 right-1/4 h-[400px] w-[600px] bg-white opacity-[0.02] blur-[100px] pointer-events-none" />
 

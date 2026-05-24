@@ -12,7 +12,7 @@ export function VendorProcessTimeline() {
 
   return (
     <section className="relative py-32 sm:py-48 bg-[#F9F9F8] overflow-hidden" data-theme="light">
-      <div className="mx-auto w-full max-w-[94rem] px-6">
+      <div className="mx-auto w-full max-w-[94rem] px-6 md:px-10 lg:px-10">
         
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
            

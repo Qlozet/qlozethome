@@ -55,7 +55,7 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
   };
 
   return (
-    <section id="how-it-works" className="relative z-20 bg-[#050505] px-6 py-32 lg:py-48" data-theme="dark">
+    <section id="how-it-works" className="relative z-20 bg-[#050505] px-6 md:px-10 lg:px-10 py-32 lg:py-48" data-theme="dark">
       <div className="mx-auto flex max-w-[94rem] flex-col gap-16 lg:flex-row lg:gap-32">
         {/* Left Content - Scrolling Steps */}
         <div className="flex w-full flex-col lg:w-1/2">

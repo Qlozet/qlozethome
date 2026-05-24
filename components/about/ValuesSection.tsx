@@ -36,8 +36,8 @@ const itemVariants = {
 
 export function ValuesSection({ data }: ValuesSectionProps) {
   return (
-    <section id={data.id} className="relative z-10 bg-zinc-50 px-6 py-24 sm:py-32 scroll-mt-32" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-4 sm:px-6">
+    <section id={data.id} className="relative z-10 bg-zinc-50 px-6 md:px-10 lg:px-10 py-24 sm:py-32 scroll-mt-32" data-theme="light">
+      <div className="mx-auto max-w-[94rem] px-4 sm:px-6 md:px-10 lg:px-10">
         <motion.div 
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}

@@ -17,7 +17,7 @@ type ClosingSectionProps = {
 export function ClosingSection({ data }: ClosingSectionProps) {
   return (
     <section className="relative w-full bg-white py-24 lg:py-48 overflow-hidden" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-6 text-center">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10 text-center">
         <div className="flex flex-col gap-12 items-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

@@ -17,7 +17,7 @@ const AI_MESSAGES = [
 
 export function AIAssistantSection({ data }: AssistantSectionProps) {
   return (
-    <section className="relative z-30 bg-[#050505] px-6 py-24 sm:py-32 overflow-hidden" data-theme="dark">
+    <section className="relative z-30 bg-[#050505] px-6 md:px-10 lg:px-10 py-24 sm:py-32 overflow-hidden" data-theme="dark">
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
         style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.3) 0.5px, transparent 0.5px)', backgroundSize: '32px 32px' }} />
 

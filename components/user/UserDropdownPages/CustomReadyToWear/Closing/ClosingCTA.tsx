@@ -64,7 +64,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
 
   return (
     <section id={data.id} className="scroll-mt-32 bg-white pt-24 pb-48" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-6">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <motion.div 
           ref={containerRef}
           variants={containerVariants}

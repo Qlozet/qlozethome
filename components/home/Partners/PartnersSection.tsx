@@ -33,7 +33,7 @@ export function PartnersSection({ data, dark = false }: PartnersSectionProps) {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="mx-auto w-full max-w-[94rem] px-4 sm:px-6 mb-16"
+        className="mx-auto w-full max-w-[94rem] px-4 sm:px-6 md:px-10 lg:px-10 mb-16"
       >
         <motion.h2
           variants={fadeUpVariants}

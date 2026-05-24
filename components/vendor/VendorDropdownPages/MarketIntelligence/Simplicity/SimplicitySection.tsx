@@ -11,7 +11,7 @@ type SimplicitySectionProps = { data: SimplicityData };
 
 export function SimplicitySection({ data }: SimplicitySectionProps) {
   return (
-    <section className="relative z-10 bg-white px-6 py-24 sm:py-32" data-theme="light">
+    <section className="relative z-10 bg-white px-6 md:px-10 lg:px-10 py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem]">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-24">
           {/* Left: Dashboard Preview */}

@@ -18,7 +18,7 @@ type InsightsSectionProps = {
 export function InsightsSection({ data }: InsightsSectionProps) {
   return (
     <section id={data.id} className="relative z-10 bg-[#050505] py-24 sm:py-32 overflow-hidden text-white" data-theme="dark">
-      <div className="mx-auto max-w-[94rem] px-6">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-24">
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">

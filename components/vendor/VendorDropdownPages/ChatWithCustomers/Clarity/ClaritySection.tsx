@@ -34,7 +34,7 @@ export function ClaritySection({ data }: ClaritySectionProps) {
   };
 
   return (
-    <section id="clarity" className="relative z-30 bg-white px-6 py-24 sm:py-32 lg:py-48" data-theme="light">
+    <section id="clarity" className="relative z-30 bg-white px-6 md:px-10 lg:px-10 py-24 sm:py-32 lg:py-48" data-theme="light">
       <motion.div 
         variants={containerVariants}
         initial="hidden"

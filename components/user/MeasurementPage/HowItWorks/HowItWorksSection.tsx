@@ -41,7 +41,7 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
   };
 
   return (
-    <section id="how-it-works" className="relative z-20 overflow-hidden bg-[#0A0A0A] px-6 py-24 sm:py-32 lg:py-40">
+    <section id="how-it-works" className="relative z-20 overflow-hidden bg-[#0A0A0A] px-6 md:px-10 lg:px-10 py-24 sm:py-32 lg:py-40">
       {/* Biometric background texture */}
       <div className="absolute inset-0 z-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(circle at center, #00F0FF 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 

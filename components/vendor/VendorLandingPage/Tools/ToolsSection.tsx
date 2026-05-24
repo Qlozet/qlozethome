@@ -10,7 +10,7 @@ type ToolsProps = {
 export function VendorTools({ data }: ToolsProps) {
   return (
     <section id={data.id} className="scroll-mt-32 bg-zinc-50 py-32 lg:py-48">
-      <div className="mx-auto flex w-full max-w-[94rem] flex-col gap-24 px-6">
+      <div className="mx-auto flex w-full max-w-[94rem] flex-col gap-24 px-6 md:px-10 lg:px-10">
         {/* Editorial Header */}
         <div className="flex flex-col gap-6 lg:max-w-2xl">
           <span className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/30">

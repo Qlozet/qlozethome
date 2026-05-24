@@ -16,7 +16,7 @@ export function PillarsSection({ data }: PillarsSectionProps) {
   const activeTabData = data.tabs.find((tab) => tab.id === activeTab);
 
   return (
-    <section id="pillars" className="bg-white px-6 pt-20 pb-4 sm:pt-32 sm:pb-8" data-theme="light">
+    <section id="pillars" className="bg-white px-6 md:px-10 lg:px-10 pt-20 pb-4 sm:pt-32 sm:pb-8" data-theme="light">
       <div className="mx-auto max-w-[90rem]">
         {/* Title Group */}
         <div className="mb-20 flex flex-col items-center gap-6 text-center">

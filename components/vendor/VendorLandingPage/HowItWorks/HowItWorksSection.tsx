@@ -54,7 +54,7 @@ export function VendorHowItWorks({ data }: HowItWorksProps) {
       <div className="absolute -left-[10%] top-1/4 h-[600px] w-[600px] rounded-full bg-white/[0.03] blur-[120px]" />
       <div className="absolute -right-[5%] bottom-1/4 h-[500px] w-[500px] rounded-full bg-white/[0.02] blur-[100px]" />
 
-      <div className="relative mx-auto max-w-[94rem] px-6">
+      <div className="relative mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="grid gap-20 lg:grid-cols-2 lg:gap-32">
           
           {/* Left Column: Content */}

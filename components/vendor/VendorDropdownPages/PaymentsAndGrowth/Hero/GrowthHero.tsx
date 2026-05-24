@@ -37,7 +37,7 @@ export function GrowthHero({ data }: GrowthHeroProps) {
     <section className="relative min-h-screen w-full flex items-center justify-center pt-20 pb-10 lg:pt-32 lg:pb-24 overflow-hidden bg-white" data-theme="light">
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,0,0,0.02),transparent)]" />
       
-      <motion.div variants={containerVariants} initial="hidden" animate="visible" className="mx-auto w-full max-w-[94rem] px-6">
+      <motion.div variants={containerVariants} initial="hidden" animate="visible" className="mx-auto w-full max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-24">
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">

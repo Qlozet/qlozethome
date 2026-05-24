@@ -14,7 +14,7 @@ export function WorksSection({ data }: WorksSectionProps) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section id={data.id} className="relative z-20 -mt-32 flex w-full flex-col items-center justify-center px-6 pb-32" data-theme="dark">
+    <section id={data.id} className="relative z-20 -mt-32 flex w-full flex-col items-center justify-center px-6 md:px-10 lg:px-10 pb-32" data-theme="dark">
       {/* Massive Edge-to-Edge Screening Room */}
       <motion.div 
         initial={{ y: 100, opacity: 0 }}

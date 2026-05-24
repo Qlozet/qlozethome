@@ -42,7 +42,7 @@ export function FAQSection({ data, dark = false }: FAQSectionProps) {
       className={`relative z-10 scroll-mt-32 py-32 lg:py-48 ${dark ? 'bg-[#050505]' : 'bg-white'}`} 
       data-theme={dark ? "dark" : "light"}
     >
-      <div className="mx-auto w-full max-w-[94rem] px-6">
+      <div className="mx-auto w-full max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="grid gap-24 lg:grid-cols-[0.7fr_1.3fr]">
           
           {/* Left Column: Title & Subtext */}

@@ -44,7 +44,7 @@ export function VendorDifferentiators({ data, scrollPrompt }: DifferentiatorsPro
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="mx-auto flex w-full max-w-[94rem] flex-col gap-32 px-6"
+        className="mx-auto flex w-full max-w-[94rem] flex-col gap-32 px-6 md:px-10 lg:px-10"
       >
         {/* Header - Editorial Style */}
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between border-b border-black/5 pb-16">

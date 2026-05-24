@@ -66,7 +66,7 @@ export function PrecisionSection({ data }: PrecisionSectionProps) {
 
   return (
     <section className="relative w-full bg-white py-24 sm:py-32" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-6">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-24">
           {/* Right: Content */}
           <div className="flex flex-col gap-6 lg:w-1/2">

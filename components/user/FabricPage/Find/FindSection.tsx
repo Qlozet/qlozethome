@@ -19,7 +19,7 @@ type FindSectionProps = {
 export function FindSection({ data }: FindSectionProps) {
   return (
     <section id={data.id} className="relative z-10 bg-[#F9F9F8] py-24 sm:py-32 overflow-hidden" data-theme="light">
-      <div className="mx-auto max-w-[94rem] px-6">
+      <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-24">
           {/* Right/Top: Content */}
           <div className="flex flex-col gap-6 lg:w-1/2">
@@ -89,7 +89,7 @@ export function FindSection({ data }: FindSectionProps) {
                  whileInView={{ y: 0, opacity: 1 }}
                  viewport={{ once: true }}
                  transition={{ type: "spring", stiffness: 60, damping: 20 }}
-                 className="h-14 w-full rounded-full bg-white border border-black/5 flex items-center px-6 gap-4 shadow-[0_10px_30px_rgba(0,0,0,0.05)] relative overflow-hidden"
+                 className="h-14 w-full rounded-full bg-white border border-black/5 flex items-center px-6 md:px-10 lg:px-10 gap-4 shadow-[0_10px_30px_rgba(0,0,0,0.05)] relative overflow-hidden"
                >
                   <Search className="h-5 w-5 text-black/30" strokeWidth={2} />
                   <div className="relative flex-1 overflow-hidden h-full flex items-center">

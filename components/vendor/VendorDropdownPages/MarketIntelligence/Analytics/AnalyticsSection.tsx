@@ -30,7 +30,7 @@ const PURCHASE_PATTERNS = [
 
 export function AnalyticsSection({ data }: AnalyticsSectionProps) {
   return (
-    <section id={data.id} className="relative z-10 bg-white px-6 py-24 sm:py-32" data-theme="light">
+    <section id={data.id} className="relative z-10 bg-white px-6 md:px-10 lg:px-10 py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem]">
         {/* Header */}
         <div className="mb-10 flex flex-col gap-6 text-center items-center lg:mb-20">
