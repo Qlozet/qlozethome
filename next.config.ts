@@ -13,7 +13,12 @@ const nextConfig: NextConfig = {
   },
   async rewrites() {
     // Proxy /api requests to the backend to avoid CORS issues
-    const backendUrl = process.env.API_URL || process.env.NEXT_PUBLIC_API_URL || "https://qlozet-backend.fly.dev";
+    let backendUrl = process.env.API_URL || process.env.NEXT_PUBLIC_API_URL || "https://qlozet-backend.fly.dev";
+    // Strip trailing slash if present
+    if (backendUrl.endsWith('/')) {
+      backendUrl = backendUrl.slice(0, -1);
+    }
+    
     return [
       {
         source: "/api/:path*",
