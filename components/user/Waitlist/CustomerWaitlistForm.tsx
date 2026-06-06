@@ -1,8 +1,39 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 export function CustomerWaitlistForm() {
+  const [formData, setFormData] = useState({ name: "", email: "" });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMessage("");
+    
+    try {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
+      const res = await fetch(`${API_URL}/api/waitlist/customer`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: formData.name,
+          email: formData.email,
+        }),
+      });
+      
+      if (!res.ok) throw new Error("Failed to join waitlist");
+      
+      setStatus("success");
+      setFormData({ name: "", email: "" });
+    } catch (err) {
+      setStatus("error");
+      setErrorMessage(err instanceof Error ? err.message : "Something went wrong");
+    }
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -32,7 +63,7 @@ export function CustomerWaitlistForm() {
       initial="hidden"
       animate="visible"
       className="flex w-full flex-col gap-12"
-      onSubmit={(e) => e.preventDefault()}
+      onSubmit={handleSubmit}
     >
       <div className="flex flex-col gap-10">
         {/* Name */}
@@ -45,7 +76,10 @@ export function CustomerWaitlistForm() {
             id="name"
             placeholder="Jane Doe"
             className="border-b border-black/10 bg-transparent py-4 font-ui text-xl outline-none transition-colors focus:border-black"
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
+            disabled={status === "loading" || status === "success"}
           />
         </motion.div>
 
@@ -59,22 +93,38 @@ export function CustomerWaitlistForm() {
             id="email"
             placeholder="jane@example.com"
             className="border-b border-black/10 bg-transparent py-4 font-ui text-xl outline-none transition-colors focus:border-black"
+            value={formData.email}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             required
+            disabled={status === "loading" || status === "success"}
           />
         </motion.div>
       </div>
 
       <motion.button
         variants={itemVariants}
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-        className="group relative flex h-16 w-full items-center justify-center overflow-hidden rounded-full bg-black text-white"
+        whileHover={status !== "loading" && status !== "success" ? { scale: 1.02 } : {}}
+        whileTap={status !== "loading" && status !== "success" ? { scale: 0.98 } : {}}
+        disabled={status === "loading" || status === "success"}
+        className="group relative flex h-16 w-full items-center justify-center overflow-hidden rounded-full bg-black text-white disabled:opacity-50"
       >
         <span className="relative z-10 font-display text-sm font-bold uppercase tracking-[0.3em]">
-          Get Early Access
+          {status === "loading" ? "Submitting..." : status === "success" ? "Joined!" : "Get Early Access"}
         </span>
         <div className="absolute inset-0 -translate-x-full bg-zinc-800 transition-transform duration-500 group-hover:translate-x-0" />
       </motion.button>
+      
+      {status === "success" && (
+        <motion.p variants={itemVariants} className="text-center font-ui text-sm text-green-600">
+          Thank you for joining our waitlist! We'll be in touch soon.
+        </motion.p>
+      )}
+      
+      {status === "error" && (
+        <motion.p variants={itemVariants} className="text-center font-ui text-sm text-red-600">
+          {errorMessage}
+        </motion.p>
+      )}
 
       <motion.p variants={itemVariants} className="text-center font-ui text-xs text-black/30">
         By joining, you agree to our privacy policy and will receive exclusive updates.

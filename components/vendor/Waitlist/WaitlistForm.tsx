@@ -20,6 +20,37 @@ export function WaitlistForm() {
     businessType: "",
     phone: ""
   });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMessage("");
+    
+    try {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
+      const res = await fetch(`${API_URL}/api/waitlist/vendor`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: formData.name,
+          businessName: formData.businessName,
+          businessEmail: formData.email,
+          phoneNumber: formData.phone,
+          businessType: formData.businessType
+        }),
+      });
+      
+      if (!res.ok) throw new Error("Failed to join waitlist");
+      
+      setStatus("success");
+      setFormData({ name: "", businessName: "", email: "", businessType: "", phone: "" });
+    } catch (err) {
+      setStatus("error");
+      setErrorMessage(err instanceof Error ? err.message : "Something went wrong");
+    }
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -50,7 +81,7 @@ export function WaitlistForm() {
       initial="hidden"
       animate="visible"
       className="flex w-full flex-col gap-10"
-      onSubmit={(e) => e.preventDefault()}
+      onSubmit={handleSubmit}
     >
       <div className="grid gap-x-12 gap-y-10 sm:grid-cols-2">
         {/* Full Name */}
@@ -63,7 +94,10 @@ export function WaitlistForm() {
             id="name"
             placeholder="John Doe"
             className="border-b border-black/10 bg-transparent py-3 font-ui text-lg outline-none transition-colors focus:border-black"
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
+            disabled={status === "loading" || status === "success"}
           />
         </motion.div>
 
@@ -77,7 +111,10 @@ export function WaitlistForm() {
             id="businessName"
             placeholder="Maison Qlozet"
             className="border-b border-black/10 bg-transparent py-3 font-ui text-lg outline-none transition-colors focus:border-black"
+            value={formData.businessName}
+            onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
             required
+            disabled={status === "loading" || status === "success"}
           />
         </motion.div>
 
@@ -91,7 +128,10 @@ export function WaitlistForm() {
             id="email"
             placeholder="hello@business.com"
             className="border-b border-black/10 bg-transparent py-3 font-ui text-lg outline-none transition-colors focus:border-black"
+            value={formData.email}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             required
+            disabled={status === "loading" || status === "success"}
           />
         </motion.div>
 
@@ -105,7 +145,10 @@ export function WaitlistForm() {
             id="phone"
             placeholder="+1 (555) 000-0000"
             className="border-b border-black/10 bg-transparent py-3 font-ui text-lg outline-none transition-colors focus:border-black"
+            value={formData.phone}
+            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             required
+            disabled={status === "loading" || status === "success"}
           />
         </motion.div>
 
@@ -117,8 +160,10 @@ export function WaitlistForm() {
           <select
             id="businessType"
             className="appearance-none border-b border-black/10 bg-transparent py-3 font-ui text-lg outline-none transition-colors focus:border-black cursor-pointer"
-            defaultValue=""
+            value={formData.businessType}
+            onChange={(e) => setFormData({ ...formData, businessType: e.target.value })}
             required
+            disabled={status === "loading" || status === "success"}
           >
             <option value="" disabled>Select your industry</option>
             {businessTypes.map((type) => (
@@ -132,12 +177,27 @@ export function WaitlistForm() {
 
       <motion.button
         variants={itemVariants}
-        whileHover={{ x: 10 }}
-        className="group mt-6 flex items-center gap-4 self-start font-display text-sm font-bold uppercase tracking-[0.3em] text-black"
+        whileHover={status !== "loading" && status !== "success" ? { x: 10 } : {}}
+        disabled={status === "loading" || status === "success"}
+        className="group mt-6 flex items-center gap-4 self-start font-display text-sm font-bold uppercase tracking-[0.3em] text-black disabled:opacity-50"
       >
-        Request Early Access
-        <span className="h-[1px] w-12 bg-black transition-all duration-500 group-hover:w-20" />
+        {status === "loading" ? "Submitting..." : status === "success" ? "Access Requested!" : "Request Early Access"}
+        {status !== "loading" && status !== "success" && (
+          <span className="h-[1px] w-12 bg-black transition-all duration-500 group-hover:w-20" />
+        )}
       </motion.button>
+
+      {status === "success" && (
+        <motion.p variants={itemVariants} className="font-ui text-sm text-green-600 mt-2">
+          Thank you for requesting early access! We will review your application and be in touch soon.
+        </motion.p>
+      )}
+      
+      {status === "error" && (
+        <motion.p variants={itemVariants} className="font-ui text-sm text-red-600 mt-2">
+          {errorMessage}
+        </motion.p>
+      )}
     </motion.form>
   );
 }

@@ -1,0 +1,627 @@
+# Qlozet AI Recommendation Engine: Flutter & Dart Frontend API Integration Guideline
+
+Welcome to the **Qlozet AI Recommendation & Style Matching System** integration guide for Flutter. This document contains everything your mobile team needs to connect, parse, render, and track recommendations using clean Dart architectural patterns.
+
+---
+
+## 🗺️ System Overview & Architecture
+
+The recommendation engine runs an advanced pipeline involving Retrieval, Filtering, and Ranking on the backend. 
+
+*   **Network Client recommendation**: We recommend using the **`dio`** package rather than the basic `http` package because `dio` supports simple global interceptors (for JWT auth), custom timeouts, and unified logging.
+*   **JSON Serialization**: The Dart models below contain `fromJson` constructors. You can use packages like `json_serializable` if your project prefers automated code generation.
+
+---
+
+## 🔐 Authentication & Headers
+
+Attach the JWT Access Token dynamically in your network client.
+
+*   **Base URL**: `https://api.qlozet.com/v1` (or your staging/local endpoint)
+*   **Headers**:
+    ```http
+    Authorization: Bearer <JWT_ACCESS_TOKEN>
+    Content-Type: application/json
+    ```
+
+---
+
+## 📦 Dart Models (Type-Safe Objects)
+
+Create these classes in your `/lib/models` directory. They support nested JSON parsing for seamless integration.
+
+```dart
+import 'dart:convert';
+
+enum ReasonCode {
+  STYLE_MATCH,
+  AESTHETIC_MATCH,
+  TRUSTED_VENDOR,
+  FAST_ETA,
+  PRICE_FIT,
+  FIT_COMPATIBLE,
+  TRENDING
+}
+
+extension ReasonCodeExtension on ReasonCode {
+  String get name {
+    return toString().split('.').last;
+  }
+}
+
+ReasonCode reasonCodeFromString(String code) {
+  return ReasonCode.values.firstWhere(
+    (e) => e.name == code,
+    orElse: () => ReasonCode.STYLE_MATCH,
+  );
+}
+
+enum CatalogItemType { garment, fabric, accessory, template }
+
+CatalogItemType catalogItemTypeFromString(String type) {
+  return CatalogItemType.values.firstWhere(
+    (e) => e.toString().split('.').last == type,
+    orElse: () => CatalogItemType.garment,
+  );
+}
+
+class FitMeta {
+  final String targetDemographic;
+  final String fitType;
+  final List<String> measurementsPoints;
+
+  FitMeta({
+    required this.targetDemographic,
+    required this.fitType,
+    required this.measurementsPoints,
+  });
+
+  factory FitMeta.fromJson(Map<String, dynamic> json) {
+    return FitMeta(
+      targetDemographic: json['targetDemographic'] ?? 'unisex',
+      fitType: json['fitType'] ?? 'regular',
+      measurementsPoints: List<String>.from(json['measurementsPoints'] ?? []),
+    );
+  }
+}
+
+class CatalogItem {
+  final String itemId;
+  final CatalogItemType type;
+  final String name;
+  final String description;
+  final List<String> tags;
+  final double price;
+  final String currency;
+  final String vendor;
+  final String? vendorUrl;
+  final FitMeta? fitMeta;
+  final String? fabricComposition;
+  final String? material;
+  final String? templateUrl;
+  final Map<String, dynamic>? rawVendorData; // Contains original full Product details (images, sizing, etc.)
+
+  CatalogItem({
+    required this.itemId,
+    required this.type,
+    required this.name,
+    required this.description,
+    required this.tags,
+    required this.price,
+    required this.currency,
+    required this.vendor,
+    this.vendorUrl,
+    this.fitMeta,
+    this.fabricComposition,
+    this.material,
+    this.templateUrl,
+    this.rawVendorData,
+  });
+
+  factory CatalogItem.fromJson(Map<String, dynamic> json) {
+    return CatalogItem(
+      itemId: json['itemId'] as String,
+      type: catalogItemTypeFromString(json['type'] ?? ''),
+      name: json['name'] ?? 'Product Item',
+      description: json['description'] ?? '',
+      tags: List<String>.from(json['tags'] ?? []),
+      price: (json['price'] as num?)?.toDouble() ?? 0.0,
+      currency: json['currency'] ?? 'NGN',
+      vendor: json['vendor'] ?? 'Unknown',
+      vendorUrl: json['vendorUrl'],
+      fitMeta: json['fitMeta'] != null ? FitMeta.fromJson(json['fitMeta']) : null,
+      fabricComposition: json['fabricComposition'],
+      material: json['material'],
+      templateUrl: json['templateUrl'],
+      rawVendorData: json['rawVendorData'] is Map ? json['rawVendorData'] : null,
+    );
+  }
+}
+
+class FeedItem extends CatalogItem {
+  final int position;
+  final String stream;
+  final List<ReasonCode> reasonCodes;
+  final List<String> explanations;
+
+  FeedItem({
+    required String itemId,
+    required CatalogItemType type,
+    required String name,
+    required String description,
+    required List<String> tags,
+    required double price,
+    required String currency,
+    required String vendor,
+    String? vendorUrl,
+    FitMeta? fitMeta,
+    String? fabricComposition,
+    String? material,
+    String? templateUrl,
+    Map<String, dynamic>? rawVendorData,
+    required this.position,
+    required this.stream,
+    required this.reasonCodes,
+    required this.explanations,
+  }) : super(
+          itemId: itemId,
+          type: type,
+          name: name,
+          description: description,
+          tags: tags,
+          price: price,
+          currency: currency,
+          vendor: vendor,
+          vendorUrl: vendorUrl,
+          fitMeta: fitMeta,
+          fabricComposition: fabricComposition,
+          material: material,
+          templateUrl: templateUrl,
+          rawVendorData: rawVendorData,
+        );
+
+  factory FeedItem.fromJson(Map<String, dynamic> json) {
+    final baseItem = CatalogItem.fromJson(json);
+    return FeedItem(
+      itemId: baseItem.itemId,
+      type: baseItem.type,
+      name: baseItem.name,
+      description: baseItem.description,
+      tags: baseItem.tags,
+      price: baseItem.price,
+      currency: baseItem.currency,
+      vendor: baseItem.vendor,
+      vendorUrl: baseItem.vendorUrl,
+      fitMeta: baseItem.fitMeta,
+      fabricComposition: baseItem.fabricComposition,
+      material: baseItem.material,
+      templateUrl: baseItem.templateUrl,
+      rawVendorData: baseItem.rawVendorData,
+      position: json['position'] ?? 0,
+      stream: json['stream'] ?? '',
+      reasonCodes: (json['reasonCodes'] as List? ?? [])
+          .map((c) => reasonCodeFromString(c.toString()))
+          .toList(),
+      explanations: List<String>.from(json['explanations'] ?? []),
+    );
+  }
+}
+
+class FeedResponse {
+  final List<FeedItem> items;
+  final Map<String, dynamic>? debug;
+
+  FeedResponse({required this.items, this.debug});
+
+  factory FeedResponse.fromJson(Map<String, dynamic> json) {
+    return FeedResponse(
+      items: (json['items'] as List? ?? [])
+          .map((item) => FeedItem.fromJson(item))
+          .toList(),
+      debug: json['debug'] is Map ? json['debug'] : null,
+    );
+  }
+}
+
+class VendorFeedItem {
+  final String vendorId;
+  final String vendorName;
+  final double vendorScore;
+  final List<String> reasonCodes;
+  final List<String> explanations;
+  final List<FeedItem> products;
+  final int totalProducts;
+  final double? successRate;
+  final bool? isFeatured;
+  final int? averageDeliveryDays;
+
+  VendorFeedItem({
+    required this.vendorId,
+    required this.vendorName,
+    required this.vendorScore,
+    required this.reasonCodes,
+    required this.explanations,
+    required this.products,
+    required this.totalProducts,
+    this.successRate,
+    this.isFeatured,
+    this.averageDeliveryDays,
+  });
+
+  factory VendorFeedItem.fromJson(Map<String, dynamic> json) {
+    return VendorFeedItem(
+      vendorId: json['vendorId'] ?? '',
+      vendorName: json['vendorName'] ?? 'Unknown Vendor',
+      vendorScore: (json['vendorScore'] as num?)?.toDouble() ?? 0.0,
+      reasonCodes: List<String>.from(json['reasonCodes'] ?? []),
+      explanations: List<String>.from(json['explanations'] ?? []),
+      products: (json['products'] as List? ?? [])
+          .map((p) => FeedItem.fromJson(p))
+          .toList(),
+      totalProducts: json['totalProducts'] ?? 0,
+      successRate: (json['successRate'] as num?)?.toDouble(),
+      isFeatured: json['isFeatured'] as bool?,
+      averageDeliveryDays: json['averageDeliveryDays'] as int?,
+    );
+  }
+}
+
+class VendorFeedResponse {
+  final String requestId;
+  final List<VendorFeedItem> vendors;
+
+  VendorFeedResponse({required this.requestId, required this.vendors});
+
+  factory VendorFeedResponse.fromJson(Map<String, dynamic> json) {
+    return VendorFeedResponse(
+      requestId: json['requestId'] ?? '',
+      vendors: (json['vendors'] as List? ?? [])
+          .map((v) => VendorFeedItem.fromJson(v))
+          .toList(),
+    );
+  }
+}
+```
+
+---
+
+## 📡 Endpoint Mapping (HTTP Routes)
+
+Implement these methods in your API data layer.
+
+### 1. Personalized Home Discovery (`GET /recommends/feed`)
+*   **Path**: `/recommends/feed`
+*   **Params**: `userId` (required), `sessionId` (optional), `limit` (optional), `budgetMax` (optional), `deadlineDays` (optional).
+*   **Use-case**: Dynamic custom homepage feed. Apply budget limits instantly.
+
+### 2. Recommended Boutiques (`GET /recommends/vendors`)
+*   **Path**: `/recommends/vendors`
+*   **Params**: `userId` (required), `limit` (optional), `productsPerVendor` (optional).
+*   **Use-case**: Display a horizontal Boutique Strip on the dashboard with preview items inside.
+
+### 3. Trending & Hot Items (`GET /recommends/trending`)
+*   **Path**: `/recommends/trending` (Public - no token needed)
+*   **Params**: `limit` (optional).
+
+### 4. New Drops (`GET /recommends/new`)
+*   **Path**: `/recommends/new` (Public)
+*   **Params**: `limit`, `days` (lookback threshold).
+
+### 5. Frequently Bought Together (`GET /recommends/bought-together`)
+*   **Path**: `/recommends/bought-together`
+*   **Params**: `itemId` (required), `limit` (optional).
+*   **Use-case**: PDP matching accessories or fabrics.
+
+### 6. Outfit Maker - Complete the Look (`GET /recommends/complete-look`)
+*   **Path**: `/recommends/complete-look`
+*   **Params**: `itemIds` (comma-separated string, e.g. `"id1,id2"`), `userId` (optional), `limit`.
+
+---
+
+## ⚡ Unified Dio API Client (Dart)
+
+This client manages persistent session tokens, local storage access headers, response parsing, and gracefully handles network exceptions.
+
+```dart
+import 'dart:math';
+import 'package:dio/dio.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import '../models/recommendation.models.dart';
+
+class RecommendationApiClient {
+  final Dio _dio;
+  late String _sessionId;
+
+  RecommendationApiClient({Dio? dioClient})
+      : _dio = dioClient ?? Dio(BaseOptions(
+          baseUrl: 'https://api.qlozet.com/v1',
+          connectTimeout: const Duration(seconds: 8),
+          receiveTimeout: const Duration(seconds: 8),
+        )) {
+    _initSession();
+    _setupInterceptors();
+  }
+
+  void _initSession() {
+    // Generate a random stable alphanumeric session string
+    final random = Random();
+    const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    _sessionId = List.generate(16, (index) => chars[random.nextInt(chars.length)]).join();
+  }
+
+  void _setupInterceptors() {
+    _dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) async {
+          final prefs = await SharedPreferences.getInstance();
+          final token = prefs.getString('qlozet_access_token');
+          if (token != null) {
+            options.headers['Authorization'] = 'Bearer $token';
+          }
+          options.headers['Content-Type'] = 'application/json';
+          return handler.next(options);
+        },
+        onError: (DioException e, handler) {
+          // Add telemetry logging or analytics error captures here
+          print('Recommendation API Error: ${e.message}');
+          return handler.next(e);
+        },
+      ),
+    );
+  }
+
+  /// 1. Fetch Personalized Discovery Feed
+  Future<FeedResponse> getHomeFeed({
+    required String userId,
+    int limit = 30,
+    double? budgetMax,
+    int? deadlineDays,
+  }) async {
+    try {
+      final response = await _dio.get('/recommends/feed', queryParameters: {
+        'userId': userId,
+        'sessionId': _sessionId,
+        'limit': limit,
+        if (budgetMax != null) 'budgetMax': budgetMax.toInt(),
+        if (deadlineDays != null) 'deadlineDays': deadlineDays,
+      });
+
+      return FeedResponse.fromJson(response.data);
+    } on DioException catch (e) {
+      // Graceful fallback to trending feed on exception
+      print('Falling back to trending feed due to error: ${e.message}');
+      return getTrendingFeed(limit: limit);
+    }
+  }
+
+  /// 2. Fetch Curated Boutiques
+  Future<VendorFeedResponse> getRecommendedVendors({
+    required String userId,
+    int limit = 10,
+    int productsPerVendor = 3,
+  }) async {
+    final response = await _dio.get('/recommends/vendors', queryParameters: {
+      'userId': userId,
+      'limit': limit,
+      'productsPerVendor': productsPerVendor,
+    });
+    return VendorFeedResponse.fromJson(response.data);
+  }
+
+  /// 3. Fetch Trending Items (Public)
+  Future<FeedResponse> getTrendingFeed({int limit = 30}) async {
+    final response = await _dio.get('/recommends/trending', queryParameters: {
+      'limit': limit,
+    });
+    return FeedResponse.fromJson(response.data);
+  }
+
+  /// 4. Fetch Frequently Bought Together (PDP Add-on)
+  Future<List<FeedItem>> getFrequentlyBoughtTogether({
+    required String itemId,
+    int limit = 4,
+  }) async {
+    final response = await _dio.get('/recommends/bought-together', queryParameters: {
+      'itemId': itemId,
+      'limit': limit,
+    });
+    final list = response.data['items'] as List? ?? [];
+    return list.map((item) => FeedItem.fromJson(item)).toList();
+  }
+
+  /// 5. Complete the Look (Outfit suggestions)
+  Future<List<FeedItem>> getCompleteTheLook({
+    required List<String> itemIds,
+    String? userId,
+    int limit = 6,
+  }) async {
+    final response = await _dio.get('/recommends/complete-look', queryParameters: {
+      'itemIds': itemIds.join(','),
+      if (userId != null) 'userId': userId,
+      'limit': limit,
+    });
+    final list = response.data['items'] as List? ?? [];
+    return list.map((item) => FeedItem.fromJson(item)).toList();
+  }
+
+  /// 6. Track Dynamic Interaction Events (Crucial for AI model refinement)
+  Future<void> trackEvent({
+    required String userId,
+    required String eventType,
+    Map<String, dynamic>? properties,
+    String? surface,
+    String? requestId,
+    int? position,
+    String? stream,
+    List<String>? reasonCodes,
+    int? dwellMs,
+  }) async {
+    try {
+      await _dio.post('/recommendations/events', data: {
+        'userId': userId,
+        'eventType': eventType,
+        'timestamp': DateTime.now().toUtc().toIso8601String(),
+        if (properties != null) 'properties': properties,
+        'context': {
+          if (surface != null) 'surface': surface,
+          if (requestId != null) 'requestId': requestId,
+          if (position != null) 'position': position,
+          if (stream != null) 'stream': stream,
+        },
+        'metadata': {
+          if (reasonCodes != null) 'reasonCodes': reasonCodes,
+          if (dwellMs != null) 'dwellMs': dwellMs,
+        }
+      });
+    } catch (e) {
+      // Analytics failures should never crash or freeze the UI thread
+      print('Failed to ingest telemetry event: $e');
+    }
+  }
+}
+```
+
+---
+
+## 🎨 Premium Flutter Widget Integrations
+
+To build a premium, highly tactile interface for Qlozet, utilize these components and patterns.
+
+### 🌟 Dwell Time & Visibility Tracker Widget
+To capture natural user interest without forcing them to click, track how long a product card is fully visible. Use standard scroll events or the popular `visibility_detector` plugin.
+
+Here is a pure Flutter implementation tracking lifecycle render periods:
+
+```dart
+import 'package:flutter/material.dart';
+
+class DwellTracker extends StatefulWidget {
+  final Widget child;
+  final String itemId;
+  final String userId;
+  final Function(int durationMs) onDwellCompleted;
+
+  const DwellTracker({
+    Key? key,
+    required this.child,
+    required this.itemId,
+    required this.userId,
+    required this.onDwellCompleted,
+  }) : super(key: key);
+
+  @override
+  State<DwellTracker> createState() => _DwellTrackerState();
+}
+
+class _DwellTrackerState extends State<DwellTracker> {
+  DateTime? _visibleStartTime;
+
+  void _onIntersectionGained() {
+    _visibleStartTime = DateTime.now();
+  }
+
+  void _onIntersectionLost() {
+    if (_visibleStartTime != null) {
+      final dwellTime = DateTime.now().difference(_visibleStartTime!).inMilliseconds;
+      // Only track engagements lasting longer than 2.0 seconds
+      if (dwellTime >= 2000) {
+        widget.onDwellCompleted(dwellTime);
+      }
+      _visibleStartTime = null;
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // If using the packages: 'visibility_detector' or raw 'Viewport' scroll notification listeners:
+    // This example leverages dynamic scroll visibility.
+    return FocusScope(
+      onFocusChange: (focused) {
+        if (focused) {
+          _onIntersectionGained();
+        } else {
+          _onIntersectionLost();
+        }
+      },
+      child: widget.child,
+    );
+  }
+
+  @override
+  void dispose() {
+    _onIntersectionLost();
+    super.dispose();
+  }
+}
+```
+
+---
+
+### 🔮 Modern Glassmorphism Explanations Badge (Flutter)
+
+Use a combination of `BackdropFilter` and custom opacity styling to draw chic, high-end context badges over the corner of recommendation cards (e.g. *✦ 98% Match* or *⚡ Fast Shipping*).
+
+```dart
+import 'dart:ui';
+import 'package:flutter/material.dart';
+
+class GlassMatchBadge extends StatelessWidget {
+  final String text;
+
+  const GlassMatchBadge({Key? key, required this.text}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white.withOpacity(0.12),
+            border: Border.all(
+              color: Colors.white.withOpacity(0.18),
+              width: 1.0,
+            ),
+            borderRadius: BorderRadius.circular(20),
+          ),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Icon(
+                Icons.style_outlined,
+                color: Colors.white,
+                size: 12,
+              ),
+              const SizedBox(width: 4),
+              Text(
+                text.toUpperCase(),
+                style: const TextStyle(
+                  fontFamily: 'Outfit',
+                  color: Colors.white,
+                  fontSize: 10,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 0.6,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+---
+
+### ⚡ Critical Guidelines for Flutter Developers
+
+1.  **Direct Product Rendering**: The `rawVendorData` contains the original fully synced MongoDB product schema (e.g. including local Nigerian price configurations or custom image list fields). Access it safely:
+    ```dart
+    final images = feedItem.rawVendorData?['images'] as List<dynamic>?;
+    final imageUrl = images != null && images.isNotEmpty ? images.first.toString() : '';
+    ```
+2.  **Debouncing Input Toggles**: When adding interactive budget sliders, use an internal `Timer? _debounceTimer;` inside your `StatefulWidget` to wait `400ms` after a user stops dragging before making the network request.
+3.  **Local State Caching**: Cache public trending and new drop list items inside your state management repository (e.g., Bloc, Riverpod, or Provider) for 15 minutes to reduce server resource footprints and guarantee lightning-fast screen transitions.
