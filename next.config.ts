@@ -11,6 +11,16 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    // Proxy /api requests to the backend to avoid CORS issues
+    const backendUrl = process.env.API_URL || process.env.NEXT_PUBLIC_API_URL || "https://qlozet-backend.fly.dev";
+    return [
+      {
+        source: "/api/:path*",
+        destination: `${backendUrl}/api/:path*`,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

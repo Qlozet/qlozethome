@@ -14,8 +14,7 @@ export function CustomerWaitlistForm() {
     setErrorMessage("");
     
     try {
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
-      const res = await fetch(`${API_URL}/api/waitlist/customer`, {
+      const res = await fetch("/api/waitlist/customer", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
