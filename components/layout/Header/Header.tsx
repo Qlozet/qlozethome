@@ -311,12 +311,7 @@ export function Header({ data }: HeaderProps) {
         <div
           className={`font-display hidden shrink-0 items-center gap-4 text-[10px] font-bold uppercase tracking-[0.3em] min-[1200px]:flex ${navTheme.textBase}`}
         >
-          <Link
-            href={data.secondary.href}
-            className={`rounded-full border px-8 py-3.5 transition-all duration-500 hover:scale-105 active:scale-95 ${navTheme.btnSecondary}`}
-          >
-            {data.secondary.label}
-          </Link>
+
           <Link
             href={ctaHref}
             className={`rounded-full px-8 py-3.5 shadow-2xl transition-all duration-500 hover:scale-105 active:scale-95 ${navTheme.btnPrimary}`}
@@ -457,13 +452,7 @@ export function Header({ data }: HeaderProps) {
 
                 {/* Mobile CTA Buttons */}
                 <div className="mt-8 flex flex-col gap-4 border-t border-black/5 pt-10">
-                  <Link
-                    href={data.secondary.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`rounded-full border px-6 py-4 text-center font-display text-[10px] font-bold uppercase tracking-[0.3em] transition-all duration-300 active:scale-95 ${navTheme.mobileBtnSec}`}
-                  >
-                    {data.secondary.label}
-                  </Link>
+
                   <Link
                     href={ctaHref}
                     onClick={() => setMobileMenuOpen(false)}
