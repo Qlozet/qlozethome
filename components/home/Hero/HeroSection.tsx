@@ -44,7 +44,7 @@ export function HeroSection({ data }: HeroSectionProps) {
   };
 
   return (
-    <section ref={ref} id={data.id} className="relative h-dvh min-h-[100vh] w-full overflow-hidden bg-black sm:h-[900px]" data-theme="dark">
+    <section ref={ref} id={data.id} className="relative h-[90dvh] min-h-[90vh] w-full overflow-hidden bg-black sm:h-[900px]" data-theme="dark">
       {/* Background Layer with Parallax-lite effect */}
       <motion.div 
         style={{ y, opacity }}
