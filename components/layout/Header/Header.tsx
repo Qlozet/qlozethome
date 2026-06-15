@@ -31,10 +31,11 @@ export function Header({ data }: HeaderProps) {
                        pathname?.includes("/marketintelligence") ||
                        pathname?.includes("/pricing");
 
-  // Filter out PRICING for customer pages
-  const filteredLinks = isVendorPage 
+  // Filter out PRICING for customer pages, and always hide WHAT WE DO
+  const filteredLinks = (isVendorPage 
     ? data.links 
-    : data.links.filter(link => link.label !== "PRICING");
+    : data.links.filter(link => link.label !== "PRICING")
+  ).filter(link => link.label !== "WHAT WE DO");
 
   const ctaHref = isVendorPage ? "/vendor/waitlist" : data.cta.href;
 
