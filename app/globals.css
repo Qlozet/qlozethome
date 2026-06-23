@@ -6,6 +6,7 @@
   --brand: #381f10;
   --brand-hover: #4a2915;
   --brand-light: #f7f5f4;
+  --brand-darker: #1e1008;
 }
 
 @theme inline {
@@ -14,6 +15,7 @@
   --color-brand: var(--brand);
   --color-brand-hover: var(--brand-hover);
   --color-brand-light: var(--brand-light);
+  --color-brand-darker: var(--brand-darker);
   --font-ui: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
 }
