@@ -16,7 +16,7 @@ export function DownloadSection({ data, dark = false }: DownloadSectionProps) {
       data-theme={dark ? "dark" : "light"}
     >
       <div className="mx-auto flex w-full max-w-[94rem] flex-col gap-20 px-6 md:px-10 lg:px-10 lg:flex-row lg:items-center lg:justify-between">
-        <div className={`max-w-xl space-y-10 ${dark ? "text-white" : "text-[#3A3A3A]"}`}>
+        <div className={`max-w-xl space-y-10 ${dark ? "text-white" : "text-[#111111]"}`}>
           <div className="flex flex-col gap-6">
             <span className={`font-display text-[10px] font-bold uppercase tracking-[0.4em] ${dark ? "text-white/40" : "text-[#3A3A3A]/40"}`}>
               Mobile Extension

@@ -29,11 +29,11 @@ export function EarlyAccessSection({ data }: EarlyAccessSectionProps) {
             <div className="flex flex-col gap-10">
               {/* Floating Tip */}
               <div className="flex justify-end lg:justify-start">
-                <div className="group relative rounded-2xl bg-[#3A3A3A] px-6 py-4 shadow-xl transition-all hover:-translate-y-1">
+                <div className="group relative rounded-2xl bg-brand px-6 py-4 shadow-xl transition-all hover:-translate-y-1">
                   <p className="font-ui text-sm font-medium text-white">
                     {data.speechBubble}
                   </p>
-                  <div className="absolute -bottom-1.5 left-8 h-3 w-3 rotate-45 bg-[#3A3A3A]"></div>
+                  <div className="absolute -bottom-1.5 left-8 h-3 w-3 rotate-45 bg-brand"></div>
                 </div>
               </div>
 
@@ -42,7 +42,7 @@ export function EarlyAccessSection({ data }: EarlyAccessSectionProps) {
                 <span className="font-display text-[10px] font-semibold uppercase tracking-[0.4em] text-[#3A3A3A]/40">
                   Exclusive Entry
                 </span>
-                <h3 className="font-display text-4xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-6xl">
+                <h3 className="font-display text-4xl font-medium leading-[1.05] tracking-tight text-[#111111] sm:text-6xl">
                   {data.title}
                 </h3>
                 <p className="max-w-md font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg">
@@ -57,11 +57,11 @@ export function EarlyAccessSection({ data }: EarlyAccessSectionProps) {
                     type="email"
                     required
                     placeholder={data.placeholder}
-                    className="flex-1 rounded-full border border-[#3A3A3A]/10 bg-[#F8F8F8] px-8 py-5 font-ui text-sm text-[#3A3A3A] outline-none transition-all focus:border-[#3A3A3A]/30 focus:bg-white"
+                    className="flex-1 rounded-full border border-brand/10 bg-[#F8F8F8] px-8 py-5 font-ui text-sm text-brand outline-none transition-all focus:border-brand/30 focus:bg-white"
                   />
                   <button
                     type="submit"
-                    className="rounded-full bg-[#3A3A3A] px-12 py-5 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-xl shadow-[#3A3A3A]/20 transition-all hover:scale-[1.05] hover:bg-[#2A2A2A] active:scale-[0.98]"
+                    className="rounded-full bg-brand px-12 py-5 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-xl shadow-brand/20 transition-all hover:scale-[1.05] hover:bg-brand-hover active:scale-[0.98]"
                   >
                     {data.button}
                   </button>

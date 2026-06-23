@@ -12,7 +12,7 @@ export function Footer({ data }: FooterProps) {
     <footer id={data.id} className="relative bg-white py-12 sm:py-24">
       <div className="mx-auto w-full max-w-[94rem] px-4 sm:px-6 md:px-10 lg:px-10">
         {/* Main Footer Container */}
-        <div className="overflow-hidden rounded-[3rem] bg-[#3A3A3A] px-8 py-16 text-white sm:rounded-[4rem] sm:px-16 sm:py-24">
+        <div className="overflow-hidden rounded-[3rem] bg-brand px-8 py-16 text-white sm:rounded-[4rem] sm:px-16 sm:py-24">
           <div className="grid gap-16 lg:grid-cols-12">
             {/* Branding & Newsletter Column */}
             <div className="flex flex-col gap-12 lg:col-span-5">
@@ -36,7 +36,7 @@ export function Footer({ data }: FooterProps) {
                     placeholder="Email Address"
                     className="w-full rounded-full border border-white/10 bg-white/5 px-6 md:px-10 lg:px-10 py-4 font-ui text-sm text-white placeholder-white/30 outline-none transition-all focus:border-white/20 sm:w-auto sm:flex-1 sm:border-none sm:bg-transparent sm:py-3 sm:focus:border-none"
                   />
-                  <button className="w-full rounded-full bg-white px-6 md:px-10 lg:px-10 py-4 font-ui text-xs font-semibold uppercase tracking-widest text-[#3A3A3A] transition-all hover:bg-neutral-100 active:scale-[0.98] sm:w-auto sm:py-3">
+                  <button className="w-full rounded-full bg-white px-6 md:px-10 lg:px-10 py-4 font-ui text-xs font-semibold uppercase tracking-widest text-brand transition-all hover:bg-brand-light active:scale-[0.98] sm:w-auto sm:py-3">
                     Join
                   </button>
                 </div>

@@ -87,14 +87,14 @@ export function Header({ data }: HeaderProps) {
   const navTheme = isLightSurface ? {
     headerBg: "bg-white/70 backdrop-blur-3xl border-gray-100/50",
     textBase: "text-zinc-600",
-    textHover: "hover:text-black",
-    btnSecondary: "border-gray-200 text-gray-600 hover:border-gray-300 hover:text-black",
-    btnPrimary: "bg-black text-white hover:bg-zinc-800",
+    textHover: "hover:text-brand",
+    btnSecondary: "border-gray-200 text-gray-600 hover:border-brand hover:text-brand",
+    btnPrimary: "bg-brand text-white hover:bg-brand-hover",
     hamburger: "text-gray-700",
     mobileBg: "bg-white/90 border-gray-100",
-    mobileText: "text-gray-700 hover:text-gray-900",
-    mobileBtnSec: "border-gray-200 text-gray-700 hover:bg-gray-50",
-    mobileBtnPri: "bg-black text-white hover:bg-zinc-800"
+    mobileText: "text-gray-700 hover:text-brand",
+    mobileBtnSec: "border-gray-200 text-gray-700 hover:bg-brand-light",
+    mobileBtnPri: "bg-brand text-white hover:bg-brand-hover"
   } : {
     headerBg: "bg-black/10 backdrop-blur-3xl border-white/5",
     textBase: "text-white/70",

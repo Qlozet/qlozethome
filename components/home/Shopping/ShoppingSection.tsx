@@ -39,7 +39,7 @@ export function ShoppingSection({ data, dark = false }: ShoppingSectionProps) {
 
           <Link
             href={data.cta.href}
-            className="inline-flex w-fit items-center justify-center rounded-full bg-white px-12 py-5 text-xs font-bold uppercase tracking-[0.3em] text-black shadow-2xl transition-all hover:scale-105 active:scale-[0.98]"
+            className="inline-flex w-fit items-center justify-center rounded-full bg-white px-12 py-5 text-xs font-bold uppercase tracking-[0.3em] text-brand shadow-2xl transition-all hover:scale-105 hover:bg-brand-light active:scale-[0.98]"
           >
             {data.cta.label}
           </Link>

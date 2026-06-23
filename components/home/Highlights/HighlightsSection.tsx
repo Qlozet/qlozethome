@@ -70,7 +70,7 @@ function HighlightItem({ item, index, containerVariants, itemVariants }: { item:
           <motion.span variants={itemVariants} className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40 text-left">
             {item.id.replace(/-/g, ' ')}
           </motion.span>
-          <motion.h3 variants={itemVariants} className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl">
+          <motion.h3 variants={itemVariants} className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl">
             {item.title}
           </motion.h3>
           <motion.p variants={itemVariants} className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg">
@@ -82,8 +82,8 @@ function HighlightItem({ item, index, containerVariants, itemVariants }: { item:
           <motion.ul variants={itemVariants} className="flex flex-col gap-3">
             {item.bullets.map((bullet: string, i: number) => (
               <li key={i} className="flex items-center gap-3">
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10">
-                  <Check className="h-3.5 w-3.5 text-[#3A3A3A]" />
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-light">
+                  <Check className="h-3.5 w-3.5 text-brand" />
                 </span>
                 <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{bullet}</span>
               </li>
@@ -94,7 +94,7 @@ function HighlightItem({ item, index, containerVariants, itemVariants }: { item:
         <motion.div variants={itemVariants} className="flex">
           <Link
             href={item.cta.href}
-            className="inline-flex items-center justify-center rounded-full bg-[#3A3A3A] px-10 py-5 text-xs font-bold uppercase tracking-[0.3em] text-white shadow-2xl transition-all hover:scale-105 active:scale-[0.98]"
+            className="inline-flex items-center justify-center rounded-full bg-brand px-10 py-5 text-xs font-bold uppercase tracking-[0.3em] text-white shadow-2xl transition-all hover:scale-105 hover:bg-brand-hover active:scale-[0.98]"
           >
             {item.cta.label}
           </Link>
