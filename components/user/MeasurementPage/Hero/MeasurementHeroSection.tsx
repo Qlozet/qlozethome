@@ -78,7 +78,7 @@ export function MeasurementHero({ data }: MeasurementHeroProps) {
               <div className="relative">
                 <motion.h1
                   variants={itemVariants}
-                  className="relative z-10 max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl lg:text-[5.5rem]"
+                  className="relative z-10 max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#111111] sm:text-7xl lg:text-[5.5rem]"
                 >
                   {data.title}
                 </motion.h1>
@@ -104,18 +104,18 @@ export function MeasurementHero({ data }: MeasurementHeroProps) {
             >
               <Link
                 href={data.cta.href}
-                className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-[#3A3A3A] px-10 text-[10px] font-bold uppercase tracking-[0.3em] text-white transition-all hover:scale-[1.02] active:scale-95"
+                className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-brand px-10 text-[10px] font-bold uppercase tracking-[0.3em] text-white transition-all hover:scale-[1.02] active:scale-95"
               >
                 <span className="relative z-10">{data.cta.label}</span>
-                <div className="absolute inset-0 z-0 bg-gradient-to-r from-zinc-800 to-black opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="absolute inset-0 z-0 bg-brand-hover opacity-0 transition-opacity group-hover:opacity-100" />
               </Link>
 
               <Link
                 href="#biometric"
-                className="group inline-flex items-center gap-4 font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]"
+                className="group inline-flex items-center gap-4 font-display text-[10px] font-bold uppercase tracking-[0.4em] text-brand"
               >
                 Initiate AI Scan
-                <div className="h-px w-10 bg-[#3A3A3A] transition-all duration-500 group-hover:w-16" />
+                <div className="h-px w-10 bg-brand transition-all duration-500 group-hover:w-16" />
               </Link>
             </motion.div>
           </div>
@@ -152,7 +152,7 @@ export function MeasurementHero({ data }: MeasurementHeroProps) {
               transition={{ delay: 1.2, duration: 1 }}
               className="absolute -right-8 bottom-12 z-20 hidden items-center gap-4 rounded-3xl bg-white/80 p-6 backdrop-blur-xl border border-white/20 shadow-2xl lg:flex"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#3A3A3A] text-white">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand text-white">
                 <Scan className="h-6 w-6" />
               </div>
               <div className="flex flex-col pr-4">

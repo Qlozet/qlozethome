@@ -214,7 +214,7 @@ export function BiometricSection({ data }: BiometricSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -239,8 +239,8 @@ export function BiometricSection({ data }: BiometricSectionProps) {
                   transition={{ delay: 0.3 + index * 0.1 }}
                   className="flex items-center gap-6"
                 >
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F9F9F8] border border-[#3A3A3A]/5">
-                    <CheckCircle2 className="h-4 w-4 text-black opacity-40" strokeWidth={1.5} />
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-light border border-brand/5">
+                    <CheckCircle2 className="h-4 w-4 text-brand" strokeWidth={1.5} />
                   </div>
                   <span className="font-ui text-sm text-[#3A3A3A]/70 sm:text-base">
                     {feature}

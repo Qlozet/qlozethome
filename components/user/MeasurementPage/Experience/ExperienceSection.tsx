@@ -40,7 +40,7 @@ export function ExperienceSection({ data }: ExperienceSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
+              className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl"
             >
               {data.title}
             </motion.h2>
@@ -65,10 +65,10 @@ export function ExperienceSection({ data }: ExperienceSectionProps) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + index * 0.15 }}
-                  className="group relative flex flex-col gap-10 rounded-[3rem] border border-[#3A3A3A]/5 bg-[#F9F9F8] p-10 transition-all hover:bg-[#3A3A3A] hover:text-white"
+                  className="group relative flex flex-col gap-10 rounded-[3rem] border border-[#3A3A3A]/5 bg-[#F9F9F8] p-10 transition-all hover:bg-brand hover:text-white"
                 >
                   <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-2xl transition-transform duration-500 group-hover:scale-110">
-                    <Icon className="h-8 w-8 text-black" strokeWidth={1.5} />
+                    <Icon className="h-8 w-8 text-brand" strokeWidth={1.5} />
                   </div>
                   <div className="flex flex-col gap-4">
                     <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black/30 group-hover:text-white/40">Step 0{index + 1}</span>

@@ -23,9 +23,9 @@ export function ClosingSection({ data }: ClosingSectionProps) {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="flex h-20 w-20 items-center justify-center rounded-3xl bg-[#F9F9F8] border border-[#3A3A3A]/5 shadow-xl"
+            className="flex h-20 w-20 items-center justify-center rounded-3xl bg-brand-light border border-brand/5 shadow-xl"
           >
-            <Sparkles className="h-10 w-10 text-black/20" />
+            <Sparkles className="h-10 w-10 text-brand" />
           </motion.div>
 
           <motion.h2
@@ -33,7 +33,7 @@ export function ClosingSection({ data }: ClosingSectionProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl lg:text-[6.5rem]"
+            className="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#111111] sm:text-7xl lg:text-[6.5rem]"
           >
             {data.title}
           </motion.h2>
@@ -57,10 +57,10 @@ export function ClosingSection({ data }: ClosingSectionProps) {
           >
             <Link
               href={data.cta.href}
-              className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-[#3A3A3A] px-12 text-[10px] font-bold uppercase tracking-[0.3em] text-white shadow-2xl transition-all hover:scale-[1.05] active:scale-95"
+              className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-brand px-12 text-[10px] font-bold uppercase tracking-[0.3em] text-white shadow-2xl transition-all hover:scale-[1.05] active:scale-95"
             >
               <span className="relative z-10">{data.cta.label}</span>
-              <div className="absolute inset-0 z-0 bg-gradient-to-r from-zinc-800 to-black opacity-0 transition-opacity group-hover:opacity-100" />
+              <div className="absolute inset-0 z-0 bg-brand-hover opacity-0 transition-opacity group-hover:opacity-100" />
             </Link>
           </motion.div>
         </div>

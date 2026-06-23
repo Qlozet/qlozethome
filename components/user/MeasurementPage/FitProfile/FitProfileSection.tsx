@@ -41,7 +41,7 @@ export function FitProfileSection({ data }: FitProfileSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -66,7 +66,7 @@ export function FitProfileSection({ data }: FitProfileSectionProps) {
                   transition={{ delay: 0.3 + index * 0.1 }}
                   className="flex items-center gap-6 group"
                 >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F9F9F8] border border-[#3A3A3A]/5 transition-all group-hover:bg-[#3A3A3A] group-hover:text-white">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-light border border-brand/5 transition-all group-hover:bg-brand group-hover:text-white">
                     {(() => {
                       const Icon = iconMap[benefit] || UserCheck;
                       return <Icon className="h-6 w-6" strokeWidth={1.5} />;
@@ -97,7 +97,7 @@ export function FitProfileSection({ data }: FitProfileSectionProps) {
                    <div className="flex justify-between items-start w-full relative z-20">
                       <div className="flex items-center gap-4">
                          {/* NFC / ID Icon */}
-                         <div className="w-12 h-12 rounded-full bg-[#3A3A3A] flex items-center justify-center relative">
+                         <div className="w-12 h-12 rounded-full bg-brand flex items-center justify-center relative">
                             <motion.div 
                                initial={{ scale: 0.8, opacity: 0 }} 
                                whileInView={{ scale: 1.5, opacity: 0 }} 

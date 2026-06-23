@@ -86,7 +86,7 @@ export function DiversitySection({ data }: DiversitySectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -112,8 +112,8 @@ export function DiversitySection({ data }: DiversitySectionProps) {
                      transition={{ delay: 0.3 + index * 0.1 }}
                      className="flex items-center gap-4 p-6 bg-white border border-black/5 rounded-2xl"
                    >
-                     <div className="h-10 w-10 flex items-center justify-center bg-[#F9F9F8] border border-[#3A3A3A]/5 rounded-xl">
-                        <Icon className="h-5 w-5 text-black opacity-40" />
+                     <div className="h-10 w-10 flex items-center justify-center bg-brand-light border border-brand/5 rounded-xl">
+                        <Icon className="h-5 w-5 text-brand" />
                      </div>
                      <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black/60">{feature}</span>
                    </motion.div>
