@@ -56,21 +56,21 @@ export function HeroSection({ data }: HeroSectionProps) {
             <div className="flex flex-col gap-6">
               <motion.div 
                 variants={itemVariants}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 THE ATELIER START
               </motion.div>
               
               <motion.h1
                 variants={itemVariants}
-                className="font-display text-5xl font-medium leading-[1] tracking-tighter text-[#3A3A3A] sm:text-7xl lg:text-8xl xl:text-9xl"
+                className="font-display text-5xl font-medium leading-[1] tracking-tighter text-[#111111] sm:text-7xl lg:text-8xl xl:text-9xl"
               >
                 {data.title}
               </motion.h1>
               
               <motion.p
                 variants={itemVariants}
-                className="max-w-xl font-ui text-lg leading-relaxed text-[#3A3A3A]/50 sm:text-2xl"
+                className="max-w-xl font-ui text-lg leading-relaxed text-[#111111]/50 sm:text-2xl"
               >
                 {data.description}
               </motion.p>
@@ -82,17 +82,17 @@ export function HeroSection({ data }: HeroSectionProps) {
             >
               <Link
                 href={data.cta.href}
-                className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-[#3A3A3A] px-12 text-[11px] font-bold uppercase tracking-[0.35em] text-white transition-all hover:scale-[1.02] active:scale-95"
+                className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-brand-button px-12 text-[11px] font-bold uppercase tracking-[0.35em] text-white transition-all hover:scale-[1.02] active:scale-95"
               >
                 <span className="relative z-10">{data.cta.label}</span>
-                <div className="absolute inset-0 z-0 bg-zinc-800 opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="absolute inset-0 z-0 bg-brand opacity-0 transition-opacity group-hover:opacity-100" />
               </Link>
             </motion.div>
           </div>
 
           {/* Right: Visual Journey Kickoff */}
           <div className="relative mt-20 lg:mt-0 lg:w-1/2">
-             <div className="relative mx-auto aspect-[4/5] w-full max-w-lg rounded-[3.5rem] bg-zinc-50 border border-[#3A3A3A]/5 shadow-2xl p-4 overflow-hidden group">
+             <div className="relative mx-auto aspect-[4/5] w-full max-w-lg rounded-[3.5rem] bg-zinc-50 border border-brand-darker/5 shadow-2xl p-4 overflow-hidden group">
                 <Image
                   src="/image/custom-outfit-3.webp"
                   alt="Atelier Vision"
@@ -112,10 +112,9 @@ export function HeroSection({ data }: HeroSectionProps) {
         </div>
       </motion.div>
 
-      {/* Start of Spine Journey */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
-        <div className="w-px h-24 bg-[#3A3A3A]/10" />
-        <div className="w-3 h-3 rounded-full bg-[#3A3A3A] shadow-2xl ring-4 ring-black/5" />
+        <div className="w-px h-24 bg-brand-darker/10" />
+        <div className="w-3 h-3 rounded-full bg-brand-darker shadow-2xl ring-4 ring-black/5" />
       </div>
     </section>
   );

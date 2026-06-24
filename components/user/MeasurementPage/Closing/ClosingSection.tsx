@@ -23,9 +23,9 @@ export function ClosingSection({ data }: ClosingSectionProps) {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="flex h-20 w-20 items-center justify-center rounded-3xl bg-brand-light border border-brand/5 shadow-xl"
+            className="flex h-20 w-20 items-center justify-center rounded-3xl bg-brand-light border border-brand-darker/5 shadow-xl"
           >
-            <Sparkles className="h-10 w-10 text-brand" />
+            <Sparkles className="h-10 w-10 text-brand-darker" />
           </motion.div>
 
           <motion.h2

@@ -49,7 +49,7 @@ export function HeroSection({ data }: HeroSectionProps) {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.95]);
 
   return (
-    <section ref={containerRef} id={data.id} className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#050505] pt-24 pb-20 sm:pt-32 lg:h-screen lg:pt-0 lg:pb-0">
+    <section ref={containerRef} id={data.id} className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-brand-darker pt-24 pb-20 sm:pt-32 lg:h-screen lg:pt-0 lg:pb-0">
       {/* Central Animated Tracking Line */}
       <div className="absolute inset-y-0 left-1/2 z-0 w-px -translate-x-1/2 bg-white/10 hidden lg:block">
          <motion.div 
@@ -59,7 +59,7 @@ export function HeroSection({ data }: HeroSectionProps) {
       </div>
 
       {/* Decorative Target Node */}
-      <div className="absolute top-[65%] left-1/2 z-0 hidden w-6 h-6 -translate-x-1/2 items-center justify-center rounded-full border-2 border-white/20 bg-[#050505] lg:flex">
+      <div className="absolute top-[65%] left-1/2 z-0 hidden w-6 h-6 -translate-x-1/2 items-center justify-center rounded-full border-2 border-white/20 bg-brand-darker lg:flex">
          <div className="h-1.5 w-1.5 rounded-full bg-white/40" />
       </div>
 
@@ -103,7 +103,7 @@ export function HeroSection({ data }: HeroSectionProps) {
             >
               <Link
                 href={data.cta.href}
-                className="inline-flex items-center justify-center rounded-full bg-white px-12 py-5 text-[10px] font-bold uppercase tracking-[0.3em] text-black shadow-2xl shadow-white/10 transition-all hover:scale-[1.05] active:scale-95"
+                className="inline-flex items-center justify-center rounded-full bg-white px-12 py-5 text-[10px] font-bold uppercase tracking-[0.3em] text-brand-darker shadow-2xl shadow-white/10 transition-all hover:scale-[1.05] active:scale-95"
               >
                 {data.cta.label}
               </Link>

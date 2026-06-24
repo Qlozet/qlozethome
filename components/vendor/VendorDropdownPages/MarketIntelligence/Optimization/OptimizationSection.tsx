@@ -29,15 +29,15 @@ export function OptimizationSection({ data }: OptimizationSectionProps) {
           {/* Left: Content */}
           <div className="flex flex-col gap-8 lg:w-5/12 lg:sticky lg:top-40">
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-              className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#3A3A3A] shadow-2xl">
+              className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-darker shadow-2xl">
               <SlidersHorizontal className="h-5 w-5 text-white" strokeWidth={1.5} />
             </motion.div>
             <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-              className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/30">{data.badge}</motion.span>
+              className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/30">{data.badge}</motion.span>
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              className="font-display text-4xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl">{data.title}</motion.h2>
+              className="font-display text-4xl font-medium leading-[1.05] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl">{data.title}</motion.h2>
             <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-              className="max-w-xl font-ui text-lg text-[#3A3A3A]/40">{data.description}</motion.p>
+              className="max-w-xl font-ui text-lg text-[#111111]/60">{data.description}</motion.p>
             
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
               className="flex flex-col gap-4 mt-4">
@@ -45,10 +45,10 @@ export function OptimizationSection({ data }: OptimizationSectionProps) {
                 const Icon = iconMap[feature.icon] || Settings2;
                 return (
                   <div key={i} className="flex items-center gap-4 group">
-                    <div className="h-9 w-9 rounded-xl bg-[#F9F9F8] border border-black/5 flex items-center justify-center group-hover:bg-[#3A3A3A] group-hover:text-white transition-all">
+                    <div className="h-9 w-9 rounded-xl bg-brand-light border border-brand-darker/5 flex items-center justify-center group-hover:bg-brand-darker group-hover:text-brand-light transition-all">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
-                    <span className="font-display text-sm font-medium text-[#3A3A3A]/60 group-hover:text-[#1A1A1A] transition-colors">{feature.title}</span>
+                    <span className="font-display text-sm font-medium text-[#111111]/60 group-hover:text-brand-darker transition-colors">{feature.title}</span>
                   </div>
                 );
               })}
@@ -59,39 +59,39 @@ export function OptimizationSection({ data }: OptimizationSectionProps) {
           <div className="mt-8 lg:mt-0 lg:w-7/12 flex flex-col gap-6">
             {/* Pricing Optimizer */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              className="rounded-[2rem] sm:rounded-[3rem] bg-[#F9F9F8] border border-black/5 p-5 sm:p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-black/5 hover:-translate-y-1">
+              className="rounded-[2rem] sm:rounded-[3rem] bg-brand-light border border-brand-darker/5 p-5 sm:p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-brand-darker/5 hover:-translate-y-1">
               <div className="flex items-center justify-between mb-5">
                 <div className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-xl bg-[#3A3A3A] text-white flex items-center justify-center"><DollarSign className="h-3.5 w-3.5" /></div>
-                  <span className="font-display text-[10px] font-bold uppercase tracking-widest text-[#3A3A3A]">Pricing Optimizer</span>
+                  <div className="h-8 w-8 rounded-xl bg-brand-darker text-white flex items-center justify-center"><DollarSign className="h-3.5 w-3.5" /></div>
+                  <span className="font-display text-[10px] font-bold uppercase tracking-widest text-brand-darker">Pricing Optimizer</span>
                 </div>
                 <div className="bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20">
                   <span className="font-mono text-[8px] font-bold text-emerald-600 uppercase tracking-widest">3 Suggestions</span>
                 </div>
               </div>
-              <div className="bg-white rounded-2xl border border-black/5 shadow-sm overflow-x-auto">
+              <div className="bg-white rounded-2xl border border-brand-darker/5 shadow-sm overflow-x-auto">
                 {/* Table header */}
-                <div className="grid grid-cols-5 gap-2 px-5 py-3 border-b border-black/5 bg-[#F9F9F8]/50">
+                <div className="grid grid-cols-5 gap-2 px-5 py-3 border-b border-brand-darker/5 bg-brand-light/50">
                   {["Product", "Current", "Suggested", "Impact", "Score"].map(h => (
-                    <span key={h} className="font-mono text-[7px] font-bold text-[#3A3A3A]/30 uppercase tracking-widest">{h}</span>
+                    <span key={h} className="font-mono text-[7px] font-bold text-[#111111]/30 uppercase tracking-widest">{h}</span>
                   ))}
                 </div>
                 {PRICING_DATA.map((p, i) => (
                   <motion.div key={i} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
                     transition={{ delay: 0.3 + i * 0.1 }}
-                    className="grid grid-cols-5 gap-2 px-5 py-3.5 border-b border-black/5 last:border-0 group cursor-pointer hover:bg-[#F9F9F8]/50 transition-colors items-center">
-                    <span className="font-display text-[9px] font-bold text-[#3A3A3A] uppercase tracking-wider truncate">{p.product}</span>
-                    <span className="font-mono text-[9px] text-[#3A3A3A]/40">{p.current}</span>
-                    <span className="font-mono text-[9px] font-bold text-[#3A3A3A]">{p.suggested}</span>
+                    className="grid grid-cols-5 gap-2 px-5 py-3.5 border-b border-brand-darker/5 last:border-0 group cursor-pointer hover:bg-brand-light/50 transition-colors items-center">
+                    <span className="font-display text-[9px] font-bold text-brand-darker uppercase tracking-wider truncate">{p.product}</span>
+                    <span className="font-mono text-[9px] text-[#111111]/40">{p.current}</span>
+                    <span className="font-mono text-[9px] font-bold text-brand-darker">{p.suggested}</span>
                     <div className="flex items-center gap-1">
                       <ArrowUpRight className="h-3 w-3 text-emerald-500" />
                       <span className="font-mono text-[8px] font-bold text-emerald-600">{p.impact}</span>
                     </div>
                     <div className="flex items-center gap-1.5">
                       <div className="w-8 h-1.5 bg-zinc-100 rounded-full overflow-hidden">
-                        <div className="h-full bg-[#3A3A3A] rounded-full" style={{ width: `${p.confidence}%` }} />
+                        <div className="h-full bg-brand rounded-full" style={{ width: `${p.confidence}%` }} />
                       </div>
-                      <span className="font-mono text-[8px] font-bold text-[#3A3A3A]/60">{p.confidence}%</span>
+                      <span className="font-mono text-[8px] font-bold text-[#111111]/60">{p.confidence}%</span>
                     </div>
                   </motion.div>
                 ))}
@@ -100,25 +100,25 @@ export function OptimizationSection({ data }: OptimizationSectionProps) {
 
             {/* Product Suggestions */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }}
-              className="rounded-[2rem] sm:rounded-[3rem] bg-[#F9F9F8] border border-black/5 p-5 sm:p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-black/5 hover:-translate-y-1">
+              className="rounded-[2rem] sm:rounded-[3rem] bg-brand-light border border-brand-darker/5 p-5 sm:p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-brand-darker/5 hover:-translate-y-1">
               <div className="flex items-center gap-3 mb-5">
-                <div className="h-8 w-8 rounded-xl bg-[#3A3A3A] text-white flex items-center justify-center"><PackageSearch className="h-3.5 w-3.5" /></div>
-                <span className="font-display text-[10px] font-bold uppercase tracking-widest text-[#3A3A3A]">Product Improvements</span>
+                <div className="h-8 w-8 rounded-xl bg-brand-darker text-white flex items-center justify-center"><PackageSearch className="h-3.5 w-3.5" /></div>
+                <span className="font-display text-[10px] font-bold uppercase tracking-widest text-brand-darker">Product Improvements</span>
               </div>
               <div className="flex flex-col gap-3">
                 {PRODUCT_SUGGESTIONS.map((s, i) => (
                   <motion.div key={i} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
                     transition={{ delay: 0.4 + i * 0.1 }}
-                    className="bg-white rounded-2xl border border-black/5 p-4 shadow-sm flex items-center gap-4 group cursor-pointer hover:shadow-md transition-all hover:-translate-y-0.5">
+                    className="bg-white rounded-2xl border border-brand-darker/5 p-4 shadow-sm flex items-center gap-4 group cursor-pointer hover:shadow-md transition-all hover:-translate-y-0.5">
                     <div className={`h-8 w-8 rounded-lg flex items-center justify-center shrink-0 ${s.status === 'high-impact' ? 'bg-emerald-500/10' : s.status === 'recommended' ? 'bg-blue-500/10' : 'bg-amber-500/10'}`}>
                       <CheckCircle2 className={`h-3.5 w-3.5 ${s.status === 'high-impact' ? 'text-emerald-500' : s.status === 'recommended' ? 'text-blue-500' : 'text-amber-500'}`} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-0.5">
-                        <span className="font-display text-[9px] font-bold text-[#3A3A3A] uppercase tracking-wider">{s.action}</span>
-                        <span className="font-mono text-[7px] text-[#3A3A3A]/30">→ {s.product}</span>
+                        <span className="font-display text-[9px] font-bold text-brand-darker uppercase tracking-wider">{s.action}</span>
+                        <span className="font-mono text-[7px] text-[#111111]/30">→ {s.product}</span>
                       </div>
-                      <span className="font-ui text-[10px] text-[#3A3A3A]/40">{s.reason}</span>
+                      <span className="font-ui text-[10px] text-[#111111]/40">{s.reason}</span>
                     </div>
                     <span className={`font-mono text-[7px] font-bold uppercase tracking-widest px-2 py-1 rounded-full ${s.status === 'high-impact' ? 'bg-emerald-500/10 text-emerald-600' : s.status === 'recommended' ? 'bg-blue-500/10 text-blue-600' : 'bg-amber-500/10 text-amber-600'}`}>
                       {s.status}

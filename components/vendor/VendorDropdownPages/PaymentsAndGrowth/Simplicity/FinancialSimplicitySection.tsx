@@ -28,7 +28,7 @@ export function FinancialSimplicitySection({ data }: FinancialSimplicitySectionP
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -37,7 +37,7 @@ export function FinancialSimplicitySection({ data }: FinancialSimplicitySectionP
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-5xl lg:text-6xl"
+                className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-5xl lg:text-6xl"
               >
                 {data.title}
               </motion.h2>
@@ -47,7 +47,7 @@ export function FinancialSimplicitySection({ data }: FinancialSimplicitySectionP
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/40 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -63,10 +63,10 @@ export function FinancialSimplicitySection({ data }: FinancialSimplicitySectionP
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-6 group"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#F9F9F8] border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all shadow-sm">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-light border border-brand-darker/5 group-hover:bg-brand-darker group-hover:text-brand-light transition-all shadow-sm">
                     <Zap className="h-4 w-4" strokeWidth={1.5} />
                   </div>
-                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
+                  <span className="font-ui text-sm font-medium text-brand-darker/80 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -75,7 +75,7 @@ export function FinancialSimplicitySection({ data }: FinancialSimplicitySectionP
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                viewport={{ once: true }}
-               className="font-ui text-sm italic text-[#3A3A3A]/30"
+               className="font-ui text-sm italic text-[#111111]/40"
             >
                {data.closing}
             </motion.p>
@@ -83,7 +83,7 @@ export function FinancialSimplicitySection({ data }: FinancialSimplicitySectionP
 
           {/* Right: The Clarity Filter */}
           <div className="relative mt-12 lg:mt-0 lg:w-1/2">
-            <div className="relative mx-auto h-[500px] lg:h-[600px] w-full max-w-lg rounded-[3.5rem] bg-[#F9F9F8] border border-[#3A3A3A]/5 shadow-2xl overflow-hidden flex items-center justify-center">
+            <div className="relative mx-auto h-[500px] lg:h-[600px] w-full max-w-lg rounded-[3.5rem] bg-brand-light border border-brand-darker/5 shadow-2xl overflow-hidden flex items-center justify-center">
               {/* Background Cloud (Chaos) */}
               <div className="absolute inset-0 opacity-[0.05]">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[800px] w-[800px] rotate-12 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.1)_0%,transparent_70%)]" />
@@ -106,35 +106,35 @@ export function FinancialSimplicitySection({ data }: FinancialSimplicitySectionP
                         repeat: Infinity,
                         delay: Math.random() * 3
                       }}
-                      className="absolute h-8 w-8 rounded-lg border border-black/10 flex items-center justify-center"
+                      className="absolute h-8 w-8 rounded-lg border border-brand-darker/10 flex items-center justify-center"
                     >
-                      <DollarSign className="h-3 w-3 text-[#3A3A3A]/20" />
+                      <DollarSign className="h-3 w-3 text-brand-darker/30" />
                     </motion.div>
                   ))}
                   <div className="text-center rotate-[-90deg]">
-                     <span className="font-display text-[8px] font-bold text-[#3A3A3A]/10 uppercase tracking-[0.5em]">Raw Transactions</span>
+                     <span className="font-display text-[8px] font-bold text-brand-darker/30 uppercase tracking-[0.5em]">Raw Transactions</span>
                   </div>
                 </div>
 
                 {/* The Lens Pane */}
-                <div className="absolute left-1/2 -translate-x-1/2 h-4/5 w-1 bg-gradient-to-b from-transparent via-black/10 to-transparent z-20" />
+                <div className="absolute left-1/2 -translate-x-1/2 h-4/5 w-1 bg-gradient-to-b from-transparent via-brand-darker/10 to-transparent z-20" />
                 <motion.div 
                   initial={{ opacity: 0, scaleY: 0 }}
                   whileInView={{ opacity: 1, scaleY: 1 }}
                   viewport={{ once: true }}
-                  className="absolute left-1/2 -translate-x-1/2 h-3/5 w-32 bg-white/40 backdrop-blur-xl border border-black/5 shadow-3xl rounded-[2rem] z-30 flex flex-col items-center justify-center gap-4 overflow-hidden"
+                  className="absolute left-1/2 -translate-x-1/2 h-3/5 w-32 bg-white/40 backdrop-blur-xl border border-brand-darker/5 shadow-3xl rounded-[2rem] z-30 flex flex-col items-center justify-center gap-4 overflow-hidden"
                 >
                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent pointer-events-none" />
                    <div className="relative">
-                      <Zap className="h-10 w-10 text-[#3A3A3A]" strokeWidth={1.5} />
+                      <Zap className="h-10 w-10 text-brand-darker" strokeWidth={1.5} />
                       <motion.div 
                         animate={{ opacity: [0, 1, 0] }}
                         transition={{ duration: 2, repeat: Infinity }}
-                        className="absolute inset-0 bg-black/5 blur-xl"
+                        className="absolute inset-0 bg-brand-darker/5 blur-xl"
                       />
                    </div>
-                   <div className="h-px w-12 bg-black/10" />
-                   <span className="font-display text-[7px] font-bold text-[#3A3A3A] uppercase tracking-[0.4em]">Filter Core</span>
+                   <div className="h-px w-12 bg-brand-darker/10" />
+                   <span className="font-display text-[7px] font-bold text-brand-darker uppercase tracking-[0.4em]">Filter Core</span>
                 </motion.div>
 
                 {/* Ordered Output Side (Right) */}
@@ -148,7 +148,7 @@ export function FinancialSimplicitySection({ data }: FinancialSimplicitySectionP
                    >
                       <div className="flex flex-col items-center">
                         <span className="font-display text-[9px] font-bold text-emerald-500 uppercase tracking-[0.4em] mb-2">Verified Net</span>
-                        <span className="font-display text-3xl font-medium tracking-tight text-[#3A3A3A]">$12,480.00</span>
+                        <span className="font-display text-3xl font-medium tracking-tight text-brand-darker">$12,480.00</span>
                       </div>
                       <div className="flex gap-4">
                         {[1, 2, 3].map((b) => (
@@ -158,7 +158,7 @@ export function FinancialSimplicitySection({ data }: FinancialSimplicitySectionP
                              whileInView={{ scale: 1 }}
                              viewport={{ once: true }}
                              transition={{ delay: 0.8 + b * 0.1 }}
-                             className="h-8 w-8 rounded-full bg-white border border-black/5 shadow-md flex items-center justify-center"
+                             className="h-8 w-8 rounded-full bg-white border border-brand-darker/5 shadow-md flex items-center justify-center"
                            >
                               <CheckCircle2 className="h-4 w-4 text-emerald-500" />
                            </motion.div>
@@ -169,7 +169,7 @@ export function FinancialSimplicitySection({ data }: FinancialSimplicitySectionP
                    {/* Background Telemetry Sync Lines */}
                    <div className="absolute inset-0 py-20 px-10 flex flex-col justify-between opacity-5">
                       {[1, 2, 3, 4].map((l) => (
-                        <div key={l} className="h-px w-full bg-black" />
+                        <div key={l} className="h-px w-full bg-brand-darker" />
                       ))}
                    </div>
                 </div>
@@ -178,7 +178,7 @@ export function FinancialSimplicitySection({ data }: FinancialSimplicitySectionP
               {/* Top/Bottom HUD Indicators */}
               <div className="absolute top-10 left-10">
                  <div className="flex items-center gap-2">
-                    <div className="h-1 w-1 rounded-full bg-black/20" />
+                    <div className="h-1 w-1 rounded-full bg-brand-darker/20" />
                     <span className="font-display text-[8px] text-zinc-400 font-bold uppercase tracking-widest">Simplification Delta: 99.8%</span>
                  </div>
               </div>
@@ -192,7 +192,7 @@ export function FinancialSimplicitySection({ data }: FinancialSimplicitySectionP
       </div>
       
       {/* Spine Marker */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1.5 w-1.5 rounded-full bg-black/10 shadow-sm" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1.5 w-1.5 rounded-full bg-brand-darker/20 shadow-sm" />
     </section>
   );
 }

@@ -83,7 +83,7 @@ export function PrecisionSection({ data }: PrecisionSectionProps) {
                 const Icon = iconMap[feature.icon] || SlidersHorizontal;
                 return (
                   <motion.div key={feature.title} initial={{ opacity: 0, x: 10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 + i * 0.1 }} className="flex items-center gap-4 group">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-light border border-brand/5 group-hover:bg-brand group-hover:text-white transition-all shadow-sm">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-light border border-brand-darker/5 group-hover:bg-brand-darker group-hover:text-white transition-all shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
                     <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature.title}</span>
@@ -136,7 +136,7 @@ export function PrecisionSection({ data }: PrecisionSectionProps) {
                           onClick={() => setActiveControls(prev => ({ ...prev, [ctrl.label]: j }))}
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          className={`flex-1 py-2 rounded-lg font-mono text-[8px] font-bold uppercase tracking-widest transition-all ${activeControls[ctrl.label] === j ? 'bg-brand text-white shadow-md' : 'bg-white text-black/40 border border-black/5 hover:border-black/15'}`}
+                          className={`flex-1 py-2 rounded-lg font-mono text-[8px] font-bold uppercase tracking-widest transition-all ${activeControls[ctrl.label] === j ? 'bg-brand-darker text-white shadow-md' : 'bg-white text-black/40 border border-black/5 hover:border-black/15'}`}
                         >
                           {opt}
                         </motion.button>

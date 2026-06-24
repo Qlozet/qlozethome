@@ -85,7 +85,7 @@ export function StyleSection({ data }: StyleSectionProps) {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.div>
@@ -94,7 +94,7 @@ export function StyleSection({ data }: StyleSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -104,7 +104,7 @@ export function StyleSection({ data }: StyleSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -122,8 +122,8 @@ export function StyleSection({ data }: StyleSectionProps) {
                     transition={{ delay: 0.2 + i * 0.1 }}
                     className="flex items-center gap-3"
                   >
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10"><Check className="h-3.5 w-3.5 text-[#3A3A3A]" /></span>
-                    <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature.title}</span>
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-darker/10"><Check className="h-3.5 w-3.5 text-brand-darker" /></span>
+                    <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature.title}</span>
                   </motion.div>
                 );
               })}
@@ -134,10 +134,10 @@ export function StyleSection({ data }: StyleSectionProps) {
           <div className="relative mt-10 lg:mt-0 lg:w-1/2 flex justify-center items-center py-10 lg:py-0 pointer-events-none">
              
              {/* Main Device Frame */}
-             <div className="relative w-full max-w-[550px] aspect-[4/5] sm:aspect-square rounded-[3rem] bg-zinc-50 border border-[#3A3A3A]/5 shadow-2xl p-4 sm:p-8 flex flex-col sm:flex-row gap-6 items-center">
+             <div className="relative w-full max-w-[550px] aspect-[4/5] sm:aspect-square rounded-[3rem] bg-zinc-50 border border-brand-darker/5 shadow-2xl p-4 sm:p-8 flex flex-col sm:flex-row gap-6 items-center">
                 
                 {/* 1. Image Viewport (Left side on sm) */}
-                <div className="relative w-full sm:w-1/2 h-[300px] sm:h-full rounded-[2rem] bg-white shadow-inner border border-[#3A3A3A]/5 overflow-hidden">
+                <div className="relative w-full sm:w-1/2 h-[300px] sm:h-full rounded-[2rem] bg-white shadow-inner border border-brand-darker/5 overflow-hidden">
                    <AnimatePresence mode="wait">
                       <motion.img
                         key={profile.id}
@@ -153,14 +153,14 @@ export function StyleSection({ data }: StyleSectionProps) {
                    
                    {/* Overlay HUD */}
                    <div className="absolute top-4 left-4 z-10">
-                      <div className="bg-white/80 backdrop-blur px-3 py-1.5 rounded-full border border-[#3A3A3A]/5 shadow-sm">
+                      <div className="bg-white/80 backdrop-blur px-3 py-1.5 rounded-full border border-brand-darker/5 shadow-sm">
                          <AnimatePresence mode="wait">
                             <motion.span
                                key={profile.name}
                                initial={{ opacity: 0, y: 10 }}
                                animate={{ opacity: 1, y: 0 }}
                                exit={{ opacity: 0, y: -10 }}
-                               className="block font-display text-[9px] font-bold text-[#3A3A3A] uppercase tracking-widest"
+                               className="block font-display text-[9px] font-bold text-brand-darker uppercase tracking-widest"
                             >
                                {profile.name}
                             </motion.span>
@@ -171,9 +171,9 @@ export function StyleSection({ data }: StyleSectionProps) {
 
                 {/* 2. Live Configuration Checklist (Right side on sm) */}
                 <div className="flex-1 w-full flex flex-col gap-6 w-full">
-                   <div className="flex flex-col gap-1 border-b border-[#3A3A3A]/5 pb-4">
+                   <div className="flex flex-col gap-1 border-b border-brand-darker/5 pb-4">
                       <span className="font-mono text-[9px] text-zinc-400 font-bold uppercase tracking-widest">Active Configuration</span>
-                      <span className="font-display text-[14px] font-bold text-[#3A3A3A] uppercase tracking-tight">Your Rules Applied</span>
+                      <span className="font-display text-[14px] font-bold text-[#111111] uppercase tracking-tight">Your Rules Applied</span>
                    </div>
 
                    <div className="flex flex-col gap-5">
@@ -188,7 +188,7 @@ export function StyleSection({ data }: StyleSectionProps) {
                                
                                <div className="flex items-center gap-3">
                                   {/* Dynamic line indicator */}
-                                  <div className="h-4 w-[2px] rounded-full bg-[#3A3A3A]/10 overflow-hidden relative">
+                                  <div className="h-4 w-[2px] rounded-full bg-brand-darker/10 overflow-hidden relative">
                                      <motion.div 
                                         key={profile.id}
                                         initial={{ height: "0%" }}
@@ -207,7 +207,7 @@ export function StyleSection({ data }: StyleSectionProps) {
                                            animate={{ opacity: 1, y: 0 }}
                                            exit={{ opacity: 0, y: -20 }}
                                            transition={{ duration: 0.3 }}
-                                           className="block font-display text-[11px] sm:text-[13px] font-bold text-[#3A3A3A]"
+                                           className="block font-display text-[11px] sm:text-[13px] font-bold text-[#111111]"
                                         >
                                            {rule.value}
                                         </motion.span>
@@ -220,16 +220,16 @@ export function StyleSection({ data }: StyleSectionProps) {
                    </div>
 
                    {/* Footer Status */}
-                   <div className="mt-auto flex items-center justify-between bg-white border border-[#3A3A3A]/5 p-3 rounded-2xl shadow-sm">
+                   <div className="mt-auto flex items-center justify-between bg-white border border-brand-darker/5 p-3 rounded-2xl shadow-sm">
                       <div className="flex items-center gap-2">
                          <motion.div 
                             animate={{ rotate: 360 }} 
                             transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                            className="w-3 h-3 border-[1px] border-[#3A3A3A]/20 border-t-black rounded-full"
+                            className="w-3 h-3 border-[1px] border-brand-darker/20 border-t-black rounded-full"
                          />
                          <span className="font-mono text-[8px] font-bold text-zinc-400 uppercase tracking-widest">Iterating Style</span>
                       </div>
-                      <span className="font-mono text-[8px] font-bold text-[#3A3A3A] uppercase">Auto-Cycle</span>
+                      <span className="font-mono text-[8px] font-bold text-[#111111] uppercase">Auto-Cycle</span>
                    </div>
                 </div>
 
@@ -240,7 +240,7 @@ export function StyleSection({ data }: StyleSectionProps) {
       
       {/* Node Marker on Spine */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
-         <div className="w-1 h-1 rounded-full bg-[#3A3A3A]/20" />
+         <div className="w-1 h-1 rounded-full bg-brand-darker/20" />
       </div>
     </section>
   );

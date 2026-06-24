@@ -71,27 +71,27 @@ export function PricingSection({ data }: PricingSectionProps) {
                 key={plan.id}
                 className={`flex flex-col gap-10 rounded-[3rem] p-10 transition-all duration-700 hover:scale-[1.02] ${
                   isFeatured 
-                    ? "bg-white text-[#3A3A3A] shadow-2xl shadow-black/20" 
+                    ? "bg-white text-[#111111] shadow-2xl shadow-black/20" 
                     : "bg-white/5 border border-white/10 text-white backdrop-blur-xl"
                 }`}
               >
                 <div className="flex flex-col gap-8">
                   <div className="flex items-center justify-between">
-                    <h2 className={`font-display text-2xl font-medium tracking-tight ${isFeatured ? "text-[#3A3A3A]" : "text-white"}`}>
+                    <h2 className={`font-display text-2xl font-medium tracking-tight ${isFeatured ? "text-[#111111]" : "text-white"}`}>
                       {plan.name}
                     </h2>
                     {isFeatured && (
-                      <span className="rounded-full bg-[#3A3A3A] px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white">
+                      <span className="rounded-full bg-brand-button px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white">
                         Recommended
                       </span>
                     )}
                   </div>
 
                   <div className="flex items-baseline gap-3">
-                    <span className={`font-display text-5xl font-medium tracking-tighter sm:text-7xl ${isFeatured ? "text-[#3A3A3A]" : "text-white"}`}>
+                    <span className={`font-display text-5xl font-medium tracking-tighter sm:text-7xl ${isFeatured ? "text-[#111111]" : "text-white"}`}>
                       {plan.price[currency] === "*" ? "Custom" : plan.price[currency].toLocaleString()}
                     </span>
-                    <span className={`font-ui text-sm uppercase tracking-widest ${isFeatured ? "text-[#3A3A3A]/40" : "text-white/40"}`}>
+                    <span className={`font-ui text-sm uppercase tracking-widest ${isFeatured ? "text-[#111111]/40" : "text-white/40"}`}>
                       {plan.price[currency] !== "*" && `/ ${plan.period}`}
                     </span>
                   </div>
@@ -101,7 +101,7 @@ export function PricingSection({ data }: PricingSectionProps) {
                   {plan.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-4">
                       <svg
-                        className={`h-5 w-5 shrink-0 mt-0.5 ${isFeatured ? "text-[#3A3A3A]" : "text-white/60"}`}
+                        className={`h-5 w-5 shrink-0 mt-0.5 ${isFeatured ? "text-[#111111]" : "text-white/60"}`}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -109,11 +109,11 @@ export function PricingSection({ data }: PricingSectionProps) {
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
-                      <p className={`font-ui text-sm leading-relaxed ${isFeatured ? "text-[#3A3A3A]/60" : "text-white/40"}`}>
+                      <p className={`font-ui text-sm leading-relaxed ${isFeatured ? "text-[#111111]/60" : "text-white/40"}`}>
                         {feature.highlight && feature.highlightText ? (
                           <>
                             {feature.text.split(feature.highlightText)[0]}
-                            <span className={`font-bold italic ${isFeatured ? "text-[#3A3A3A]" : "text-white"}`}>
+                            <span className={`font-bold italic ${isFeatured ? "text-[#111111]" : "text-white"}`}>
                               {feature.highlightText}
                             </span>
                             {feature.text.split(feature.highlightText)[1]}
@@ -130,8 +130,8 @@ export function PricingSection({ data }: PricingSectionProps) {
                   href={plan.cta.href}
                   className={`mt-auto flex items-center justify-center rounded-full px-10 py-5 text-xs font-bold uppercase tracking-[0.3em] transition-all hover:scale-105 active:scale-[0.98] ${
                     isFeatured
-                      ? "bg-[#3A3A3A] text-white shadow-xl"
-                      : "bg-white text-[#3A3A3A] shadow-2xl"
+                      ? "bg-brand-button text-white hover:bg-brand shadow-xl"
+                      : "bg-white text-brand-button hover:bg-brand-light shadow-2xl"
                   }`}
                 >
                   {plan.cta.label}

@@ -22,7 +22,7 @@ type ScalableSectionProps = {
 
 export function ScalableSection({ data }: ScalableSectionProps) {
   return (
-    <section className="relative w-full bg-[#0A0A0A] py-24 sm:py-32" data-theme="dark">
+    <section className="relative w-full bg-brand-darker py-24 sm:py-32" data-theme="dark">
       <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col gap-20">
           <div className="flex flex-col gap-8 text-center items-center mx-auto max-w-3xl">
@@ -67,10 +67,10 @@ export function ScalableSection({ data }: ScalableSectionProps) {
                   className="group relative flex flex-col gap-6 rounded-[2rem] border border-white/5 bg-white/5 p-6 sm:p-10 transition-all hover:bg-white/10 overflow-hidden"
                 >
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-2xl transition-transform duration-500 group-hover:scale-110">
-                    <Icon className="h-6 w-6 text-[#3A3A3A]" strokeWidth={1.5} />
+                    <Icon className="h-6 w-6 text-brand-darker" strokeWidth={1.5} />
                   </div>
                   <div className="flex flex-col gap-4">
-                    <h3 className="font-display text-2xl font-medium tracking-tight text-white transition-colors group-hover:text-[#3A3A3A]">
+                    <h3 className="font-display text-2xl font-medium tracking-tight text-white transition-colors group-hover:text-brand-light">
                       {phase}
                     </h3>
                   </div>

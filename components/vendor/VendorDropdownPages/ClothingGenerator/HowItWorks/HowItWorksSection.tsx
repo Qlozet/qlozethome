@@ -63,10 +63,10 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
   };
 
   return (
-    <section id="how-it-works" ref={containerRef} className="relative z-20 h-[400vh] bg-[#0A0A0A]" data-theme="dark">
+    <section id="how-it-works" ref={containerRef} className="relative z-20 h-[400vh] bg-brand-darker" data-theme="dark">
       <div className="sticky top-0 flex h-screen w-full items-center overflow-hidden">
         {/* Background Atmosphere */}
-        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/5 via-[#0A0A0A] to-[#0A0A0A]" />
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/5 via-brand-darker to-brand-darker" />
         
         {/* Fixed Title Section on the Left */}
         <div className="absolute left-6 top-1/2 z-20 -translate-y-1/2 md:left-24 lg:left-32">
@@ -110,7 +110,7 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
                      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-2xl transition-transform duration-500 group-hover:scale-110 lg:h-20 lg:w-20">
                        {(() => {
                          const Icon = iconMap[step.icon] || Lightbulb;
-                         return <Icon className="h-8 w-8 text-black opacity-80 transition-opacity group-hover:opacity-100 lg:h-10 lg:w-10" strokeWidth={1.5} />;
+                         return <Icon className="h-8 w-8 text-brand-darker opacity-80 transition-opacity group-hover:opacity-100 lg:h-10 lg:w-10" strokeWidth={1.5} />;
                        })()}
                      </div>
                    </div>

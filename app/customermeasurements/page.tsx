@@ -24,7 +24,7 @@ import data from "@/data/vendor/vendordropdown/customermeasurements/data.json";
 
 export default function CustomerMeasurementsPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white text-zinc-900 selection:bg-brand-darker selection:text-white">
       <Header data={navbarData} />
       
       <HeroSection data={data.hero as any} />

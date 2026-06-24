@@ -115,7 +115,7 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -124,7 +124,7 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-5xl lg:text-6xl"
+                className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-5xl lg:text-6xl"
               >
                 {data.title}
               </motion.h2>
@@ -134,7 +134,7 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/40 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -153,10 +153,10 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
                     transition={{ delay: 0.2 + i * 0.1 }}
                     className="flex items-center gap-6 group"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all shadow-sm">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white border border-brand-darker/5 group-hover:bg-brand-darker group-hover:text-brand-light transition-all shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
-                    <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
+                    <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature}</span>
                   </motion.div>
                 );
               })}
@@ -170,7 +170,7 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="relative mx-auto w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-[#F9F9F8] border border-[#3A3A3A]/5 shadow-2xl overflow-hidden"
+              className="relative mx-auto w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-brand-light border border-brand-darker/5 shadow-2xl overflow-hidden"
             >
               {/* Subtle grid bg */}
               <div
@@ -183,15 +183,15 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
                 {/* ── Card header ── */}
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex flex-col gap-1">
-                    <span className="font-display text-[9px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/30">Error Rate by Stage</span>
+                    <span className="font-display text-[9px] font-bold uppercase tracking-[0.4em] text-[#111111]/30">Error Rate by Stage</span>
                     <div className="flex items-baseline gap-2 flex-wrap">
-                      <span className="font-display text-3xl sm:text-4xl font-medium text-[#3A3A3A]">1.2%</span>
-                      <div className="flex items-center gap-1 bg-[#F9F9F8] text-[#3A3A3A] px-2 py-0.5 rounded-full border border-[#3A3A3A/15]">
+                      <span className="font-display text-3xl sm:text-4xl font-medium text-brand-darker">1.2%</span>
+                      <div className="flex items-center gap-1 bg-brand-light text-brand-darker px-2 py-0.5 rounded-full border border-brand-darker/15">
                         <TrendingDown className="h-3 w-3" />
                         <span className="font-mono text-[9px] font-bold">−93%</span>
                       </div>
                     </div>
-                    <span className="font-mono text-[9px] text-[#3A3A3A]/30 tracking-widest">with Qlozet System</span>
+                    <span className="font-mono text-[9px] text-brand-darker/40 tracking-widest">with Qlozet System</span>
                   </div>
 
                   {/* Legend */}
@@ -214,8 +214,8 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
                 <div className="grid grid-cols-3 gap-2 sm:gap-3">
                   {[
                     { label: "Manual",    value: "18.4%", cls: "bg-red-50 text-red-600 border-red-100" },
-                    { label: "Reduction", value: "−93%",  cls: "bg-[#F9F9F8] text-[#3A3A3A] border-[#3A3A3A/15]" },
-                    { label: "Qlozet",    value: "1.2%",  cls: "bg-[#F9F9F8] text-[#3A3A3A] border-[#3A3A3A/20]" },
+                    { label: "Reduction", value: "−93%",  cls: "bg-brand-light text-brand-darker border-brand-darker/10" },
+                    { label: "Qlozet",    value: "1.2%",  cls: "bg-brand-light text-brand-darker border-brand-darker/15" },
                   ].map((pill) => (
                     <div key={pill.label} className={`flex flex-col items-center gap-0.5 rounded-xl border px-2 py-2 sm:px-3 sm:py-2.5 ${pill.cls}`}>
                       <span className="font-mono text-[7px] sm:text-[8px] uppercase tracking-widest opacity-60">{pill.label}</span>

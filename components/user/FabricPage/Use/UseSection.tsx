@@ -18,7 +18,7 @@ type UseSectionProps = {
 
 export function UseSection({ data }: UseSectionProps) {
   return (
-    <section id={data.id} className="relative z-10 bg-[#F9F9F8] py-24 sm:py-32 overflow-hidden" data-theme="light">
+    <section id={data.id} className="relative z-10 bg-brand-light py-24 sm:py-32 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-24">
           {/* Right: Content */}
@@ -28,7 +28,7 @@ export function UseSection({ data }: UseSectionProps) {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -37,7 +37,7 @@ export function UseSection({ data }: UseSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -47,7 +47,7 @@ export function UseSection({ data }: UseSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -63,8 +63,8 @@ export function UseSection({ data }: UseSectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-3"
                 >
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10"><Check className="h-3.5 w-3.5 text-[#3A3A3A]" /></span>
-                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-darker/10"><Check className="h-3.5 w-3.5 text-brand-darker" /></span>
+                  <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -73,7 +73,7 @@ export function UseSection({ data }: UseSectionProps) {
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                viewport={{ once: true }}
-               className="font-ui text-sm italic text-[#3A3A3A]/30"
+               className="font-ui text-sm italic text-[#111111]/30"
             >
                {data.closing}
             </motion.p>
@@ -140,7 +140,7 @@ export function UseSection({ data }: UseSectionProps) {
                      
                      <div className="absolute bottom-6 left-6 lg:bottom-8 lg:left-8 right-6 lg:right-8 flex justify-between items-end">
                         <div className="flex flex-col gap-2">
-                           <div className="backdrop-blur-md bg-white text-[#3A3A3A] px-4 py-2 flex items-center justify-center rounded-xl text-sm font-mono font-bold shadow-2xl border border-white/20">
+                           <div className="backdrop-blur-md bg-white text-brand-darker px-4 py-2 flex items-center justify-center rounded-xl text-sm font-mono font-bold shadow-2xl border border-white/20">
                               03. BESPOKE REALITY
                            </div>
                         </div>

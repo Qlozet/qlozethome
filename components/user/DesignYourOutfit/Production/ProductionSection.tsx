@@ -40,7 +40,7 @@ export function ProductionSection({ data }: ProductionSectionProps) {
                 const Icon = iconMap[feature.icon] || CheckCircle2;
                 return (
                   <motion.div key={feature.title} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 + i * 0.1 }} className="flex items-center gap-4 group">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white border border-brand/5 group-hover:bg-brand group-hover:text-white transition-all shadow-sm">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white border border-brand-darker/5 group-hover:bg-brand-darker group-hover:text-white transition-all shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
                     <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature.title}</span>
@@ -57,7 +57,7 @@ export function ProductionSection({ data }: ProductionSectionProps) {
                {/* Header */}
                <div className="flex items-center justify-between pb-5 border-b border-black/5 mb-6">
                   <div className="flex items-center gap-3">
-                     <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-brand text-white">
+                     <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-brand-darker text-white">
                         <Send className="h-3.5 w-3.5" />
                      </div>
                      <span className="font-display text-[10px] font-bold uppercase tracking-widest text-[#111111]">Production Pipeline</span>
@@ -82,7 +82,7 @@ export function ProductionSection({ data }: ProductionSectionProps) {
                               whileHover={{ scale: 1.02, x: 5, transition: { type: "spring", stiffness: 300, damping: 20 } }}
                               viewport={{ once: true }}
                               transition={{ delay: 0.3 + i * 0.15 }}
-                              className={`flex items-center gap-4 p-4 rounded-2xl border cursor-pointer transition-all duration-300 ${isActive ? 'bg-brand text-white border-brand shadow-2xl' : 'bg-white border-black/5 shadow-md hover:shadow-xl'}`}
+                              className={`flex items-center gap-4 p-4 rounded-2xl border cursor-pointer transition-all duration-300 ${isActive ? 'bg-brand-darker text-white border-brand-darker shadow-2xl' : 'bg-white border-black/5 shadow-md hover:shadow-xl'}`}
                            >
                               <div className="h-14 w-14 rounded-xl overflow-hidden shrink-0 border border-black/5 shadow-sm">
                                  <img src={step.image} alt={step.step} className="w-full h-full object-cover" />
@@ -116,7 +116,7 @@ export function ProductionSection({ data }: ProductionSectionProps) {
                   </div>
                   <div className="h-2 bg-zinc-100 rounded-full overflow-hidden">
                      <motion.div initial={{ width: 0 }} whileInView={{ width: "67%" }} viewport={{ once: true }} transition={{ delay: 0.8, duration: 1, ease: "easeOut" }}
-                        className="h-full bg-brand rounded-full" />
+                        className="h-full bg-brand-darker rounded-full" />
                   </div>
                </div>
             </div>

@@ -30,12 +30,12 @@ export function SmartDiscoverySection({ data }: SmartDiscoverySectionProps) {
         <div className="flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-24">
           {/* Left: Content */}
           <div className="flex flex-col gap-10 lg:w-1/2">
-            <div className="flex flex-col gap-6">
+             <div className="flex flex-col gap-6">
               <motion.span 
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -44,7 +44,7 @@ export function SmartDiscoverySection({ data }: SmartDiscoverySectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -54,7 +54,7 @@ export function SmartDiscoverySection({ data }: SmartDiscoverySectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -70,8 +70,8 @@ export function SmartDiscoverySection({ data }: SmartDiscoverySectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-3"
                 >
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10"><Check className="h-3.5 w-3.5 text-[#3A3A3A]" /></span>
-                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-darker/10"><Check className="h-3.5 w-3.5 text-brand-darker" /></span>
+                  <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -80,7 +80,7 @@ export function SmartDiscoverySection({ data }: SmartDiscoverySectionProps) {
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                viewport={{ once: true }}
-               className="font-ui text-sm italic text-[#3A3A3A]/30"
+               className="font-ui text-sm italic text-[#111111]/30"
             >
                {data.closing}
             </motion.p>
@@ -88,23 +88,23 @@ export function SmartDiscoverySection({ data }: SmartDiscoverySectionProps) {
 
           {/* Right: AI Matching Engine */}
           <div className="relative mt-10 lg:mt-0 lg:w-1/2">
-             <div className="relative mx-auto w-full max-w-[500px] rounded-[3rem] bg-zinc-50 border border-[#3A3A3A]/5 shadow-2xl p-6 sm:p-8 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
+             <div className="relative mx-auto w-full max-w-[500px] rounded-[3rem] bg-zinc-50 border border-brand-darker/5 shadow-2xl p-6 sm:p-8 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
                 
                 {/* AI Header */}
-                <div className="flex items-center justify-between pb-5 border-b border-[#3A3A3A]/5 mb-6">
+                <div className="flex items-center justify-between pb-5 border-b border-brand-darker/5 mb-6">
                    <div className="flex items-center gap-3">
                       <motion.div 
                          animate={{ rotate: 360 }}
                          transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                         className="h-8 w-8 flex items-center justify-center rounded-xl bg-[#3A3A3A] text-white"
+                         className="h-8 w-8 flex items-center justify-center rounded-xl bg-brand-darker text-white"
                       >
                          <Compass className="h-3.5 w-3.5" />
                       </motion.div>
-                      <span className="font-display text-[10px] font-bold uppercase tracking-widest text-[#3A3A3A]">Style Compass</span>
+                      <span className="font-display text-[10px] font-bold uppercase tracking-widest text-brand-darker">Style Compass</span>
                    </div>
-                   <div className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full border border-[#3A3A3A]/5 shadow-sm">
+                   <div className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full border border-brand-darker/5 shadow-sm">
                       <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                      <span className="font-mono text-[8px] font-bold text-[#3A3A3A]/60 uppercase tracking-widest">AI Active</span>
+                      <span className="font-mono text-[8px] font-bold text-brand-darker/60 uppercase tracking-widest">AI Active</span>
                    </div>
                 </div>
 
@@ -120,7 +120,7 @@ export function SmartDiscoverySection({ data }: SmartDiscoverySectionProps) {
                             whileHover={{ scale: 1.1, transition: { type: "spring", stiffness: 400 } }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 + i * 0.08 }}
-                            className="h-7 px-3 rounded-full bg-[#3A3A3A] text-white flex items-center font-display text-[8px] font-bold uppercase tracking-wider cursor-pointer hover:bg-[#4A4A4A] transition-colors"
+                            className="h-7 px-3 rounded-full bg-brand-darker text-white flex items-center font-display text-[8px] font-bold uppercase tracking-wider cursor-pointer hover:bg-brand-darker transition-colors"
                          >
                             {tag}
                          </motion.div>
@@ -130,15 +130,15 @@ export function SmartDiscoverySection({ data }: SmartDiscoverySectionProps) {
 
                 {/* Matching Beam */}
                 <div className="relative mb-6 flex items-center justify-center py-3">
-                   <div className="absolute inset-x-0 h-px bg-[#3A3A3A]/5" />
+                   <div className="absolute inset-x-0 h-px bg-brand-darker/5" />
                    <motion.div 
                       animate={{ scaleX: [0, 1, 0] }}
                       transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
                       className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-black/30 to-transparent origin-left" 
                    />
-                   <div className="relative bg-zinc-50 px-4 py-1.5 rounded-full border border-[#3A3A3A]/5 shadow-sm flex items-center gap-2 z-10">
-                      <Sparkles className="h-3 w-3 text-[#3A3A3A]/40" />
-                      <span className="font-mono text-[8px] font-bold text-[#3A3A3A]/40 uppercase tracking-widest">Matching</span>
+                   <div className="relative bg-zinc-50 px-4 py-1.5 rounded-full border border-brand-darker/5 shadow-sm flex items-center gap-2 z-10">
+                      <Sparkles className="h-3 w-3 text-brand-darker/40" />
+                      <span className="font-mono text-[8px] font-bold text-brand-darker/40 uppercase tracking-widest">Matching</span>
                    </div>
                 </div>
 
@@ -152,13 +152,13 @@ export function SmartDiscoverySection({ data }: SmartDiscoverySectionProps) {
                          whileHover={{ scale: 1.03, x: 5, transition: { type: "spring", stiffness: 300, damping: 20 } }}
                          viewport={{ once: true }}
                          transition={{ delay: 0.5 + i * 0.15, duration: 0.6, type: "spring" }}
-                         className="flex items-center gap-4 p-3 rounded-2xl bg-white border border-[#3A3A3A]/5 shadow-md cursor-pointer hover:shadow-xl hover:border-emerald-500/20 transition-all duration-300"
+                         className="flex items-center gap-4 p-3 rounded-2xl bg-white border border-brand-darker/5 shadow-md cursor-pointer hover:shadow-xl hover:border-emerald-500/20 transition-all duration-300"
                       >
                          <div className="h-20 w-20 rounded-xl overflow-hidden shrink-0 bg-zinc-100 transition-transform duration-300 group-hover:scale-105">
                             <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
                          </div>
                          <div className="flex-1 flex flex-col gap-2">
-                            <span className="font-display text-[11px] font-bold text-[#3A3A3A] uppercase tracking-wider">{product.name}</span>
+                            <span className="font-display text-[11px] font-bold text-[#111111] uppercase tracking-wider">{product.name}</span>
                             <div className="flex items-center gap-2">
                                <div className="h-1.5 flex-1 bg-zinc-100 rounded-full overflow-hidden">
                                   <motion.div
@@ -172,13 +172,13 @@ export function SmartDiscoverySection({ data }: SmartDiscoverySectionProps) {
                                <span className="font-mono text-[10px] font-bold text-emerald-600">{product.match}%</span>
                             </div>
                          </div>
-                         <Search className="h-4 w-4 text-[#3A3A3A]/10 shrink-0 transition-all duration-300 hover:text-[#3A3A3A]/40 hover:rotate-12" />
+                         <Search className="h-4 w-4 text-[#111111]/10 shrink-0 transition-all duration-300 hover:text-[#111111]/40 hover:rotate-12" />
                       </motion.div>
                    ))}
                 </div>
 
                 {/* Discovery Footer */}
-                <div className="mt-6 pt-5 border-t border-[#3A3A3A]/5 flex items-center justify-center">
+                <div className="mt-6 pt-5 border-t border-brand-darker/5 flex items-center justify-center">
                    <span className="font-mono text-[8px] font-bold text-zinc-400 uppercase tracking-widest">Personalized Recommendations</span>
                 </div>
              </div>
@@ -188,7 +188,7 @@ export function SmartDiscoverySection({ data }: SmartDiscoverySectionProps) {
       
       {/* Node Marker on Spine */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
-         <div className="w-px h-1 rounded-full bg-[#3A3A3A]/20" />
+         <div className="w-px h-1 rounded-full bg-brand-darker/20" />
       </div>
     </section>
   );

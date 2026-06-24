@@ -28,7 +28,7 @@ export function DeliverySection({ data }: DeliverySectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -36,17 +36,17 @@ export function DeliverySection({ data }: DeliverySectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl"
               >
                 {data.title}
-                <span className="block mt-2 text-xl text-[#3A3A3A]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
+                <span className="block mt-2 text-xl text-[#111111]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -62,7 +62,7 @@ export function DeliverySection({ data }: DeliverySectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-4 group"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#F9F9F8] border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-brand-light border border-brand-darker/5 group-hover:bg-brand-darker group-hover:text-white transition-all">
                     {i === 0 ? <Clock4 className="h-4 w-4" /> :
                      i === 1 ? <ShieldCheck className="h-4 w-4" /> :
                      <Globe className="h-4 w-4" />}
@@ -91,11 +91,11 @@ export function DeliverySection({ data }: DeliverySectionProps) {
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="relative mx-auto w-full max-w-md"
             >
-              <div className="relative rounded-[3rem] bg-zinc-900 border border-white/5 shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.4)] hover:-translate-y-2">
+              <div className="relative rounded-[3rem] bg-brand-darker border border-white/5 shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.4)] hover:-translate-y-2">
                 {/* Package Image */}
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img src="/image/bespoke-kaftan-brown-2.png" alt="Package" className="w-full h-full object-cover object-top opacity-60" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/60 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-darker via-brand-darker/60 to-transparent" />
 
                   <div className="absolute top-6 left-6 flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10">
                     <Truck className="h-3 w-3 text-white" />
@@ -176,7 +176,7 @@ export function DeliverySection({ data }: DeliverySectionProps) {
                 className="absolute -bottom-4 -right-4 h-20 w-20 bg-white rounded-full shadow-2xl border border-black/5 flex items-center justify-center p-4 z-20"
               >
                 <div className="flex flex-col items-center gap-1 text-center">
-                  <ShieldCheck className="h-5 w-5 text-[#3E1C01]" />
+                  <ShieldCheck className="h-5 w-5 text-brand-darker" />
                   <span className="font-display text-[6px] font-bold uppercase tracking-widest leading-tight">Secured</span>
                 </div>
               </motion.div>

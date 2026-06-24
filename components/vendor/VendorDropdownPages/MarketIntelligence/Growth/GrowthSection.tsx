@@ -30,7 +30,7 @@ const PLATFORM_SIGNALS = [
 
 export function GrowthSection({ data }: GrowthSectionProps) {
   return (
-    <section className="relative z-20 bg-[#050505] px-6 md:px-10 lg:px-10 py-24 sm:py-32 overflow-hidden" data-theme="dark">
+    <section className="relative z-20 bg-brand-darker px-6 md:px-10 lg:px-10 py-24 sm:py-32 overflow-hidden" data-theme="dark">
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
         style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
 
@@ -50,7 +50,7 @@ export function GrowthSection({ data }: GrowthSectionProps) {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="group rounded-[2rem] sm:rounded-[3rem] bg-white/[0.03] border border-white/5 p-5 sm:p-8 transition-all duration-500 hover:bg-white/[0.08] hover:border-white/10 hover:-translate-y-2 cursor-pointer">
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-10 w-10 rounded-xl bg-white text-[#1A1A1A] flex items-center justify-center"><Zap className="h-4 w-4" /></div>
+              <div className="h-10 w-10 rounded-xl bg-brand-light text-brand-darker flex items-center justify-center"><Zap className="h-4 w-4" /></div>
               <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">{data.features[0]?.title}</span>
             </div>
             <div className="bg-white/[0.03] rounded-2xl border border-white/5 p-5">
@@ -74,7 +74,7 @@ export function GrowthSection({ data }: GrowthSectionProps) {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
             className="group rounded-[2rem] sm:rounded-[3rem] bg-white/[0.03] border border-white/5 p-5 sm:p-8 transition-all duration-500 hover:bg-white/[0.08] hover:border-white/10 hover:-translate-y-2 cursor-pointer">
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-10 w-10 rounded-xl bg-white text-[#1A1A1A] flex items-center justify-center"><Search className="h-4 w-4" /></div>
+              <div className="h-10 w-10 rounded-xl bg-brand-light text-brand-darker flex items-center justify-center"><Search className="h-4 w-4" /></div>
               <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">{data.features[1]?.title}</span>
             </div>
             <div className="bg-white/[0.03] rounded-2xl border border-white/5 p-5">
@@ -90,7 +90,7 @@ export function GrowthSection({ data }: GrowthSectionProps) {
                   <div className="h-1.5 bg-white/5 rounded-full overflow-hidden mb-1.5">
                     <motion.div initial={{ width: 0 }} whileInView={{ width: `${o.score}%` }} viewport={{ once: true }}
                       transition={{ delay: 0.6 + i * 0.15, duration: 0.6 }}
-                      className="h-full bg-white rounded-full" />
+                      className="h-full bg-brand-light rounded-full" />
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="font-mono text-[7px] text-white/30">Demand: <span className="text-white/50">{o.demand}</span></span>
@@ -105,7 +105,7 @@ export function GrowthSection({ data }: GrowthSectionProps) {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
             className="group rounded-[2rem] sm:rounded-[3rem] bg-white/[0.03] border border-white/5 p-5 sm:p-8 transition-all duration-500 hover:bg-white/[0.08] hover:border-white/10 hover:-translate-y-2 cursor-pointer">
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-10 w-10 rounded-xl bg-white text-[#1A1A1A] flex items-center justify-center"><Globe className="h-4 w-4" /></div>
+              <div className="h-10 w-10 rounded-xl bg-brand-light text-brand-darker flex items-center justify-center"><Globe className="h-4 w-4" /></div>
               <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">{data.features[2]?.title}</span>
             </div>
             <div className="bg-white/[0.03] rounded-2xl border border-white/5 p-5">

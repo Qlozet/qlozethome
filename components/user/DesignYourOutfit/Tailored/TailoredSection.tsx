@@ -40,15 +40,15 @@ export function TailoredSection({ data }: TailoredSectionProps) {
                   <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.5 }}
                      className="absolute top-1/3 left-1/2 -translate-x-1/2">
                      <div className="relative">
-                        <div className="h-3 w-3 rounded-full bg-brand animate-ping absolute" />
-                        <div className="h-3 w-3 rounded-full bg-brand relative z-10" />
+                        <div className="h-3 w-3 rounded-full bg-brand-darker animate-ping absolute" />
+                        <div className="h-3 w-3 rounded-full bg-brand-darker relative z-10" />
                      </div>
                   </motion.div>
                   <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.7 }}
                      className="absolute top-1/2 left-1/3">
                      <div className="relative">
-                        <div className="h-2.5 w-2.5 rounded-full bg-brand/60 animate-ping absolute" />
-                        <div className="h-2.5 w-2.5 rounded-full bg-brand relative z-10" />
+                        <div className="h-2.5 w-2.5 rounded-full bg-brand-darker/60 animate-ping absolute" />
+                        <div className="h-2.5 w-2.5 rounded-full bg-brand-darker relative z-10" />
                      </div>
                   </motion.div>
                </div>
@@ -57,7 +57,7 @@ export function TailoredSection({ data }: TailoredSectionProps) {
                <div className="p-6 sm:p-8 flex flex-col gap-5">
                   <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                         <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-brand text-white">
+                         <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-brand-darker text-white">
                             <Ruler className="h-3.5 w-3.5" />
                          </div>
                          <span className="font-display text-[10px] font-bold uppercase tracking-widest text-[#111111]">Fit Profile</span>
@@ -76,7 +76,7 @@ export function TailoredSection({ data }: TailoredSectionProps) {
                         <div className="flex-1 h-2 bg-zinc-200 rounded-full overflow-hidden">
                            <motion.div initial={{ width: 0 }} whileInView={{ width: `${m.bar}%` }} viewport={{ once: true }}
                               transition={{ delay: 0.5 + i * 0.1, duration: 0.6, ease: "easeOut" }}
-                               className="h-full bg-brand rounded-full group-hover:bg-brand-darker transition-colors" />
+                               className="h-full bg-brand-darker rounded-full" />
                         </div>
                         <span className="font-mono text-[10px] font-bold text-black w-10 text-right">{m.value}</span>
                      </motion.div>
@@ -100,7 +100,7 @@ export function TailoredSection({ data }: TailoredSectionProps) {
                 const Icon = iconMap[feature.icon] || CheckCircle2;
                 return (
                   <motion.div key={feature.title} initial={{ opacity: 0, x: 10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 + i * 0.1 }} className="flex items-center gap-4 group">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-light border border-brand/5 group-hover:bg-brand group-hover:text-white transition-all shadow-sm">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-light border border-brand-darker/5 group-hover:bg-brand-darker group-hover:text-white transition-all shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
                     <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature.title}</span>

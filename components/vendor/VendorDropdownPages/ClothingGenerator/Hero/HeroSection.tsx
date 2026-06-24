@@ -48,7 +48,7 @@ export function HeroSection({ data }: HeroSectionProps) {
   return (
     <section ref={containerRef} id={data.id} className="relative min-h-screen w-full overflow-hidden bg-white pt-32 lg:pt-32" data-theme="light">
       {/* Decorative Background Elements */}
-      <div className="absolute top-0 right-0 w-1/2 h-[80vh] bg-zinc-50/50 -z-10 rounded-bl-[5rem]" />
+      <div className="absolute top-0 right-0 w-1/2 h-[80vh] bg-brand-light/50 -z-10 rounded-bl-[5rem]" />
 
       <motion.div
         variants={containerVariants}
@@ -62,7 +62,7 @@ export function HeroSection({ data }: HeroSectionProps) {
             <div className="flex flex-col gap-8">
               <motion.span
                 variants={itemVariants}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -70,7 +70,7 @@ export function HeroSection({ data }: HeroSectionProps) {
               <div className="relative">
                 <motion.h1
                   variants={itemVariants}
-                  className="relative z-10 max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tighter text-black sm:text-7xl lg:text-[5.5rem]"
+                  className="relative z-10 max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tighter text-[#111111] sm:text-7xl lg:text-[5.5rem]"
                 >
                   {data.title}
                 </motion.h1>
@@ -79,13 +79,13 @@ export function HeroSection({ data }: HeroSectionProps) {
                   initial={{ width: 0 }}
                   animate={{ width: "100px" }}
                   transition={{ delay: 1, duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="absolute -left-12 top-1/2 h-px bg-black/10 hidden xl:block"
+                  className="absolute -left-12 top-1/2 h-px bg-brand-darker/10 hidden xl:block"
                 />
               </div>
 
               <motion.p
                 variants={itemVariants}
-                className="max-w-xl font-ui text-lg leading-relaxed text-black/60 sm:text-2xl"
+                className="max-w-xl font-ui text-lg leading-relaxed text-[#111111]/60 sm:text-2xl"
               >
                 {data.description}
               </motion.p>
@@ -97,18 +97,18 @@ export function HeroSection({ data }: HeroSectionProps) {
             >
               <Link
                 href={data.cta.href}
-                className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-black px-10 text-[10px] font-bold uppercase tracking-[0.3em] text-white transition-all hover:scale-[1.02] active:scale-95"
+                className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-brand-button px-10 text-[10px] font-bold uppercase tracking-[0.3em] text-white transition-all hover:scale-[1.02] hover:bg-brand active:scale-95"
               >
                 <span className="relative z-10">{data.cta.label}</span>
-                <div className="absolute inset-0 z-0 bg-gradient-to-r from-zinc-800 to-black opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="absolute inset-0 z-0 bg-gradient-to-r from-brand-darker to-brand opacity-0 transition-opacity group-hover:opacity-100" />
               </Link>
 
               <Link
                 href="#what"
-                className="group inline-flex items-center gap-4 font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black"
+                className="group inline-flex items-center gap-4 font-display text-[10px] font-bold uppercase tracking-[0.4em] text-brand-darker"
               >
                 Explore Creation
-                <div className="h-px w-10 bg-black transition-all duration-500 group-hover:w-16" />
+                <div className="h-px w-10 bg-brand-darker transition-all duration-500 group-hover:w-16" />
               </Link>
             </motion.div>
           </div>
@@ -118,7 +118,7 @@ export function HeroSection({ data }: HeroSectionProps) {
             style={{ y }}
             className="relative mt-20 lg:mt-0 lg:w-2/5"
           >
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-zinc-100 shadow-2xl shadow-black/10">
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-brand-light shadow-2xl shadow-black/10">
               <Image
                 src={data.image.src}
                 alt={data.image.alt}
@@ -137,8 +137,8 @@ export function HeroSection({ data }: HeroSectionProps) {
               className="absolute -left-16 bottom-16 hidden rounded-2xl bg-white p-8 shadow-xl lg:block"
             >
               <div className="flex flex-col gap-2">
-                <span className="font-display text-[9px] font-bold uppercase tracking-[0.3em] text-black/30">Generation</span>
-                <span className="font-display text-xl font-medium text-black">Instant Visuals</span>
+                <span className="font-display text-[9px] font-bold uppercase tracking-[0.3em] text-[#111111]/40">Generation</span>
+                <span className="font-display text-xl font-medium text-[#111111]">Instant Visuals</span>
               </div>
             </motion.div>
           </motion.div>

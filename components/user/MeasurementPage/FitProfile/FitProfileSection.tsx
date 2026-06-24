@@ -66,7 +66,7 @@ export function FitProfileSection({ data }: FitProfileSectionProps) {
                   transition={{ delay: 0.3 + index * 0.1 }}
                   className="flex items-center gap-6 group"
                 >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-light border border-brand/5 transition-all group-hover:bg-brand group-hover:text-white">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-light border border-brand-darker/5 transition-all group-hover:bg-brand-darker group-hover:text-white">
                     {(() => {
                       const Icon = iconMap[benefit] || UserCheck;
                       return <Icon className="h-6 w-6" strokeWidth={1.5} />;
@@ -97,7 +97,7 @@ export function FitProfileSection({ data }: FitProfileSectionProps) {
                    <div className="flex justify-between items-start w-full relative z-20">
                       <div className="flex items-center gap-4">
                          {/* NFC / ID Icon */}
-                         <div className="w-12 h-12 rounded-full bg-brand flex items-center justify-center relative">
+                         <div className="w-12 h-12 rounded-full bg-brand-darker flex items-center justify-center relative">
                             <motion.div 
                                initial={{ scale: 0.8, opacity: 0 }} 
                                whileInView={{ scale: 1.5, opacity: 0 }} 

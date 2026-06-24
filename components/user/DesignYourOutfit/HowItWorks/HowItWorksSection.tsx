@@ -75,7 +75,7 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
                 <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-2xl transition-transform duration-500 group-hover:scale-110">
                   {(() => {
                     const Icon = iconMap[step.icon] || Scissors;
-                    return <Icon className="h-8 w-8 text-brand" strokeWidth={1.5} />;
+                    return <Icon className="h-8 w-8 text-brand-darker" strokeWidth={1.5} />;
                   })()}
                 </div>
               </div>

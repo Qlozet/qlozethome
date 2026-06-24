@@ -29,7 +29,7 @@ export function TrustSupportSection({ data }: TrustSupportSectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -37,17 +37,17 @@ export function TrustSupportSection({ data }: TrustSupportSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl"
               >
                 {data.title}
-                <span className="block mt-2 text-xl text-[#3A3A3A]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
+                <span className="block mt-2 text-xl text-[#111111]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -63,10 +63,10 @@ export function TrustSupportSection({ data }: TrustSupportSectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-6 group"
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#F9F9F8] border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-light border border-brand-darker/5 group-hover:bg-brand-darker group-hover:text-white transition-all">
                     <ShieldCheck className="h-5 w-5" />
                   </div>
-                  <span className="font-ui text-sm text-[#3A3A3A]/70 sm:text-base">{feature}</span>
+                  <span className="font-ui text-sm text-[#111111]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -96,7 +96,7 @@ export function TrustSupportSection({ data }: TrustSupportSectionProps) {
                   <LifeBuoy className="h-6 w-6 text-black/40" />
                   <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black/40">24/7 Concierge</span>
                 </div>
-                <div className="h-2 w-2 rounded-full bg-[#3E1C01] animate-pulse" />
+                <div className="h-2 w-2 rounded-full bg-brand-darker animate-pulse" />
               </div>
 
               {/* Message Bubbles */}
@@ -136,7 +136,7 @@ export function TrustSupportSection({ data }: TrustSupportSectionProps) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 1.5 }}
-                  className="ml-auto p-4 rounded-2xl rounded-tr-none bg-zinc-900 border border-white/5 shadow-xl max-w-[85%] text-white"
+                  className="ml-auto p-4 rounded-2xl rounded-tr-none bg-brand-darker border border-white/5 shadow-xl max-w-[85%] text-white"
                 >
                   <span className="font-ui text-sm text-white/90">&quot;Quality check is complete! Your kaftan passed all inspection points and is being prepared for dispatch.&quot;</span>
                 </motion.div>
@@ -147,10 +147,10 @@ export function TrustSupportSection({ data }: TrustSupportSectionProps) {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 2.2, type: "spring", stiffness: 200 }}
-                  className="mx-auto flex items-center gap-2 px-4 py-2 rounded-full bg-[#3E1C01]/10 border border-[#3E1C01]/20"
+                  className="mx-auto flex items-center gap-2 px-4 py-2 rounded-full bg-brand-darker/10 border border-brand-darker/20"
                 >
-                  <CheckCircle2 className="h-3 w-3 text-[#3E1C01]" />
-                  <span className="font-mono text-[8px] font-bold text-[#3E1C01] uppercase tracking-widest leading-none">Issue Resolved</span>
+                  <CheckCircle2 className="h-3 w-3 text-brand-darker" />
+                  <span className="font-mono text-[8px] font-bold text-brand-darker uppercase tracking-widest leading-none">Issue Resolved</span>
                 </motion.div>
               </div>
 

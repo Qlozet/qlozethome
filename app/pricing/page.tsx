@@ -7,7 +7,7 @@ import pricingData from "@/data/pricing/pricing.json";
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen bg-[#3A3A3A] text-white selection:bg-white selection:text-[#3A3A3A]">
+    <div className="min-h-screen bg-brand-darker text-white selection:bg-white selection:text-brand-darker">
       <Header data={navbarData} />
       
       <main className="flex flex-col">

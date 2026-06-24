@@ -65,8 +65,8 @@ export function HeroSection({ data }: HeroSectionProps) {
                 transition={{ delay: 0.2 }}
                 className="flex items-center gap-3"
               >
-                <div className="h-px w-8 bg-[#3A3A3A]/20" />
-                <span className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40">
+                <div className="h-px w-8 bg-brand-darker/20" />
+                <span className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40">
                   {data.badge}
                 </span>
               </motion.div>
@@ -75,7 +75,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                className="max-w-3xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl lg:text-8xl"
+                className="max-w-3xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#111111] sm:text-7xl lg:text-8xl"
               >
                 {data.title}
               </motion.h1>
@@ -84,7 +84,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -98,10 +98,10 @@ export function HeroSection({ data }: HeroSectionProps) {
             >
               <Link
                 href={data.cta.href}
-                className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-[#3A3A3A] px-12 text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-all shadow-2xl shadow-black/20 hover:scale-105 active:scale-95"
+                className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-brand-button px-12 text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-all shadow-2xl shadow-black/20 hover:scale-105 active:scale-95"
               >
                 <span className="relative z-10">{data.cta.label}</span>
-                <div className="absolute inset-0 z-0 bg-gradient-to-r from-zinc-800 to-black opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="absolute inset-0 z-0 bg-brand opacity-0 transition-opacity group-hover:opacity-100" />
               </Link>
             </motion.div>
           </div>
@@ -122,7 +122,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                 {/* Header */}
                 <div className="flex items-center justify-between pb-6 border-b border-black/5 mb-8">
                   <div className="flex items-center gap-3">
-                    <div className="h-8 w-8 rounded-xl bg-[#3A3A3A] flex items-center justify-center">
+                    <div className="h-8 w-8 rounded-xl bg-brand-darker flex items-center justify-center">
                       <Package className="h-3.5 w-3.5 text-white" />
                     </div>
                     <div className="flex flex-col">
@@ -130,9 +130,9 @@ export function HeroSection({ data }: HeroSectionProps) {
                       <span className="font-mono text-[8px] text-black/30 uppercase tracking-widest">QL-294-ZX</span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#3E1C01]/10 border border-[#3E1C01]/20">
-                    <div className="h-1.5 w-1.5 rounded-full bg-[#3E1C01] animate-pulse" />
-                    <span className="font-mono text-[8px] font-bold text-[#3E1C01] uppercase tracking-widest leading-none">Live</span>
+                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-darker/10 border border-brand-darker/20">
+                    <div className="h-1.5 w-1.5 rounded-full bg-brand-darker animate-pulse" />
+                    <span className="font-mono text-[8px] font-bold text-brand-darker uppercase tracking-widest leading-none">Live</span>
                   </div>
                 </div>
 
@@ -156,7 +156,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                   <div className="absolute top-5 left-5 right-5 h-0.5 bg-black/5 z-0" />
                   {/* Progress Line (filled) */}
                   <motion.div
-                    className="absolute top-5 left-5 h-0.5 bg-[#3E1C01] z-0"
+                    className="absolute top-5 left-5 h-0.5 bg-brand-darker z-0"
                     animate={{ width: `${(activeStep / 3) * (100 - 10)}%` }}
                     transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                   />
@@ -170,7 +170,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                         <motion.div
                           animate={{
                             scale: isActive ? 1.15 : 1,
-                            backgroundColor: isComplete ? "#3E1C01" : isActive ? "#000" : "#EDEAEA",
+                            backgroundColor: isComplete ? "var(--color-brand-darker)" : isActive ? "#000" : "#EDEAEA",
                           }}
                           transition={{ duration: 0.4 }}
                           className="h-10 w-10 rounded-full flex items-center justify-center border-2 border-white shadow-md"
@@ -181,7 +181,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                             <Icon className={`h-4 w-4 ${isActive ? "text-white" : "text-black/30"}`} />
                           )}
                         </motion.div>
-                        <span className={`font-mono text-[7px] font-bold uppercase tracking-widest ${isActive ? "text-black" : isComplete ? "text-[#3E1C01]" : "text-black/25"}`}>
+                        <span className={`font-mono text-[7px] font-bold uppercase tracking-widest ${isActive ? "text-black" : isComplete ? "text-brand-darker" : "text-black/25"}`}>
                           {step.label}
                         </span>
                       </div>
@@ -190,7 +190,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                 </div>
 
                 {/* Estimated Arrival Footer */}
-                <div className="flex items-center justify-between p-4 rounded-2xl bg-[#3A3A3A] text-white">
+                <div className="flex items-center justify-between p-4 rounded-2xl bg-brand-darker text-white">
                   <div className="flex flex-col gap-0.5">
                     <span className="font-mono text-[8px] text-white/40 uppercase tracking-widest">Estimated Arrival</span>
                     <span className="font-display text-sm font-bold">Thursday, 3:00 PM</span>

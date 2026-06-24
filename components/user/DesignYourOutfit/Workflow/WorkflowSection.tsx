@@ -49,7 +49,7 @@ export function WorkflowSection({ data }: WorkflowSectionProps) {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 + i * 0.1 }}
-                    className={`flex items-center gap-5 p-5 rounded-2xl cursor-pointer transition-all duration-300 ${isActive ? 'bg-brand text-white shadow-2xl scale-[1.02]' : 'bg-white text-black border border-black/5 shadow-sm hover:shadow-md hover:scale-[1.01]'}`}
+                    className={`flex items-center gap-5 p-5 rounded-2xl cursor-pointer transition-all duration-300 ${isActive ? 'bg-brand-darker text-white shadow-2xl scale-[1.02]' : 'bg-white text-black border border-black/5 shadow-sm hover:shadow-md hover:scale-[1.01]'}`}
                   >
                     <div className={`h-12 w-12 rounded-xl flex items-center justify-center shrink-0 transition-all ${isActive ? 'bg-white/10' : 'bg-zinc-50 border border-black/5'}`}>
                       <Icon className={`h-5 w-5 ${isActive ? 'text-white' : 'text-black/40'}`} />

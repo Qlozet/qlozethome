@@ -18,7 +18,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
   return (
     <section className="relative w-full bg-white py-24 sm:py-32 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
-        <div className="relative rounded-[4rem] bg-zinc-900 px-8 py-20 text-center shadow-2xl lg:px-20 lg:py-32 overflow-hidden">
+        <div className="relative rounded-[4rem] bg-brand-darker px-8 py-20 text-center shadow-2xl lg:px-20 lg:py-32 overflow-hidden">
           {/* Background Gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-50" />
 
@@ -62,7 +62,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
             >
               <Link
                 href={data.cta.href}
-                className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-white px-12 text-[10px] font-bold uppercase tracking-[0.4em] text-black transition-all hover:scale-105 active:scale-95"
+                className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-white px-12 text-[10px] font-bold uppercase tracking-[0.4em] text-brand-darker transition-all hover:scale-105 active:scale-95"
               >
                 <span className="relative z-10">{data.cta.label}</span>
                 <div className="absolute inset-0 z-0 bg-zinc-100 opacity-0 transition-opacity group-hover:opacity-100" />

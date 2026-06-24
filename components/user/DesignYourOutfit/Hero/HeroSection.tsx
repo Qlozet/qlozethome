@@ -56,7 +56,7 @@ export function HeroSection({ data }: HeroSectionProps) {
           <div className="flex flex-col gap-10 lg:w-1/2 lg:pt-8">
             <div className="flex flex-col gap-8">
               <motion.div variants={itemVariants} className="flex items-center gap-4">
-                <div className="h-8 w-8 rounded-lg bg-brand flex items-center justify-center">
+                <div className="h-8 w-8 rounded-lg bg-brand-darker flex items-center justify-center">
                   <Wand2 className="h-3.5 w-3.5 text-white" />
                 </div>
                 <span className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40">

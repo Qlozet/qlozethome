@@ -35,7 +35,7 @@ export function RefinementSection({ data }: RefinementSectionProps) {
               {/* Header */}
               <div className="flex items-center justify-between pb-5 border-b border-black/5 mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-brand text-white">
+                  <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-brand-darker text-white">
                     <RefreshCcw className="h-3.5 w-3.5" />
                   </div>
                   <span className="font-display text-[10px] font-bold uppercase tracking-widest text-[#111111]">Design History</span>
@@ -81,7 +81,7 @@ export function RefinementSection({ data }: RefinementSectionProps) {
                     onClick={() => setActiveVersion(i)}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`flex-1 py-2.5 rounded-xl font-mono text-[8px] font-bold uppercase tracking-widest transition-all ${i === activeVersion ? 'bg-brand text-white shadow-lg' : 'bg-white text-black/40 border border-black/5 hover:border-black/15'}`}
+                    className={`flex-1 py-2.5 rounded-xl font-mono text-[8px] font-bold uppercase tracking-widest transition-all ${i === activeVersion ? 'bg-brand-darker text-white shadow-lg' : 'bg-white text-black/40 border border-black/5 hover:border-black/15'}`}
                   >
                     {iter.version}
                   </motion.button>
@@ -105,7 +105,7 @@ export function RefinementSection({ data }: RefinementSectionProps) {
                 const Icon = iconMap[feature.icon] || PencilRuler;
                 return (
                   <motion.div key={feature.title} initial={{ opacity: 0, x: 10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 + i * 0.1 }} className="flex items-center gap-4 group">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-light border border-brand/5 group-hover:bg-brand group-hover:text-white transition-all shadow-sm">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-light border border-brand-darker/5 group-hover:bg-brand-darker group-hover:text-white transition-all shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
                     <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature.title}</span>

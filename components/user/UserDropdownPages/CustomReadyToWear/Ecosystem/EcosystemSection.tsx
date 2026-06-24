@@ -37,7 +37,7 @@ export function EcosystemSection({ data }: EcosystemSectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.div>
@@ -46,7 +46,7 @@ export function EcosystemSection({ data }: EcosystemSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -56,7 +56,7 @@ export function EcosystemSection({ data }: EcosystemSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -74,8 +74,8 @@ export function EcosystemSection({ data }: EcosystemSectionProps) {
                     transition={{ delay: 0.2 + i * 0.1 }}
                     className="flex items-center gap-3"
                   >
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10"><Check className="h-3.5 w-3.5 text-[#3A3A3A]" /></span>
-                    <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature.title}</span>
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-darker/10"><Check className="h-3.5 w-3.5 text-brand-darker" /></span>
+                    <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature.title}</span>
                   </motion.div>
                 );
               })}
@@ -84,7 +84,7 @@ export function EcosystemSection({ data }: EcosystemSectionProps) {
 
           {/* Right: Infinite Global Discovery Wall */}
           <div className="relative mt-10 lg:mt-0 lg:w-1/2 flex justify-center items-center py-10 lg:py-0">
-             <div className="relative w-full max-w-[600px] h-[600px] rounded-[3.5rem] bg-zinc-100 border border-[#3A3A3A]/5 shadow-2xl overflow-hidden flex items-center justify-center p-2">
+              <div className="relative w-full max-w-[600px] h-[600px] rounded-[3.5rem] bg-zinc-100 border border-brand-darker/5 shadow-2xl overflow-hidden flex items-center justify-center p-2">
                 
                 {/* The Scrolling Masonry Layout */}
                 <div className="absolute inset-0 flex gap-4 p-4 opacity-80 -rotate-6 scale-110">
@@ -98,13 +98,13 @@ export function EcosystemSection({ data }: EcosystemSectionProps) {
                       {/* We duplicate the set of images so it scrolls infinitely without empty spaces */}
                       {[1, 2].map((set) => (
                          <div key={`col1-${set}`} className="flex flex-col gap-4">
-                            <div className="w-full aspect-[4/5] rounded-[2rem] bg-white overflow-hidden shadow-lg border border-[#3A3A3A]/5">
+                            <div className="w-full aspect-[4/5] rounded-[2rem] bg-white overflow-hidden shadow-lg border border-brand-darker/5">
                                <img src="/image/agbada.png" className="w-full h-full object-cover" alt="Agbada African Fashion" />
                             </div>
-                            <div className="w-full aspect-square rounded-[2rem] bg-white overflow-hidden shadow-lg border border-[#3A3A3A]/5 grayscale">
+                            <div className="w-full aspect-square rounded-[2rem] bg-white overflow-hidden shadow-lg border border-brand-darker/5 grayscale">
                                <img src="/image/slim-girl-1.jpg" className="w-full h-full object-cover" alt="Global Designer" />
                             </div>
-                            <div className="w-full aspect-[4/5] rounded-[2rem] bg-white overflow-hidden shadow-lg border border-[#3A3A3A]/5">
+                            <div className="w-full aspect-[4/5] rounded-[2rem] bg-white overflow-hidden shadow-lg border border-brand-darker/5">
                                <img src="/image/custom-outfit-1.png" className="w-full h-full object-cover" alt="Premium Custom Fit" />
                             </div>
                          </div>
@@ -119,13 +119,13 @@ export function EcosystemSection({ data }: EcosystemSectionProps) {
                    >
                       {[1, 2].map((set) => (
                          <div key={`col2-${set}`} className="flex flex-col gap-4">
-                            <div className="w-full aspect-square rounded-[2rem] bg-white overflow-hidden shadow-lg border border-[#3A3A3A]/5 grayscale">
+                            <div className="w-full aspect-square rounded-[2rem] bg-white overflow-hidden shadow-lg border border-brand-darker/5 grayscale">
                                <img src="/image/slim-man-2.jpg" className="w-full h-full object-cover" alt="Emerging Tailor" />
                             </div>
-                            <div className="w-full aspect-[3/4] rounded-[2rem] bg-white overflow-hidden shadow-lg border border-[#3A3A3A]/5">
+                            <div className="w-full aspect-[3/4] rounded-[2rem] bg-white overflow-hidden shadow-lg border border-brand-darker/5">
                                <img src="/image/ankara.png" className="w-full h-full object-cover" alt="Ankara Global Print" />
                             </div>
-                            <div className="w-full aspect-square rounded-[2rem] bg-white overflow-hidden shadow-lg border border-[#3A3A3A]/5">
+                            <div className="w-full aspect-square rounded-[2rem] bg-white overflow-hidden shadow-lg border border-brand-darker/5">
                                <img src="/image/fabric-1.jpg" className="w-full h-full object-cover" alt="Sourced Fabric" />
                             </div>
                          </div>
@@ -155,23 +155,23 @@ export function EcosystemSection({ data }: EcosystemSectionProps) {
                          <motion.div 
                             animate={{ rotate: 360 }}
                             transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-                            className="absolute -inset-4 border border-dashed border-[#3A3A3A]/20 rounded-full"
+                            className="absolute -inset-4 border border-dashed border-brand-darker/20 rounded-full"
                          />
-                         <div className="h-16 w-16 bg-[#3A3A3A] rounded-full shadow-2xl flex items-center justify-center relative z-10 text-white">
+                         <div className="h-16 w-16 bg-brand-darker rounded-full shadow-2xl flex items-center justify-center relative z-10 text-white">
                             <Globe className="h-8 w-8 text-white/90" />
                          </div>
                       </div>
                       
                       <div className="flex flex-col gap-1">
-                         <span className="font-display text-sm font-bold uppercase tracking-[0.2em] text-[#3A3A3A]">
+                         <span className="font-display text-sm font-bold uppercase tracking-[0.2em] text-[#111111]">
                             10,000+ Creators
                          </span>
-                         <span className="font-ui text-[10px] uppercase tracking-widest text-[#3A3A3A]/50">
+                         <span className="font-ui text-[10px] uppercase tracking-widest text-[#111111]/50">
                             Endless Discovery Feed
                          </span>
                       </div>
                       
-                      <div className="h-10 px-6 rounded-full bg-[#3A3A3A] text-white flex items-center justify-center font-display text-[9px] font-bold uppercase tracking-widest shadow-xl">
+                      <div className="h-10 px-6 rounded-full bg-brand-darker text-white flex items-center justify-center font-display text-[9px] font-bold uppercase tracking-widest shadow-xl">
                          Explore Network
                       </div>
                    </div>

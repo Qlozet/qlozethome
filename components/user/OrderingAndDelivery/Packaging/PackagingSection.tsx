@@ -19,7 +19,7 @@ type PackagingSectionProps = {
 
 export function PackagingSection({ data }: PackagingSectionProps) {
   return (
-    <section id="packaging" className="relative w-full bg-[#F9F9F8] py-24 sm:py-32" data-theme="light">
+    <section id="packaging" className="relative w-full bg-brand-light py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-24">
           {/* Left: Content */}
@@ -29,7 +29,7 @@ export function PackagingSection({ data }: PackagingSectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -37,17 +37,17 @@ export function PackagingSection({ data }: PackagingSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl"
               >
                 {data.title}
-                <span className="block mt-2 text-xl text-[#3A3A3A]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
+                <span className="block mt-2 text-xl text-[#111111]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -63,10 +63,10 @@ export function PackagingSection({ data }: PackagingSectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-6 group"
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white border border-brand-darker/5 group-hover:bg-brand-darker group-hover:text-white transition-all">
                     <Sparkles className="h-5 w-5" />
                   </div>
-                  <span className="font-ui text-sm text-[#3A3A3A]/70 italic sm:text-base">{feature}</span>
+                  <span className="font-ui text-sm text-[#111111]/70 italic sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -113,7 +113,7 @@ export function PackagingSection({ data }: PackagingSectionProps) {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                 whileHover={{ rotate: -2, scale: 1.05 }}
-                className="relative aspect-square w-full rounded-[2.5rem] bg-zinc-900 shadow-2xl p-8 flex flex-col items-center justify-center text-center gap-4"
+                className="relative aspect-square w-full rounded-[2.5rem] bg-brand-darker shadow-2xl p-8 flex flex-col items-center justify-center text-center gap-4"
               >
                 <Star className="h-8 w-8 text-white fill-white" />
                 <span className="font-display text-[8px] font-bold uppercase tracking-[0.2em] text-white/40">Verified Quality</span>

@@ -11,7 +11,7 @@ import aboutData from "@/data/about/about.json";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white text-[#3A3A3A] selection:bg-[#3A3A3A] selection:text-white">
+    <div className="min-h-screen bg-white text-[#111111] selection:bg-brand-darker selection:text-white">
       <Header data={navbarData} />
       
       <main className="flex flex-col">
@@ -22,7 +22,7 @@ export default function AboutPage() {
         <ValuesSection data={aboutData.values} />
 
         {/* CTA Section */}
-        <section className="relative overflow-hidden bg-[#3A3A3A] py-24 sm:py-32" data-theme="dark">
+        <section className="relative overflow-hidden bg-brand-darker py-24 sm:py-32" data-theme="dark">
           <div className="mx-auto w-full max-w-[94rem] flex flex-col gap-12 px-6">
             <div className="flex flex-col items-center text-center gap-10">
               <h2 className="font-display text-5xl font-medium tracking-tighter text-white sm:text-7xl lg:text-8xl">
@@ -34,7 +34,7 @@ export default function AboutPage() {
               <div className="flex flex-col sm:flex-row gap-6 pt-6">
                 <Link
                   href={aboutData.cta.primaryAction.href}
-                  className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-white px-16 py-6 text-[10px] font-bold uppercase tracking-[0.4em] text-black transition-all hover:scale-105 active:scale-[0.98]"
+                  className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-white px-16 py-6 text-[10px] font-bold uppercase tracking-[0.4em] text-brand-button transition-all hover:bg-brand-light hover:scale-105 active:scale-[0.98]"
                 >
                   <span className="relative z-10">{aboutData.cta.primaryAction.label}</span>
                 </Link>

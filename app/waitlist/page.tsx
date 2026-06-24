@@ -7,7 +7,7 @@ import footerData from "@/data/global/footer.json";
 
 export default function CustomerWaitlistPage() {
   return (
-    <div className="min-h-screen bg-white text-black selection:bg-black selection:text-white">
+    <div className="min-h-screen bg-white text-[#111111] selection:bg-brand-darker selection:text-white">
       <Header data={navbarData} />
       
       <main className="mx-auto flex w-full max-w-[94rem] flex-col px-6 md:px-10 lg:px-10 py-24 sm:py-32 lg:py-48" data-theme="light">
@@ -22,18 +22,18 @@ export default function CustomerWaitlistPage() {
           <div className="flex flex-col gap-16 lg:pl-12">
             <div className="flex flex-col gap-8">
               <div className="flex items-center gap-4">
-                <span className="h-px w-8 bg-black/20" />
-                <span className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40">
+                <span className="h-px w-8 bg-[#111111]/20" />
+                <span className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40">
                   Coming Soon
                 </span>
               </div>
               
-              <h1 className="font-display text-6xl font-medium leading-[0.9] tracking-tighter text-black sm:text-7xl lg:text-8xl">
+              <h1 className="font-display text-6xl font-medium leading-[0.9] tracking-tighter text-[#111111] sm:text-7xl lg:text-8xl">
                 Fashion, <br />
                 Recrafted.
               </h1>
               
-              <p className="max-w-md font-ui text-lg leading-relaxed text-black/60">
+              <p className="max-w-md font-ui text-lg leading-relaxed text-[#111111]/60">
                 Experience the next evolution of personal style. Join the waitlist for exclusive early access to the future of bespoke fashion.
               </p>
             </div>

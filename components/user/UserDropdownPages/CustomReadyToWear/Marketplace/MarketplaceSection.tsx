@@ -38,7 +38,7 @@ export function MarketplaceSection({ data }: MarketplaceSectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.div>
@@ -47,7 +47,7 @@ export function MarketplaceSection({ data }: MarketplaceSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -57,7 +57,7 @@ export function MarketplaceSection({ data }: MarketplaceSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -75,8 +75,8 @@ export function MarketplaceSection({ data }: MarketplaceSectionProps) {
                     transition={{ delay: 0.2 + i * 0.1 }}
                     className="flex items-center gap-3"
                   >
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10"><Check className="h-3.5 w-3.5 text-[#3A3A3A]" /></span>
-                    <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature.title}</span>
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-darker/10"><Check className="h-3.5 w-3.5 text-brand-darker" /></span>
+                    <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature.title}</span>
                   </motion.div>
                 );
               })}
@@ -85,16 +85,16 @@ export function MarketplaceSection({ data }: MarketplaceSectionProps) {
 
           {/* Right: Marketplace Collection Mockup */}
           <div className="relative mt-10 lg:mt-0 lg:w-1/2">
-             <div className="relative mx-auto h-[600px] sm:h-[700px] w-full max-w-lg rounded-[3rem] bg-zinc-50 border border-[#3A3A3A]/5 shadow-2xl p-6 sm:p-8 flex flex-col gap-8 overflow-hidden">
+             <div className="relative mx-auto h-[600px] sm:h-[700px] w-full max-w-lg rounded-[3rem] bg-zinc-50 border border-brand-darker/5 shadow-2xl p-6 sm:p-8 flex flex-col gap-8 overflow-hidden">
                 {/* Lookbook Header */}
-                <div className="flex items-center justify-between pb-6 border-b border-[#3A3A3A]/5 z-10 relative">
+                <div className="flex items-center justify-between pb-6 border-b border-brand-darker/5 z-10 relative">
                    <div className="flex items-center gap-4">
-                      <div className="h-10 w-10 flex items-center justify-center rounded-full bg-[#3A3A3A] text-white">
+                      <div className="h-10 w-10 flex items-center justify-center rounded-full bg-brand-darker text-white">
                          <LayoutGrid className="h-5 w-5" />
                       </div>
-                      <span className="font-display text-sm font-bold uppercase tracking-widest text-[#3A3A3A]">Lookbook</span>
+                      <span className="font-display text-sm font-bold uppercase tracking-widest text-[#111111]">Lookbook</span>
                    </div>
-                   <div className="flex h-10 px-4 items-center rounded-full border border-[#3A3A3A]/10 bg-white shadow-sm font-ui text-[9px] font-bold uppercase text-[#3A3A3A]">
+                   <div className="flex h-10 px-4 items-center rounded-full border border-brand-darker/10 bg-white shadow-sm font-ui text-[9px] font-bold uppercase text-brand-darker">
                       Filter: Latest
                    </div>
                 </div>
@@ -126,13 +126,13 @@ export function MarketplaceSection({ data }: MarketplaceSectionProps) {
                                   alt={item.title} 
                                   className="w-full h-auto aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105" 
                                />
-                               <div className="absolute top-3 right-3 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-[#3A3A3A]/5 flex items-center justify-center font-display text-[9px] sm:text-[10px] font-bold text-[#3A3A3A] shadow-lg shadow-black/5">
+                               <div className="absolute top-3 right-3 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-brand-darker/5 flex items-center justify-center font-display text-[9px] sm:text-[10px] font-bold text-brand-darker shadow-lg shadow-black/5">
                                   {item.price}
                                </div>
                                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                            </div>
                            <div className="flex flex-col gap-1 px-1">
-                              <span className="font-display text-[11px] sm:text-xs font-bold text-[#3A3A3A]">{item.title}</span>
+                              <span className="font-display text-[11px] sm:text-xs font-bold text-[#111111]">{item.title}</span>
                               <span className="font-ui text-[9px] text-zinc-500 uppercase tracking-widest">{item.designer}</span>
                            </div>
                         </div>
@@ -141,29 +141,28 @@ export function MarketplaceSection({ data }: MarketplaceSectionProps) {
                 </div>
 
                 {/* Bottom Discovery Overlay Tag */}
-                <motion.div 
-                   initial={{ y: 50, opacity: 0, rotate: 0 }}
-                   whileInView={{ y: 0, opacity: 1, rotate: -2 }}
-                   viewport={{ once: true }}
-                   transition={{ delay: 0.8, type: "spring", bounce: 0.5 }}
-                   className="absolute bottom-8 left-6 right-6 flex h-[4.5rem] items-center gap-5 rounded-3xl bg-white border border-[#3A3A3A]/5 shadow-2xl p-4 z-20"
-                >
-                    <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-[#3A3A3A] flex items-center justify-center shrink-0">
-                       <Sparkles className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
-                    </div>
-                    <div className="flex flex-col">
-                       <span className="font-display text-[8px] sm:text-[9px] font-bold uppercase tracking-widest text-zinc-400">Curator Alert</span>
-                       <span className="font-ui text-[11px] sm:text-xs font-medium text-[#3A3A3A]">New Emerging Designer Collection</span>
-                    </div>
-                </motion.div>
+                 <motion.div 
+                    initial={{ y: 50, opacity: 0, rotate: 0 }}
+                    whileInView={{ y: 0, opacity: 1, rotate: -2 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.8, type: "spring", bounce: 0.5 }}
+                    className="absolute bottom-8 left-6 right-6 flex h-[4.5rem] items-center gap-5 rounded-3xl bg-white border border-brand-darker/5 shadow-2xl p-4 z-20"
+                 >
+                     <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-brand-darker flex items-center justify-center shrink-0">
+                        <Sparkles className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                     </div>
+                     <div className="flex flex-col">
+                        <span className="font-display text-[8px] sm:text-[9px] font-bold uppercase tracking-widest text-zinc-400">Curator Alert</span>
+                        <span className="font-ui text-[11px] sm:text-xs font-medium text-[#111111]">New Emerging Designer Collection</span>
+                     </div>
+                 </motion.div>
              </div>
           </div>
         </div>
       </div>
-      
-      {/* Node Marker on Spine */}
+            {/* Node Marker on Spine */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
-         <div className="w-1 h-1 rounded-full bg-[#3A3A3A]/20" />
+         <div className="w-1 h-1 rounded-full bg-brand-darker/20" />
       </div>
     </section>
   );

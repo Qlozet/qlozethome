@@ -94,7 +94,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
 
               <Link
                 href={data.secondaryAction.href}
-                className="group inline-flex items-center gap-4 font-display text-[10px] font-bold uppercase tracking-[0.4em] text-brand transition-all hover:translate-x-2"
+                className="group inline-flex items-center gap-4 font-display text-[10px] font-bold uppercase tracking-[0.4em] text-brand-darker transition-all hover:translate-x-2"
               >
                 {data.secondaryAction.label}
                 <MoveRight className="h-5 w-5" />

@@ -112,10 +112,10 @@ export function MeasurementHero({ data }: MeasurementHeroProps) {
 
               <Link
                 href="#biometric"
-                className="group inline-flex items-center gap-4 font-display text-[10px] font-bold uppercase tracking-[0.4em] text-brand"
+                className="group inline-flex items-center gap-4 font-display text-[10px] font-bold uppercase tracking-[0.4em] text-brand-darker"
               >
                 Initiate AI Scan
-                <div className="h-px w-10 bg-brand transition-all duration-500 group-hover:w-16" />
+                <div className="h-px w-10 bg-brand-darker transition-all duration-500 group-hover:w-16" />
               </Link>
             </motion.div>
           </div>
@@ -152,7 +152,7 @@ export function MeasurementHero({ data }: MeasurementHeroProps) {
               transition={{ delay: 1.2, duration: 1 }}
               className="absolute -right-8 bottom-12 z-20 hidden items-center gap-4 rounded-3xl bg-white/80 p-6 backdrop-blur-xl border border-white/20 shadow-2xl lg:flex"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand text-white">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-darker text-white">
                 <Scan className="h-6 w-6" />
               </div>
               <div className="flex flex-col pr-4">

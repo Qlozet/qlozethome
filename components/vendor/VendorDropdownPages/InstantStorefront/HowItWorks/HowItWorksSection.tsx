@@ -22,7 +22,7 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <section id="how-it-works" className="relative z-20 bg-[#050505] px-6 md:px-10 lg:px-10 py-24 sm:py-32">
+    <section id="how-it-works" className="relative z-20 bg-brand-darker px-6 md:px-10 lg:px-10 py-24 sm:py-32">
       <div className="mx-auto max-w-[84rem]">
         {/* Title Group */}
         <div className="mb-24 flex flex-col items-center gap-6 text-center lg:mb-32">
@@ -58,7 +58,7 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
                     <motion.div
                       animate={{ rotate: isActive ? 180 : 0 }}
                       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                      className={`flex h-12 w-12 items-center justify-center rounded-full border transition-colors duration-500 sm:h-16 sm:w-16 ${isActive ? 'border-white bg-white text-[#3A3A3A]' : 'border-white/20 text-white group-hover:border-white/50'}`}
+                      className={`flex h-12 w-12 items-center justify-center rounded-full border transition-colors duration-500 sm:h-16 sm:w-16 ${isActive ? 'border-white bg-white text-brand-darker' : 'border-white/20 text-white group-hover:border-white/50'}`}
                     >
                       <ChevronDown className="h-6 w-6 sm:h-8 sm:w-8" strokeWidth={1} />
                     </motion.div>

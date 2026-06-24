@@ -69,7 +69,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
   const vendor = VENDORS[selectedVendor];
 
   return (
-    <section id="vendor" className="relative w-full bg-[#F9F9F8] py-24 sm:py-32 overflow-hidden" data-theme="light">
+    <section id="vendor" className="relative w-full bg-brand-light py-24 sm:py-32 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10 relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-24">
           {/* Right: Content */}
@@ -79,7 +79,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -87,17 +87,17 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl"
               >
                 {data.title}
-                <span className="block mt-2 text-xl text-[#3A3A3A]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
+                <span className="block mt-2 text-xl text-[#111111]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -117,7 +117,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                     <Star className="h-5 w-5 text-zinc-900" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
+                    <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature}</span>
                     <div className="h-0.5 w-12 bg-black/10 mt-1" />
                   </div>
                 </motion.div>
@@ -147,14 +147,14 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                 {/* Console Header */}
                 <div className="flex items-center justify-between p-6 sm:p-8 pb-0">
                   <div className="flex items-center gap-3">
-                    <div className="h-8 w-8 rounded-xl bg-[#3A3A3A] flex items-center justify-center">
+                    <div className="h-8 w-8 rounded-xl bg-brand-darker flex items-center justify-center">
                       <Zap className="h-3.5 w-3.5 text-white" />
                     </div>
                     <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black">Vendor Match</span>
                   </div>
-                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#3E1C01]/10 border border-[#3E1C01]/20">
-                    <div className="h-1.5 w-1.5 rounded-full bg-[#3E1C01] animate-pulse" />
-                    <span className="font-mono text-[8px] font-bold text-[#3E1C01] uppercase tracking-widest leading-none">AI Matching</span>
+                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-darker/10 border border-brand-darker/20">
+                    <div className="h-1.5 w-1.5 rounded-full bg-brand-darker animate-pulse" />
+                    <span className="font-mono text-[8px] font-bold text-brand-darker uppercase tracking-widest leading-none">AI Matching</span>
                   </div>
                 </div>
 
@@ -170,7 +170,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                         whileTap={{ scale: 0.99 }}
                         className={`relative flex items-center gap-4 p-4 rounded-2xl cursor-pointer transition-all duration-300 ${
                           isSelected
-                            ? "bg-[#3A3A3A] text-white shadow-xl"
+                            ? "bg-brand-darker text-white shadow-xl"
                             : "bg-zinc-50 text-black border border-black/5 hover:bg-zinc-100"
                         }`}
                       >
@@ -185,14 +185,14 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2">
                             <span className="font-display text-sm font-bold truncate">{v.name}</span>
-                            {i === 0 && <Zap className={`h-3 w-3 shrink-0 ${isSelected ? "text-[#EDEAEA] fill-[#EDEAEA]" : "text-[#3E1C01] fill-[#3E1C01]"}`} />}
+                            {i === 0 && <Zap className={`h-3 w-3 shrink-0 ${isSelected ? "text-[#EDEAEA] fill-[#EDEAEA]" : "text-brand-darker fill-brand-darker"}`} />}
                           </div>
                           <span className={`font-ui text-[10px] ${isSelected ? "text-white/50" : "text-black/40"}`}>{v.specialty}</span>
                         </div>
 
                         {/* Match Score */}
                         <div className="flex flex-col items-end shrink-0">
-                          <span className={`font-mono text-lg font-bold ${isSelected ? "text-[#EDEAEA]" : "text-[#3E1C01]"}`}>{v.match}%</span>
+                          <span className={`font-mono text-lg font-bold ${isSelected ? "text-[#EDEAEA]" : "text-brand-darker"}`}>{v.match}%</span>
                           <span className={`font-mono text-[7px] uppercase tracking-widest ${isSelected ? "text-white/30" : "text-black/30"}`}>Match</span>
                         </div>
 
@@ -200,7 +200,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                         {isSelected && (
                           <motion.div
                             layoutId="vendorCheck"
-                            className="absolute -right-1 -top-1 h-6 w-6 rounded-full bg-[#3E1C01] flex items-center justify-center border-2 border-white shadow-lg"
+                            className="absolute -right-1 -top-1 h-6 w-6 rounded-full bg-brand-darker flex items-center justify-center border-2 border-white shadow-lg"
                           >
                             <Check className="h-3 w-3 text-white" />
                           </motion.div>
@@ -233,7 +233,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                       {/* Stats Row */}
                       <div className="flex items-center gap-6">
                         <div className="flex items-center gap-1.5">
-                          <Star className="h-3 w-3 text-[#3E1C01] fill-[#3E1C01]" />
+                          <Star className="h-3 w-3 text-brand-darker fill-brand-darker" />
                           <span className="font-display text-xs font-bold text-black">{vendor.rating}</span>
                         </div>
                         <div className="h-3 w-px bg-black/10" />
@@ -254,7 +254,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                 whileInView={{ scale: 1, rotate: -6 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
-                className="absolute -top-3 -left-3 z-20 px-5 py-3 bg-[#3E1C01] text-white rounded-2xl shadow-2xl font-display text-[10px] font-bold uppercase tracking-widest border-4 border-white"
+                className="absolute -top-3 -left-3 z-20 px-5 py-3 bg-brand-darker text-white rounded-2xl shadow-2xl font-display text-[10px] font-bold uppercase tracking-widest border-4 border-white"
               >
                 Best Match
               </motion.div>

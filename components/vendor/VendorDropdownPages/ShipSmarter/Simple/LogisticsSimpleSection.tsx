@@ -28,7 +28,7 @@ export function LogisticsSimpleSection({ data }: LogisticsSimpleSectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -37,7 +37,7 @@ export function LogisticsSimpleSection({ data }: LogisticsSimpleSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-5xl lg:text-6xl"
+                className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-5xl lg:text-6xl"
               >
                 {data.title}
               </motion.h2>
@@ -47,7 +47,7 @@ export function LogisticsSimpleSection({ data }: LogisticsSimpleSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/40 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -63,10 +63,10 @@ export function LogisticsSimpleSection({ data }: LogisticsSimpleSectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-6 group"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#F9F9F8] border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all shadow-sm">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-light border border-brand-darker/5 group-hover:bg-brand-darker group-hover:text-brand-light transition-all shadow-sm">
                     <Zap className="h-4 w-4" strokeWidth={1.5} />
                   </div>
-                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
+                  <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -83,23 +83,23 @@ export function LogisticsSimpleSection({ data }: LogisticsSimpleSectionProps) {
 
           {/* Right: Automation Dashboard Mockup (Mobile: Second) */}
           <div className="relative lg:w-1/2 flex items-center justify-center">
-             <div className="relative h-[480px] lg:h-[580px] w-full max-w-md rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-8 lg:p-10 overflow-hidden flex flex-col justify-center gap-8 group">
+             <div className="relative h-[480px] lg:h-[580px] w-full max-w-md rounded-[3rem] bg-brand-light border border-brand-darker/5 shadow-2xl p-8 lg:p-10 overflow-hidden flex flex-col justify-center gap-8 group">
                 
                 {/* Background Grid */}
                 <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
-                   <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+                   <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(#1e1008 1px, transparent 1px), linear-gradient(90deg, #1e1008 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
                 </div>
-
+ 
                 {/* Dashboard Header: Auto-Pilot Toggle */}
                 <div className="relative z-10 flex flex-col gap-6 w-full">
-                   <div className="flex items-center justify-between bg-white p-6 rounded-3xl border border-black/5 shadow-xl shadow-black/5">
+                   <div className="flex items-center justify-between bg-white p-6 rounded-3xl border border-brand-darker/5 shadow-xl shadow-brand-darker/5">
                       <div className="flex flex-col gap-1">
-                         <span className="font-display text-sm font-bold text-black uppercase tracking-wider">Logistics Auto-Pilot</span>
-                         <span className="font-ui text-[10px] text-black/40 uppercase tracking-widest">System Handling All Tasks</span>
+                         <span className="font-display text-sm font-bold text-brand-darker uppercase tracking-wider">Logistics Auto-Pilot</span>
+                         <span className="font-ui text-[10px] text-[#111111]/40 uppercase tracking-widest">System Handling All Tasks</span>
                       </div>
                       
                       {/* Animated Toggle Switch */}
-                      <div className="relative w-16 h-8 bg-black rounded-full p-1 cursor-pointer shadow-inner">
+                      <div className="relative w-16 h-8 bg-brand-darker rounded-full p-1 cursor-pointer shadow-inner">
                          <motion.div 
                             initial={{ x: 0 }}
                             animate={{ x: 32 }}
@@ -114,44 +114,44 @@ export function LogisticsSimpleSection({ data }: LogisticsSimpleSectionProps) {
                 </div>
 
                 {/* Complex Tasks Interface (Being Automated) */}
-                <div className="relative z-10 flex flex-col gap-3 w-full">
-                   <span className="font-display text-[9px] font-bold text-black/30 uppercase tracking-[0.3em] pl-2 mb-2">Automated Background Tasks</span>
-                   
-                   {[
-                      { icon: RefreshCw, label: 'Finding Couriers', sub: 'Comparing 14 rates...', active: true },
-                      { icon: Layers, label: 'Printing Labels', sub: 'Generating batch #892', active: true },
-                      { icon: Zap, label: 'Status Updates', sub: 'Syncing with API', active: true }
-                   ].map((item, i) => (
-                      <motion.div 
-                         key={i}
-                         initial={{ opacity: 0, x: -10 }}
-                         whileInView={{ opacity: 1, x: 0 }}
-                         transition={{ delay: 0.2 + (i * 0.1) }}
-                         className="flex items-center justify-between p-4 rounded-2xl bg-white border border-black/5 group/task relative overflow-hidden"
-                      >
-                         {/* Background processing sweep */}
-                         <motion.div 
-                            animate={{ left: ["-100%", "200%"] }}
-                            transition={{ duration: 3, repeat: Infinity, delay: i * 0.5, ease: "linear" }}
-                            className="absolute top-0 bottom-0 w-[20%] bg-gradient-to-r from-transparent via-black/[0.03] to-transparent"
-                         />
-
-                         <div className="flex items-center gap-4 relative z-10">
-                            <div className="h-8 w-8 rounded-full bg-zinc-100 flex items-center justify-center border border-black/5">
-                               <div className="h-4 w-4 bg-black/10 rounded-full" />
-                            </div>
-                            <div className="flex flex-col">
-                               <span className="font-display text-[10px] font-bold text-black uppercase tracking-wider">{item.label}</span>
-                               <span className="font-mono text-[8px] text-black/40 uppercase">{item.sub}</span>
-                            </div>
-                         </div>
-
-                         {/* Success Check */}
-                         <motion.div 
-                            animate={{ scale: [0.8, 1, 0.8], opacity: [0.5, 1, 0.5] }}
-                            transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 }}
-                            className="h-5 w-5 rounded-full bg-black flex items-center justify-center relative z-10"
-                         >
+                 <div className="relative z-10 flex flex-col gap-3 w-full">
+                    <span className="font-display text-[9px] font-bold text-[#111111]/40 uppercase tracking-[0.3em] pl-2 mb-2">Automated Background Tasks</span>
+                    
+                    {[
+                       { icon: RefreshCw, label: 'Finding Couriers', sub: 'Comparing 14 rates...', active: true },
+                       { icon: Layers, label: 'Printing Labels', sub: 'Generating batch #892', active: true },
+                       { icon: Zap, label: 'Status Updates', sub: 'Syncing with API', active: true }
+                    ].map((item, i) => (
+                       <motion.div 
+                          key={i}
+                          initial={{ opacity: 0, x: -10 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 0.2 + (i * 0.1) }}
+                          className="flex items-center justify-between p-4 rounded-2xl bg-white border border-brand-darker/5 group/task relative overflow-hidden"
+                       >
+                          {/* Background processing sweep */}
+                          <motion.div 
+                             animate={{ left: ["-100%", "200%"] }}
+                             transition={{ duration: 3, repeat: Infinity, delay: i * 0.5, ease: "linear" }}
+                             className="absolute top-0 bottom-0 w-[20%] bg-gradient-to-r from-transparent via-brand-darker/[0.03] to-transparent"
+                          />
+ 
+                          <div className="flex items-center gap-4 relative z-10">
+                             <div className="h-8 w-8 rounded-full bg-zinc-100 flex items-center justify-center border border-brand-darker/5">
+                                <div className="h-4 w-4 bg-brand-darker/10 rounded-full" />
+                             </div>
+                             <div className="flex flex-col">
+                                <span className="font-display text-[10px] font-bold text-brand-darker uppercase tracking-wider">{item.label}</span>
+                                <span className="font-mono text-[8px] text-[#111111]/40 uppercase">{item.sub}</span>
+                             </div>
+                          </div>
+ 
+                          {/* Success Check */}
+                          <motion.div 
+                             animate={{ scale: [0.8, 1, 0.8], opacity: [0.5, 1, 0.5] }}
+                             transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 }}
+                             className="h-5 w-5 rounded-full bg-brand-darker flex items-center justify-center relative z-10"
+                          >
                             <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                <path d="M1 3L3 5L7 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
@@ -160,24 +160,24 @@ export function LogisticsSimpleSection({ data }: LogisticsSimpleSectionProps) {
                    ))}
                 </div>
 
-                {/* Footer Automation Metrics */}
-                <div className="absolute bottom-10 px-10 w-full flex justify-between items-end">
-                   <div className="flex flex-col gap-1">
-                      <span className="font-display text-[7px] font-bold text-black/20 uppercase tracking-[0.3em]">Manual Effort</span>
-                      <span className="font-display text-[9px] font-medium text-black uppercase tracking-widest tabular-nums font-bold">Reduced by 98%</span>
-                   </div>
-                   <div className="flex flex-col items-end gap-1">
-                      <span className="font-display text-[7px] font-bold text-black/20 uppercase tracking-[0.3em]">System</span>
-                      <p className="font-display text-[9px] text-zinc-500 font-bold uppercase tracking-widest">Handling Delivery</p>
-                   </div>
-                </div>
-             </div>
-          </div>
+                 {/* Footer Automation Metrics */}
+                 <div className="absolute bottom-10 px-10 w-full flex justify-between items-end">
+                    <div className="flex flex-col gap-1">
+                       <span className="font-display text-[7px] font-bold text-[#111111]/20 uppercase tracking-[0.3em]">Manual Effort</span>
+                       <span className="font-display text-[9px] font-medium text-brand-darker uppercase tracking-widest tabular-nums font-bold">Reduced by 98%</span>
+                    </div>
+                    <div className="flex flex-col items-end gap-1">
+                       <span className="font-display text-[7px] font-bold text-[#111111]/20 uppercase tracking-[0.3em]">System</span>
+                       <p className="font-display text-[9px] text-[#111111]/50 font-bold uppercase tracking-widest">Handling Delivery</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
         </div>
       </div>
       
       {/* Spine Marker */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1.5 w-1.5 rounded-full bg-black/10 shadow-sm" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1.5 w-1.5 rounded-full bg-brand-darker/10 shadow-sm" />
     </section>
   );
 }

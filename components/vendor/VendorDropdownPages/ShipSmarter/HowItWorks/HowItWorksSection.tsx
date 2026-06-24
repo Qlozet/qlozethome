@@ -27,7 +27,7 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
   const pathHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section ref={containerRef} id="how-it-works" className="relative z-20 overflow-hidden bg-[#050505] px-6 md:px-10 lg:px-10 py-24 sm:py-32">
+    <section ref={containerRef} id="how-it-works" className="relative z-20 overflow-hidden bg-brand-darker px-6 md:px-10 lg:px-10 py-24 sm:py-32">
       <div className="mx-auto max-w-[94rem]">
         {/* Title Group */}
         <div className="mb-24 flex flex-col items-center gap-6 text-center lg:mb-32">
@@ -69,7 +69,7 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
                   <div className="hidden w-[45%] md:block" />
 
                   {/* Tracking Node */}
-                  <div className="absolute left-8 flex h-14 w-14 -translate-x-1/2 items-center justify-center rounded-full border-4 border-[#050505] bg-white text-black shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-transform duration-500 hover:scale-110 md:left-1/2 md:h-20 md:w-20">
+                  <div className="absolute left-8 flex h-14 w-14 -translate-x-1/2 items-center justify-center rounded-full border-4 border-brand-darker bg-white text-brand-darker shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-transform duration-500 hover:scale-110 md:left-1/2 md:h-20 md:w-20">
                     <Icon className="h-6 w-6 md:h-8 md:w-8" strokeWidth={1} />
                   </div>
 

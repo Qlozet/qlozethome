@@ -24,12 +24,12 @@ export function StorySection({ data }: StorySectionProps) {
             className="flex flex-col gap-8"
           >
             <div className="flex items-center gap-4">
-              <span className="inline-flex h-px w-12 bg-[#3A3A3A]/20" />
-              <span className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40">
+              <span className="inline-flex h-px w-12 bg-[#111111]/20" />
+              <span className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40">
                 {data.tagline}
               </span>
             </div>
-            <h2 className="font-display max-w-xl text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl">
+            <h2 className="font-display max-w-xl text-5xl font-medium leading-[1.05] tracking-tight text-[#111111] sm:text-7xl">
               {data.title}
             </h2>
           </motion.div>
@@ -43,7 +43,7 @@ export function StorySection({ data }: StorySectionProps) {
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
-                className="font-ui text-xl leading-relaxed text-[#3A3A3A]/60 last-of-type:text-[#3A3A3A]"
+                className="font-ui text-xl leading-relaxed text-[#111111]/60 last-of-type:text-[#111111]"
               >
                 {p}
               </motion.p>

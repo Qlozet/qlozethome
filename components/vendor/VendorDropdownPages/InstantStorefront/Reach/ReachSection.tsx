@@ -36,7 +36,7 @@ export function ReachSection({ data }: ReachSectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -45,7 +45,7 @@ export function ReachSection({ data }: ReachSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="font-display max-w-4xl text-5xl sm:text-7xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A]"
+                className="font-display max-w-4xl text-5xl sm:text-7xl font-medium leading-[1.05] tracking-tight text-[#111111]"
               >
                 {data.title}
               </motion.h2>
@@ -54,7 +54,7 @@ export function ReachSection({ data }: ReachSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="font-ui text-base leading-relaxed text-[#3A3A3A]/50 sm:text-lg max-w-xl"
+                className="font-ui text-base leading-relaxed text-[#111111]/50 sm:text-lg max-w-xl"
               >
                 {data.description}
               </motion.p>
@@ -68,11 +68,11 @@ export function ReachSection({ data }: ReachSectionProps) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + index * 0.1 }}
-                  className="flex flex-col gap-2 rounded-2xl bg-[#F9F9F8] p-6 border border-zinc-100 transition-colors hover:bg-zinc-100"
+                  className="flex flex-col gap-2 rounded-2xl bg-brand-light p-6 border border-brand-darker/5 transition-colors hover:bg-brand-light/70"
                 >
-                  <BarChart3 className="h-5 w-5 text-[#3A3A3A]/30" />
-                  <span className="font-display text-[10px] font-bold uppercase tracking-[0.2em] text-[#3A3A3A]/40">Market</span>
-                  <span className="font-display text-lg font-medium text-[#3A3A3A]">{stat}</span>
+                  <BarChart3 className="h-5 w-5 text-brand-darker/30" />
+                  <span className="font-display text-[10px] font-bold uppercase tracking-[0.2em] text-[#111111]/40">Market</span>
+                  <span className="font-display text-lg font-medium text-[#111111]">{stat}</span>
                 </motion.div>
               ))}
             </div>
@@ -84,7 +84,7 @@ export function ReachSection({ data }: ReachSectionProps) {
                style={{ rotate, scale }}
                className="relative w-full aspect-square max-w-md rounded-full bg-gradient-to-tr from-zinc-50 via-white to-zinc-100 shadow-2xl flex items-center justify-center border border-zinc-200"
              >
-                <Globe className="h-1/2 w-1/2 text-[#3A3A3A] opacity-20 absolute" strokeWidth={1} />
+                <Globe className="h-1/2 w-1/2 text-brand-darker opacity-20 absolute" strokeWidth={1} />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.8),transparent)] pointer-events-none" />
                 
                 {/* Floating "Markers" */}
@@ -100,7 +100,7 @@ export function ReachSection({ data }: ReachSectionProps) {
                       repeat: Infinity,
                       ease: "easeInOut"
                     }}
-                    className="absolute h-3 w-3 rounded-full bg-[#3A3A3A]/10 border border-[#3A3A3A]/20"
+                    className="absolute h-3 w-3 rounded-full bg-brand-darker/10 border border-brand-darker/20"
                     style={{
                       top: `${20 + Math.random() * 60}%`,
                       left: `${20 + Math.random() * 60}%`,

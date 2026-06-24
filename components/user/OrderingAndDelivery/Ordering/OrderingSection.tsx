@@ -28,7 +28,7 @@ export function OrderingSection({ data }: OrderingSectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -36,17 +36,17 @@ export function OrderingSection({ data }: OrderingSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl"
               >
                 {data.title}
-                <span className="block mt-2 text-xl text-[#3A3A3A]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
+                <span className="block mt-2 text-xl text-[#111111]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -62,10 +62,10 @@ export function OrderingSection({ data }: OrderingSectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-4 group"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#F9F9F8] border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-light border border-brand-darker/5 group-hover:bg-brand-darker group-hover:text-white transition-all">
                     <Check className="h-4 w-4" />
                   </div>
-                  <span className="font-ui text-sm text-[#3A3A3A]/70 sm:text-base">{feature}</span>
+                  <span className="font-ui text-sm text-[#111111]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -95,9 +95,9 @@ export function OrderingSection({ data }: OrderingSectionProps) {
                   <ShoppingBag className="h-5 w-5 text-black/40" />
                   <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black/40">Bag / 01 Item</span>
                 </div>
-                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-[#3E1C01]/10 border border-[#3E1C01]/20">
-                  <ShieldCheck className="h-3.5 w-3.5 text-[#3E1C01]" />
-                  <span className="font-mono text-[7px] font-bold uppercase tracking-widest text-[#3E1C01] leading-none">Secured</span>
+                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-brand-darker/10 border border-brand-darker/20">
+                  <ShieldCheck className="h-3.5 w-3.5 text-brand-darker" />
+                  <span className="font-mono text-[7px] font-bold uppercase tracking-widest text-brand-darker leading-none">Secured</span>
                 </div>
               </div>
 
@@ -128,9 +128,9 @@ export function OrderingSection({ data }: OrderingSectionProps) {
                 transition={{ delay: 0.4 }}
                 className="flex items-center gap-3 p-4 rounded-2xl bg-white border border-black/5"
               >
-                <Sparkles className="h-4 w-4 text-[#3E1C01]" />
+                <Sparkles className="h-4 w-4 text-brand-darker" />
                 <span className="font-ui text-[10px] text-black/60">Express Delivery</span>
-                <span className="ml-auto font-display text-[10px] font-bold text-[#3E1C01] uppercase tracking-widest">FREE</span>
+                <span className="ml-auto font-display text-[10px] font-bold text-brand-darker uppercase tracking-widest">FREE</span>
               </motion.div>
 
               {/* Pricing Summary */}
@@ -147,7 +147,7 @@ export function OrderingSection({ data }: OrderingSectionProps) {
                 </div>
                 <div className="flex justify-between font-ui text-[10px] uppercase tracking-widest text-black/40">
                   <span>Logistics & Transit</span>
-                  <span className="text-[#3E1C01] font-bold">FREE</span>
+                  <span className="text-brand-darker font-bold">FREE</span>
                 </div>
                 <div className="flex justify-between font-display text-lg font-bold text-black pt-2">
                   <span>Total Amount</span>
@@ -172,7 +172,7 @@ export function OrderingSection({ data }: OrderingSectionProps) {
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex h-16 w-full items-center justify-center rounded-2xl bg-[#3A3A3A] text-white font-display text-[10px] font-bold uppercase tracking-widest cursor-pointer shadow-xl"
+                className="flex h-16 w-full items-center justify-center rounded-2xl bg-brand-button hover:bg-brand text-white font-display text-[10px] font-bold uppercase tracking-widest cursor-pointer shadow-xl"
               >
                 Confirm & Transit
               </motion.div>

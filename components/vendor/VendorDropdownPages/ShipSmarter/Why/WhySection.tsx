@@ -52,10 +52,10 @@ export function WhySection({ data }: WhySectionProps) {
         {/* Left Sticky Title Group */}
         <div className="lg:sticky lg:top-40 lg:w-5/12">
           <div className="flex flex-col gap-8">
-            <motion.span variants={itemVariants} className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40">
+            <motion.span variants={itemVariants} className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40">
               The Impact
             </motion.span>
-            <motion.h2 variants={itemVariants} className="font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl lg:text-[5.5rem]">
+            <motion.h2 variants={itemVariants} className="font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#111111] sm:text-7xl lg:text-[5.5rem]">
               {data.title}
             </motion.h2>
           </div>
@@ -69,10 +69,10 @@ export function WhySection({ data }: WhySectionProps) {
               <motion.div
                 key={tool.title}
                 variants={itemVariants}
-                className="group flex flex-col gap-10 rounded-[3rem] bg-[#F9F9F8] p-10 shadow-xl shadow-zinc-200/20 transition-all duration-700 hover:-translate-y-2 hover:bg-white hover:shadow-2xl hover:shadow-[#3A3A3A]/5 lg:p-14"
+                className="group flex flex-col gap-10 rounded-[3rem] bg-brand-light p-10 shadow-xl shadow-brand-darker/5 transition-all duration-700 hover:-translate-y-2 hover:bg-white hover:shadow-2xl hover:shadow-brand-darker/5 lg:p-14"
               >
-                <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-black/5 transition-transform duration-700 group-hover:scale-110">
-                  <div className="h-10 w-10 text-black/40 transition-colors duration-700 group-hover:text-black">
+                <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-brand-darker/5 transition-transform duration-700 group-hover:scale-110">
+                  <div className="h-10 w-10 text-brand-darker/40 transition-colors duration-700 group-hover:text-brand-darker">
                     {(() => {
                       const Icon = iconMap[tool.icon] || LayoutDashboard;
                       return <Icon className="h-full w-full stroke-[1]" />;
@@ -80,10 +80,10 @@ export function WhySection({ data }: WhySectionProps) {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <h3 className="font-display text-3xl font-medium tracking-tight text-black sm:text-4xl">
+                  <h3 className="font-display text-3xl font-medium tracking-tight text-brand-darker sm:text-4xl">
                     {tool.title}
                   </h3>
-                  <p className="font-ui text-lg leading-relaxed text-black/50 transition-colors duration-700 group-hover:text-black/70">
+                  <p className="font-ui text-lg leading-relaxed text-brand-darker/50 transition-colors duration-700 group-hover:text-brand-darker/70">
                     {tool.description}
                   </p>
                 </div>
@@ -97,10 +97,10 @@ export function WhySection({ data }: WhySectionProps) {
               <motion.div
                 key={tool.title}
                 variants={itemVariants}
-                className="group flex flex-col gap-10 rounded-[3rem] bg-[#F9F9F8] p-10 shadow-xl shadow-zinc-200/20 transition-all duration-700 hover:-translate-y-2 hover:bg-white hover:shadow-2xl hover:shadow-[#3A3A3A]/5 lg:p-14"
+                className="group flex flex-col gap-10 rounded-[3rem] bg-brand-light p-10 shadow-xl shadow-brand-darker/5 transition-all duration-700 hover:-translate-y-2 hover:bg-white hover:shadow-2xl hover:shadow-brand-darker/5 lg:p-14"
               >
-                <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-black/5 transition-transform duration-700 group-hover:scale-110">
-                  <div className="h-10 w-10 text-black/40 transition-colors duration-700 group-hover:text-black">
+                <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-brand-darker/5 transition-transform duration-700 group-hover:scale-110">
+                  <div className="h-10 w-10 text-brand-darker/40 transition-colors duration-700 group-hover:text-brand-darker">
                     {(() => {
                       const Icon = iconMap[tool.icon] || LayoutDashboard;
                       return <Icon className="h-full w-full stroke-[1]" />;
@@ -108,10 +108,10 @@ export function WhySection({ data }: WhySectionProps) {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <h3 className="font-display text-3xl font-medium tracking-tight text-black sm:text-4xl">
+                  <h3 className="font-display text-3xl font-medium tracking-tight text-brand-darker sm:text-4xl">
                     {tool.title}
                   </h3>
-                  <p className="font-ui text-lg leading-relaxed text-black/50 transition-colors duration-700 group-hover:text-black/70">
+                  <p className="font-ui text-lg leading-relaxed text-brand-darker/50 transition-colors duration-700 group-hover:text-brand-darker/70">
                     {tool.description}
                   </p>
                 </div>
