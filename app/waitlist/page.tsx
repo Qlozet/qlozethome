@@ -5,6 +5,7 @@ import { ProductCarousel } from "@/components/user/Waitlist/ProductCarousel";
 import navbarData from "@/data/global/navbar.json";
 import footerData from "@/data/global/footer.json";
 
+// Random comment for testing git flow
 export default function CustomerWaitlistPage() {
   return (
     <div className="min-h-screen bg-white text-[#111111] selection:bg-brand-darker selection:text-white">
