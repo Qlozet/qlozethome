@@ -86,10 +86,10 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
             >
               <Link
                 href={data.primaryAction.href}
-                className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-brand px-12 text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-all hover:scale-[1.05] active:scale-95 shadow-2xl shadow-black/20"
+                className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-brand-darker px-12 text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-all hover:scale-[1.05] active:scale-95 shadow-2xl shadow-black/20"
               >
                 <span className="relative z-10">{data.primaryAction.label}</span>
-                <div className="absolute inset-0 z-0 bg-brand-hover opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="absolute inset-0 z-0 bg-brand opacity-0 transition-opacity group-hover:opacity-100" />
               </Link>
 
               <Link

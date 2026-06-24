@@ -89,12 +89,12 @@ export function Header({ data }: HeaderProps) {
     textBase: "text-zinc-600",
     textHover: "hover:text-brand",
     btnSecondary: "border-gray-200 text-gray-600 hover:border-brand hover:text-brand",
-    btnPrimary: "bg-brand text-white hover:bg-brand-hover",
+    btnPrimary: "bg-brand-darker text-white hover:bg-brand",
     hamburger: "text-gray-700",
     mobileBg: "bg-white/90 border-gray-100",
     mobileText: "text-gray-700 hover:text-brand",
     mobileBtnSec: "border-gray-200 text-gray-700 hover:bg-brand-light",
-    mobileBtnPri: "bg-brand text-white hover:bg-brand-hover"
+    mobileBtnPri: "bg-brand-darker text-white hover:bg-brand"
   } : {
     headerBg: "bg-black/10 backdrop-blur-3xl border-white/5",
     textBase: "text-white/70",

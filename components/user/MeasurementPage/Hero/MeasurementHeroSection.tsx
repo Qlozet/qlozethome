@@ -104,10 +104,10 @@ export function MeasurementHero({ data }: MeasurementHeroProps) {
             >
               <Link
                 href={data.cta.href}
-                className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-brand px-10 text-[10px] font-bold uppercase tracking-[0.3em] text-white transition-all hover:scale-[1.02] active:scale-95"
+                className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-brand-darker px-10 text-[10px] font-bold uppercase tracking-[0.3em] text-white transition-all hover:scale-[1.02] active:scale-95"
               >
                 <span className="relative z-10">{data.cta.label}</span>
-                <div className="absolute inset-0 z-0 bg-brand-hover opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="absolute inset-0 z-0 bg-brand opacity-0 transition-opacity group-hover:opacity-100" />
               </Link>
 
               <Link

@@ -77,10 +77,10 @@ export function HeroSection({ data }: HeroSectionProps) {
 
             <motion.div variants={itemVariants} className="flex flex-col gap-6 sm:flex-row sm:items-center">
               <Link href={data.cta.href}
-                className="group relative inline-flex h-16 items-center justify-center gap-4 overflow-hidden rounded-full bg-brand px-12 text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-all hover:scale-[1.03] active:scale-95 shadow-2xl shadow-black/20">
+                className="group relative inline-flex h-16 items-center justify-center gap-4 overflow-hidden rounded-full bg-brand-darker px-12 text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-all hover:scale-[1.03] active:scale-95 shadow-2xl shadow-black/20">
                 <span className="relative z-10">{data.cta.label}</span>
                 <ArrowRight className="h-4 w-4 relative z-10 transition-transform group-hover:translate-x-1" />
-                <div className="absolute inset-0 z-0 bg-brand-hover opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="absolute inset-0 z-0 bg-brand opacity-0 transition-opacity group-hover:opacity-100" />
               </Link>
 
               <div className="flex items-center gap-6">
