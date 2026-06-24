@@ -62,12 +62,12 @@ export function TailoredSection({ data }: TailoredSectionProps) {
                          </div>
                          <span className="font-display text-[10px] font-bold uppercase tracking-widest text-[#111111]">Fit Profile</span>
                       </div>
-                      <div className="flex items-center gap-1.5 bg-brand/10 px-3 py-1.5 rounded-full">
-                         <CheckCircle2 className="h-3 w-3 text-brand" />
-                         <span className="font-mono text-[8px] font-bold text-brand uppercase tracking-widest">Synced</span>
+                      <div className="flex items-center gap-1.5 bg-brand-darker/10 px-3 py-1.5 rounded-full">
+                         <CheckCircle2 className="h-3 w-3 text-brand-darker" />
+                         <span className="font-mono text-[8px] font-bold text-brand-darker uppercase tracking-widest">Synced</span>
                       </div>
                   </div>
-
+ 
                   {MEASUREMENTS.map((m, i) => (
                      <motion.div key={m.label} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 + i * 0.08 }}
                         className="flex items-center gap-4 cursor-pointer group"
@@ -76,7 +76,7 @@ export function TailoredSection({ data }: TailoredSectionProps) {
                         <div className="flex-1 h-2 bg-zinc-200 rounded-full overflow-hidden">
                            <motion.div initial={{ width: 0 }} whileInView={{ width: `${m.bar}%` }} viewport={{ once: true }}
                               transition={{ delay: 0.5 + i * 0.1, duration: 0.6, ease: "easeOut" }}
-                               className="h-full bg-brand rounded-full group-hover:bg-brand-hover transition-colors" />
+                               className="h-full bg-brand rounded-full group-hover:bg-brand-darker transition-colors" />
                         </div>
                         <span className="font-mono text-[10px] font-bold text-black w-10 text-right">{m.value}</span>
                      </motion.div>

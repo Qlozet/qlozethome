@@ -62,12 +62,12 @@ export function ProductionSection({ data }: ProductionSectionProps) {
                      </div>
                      <span className="font-display text-[10px] font-bold uppercase tracking-widest text-[#111111]">Production Pipeline</span>
                   </div>
-                  <div className="flex items-center gap-2 bg-brand/10 px-3 py-1.5 rounded-full border border-brand/20">
-                     <div className="h-2 w-2 rounded-full bg-brand animate-pulse" />
-                     <span className="font-mono text-[8px] font-bold text-brand uppercase tracking-widest">In Progress</span>
+                  <div className="flex items-center gap-2 bg-brand-darker/10 px-3 py-1.5 rounded-full border border-brand-darker/20">
+                     <div className="h-2 w-2 rounded-full bg-brand-darker animate-pulse" />
+                     <span className="font-mono text-[8px] font-bold text-brand-darker uppercase tracking-widest">In Progress</span>
                   </div>
                </div>
-
+ 
                {/* Pipeline Steps */}
                <div className="flex flex-col gap-0">
                   {PIPELINE.map((step, i) => {
@@ -90,12 +90,12 @@ export function ProductionSection({ data }: ProductionSectionProps) {
                               <div className="flex-1 flex flex-col gap-1">
                                  <span className={`font-display text-[10px] font-bold uppercase tracking-wider ${isActive ? 'text-white' : 'text-[#111111]'}`}>{step.step}</span>
                                  <div className="flex items-center gap-1.5">
-                                    <div className={`h-1.5 w-1.5 rounded-full ${isActive ? 'bg-white/60 animate-pulse' : 'bg-brand'}`} />
-                                    <span className={`font-mono text-[8px] font-bold uppercase tracking-widest ${isActive ? 'text-white/60' : 'text-brand'}`}>{step.status}</span>
+                                    <div className={`h-1.5 w-1.5 rounded-full ${isActive ? 'bg-white/60 animate-pulse' : 'bg-brand-darker'}`} />
+                                    <span className={`font-mono text-[8px] font-bold uppercase tracking-widest ${isActive ? 'text-white/60' : 'text-brand-darker'}`}>{step.status}</span>
                                  </div>
                               </div>
                               <div className={`h-8 w-8 rounded-full flex items-center justify-center ${isActive ? 'bg-white/10' : 'bg-zinc-50 border border-black/5'}`}>
-                                 <Icon className={`h-4 w-4 ${isActive ? 'text-white/60' : 'text-brand'}`} />
+                                 <Icon className={`h-4 w-4 ${isActive ? 'text-white/60' : 'text-brand-darker'}`} />
                               </div>
                            </motion.div>
                            {!isLast && (
