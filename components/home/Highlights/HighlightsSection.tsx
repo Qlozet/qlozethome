@@ -94,7 +94,7 @@ function HighlightItem({ item, index, containerVariants, itemVariants }: { item:
         <motion.div variants={itemVariants} className="flex">
           <Link
             href={item.cta.href}
-            className="inline-flex items-center justify-center rounded-full bg-brand-darker px-10 py-5 text-xs font-bold uppercase tracking-[0.3em] text-white shadow-2xl transition-all hover:scale-105 hover:bg-brand active:scale-[0.98]"
+            className="inline-flex items-center justify-center rounded-full bg-brand-button px-10 py-5 text-xs font-bold uppercase tracking-[0.3em] text-white shadow-2xl transition-all hover:scale-105 hover:bg-brand active:scale-[0.98]"
           >
             {item.cta.label}
           </Link>

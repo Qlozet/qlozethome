@@ -57,7 +57,7 @@ export function ClosingSection({ data }: ClosingSectionProps) {
           >
             <Link
               href={data.cta.href}
-              className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-brand-darker px-12 text-[10px] font-bold uppercase tracking-[0.3em] text-white shadow-2xl transition-all hover:scale-[1.05] active:scale-95"
+              className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-brand-button px-12 text-[10px] font-bold uppercase tracking-[0.3em] text-white shadow-2xl transition-all hover:scale-[1.05] active:scale-95"
             >
               <span className="relative z-10">{data.cta.label}</span>
               <div className="absolute inset-0 z-0 bg-brand opacity-0 transition-opacity group-hover:opacity-100" />

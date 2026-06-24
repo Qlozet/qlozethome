@@ -61,7 +61,7 @@ export function EarlyAccessSection({ data }: EarlyAccessSectionProps) {
                   />
                   <button
                     type="submit"
-                    className="rounded-full bg-brand-darker px-12 py-5 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-xl shadow-brand-darker/20 transition-all hover:scale-[1.05] hover:bg-brand active:scale-[0.98]"
+                    className="rounded-full bg-brand-button px-12 py-5 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-xl shadow-brand-button/20 transition-all hover:scale-[1.05] hover:bg-brand active:scale-[0.98]"
                   >
                     {data.button}
                   </button>
