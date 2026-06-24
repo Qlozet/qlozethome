@@ -22,28 +22,28 @@ const PIPELINE = [
 
 export function ProductionSection({ data }: ProductionSectionProps) {
   return (
-    <section className="relative w-full bg-[#F9F9F8] py-24 sm:py-32" data-theme="light">
+    <section className="relative w-full bg-brand-light py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-24">
           {/* Left: Content */}
           <div className="flex flex-col gap-6 lg:w-1/2">
             <div className="flex flex-col gap-6">
               <motion.span initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40">{data.badge}</motion.span>
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40">{data.badge}</motion.span>
               <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl">{data.title}</motion.h2>
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl">{data.title}</motion.h2>
               <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg">{data.description}</motion.p>
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg">{data.description}</motion.p>
             </div>
             <div className="flex flex-col gap-5">
               {data.features.map((feature, i) => {
                 const Icon = iconMap[feature.icon] || CheckCircle2;
                 return (
                   <motion.div key={feature.title} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 + i * 0.1 }} className="flex items-center gap-4 group">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all shadow-sm">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white border border-brand/5 group-hover:bg-brand group-hover:text-white transition-all shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
-                    <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature.title}</span>
+                    <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature.title}</span>
                   </motion.div>
                 );
               })}
@@ -57,14 +57,14 @@ export function ProductionSection({ data }: ProductionSectionProps) {
                {/* Header */}
                <div className="flex items-center justify-between pb-5 border-b border-black/5 mb-6">
                   <div className="flex items-center gap-3">
-                     <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-[#3A3A3A] text-white">
+                     <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-brand text-white">
                         <Send className="h-3.5 w-3.5" />
                      </div>
-                     <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black">Production Pipeline</span>
+                     <span className="font-display text-[10px] font-bold uppercase tracking-widest text-[#111111]">Production Pipeline</span>
                   </div>
-                  <div className="flex items-center gap-2 bg-[#3E1C01]/10 px-3 py-1.5 rounded-full border border-[#3E1C01]/20">
-                     <div className="h-2 w-2 rounded-full bg-[#3E1C01] animate-pulse" />
-                     <span className="font-mono text-[8px] font-bold text-[#3E1C01] uppercase tracking-widest">In Progress</span>
+                  <div className="flex items-center gap-2 bg-brand/10 px-3 py-1.5 rounded-full border border-brand/20">
+                     <div className="h-2 w-2 rounded-full bg-brand animate-pulse" />
+                     <span className="font-mono text-[8px] font-bold text-brand uppercase tracking-widest">In Progress</span>
                   </div>
                </div>
 
@@ -82,20 +82,20 @@ export function ProductionSection({ data }: ProductionSectionProps) {
                               whileHover={{ scale: 1.02, x: 5, transition: { type: "spring", stiffness: 300, damping: 20 } }}
                               viewport={{ once: true }}
                               transition={{ delay: 0.3 + i * 0.15 }}
-                              className={`flex items-center gap-4 p-4 rounded-2xl border cursor-pointer transition-all duration-300 ${isActive ? 'bg-[#3A3A3A] text-white border-[#3A3A3A] shadow-2xl' : 'bg-white border-black/5 shadow-md hover:shadow-xl'}`}
+                              className={`flex items-center gap-4 p-4 rounded-2xl border cursor-pointer transition-all duration-300 ${isActive ? 'bg-brand text-white border-brand shadow-2xl' : 'bg-white border-black/5 shadow-md hover:shadow-xl'}`}
                            >
                               <div className="h-14 w-14 rounded-xl overflow-hidden shrink-0 border border-black/5 shadow-sm">
                                  <img src={step.image} alt={step.step} className="w-full h-full object-cover" />
                               </div>
                               <div className="flex-1 flex flex-col gap-1">
-                                 <span className={`font-display text-[10px] font-bold uppercase tracking-wider ${isActive ? 'text-white' : 'text-black'}`}>{step.step}</span>
+                                 <span className={`font-display text-[10px] font-bold uppercase tracking-wider ${isActive ? 'text-white' : 'text-[#111111]'}`}>{step.step}</span>
                                  <div className="flex items-center gap-1.5">
-                                    <div className={`h-1.5 w-1.5 rounded-full ${isActive ? 'bg-white/60 animate-pulse' : 'bg-[#3E1C01]'}`} />
-                                    <span className={`font-mono text-[8px] font-bold uppercase tracking-widest ${isActive ? 'text-white/60' : 'text-[#3E1C01]'}`}>{step.status}</span>
+                                    <div className={`h-1.5 w-1.5 rounded-full ${isActive ? 'bg-white/60 animate-pulse' : 'bg-brand'}`} />
+                                    <span className={`font-mono text-[8px] font-bold uppercase tracking-widest ${isActive ? 'text-white/60' : 'text-brand'}`}>{step.status}</span>
                                  </div>
                               </div>
                               <div className={`h-8 w-8 rounded-full flex items-center justify-center ${isActive ? 'bg-white/10' : 'bg-zinc-50 border border-black/5'}`}>
-                                 <Icon className={`h-4 w-4 ${isActive ? 'text-white/60' : 'text-[#3E1C01]'}`} />
+                                 <Icon className={`h-4 w-4 ${isActive ? 'text-white/60' : 'text-brand'}`} />
                               </div>
                            </motion.div>
                            {!isLast && (
@@ -112,11 +112,11 @@ export function ProductionSection({ data }: ProductionSectionProps) {
                <div className="mt-6 pt-5 border-t border-black/5">
                   <div className="flex items-center justify-between mb-2">
                      <span className="font-mono text-[8px] font-bold text-black/40 uppercase tracking-widest">Production Progress</span>
-                     <span className="font-mono text-[9px] font-bold text-black/60">67%</span>
+                     <span className="font-mono text-[9px] font-bold text-[#111111]/60">67%</span>
                   </div>
                   <div className="h-2 bg-zinc-100 rounded-full overflow-hidden">
                      <motion.div initial={{ width: 0 }} whileInView={{ width: "67%" }} viewport={{ once: true }} transition={{ delay: 0.8, duration: 1, ease: "easeOut" }}
-                        className="h-full bg-[#3A3A3A] rounded-full" />
+                        className="h-full bg-brand rounded-full" />
                   </div>
                </div>
             </div>

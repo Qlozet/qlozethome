@@ -31,7 +31,7 @@ export function GenerationSection({ data }: GenerationSectionProps) {
   }, []);
 
   return (
-    <section className="relative w-full bg-[#0A0A0A] py-24 sm:py-32 overflow-hidden" data-theme="dark">
+    <section className="relative w-full bg-brand-darker py-24 sm:py-32 overflow-hidden" data-theme="dark">
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
 
       <div className="relative z-10 mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
@@ -51,7 +51,7 @@ export function GenerationSection({ data }: GenerationSectionProps) {
                 const Icon = iconMap[feature.icon] || Sparkles;
                 return (
                   <motion.div key={feature.title} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 + i * 0.1 }} className="flex items-center gap-4 group">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 border border-white/10 text-white group-hover:bg-white group-hover:text-black transition-all shadow-sm">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 border border-white/10 text-white group-hover:bg-brand group-hover:text-white transition-all shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
                     <span className="font-ui text-sm font-medium text-white/70 group-hover:text-white transition-colors sm:text-base">{feature.title}</span>
@@ -69,7 +69,7 @@ export function GenerationSection({ data }: GenerationSectionProps) {
               <div className="flex items-center justify-between pb-5 border-b border-white/5 mb-6">
                 <div className="flex items-center gap-3">
                   <motion.div animate={{ rotate: generating ? 360 : 0 }} transition={{ duration: 2, repeat: generating ? Infinity : 0, ease: "linear" }}
-                    className="h-8 w-8 flex items-center justify-center rounded-xl bg-white text-black">
+                    className="h-8 w-8 flex items-center justify-center rounded-xl bg-white text-brand">
                     <Wand2 className="h-3.5 w-3.5" />
                   </motion.div>
                   <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">AI Engine</span>
@@ -120,7 +120,7 @@ export function GenerationSection({ data }: GenerationSectionProps) {
                     onClick={() => setActiveVar(i)}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`relative aspect-square rounded-xl overflow-hidden cursor-pointer border-2 transition-all ${i === activeVar ? 'border-white shadow-lg' : 'border-white/10 opacity-50 hover:opacity-80'}`}
+                    className={`relative aspect-square rounded-xl overflow-hidden cursor-pointer border-2 transition-all ${i === activeVar ? 'border-brand shadow-lg' : 'border-white/10 opacity-50 hover:opacity-80'}`}
                   >
                     <img src={v.image} alt={v.label} className="w-full h-full object-cover" />
                     <div className="absolute bottom-1.5 left-1.5">

@@ -21,17 +21,17 @@ export function WorkflowSection({ data }: WorkflowSectionProps) {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="relative w-full bg-[#F9F9F8] py-24 sm:py-32" data-theme="light">
+    <section className="relative w-full bg-brand-light py-24 sm:py-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col gap-16">
           {/* Header */}
           <div className="flex flex-col gap-8 text-center items-center mx-auto max-w-3xl">
             <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-              className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40">{data.badge}</motion.span>
+              className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40">{data.badge}</motion.span>
             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-              className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl">{data.title}</motion.h2>
+              className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl">{data.title}</motion.h2>
             <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-              className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg">{data.description}</motion.p>
+              className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg">{data.description}</motion.p>
           </div>
 
           {/* Interactive Step Flow */}
@@ -49,7 +49,7 @@ export function WorkflowSection({ data }: WorkflowSectionProps) {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 + i * 0.1 }}
-                    className={`flex items-center gap-5 p-5 rounded-2xl cursor-pointer transition-all duration-300 ${isActive ? 'bg-[#3A3A3A] text-white shadow-2xl scale-[1.02]' : 'bg-white text-black border border-black/5 shadow-sm hover:shadow-md hover:scale-[1.01]'}`}
+                    className={`flex items-center gap-5 p-5 rounded-2xl cursor-pointer transition-all duration-300 ${isActive ? 'bg-brand text-white shadow-2xl scale-[1.02]' : 'bg-white text-black border border-black/5 shadow-sm hover:shadow-md hover:scale-[1.01]'}`}
                   >
                     <div className={`h-12 w-12 rounded-xl flex items-center justify-center shrink-0 transition-all ${isActive ? 'bg-white/10' : 'bg-zinc-50 border border-black/5'}`}>
                       <Icon className={`h-5 w-5 ${isActive ? 'text-white' : 'text-black/40'}`} />

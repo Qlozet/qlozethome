@@ -40,15 +40,15 @@ export function TailoredSection({ data }: TailoredSectionProps) {
                   <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.5 }}
                      className="absolute top-1/3 left-1/2 -translate-x-1/2">
                      <div className="relative">
-                        <div className="h-3 w-3 rounded-full bg-[#3A3A3A] animate-ping absolute" />
-                        <div className="h-3 w-3 rounded-full bg-[#3A3A3A] relative z-10" />
+                        <div className="h-3 w-3 rounded-full bg-brand animate-ping absolute" />
+                        <div className="h-3 w-3 rounded-full bg-brand relative z-10" />
                      </div>
                   </motion.div>
                   <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.7 }}
                      className="absolute top-1/2 left-1/3">
                      <div className="relative">
-                        <div className="h-2.5 w-2.5 rounded-full bg-[#3A3A3A]/60 animate-ping absolute" />
-                        <div className="h-2.5 w-2.5 rounded-full bg-[#3A3A3A] relative z-10" />
+                        <div className="h-2.5 w-2.5 rounded-full bg-brand/60 animate-ping absolute" />
+                        <div className="h-2.5 w-2.5 rounded-full bg-brand relative z-10" />
                      </div>
                   </motion.div>
                </div>
@@ -56,16 +56,16 @@ export function TailoredSection({ data }: TailoredSectionProps) {
                {/* Measurement Dashboard */}
                <div className="p-6 sm:p-8 flex flex-col gap-5">
                   <div className="flex items-center justify-between">
-                     <div className="flex items-center gap-3">
-                        <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-[#3A3A3A] text-white">
-                           <Ruler className="h-3.5 w-3.5" />
-                        </div>
-                        <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black">Fit Profile</span>
-                     </div>
-                     <div className="flex items-center gap-1.5 bg-[#3E1C01]/10 px-3 py-1.5 rounded-full">
-                        <CheckCircle2 className="h-3 w-3 text-[#3E1C01]" />
-                        <span className="font-mono text-[8px] font-bold text-[#3E1C01] uppercase tracking-widest">Synced</span>
-                     </div>
+                      <div className="flex items-center gap-3">
+                         <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-brand text-white">
+                            <Ruler className="h-3.5 w-3.5" />
+                         </div>
+                         <span className="font-display text-[10px] font-bold uppercase tracking-widest text-[#111111]">Fit Profile</span>
+                      </div>
+                      <div className="flex items-center gap-1.5 bg-brand/10 px-3 py-1.5 rounded-full">
+                         <CheckCircle2 className="h-3 w-3 text-brand" />
+                         <span className="font-mono text-[8px] font-bold text-brand uppercase tracking-widest">Synced</span>
+                      </div>
                   </div>
 
                   {MEASUREMENTS.map((m, i) => (
@@ -76,7 +76,7 @@ export function TailoredSection({ data }: TailoredSectionProps) {
                         <div className="flex-1 h-2 bg-zinc-200 rounded-full overflow-hidden">
                            <motion.div initial={{ width: 0 }} whileInView={{ width: `${m.bar}%` }} viewport={{ once: true }}
                               transition={{ delay: 0.5 + i * 0.1, duration: 0.6, ease: "easeOut" }}
-                              className="h-full bg-[#3A3A3A] rounded-full group-hover:bg-[#3E1C01] transition-colors" />
+                               className="h-full bg-brand rounded-full group-hover:bg-brand-hover transition-colors" />
                         </div>
                         <span className="font-mono text-[10px] font-bold text-black w-10 text-right">{m.value}</span>
                      </motion.div>
@@ -89,21 +89,21 @@ export function TailoredSection({ data }: TailoredSectionProps) {
           <div className="flex flex-col gap-6 order-1 lg:order-2 lg:w-1/2">
             <div className="flex flex-col gap-6">
               <motion.span initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40">{data.badge}</motion.span>
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40">{data.badge}</motion.span>
               <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl">{data.title}</motion.h2>
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl">{data.title}</motion.h2>
               <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg">{data.description}</motion.p>
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg">{data.description}</motion.p>
             </div>
             <div className="flex flex-col gap-5">
               {data.features.map((feature, i) => {
                 const Icon = iconMap[feature.icon] || CheckCircle2;
                 return (
                   <motion.div key={feature.title} initial={{ opacity: 0, x: 10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 + i * 0.1 }} className="flex items-center gap-4 group">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#F9F9F8] border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all shadow-sm">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-light border border-brand/5 group-hover:bg-brand group-hover:text-white transition-all shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
-                    <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature.title}</span>
+                    <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature.title}</span>
                   </motion.div>
                 );
               })}

@@ -30,9 +30,9 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
   };
 
   return (
-    <section id="how-it-works" className="relative z-20 overflow-hidden bg-[#0A0A0A] px-6 md:px-10 lg:px-10 py-32 sm:py-48">
+    <section id="how-it-works" className="relative z-20 overflow-hidden bg-brand-darker px-6 md:px-10 lg:px-10 py-32 sm:py-48">
       {/* Background Atmosphere */}
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/5 via-[#0A0A0A] to-[#0A0A0A]" />
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/5 via-brand-darker to-brand-darker" />
 
       <div className="mx-auto max-w-[94rem]">
         {/* Title Group */}
@@ -75,7 +75,7 @@ export function HowItWorksSection({ data }: HowItWorksSectionProps) {
                 <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-2xl transition-transform duration-500 group-hover:scale-110">
                   {(() => {
                     const Icon = iconMap[step.icon] || Scissors;
-                    return <Icon className="h-8 w-8 text-black opacity-80 transition-opacity group-hover:opacity-100" strokeWidth={1.5} />;
+                    return <Icon className="h-8 w-8 text-brand" strokeWidth={1.5} />;
                   })()}
                 </div>
               </div>

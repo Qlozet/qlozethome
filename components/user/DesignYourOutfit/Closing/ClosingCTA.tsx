@@ -62,7 +62,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl lg:text-[6.5rem]"
+                className="font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#111111] sm:text-7xl lg:text-[6.5rem]"
               >
                 {data.title}
               </motion.h2>
@@ -71,7 +71,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -86,15 +86,15 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
             >
               <Link
                 href={data.primaryAction.href}
-                className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-[#3A3A3A] px-12 text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-all hover:scale-[1.05] active:scale-95 shadow-2xl shadow-black/20"
+                className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-brand px-12 text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-all hover:scale-[1.05] active:scale-95 shadow-2xl shadow-black/20"
               >
                 <span className="relative z-10">{data.primaryAction.label}</span>
-                <div className="absolute inset-0 z-0 bg-gradient-to-r from-zinc-800 to-black opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="absolute inset-0 z-0 bg-brand-hover opacity-0 transition-opacity group-hover:opacity-100" />
               </Link>
 
               <Link
                 href={data.secondaryAction.href}
-                className="group inline-flex items-center gap-4 font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A] transition-all hover:translate-x-2"
+                className="group inline-flex items-center gap-4 font-display text-[10px] font-bold uppercase tracking-[0.4em] text-brand transition-all hover:translate-x-2"
               >
                 {data.secondaryAction.label}
                 <MoveRight className="h-5 w-5" />
