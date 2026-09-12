@@ -81,8 +81,8 @@ export function Footer({ data }: FooterProps) {
               <Link href="#" className="transition hover:text-white">Twitter</Link>
               <Link href="#" className="transition hover:text-white">LinkedIn</Link>
               <div className="hidden h-px w-8 bg-white/10 sm:block"></div>
-              <Link href="#" className="transition hover:text-white">Privacy</Link>
-              <Link href="#" className="transition hover:text-white">Terms</Link>
+              <Link href="/privacy" className="transition hover:text-white">Privacy</Link>
+              <Link href="/terms" className="transition hover:text-white">Terms</Link>
             </div>
           </div>
         </div>
