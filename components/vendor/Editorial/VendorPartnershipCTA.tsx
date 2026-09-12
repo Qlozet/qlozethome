@@ -12,12 +12,12 @@ export function VendorPartnershipCTA() {
   ];
 
   return (
-    <section className="relative py-32 sm:py-48 bg-black text-white overflow-hidden" data-theme="dark">
+    <section className="relative py-32 sm:py-48 bg-brand-darker text-white overflow-hidden" data-theme="dark">
       
       {/* Background Image Subdued */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
          <img src="/image/woman.png" className="w-full h-full object-cover grayscale" />
-         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
+         <div className="absolute inset-0 bg-gradient-to-t from-brand-darker via-black/80 to-transparent" />
       </div>
 
       <div className="mx-auto w-full max-w-[94rem] px-6 md:px-10 lg:px-10 relative z-10">
@@ -112,10 +112,10 @@ export function VendorPartnershipCTA() {
            >
               <Link 
                  href="/auth/vendor/register"
-                 className="relative flex items-center justify-between min-w-[280px] px-10 py-6 bg-white text-[#3A3A3A] rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] transform transition-transform hover:scale-[1.02] active:scale-95"
+                 className="relative flex items-center justify-between min-w-[280px] px-10 py-6 bg-white text-brand-button rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] transform transition-transform hover:scale-[1.02] active:scale-95 hover:bg-brand-light"
               >
                  Start Selling Today
-                 <div className="w-10 h-10 rounded-full bg-[#3A3A3A] flex items-center justify-center -mr-2 group-hover:translate-x-1 transition-transform">
+                 <div className="w-10 h-10 rounded-full bg-brand-button flex items-center justify-center -mr-2 group-hover:translate-x-1 transition-transform">
                     <ArrowRight className="h-5 w-5 text-white" />
                  </div>
               </Link>

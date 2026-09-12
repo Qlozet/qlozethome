@@ -64,7 +64,7 @@ export function VendorCapabilitiesGrid() {
    ];
 
    return (
-      <section className="relative py-24 sm:py-40 bg-[#F9F9F8] overflow-hidden" data-theme="light">
+      <section className="relative py-24 sm:py-40 bg-brand-light overflow-hidden" data-theme="light">
          <div className="mx-auto w-full max-w-[94rem] px-6 md:px-10 lg:px-10">
 
             {/* Header */}
@@ -73,7 +73,7 @@ export function VendorCapabilitiesGrid() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="font-display max-w-4xl text-5xl sm:text-7xl font-medium tracking-tight text-[#3A3A3A] max-w-3xl leading-[1]"
+                  className="font-display max-w-4xl text-5xl sm:text-7xl font-medium tracking-tight text-[#111111] max-w-3xl leading-[1]"
                >
                   Everything You Need to Succeed.
                </motion.h2>
@@ -82,7 +82,7 @@ export function VendorCapabilitiesGrid() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
-                  className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40 pb-2"
+                  className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40 pb-2"
                >
                   02 // The Capabilities
                </motion.p>

@@ -15,7 +15,7 @@ export function VendorAudienceSection() {
   ];
 
   return (
-    <section className="relative py-32 sm:py-48 bg-black text-white overflow-hidden min-h-[100vh] flex flex-col justify-center" data-theme="dark">
+    <section className="relative py-32 sm:py-48 bg-brand-darker text-white overflow-hidden min-h-[100vh] flex flex-col justify-center" data-theme="dark">
       
       {/* Background Image Takeover */}
       <AnimatePresence>
@@ -33,7 +33,7 @@ export function VendorAudienceSection() {
          )}
       </AnimatePresence>
 
-      <div className="absolute inset-0 bg-black/40 z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-brand-darker/40 z-0 pointer-events-none" />
 
       <div className="mx-auto w-full max-w-[94rem] px-6 md:px-10 lg:px-10 relative z-10">
         
