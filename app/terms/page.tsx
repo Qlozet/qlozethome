@@ -64,7 +64,7 @@ export default function TermsPage() {
       <Header data={navbarData} />
 
       <main className="flex flex-col">
-        <section className="bg-brand-light">
+        <section className="bg-brand-light" data-theme="light">
           <div className="mx-auto w-full max-w-4xl px-6 pb-16 pt-40 sm:pt-48">
             <p className="font-ui text-[10px] font-bold uppercase tracking-[0.4em] text-brand-button/60">
               Legal
@@ -79,7 +79,7 @@ export default function TermsPage() {
           </div>
         </section>
 
-        <div className="mx-auto w-full max-w-4xl px-6 py-16">
+        <div className="mx-auto w-full max-w-4xl px-6 py-16" data-theme="light">
           <nav className="mb-16 flex flex-col gap-2 border-l-2 border-brand-darker/10 pl-6">
             {sections.map((s) => (
               <a
