@@ -28,7 +28,7 @@ export default function ShipSmarterPage() {
   });
 
   return (
-    <div ref={containerRef} className="bg-white text-zinc-900 selection:bg-black selection:text-white relative">
+    <div ref={containerRef} className="bg-white text-[#111111] selection:bg-brand-darker selection:text-white relative">
       <Header data={navbarData} />
       
       {/* Massive Background Marquee (Labeling passing through) */}
@@ -47,12 +47,12 @@ export default function ShipSmarterPage() {
         {/* Continuous Journey Line (The Delivery Path - animated fill spine) */}
         <div className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 z-0 hidden lg:block overflow-hidden">
            {/* Background Track */}
-           <div className="h-full w-full bg-[repeating-linear-gradient(to_bottom,transparent,transparent_6px,#000_6px,#000_12px)] opacity-[0.03]" />
+           <div className="h-full w-full bg-[repeating-linear-gradient(to_bottom,transparent,transparent_6px,#1e1008_6px,#1e1008_12px)] opacity-[0.03]" />
            
            {/* Animated Fill (The active path) */}
            <motion.div 
               style={{ scaleY: scrollYProgress, originY: 0 }}
-              className="absolute inset-0 bg-black opacity-10 shadow-[0_0_15px_rgba(0,0,0,0.1)]"
+              className="absolute inset-0 bg-brand-darker opacity-10 shadow-[0_0_15px_rgba(0,0,0,0.1)]"
            />
         </div>
 

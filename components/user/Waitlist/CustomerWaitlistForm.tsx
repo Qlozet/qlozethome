@@ -67,14 +67,14 @@ export function CustomerWaitlistForm() {
       <div className="flex flex-col gap-10">
         {/* Name */}
         <motion.div variants={itemVariants} className="flex flex-col gap-3">
-          <label htmlFor="name" className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-black/40">
+          <label htmlFor="name" className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-[#111111]/40">
             Full Name
           </label>
           <input
             type="text"
             id="name"
             placeholder="Jane Doe"
-            className="border-b border-black/10 bg-transparent py-4 font-ui text-xl outline-none transition-colors focus:border-black"
+            className="border-b border-[#111111]/10 bg-transparent py-4 font-ui text-xl outline-none transition-colors focus:border-brand-darker"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
@@ -84,14 +84,14 @@ export function CustomerWaitlistForm() {
 
         {/* Email */}
         <motion.div variants={itemVariants} className="flex flex-col gap-3">
-          <label htmlFor="email" className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-black/40">
+          <label htmlFor="email" className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-[#111111]/40">
             Email Address
           </label>
           <input
             type="email"
             id="email"
             placeholder="jane@example.com"
-            className="border-b border-black/10 bg-transparent py-4 font-ui text-xl outline-none transition-colors focus:border-black"
+            className="border-b border-[#111111]/10 bg-transparent py-4 font-ui text-xl outline-none transition-colors focus:border-brand-darker"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             required
@@ -105,12 +105,12 @@ export function CustomerWaitlistForm() {
         whileHover={status !== "loading" && status !== "success" ? { scale: 1.02 } : {}}
         whileTap={status !== "loading" && status !== "success" ? { scale: 0.98 } : {}}
         disabled={status === "loading" || status === "success"}
-        className="group relative flex h-16 w-full items-center justify-center overflow-hidden rounded-full bg-black text-white disabled:opacity-50"
+        className="group relative flex h-16 w-full items-center justify-center overflow-hidden rounded-full bg-brand-button text-white disabled:opacity-50"
       >
         <span className="relative z-10 font-display text-sm font-bold uppercase tracking-[0.3em]">
           {status === "loading" ? "Submitting..." : status === "success" ? "Joined!" : "Get Early Access"}
         </span>
-        <div className="absolute inset-0 -translate-x-full bg-zinc-800 transition-transform duration-500 group-hover:translate-x-0" />
+        <div className="absolute inset-0 -translate-x-full bg-brand transition-transform duration-500 group-hover:translate-x-0" />
       </motion.button>
       
       {status === "success" && (
@@ -125,7 +125,7 @@ export function CustomerWaitlistForm() {
         </motion.p>
       )}
 
-      <motion.p variants={itemVariants} className="text-center font-ui text-xs text-black/30">
+      <motion.p variants={itemVariants} className="text-center font-ui text-xs text-[#111111]/30">
         By joining, you agree to our privacy policy and will receive exclusive updates.
       </motion.p>
     </motion.form>

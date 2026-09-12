@@ -19,14 +19,14 @@ import data from "@/data/user/userdropdown/custom-ready-to-wear/custom-ready-to-
 
 export default function CustomReadyToWearPage() {
   return (
-    <div className="bg-white text-zinc-900 selection:bg-[#3A3A3A] selection:text-white">
+    <div className="bg-white text-zinc-900 selection:bg-brand-darker selection:text-white">
       <Header data={navbarData} />
       
       <main className="relative min-h-screen w-full">
         {/* Continuous Journey Line (Tailor's Tape - spine of the page) */}
         <div className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 z-0 hidden lg:block overflow-hidden">
            {/* Tailor's Tape Visual - White/Black markings */}
-           <div className="h-full w-full bg-[repeating-linear-gradient(to_bottom,transparent,transparent_8px,#3A3A3A_8px,#3A3A3A_16px)] opacity-[0.06]" />
+           <div className="h-full w-full bg-[repeating-linear-gradient(to_bottom,transparent,transparent_8px,#1e1008_8px,#1e1008_16px)] opacity-[0.06]" />
            
            {/* Occasional Measurement markers (e.g. 50cm, 100cm) could go here but simple dashed is cleaner for now */}
         </div>

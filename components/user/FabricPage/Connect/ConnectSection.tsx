@@ -28,7 +28,7 @@ export function ConnectSection({ data }: ConnectSectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -37,7 +37,7 @@ export function ConnectSection({ data }: ConnectSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -47,7 +47,7 @@ export function ConnectSection({ data }: ConnectSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -63,8 +63,8 @@ export function ConnectSection({ data }: ConnectSectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-3"
                 >
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10"><Check className="h-3.5 w-3.5 text-[#3A3A3A]" /></span>
-                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-darker/10"><Check className="h-3.5 w-3.5 text-brand-darker" /></span>
+                  <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -73,7 +73,7 @@ export function ConnectSection({ data }: ConnectSectionProps) {
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                viewport={{ once: true }}
-               className="font-ui text-sm italic text-[#3A3A3A]/30"
+               className="font-ui text-sm italic text-[#111111]/30"
             >
                {data.closing}
             </motion.p>
@@ -81,7 +81,7 @@ export function ConnectSection({ data }: ConnectSectionProps) {
 
           {/* Right: Vendor Network Visual */}
           <div className="relative mt-10 lg:mt-0 lg:w-1/2">
-            <div className="relative mx-auto h-[500px] lg:h-[600px] w-full max-w-xl rounded-[3.5rem] bg-zinc-900 border border-black/5 shadow-2xl overflow-hidden flex items-center justify-center p-8">
+            <div className="relative mx-auto h-[500px] lg:h-[600px] w-full max-w-xl rounded-[3.5rem] bg-brand-darker border border-black/5 shadow-2xl overflow-hidden flex items-center justify-center p-8">
                
                {/* Background Map / Grid */}
                <div className="absolute inset-0 opacity-[0.02] mix-blend-overlay" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} />
@@ -94,7 +94,7 @@ export function ConnectSection({ data }: ConnectSectionProps) {
                   transition={{ type: "spring", duration: 1.5 }}
                   className="relative z-20 h-24 w-24 rounded-full bg-white flex items-center justify-center shadow-[0_0_50px_rgba(255,255,255,0.2)] ring-8 ring-white/20"
                >
-                  <ShieldCheck className="h-10 w-10 text-[#3A3A3A]" />
+                  <ShieldCheck className="h-10 w-10 text-brand-darker" />
                   <div className="absolute top-full mt-4 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 whitespace-nowrap">
                      <span className="font-display text-[9px] font-bold text-white uppercase tracking-widest">Verified Network</span>
                   </div>

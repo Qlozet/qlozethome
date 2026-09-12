@@ -19,10 +19,10 @@ type ClosingCTAProps = {
 
 export function ClosingCTA({ data }: ClosingCTAProps) {
   return (
-    <section className="relative z-10 bg-[#3A3A3A] py-32 overflow-hidden text-white" data-theme="dark">
+    <section className="relative z-10 bg-brand-darker py-32 overflow-hidden text-white" data-theme="dark">
       {/* Background Effect */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-[#3A3A3A]/40 via-[#2A2A2A] to-[#3A3A3A]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-brand-darker/40 via-[#2A2A2A] to-brand-darker" />
         <div 
            className="absolute inset-0 opacity-[0.05]"
            style={{ backgroundImage: 'linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)', backgroundSize: '100px 100px'}}
@@ -68,10 +68,10 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
          >
             <Link 
                href={data.primaryAction.href}
-               className="group flex items-center justify-center gap-4 bg-white text-black px-10 py-5 rounded-full font-display text-[12px] font-bold uppercase tracking-[0.3em] hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(255,255,255,0.2)]"
+               className="group flex items-center justify-center gap-4 bg-white text-brand-darker px-10 py-5 rounded-full font-display text-[12px] font-bold uppercase tracking-[0.3em] hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(255,255,255,0.2)]"
             >
                <span>{data.primaryAction.label}</span>
-               <div className="h-8 w-8 rounded-full bg-[#3A3A3A] flex items-center justify-center group-hover:bg-white/20 transition-colors">
+               <div className="h-8 w-8 rounded-full bg-brand-darker flex items-center justify-center group-hover:bg-white/20 transition-colors">
                   <ArrowRight className="h-4 w-4 text-white" />
                </div>
             </Link>

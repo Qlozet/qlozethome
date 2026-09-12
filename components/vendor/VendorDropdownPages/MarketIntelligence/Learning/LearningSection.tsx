@@ -24,7 +24,7 @@ const INTERACTION_LOG = [
 
 export function LearningSection({ data }: LearningSectionProps) {
   return (
-    <section className="relative z-20 bg-[#0A0A0A] px-6 md:px-10 lg:px-10 py-24 sm:py-32 overflow-hidden" data-theme="dark">
+    <section className="relative z-20 bg-brand-darker px-6 md:px-10 lg:px-10 py-24 sm:py-32 overflow-hidden" data-theme="dark">
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.02),transparent)]" />
 
       <div className="relative z-10 mx-auto max-w-[94rem]">
@@ -48,7 +48,7 @@ export function LearningSection({ data }: LearningSectionProps) {
             className="rounded-[2rem] sm:rounded-[3rem] bg-white/[0.03] border border-white/5 p-5 sm:p-8 transition-all duration-500 hover:bg-white/[0.06]">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
-                <div className="h-8 w-8 rounded-xl bg-white text-[#1A1A1A] flex items-center justify-center"><BrainCircuit className="h-3.5 w-3.5" /></div>
+                <div className="h-8 w-8 rounded-xl bg-brand-light text-brand-darker flex items-center justify-center"><BrainCircuit className="h-3.5 w-3.5" /></div>
                 <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">AI Accuracy Growth</span>
               </div>
               <div className="flex items-center gap-1.5 bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20">
@@ -64,7 +64,7 @@ export function LearningSection({ data }: LearningSectionProps) {
                   <motion.div initial={{ height: 0 }} whileInView={{ height: `${t.accuracy}%` }} viewport={{ once: true }}
                     transition={{ delay: 0.4 + i * 0.15, duration: 0.6, ease: "easeOut" }}
                     className="w-full rounded-xl bg-white/10 hover:bg-white/20 transition-colors cursor-pointer relative group">
-                    <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#3A3A3A] px-2 py-1 rounded-lg text-center whitespace-nowrap">
+                    <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-brand-light text-brand-darker px-2 py-1 rounded-lg text-center whitespace-nowrap">
                       <span className="font-mono text-[8px] font-bold block">{t.accuracy}%</span>
                       <span className="font-mono text-[6px] text-black/50">{t.insights} insights</span>
                     </div>
@@ -90,7 +90,7 @@ export function LearningSection({ data }: LearningSectionProps) {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
             className="rounded-[2rem] sm:rounded-[3rem] bg-white/[0.03] border border-white/5 p-5 sm:p-8 transition-all duration-500 hover:bg-white/[0.06]">
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-8 w-8 rounded-xl bg-white text-[#1A1A1A] flex items-center justify-center"><MessageSquareText className="h-3.5 w-3.5" /></div>
+              <div className="h-8 w-8 rounded-xl bg-brand-light text-brand-darker flex items-center justify-center"><MessageSquareText className="h-3.5 w-3.5" /></div>
               <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">Learning Log</span>
             </div>
 
@@ -118,7 +118,7 @@ export function LearningSection({ data }: LearningSectionProps) {
                 const Icon = iconMap[feature.icon] || RefreshCcw;
                 return (
                   <div key={i} className="flex items-center gap-3 group">
-                    <div className="h-7 w-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-white group-hover:text-[#1A1A1A] transition-all">
+                    <div className="h-7 w-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-brand-light group-hover:text-brand-darker transition-all">
                       <Icon className="h-3 w-3" strokeWidth={1.5} />
                     </div>
                     <span className="font-display text-[9px] font-bold text-white/40 uppercase tracking-wider group-hover:text-white/70 transition-colors">{feature.title}</span>

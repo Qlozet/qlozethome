@@ -28,7 +28,7 @@ export function EndToEndLogisticsSection({ data }: EndToEndLogisticsSectionProps
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -37,7 +37,7 @@ export function EndToEndLogisticsSection({ data }: EndToEndLogisticsSectionProps
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-5xl lg:text-6xl"
+                className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-5xl lg:text-6xl"
               >
                 {data.title}
               </motion.h2>
@@ -47,7 +47,7 @@ export function EndToEndLogisticsSection({ data }: EndToEndLogisticsSectionProps
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/40 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -63,10 +63,10 @@ export function EndToEndLogisticsSection({ data }: EndToEndLogisticsSectionProps
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-6 group"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#F9F9F8] border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all shadow-sm">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-light border border-brand-darker/5 group-hover:bg-brand-darker group-hover:text-brand-light transition-all shadow-sm">
                     <Package className="h-4 w-4" strokeWidth={1.5} />
                   </div>
-                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
+                  <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -83,17 +83,17 @@ export function EndToEndLogisticsSection({ data }: EndToEndLogisticsSectionProps
 
           {/* Right: Technical Routing Node Mockup */}
           <div className="relative lg:w-1/2">
-             <div className="relative mx-auto h-[450px] lg:h-[550px] w-full max-w-md rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl p-10 flex flex-col gap-10 overflow-hidden transform items-center justify-center">
+             <div className="relative mx-auto h-[450px] lg:h-[550px] w-full max-w-md rounded-[3rem] bg-brand-light border border-brand-darker/5 shadow-2xl p-10 flex flex-col gap-10 overflow-hidden transform items-center justify-center">
                 {/* Visualizing "Seamless Journey" with Sequential Animation */}
                 <div className="relative h-full w-full flex items-center justify-center py-10">
                    
                    {/* Background Layer Grid */}
                    <div className="absolute inset-x-0 inset-y-0 opacity-[0.02] pointer-events-none">
-                       <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+                       <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(#1e1008 1px, transparent 1px), linear-gradient(90deg, #1e1008 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
                    </div>
 
                    {/* Solid Vertical Track line (Background) */}
-                   <div className="absolute top-[10%] bottom-[10%] left-1/2 w-px -translate-x-1/2 bg-black opacity-[0.05]" />
+                   <div className="absolute top-[10%] bottom-[10%] left-1/2 w-px -translate-x-1/2 bg-brand-darker opacity-[0.05]" />
                    
                    {/* Animated Track Fill */}
                    <div className="absolute top-[10%] bottom-[10%] left-1/2 w-px -translate-x-1/2 overflow-hidden pointer-events-none">
@@ -101,7 +101,7 @@ export function EndToEndLogisticsSection({ data }: EndToEndLogisticsSectionProps
                          initial={{ top: "-20%" }}
                          animate={{ top: "120%" }}
                          transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                         className="h-32 w-full bg-gradient-to-b from-transparent via-black to-transparent opacity-20"
+                         className="h-32 w-full bg-gradient-to-b from-transparent via-brand-darker to-transparent opacity-20"
                       />
                    </div>
                    
@@ -110,7 +110,7 @@ export function EndToEndLogisticsSection({ data }: EndToEndLogisticsSectionProps
                      initial={{ top: "10%", opacity: 0 }}
                      animate={{ top: "90%", opacity: [0, 1, 1, 0] }}
                      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", times: [0, 0.1, 0.9, 1] }}
-                     className="absolute left-1/2 -translate-x-1/2 h-3.5 w-3.5 rounded-full bg-black shadow-[0_0_15px_rgba(0,0,0,0.2)] z-10 ring-4 ring-white"
+                     className="absolute left-1/2 -translate-x-1/2 h-3.5 w-3.5 rounded-full bg-brand-darker shadow-[0_0_15px_rgba(0,0,0,0.2)] z-10 ring-4 ring-white"
                    />
                    
                    {/* Three Workflow Nodes */}
@@ -123,11 +123,11 @@ export function EndToEndLogisticsSection({ data }: EndToEndLogisticsSectionProps
                         className="relative flex items-center justify-between w-full px-4 group/node"
                      >
                         <div className="flex-1 text-right pr-6">
-                           <span className="font-display text-[9px] font-bold uppercase tracking-[0.3em] text-black transition-colors">Vendor Storefront</span>
+                           <span className="font-display text-[9px] font-bold uppercase tracking-[0.3em] text-brand-darker transition-colors">Vendor Storefront</span>
                         </div>
                         
-                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-xl shadow-black/5 border border-black/10 transition-all duration-500 group-hover/node:scale-110 group-hover/node:bg-black group-hover/node:text-white">
-                           <Store className="h-5 w-5 text-black group-hover/node:text-white transition-colors" strokeWidth={1.5} />
+                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-xl shadow-brand-darker/5 border border-brand-darker/10 transition-all duration-500 group-hover/node:scale-110 group-hover/node:bg-brand-darker group-hover/node:text-brand-light">
+                           <Store className="h-5 w-5 text-brand-darker group-hover/node:text-brand-light transition-colors" strokeWidth={1.5} />
                         </div>
                         
                         <div className="flex-1 pl-6 opacity-0"></div>
@@ -139,12 +139,12 @@ export function EndToEndLogisticsSection({ data }: EndToEndLogisticsSectionProps
                         whileInView={{ opacity: 1, scale: 1 }}
                         className="relative flex items-center justify-center group/hub z-30"
                      >
-                        <div className="absolute -inset-4 rounded-full border border-dashed border-black/10 animate-[spin_10s_linear_infinite] group-hover/hub:border-black/20 transition-colors" />
-                        <div className="absolute -inset-8 rounded-full border border-dashed border-black/5 animate-[spin_15s_linear_infinite_reverse]" />
+                        <div className="absolute -inset-4 rounded-full border border-dashed border-brand-darker/10 animate-[spin_10s_linear_infinite] group-hover/hub:border-brand-darker/20 transition-colors" />
+                        <div className="absolute -inset-8 rounded-full border border-dashed border-brand-darker/5 animate-[spin_15s_linear_infinite_reverse]" />
                         
-                        <div className="flex h-20 w-20 flex-col items-center justify-center gap-1 rounded-full bg-white shadow-2xl border border-black/10 transition-transform duration-700 group-hover/hub:scale-110">
-                           <Truck className="h-6 w-6 text-black" strokeWidth={1.5} />
-                           <span className="font-display text-[7px] font-bold uppercase tracking-[0.3em] text-black">Hub</span>
+                        <div className="flex h-20 w-20 flex-col items-center justify-center gap-1 rounded-full bg-white shadow-2xl border border-brand-darker/10 transition-transform duration-700 group-hover/hub:scale-110">
+                           <Truck className="h-6 w-6 text-brand-darker" strokeWidth={1.5} />
+                           <span className="font-display text-[7px] font-bold uppercase tracking-[0.3em] text-brand-darker">Hub</span>
                         </div>
                      </motion.div>
 
@@ -156,12 +156,12 @@ export function EndToEndLogisticsSection({ data }: EndToEndLogisticsSectionProps
                      >
                         <div className="flex-1 pr-6 flex justify-end"></div>
                         
-                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-xl shadow-black/5 border border-black/10 transition-all duration-500 group-hover/node:scale-110 group-hover/node:bg-black group-hover/node:text-white">
-                           <User className="h-5 w-5 text-black group-hover/node:text-white transition-colors" strokeWidth={1.5} />
+                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-xl shadow-brand-darker/5 border border-brand-darker/10 transition-all duration-500 group-hover/node:scale-110 group-hover/node:bg-brand-darker group-hover/node:text-brand-light">
+                           <User className="h-5 w-5 text-brand-darker group-hover/node:text-brand-light transition-colors" strokeWidth={1.5} />
                         </div>
                         
                         <div className="flex-1 pl-6 text-left">
-                           <span className="font-display text-[9px] font-bold uppercase tracking-[0.3em] text-zinc-400 group-hover/node:text-black transition-colors">Client Drop</span>
+                           <span className="font-display text-[9px] font-bold uppercase tracking-[0.3em] text-[#111111]/40 group-hover/node:text-brand-darker transition-colors">Client Drop</span>
                         </div>
                      </motion.div>
 
@@ -172,8 +172,8 @@ export function EndToEndLogisticsSection({ data }: EndToEndLogisticsSectionProps
              
              <div className="text-center z-10 pt-10">
                 <div className="flex flex-col gap-1 items-center">
-                   <p className="font-display text-[9px] text-black/20 leading-relaxed uppercase tracking-[0.4em]">Batch ID: QL-809277</p>
-                   <p className="font-display text-[9px] text-black/40 leading-relaxed uppercase tracking-[0.4em]">Integrated Logistics Stack</p>
+                   <p className="font-display text-[9px] text-[#111111]/20 leading-relaxed uppercase tracking-[0.4em]">Batch ID: QL-809277</p>
+                   <p className="font-display text-[9px] text-[#111111]/40 leading-relaxed uppercase tracking-[0.4em]">Integrated Logistics Stack</p>
                 </div>
              </div>
           </div>
@@ -181,7 +181,7 @@ export function EndToEndLogisticsSection({ data }: EndToEndLogisticsSectionProps
       </div>
       
       {/* Spine Marker */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1.5 w-1.5 rounded-full bg-black/10 shadow-sm" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1.5 w-1.5 rounded-full bg-brand-darker/10 shadow-sm" />
     </section>
   );
 }

@@ -18,14 +18,14 @@ import growthData from "@/data/vendor/growth/growth.json";
 
 export default function PaymentsAndGrowthPage() {
   return (
-    <div className="bg-white text-zinc-900 selection:bg-black selection:text-white">
+    <div className="bg-white text-zinc-900 selection:bg-brand-darker selection:text-white">
       <Header data={navbarData} />
       
       <main className="relative min-h-screen w-full">
         {/* Continuous Journey Line (The Revenue Stream - spine of the page) */}
         <div className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 z-0 hidden lg:block overflow-hidden">
            {/* Technical Thread Visual - Dotted/Textured line */}
-           <div className="h-full w-full bg-[repeating-linear-gradient(to_bottom,transparent,transparent_6px,#000_6px,#000_12px)] opacity-[0.03]" />
+           <div className="h-full w-full bg-[repeating-linear-gradient(to_bottom,transparent,transparent_6px,var(--brand-darker)_6px,var(--brand-darker)_12px)] opacity-[0.03]" />
         </div>
 
         <div className="relative z-10 space-y-0">

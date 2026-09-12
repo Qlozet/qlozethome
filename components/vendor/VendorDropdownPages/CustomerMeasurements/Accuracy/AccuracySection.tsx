@@ -27,7 +27,7 @@ export function AccuracySection({ data }: AccuracySectionProps) {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -36,7 +36,7 @@ export function AccuracySection({ data }: AccuracySectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-5xl lg:text-6xl"
+                className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-5xl lg:text-6xl"
               >
                 {data.title}
               </motion.h2>
@@ -46,7 +46,7 @@ export function AccuracySection({ data }: AccuracySectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/40 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -66,10 +66,10 @@ export function AccuracySection({ data }: AccuracySectionProps) {
                     transition={{ delay: 0.2 + i * 0.1 }}
                     className="flex items-center gap-6 group"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#F9F9F8] border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all shadow-sm">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-light border border-brand-darker/5 group-hover:bg-brand-darker group-hover:text-brand-light transition-all shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
-                    <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
+                    <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature}</span>
                   </motion.div>
                 );
               })}
@@ -78,7 +78,7 @@ export function AccuracySection({ data }: AccuracySectionProps) {
 
           {/* Left: Interactive Scan Visual */}
           <div className="relative mt-12 lg:mt-0 lg:w-1/2">
-            <div className="relative mx-auto h-[420px] sm:h-[550px] lg:h-[650px] w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-zinc-950 shadow-2xl overflow-hidden flex flex-col pt-8 sm:pt-12 items-center">
+            <div className="relative mx-auto h-[420px] sm:h-[550px] lg:h-[650px] w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-brand-darker shadow-2xl overflow-hidden flex flex-col pt-8 sm:pt-12 items-center">
                
                {/* Grid Background */}
                <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
@@ -103,17 +103,17 @@ export function AccuracySection({ data }: AccuracySectionProps) {
                      <path d="M70 300 Q 100 320 130 300 L 150 400 L 50 400 Z" stroke="white" strokeWidth="2" />
                      
                      {/* Horizontal measurement lines */}
-                     <line x1="20" y1="120" x2="180" y2="120" stroke="#10b981" strokeWidth="1" />
-                     <line x1="40" y1="200" x2="160" y2="200" stroke="#10b981" strokeWidth="1" />
-                     <line x1="50" y1="280" x2="150" y2="280" stroke="#10b981" strokeWidth="1" />
-                     <line x1="30" y1="360" x2="170" y2="360" stroke="#10b981" strokeWidth="1" />
+                     <line x1="20" y1="120" x2="180" y2="120" stroke="var(--brand)" strokeWidth="1" />
+                     <line x1="40" y1="200" x2="160" y2="200" stroke="var(--brand)" strokeWidth="1" />
+                     <line x1="50" y1="280" x2="150" y2="280" stroke="var(--brand)" strokeWidth="1" />
+                     <line x1="30" y1="360" x2="170" y2="360" stroke="var(--brand)" strokeWidth="1" />
                   </svg>
                   
                   {/* Vertical Scanner Line */}
                   <motion.div 
                      animate={{ y: [0, 400, 0] }}
                      transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                     className="absolute top-0 left-[-20%] right-[-20%] h-0.5 bg-[#3A3A3A] shadow-[0_0_15px_rgba(58,58,58,0.3)] border-b border-white/20 z-20"
+                     className="absolute top-0 left-[-20%] right-[-20%] h-0.5 bg-brand shadow-[0_0_15px_rgba(56,31,16,0.35)] border-b border-white/20 z-20"
                   />
 
                   {/* Measurement Data Nodes */}
@@ -131,8 +131,8 @@ export function AccuracySection({ data }: AccuracySectionProps) {
                         className="absolute right-0 sm:right-[-60px] flex items-center gap-2"
                         style={{ top: node.y }}
                      >
-                        <div className="w-12 h-px bg-[#F9F9F8]0/50 relative">
-                           <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#3A3A3A]" />
+                        <div className="w-12 h-px bg-brand-light/50 relative">
+                           <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-brand" />
                         </div>
                         <div className="bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 flex flex-col shadow-xl">
                            <span className="font-mono text-[8px] text-zinc-400 font-bold uppercase">{node.label}</span>
@@ -146,7 +146,7 @@ export function AccuracySection({ data }: AccuracySectionProps) {
                {/* Top Control Bar overlay */}
                <div className="absolute top-6 left-6 right-6 flex justify-between items-center z-30">
                   <div className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 flex items-center gap-2">
-                     <Scan className="h-3 w-3 text-[#3A3A3A]" />
+                     <Scan className="h-3 w-3 text-brand" />
                      <span className="font-mono text-[9px] text-white tracking-widest uppercase">Precision Active</span>
                   </div>
                   <div className="flex gap-1 bg-white/5 p-1 rounded-full border border-white/10 backdrop-blur-md">

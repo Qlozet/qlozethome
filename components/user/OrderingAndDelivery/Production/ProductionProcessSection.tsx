@@ -72,7 +72,7 @@ export function ProductionProcessSection({ data }: ProductionProcessSectionProps
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -80,17 +80,17 @@ export function ProductionProcessSection({ data }: ProductionProcessSectionProps
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl"
               >
                 {data.title}
-                <span className="block mt-2 text-xl text-[#3A3A3A]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
+                <span className="block mt-2 text-xl text-[#111111]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -143,7 +143,7 @@ export function ProductionProcessSection({ data }: ProductionProcessSectionProps
 
                   {/* Status Badge */}
                   <div className="absolute top-5 left-5 flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-black/5 shadow-sm">
-                    <div className="h-1.5 w-1.5 rounded-full bg-[#3E1C01] animate-pulse" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-brand-darker animate-pulse" />
                     <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest leading-none">Live Feed</span>
                   </div>
 
@@ -182,16 +182,16 @@ export function ProductionProcessSection({ data }: ProductionProcessSectionProps
                         whileTap={{ scale: 0.99 }}
                         className={`flex items-center gap-4 p-3.5 rounded-xl cursor-pointer transition-all duration-300 ${
                           isActive
-                            ? "bg-[#3A3A3A] text-white shadow-lg"
+                            ? "bg-brand-darker text-white shadow-lg"
                             : "bg-white border border-black/5 hover:bg-zinc-50"
                         }`}
                       >
                         {/* Status Icon */}
                         <div className={`h-9 w-9 rounded-lg flex items-center justify-center shrink-0 ${
-                          isActive ? "bg-white/10" : isComplete ? "bg-[#3E1C01]/10" : "bg-zinc-50"
+                          isActive ? "bg-white/10" : isComplete ? "bg-brand-darker/10" : "bg-zinc-50"
                         }`}>
                           {isComplete && !isActive ? (
-                            <CheckCircle2 className="h-4 w-4 text-[#3E1C01]" />
+                            <CheckCircle2 className="h-4 w-4 text-brand-darker" />
                           ) : isActive ? (
                             <motion.div animate={{ rotate: [0, 10, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
                               <Icon className="h-4 w-4 text-white" />
@@ -208,7 +208,7 @@ export function ProductionProcessSection({ data }: ProductionProcessSectionProps
 
                         {/* Time */}
                         <span className={`font-mono text-[8px] uppercase tracking-widest shrink-0 ${
-                          isActive ? "text-white/40" : isComplete ? "text-[#3E1C01]" : "text-black/25"
+                          isActive ? "text-white/40" : isComplete ? "text-brand-darker" : "text-black/25"
                         }`}>
                           {step.time}
                         </span>
@@ -226,7 +226,7 @@ export function ProductionProcessSection({ data }: ProductionProcessSectionProps
                           whileInView={{ width: "100%" }}
                           viewport={{ once: true }}
                           transition={{ delay: 0.8 + i * 0.15 }}
-                          className={`h-1 flex-1 rounded-full ${i < completedUpTo ? "bg-[#3E1C01]" : i === completedUpTo ? "bg-[#3E1C01]/30" : "bg-black/5"}`}
+                          className={`h-1 flex-1 rounded-full ${i < completedUpTo ? "bg-brand-darker" : i === completedUpTo ? "bg-brand-darker/30" : "bg-black/5"}`}
                         />
                       ))}
                     </div>

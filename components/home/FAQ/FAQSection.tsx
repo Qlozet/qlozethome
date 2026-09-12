@@ -63,10 +63,10 @@ export function FAQSection({ data, dark = false }: FAQSectionProps) {
               <p className={`font-display text-[10px] font-bold uppercase tracking-widest ${dark ? 'text-white/20' : 'text-black/20'}`}>Still have questions?</p>
               <a 
                 href="mailto:support@qlozet.com" 
-                className={`group flex w-fit items-center gap-4 border-b pb-2 font-display text-[10px] font-bold uppercase tracking-[0.3em] transition-all ${dark ? 'border-white/10 text-white hover:border-white' : 'border-black/10 text-black hover:border-black'}`}
+                className={`group flex w-fit items-center gap-4 border-b pb-2 font-display text-[10px] font-bold uppercase tracking-[0.3em] transition-all ${dark ? 'border-white/10 text-white hover:border-white' : 'border-brand/10 text-brand hover:border-brand'}`}
               >
                 Contact our styling team
-                <div className={`h-px transition-all duration-500 group-hover:w-12 ${dark ? 'bg-white w-8' : 'bg-black w-8'}`} />
+                <div className={`h-px transition-all duration-500 group-hover:w-12 ${dark ? 'bg-white w-8' : 'bg-brand w-8'}`} />
               </a>
             </motion.div>
           </div>
@@ -84,12 +84,12 @@ export function FAQSection({ data, dark = false }: FAQSectionProps) {
                     aria-expanded={isOpen}
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                   >
-                    <span className={`flex-1 font-display text-xl font-medium tracking-tight transition-colors sm:text-2xl ${isOpen ? (dark ? 'text-white' : 'text-black') : (dark ? 'text-white/40' : 'text-black/40')}`}>
+                    <span className={`flex-1 font-display text-xl font-medium tracking-tight transition-colors sm:text-2xl ${isOpen ? (dark ? 'text-white' : 'text-brand') : (dark ? 'text-white/40' : 'text-black/40')}`}>
                       {item.question}
                     </span>
                     <div className="relative flex h-8 w-8 shrink-0 items-center justify-center">
-                      <div className={`h-px w-6 transition-transform duration-700 ${isOpen ? 'rotate-180 bg-black' : ''} ${dark ? 'bg-white' : 'bg-black/20'}`} />
-                      <div className={`absolute h-6 w-px transition-transform duration-700 ${isOpen ? 'rotate-90 opacity-0' : ''} ${dark ? 'bg-white' : 'bg-black/20'}`} />
+                      <div className={`h-px w-6 transition-transform duration-700 ${isOpen ? 'rotate-180 bg-brand' : ''} ${dark ? 'bg-white' : 'bg-brand/20'}`} />
+                      <div className={`absolute h-6 w-px transition-transform duration-700 ${isOpen ? 'rotate-90 opacity-0' : ''} ${dark ? 'bg-white' : 'bg-brand/20'}`} />
                     </div>
                   </button>
                   

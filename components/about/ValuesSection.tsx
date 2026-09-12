@@ -36,7 +36,7 @@ const itemVariants = {
 
 export function ValuesSection({ data }: ValuesSectionProps) {
   return (
-    <section id={data.id} className="relative z-10 bg-zinc-50 px-6 md:px-10 lg:px-10 py-24 sm:py-32 scroll-mt-32" data-theme="light">
+    <section id={data.id} className="relative z-10 bg-brand-light px-6 md:px-10 lg:px-10 py-24 sm:py-32 scroll-mt-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-4 sm:px-6 md:px-10 lg:px-10">
         <motion.div 
           initial={{ y: 20, opacity: 0 }}
@@ -45,12 +45,12 @@ export function ValuesSection({ data }: ValuesSectionProps) {
           className="mb-24 flex flex-col gap-8"
         >
           <div className="flex items-center gap-4">
-            <span className="inline-flex h-px w-12 bg-[#3A3A3A]/20" />
-            <span className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40">
+            <span className="inline-flex h-px w-12 bg-[#111111]/20" />
+            <span className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40">
               {data.tagline}
             </span>
           </div>
-          <h2 className="font-display max-w-2xl text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl">
+          <h2 className="font-display max-w-2xl text-5xl font-medium leading-[1.05] tracking-tight text-[#111111] sm:text-7xl">
             {data.title}
           </h2>
         </motion.div>
@@ -68,7 +68,7 @@ export function ValuesSection({ data }: ValuesSectionProps) {
               key={idx}
               className="group flex flex-col gap-8 bg-white p-10 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-[#3A3A3A] text-white transition-transform duration-500 group-hover:scale-110">
+              <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-brand-button text-white transition-transform duration-500 group-hover:scale-110">
                 {card.icon === 'ruler' && (
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
                     <path d="M21.3 15.3l-9-9c-.7-.7-1.9-.7-2.6 0l-7 7c-.7.7-.7 1.9 0 2.6l9 9c.7.7 1.9.7 2.6 0l7-7c.7-.7.7-1.9 0-2.6z" />
@@ -98,10 +98,10 @@ export function ValuesSection({ data }: ValuesSectionProps) {
               </div>
               
               <div className="flex flex-col gap-4">
-                <h3 className="font-display text-2xl font-medium text-[#3A3A3A]">
+                 <h3 className="font-display text-2xl font-medium text-brand-darker">
                   {card.title}
                 </h3>
-                <p className="font-ui text-base leading-relaxed text-[#3A3A3A]/50">
+                <p className="font-ui text-base leading-relaxed text-brand-darker/60">
                   {card.description}
                 </p>
               </div>

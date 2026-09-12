@@ -10,7 +10,7 @@ type ProcessSectionProps = {
 
 export function ProcessSection({ data }: ProcessSectionProps) {
   return (
-    <section id={data.id} className="scroll-mt-32 bg-[#3A3A3A] py-24 sm:py-32" data-theme="dark">
+    <section id={data.id} className="scroll-mt-32 bg-brand-darker py-24 sm:py-32" data-theme="dark">
       <div className="mx-auto flex w-full max-w-[94rem] flex-col gap-24 px-6 md:px-10 lg:px-10">
         <div className="flex flex-col gap-8">
           <div className="flex items-center gap-4 text-white/40">
@@ -54,7 +54,7 @@ export function ProcessSection({ data }: ProcessSectionProps) {
         <div className="flex justify-center">
           <Link
             href={data.cta.href}
-            className="inline-flex items-center justify-center rounded-full bg-white px-12 py-5 text-xs font-bold uppercase tracking-[0.3em] text-black shadow-2xl transition-all hover:scale-105 active:scale-[0.98]"
+            className="inline-flex items-center justify-center rounded-full bg-white px-12 py-5 text-xs font-bold uppercase tracking-[0.3em] text-brand shadow-2xl transition-all hover:scale-105 hover:bg-brand-light active:scale-[0.98]"
           >
             {data.cta.label}
           </Link>

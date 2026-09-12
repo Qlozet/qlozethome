@@ -28,7 +28,7 @@ export function FulfillmentSection({ data }: FulfillmentSectionProps) {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-black/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -37,7 +37,7 @@ export function FulfillmentSection({ data }: FulfillmentSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-5xl lg:text-6xl"
+                className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-5xl lg:text-6xl"
               >
                 {data.title}
               </motion.h2>
@@ -47,7 +47,7 @@ export function FulfillmentSection({ data }: FulfillmentSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/40 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -63,10 +63,10 @@ export function FulfillmentSection({ data }: FulfillmentSectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-6 group"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#F9F9F8] border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all shadow-sm">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-light border border-brand-darker/5 group-hover:bg-brand-darker group-hover:text-brand-light transition-all shadow-sm">
                     <Layers className="h-4 w-4" strokeWidth={1.5} />
                   </div>
-                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
+                  <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -83,13 +83,13 @@ export function FulfillmentSection({ data }: FulfillmentSectionProps) {
 
           {/* Left: Dynamic Scaling Mockup (Mobile: Second) */}
           <div className="relative lg:w-1/2 order-2 lg:order-1 flex items-center justify-center">
-             <div className="relative mx-auto h-[480px] lg:h-[580px] w-full max-w-md rounded-[3rem] bg-zinc-50 border border-black/5 shadow-2xl overflow-hidden flex transform items-center justify-center">
+             <div className="relative mx-auto h-[480px] lg:h-[580px] w-full max-w-md rounded-[3rem] bg-brand-light border border-brand-darker/5 shadow-2xl overflow-hidden flex transform items-center justify-center">
                 
                 {/* Clean Background */}
                 <div className="absolute inset-x-0 inset-y-0 opacity-[0.02]">
-                    <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+                    <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(#1e1008 1px, transparent 1px), linear-gradient(90deg, #1e1008 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
                 </div>
-
+ 
                 {/* Vertical interactive slider visualization */}
                 <div className="relative w-full h-full flex items-center p-8 gap-8 z-10">
                    
@@ -102,7 +102,7 @@ export function FulfillmentSection({ data }: FulfillmentSectionProps) {
                                key={i}
                                animate={{ height: ["10%", "100%", "20%"] }}
                                transition={{ duration: 3, repeat: Infinity, delay: i * 0.2, ease: "easeInOut", repeatType: "mirror" }}
-                               className="w-full bg-black rounded-t-sm"
+                               className="w-full bg-brand-darker rounded-t-sm"
                             />
                          ))}
                       </div>
@@ -116,33 +116,33 @@ export function FulfillmentSection({ data }: FulfillmentSectionProps) {
 
                       {/* The "Volumes" */}
                       <div className="flex flex-col h-full justify-between py-10 z-10">
-                         <div className="flex items-center gap-4 bg-white/50 backdrop-blur-md p-3 rounded-xl border border-black/5 shadow-sm">
-                            <div className="h-8 w-8 flex items-center justify-center rounded-lg bg-black text-white">
+                         <div className="flex items-center gap-4 bg-white/50 backdrop-blur-md p-3 rounded-xl border border-brand-darker/5 shadow-sm">
+                            <div className="h-8 w-8 flex items-center justify-center rounded-lg bg-brand-darker text-white">
                                <InfinityIcon className="h-4 w-4" />
                             </div>
                             <div className="flex flex-col">
-                               <span className="font-display text-[9px] font-bold uppercase tracking-widest text-black">Enterprise Batch</span>
-                               <span className="font-ui text-[9px] text-black/40">10,000+ Units/mo</span>
+                               <span className="font-display text-[9px] font-bold uppercase tracking-widest text-brand-darker">Enterprise Batch</span>
+                               <span className="font-ui text-[9px] text-[#111111]/40">10,000+ Units/mo</span>
                             </div>
                          </div>
                          
-                         <div className="flex items-center gap-4 bg-white/50 backdrop-blur-md p-3 rounded-xl border border-black/5 shadow-sm relative left-8">
-                            <div className="h-8 w-8 flex items-center justify-center rounded-lg bg-zinc-100 text-black border border-black/5">
+                         <div className="flex items-center gap-4 bg-white/50 backdrop-blur-md p-3 rounded-xl border border-brand-darker/5 shadow-sm relative left-8">
+                            <div className="h-8 w-8 flex items-center justify-center rounded-lg bg-brand-light text-brand-darker border border-brand-darker/5">
                                <Layers className="h-4 w-4" />
                             </div>
                             <div className="flex flex-col">
-                               <span className="font-display text-[9px] font-bold uppercase tracking-widest text-black">RTW Drops</span>
-                               <span className="font-ui text-[9px] text-black/40">100 - 5,000 Units/mo</span>
+                               <span className="font-display text-[9px] font-bold uppercase tracking-widest text-[#111111]">RTW Drops</span>
+                               <span className="font-ui text-[9px] text-[#111111]/40">100 - 5,000 Units/mo</span>
                             </div>
                          </div>
-
-                         <div className="flex items-center gap-4 bg-white/50 backdrop-blur-md p-3 rounded-xl border border-black/5 shadow-sm relative left-16">
-                            <div className="h-8 w-8 flex items-center justify-center rounded-lg bg-white text-black border border-black/5 shadow-sm shadow-black/5">
+ 
+                         <div className="flex items-center gap-4 bg-white/50 backdrop-blur-md p-3 rounded-xl border border-brand-darker/5 shadow-sm relative left-16">
+                            <div className="h-8 w-8 flex items-center justify-center rounded-lg bg-white text-brand-darker border border-brand-darker/5 shadow-sm shadow-brand-darker/5">
                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
                             </div>
                             <div className="flex flex-col">
-                               <span className="font-display text-[9px] font-bold uppercase tracking-widest text-black">Custom 1-of-1</span>
-                               <span className="font-ui text-[9px] text-black/40">Bespoke Orders</span>
+                               <span className="font-display text-[9px] font-bold uppercase tracking-widest text-brand-darker">Custom 1-of-1</span>
+                               <span className="font-ui text-[9px] text-[#111111]/40">Bespoke Orders</span>
                             </div>
                          </div>
                       </div>
@@ -150,12 +150,12 @@ export function FulfillmentSection({ data }: FulfillmentSectionProps) {
 
                    {/* right: The Slider Control */}
                    <div className="w-12 h-full py-10 flex flex-col items-center relative z-20">
-                      <div className="absolute top-10 bottom-10 w-0.5 bg-black/5 rounded-full" />
+                      <div className="absolute top-10 bottom-10 w-0.5 bg-brand-darker/5 rounded-full" />
                       <div className="absolute top-10 bottom-10 w-0.5 overflow-hidden rounded-full">
                          <motion.div 
                             animate={{ height: ["100%", "0%", "100%"] }}
                             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                            className="bg-black w-full"
+                            className="bg-brand-darker w-full"
                          />
                       </div>
                       
@@ -164,23 +164,23 @@ export function FulfillmentSection({ data }: FulfillmentSectionProps) {
                          initial={{ top: "0%" }}
                          animate={{ top: ["0%", "100%", "0%"] }}
                          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                         className="absolute w-12 h-12 -ml-6 bg-white border border-black shadow-2xl rounded-full flex items-center justify-center group"
+                         className="absolute w-12 h-12 -ml-6 bg-white border border-brand-darker shadow-2xl rounded-full flex items-center justify-center group"
                       >
-                         <div className="h-4 w-4 rounded-full bg-black flex items-center justify-center">
+                         <div className="h-4 w-4 rounded-full bg-brand-darker flex items-center justify-center">
                             <div className="w-2 h-0.5 bg-white rounded-full opacity-50" />
                          </div>
                          
                          {/* Dynamic scale reader label */}
-                         <div className="absolute -left-20 bg-black text-white px-3 py-1 rounded-md text-[8px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                         <div className="absolute -left-20 bg-brand-darker text-white px-3 py-1 rounded-md text-[8px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
                             Scaling
                          </div>
                       </motion.div>
                    </div>
                 </div>
-
+ 
                 {/* Footer Readout */}
                 <div className="absolute bottom-6 w-full text-center z-30">
-                   <p className="font-display text-[9px] font-bold text-black/20 uppercase tracking-[0.4em]">Seamless Capacity Adaptation</p>
+                   <p className="font-display text-[9px] font-bold text-[#111111]/20 uppercase tracking-[0.4em]">Seamless Capacity Adaptation</p>
                 </div>
              </div>
           </div>
@@ -188,7 +188,7 @@ export function FulfillmentSection({ data }: FulfillmentSectionProps) {
       </div>
       
       {/* Spine Marker */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1.5 w-1.5 rounded-full bg-black/10 shadow-sm" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1.5 w-1.5 rounded-full bg-brand-darker/10 shadow-sm" />
     </section>
   );
 }

@@ -82,7 +82,7 @@ export function IntegrationSection({ data }: IntegrationSectionProps) {
   const inView = useInView(cardRef, { once: true, margin: "-60px" });
 
   return (
-    <section id={data.id} className="relative z-10 bg-[#050505] py-24 sm:py-32 overflow-hidden text-white" data-theme="dark">
+    <section id={data.id} className="relative z-10 bg-brand-darker py-24 sm:py-32 overflow-hidden text-white" data-theme="dark">
       <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col gap-12 lg:flex-row-reverse lg:items-center lg:gap-24">
 
@@ -131,7 +131,7 @@ export function IntegrationSection({ data }: IntegrationSectionProps) {
                     transition={{ delay: 0.2 + i * 0.1 }}
                     className="flex items-center gap-6 group"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:bg-white group-hover:border-white/30 group-hover:text-[#1A1A1A] transition-all shadow-sm">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:bg-white group-hover:border-white/30 group-hover:text-brand-darker transition-all shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
                     <span className="font-display text-lg font-medium text-white/80">{feature}</span>
@@ -192,14 +192,14 @@ export function IntegrationSection({ data }: IntegrationSectionProps) {
                       initial={{ scale: 0 }}
                       animate={inView ? { scale: 1 } : {}}
                       transition={{ delay: 0.1, type: "spring", stiffness: 200 }}
-                      className="relative flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl border border-white/20 bg-[#3A3A3A] shadow-[0_0_40px_rgba(255,255,255,0.1)]"
+                      className="relative flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl border border-white/20 bg-brand shadow-[0_0_40px_rgba(255,255,255,0.1)]"
                     >
                       <DatabaseZap className="h-6 w-6 sm:h-7 sm:w-7 text-white/70" />
                       {/* Ping ring */}
                       <div className="absolute inset-0 rounded-2xl border border-white/30 animate-[ping_2.5s_ease-in-out_infinite]" />
                       {/* Label */}
                       <div className="absolute -bottom-6 whitespace-nowrap rounded-full bg-white px-2 py-0.5">
-                        <span className="font-mono text-[7px] font-bold text-white uppercase tracking-widest">Core</span>
+                        <span className="font-mono text-[7px] font-bold text-brand-darker uppercase tracking-widest">Core</span>
                       </div>
                     </motion.div>
 

@@ -34,7 +34,7 @@ export function ExploreHero({ data }: ExploreHeroProps) {
   };
 
   return (
-    <section ref={containerRef} id={data.id} className="relative flex min-h-[100svh] w-full flex-col items-center justify-center overflow-hidden bg-[#F9F9F8] px-6 md:px-10 lg:px-10 pt-32 pb-20">
+    <section ref={containerRef} id={data.id} className="relative flex min-h-[100svh] w-full flex-col items-center justify-center overflow-hidden bg-brand-light px-6 md:px-10 lg:px-10 pt-32 pb-20">
       
       {/* Gallery Frame (Image Layer) */}
       <motion.div 
@@ -51,7 +51,7 @@ export function ExploreHero({ data }: ExploreHeroProps) {
             sizes="(min-width: 768px) 70vw, 100vw"
           />
           {/* Framed Matte Effect */}
-          <div className="absolute inset-0 border-[20px] border-[#F9F9F8]/80 max-sm:border-[10px]" />
+          <div className="absolute inset-0 border-[20px] border-brand-light/80 max-sm:border-[10px]" />
         </div>
       </motion.div>
 
@@ -64,27 +64,27 @@ export function ExploreHero({ data }: ExploreHeroProps) {
       >
         {/* Exhibition Badge */}
         <motion.div variants={itemVariants} className="mb-12 flex items-center gap-4">
-          <div className="h-px w-8 bg-[#1A1A1A]" />
-          <span className="font-ui text-[10px] font-bold uppercase tracking-[0.4em] text-[#1A1A1A]">
+          <div className="h-px w-8 bg-brand-darker" />
+          <span className="font-ui text-[10px] font-bold uppercase tracking-[0.4em] text-brand-darker">
             {data.badge}
           </span>
-          <div className="h-px w-8 bg-[#1A1A1A]" />
+          <div className="h-px w-8 bg-brand-darker" />
         </motion.div>
         
         {/* Massive Sprawling Title */}
         <motion.div style={{ y: yText }} className="relative z-20 flex flex-col items-center">
           <motion.h1 
             variants={itemVariants}
-            className="font-display text-[4rem] font-light leading-[0.85] tracking-tighter text-[#1A1A1A] sm:text-[6rem] md:text-[8rem] lg:text-[10rem]"
+            className="font-display text-[4rem] font-light leading-[0.85] tracking-tighter text-[#111111] sm:text-[6rem] md:text-[8rem] lg:text-[10rem]"
           >
             {/* Split title for overlapping editorial effect */}
             <span className="block text-left -ml-10 sm:-ml-20">Explore</span>
-            <span className="block italic text-[#A38A59]">Vendors</span>
+            <span className="block italic text-brand-darker">Vendors</span>
           </motion.h1>
           
           <motion.p 
             variants={itemVariants}
-            className="mt-12 max-w-xl font-ui text-lg leading-relaxed text-[#1A1A1A]/70 sm:text-xl"
+            className="mt-12 max-w-xl font-ui text-lg leading-relaxed text-[#111111]/70 sm:text-xl"
           >
             {data.description}
           </motion.p>
@@ -94,13 +94,13 @@ export function ExploreHero({ data }: ExploreHeroProps) {
         <motion.div variants={itemVariants} className="mt-16 flex flex-col gap-6 sm:flex-row sm:items-center">
           <Link
             href={data.cta.href}
-            className="group relative inline-flex h-14 items-center justify-center overflow-hidden bg-[#1A1A1A] px-10 text-xs font-bold uppercase tracking-[0.2em] text-white transition-all hover:bg-[#3A3A3A] hover:px-12"
+            className="group relative inline-flex h-14 items-center justify-center overflow-hidden bg-brand-button px-10 text-xs font-bold uppercase tracking-[0.2em] text-white transition-all hover:bg-brand hover:px-12"
           >
             <span className="relative z-10">{data.cta.label}</span>
           </Link>
           <Link
             href="#perks"
-            className="group inline-flex h-14 items-center justify-center gap-3 border-b border-[#1A1A1A]/20 px-4 text-xs font-bold uppercase tracking-[0.2em] text-[#1A1A1A]/60 transition-all hover:border-[#1A1A1A] hover:text-[#1A1A1A]"
+            className="group inline-flex h-14 items-center justify-center gap-3 border-b border-brand-darker/20 px-4 text-xs font-bold uppercase tracking-[0.2em] text-brand-darker/60 transition-all hover:border-brand-darker hover:text-brand-darker"
           >
             View Exhibition
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 transition-transform group-hover:translate-y-1">

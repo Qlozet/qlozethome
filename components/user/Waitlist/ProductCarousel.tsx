@@ -43,7 +43,7 @@ export function ProductCarousel() {
   }, []);
 
   return (
-    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-zinc-50 lg:aspect-auto lg:h-[700px]">
+    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-brand-light lg:aspect-auto lg:h-[700px]">
       {/* Image Layer - Animated */}
       <AnimatePresence mode="wait">
         <motion.div

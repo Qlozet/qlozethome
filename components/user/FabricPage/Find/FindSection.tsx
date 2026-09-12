@@ -18,7 +18,7 @@ type FindSectionProps = {
 
 export function FindSection({ data }: FindSectionProps) {
   return (
-    <section id={data.id} className="relative z-10 bg-[#F9F9F8] py-24 sm:py-32 overflow-hidden" data-theme="light">
+    <section id={data.id} className="relative z-10 bg-brand-light py-24 sm:py-32 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-24">
           {/* Right/Top: Content */}
@@ -28,7 +28,7 @@ export function FindSection({ data }: FindSectionProps) {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -37,7 +37,7 @@ export function FindSection({ data }: FindSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -47,7 +47,7 @@ export function FindSection({ data }: FindSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -63,8 +63,8 @@ export function FindSection({ data }: FindSectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-3"
                 >
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10"><Check className="h-3.5 w-3.5 text-[#3A3A3A]" /></span>
-                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-darker/10"><Check className="h-3.5 w-3.5 text-brand-darker" /></span>
+                  <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -73,7 +73,7 @@ export function FindSection({ data }: FindSectionProps) {
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                viewport={{ once: true }}
-               className="font-ui text-sm italic text-[#3A3A3A]/30"
+               className="font-ui text-sm italic text-[#111111]/30"
             >
                {data.closing}
             </motion.p>
@@ -99,12 +99,12 @@ export function FindSection({ data }: FindSectionProps) {
                         whileInView={{ left: '100%' }}
                         viewport={{ once: true }}
                         transition={{ duration: 2, ease: "easeInOut", delay: 0.5 }}
-                        className="absolute inset-y-0 right-0 bg-white z-10 w-full"
+                        className="absolute inset-0 right-0 bg-white z-10 w-full"
                      />
                      <motion.div 
                         animate={{ opacity: [1, 0, 1] }}
                         transition={{ duration: 0.8, repeat: Infinity }}
-                        className="absolute h-4 w-0.5 bg-[#3E1C01] z-20"
+                        className="absolute h-4 w-0.5 bg-brand-darker z-20"
                         style={{ left: 'calc(100% - 2px)' }} // Roughly position the cursor, though dynamic tracking is complex in pure CSS without a width tween. We'll just rely on the reveal block
                      />
                   </div>
@@ -127,7 +127,7 @@ export function FindSection({ data }: FindSectionProps) {
                         whileInView={{ scale: 1, opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.6 + (i * 0.1), type: "spring" }}
-                        className={`px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-[0.2em] transition-all duration-300 cursor-pointer ${tag.active ? 'bg-black text-white shadow-lg shadow-black/20' : 'bg-white border border-black/5 text-black/40 hover:bg-black/5 hover:text-black/80'}`}
+                        className={`px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-[0.2em] transition-all duration-300 cursor-pointer ${tag.active ? 'bg-brand-darker text-white shadow-lg shadow-brand-darker/20' : 'bg-white border border-black/5 text-black/40 hover:bg-black/5 hover:text-black/80'}`}
                      >
                         {tag.name}
                      </motion.div>
@@ -155,7 +155,7 @@ export function FindSection({ data }: FindSectionProps) {
                         </div>
                         {/* Selector indicator */}
                         <div className="absolute top-3 right-3 h-6 w-6 rounded-full bg-white shadow-lg flex items-center justify-center scale-0 group-hover:scale-100 transition-transform duration-300 delay-100">
-                           <Check className="h-3 w-3 text-black" strokeWidth={3} />
+                           <Check className="h-3 w-3 text-brand-darker" strokeWidth={3} />
                         </div>
                      </motion.div>
 

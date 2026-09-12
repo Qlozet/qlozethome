@@ -18,7 +18,7 @@ import data from "@/data/vendor/vendordropdown/marketintelligence/marketintellig
 
 export default function MarketIntelligencePage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white text-zinc-900 selection:bg-brand-darker selection:text-white relative">
       <Header data={navbarData} />
       <HeroSection data={data.hero as any} />
       <AnalyticsSection data={data.analytics as any} />

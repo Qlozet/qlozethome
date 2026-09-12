@@ -51,7 +51,7 @@ export function HeroSection({ data }: HeroSectionProps) {
     <section ref={containerRef} className="relative min-h-screen w-full overflow-hidden bg-white pt-32 lg:pt-40" data-theme="light">
       {/* Background Thread Lines */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#3A3A3A]/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-darker/5 via-transparent to-transparent" />
         <svg className="absolute w-full h-full opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
            {[...Array(5)].map((_, i) => (
              <motion.path
@@ -79,23 +79,23 @@ export function HeroSection({ data }: HeroSectionProps) {
           <div className="flex flex-col gap-10 lg:w-1/2">
             <div className="flex flex-col gap-6">
               <motion.div variants={itemVariants} className="flex items-center gap-3">
-                <div className="h-px w-8 bg-[#3A3A3A]/20" />
-                <span className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40">
+                <div className="h-px w-8 bg-brand-darker/20" />
+                <span className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40">
                   {data.badge}
                 </span>
-                <Scissors className="h-3 w-3 text-[#3A3A3A]/30" />
+                <Scissors className="h-3 w-3 text-[#111111]/30" />
               </motion.div>
 
               <motion.h1
                 variants={itemVariants}
-                className="max-w-3xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl lg:text-8xl"
+                className="max-w-3xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-[#111111] sm:text-7xl lg:text-8xl"
               >
                 {data.title}
               </motion.h1>
 
               <motion.p
                 variants={itemVariants}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -107,15 +107,15 @@ export function HeroSection({ data }: HeroSectionProps) {
             >
               <Link
                 href={data.cta.href || "/explore"}
-                className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-[#3A3A3A] px-12 text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-all shadow-2xl shadow-[#3A3A3A]/20 hover:scale-105 active:scale-95"
+                className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-brand-button px-12 text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-all shadow-2xl shadow-brand-button/20 hover:scale-105 active:scale-95"
               >
                 <span className="relative z-10">{data.cta.label}</span>
-                <div className="absolute inset-0 z-0 bg-gradient-to-r from-zinc-800 to-black opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="absolute inset-0 z-0 bg-brand opacity-0 transition-opacity group-hover:opacity-100" />
               </Link>
             </motion.div>
 
             {data.closing && (
-               <motion.p variants={itemVariants} className="font-display text-[10px] font-bold uppercase tracking-widest text-[#3A3A3A]/30 mt-4">
+               <motion.p variants={itemVariants} className="font-display text-[10px] font-bold uppercase tracking-widest text-[#111111]/30 mt-4">
                   {data.closing}
                </motion.p>
             )}

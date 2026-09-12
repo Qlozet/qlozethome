@@ -46,7 +46,7 @@ export function VendorCTA({ data, dark = false }: CTAProps) {
   };
 
   return (
-    <section id={data.id} className={`scroll-mt-32 py-12 pb-24 sm:pb-32 ${dark ? 'bg-[#050505]' : 'bg-white'}`} data-theme={dark ? "dark" : "light"}>
+    <section id={data.id} className={`scroll-mt-32 py-12 pb-24 sm:pb-32 ${dark ? 'bg-brand-darker' : 'bg-white'}`} data-theme={dark ? "dark" : "light"}>
       <div className="mx-auto max-w-[94rem] px-4 sm:px-6 md:px-10 lg:px-10">
         <motion.div 
           ref={containerRef}
@@ -54,20 +54,20 @@ export function VendorCTA({ data, dark = false }: CTAProps) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className={`overflow-hidden rounded-[3rem] sm:rounded-[4rem] ${dark ? 'bg-[#0A0A0A] border border-white/5 shadow-2xl' : 'bg-white shadow-2xl'}`}
+          className={`overflow-hidden rounded-[3rem] sm:rounded-[4rem] ${dark ? 'bg-brand-darker border border-white/5 shadow-2xl' : 'bg-white shadow-2xl'}`}
         >
           <div className="grid lg:grid-cols-2">
             
             {/* Text Content Column */}
-            <div className={`flex flex-col justify-center gap-10 p-10 sm:p-16 lg:p-24 ${dark ? 'text-white bg-zinc-900/50' : 'text-black bg-zinc-50'}`}>
+            <div className={`flex flex-col justify-center gap-10 p-10 sm:p-16 lg:p-24 ${dark ? 'text-white bg-brand-darker/50' : 'text-[#111111] bg-brand-light'}`}>
               <div className="flex flex-col gap-6">
-                <motion.span variants={itemVariants} className={`font-display text-[10px] font-semibold uppercase tracking-[0.4em] ${dark ? 'text-white/40' : 'text-[#3A3A3A]/40'}`}>
+                <motion.span variants={itemVariants} className={`font-display text-[10px] font-semibold uppercase tracking-[0.4em] ${dark ? 'text-white/40' : 'text-[#111111]/40'}`}>
                   Global Network
                 </motion.span>
-                <motion.h2 variants={itemVariants} className={`font-display text-4xl font-medium leading-[1.05] tracking-tight sm:text-6xl lg:text-7.5xl ${dark ? 'text-white' : 'text-[#3A3A3A]'}`}>
+                <motion.h2 variants={itemVariants} className={`font-display text-4xl font-medium leading-[1.05] tracking-tight sm:text-6xl lg:text-7.5xl ${dark ? 'text-white' : 'text-[#111111]'}`}>
                   {data.title}
                 </motion.h2>
-                <motion.p variants={itemVariants} className={`max-w-md font-ui text-base leading-relaxed sm:text-lg ${dark ? 'text-white/60' : 'text-[#3A3A3A]/60'}`}>
+                <motion.p variants={itemVariants} className={`max-w-md font-ui text-base leading-relaxed sm:text-lg ${dark ? 'text-white/60' : 'text-[#111111]/60'}`}>
                   {data.description}
                 </motion.p>
               </div>
@@ -76,13 +76,13 @@ export function VendorCTA({ data, dark = false }: CTAProps) {
               <motion.div variants={itemVariants} className="flex flex-col gap-4 sm:flex-row sm:items-center">
                 <Link
                   href={data.primaryAction.href}
-                  className={`inline-flex items-center justify-center rounded-full px-12 py-5 text-xs font-bold uppercase tracking-[0.2em] shadow-2xl transition-all hover:scale-[1.05] active:scale-[0.98] ${dark ? 'bg-white text-black hover:bg-zinc-200' : 'bg-[#3A3A3A] text-white hover:bg-[#2A2A2A]'}`}
+                  className={`inline-flex items-center justify-center rounded-full px-12 py-5 text-xs font-bold uppercase tracking-[0.2em] shadow-2xl transition-all hover:scale-[1.05] active:scale-[0.98] ${dark ? 'bg-white text-brand-button hover:bg-brand-light' : 'bg-brand-button text-white hover:bg-brand'}`}
                 >
                   {data.primaryAction.label}
                 </Link>
                 <Link
                   href={data.secondaryAction.href}
-                  className={`group inline-flex items-center justify-center gap-3 rounded-full border px-12 py-5 text-xs font-bold uppercase tracking-[0.2em] transition-all active:scale-[0.98] ${dark ? 'border-white/20 text-white hover:bg-white/5' : 'border-[#3A3A3A]/20 text-[#3A3A3A] hover:bg-[#3A3A3A]/5'}`}
+                  className={`group inline-flex items-center justify-center gap-3 rounded-full border px-12 py-5 text-xs font-bold uppercase tracking-[0.2em] transition-all active:scale-[0.98] ${dark ? 'border-white/20 text-white hover:bg-white/5' : 'border-[#111111]/20 text-[#111111] hover:bg-[#111111]/5'}`}
                 >
                   {data.secondaryAction.label}
                   <svg

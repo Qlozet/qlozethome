@@ -63,7 +63,7 @@ export function WhySection({ data, scrollPrompt }: WhySectionProps) {
               The Architecture of Choice
             </span>
           </div>
-          <h2 className="font-display max-w-4xl text-5xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] sm:text-7xl">
+          <h2 className="font-display max-w-4xl text-5xl font-medium leading-[1.05] tracking-tight text-[#111111] sm:text-7xl">
             {data.title}
           </h2>
         </motion.div>
@@ -89,7 +89,7 @@ export function WhySection({ data, scrollPrompt }: WhySectionProps) {
               </div>
               
               <div className="flex flex-col gap-4">
-                <h3 className="font-display text-2xl font-medium text-[#3A3A3A]">
+                <h3 className="font-display text-2xl font-medium text-[#111111]">
                   {card.title}
                 </h3>
                 <p className="font-ui text-base leading-relaxed text-[#3A3A3A]/50">

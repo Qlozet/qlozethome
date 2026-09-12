@@ -16,7 +16,7 @@ type ConfidenceSectionProps = {
 
 export function ConfidenceSection({ data }: ConfidenceSectionProps) {
   return (
-    <section className="relative w-full bg-[#0A0A0A] py-24 sm:py-32" data-theme="dark">
+    <section className="relative w-full bg-brand-darker py-24 sm:py-32" data-theme="dark">
       <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col gap-20">
           <div className="flex flex-col gap-8 text-center items-center mx-auto max-w-3xl">
@@ -59,10 +59,10 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
                  className="group relative flex flex-col gap-10 rounded-[3rem] border border-white/5 bg-white/5 p-12 transition-all hover:bg-white/10"
                >
                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-2xl transition-transform duration-500 group-hover:scale-110">
-                    <ShieldCheck className="h-8 w-8 text-black" strokeWidth={1.5} />
+                    <ShieldCheck className="h-8 w-8 text-brand-darker" strokeWidth={1.5} />
                  </div>
                  <div className="flex flex-col gap-4">
-                    <h3 className="font-display text-2xl font-medium tracking-tight text-white transition-colors group-hover:text-[#00F0FF]">
+                    <h3 className="font-display text-2xl font-medium tracking-tight text-white transition-colors group-hover:text-brand-light">
                       {stat}
                     </h3>
                     <p className="font-ui text-lg leading-relaxed text-white/40 group-hover:text-white/60">

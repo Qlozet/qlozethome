@@ -11,7 +11,7 @@ type ShoppingSectionProps = {
 
 export function ShoppingSection({ data, dark = false }: ShoppingSectionProps) {
   return (
-    <section id={data.id} className="scroll-mt-32 bg-[#3A3A3A] py-24 sm:py-32" data-theme="dark">
+    <section id={data.id} className="scroll-mt-32 bg-brand-darker py-24 sm:py-32" data-theme="dark">
       <div className="mx-auto grid w-full max-w-[94rem] gap-12 px-6 md:px-10 lg:px-10 lg:grid-cols-2 lg:items-center lg:gap-20">
         <div className="relative group aspect-[4/3] w-full overflow-hidden rounded-[3rem] border border-white/5 bg-white/5 shadow-2xl transition-all duration-700">
           <Image
@@ -39,7 +39,7 @@ export function ShoppingSection({ data, dark = false }: ShoppingSectionProps) {
 
           <Link
             href={data.cta.href}
-            className="inline-flex w-fit items-center justify-center rounded-full bg-white px-12 py-5 text-xs font-bold uppercase tracking-[0.3em] text-black shadow-2xl transition-all hover:scale-105 active:scale-[0.98]"
+            className="inline-flex w-fit items-center justify-center rounded-full bg-white px-12 py-5 text-xs font-bold uppercase tracking-[0.3em] text-brand shadow-2xl transition-all hover:scale-105 hover:bg-brand-light active:scale-[0.98]"
           >
             {data.cta.label}
           </Link>

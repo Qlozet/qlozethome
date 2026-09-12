@@ -32,7 +32,7 @@ export function HeroSection({ data }: HeroSectionProps) {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen w-full overflow-hidden bg-[#050505] pt-28 sm:pt-32 lg:pt-40"
+      className="relative min-h-screen w-full overflow-hidden bg-brand-darker pt-28 sm:pt-32 lg:pt-40"
       data-theme="dark"
     >
       {/* Background */}
@@ -89,7 +89,7 @@ export function HeroSection({ data }: HeroSectionProps) {
             >
               <Link
                 href={data.cta.href}
-                className="group inline-flex h-14 items-center gap-3 rounded-full bg-white px-10 text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A] shadow-[0_0_40px_rgba(255,255,255,0.08)] transition-all hover:scale-105 active:scale-95"
+                className="group inline-flex h-14 items-center gap-3 rounded-full bg-white px-10 text-[10px] font-bold uppercase tracking-[0.4em] text-brand-darker shadow-[0_0_40px_rgba(255,255,255,0.08)] transition-all hover:scale-105 hover:bg-brand-light active:scale-95"
               >
                 {data.cta.label}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

@@ -40,7 +40,7 @@ export function ExperienceSection({ data }: ExperienceSectionProps) {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+              className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
             >
               {data.badge}
             </motion.span>
@@ -49,7 +49,7 @@ export function ExperienceSection({ data }: ExperienceSectionProps) {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
+              className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl"
             >
               {data.title}
             </motion.h2>
@@ -59,7 +59,7 @@ export function ExperienceSection({ data }: ExperienceSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+              className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
             >
               {data.description}
             </motion.p>
@@ -69,7 +69,7 @@ export function ExperienceSection({ data }: ExperienceSectionProps) {
           <div className="lg:w-1/2">
             <div className="relative mx-auto w-full max-w-[460px]">
               {/* Vertical Connector Line */}
-              <div className="absolute left-7 top-12 bottom-12 w-px bg-gradient-to-b from-[#3A3A3A]/10 via-[#3A3A3A]/5 to-transparent hidden sm:block" />
+              <div className="absolute left-7 top-12 bottom-12 w-px bg-gradient-to-b from-brand-darker/10 via-brand-darker/5 to-transparent hidden sm:block" />
 
               <div className="flex flex-col gap-0">
                 {data.steps.map((step, index) => {
@@ -85,17 +85,17 @@ export function ExperienceSection({ data }: ExperienceSectionProps) {
                         transition={{ delay: 0.1 + index * 0.12, duration: 0.5, type: "spring" }}
                         className={`relative flex items-start gap-5 rounded-2xl p-5 transition-all duration-300 cursor-default group
                           ${isLast
-                            ? 'bg-[#3A3A3A] shadow-2xl shadow-[#3A3A3A]/20'
-                            : 'bg-white border border-[#3A3A3A]/5 shadow-sm hover:shadow-lg hover:border-[#3A3A3A]/10 hover:-translate-y-0.5'
+                            ? 'bg-brand-darker shadow-2xl shadow-brand-darker/20'
+                            : 'bg-white border border-brand-darker/5 shadow-sm hover:shadow-lg hover:border-brand-darker/10 hover:-translate-y-0.5'
                           }`}
                       >
                         {/* Step Number + Icon */}
                         <div className={`relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl transition-transform duration-500 group-hover:scale-105
-                          ${isLast ? 'bg-white/10' : 'bg-[#3A3A3A]/[0.04] border border-[#3A3A3A]/5'}`}
+                          ${isLast ? 'bg-white/10' : 'bg-brand-darker/[0.04] border border-brand-darker/5'}`}
                         >
-                          <Icon className={`h-5 w-5 ${isLast ? 'text-white/70' : 'text-[#3A3A3A]/40'}`} strokeWidth={1.5} />
+                          <Icon className={`h-5 w-5 ${isLast ? 'text-white/70' : 'text-brand-darker/40'}`} strokeWidth={1.5} />
                           <span className={`absolute -top-1.5 -right-1.5 flex h-5 w-5 items-center justify-center rounded-full text-[8px] font-bold
-                            ${isLast ? 'bg-white text-[#3A3A3A]' : 'bg-[#3A3A3A] text-white'}`}
+                            ${isLast ? 'bg-white text-brand-darker' : 'bg-brand-darker text-white'}`}
                           >
                             {index + 1}
                           </span>
@@ -104,12 +104,12 @@ export function ExperienceSection({ data }: ExperienceSectionProps) {
                         {/* Step Info */}
                         <div className="flex flex-col gap-1.5 pt-1">
                           <span className={`font-display text-sm font-bold tracking-tight sm:text-base
-                            ${isLast ? 'text-white' : 'text-[#3A3A3A]'}`}
+                            ${isLast ? 'text-white' : 'text-[#111111]'}`}
                           >
                             {step.title}
                           </span>
                           <span className={`font-ui text-xs leading-relaxed sm:text-sm
-                            ${isLast ? 'text-white/50' : 'text-[#3A3A3A]/40'}`}
+                            ${isLast ? 'text-white/50' : 'text-[#111111]/40'}`}
                           >
                             {step.description}
                           </span>
@@ -126,8 +126,8 @@ export function ExperienceSection({ data }: ExperienceSectionProps) {
                           className="flex justify-center py-2 origin-top"
                         >
                           <div className="flex flex-col items-center gap-0.5">
-                            <div className="w-px h-4 bg-[#3A3A3A]/10" />
-                            <ArrowDown className="h-3 w-3 text-[#3A3A3A]/15" />
+                            <div className="w-px h-4 bg-brand-darker/10" />
+                            <ArrowDown className="h-3 w-3 text-brand-darker/15" />
                           </div>
                         </motion.div>
                       )}
@@ -144,7 +144,7 @@ export function ExperienceSection({ data }: ExperienceSectionProps) {
                 transition={{ delay: 0.8 }}
                 className="mt-6 flex items-center justify-center"
               >
-                <span className="font-mono text-[8px] font-bold text-[#3A3A3A]/20 uppercase tracking-widest">Effortless from start to finish</span>
+                <span className="font-mono text-[8px] font-bold text-[#111111]/20 uppercase tracking-widest">Effortless from start to finish</span>
               </motion.div>
             </div>
           </div>
@@ -154,7 +154,7 @@ export function ExperienceSection({ data }: ExperienceSectionProps) {
 
       {/* Node Marker on Spine */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
-        <div className="w-1 h-1 rounded-full bg-[#3A3A3A]/20" />
+        <div className="w-1 h-1 rounded-full bg-brand-darker/20" />
       </div>
     </section>
   );

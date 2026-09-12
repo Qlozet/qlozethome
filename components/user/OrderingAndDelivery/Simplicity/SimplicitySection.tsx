@@ -17,15 +17,15 @@ type SimplicitySectionProps = {
 };
 
 const FLOW_NODES = [
-  { icon: Sparkles, label: "Design", color: "bg-[#3A3A3A]" },
-  { icon: Package, label: "Produce", color: "bg-zinc-600" },
-  { icon: Truck, label: "Transit", color: "bg-zinc-500" },
-  { icon: CheckCircle2, label: "Deliver", color: "bg-[#3E1C01]" },
+  { icon: Sparkles, label: "Design", color: "bg-brand-darker" },
+  { icon: Package, label: "Produce", color: "bg-brand/80" },
+  { icon: Truck, label: "Transit", color: "bg-brand/50" },
+  { icon: CheckCircle2, label: "Deliver", color: "bg-brand-darker" },
 ];
 
 export function SimplicitySection({ data }: SimplicitySectionProps) {
   return (
-    <section id="simplicity" className="relative w-full bg-[#F9F9F8] py-24 sm:py-32 overflow-hidden" data-theme="light">
+    <section id="simplicity" className="relative w-full bg-brand-light py-24 sm:py-32 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-24">
           {/* Left: Content */}
@@ -35,7 +35,7 @@ export function SimplicitySection({ data }: SimplicitySectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -43,17 +43,17 @@ export function SimplicitySection({ data }: SimplicitySectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl"
               >
                 {data.title}
-                <span className="block mt-2 text-xl text-[#3A3A3A]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
+                <span className="block mt-2 text-xl text-[#111111]/40 font-ui font-normal tracking-normal sm:text-2xl">{data.subtitle}</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -69,12 +69,12 @@ export function SimplicitySection({ data }: SimplicitySectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-6 group"
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white border border-brand-darker/5 group-hover:bg-brand-darker group-hover:text-white transition-all">
                     {i === 0 ? <Layout className="h-4 w-4" /> :
                      i === 1 ? <Layers className="h-4 w-4" /> :
                      <RefreshCcw className="h-4 w-4" />}
                   </div>
-                  <span className="font-ui text-sm text-[#3A3A3A]/70 italic sm:text-base">{feature}</span>
+                  <span className="font-ui text-sm text-[#111111]/70 italic sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -102,7 +102,7 @@ export function SimplicitySection({ data }: SimplicitySectionProps) {
               <div className="relative z-10 h-full w-full rounded-[4rem] bg-white shadow-2xl border border-black/5 p-10 sm:p-12 flex flex-col items-center justify-center text-center gap-10 overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2">
                 {/* Header */}
                 <div className="flex flex-col items-center gap-3">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-zinc-900 shadow-xl">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-darker shadow-xl">
                     <Layout className="h-8 w-8 text-white/20" />
                   </div>
                   <span className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-black">Qlozet Core</span>

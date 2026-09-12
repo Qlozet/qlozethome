@@ -10,7 +10,7 @@ export function VendorWhyQlozet() {
   ];
 
   return (
-    <section className="relative py-24 sm:py-24 sm:py-32 bg-white overflow-hidden text-[#3A3A3A] border-b border-[#3A3A3A]/5" data-theme="light">
+    <section className="relative py-24 sm:py-24 sm:py-32 bg-white overflow-hidden text-[#111111] border-b border-brand-darker/5" data-theme="light">
       <div className="mx-auto w-full max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
 
@@ -42,9 +42,9 @@ export function VendorWhyQlozet() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-md px-6 py-3 rounded-full shadow-2xl border border-[#3A3A3A]/5"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-md px-6 py-3 rounded-full shadow-2xl border border-brand-darker/5"
             >
-              <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-[#3A3A3A]">
+              <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-[#111111]">
                 The Qlozet Studio
               </span>
             </motion.div>
@@ -56,7 +56,7 @@ export function VendorWhyQlozet() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#3A3A3A] text-white mb-8"
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-button text-white mb-8"
             >
               <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em]">
                 Why Qlozet?
@@ -68,10 +68,10 @@ export function VendorWhyQlozet() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="font-display max-w-4xl text-5xl sm:text-7xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A] mb-6"
+              className="font-display max-w-4xl text-5xl sm:text-7xl font-medium leading-[1.05] tracking-tight text-[#111111] mb-6"
             >
               More Than a Marketplace—<br />
-              <span className="font-display text-2xl sm:text-3xl font-medium text-[#3A3A3A]/60">A Growth Platform.</span>
+              <span className="font-display text-2xl sm:text-3xl font-medium text-[#111111]/60">A Growth Platform.</span>
             </motion.h2>
 
             <motion.p
@@ -79,12 +79,12 @@ export function VendorWhyQlozet() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="font-ui text-base leading-relaxed text-[#3A3A3A]/50 sm:text-lg max-w-xl mb-12"
+              className="font-ui text-base leading-relaxed text-[#111111]/50 sm:text-lg max-w-xl mb-12"
             >
               Qlozet gives you everything you need to run and scale your fashion business.
             </motion.p>
 
-            <div className="space-y-6 lg:space-y-8 pl-4 lg:pl-8 border-l border-[#3A3A3A]/10">
+            <div className="space-y-6 lg:space-y-8 pl-4 lg:pl-8 border-l border-brand-darker/10">
               {features.map((text, i) => (
                 <motion.div
                   key={i}
@@ -93,7 +93,7 @@ export function VendorWhyQlozet() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + i * 0.1 }}
                 >
-                  <p className="text-lg sm:text-xl font-display font-medium text-[#3A3A3A]">
+                  <p className="text-lg sm:text-xl font-display font-medium text-[#111111]">
                     {text}
                   </p>
                 </motion.div>
@@ -107,7 +107,7 @@ export function VendorWhyQlozet() {
               transition={{ delay: 0.6 }}
               className="font-mono text-xs font-bold uppercase tracking-widest text-zinc-500 mt-16"
             >
-              You focus on creating. <span className="text-[#3A3A3A] inline-block ml-2 border-b border-[#3A3A3A]">We handle the rest.</span>
+              You focus on creating. <span className="text-[#111111] inline-block ml-2 border-b border-[#111111]">We handle the rest.</span>
             </motion.p>
           </div>
 

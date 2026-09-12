@@ -85,14 +85,14 @@ export function WaitlistForm() {
       <div className="grid gap-x-12 gap-y-10 sm:grid-cols-2">
         {/* Full Name */}
         <motion.div variants={itemVariants} className="flex flex-col gap-3">
-          <label htmlFor="name" className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-black/40">
+          <label htmlFor="name" className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-[#111111]/40">
             Your Name
           </label>
           <input
             type="text"
             id="name"
             placeholder="John Doe"
-            className="border-b border-black/10 bg-transparent py-3 font-ui text-lg outline-none transition-colors focus:border-black"
+            className="border-b border-[#111111]/10 bg-transparent py-3 font-ui text-lg outline-none transition-colors focus:border-brand-darker"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
@@ -102,14 +102,14 @@ export function WaitlistForm() {
 
         {/* Business Name */}
         <motion.div variants={itemVariants} className="flex flex-col gap-3">
-          <label htmlFor="businessName" className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-black/40">
+          <label htmlFor="businessName" className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-[#111111]/40">
             Business Name
           </label>
           <input
             type="text"
             id="businessName"
             placeholder="Maison Qlozet"
-            className="border-b border-black/10 bg-transparent py-3 font-ui text-lg outline-none transition-colors focus:border-black"
+            className="border-b border-[#111111]/10 bg-transparent py-3 font-ui text-lg outline-none transition-colors focus:border-brand-darker"
             value={formData.businessName}
             onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
             required
@@ -119,14 +119,14 @@ export function WaitlistForm() {
 
         {/* Business Email */}
         <motion.div variants={itemVariants} className="flex flex-col gap-3">
-          <label htmlFor="email" className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-black/40">
+          <label htmlFor="email" className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-[#111111]/40">
             Business Email
           </label>
           <input
             type="email"
             id="email"
             placeholder="hello@business.com"
-            className="border-b border-black/10 bg-transparent py-3 font-ui text-lg outline-none transition-colors focus:border-black"
+            className="border-b border-[#111111]/10 bg-transparent py-3 font-ui text-lg outline-none transition-colors focus:border-brand-darker"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             required
@@ -136,14 +136,14 @@ export function WaitlistForm() {
 
         {/* Phone Number */}
         <motion.div variants={itemVariants} className="flex flex-col gap-3">
-          <label htmlFor="phone" className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-black/40">
+          <label htmlFor="phone" className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-[#111111]/40">
             Phone Number
           </label>
           <input
             type="tel"
             id="phone"
             placeholder="+1 (555) 000-0000"
-            className="border-b border-black/10 bg-transparent py-3 font-ui text-lg outline-none transition-colors focus:border-black"
+            className="border-b border-[#111111]/10 bg-transparent py-3 font-ui text-lg outline-none transition-colors focus:border-brand-darker"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             required
@@ -153,12 +153,12 @@ export function WaitlistForm() {
 
         {/* Business Type */}
         <motion.div variants={itemVariants} className="flex flex-col gap-3 sm:col-span-2">
-          <label htmlFor="businessType" className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-black/40">
+          <label htmlFor="businessType" className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-[#111111]/40">
             Business Type
           </label>
           <select
             id="businessType"
-            className="appearance-none border-b border-black/10 bg-transparent py-3 font-ui text-lg outline-none transition-colors focus:border-black cursor-pointer"
+            className="appearance-none border-b border-[#111111]/10 bg-transparent py-3 font-ui text-lg outline-none transition-colors focus:border-brand-darker cursor-pointer"
             value={formData.businessType}
             onChange={(e) => setFormData({ ...formData, businessType: e.target.value })}
             required
@@ -166,7 +166,7 @@ export function WaitlistForm() {
           >
             <option value="" disabled>Select your industry</option>
             {businessTypes.map((type) => (
-              <option key={type} value={type} className="bg-white text-black py-2">
+              <option key={type} value={type} className="bg-white text-[#111111] py-2">
                 {type}
               </option>
             ))}
@@ -178,11 +178,11 @@ export function WaitlistForm() {
         variants={itemVariants}
         whileHover={status !== "loading" && status !== "success" ? { x: 10 } : {}}
         disabled={status === "loading" || status === "success"}
-        className="group mt-6 flex items-center gap-4 self-start font-display text-sm font-bold uppercase tracking-[0.3em] text-black disabled:opacity-50"
+        className="group mt-6 flex items-center gap-4 self-start font-display text-sm font-bold uppercase tracking-[0.3em] text-brand-button disabled:opacity-50"
       >
         {status === "loading" ? "Submitting..." : status === "success" ? "Access Requested!" : "Request Early Access"}
         {status !== "loading" && status !== "success" && (
-          <span className="h-[1px] w-12 bg-black transition-all duration-500 group-hover:w-20" />
+          <span className="h-[1px] w-12 bg-brand-button transition-all duration-500 group-hover:w-20" />
         )}
       </motion.button>
 

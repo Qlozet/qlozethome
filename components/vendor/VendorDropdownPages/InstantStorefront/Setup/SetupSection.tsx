@@ -30,7 +30,7 @@ export function SetupSection({ data }: SetupSectionProps) {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+              className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
             >
               {data.badge}
             </motion.span>
@@ -39,7 +39,7 @@ export function SetupSection({ data }: SetupSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="font-display max-w-4xl text-5xl sm:text-7xl font-medium leading-[1.05] tracking-tight text-[#3A3A3A]"
+              className="font-display max-w-4xl text-5xl sm:text-7xl font-medium leading-[1.05] tracking-tight text-[#111111]"
             >
               {data.title}
             </motion.h2>
@@ -48,7 +48,7 @@ export function SetupSection({ data }: SetupSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="font-ui text-base leading-relaxed text-[#3A3A3A]/50 sm:text-lg max-w-xl"
+              className="font-ui text-base leading-relaxed text-[#111111]/50 sm:text-lg max-w-xl"
             >
               {data.description}
             </motion.p>
@@ -66,14 +66,14 @@ export function SetupSection({ data }: SetupSectionProps) {
                   transition={{ delay: 0.3 + index * 0.1 }}
                   className="group flex flex-col gap-6"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F9F9F8] transition-colors group-hover:bg-[#3A3A3A] group-hover:text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-light transition-colors group-hover:bg-brand-darker group-hover:text-white">
                     <Icon className="h-6 w-6" />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <h3 className="font-display text-sm font-bold uppercase tracking-wider text-[#3A3A3A]">
+                    <h3 className="font-display text-sm font-bold uppercase tracking-wider text-[#111111]">
                       {feature.title}
                     </h3>
-                    <p className="font-ui text-sm leading-relaxed text-[#3A3A3A]/40">
+                    <p className="font-ui text-sm leading-relaxed text-[#111111]/40">
                       {feature.description}
                     </p>
                   </div>

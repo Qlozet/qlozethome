@@ -61,9 +61,9 @@ function DeltaBadge({ delta }: { delta: string | null }) {
   const isPos = delta.startsWith("+");
   const isNeg = delta.startsWith("−") || delta.startsWith("-");
   const Icon = isPos ? ArrowUpRight : isNeg ? ArrowDownRight : null;
-  const color = isPos ? "text-[#3A3A3A] bg-[#F9F9F8] border-[#3A3A3A/15]"
+  const color = isPos ? "text-brand-darker bg-brand-light border-brand-darker/10"
     : isNeg ? "text-rose-500 bg-rose-50 border-rose-100"
-    : "text-zinc-500 bg-[#F9F9F8] border-zinc-200";
+    : "text-zinc-500 bg-brand-light border-zinc-200";
 
   return (
     <span className={`inline-flex items-center gap-0.5 rounded-full border px-1.5 py-0.5 font-mono text-[8px] font-bold ${color}`}>
@@ -78,7 +78,7 @@ export function HistorySection({ data }: HistorySectionProps) {
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section id={data.id} className="relative z-10 bg-[#F9F9F8] py-24 sm:py-32 overflow-hidden" data-theme="light">
+    <section id={data.id} className="relative z-10 bg-brand-light py-24 sm:py-32 overflow-hidden" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-24">
 
@@ -89,7 +89,7 @@ export function HistorySection({ data }: HistorySectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -98,7 +98,7 @@ export function HistorySection({ data }: HistorySectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-5xl lg:text-6xl"
+                className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-5xl lg:text-6xl"
               >
                 {data.title}
               </motion.h2>
@@ -108,7 +108,7 @@ export function HistorySection({ data }: HistorySectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/40 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -127,10 +127,10 @@ export function HistorySection({ data }: HistorySectionProps) {
                     transition={{ delay: 0.2 + i * 0.1 }}
                     className="flex items-center gap-6 group"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white border border-[#3A3A3A]/5 group-hover:bg-[#3A3A3A] group-hover:text-white transition-all shadow-sm">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white border border-brand-darker/5 group-hover:bg-brand-darker group-hover:text-brand-light transition-all shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
-                    <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
+                    <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature}</span>
                   </motion.div>
                 );
               })}
@@ -145,33 +145,33 @@ export function HistorySection({ data }: HistorySectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="relative mx-auto w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-white border border-[#3A3A3A]/5 shadow-2xl overflow-hidden"
+              className="relative mx-auto w-full max-w-xl rounded-[2rem] sm:rounded-[3.5rem] bg-white border border-brand-darker/5 shadow-2xl overflow-hidden"
             >
               <div className="relative z-10 p-5 sm:p-8 flex flex-col gap-6">
 
                 {/* ── Header ── */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="h-9 w-9 rounded-xl bg-[#3A3A3A] flex items-center justify-center">
+                    <div className="h-9 w-9 rounded-xl bg-brand-darker flex items-center justify-center">
                       <History className="h-4 w-4 text-white" strokeWidth={1.5} />
                     </div>
                     <div className="flex flex-col">
-                      <span className="font-display text-sm font-bold text-[#3A3A3A] leading-none">Michael Chen</span>
-                      <span className="font-mono text-[8px] uppercase tracking-widest text-[#3A3A3A]/30 mt-0.5">CUST-8820</span>
+                      <span className="font-display text-sm font-bold text-brand-darker leading-none">Michael Chen</span>
+                      <span className="font-mono text-[8px] uppercase tracking-widest text-brand-darker/35 mt-0.5">CUST-8820</span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-1.5 rounded-full border border-[#3A3A3A]/10 bg-[#F9F9F8] px-3 py-1.5">
-                    <div className="h-1.5 w-1.5 rounded-full bg-[#3A3A3A] animate-pulse" />
-                    <span className="font-mono text-[7px] font-bold text-[#3A3A3A] uppercase tracking-widest">Active</span>
+                  <div className="flex items-center gap-1.5 rounded-full border border-brand-darker/10 bg-brand-light px-3 py-1.5">
+                    <div className="h-1.5 w-1.5 rounded-full bg-brand-darker animate-pulse" />
+                    <span className="font-mono text-[7px] font-bold text-brand-darker uppercase tracking-widest">Active</span>
                   </div>
                 </div>
 
                 {/* ── Timeline ── */}
                 <div className="relative flex flex-col gap-0">
                   {/* Vertical track */}
-                  <div className="absolute left-[18px] sm:left-5 top-5 bottom-5 w-px bg-[#3A3A3A]/8 z-0" />
+                  <div className="absolute left-[18px] sm:left-5 top-5 bottom-5 w-px bg-brand-darker/8 z-0" />
                   <motion.div
-                    className="absolute left-[18px] sm:left-5 top-5 w-px bg-[#3A3A3A]/30 origin-top z-0"
+                    className="absolute left-[18px] sm:left-5 top-5 w-px bg-brand-darker/30 origin-top z-0"
                     initial={{ height: 0 }}
                     animate={inView ? { height: "calc(100% - 2.5rem)" } : {}}
                     transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
@@ -191,52 +191,52 @@ export function HistorySection({ data }: HistorySectionProps) {
                         <div className="relative z-10 shrink-0 mt-1">
                           <div className={`h-9 w-9 sm:h-10 sm:w-10 rounded-xl border flex items-center justify-center transition-all
                             ${isCurrent
-                              ? "bg-[#3A3A3A] border-[#3A3A3A] shadow-md"
-                              : "bg-white border-[#3A3A3A]/10"
+                              ? "bg-brand-darker border-brand-darker shadow-md"
+                              : "bg-white border-brand-darker/10"
                             }`}
                           >
-                            <Ruler className={`h-4 w-4 ${isCurrent ? "text-white" : "text-[#3A3A3A]/25"}`} strokeWidth={1.5} />
+                            <Ruler className={`h-4 w-4 ${isCurrent ? "text-white" : "text-brand-darker/25"}`} strokeWidth={1.5} />
                           </div>
                         </div>
 
                         {/* Card */}
                         <div className={`flex-1 min-w-0 rounded-2xl border p-4 transition-all
                           ${isCurrent
-                            ? "border-[#3A3A3A]/15 bg-[#F9F9F8] shadow-sm"
-                            : "border-[#3A3A3A]/5 bg-[#F9F9F8]/50"
+                            ? "border-brand-darker/15 bg-brand-light shadow-sm"
+                            : "border-brand-darker/5 bg-brand-light/50"
                           }`}
                         >
                           {/* Card top row */}
                           <div className="flex items-center justify-between mb-3">
                             <div className="flex items-center gap-2">
-                              <span className="font-mono text-[8px] font-bold uppercase tracking-widest text-[#3A3A3A]/40">{event.date}</span>
+                              <span className="font-mono text-[8px] font-bold uppercase tracking-widest text-[#111111]/40">{event.date}</span>
                               <span className={`font-mono text-[7px] uppercase tracking-widest px-1.5 py-0.5 rounded-full border
                                 ${isCurrent
-                                  ? "border-[#3A3A3A]/20 bg-[#3A3A3A] text-white"
-                                  : "border-[#3A3A3A]/8 bg-[#3A3A3A]/[0.04] text-[#3A3A3A]/35"
+                                  ? "border-brand-darker/20 bg-brand-darker text-white"
+                                  : "border-brand-darker/8 bg-brand-darker/[0.04] text-brand-darker/35"
                                 }`}
                               >
                                 {event.status}
                               </span>
                             </div>
-                            <span className="font-mono text-[7px] text-[#3A3A3A]/25">{event.order}</span>
+                            <span className="font-mono text-[7px] text-[#111111]/25">{event.order}</span>
                           </div>
 
-                          <span className="font-display text-sm font-bold text-[#3A3A3A] leading-none block mb-3">{event.label}</span>
+                          <span className="font-display text-sm font-bold text-brand-darker leading-none block mb-3">{event.label}</span>
 
                           {/* Measurements */}
                           <div className="grid grid-cols-3 gap-2">
                             {event.measurements.map((m) => (
-                              <div key={m.key} className="flex flex-col gap-1 rounded-xl bg-white p-2.5 border border-[#3A3A3A]/[0.04]">
-                                <span className="font-mono text-[7px] uppercase tracking-widest text-[#3A3A3A]/25">{m.key}</span>
-                                <span className="font-display text-xs font-bold text-[#3A3A3A] leading-none">{m.val}</span>
+                              <div key={m.key} className="flex flex-col gap-1 rounded-xl bg-white p-2.5 border border-brand-darker/[0.04]">
+                                <span className="font-mono text-[7px] uppercase tracking-widest text-brand-darker/25">{m.key}</span>
+                                <span className="font-display text-xs font-bold text-brand-darker leading-none">{m.val}</span>
                                 {m.delta && <DeltaBadge delta={m.delta} />}
                               </div>
                             ))}
                           </div>
 
                           {event.note && (
-                            <p className="mt-2.5 font-ui text-[10px] text-[#3A3A3A]/30 italic leading-relaxed">&ldquo;{event.note}&rdquo;</p>
+                            <p className="mt-2.5 font-ui text-[10px] text-brand-darker/35 italic leading-relaxed">&ldquo;{event.note}&rdquo;</p>
                           )}
                         </div>
                       </motion.div>
@@ -249,13 +249,13 @@ export function HistorySection({ data }: HistorySectionProps) {
                   initial={{ opacity: 0 }}
                   animate={inView ? { opacity: 1 } : {}}
                   transition={{ delay: 1.1 }}
-                  className="flex items-center justify-between rounded-xl border border-[#3A3A3A]/5 bg-[#F9F9F8] px-4 py-2.5"
+                  className="flex items-center justify-between rounded-xl border border-brand-darker/5 bg-brand-light px-4 py-2.5"
                 >
                   <div className="flex items-center gap-2">
-                    <LineChart className="h-3.5 w-3.5 text-[#3A3A3A]/25" strokeWidth={1.5} />
-                    <span className="font-mono text-[8px] text-[#3A3A3A]/35 uppercase tracking-widest">3 snapshots · 5 months</span>
+                    <LineChart className="h-3.5 w-3.5 text-brand-darker/25" strokeWidth={1.5} />
+                    <span className="font-mono text-[8px] text-brand-darker/35 uppercase tracking-widest">3 snapshots · 5 months</span>
                   </div>
-                  <span className="font-mono text-[7px] text-[#3A3A3A]/40 font-bold uppercase tracking-widest">Auto-tracked</span>
+                  <span className="font-mono text-[7px] text-brand-darker/40 font-bold uppercase tracking-widest">Auto-tracked</span>
                 </motion.div>
 
               </div>

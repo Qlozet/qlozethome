@@ -17,7 +17,7 @@ import whatData from "@/data/vendor/vendordropdown/clothinggenerator/what.json";
 
 export default function ClothingGeneratorPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen selection:bg-brand-darker selection:text-white bg-white text-zinc-900">
       <Header data={navbarData} />
       <HeroSection data={heroData} />
       <WhatSection data={whatData} />

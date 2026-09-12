@@ -17,7 +17,7 @@ type InsightsSectionProps = {
 
 export function InsightsSection({ data }: InsightsSectionProps) {
   return (
-    <section id={data.id} className="relative z-10 bg-[#050505] py-24 sm:py-32 overflow-hidden text-white" data-theme="dark">
+    <section id={data.id} className="relative z-10 bg-brand-darker py-24 sm:py-32 overflow-hidden text-white" data-theme="dark">
       <div className="mx-auto max-w-[94rem] px-6 md:px-10 lg:px-10">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-24">
           {/* Left: Content */}
@@ -66,7 +66,7 @@ export function InsightsSection({ data }: InsightsSectionProps) {
                     transition={{ delay: 0.2 + i * 0.1 }}
                     className="flex items-center gap-6 group"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:bg-white group-hover:border-white/30 group-hover:text-[#1A1A1A] transition-all shadow-sm">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:bg-white group-hover:border-white/30 group-hover:text-brand-darker transition-all shadow-sm">
                       <Icon className="h-4 w-4" strokeWidth={1.5} />
                     </div>
                     <span className="font-display text-lg font-medium text-white/80">{feature}</span>

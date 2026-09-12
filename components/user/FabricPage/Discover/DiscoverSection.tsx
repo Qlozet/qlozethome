@@ -28,7 +28,7 @@ export function DiscoverSection({ data }: DiscoverSectionProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40"
+                className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#111111]/40"
               >
                 {data.badge}
               </motion.span>
@@ -37,7 +37,7 @@ export function DiscoverSection({ data }: DiscoverSectionProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#3A3A3A] sm:text-6xl lg:text-7xl"
+                className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-[#111111] sm:text-6xl lg:text-7xl"
               >
                 {data.title}
               </motion.h2>
@@ -47,7 +47,7 @@ export function DiscoverSection({ data }: DiscoverSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-xl font-ui text-base leading-relaxed text-[#3A3A3A]/60 sm:text-lg"
+                className="max-w-xl font-ui text-base leading-relaxed text-[#111111]/60 sm:text-lg"
               >
                 {data.description}
               </motion.p>
@@ -63,8 +63,8 @@ export function DiscoverSection({ data }: DiscoverSectionProps) {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-3"
                 >
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#3A3A3A]/10"><Check className="h-3.5 w-3.5 text-[#3A3A3A]" /></span>
-                  <span className="font-ui text-sm font-medium text-[#3A3A3A]/70 sm:text-base">{feature}</span>
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-darker/10"><Check className="h-3.5 w-3.5 text-brand-darker" /></span>
+                  <span className="font-ui text-sm font-medium text-[#111111]/70 sm:text-base">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -73,7 +73,7 @@ export function DiscoverSection({ data }: DiscoverSectionProps) {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-                className="font-ui text-sm italic text-[#3A3A3A]/30"
+                className="font-ui text-sm italic text-[#111111]/30"
             >
               {data.closing}
             </motion.p>
@@ -107,7 +107,7 @@ export function DiscoverSection({ data }: DiscoverSectionProps) {
 
               {/* Center HUD Element */}
               <div className="absolute bottom-8 right-8 flex items-center gap-2 bg-white/10 backdrop-blur-md p-3 rounded-2xl shadow-sm border border-white/20">
-                <Share2 className="h-4 w-4 text-[#3E1C01] drop-shadow-md" />
+                <Share2 className="h-4 w-4 text-brand-darker drop-shadow-md" />
                 <span className="font-display text-[8px] font-bold uppercase tracking-widest text-white drop-shadow-md">Source Network Active</span>
               </div>
             </motion.div>
