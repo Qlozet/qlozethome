@@ -18,10 +18,10 @@ type ConfidenceSectionProps = {
 
 // ─── Bar chart data ────────────────────────────────────────────────────────────
 const stages = [
-  { label: "Manual",     value: 18.4, color: "#ef4444", textColor: "#dc2626" },
-  { label: "Hybrid",     value: 11.2, color: "#f59e0b", textColor: "#d97706" },
-  { label: "AI-Assist",  value: 5.6,  color: "#34d399", textColor: "#059669" },
-  { label: "Qlozet",     value: 1.2,  color: "#10b981", textColor: "#047857" },
+  { label: "Guesswork",  value: 18.4, tag: "High risk",   color: "#ef4444", textColor: "#dc2626" },
+  { label: "Std. sizes", value: 11.2, tag: "Hit or miss", color: "#f59e0b", textColor: "#d97706" },
+  { label: "Tape at home", value: 5.6, tag: "Error-prone", color: "#34d399", textColor: "#059669" },
+  { label: "Qlozet AI",  value: 1.2,  tag: "Precise",     color: "#10b981", textColor: "#047857" },
 ];
 const MAX_VAL = 20; // domain ceiling (%)
 
@@ -57,7 +57,7 @@ function ErrorBarChart() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.5 + i * 0.12, duration: 0.3 }}
               >
-                {stage.value}%
+                {stage.tag}
               </motion.span>
 
               {/* Bar */}
@@ -183,12 +183,12 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
                 {/* ── Card header ── */}
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex flex-col gap-1">
-                    <span className="font-display text-[9px] font-bold uppercase tracking-[0.4em] text-[#111111]/30">Error Rate by Stage</span>
+                    <span className="font-display text-[9px] font-bold uppercase tracking-[0.4em] text-[#111111]/30">Fit Risk by Method</span>
                     <div className="flex items-baseline gap-2 flex-wrap">
-                      <span className="font-display text-3xl sm:text-4xl font-medium text-brand-darker">1.2%</span>
+                      <span className="font-display text-3xl sm:text-4xl font-medium text-brand-darker">Precise Fit</span>
                       <div className="flex items-center gap-1 bg-brand-light text-brand-darker px-2 py-0.5 rounded-full border border-brand-darker/15">
                         <TrendingDown className="h-3 w-3" />
-                        <span className="font-mono text-[9px] font-bold">−93%</span>
+                        <span className="font-mono text-[9px] font-bold">Fewer alterations</span>
                       </div>
                     </div>
                     <span className="font-mono text-[9px] text-brand-darker/40 tracking-widest">with Qlozet System</span>
@@ -213,9 +213,9 @@ export function ConfidenceSection({ data }: ConfidenceSectionProps) {
                 {/* ── Bottom stat pills ── */}
                 <div className="grid grid-cols-3 gap-2 sm:gap-3">
                   {[
-                    { label: "Manual",    value: "18.4%", cls: "bg-red-50 text-red-600 border-red-100" },
-                    { label: "Reduction", value: "−93%",  cls: "bg-brand-light text-brand-darker border-brand-darker/10" },
-                    { label: "Qlozet",    value: "1.2%",  cls: "bg-brand-light text-brand-darker border-brand-darker/15" },
+                    { label: "Guesswork", value: "High risk", cls: "bg-red-50 text-red-600 border-red-100" },
+                    { label: "Std. Sizes", value: "Hit or miss", cls: "bg-brand-light text-brand-darker border-brand-darker/10" },
+                    { label: "Qlozet AI", value: "Precise", cls: "bg-brand-light text-brand-darker border-brand-darker/15" },
                   ].map((pill) => (
                     <div key={pill.label} className={`flex flex-col items-center gap-0.5 rounded-xl border px-2 py-2 sm:px-3 sm:py-2.5 ${pill.cls}`}>
                       <span className="font-mono text-[7px] sm:text-[8px] uppercase tracking-widest opacity-60">{pill.label}</span>
