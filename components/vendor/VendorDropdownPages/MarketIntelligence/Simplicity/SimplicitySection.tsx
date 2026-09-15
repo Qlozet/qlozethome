@@ -78,7 +78,7 @@ export function SimplicitySection({ data }: SimplicitySectionProps) {
               <div className="bg-brand-darker rounded-2xl p-5 shadow-sm">
                 <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white/60 mb-3 block">Quick Actions</span>
                 <div className="flex gap-2">
-                  {["View Full Report", "Export Data", "Schedule Review"].map((action, i) => (
+                  {["Ask the Assistant", "View Customers", "Weekly Digest"].map((action, i) => (
                     <motion.div key={i} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
                       transition={{ delay: 0.7 + i * 0.08 }}
                       className="flex-1 bg-white/10 rounded-xl py-3 text-center cursor-pointer hover:bg-white/20 transition-colors">
