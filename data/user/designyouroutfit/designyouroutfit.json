@@ -80,7 +80,7 @@
         "icon": "Store"
       },
       {
-        "title": "Seamlessly sent to the right designer",
+        "title": "Compare quotes from expert tailors — you choose who makes it",
         "icon": "Send"
       }
     ]
@@ -107,14 +107,14 @@
   "tailored": {
     "badge": "Personalized",
     "title": "Every Design Fits You",
-    "description": "Your generated outfit isn’t generic—it’s tailored to your measurements. Not just beautiful—accurate.",
+    "description": "Attach your saved measurement profile and your chosen tailor makes the real garment to your exact size. Not just beautiful on screen—accurate on you.",
     "features": [
       {
         "title": "Integrated with your fit profile",
         "icon": "UserCheck"
       },
       {
-        "title": "Designed with your proportions in mind",
+        "title": "Made to your saved measurements",
         "icon": "Ruler"
       },
       {
@@ -148,8 +148,8 @@
       },
       {
         "id": "produce",
-        "title": "Send to Production",
-        "description": "Get it made by our expert tailoring network.",
+        "title": "Request Quotes & Order",
+        "description": "Pick your tailor from real quotes and track it to your door.",
         "icon": "Gem"
       }
     ]
@@ -186,7 +186,7 @@
       "href": "#"
     },
     "image": {
-      "src": "/image/designyouroutfit-cta.png",
+      "src": "/image/bespoke-outfit-2.png",
       "alt": "Fashion design visualized by AI"
     }
   }

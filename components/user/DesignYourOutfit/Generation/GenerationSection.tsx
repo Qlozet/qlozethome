@@ -16,9 +16,9 @@ type GenerationData = {
 type GenerationSectionProps = { data: GenerationData };
 
 const VARIATIONS = [
-  { image: "/image/red-bespoke-1.png", label: "Variation A", confidence: "96%" },
-  { image: "/image/red-bespoke-2.png", label: "Variation B", confidence: "91%" },
-  { image: "/image/red-bespoke-3.png", label: "Variation C", confidence: "88%" }
+  { image: "/image/red-bespoke-1.png", label: "Generation 01", note: "Latest render" },
+  { image: "/image/red-bespoke-2.png", label: "Generation 02", note: "Bell-sleeve take" },
+  { image: "/image/red-bespoke-3.png", label: "Generation 03", note: "Gold-detail take" }
 ];
 
 export function GenerationSection({ data }: GenerationSectionProps) {
@@ -103,7 +103,7 @@ export function GenerationSection({ data }: GenerationSectionProps) {
                   <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
                     <div className="flex flex-col gap-1">
                       <span className="font-display text-[9px] font-bold text-white uppercase tracking-widest">{VARIATIONS[activeVar].label}</span>
-                      <span className="font-mono text-[8px] text-white/60">AI Confidence: {VARIATIONS[activeVar].confidence}</span>
+                      <span className="font-mono text-[8px] text-white/60">{VARIATIONS[activeVar].note} · Regenerate anytime</span>
                     </div>
                     <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
                       <span className="font-mono text-[8px] font-bold text-black uppercase tracking-widest leading-none">Select</span>
