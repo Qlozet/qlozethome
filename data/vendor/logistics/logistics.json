@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Logistics & Delivery",
     "title": "Deliver With Confidence. Every Time.",
-    "description": "Qlozet handles the complexity of logistics—so your products reach customers safely, efficiently, and on time. From pickup to delivery, we’ve got it covered.",
+    "description": "Qlozet keeps every delivery organized—clear statuses, automatic customer updates, and payouts tied to confirmed delivery. You ship, we handle the coordination.",
     "cta": {
       "label": "Start Delivering with Qlozet",
       "href": "/vendor/waitlist"
@@ -14,23 +14,23 @@
       "id": "end-to-end",
       "badge": "End-to-End Logistics",
       "title": "From Vendor to Customer—Seamlessly",
-      "description": "Qlozet manages the entire delivery journey, ensuring a friction-free experience for both you and your customers.",
+      "description": "Qlozet keeps the whole delivery journey organized—friction-free for both you and your customers.",
       "features": [
-        "Pickup coordination",
-        "Shipping management",
-        "Final delivery to customer"
+        "Order details and delivery address in one place",
+        "One-tap status updates—packed, in transit, delivered",
+        "Customers notified automatically at every step"
       ],
       "closing": "One system. Complete control."
     },
     {
       "id": "network",
       "badge": "Reliable Network",
-      "title": "Powered by Trusted Partners",
-      "description": "We work with reliable logistics providers to ensure every order arrives safely and on schedule.",
+      "title": "Reach Customers Nationwide",
+      "description": "Ship with the courier you trust—Qlozet keeps customers informed and expectations clear wherever they are.",
       "features": [
-        "Dependable delivery partners",
+        "Use the courier that works for you",
         "Wide coverage across regions",
-        "Consistent delivery performance"
+        "Clear delivery windows set upfront"
       ],
       "closing": "Your reputation, protected."
     },
@@ -38,9 +38,9 @@
       "id": "tracking",
       "badge": "Real-Time Tracking",
       "title": "Track Every Movement",
-      "description": "Stay informed at every stage of the delivery process with integrated tracking tools.",
+      "description": "Stay informed at every stage of the delivery process with order statuses and automatic notifications.",
       "features": [
-        "Live shipment tracking",
+        "A status timeline on every order",
         "Status updates in real time",
         "Full visibility for you and your customers"
       ],
@@ -50,9 +50,9 @@
       "id": "packaging",
       "badge": "Branded Packaging",
       "title": "Deliver Your Brand Experience",
-      "description": "Make every delivery feel premium and professional with our custom packaging solutions.",
+      "description": "Make every delivery feel premium and professional—your packaging is part of the experience.",
       "features": [
-        "Qlozet-branded packaging options",
+        "Pack and present it your way",
         "Clean, professional presentation",
         "Enhanced customer experience"
       ],
@@ -62,9 +62,9 @@
       "id": "simplicity",
       "badge": "Simple Logistics",
       "title": "No Complexity. No Stress.",
-      "description": "Qlozet removes the burden of managing logistics manually, automating the heavy lifting.",
+      "description": "Qlozet removes the burden of keeping everyone updated—statuses, notifications, and payouts flow on their own.",
       "features": [
-        "Automated shipping processes",
+        "Automatic customer notifications",
         "Integrated delivery system",
         "Reduced operational effort"
       ],
@@ -86,7 +86,7 @@
       "id": "execution",
       "badge": "Reliable Execution",
       "title": "Consistency You Can Trust",
-      "description": "We prioritize reliability at every step of the logistics process for guaranteed performance.",
+      "description": "We help you deliver reliably at every step—so every order arrives the way you promised.",
       "features": [
         "On-time delivery focus",
         "Secure handling of products",

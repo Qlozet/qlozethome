@@ -115,12 +115,12 @@ export function LogisticsSimpleSection({ data }: LogisticsSimpleSectionProps) {
 
                 {/* Complex Tasks Interface (Being Automated) */}
                  <div className="relative z-10 flex flex-col gap-3 w-full">
-                    <span className="font-display text-[9px] font-bold text-[#111111]/40 uppercase tracking-[0.3em] pl-2 mb-2">Automated Background Tasks</span>
+                    <span className="font-display text-[9px] font-bold text-[#111111]/40 uppercase tracking-[0.3em] pl-2 mb-2">Handled for You</span>
                     
                     {[
-                       { icon: RefreshCw, label: 'Finding Couriers', sub: 'Comparing 14 rates...', active: true },
-                       { icon: Layers, label: 'Printing Labels', sub: 'Generating batch #892', active: true },
-                       { icon: Zap, label: 'Status Updates', sub: 'Syncing with API', active: true }
+                       { icon: RefreshCw, label: 'Status Synced', sub: 'Order marked in transit', active: true },
+                       { icon: Layers, label: 'Customer Notified', sub: 'Update sent automatically', active: true },
+                       { icon: Zap, label: 'Payout Queued', sub: 'Released after delivery', active: true }
                     ].map((item, i) => (
                        <motion.div 
                           key={i}

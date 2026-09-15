@@ -126,7 +126,7 @@ export function ReliableNetworkSection({ data }: ReliableNetworkSectionProps) {
 
                 {/* Primary Hubs */}
                 <div className="absolute inset-0 pointer-events-none">
-                   {/* NYC Hub */}
+                   {/* Lagos */}
                    <motion.div 
                      initial={{ scale: 0 }}
                      whileInView={{ scale: 1 }}
@@ -135,11 +135,11 @@ export function ReliableNetworkSection({ data }: ReliableNetworkSectionProps) {
                       <div className="relative flex items-center justify-center">
                          <div className="absolute h-16 w-16 bg-brand-darker/[0.03] rounded-full animate-ping" />
                          <div className="h-4 w-4 bg-brand-darker rounded-full shadow-[0_0_15px_rgba(0,0,0,0.3)] ring-4 ring-white relative z-10" />
-                         <span className="absolute top-6 font-display text-[7px] font-bold uppercase tracking-[0.3em] text-brand-darker">Hub_West</span>
+                         <span className="absolute top-6 font-display text-[7px] font-bold uppercase tracking-[0.3em] text-brand-darker">Lagos</span>
                       </div>
                    </motion.div>
 
-                   {/* London Hub */}
+                   {/* Abuja */}
                    <motion.div 
                      initial={{ scale: 0 }}
                      whileInView={{ scale: 1 }}
@@ -149,7 +149,7 @@ export function ReliableNetworkSection({ data }: ReliableNetworkSectionProps) {
                       <div className="relative flex items-center justify-center">
                          <div className="absolute h-12 w-12 bg-brand-darker/[0.03] rounded-full animate-ping" />
                          <div className="h-3 w-3 bg-brand-darker rounded-full shadow-[0_0_15px_rgba(0,0,0,0.3)] ring-4 ring-white relative z-10" />
-                         <span className="absolute bottom-6 font-display text-[7px] font-bold uppercase tracking-[0.3em] text-brand-darker">Hub_East</span>
+                         <span className="absolute bottom-6 font-display text-[7px] font-bold uppercase tracking-[0.3em] text-brand-darker">Abuja</span>
                       </div>
                    </motion.div>
                    
@@ -175,21 +175,21 @@ export function ReliableNetworkSection({ data }: ReliableNetworkSectionProps) {
                          transition={{ ease: "linear", duration: 15, repeat: Infinity }}
                          className="flex items-center gap-12 font-display text-[10px] font-bold uppercase tracking-[0.4em] text-brand-darker/30"
                       >
-                         <span>DHL EXPRESS</span>
+                         <span>LAGOS</span>
                          <span className="h-1 w-1 bg-brand-darker/10 rounded-full"/>
-                         <span>FEDEX GLOBAL</span>
+                         <span>ABUJA</span>
                          <span className="h-1 w-1 bg-brand-darker/10 rounded-full"/>
-                         <span>UPS LOGISTICS</span>
+                         <span>PORT HARCOURT</span>
                          <span className="h-1 w-1 bg-brand-darker/10 rounded-full"/>
-                         <span>ROYAL MAIL</span>
+                         <span>IBADAN</span>
                          <span className="h-1 w-1 bg-brand-darker/10 rounded-full"/>
-                         <span>DHL EXPRESS</span>
+                         <span>LAGOS</span>
                          <span className="h-1 w-1 bg-brand-darker/10 rounded-full"/>
-                         <span>FEDEX GLOBAL</span>
+                         <span>ABUJA</span>
                          <span className="h-1 w-1 bg-brand-darker/10 rounded-full"/>
-                         <span>UPS LOGISTICS</span>
+                         <span>PORT HARCOURT</span>
                          <span className="h-1 w-1 bg-brand-darker/10 rounded-full"/>
-                         <span>ROYAL MAIL</span>
+                         <span>IBADAN</span>
                       </motion.div>
                    </div>
                 </div>
@@ -197,9 +197,9 @@ export function ReliableNetworkSection({ data }: ReliableNetworkSectionProps) {
                 {/* Infrastructure Meta Label (Bottom) */}
                 <div className="absolute bottom-6 text-center z-10 flex flex-col gap-1 items-center">
                    <div className="flex items-center gap-4">
-                      <p className="font-display text-[9px] text-[#111111] font-bold leading-relaxed uppercase tracking-[0.4em]">Global Routing Engine</p>
+                      <p className="font-display text-[9px] text-[#111111] font-bold leading-relaxed uppercase tracking-[0.4em]">Nationwide Delivery</p>
                       <div className="h-1 w-1 rounded-full bg-brand-darker/10" />
-                      <p className="font-display text-[9px] text-[#111111]/50 font-bold leading-relaxed uppercase tracking-[0.4em]">99.9% Active Coverage</p>
+                      <p className="font-display text-[9px] text-[#111111]/50 font-bold leading-relaxed uppercase tracking-[0.4em]">Door to Door</p>
                    </div>
                 </div>
              </div>

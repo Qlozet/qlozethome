@@ -92,7 +92,7 @@ export function ReliableExecutionSection({ data }: ReliableExecutionSectionProps
 
                 <div className="relative z-10 flex flex-col gap-2 mb-2">
                    <span className="font-display text-[9px] font-bold text-brand-darker uppercase tracking-[0.3em]">Execution Metrics</span>
-                   <span className="font-ui text-xs text-[#111111]/50">Last 30 Days Global Performance</span>
+                   <span className="font-ui text-xs text-[#111111]/50">Your Last 30 Days</span>
                 </div>
 
                 {/* Primary Metric: On-Time Delivery */}
@@ -102,7 +102,7 @@ export function ReliableExecutionSection({ data }: ReliableExecutionSectionProps
                           <div className="h-8 w-8 rounded-full bg-brand-darker flex items-center justify-center">
                              <Target className="h-4 w-4 text-white" />
                           </div>
-                          <span className="font-display text-xs font-bold text-brand-darker uppercase tracking-widest">On-Time Success</span>
+                          <span className="font-display text-xs font-bold text-brand-darker uppercase tracking-widest">On-Time Deliveries</span>
                        </div>
                        <motion.div 
                           initial={{ opacity: 0 }}
@@ -115,7 +115,7 @@ export function ReliableExecutionSection({ data }: ReliableExecutionSectionProps
                     </div>
 
                     <div className="flex items-end gap-2">
-                       <span className="font-display text-5xl lg:text-6xl font-bold text-brand-darker tracking-tighter">99.9</span>
+                       <span className="font-display text-5xl lg:text-6xl font-bold text-brand-darker tracking-tighter">96</span>
                        <span className="font-display text-2xl font-bold text-brand-darker/40 mb-2">%</span>
                     </div>
 

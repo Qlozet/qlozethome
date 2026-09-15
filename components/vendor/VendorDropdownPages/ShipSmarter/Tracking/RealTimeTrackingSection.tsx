@@ -123,7 +123,7 @@ export function RealTimeTrackingSection({ data }: RealTimeTrackingSectionProps) 
                          <MapPin className="h-3 w-3 text-white" />
                       </div>
                       <div className="bg-white px-2 py-1 rounded-md shadow-md border border-brand-darker/5">
-                         <span className="font-display text-[8px] font-bold text-brand-darker uppercase tracking-widest">Client Drop</span>
+                         <span className="font-display text-[8px] font-bold text-brand-darker uppercase tracking-widest">Delivered</span>
                       </div>
                    </div>
  
@@ -160,11 +160,11 @@ export function RealTimeTrackingSection({ data }: RealTimeTrackingSectionProps) 
                       <div className="flex items-start justify-between">
                          <div className="flex flex-col">
                             <span className="font-display text-[8px] font-bold text-[#111111]/40 uppercase tracking-widest">Est. Delivery</span>
-                            <span className="font-display text-xl font-bold text-brand-darker">14 Min</span>
+                            <span className="font-display text-xl font-bold text-brand-darker">3–7 Days</span>
                          </div>
                          <div className="flex items-center gap-1.5 bg-brand-light rounded-full px-2 py-1">
                             <span className="h-1.5 w-1.5 rounded-full bg-brand-darker animate-pulse" />
-                            <span className="font-display text-[7px] font-bold uppercase tracking-wider text-brand-darker">Live</span>
+                            <span className="font-display text-[7px] font-bold uppercase tracking-wider text-brand-darker">Updated</span>
                          </div>
                       </div>
                       
@@ -178,8 +178,8 @@ export function RealTimeTrackingSection({ data }: RealTimeTrackingSectionProps) 
                             />
                          </div>
                          <div className="flex justify-between items-center">
-                            <span className="font-ui text-[9px] text-[#111111]/40">1.2 mi</span>
-                            <span className="font-ui text-[9px] text-[#111111]/40">Out for delivery</span>
+                            <span className="font-ui text-[9px] text-[#111111]/40">Shipped</span>
+                            <span className="font-ui text-[9px] text-[#111111]/40">In transit</span>
                          </div>
                       </div>
                    </div>
