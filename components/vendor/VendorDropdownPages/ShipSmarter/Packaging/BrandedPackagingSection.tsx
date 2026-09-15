@@ -117,10 +117,10 @@ export function BrandedPackagingSection({ data }: BrandedPackagingSectionProps) 
                       transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
                       className="absolute h-52 w-52 bg-brand-darker rounded-xl shadow-2xl flex items-center justify-center overflow-hidden transform-style-3d"
                    >
-                      {/* Qlozet Branding on the Lid */}
+                      {/* The vendor's own brand on the lid */}
                       <div className="flex items-center gap-2 -rotate-45 opacity-40">
                          <Zap className="h-6 w-6 text-brand-light" fill="#f7f5f4" />
-                         <span className="font-display text-xl font-bold uppercase tracking-[0.3em] text-brand-light">Qlozet</span>
+                         <span className="font-display text-sm font-bold uppercase tracking-[0.3em] text-brand-light">Adire Studio</span>
                       </div>
                       
                       {/* Inner Lid Texture */}

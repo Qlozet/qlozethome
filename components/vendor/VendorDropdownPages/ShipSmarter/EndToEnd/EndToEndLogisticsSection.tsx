@@ -133,7 +133,7 @@ export function EndToEndLogisticsSection({ data }: EndToEndLogisticsSectionProps
                         <div className="flex-1 pl-6 opacity-0"></div>
                      </motion.div>
 
-                     {/* 2. Hub (Center) */}
+                     {/* 2. Courier (Center) */}
                      <motion.div 
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -144,7 +144,7 @@ export function EndToEndLogisticsSection({ data }: EndToEndLogisticsSectionProps
                         
                         <div className="flex h-20 w-20 flex-col items-center justify-center gap-1 rounded-full bg-white shadow-2xl border border-brand-darker/10 transition-transform duration-700 group-hover/hub:scale-110">
                            <Truck className="h-6 w-6 text-brand-darker" strokeWidth={1.5} />
-                           <span className="font-display text-[7px] font-bold uppercase tracking-[0.3em] text-brand-darker">Hub</span>
+                           <span className="font-display text-[7px] font-bold uppercase tracking-[0.3em] text-brand-darker">Courier</span>
                         </div>
                      </motion.div>
 
@@ -161,7 +161,7 @@ export function EndToEndLogisticsSection({ data }: EndToEndLogisticsSectionProps
                         </div>
                         
                         <div className="flex-1 pl-6 text-left">
-                           <span className="font-display text-[9px] font-bold uppercase tracking-[0.3em] text-[#111111]/40 group-hover/node:text-brand-darker transition-colors">Client Drop</span>
+                           <span className="font-display text-[9px] font-bold uppercase tracking-[0.3em] text-[#111111]/40 group-hover/node:text-brand-darker transition-colors">Customer</span>
                         </div>
                      </motion.div>
 
@@ -172,8 +172,8 @@ export function EndToEndLogisticsSection({ data }: EndToEndLogisticsSectionProps
              
              <div className="text-center z-10 pt-10">
                 <div className="flex flex-col gap-1 items-center">
-                   <p className="font-display text-[9px] text-[#111111]/20 leading-relaxed uppercase tracking-[0.4em]">Batch ID: QL-809277</p>
-                   <p className="font-display text-[9px] text-[#111111]/40 leading-relaxed uppercase tracking-[0.4em]">Integrated Logistics Stack</p>
+                   <p className="font-display text-[9px] text-[#111111]/20 leading-relaxed uppercase tracking-[0.4em]">Order QL-8092</p>
+                   <p className="font-display text-[9px] text-[#111111]/40 leading-relaxed uppercase tracking-[0.4em]">One Delivery Timeline</p>
                 </div>
              </div>
           </div>

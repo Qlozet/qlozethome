@@ -121,8 +121,8 @@ export function FulfillmentSection({ data }: FulfillmentSectionProps) {
                                <InfinityIcon className="h-4 w-4" />
                             </div>
                             <div className="flex flex-col">
-                               <span className="font-display text-[9px] font-bold uppercase tracking-widest text-brand-darker">Enterprise Batch</span>
-                               <span className="font-ui text-[9px] text-[#111111]/40">10,000+ Units/mo</span>
+                               <span className="font-display text-[9px] font-bold uppercase tracking-widest text-brand-darker">Large Workshop</span>
+                               <span className="font-ui text-[9px] text-[#111111]/40">Bulk ready-to-wear</span>
                             </div>
                          </div>
                          
@@ -131,8 +131,8 @@ export function FulfillmentSection({ data }: FulfillmentSectionProps) {
                                <Layers className="h-4 w-4" />
                             </div>
                             <div className="flex flex-col">
-                               <span className="font-display text-[9px] font-bold uppercase tracking-widest text-[#111111]">RTW Drops</span>
-                               <span className="font-ui text-[9px] text-[#111111]/40">100 - 5,000 Units/mo</span>
+                               <span className="font-display text-[9px] font-bold uppercase tracking-widest text-[#111111]">Growing Brand</span>
+                               <span className="font-ui text-[9px] text-[#111111]/40">Weekly collection drops</span>
                             </div>
                          </div>
  
