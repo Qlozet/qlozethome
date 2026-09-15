@@ -43,7 +43,7 @@ export function ExploreHero({ data }: ExploreHeroProps) {
       >
         <div className="relative aspect-[3/4] w-full max-w-xl md:aspect-[4/3] md:max-w-4xl opacity-40 mix-blend-multiply">
           <Image
-            src={data.image.src || "/image/tailormeasuringtape.png"}
+            src={data.image.src || "/image/tailorwork.png"}
             alt={data.image.alt || "Curated Gallery"}
             fill
             className="object-cover grayscale transition-all duration-[2s] hover:grayscale-[0.5]"

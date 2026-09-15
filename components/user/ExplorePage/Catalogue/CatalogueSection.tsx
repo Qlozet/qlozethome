@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { Grid, Filter, Check } from "lucide-react";
 
 const PRODUCTS = [
-  { image: "/image/product-1.png", name: "Tailored Blazer", price: "$320" },
-  { image: "/image/product-2.png", name: "Evening Gown", price: "$580" },
-  { image: "/image/product-3.png", name: "Ankara Set", price: "$210" },
-  { image: "/image/product-4.png", name: "Silk Wrap", price: "$145" }
+  { image: "/image/product-1.png", name: "Tailored Blazer", price: "₦145,000" },
+  { image: "/image/product-2.png", name: "Evening Gown", price: "₦260,000" },
+  { image: "/image/product-3.png", name: "Ankara Set", price: "₦95,000" },
+  { image: "/image/product-4.png", name: "Silk Wrap", price: "₦65,000" }
 ];
 
 const CATEGORIES = ["All", "Clothing", "Fabrics", "Accessories"];
@@ -101,7 +101,7 @@ export function CatalogueSection({ data }: CatalogueSectionProps) {
                       <span className="font-display text-[10px] font-bold uppercase tracking-widest text-brand-darker">Browse</span>
                    </div>
                    <div className="bg-white px-3 py-1.5 rounded-full border border-brand-darker/5 shadow-sm">
-                      <span className="font-mono text-[8px] font-bold text-brand-darker/60 uppercase tracking-widest">1,240+ Items</span>
+                      <span className="font-mono text-[8px] font-bold text-brand-darker/60 uppercase tracking-widest">Shop by Category</span>
                    </div>
                 </div>
 

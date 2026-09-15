@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import { Sparkles, Search, Zap, Compass, Check } from "lucide-react";
 
+// No fake "match %" scores — the shop recommends by taste tags, so the
+// mock shows WHICH tags a pick matches instead of an invented precision.
 const MATCHED_PRODUCTS = [
-  { image: "/image/product-5.png", name: "Classic Tuxedo", match: 98 },
-  { image: "/image/product-6.png", name: "Designer Suit", match: 94 }
+  { image: "/image/product-5.png", name: "Classic Tuxedo", tags: ["Evening Wear", "Tailored Fit"] },
+  { image: "/image/product-6.png", name: "Designer Suit", tags: ["Minimalist", "Tailored Fit"] }
 ];
 
 const STYLE_TAGS = ["Minimalist", "Evening Wear", "Earth Tones", "Tailored Fit"];
@@ -104,7 +106,7 @@ export function SmartDiscoverySection({ data }: SmartDiscoverySectionProps) {
                    </div>
                    <div className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full border border-brand-darker/5 shadow-sm">
                       <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                      <span className="font-mono text-[8px] font-bold text-brand-darker/60 uppercase tracking-widest">AI Active</span>
+                      <span className="font-mono text-[8px] font-bold text-brand-darker/60 uppercase tracking-widest">Personalized</span>
                    </div>
                 </div>
 
@@ -159,17 +161,11 @@ export function SmartDiscoverySection({ data }: SmartDiscoverySectionProps) {
                          </div>
                          <div className="flex-1 flex flex-col gap-2">
                             <span className="font-display text-[11px] font-bold text-[#111111] uppercase tracking-wider">{product.name}</span>
-                            <div className="flex items-center gap-2">
-                               <div className="h-1.5 flex-1 bg-zinc-100 rounded-full overflow-hidden">
-                                  <motion.div
-                                     initial={{ width: "0%" }}
-                                     whileInView={{ width: `${product.match}%` }}
-                                     viewport={{ once: true }}
-                                     transition={{ delay: 0.8 + i * 0.2, duration: 1, ease: "easeOut" }}
-                                     className="h-full bg-emerald-500 rounded-full"
-                                  />
-                               </div>
-                               <span className="font-mono text-[10px] font-bold text-emerald-600">{product.match}%</span>
+                            <div className="flex flex-wrap items-center gap-1.5">
+                               <Check className="h-3 w-3 text-emerald-600" />
+                               {product.tags.map((tag) => (
+                                  <span key={tag} className="px-2 py-0.5 rounded-full bg-zinc-100 font-mono text-[7px] font-bold uppercase tracking-widest text-brand-darker/60">{tag}</span>
+                               ))}
                             </div>
                          </div>
                          <Search className="h-4 w-4 text-[#111111]/10 shrink-0 transition-all duration-300 hover:text-[#111111]/40 hover:rotate-12" />

@@ -3,13 +3,15 @@
 import { motion } from "framer-motion";
 import { Camera, Heart, TrendingUp, Eye, Check } from "lucide-react";
 
+// No public like-counts exist on the shop — the save (wishlist) affordance
+// is real, so the hover heart stays; fabricated "2.4k likes" badges do not.
 const LOOKBOOK_ITEMS = [
-  { image: "/image/bespoke-outfit-1.webp", likes: "2.4k", aspect: "aspect-[3/4]", tag: null },
-  { image: "/image/ankara.png", likes: "1.8k", aspect: "aspect-square", tag: "Trending" },
-  { image: "/image/agbada.png", likes: "3.1k", aspect: "aspect-[3/4]", tag: null },
-  { image: "/image/bespoke-dress-1.png", likes: "956", aspect: "aspect-[4/5]", tag: "New Drop" },
-  { image: "/image/custom-outfit-1.png", likes: "4.2k", aspect: "aspect-[3/4]", tag: null },
-  { image: "/image/bespoke-outfit-3.webp", likes: "1.2k", aspect: "aspect-square", tag: null }
+  { image: "/image/bespoke-outfit-1.webp", aspect: "aspect-[3/4]", tag: null },
+  { image: "/image/ankara.png", aspect: "aspect-square", tag: "Trending" },
+  { image: "/image/agbada.png", aspect: "aspect-[3/4]", tag: null },
+  { image: "/image/bespoke-dress-1.png", aspect: "aspect-[4/5]", tag: "New Drop" },
+  { image: "/image/custom-outfit-1.png", aspect: "aspect-[3/4]", tag: null },
+  { image: "/image/bespoke-outfit-3.webp", aspect: "aspect-square", tag: null }
 ];
 
 type InspoData = {
@@ -99,11 +101,11 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                 <div className="flex items-center justify-between pb-4 mb-4 border-b border-brand-darker/5">
                    <div className="flex items-center gap-3">
                       <Eye className="h-4 w-4 text-brand-darker/40" />
-                      <span className="font-display text-[10px] font-bold uppercase tracking-widest text-brand-darker">Community Lookbook</span>
+                      <span className="font-display text-[10px] font-bold uppercase tracking-widest text-brand-darker">Style Lookbook</span>
                    </div>
                    <div className="flex items-center gap-1.5">
                       <TrendingUp className="h-3 w-3 text-emerald-500" />
-                      <span className="font-mono text-[8px] font-bold text-emerald-600 uppercase tracking-widest">Live</span>
+                      <span className="font-mono text-[8px] font-bold text-emerald-600 uppercase tracking-widest">Trending</span>
                    </div>
                 </div>
 
@@ -139,10 +141,6 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                                </div>
                             </div>
                             
-                            <div className="absolute bottom-2 left-2 flex items-center gap-1.5">
-                               <Heart className="h-3 w-3 text-white fill-white/40 group-hover:fill-rose-500 group-hover:text-rose-500 transition-colors duration-300" />
-                               <span className="font-mono text-[8px] font-bold text-white/90">{item.likes}</span>
-                            </div>
                          </motion.div>
                       ))}
                    </div>
@@ -177,10 +175,6 @@ export function InspirationSection({ data }: InspirationSectionProps) {
                                </div>
                             </div>
                             
-                            <div className="absolute bottom-2 left-2 flex items-center gap-1.5">
-                               <Heart className="h-3 w-3 text-white fill-white/40 group-hover:fill-rose-500 group-hover:text-rose-500 transition-colors duration-300" />
-                               <span className="font-mono text-[8px] font-bold text-white/90">{item.likes}</span>
-                            </div>
                          </motion.div>
                       ))}
                    </div>

@@ -38,7 +38,7 @@
     "title": "Fashion That Finds You",
     "description": "Qlozet personalizes your experience so you discover styles that match your taste.",
     "features": [
-      "AI-powered recommendations",
+      "Smart recommendations that learn your taste",
       "Personalized feeds based on your preferences",
       "Smart filtering and search"
     ],
@@ -60,10 +60,10 @@
     "id": "inspiration",
     "badge": "Inspiration Everywhere",
     "title": "Get Inspired",
-    "description": "Explore designs from vendors and creations from other users.",
+    "description": "Explore showcased designs from vendors and looks trending across the marketplace.",
     "features": [
       "Vendor showcases",
-      "User-generated designs",
+      "Curated collections and new drops",
       "Trending styles and looks"
     ],
     "closing": "See it. Love it. Make it yours."

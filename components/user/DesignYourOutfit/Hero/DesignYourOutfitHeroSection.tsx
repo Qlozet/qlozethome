@@ -113,7 +113,7 @@ export function DesignYourOutfitHero({ data }: DesignYourOutfitHeroProps) {
           className="relative mt-12 w-full max-w-4xl overflow-hidden rounded-[3rem] bg-zinc-100 shadow-2xl shadow-black/5 aspect-[16/9]"
         >
           <Image
-            src={data.image?.src || "/image/tailormeasuringtape.png"}
+            src={data.image?.src || "/image/tailorwork.png"}
             alt={data.image?.alt || "Atelier Design"}
             fill
             className="object-cover grayscale"

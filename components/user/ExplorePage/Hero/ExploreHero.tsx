@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 
 const HERO_IMAGES = [
   { src: "/image/product-5.png", alt: "Tuxedo" },
@@ -165,12 +165,12 @@ export function ExploreHero({ data }: ExploreHeroProps) {
                          <img src="/image/seun.png" alt="" className="w-full h-full object-cover" />
                       </div>
                       <div className="h-7 w-7 rounded-full bg-brand-darker border-2 border-white flex items-center justify-center">
-                         <span className="text-[7px] font-bold text-white">+50</span>
+                         <Check className="h-3 w-3 text-white" />
                       </div>
                    </div>
                    <div className="flex flex-col">
-                      <span className="font-display text-[10px] font-bold text-brand-darker">200+ Designers</span>
-                      <span className="font-mono text-[7px] text-brand-darker/40 uppercase tracking-widest">Active Now</span>
+                      <span className="font-display text-[10px] font-bold text-brand-darker">Designers &amp; Tailors</span>
+                      <span className="font-mono text-[7px] text-brand-darker/40 uppercase tracking-widest">Verified on Qlozet</span>
                    </div>
                 </motion.div>
              </div>
