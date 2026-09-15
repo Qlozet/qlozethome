@@ -39,7 +39,7 @@ const MODES = [
       },
       {
         icon: Zap,
-        label: "Auto-Accepted",
+        label: "Paid & Confirmed",
         note: "Instantly added to queue",
         statusColor: "bg-brand-light text-brand-darker",
         active: true,
@@ -56,7 +56,7 @@ const MODES = [
       id: "ORD-8821",
       item: "Silk Ankara Kaftan",
       size: "Size M",
-      status: "Auto-Accepted",
+      status: "Paid & Confirmed",
       statusStyle: "bg-brand-light text-brand-darker",
       time: "Just now",
     },
@@ -115,7 +115,7 @@ const MODES = [
       {
         icon: User,
         label: "Request In",
-        note: "Client shares brief + budget",
+        note: "Client shares design + notes",
         statusColor: "bg-brand-light text-[#111111]/40",
         active: true,
       },

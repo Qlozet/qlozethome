@@ -33,10 +33,10 @@ export function SellingModelsSection({ data }: SellingModelsSectionProps) {
       content: (
         <div className="grid grid-cols-2 gap-3">
           {[
-            { name: "Silk Blouse", price: "$89", color: "bg-rose-50 border-rose-100" },
-            { name: "Linen Pants", price: "$120", color: "bg-amber-50 border-amber-100" },
-            { name: "Cotton Dress", price: "$145", color: "bg-sky-50 border-sky-100" },
-            { name: "Wool Jacket", price: "$210", color: "bg-brand-light border-brand-darker/10" },
+            { name: "Silk Blouse", price: "₦38,000", color: "bg-rose-50 border-rose-100" },
+            { name: "Linen Pants", price: "₦52,000", color: "bg-amber-50 border-amber-100" },
+            { name: "Cotton Dress", price: "₦64,000", color: "bg-sky-50 border-sky-100" },
+            { name: "Wool Jacket", price: "₦95,000", color: "bg-brand-light border-brand-darker/10" },
           ].map((item, i) => (
             <motion.div
               key={i}

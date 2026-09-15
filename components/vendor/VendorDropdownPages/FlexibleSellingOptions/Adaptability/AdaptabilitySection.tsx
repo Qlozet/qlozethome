@@ -32,7 +32,7 @@ export function AdaptabilitySection({ data }: AdaptabilitySectionProps) {
       desc: "One person, personal service",
       stats: [
         { val: "3", label: "Orders" },
-        { val: "$420", label: "Revenue" },
+        { val: "₦180K", label: "Revenue" },
       ],
       tasks: [
         { text: "Custom Kaftan — Mrs. Adeyemi", status: "In Progress", statusColor: "text-amber-600 bg-amber-50" },
@@ -45,7 +45,7 @@ export function AdaptabilitySection({ data }: AdaptabilitySectionProps) {
       desc: "Small team, expanding catalog",
       stats: [
         { val: "12", label: "Active" },
-        { val: "$3.2K", label: "Revenue" },
+        { val: "₦1.4M", label: "Revenue" },
         { val: "3", label: "Staff" },
       ],
       tasks: [
@@ -59,9 +59,9 @@ export function AdaptabilitySection({ data }: AdaptabilitySectionProps) {
       desc: "Full-scale production",
       stats: [
         { val: "156", label: "Orders" },
-        { val: "$28K", label: "Revenue" },
+        { val: "₦12M", label: "Revenue" },
         { val: "42", label: "Active" },
-        { val: "98%", label: "Rate" },
+        { val: "4.9", label: "Rating" },
       ],
       tasks: [
         { text: "Revenue ↑ 18% this month", status: "Growth", statusColor: "text-brand-darker bg-brand-light" },

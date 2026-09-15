@@ -29,9 +29,9 @@ export function ScalingSection({ data }: ScalingSectionProps) {
     {
       stage: "02",
       label: "Add Customization",
-      desc: "Enable customers to modify styles",
+      desc: "Take on made-to-measure work",
       icon: Palette,
-      items: ["Style Options", "Custom Sizing", "+15% Revenue"],
+      items: ["Style Options", "Custom Sizing", "Quote Requests"],
       done: true,
     },
     {

@@ -25,11 +25,11 @@
     {
       "id": "customization",
       "badge": "Customization Control",
-      "title": "Define How Customers Customize",
-      "description": "Choose exactly what parts of your designs customers can modify.",
+      "title": "Your Craft, Your Options",
+      "description": "Curate the styles you offer and take on the custom requests that fit your craft.",
       "features": [
-        "Control style options (neckline, sleeves, fit, length)",
-        "Enable or restrict customization features",
+        "Curate your own style library (necklines, sleeves, fits)",
+        "Set sizes and colors on every product",
         "Maintain your creative direction"
       ],
       "closing": "You stay in control of your designs."
@@ -54,7 +54,7 @@
       "features": [
         "Use your own fabrics",
         "Accept customer-selected fabrics",
-        "Collaborate with fabric vendors"
+        "Sell fabrics alongside your designs"
       ],
       "closing": "No limitations on how you create."
     },
@@ -62,11 +62,11 @@
       "id": "workflow",
       "badge": "Order Workflow Control",
       "title": "Control Your Workflow",
-      "description": "Decide how orders come to you.",
+      "description": "Ready-to-wear sells directly — custom requests come to you for review and quoting.",
       "features": [
         "Accept direct orders",
         "Review and approve requests",
-        "Option for bidding or quoting (if enabled)"
+        "Quote custom requests at your price"
       ],
       "closing": "You choose how you work—not the platform."
     },

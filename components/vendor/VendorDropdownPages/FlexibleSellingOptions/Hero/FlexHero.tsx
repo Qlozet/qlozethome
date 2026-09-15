@@ -201,8 +201,8 @@ export function FlexHero({ data }: FlexHeroProps) {
                 <div className="grid grid-cols-3 divide-x divide-black/[0.05] border-b border-brand-darker/[0.05]">
                   {[
                     { val: "42", label: "Orders Today", icon: TrendingUp, trend: "+12%" },
-                    { val: "$2.8K", label: "Revenue", icon: Zap, trend: "+8%" },
-                    { val: "98%", label: "Fulfilment", icon: Star, trend: "↑" },
+                    { val: "₦1.2M", label: "Revenue", icon: Zap, trend: "+8%" },
+                    { val: "4.9", label: "Rating", icon: Star, trend: "↑" },
                   ].map((stat, i) => (
                     <motion.div
                       key={i}

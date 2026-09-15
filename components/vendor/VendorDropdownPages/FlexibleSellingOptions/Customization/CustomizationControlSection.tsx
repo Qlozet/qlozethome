@@ -63,9 +63,9 @@ export function CustomizationControlSection({ data }: CustomizationControlSectio
               <div className="px-8 pt-8 pb-5 border-b border-brand-darker/5 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="h-2 w-2 rounded-full bg-brand-darker animate-pulse" />
-                  <span className="font-display text-[10px] font-bold uppercase tracking-widest text-[#111111]">Style Controls</span>
+                  <span className="font-display text-[10px] font-bold uppercase tracking-widest text-[#111111]">Your Style Library</span>
                 </div>
-                <span className="font-mono text-[9px] text-brand-darker/20">{options.filter(o => o.enabled).length}/{options.length} open</span>
+                <span className="font-mono text-[9px] text-brand-darker/20">{options.filter(o => o.enabled).length}/{options.length} offered</span>
               </div>
 
               {/* Options */}
