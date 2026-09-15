@@ -74,7 +74,7 @@ export function ScaleWithoutLimitsSection({ data }: ScaleWithoutLimitsSectionPro
                   {[
                      { label: "Regions", value: "4" },
                      { label: "Total Orders", value: "4.9K" },
-                     { label: "Growth", value: "+180%" }
+                     { label: "Growth", value: "+48%" }
                   ].map((stat, i) => (
                      <motion.div key={i} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 + i * 0.08 }}
                         className="bg-white rounded-xl border border-brand-darker/5 shadow-sm p-3 text-center cursor-pointer hover:shadow-md transition-shadow"

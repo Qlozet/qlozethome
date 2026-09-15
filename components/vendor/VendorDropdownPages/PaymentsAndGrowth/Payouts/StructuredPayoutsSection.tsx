@@ -17,9 +17,9 @@ type StructuredPayoutsSectionProps = {
 };
 
 const MILESTONES = [
-  { phase: "Upfront Deposit", pct: "30%", status: "Released", active: true, amount: "₦25,500" },
-  { phase: "Production Confirmed", pct: "20%", status: "Released", active: true, amount: "₦17,000" },
-  { phase: "Order Complete", pct: "50%", status: "Pending", active: false, amount: "₦42,500" }
+  { phase: "Order Paid", pct: "100%", status: "Secured", active: true, amount: "₦85,000" },
+  { phase: "In Transit", pct: "Held", status: "Pending", active: true, amount: "₦85,000" },
+  { phase: "Delivery Confirmed", pct: "90%", status: "Released", active: false, amount: "₦76,500" }
 ];
 
 export function StructuredPayoutsSection({ data }: StructuredPayoutsSectionProps) {
@@ -74,8 +74,8 @@ export function StructuredPayoutsSection({ data }: StructuredPayoutsSectionProps
                      <span className="font-display text-2xl font-bold text-brand-darker tracking-tight">₦85,000</span>
                   </div>
                   <div className="flex flex-col items-end gap-1">
-                     <span className="font-mono text-[8px] font-bold text-brand-darker/40 uppercase tracking-widest">Released</span>
-                     <span className="font-display text-lg font-bold text-emerald-600 tracking-tight">₦42,500</span>
+                     <span className="font-mono text-[8px] font-bold text-brand-darker/40 uppercase tracking-widest">Your Payout</span>
+                     <span className="font-display text-lg font-bold text-emerald-600 tracking-tight">₦76,500</span>
                   </div>
                </div>
 

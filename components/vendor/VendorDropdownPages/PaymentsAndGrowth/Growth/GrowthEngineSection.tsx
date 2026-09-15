@@ -17,7 +17,7 @@ type GrowthEngineSectionProps = {
 };
 
 const GROWTH_METRICS = [
-  { label: "Customer Reach", value: "12.4K", trend: "+320%", icon: Users },
+  { label: "Customers", value: "1.2K", trend: "+32%", icon: Users },
   { label: "Monthly Orders", value: "186", trend: "+18%", icon: ShoppingBag },
   { label: "Revenue Growth", value: "₦4.2M", trend: "+24%", icon: TrendingUp }
 ];

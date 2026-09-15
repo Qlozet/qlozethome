@@ -17,9 +17,9 @@ type PromotionVisibilitySectionProps = {
 };
 
 const PROMO_FEATURES = [
-  { label: "Featured Listing", desc: "Top placement in search results", icon: Star, active: true },
-  { label: "Campaign Boost", desc: "Targeted buyer audience reach", icon: Megaphone, active: true },
-  { label: "Badge System", desc: "Earn trust through performance", icon: Award, active: false }
+  { label: "Top Shops Placement", desc: "Best-rated stores get featured", icon: Star, active: true },
+  { label: "Vendor Deals", desc: "Your discounts surface on the explore feed", icon: Megaphone, active: true },
+  { label: "Verified Badge", desc: "Earn trust through verification", icon: Award, active: false }
 ];
 
 export function PromotionVisibilitySection({ data }: PromotionVisibilitySectionProps) {

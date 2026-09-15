@@ -17,9 +17,8 @@ type TransparentEarningsSectionProps = {
 };
 
 const BREAKDOWN = [
-  { label: "Your Earnings", pct: 85, amount: "₦72,250", color: "bg-brand" },
-  { label: "Platform Fee", pct: 10, amount: "₦8,500", color: "bg-brand/30" },
-  { label: "Payment Processing", pct: 5, amount: "₦4,250", color: "bg-brand/15" }
+  { label: "Your Earnings", pct: 90, amount: "₦76,500", color: "bg-brand" },
+  { label: "Platform Fee", pct: 10, amount: "₦8,500", color: "bg-brand/30" }
 ];
 
 export function TransparentEarningsSection({ data }: TransparentEarningsSectionProps) {
@@ -114,7 +113,7 @@ export function TransparentEarningsSection({ data }: TransparentEarningsSectionP
                      <DollarSign className="h-5 w-5 text-white/40" />
                      <span className="font-display text-[10px] font-bold text-white uppercase tracking-wider">Your Net Earnings</span>
                   </div>
-                  <span className="font-display text-xl font-bold text-white">₦72,250</span>
+                  <span className="font-display text-xl font-bold text-white">₦76,500</span>
                </div>
             </div>
           </div>
