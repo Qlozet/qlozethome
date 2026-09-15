@@ -16,7 +16,7 @@ type ProductionSectionProps = { data: ProductionData };
 
 const PIPELINE = [
   { step: "Design Finalized", status: "Complete", icon: CheckCircle2, image: "/image/custom-outfit-4.webp" },
-  { step: "Matched to Tailor", status: "Complete", icon: Store, image: "/image/seun.png" },
+  { step: "Tailor Chosen from Quotes", status: "Complete", icon: Store, image: "/image/seun.png" },
   { step: "In Production", status: "Active", icon: Workflow, image: "/image/tailorwork.png" }
 ];
 
