@@ -164,10 +164,10 @@ export function EcosystemSection({ data }: EcosystemSectionProps) {
                       
                       <div className="flex flex-col gap-1">
                          <span className="font-display text-sm font-bold uppercase tracking-[0.2em] text-[#111111]">
-                            10,000+ Creators
+                            Designers &amp; Tailors
                          </span>
                          <span className="font-ui text-[10px] uppercase tracking-widest text-[#111111]/50">
-                            Endless Discovery Feed
+                            African &amp; Global Styles
                          </span>
                       </div>
                       

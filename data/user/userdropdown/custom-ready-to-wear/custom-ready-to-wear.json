@@ -50,14 +50,14 @@
   "mixmatch": {
     "badge": "Empowerment",
     "title": "Create Without Limits",
-    "description": "Qlozet lets you combine elements from different vendors into one outfit. You’re not restricted—you're empowered.",
+    "description": "Qlozet lets you combine your fabric, your design, and your choice of tailor into one outfit. You’re not restricted—you're empowered.",
     "features": [
       {
-        "title": "Use fabric from one vendor",
+        "title": "Pick the fabric and finishing you want",
         "icon": "Scissors"
       },
       {
-        "title": "Choose a designer from another",
+        "title": "Compare quotes from expert tailors",
         "icon": "UserPlus"
       },
       {
@@ -114,7 +114,7 @@
         "icon": "Wallet"
       },
       {
-        "title": "Filter vendors by affordability tiers",
+        "title": "Compare vendor quotes to fit your budget",
         "icon": "Tags"
       },
       {
@@ -122,7 +122,7 @@
         "icon": "Calculator"
       },
       {
-        "title": "Change your styles to adjust the price",
+        "title": "Adjust fabric and style choices to shape your quote",
         "icon": "Wand2"
       }
     ]

@@ -7,24 +7,24 @@ import { useState, useMemo } from "react";
 /* ── Configurable options with price impacts ── */
 const SLEEVE_OPTIONS = [
   { label: "Short Sleeve", price: 0 },
-  { label: "3/4 Sleeve", price: 15 },
-  { label: "Long Sleeve", price: 35 }
+  { label: "3/4 Sleeve", price: 5000 },
+  { label: "Long Sleeve", price: 12000 }
 ];
 
 const FABRIC_OPTIONS = [
   { label: "Poly-Blend", price: 0, img: "/image/fabric-swatch-3.jpg" },
-  { label: "Turkish Cotton", price: 80, img: "/image/fabric-swatch-2.jpg" },
-  { label: "Italian Silk", price: 220, img: "/image/fabric-swatch-1.jpg" }
+  { label: "Turkish Cotton", price: 25000, img: "/image/fabric-swatch-2.jpg" },
+  { label: "Italian Silk", price: 80000, img: "/image/fabric-swatch-1.jpg" }
 ];
 
 const ACCESSORIES = [
-  { label: "Embroidery", price: 60, active: true },
-  { label: "Gold Buttons", price: 40, active: false },
-  { label: "Inner Lining", price: 30, active: true },
-  { label: "Monogram", price: 25, active: false }
+  { label: "Embroidery", price: 20000, active: true },
+  { label: "Gold Buttons", price: 15000, active: false },
+  { label: "Inner Lining", price: 10000, active: true },
+  { label: "Monogram", price: 8000, active: false }
 ];
 
-const BASE_PRICE = 120;
+const BASE_PRICE = 60000;
 
 type Feature = {
   title: string;
@@ -139,16 +139,16 @@ export function BudgetSection({ data }: BudgetSectionProps) {
                 </div>
                 <span className="font-mono text-[7px] font-bold text-emerald-600 uppercase tracking-widest flex items-center gap-1.5">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse inline-block" />
-                  Live
+                  Estimate
                 </span>
               </div>
 
               {/* ── Live Price ── */}
               <div className="px-5 pt-5 pb-3 flex items-end justify-between border-b border-brand-darker/5">
                 <div>
-                  <span className="font-mono text-[7px] text-[#111111]/25 font-bold uppercase tracking-widest block mb-1">Your Price</span>
+                  <span className="font-mono text-[7px] text-[#111111]/25 font-bold uppercase tracking-widest block mb-1">Estimated Quote</span>
                   <div className="flex items-baseline gap-0.5">
-                    <span className="font-display text-[11px] text-[#111111]/30">$</span>
+                    <span className="font-display text-[11px] text-[#111111]/30">₦</span>
                     <AnimatePresence mode="wait">
                       <motion.span
                         key={totalPrice}
@@ -158,12 +158,12 @@ export function BudgetSection({ data }: BudgetSectionProps) {
                         transition={{ duration: 0.25 }}
                         className="font-display text-5xl font-bold text-[#111111] tracking-tighter"
                       >
-                        {totalPrice}
+                        {totalPrice.toLocaleString()}
                       </motion.span>
                     </AnimatePresence>
                   </div>
                 </div>
-                <span className="font-mono text-[7px] text-[#111111]/15 uppercase tracking-widest pb-2">Updates live</span>
+                <span className="font-mono text-[7px] text-[#111111]/15 uppercase tracking-widest pb-2">Illustrative</span>
               </div>
 
               {/* ── Fabric Selector ── */}
@@ -190,7 +190,7 @@ export function BudgetSection({ data }: BudgetSectionProps) {
                           {f.label}
                         </span>
                         <span className="font-mono text-[7px] text-white/50">
-                          {f.price === 0 ? 'Base' : `+$${f.price}`}
+                          {f.price === 0 ? 'Base' : `+₦${f.price.toLocaleString()}`}
                         </span>
                       </div>
                     </button>
@@ -214,7 +214,7 @@ export function BudgetSection({ data }: BudgetSectionProps) {
                     >
                       <span className="font-display text-[9px] font-bold block">{s.label}</span>
                       <span className={`font-mono text-[7px] mt-0.5 block ${idx === sleeveIdx ? 'text-white/50' : 'text-[#111111]/20'}`}>
-                        {s.price === 0 ? 'Base' : `+$${s.price}`}
+                        {s.price === 0 ? 'Base' : `+₦${s.price.toLocaleString()}`}
                       </span>
                     </button>
                   ))}
@@ -246,7 +246,7 @@ export function BudgetSection({ data }: BudgetSectionProps) {
                         </span>
                       </div>
                       <span className={`font-mono text-[7px] ${accessories[idx] ? 'text-brand-darker/50' : 'text-brand-darker/15'}`}>
-                        +${acc.price}
+                        +₦{acc.price.toLocaleString()}
                       </span>
                     </button>
                   ))}
@@ -259,7 +259,7 @@ export function BudgetSection({ data }: BudgetSectionProps) {
                   <div className="flex flex-col gap-0.5">
                     <span className="font-mono text-[7px] text-white/30 font-bold uppercase tracking-widest">Estimated Total</span>
                     <div className="flex items-baseline gap-0.5">
-                      <span className="font-display text-[10px] text-white/40">$</span>
+                      <span className="font-display text-[10px] text-white/40">₦</span>
                       <AnimatePresence mode="wait">
                         <motion.span
                           key={totalPrice}
@@ -268,13 +268,13 @@ export function BudgetSection({ data }: BudgetSectionProps) {
                           transition={{ duration: 0.2 }}
                           className="font-display text-2xl font-bold text-white tracking-tight"
                         >
-                          {totalPrice}
+                          {totalPrice.toLocaleString()}
                         </motion.span>
                       </AnimatePresence>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 bg-white/10 rounded-xl px-4 py-2.5 border border-white/5">
-                    <span className="font-display text-[9px] font-bold text-white uppercase tracking-wider">Proceed</span>
+                    <span className="font-display text-[9px] font-bold text-white uppercase tracking-wider">Request Quotes</span>
                   </div>
                 </div>
               </div>

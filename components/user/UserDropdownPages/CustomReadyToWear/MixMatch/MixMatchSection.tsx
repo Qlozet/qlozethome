@@ -23,22 +23,24 @@ type MixMatchSectionProps = {
   };
 };
 
+// The real flow: the customer picks fabric + styles, then chooses a
+// tailor from competing quotes — not fabric shipped between vendors.
 const SOURCES = [
   {
-    vendor: "Vendor A",
-    role: "Fabric",
+    vendor: "Your Fabric",
+    role: "Marketplace Pick",
     img: "/image/fabric-swatch-1.jpg",
     detail: "Italian Silk"
   },
   {
-    vendor: "Vendor B",
-    role: "Design",
+    vendor: "Your Design",
+    role: "Bespoke Studio",
     img: "/image/slim-girl-1.jpg",
-    detail: "Pattern Expert"
+    detail: "Styles & Fit"
   },
   {
-    vendor: "Vendor C",
-    role: "Tailor",
+    vendor: "Your Tailor",
+    role: "Chosen from Quotes",
     img: "/image/slim-man.jpg",
     detail: "Master Craftsman"
   }
@@ -117,12 +119,12 @@ export function MixMatchSection({ data }: MixMatchSectionProps) {
                   </div>
                   <span className="font-mono text-[8px] font-bold text-[#111111]/30 uppercase tracking-widest">Assembly Board</span>
                 </div>
-                <span className="font-mono text-[7px] font-bold text-[#111111]/20 uppercase tracking-widest">3 Sources</span>
+                <span className="font-mono text-[7px] font-bold text-[#111111]/20 uppercase tracking-widest">3 Choices</span>
               </div>
 
               {/* Source Vendor Cards */}
               <div className="px-5 pt-5 pb-3">
-                <span className="font-mono text-[7px] font-bold text-[#111111]/25 uppercase tracking-widest block mb-3">Selected Sources</span>
+                <span className="font-mono text-[7px] font-bold text-[#111111]/25 uppercase tracking-widest block mb-3">Your Choices</span>
                 <div className="flex flex-col gap-0">
                   {SOURCES.map((source, idx) => (
                     <div key={idx}>
@@ -143,7 +145,7 @@ export function MixMatchSection({ data }: MixMatchSectionProps) {
                             <span className="font-display text-[11px] font-bold text-[#111111]">{source.vendor}</span>
                             <span className="font-mono text-[7px] text-[#111111]/20 uppercase tracking-widest">{source.detail}</span>
                           </div>
-                          <span className="font-mono text-[8px] font-bold text-[#111111]/40 uppercase tracking-widest">{source.role} Provider</span>
+                          <span className="font-mono text-[8px] font-bold text-[#111111]/40 uppercase tracking-widest">{source.role}</span>
                         </div>
                         {/* Linked Badge */}
                         <div className="h-6 w-6 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0">
@@ -206,7 +208,7 @@ export function MixMatchSection({ data }: MixMatchSectionProps) {
                       <span className="font-display text-[10px] font-bold text-white uppercase tracking-wider">Your Creation</span>
                     </div>
                     <span className="font-mono text-[7px] text-white/30 uppercase tracking-widest">
-                      3 vendors • 1 unique outfit
+                      3 choices • 1 unique outfit
                     </span>
 
                     {/* Source chips */}

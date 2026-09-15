@@ -107,17 +107,17 @@ export function MarketplaceSection({ data }: MarketplaceSectionProps) {
                      className="grid grid-cols-2 gap-4 sm:gap-6 w-full pt-4"
                    >
                      {[
-                       { img: 'product-1.png', title: 'Midnight Velvet', designer: 'Sarah Cole', price: '$280' },
-                       { img: 'product-2.png', title: 'Ivory Knits', designer: 'Olu Studios', price: '$145' },
-                       { img: 'product-3.png', title: 'Urban Trench', designer: 'David K.', price: '$420' },
-                       { img: 'product-4.png', title: 'Summer Linen', designer: 'Amara', price: '$120' },
-                       { img: 'product-5.png', title: 'Noir Signature', designer: 'Olu Studios', price: '$550' },
+                       { img: 'product-1.png', title: 'Midnight Velvet', designer: 'Sarah Cole', price: '₦125,000' },
+                       { img: 'product-2.png', title: 'Ivory Knits', designer: 'Olu Studios', price: '₦65,000' },
+                       { img: 'product-3.png', title: 'Urban Trench', designer: 'David K.', price: '₦190,000' },
+                       { img: 'product-4.png', title: 'Summer Linen', designer: 'Amara', price: '₦54,000' },
+                       { img: 'product-5.png', title: 'Noir Signature', designer: 'Olu Studios', price: '₦250,000' },
                        // Duplicated seamlessly for infinite scroll illusion
-                       { img: 'product-1.png', title: 'Midnight Velvet', designer: 'Sarah Cole', price: '$280' },
-                       { img: 'product-2.png', title: 'Ivory Knits', designer: 'Olu Studios', price: '$145' },
-                       { img: 'product-3.png', title: 'Urban Trench', designer: 'David K.', price: '$420' },
-                       { img: 'product-4.png', title: 'Summer Linen', designer: 'Amara', price: '$120' },
-                       { img: 'product-5.png', title: 'Noir Signature', designer: 'Olu Studios', price: '$550' }
+                       { img: 'product-1.png', title: 'Midnight Velvet', designer: 'Sarah Cole', price: '₦125,000' },
+                       { img: 'product-2.png', title: 'Ivory Knits', designer: 'Olu Studios', price: '₦65,000' },
+                       { img: 'product-3.png', title: 'Urban Trench', designer: 'David K.', price: '₦190,000' },
+                       { img: 'product-4.png', title: 'Summer Linen', designer: 'Amara', price: '₦54,000' },
+                       { img: 'product-5.png', title: 'Noir Signature', designer: 'Olu Studios', price: '₦250,000' }
                      ].map((item, idx) => (
                         <div key={idx} className="flex flex-col gap-3 group cursor-pointer mb-2">
                            <div className="w-full rounded-2xl bg-zinc-200 overflow-hidden relative shadow-sm transition-shadow duration-500 hover:shadow-xl">
