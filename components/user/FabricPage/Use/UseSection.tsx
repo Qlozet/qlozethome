@@ -119,9 +119,9 @@ export function UseSection({ data }: UseSectionProps) {
                      </div>
                      <div className="absolute bottom-6 right-6 lg:bottom-8 lg:right-8 flex flex-col items-end">
                         <div className="backdrop-blur-md bg-black/80 text-white px-4 py-2 rounded-full text-[10px] font-mono font-bold tracking-widest border border-white/10 shadow-2xl">
-                           02. DIGITAL DRAPING
+                           02. AI STYLING
                         </div>
-                        <span className="text-[8px] text-white/50 font-mono tracking-[0.2em] mt-2 mr-2">APPLYING CUTITECT MAPS...</span>
+                        <span className="text-[8px] text-white/50 font-mono tracking-[0.2em] mt-2 mr-2">APPLYING YOUR STYLES...</span>
                      </div>
                   </motion.div>
 
@@ -145,7 +145,7 @@ export function UseSection({ data }: UseSectionProps) {
                            </div>
                         </div>
                         <div className="text-[8px] lg:text-[9px] font-mono tracking-[0.2em] text-white font-bold text-right bg-black/50 px-3 py-1.5 rounded-lg border border-white/10 backdrop-blur-sm">
-                           GENERATION COMPLETE <br/> MATCH RATE: 100%
+                           GENERATION COMPLETE <br/> READY FOR QUOTES
                         </div>
                      </div>
                   </motion.div>

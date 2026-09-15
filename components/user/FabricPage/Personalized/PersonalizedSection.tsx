@@ -89,7 +89,7 @@ export function PersonalizedSection({ data }: PersonalizedSectionProps) {
                {/* Profile identifier */}
                <div className="absolute top-10 right-10 flex items-center gap-3 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 z-30">
                   <Fingerprint className="h-4 w-4 text-white" />
-                  <span className="font-mono text-[9px] text-white">USER_PREF_MODEL_89X</span>
+                  <span className="font-mono text-[9px] text-white">YOUR TASTE PROFILE</span>
                </div>
 
                {/* Scaled Play Area for Mobile */}
@@ -145,9 +145,8 @@ export function PersonalizedSection({ data }: PersonalizedSectionProps) {
                               )}
                            </div>
                            {node.match && (
-                              <div className="h-6 bg-white/95 backdrop-blur px-2 text-black flex items-center justify-between">
-                                  <span className="font-mono text-[8px] tracking-widest font-bold">MATCH</span>
-                                  <span className="font-mono text-[8px] font-bold opacity-80">98%</span>
+                              <div className="h-6 bg-white/95 backdrop-blur px-2 text-black flex items-center justify-center">
+                                  <span className="font-mono text-[8px] tracking-widest font-bold">PICKED FOR YOU</span>
                               </div>
                            )}
                         </motion.div>
