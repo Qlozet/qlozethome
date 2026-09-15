@@ -4,6 +4,7 @@ import { HeroSection } from "@/components/vendor/VendorDropdownPages/InstantStor
 import { SetupSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Setup/SetupSection";
 import { ShowcaseSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Showcase/ShowcaseSection";
 import { SalesSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Sales/SalesSection";
+import { TrustSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Trust/TrustSection";
 import { PricingSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Pricing/PricingSection";
 import { ReachSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Reach/ReachSection";
 import { IntegratedSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Integrated/IntegratedSection";
@@ -23,6 +24,7 @@ export default function InstantStorefrontPage() {
       <SetupSection data={storefrontData.setup} />
       <ShowcaseSection data={storefrontData.showcase} />
       <SalesSection data={storefrontData.sales} />
+      <TrustSection data={storefrontData.trust} />
       <PricingSection data={storefrontData.pricing} />
       <ReachSection data={storefrontData.reach} />
       <IntegratedSection data={storefrontData.integrated} />

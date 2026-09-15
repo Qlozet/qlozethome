@@ -33,7 +33,7 @@ export function SalesSection({ data }: SalesSectionProps) {
                   </div>
                   <div className="flex flex-col">
                     <span className="font-display text-xs font-bold uppercase tracking-wider text-[#111111]/30">Order Received</span>
-                    <span className="font-display text-lg font-medium text-[#111111]">N23,455.00</span>
+                    <span className="font-display text-lg font-medium text-[#111111]">₦23,455.00</span>
                   </div>
                 </motion.div>
                 
@@ -44,8 +44,8 @@ export function SalesSection({ data }: SalesSectionProps) {
                   className="flex items-center gap-4 self-end rounded-2xl bg-brand-darker p-6 shadow-2xl transition-all hover:scale-105"
                 >
                    <div className="flex flex-col pr-8 border-r border-white/20">
-                     <span className="font-display text-[9px] font-bold uppercase tracking-widest text-white/30">Conversion</span>
-                     <span className="font-display text-xl font-medium text-white">4.8%</span>
+                     <span className="font-display text-[9px] font-bold uppercase tracking-widest text-white/30">This Month</span>
+                     <span className="font-display text-xl font-medium text-white">₦486K</span>
                    </div>
                    <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white/40 pl-4">+22% vs Last Month</span>
                 </motion.div>

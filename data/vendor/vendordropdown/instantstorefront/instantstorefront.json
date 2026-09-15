@@ -55,6 +55,16 @@
       "Increase visibility effortlessly"
     ]
   },
+  "trust": {
+    "badge": "Built-In Trust",
+    "title": "Verified. Rated. Trusted.",
+    "description": "Trust is built into every storefront. Get verified, collect real reviews, and let secure payments do the reassuring for you.",
+    "points": [
+      "Verified badge once your business is approved",
+      "Star ratings and reviews from real customers",
+      "Payments held securely until delivery is confirmed"
+    ]
+  },
   "pricing": {
     "badge": "Flexible Pricing",
     "title": "Price Your Work Your Way",
