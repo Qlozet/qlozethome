@@ -10,14 +10,14 @@ type OptimizationData = { badge: string; title: string; description: string; fea
 type OptimizationSectionProps = { data: OptimizationData };
 
 const PRICING_DATA = [
-  { product: "Ankara Maxi Dress", current: "₦18,500", suggested: "₦21,000", impact: "+₦420K/mo", confidence: 92 },
-  { product: "Agbada Royal Set", current: "₦45,000", suggested: "₦42,500", impact: "+₦180K/mo", confidence: 87 },
-  { product: "Silk Evening Gown", current: "₦32,000", suggested: "₦35,500", impact: "+₦290K/mo", confidence: 84 },
+  { product: "Ankara Maxi Dress", current: "₦18,500", suggested: "₦21,000", impact: "Selling fast", confidence: 92 },
+  { product: "Agbada Royal Set", current: "₦45,000", suggested: "₦42,500", impact: "Slow mover", confidence: 87 },
+  { product: "Silk Evening Gown", current: "₦32,000", suggested: "₦35,500", impact: "Underpriced", confidence: 84 },
 ];
 
 const PRODUCT_SUGGESTIONS = [
-  { action: "Add Size XL", product: "Ankara Maxi", reason: "34% of searches are XL", status: "recommended" },
-  { action: "Bundle with Headwrap", product: "Agbada Set", reason: "72% buy both", status: "high-impact" },
+  { action: "Add Size XL", product: "Ankara Maxi", reason: "XL keeps coming up in custom requests", status: "recommended" },
+  { action: "Bundle with Headwrap", product: "Agbada Set", reason: "Often ordered together", status: "high-impact" },
   { action: "Remove Low Stock", product: "Linen Shorts", reason: "< 2 sales/month", status: "clean-up" },
 ];
 
@@ -72,7 +72,7 @@ export function OptimizationSection({ data }: OptimizationSectionProps) {
               <div className="bg-white rounded-2xl border border-brand-darker/5 shadow-sm overflow-x-auto">
                 {/* Table header */}
                 <div className="grid grid-cols-5 gap-2 px-5 py-3 border-b border-brand-darker/5 bg-brand-light/50">
-                  {["Product", "Current", "Suggested", "Impact", "Score"].map(h => (
+                  {["Product", "Current", "Suggested", "Why", "Strength"].map(h => (
                     <span key={h} className="font-mono text-[7px] font-bold text-[#111111]/30 uppercase tracking-widest">{h}</span>
                   ))}
                 </div>
@@ -91,7 +91,7 @@ export function OptimizationSection({ data }: OptimizationSectionProps) {
                       <div className="w-8 h-1.5 bg-zinc-100 rounded-full overflow-hidden">
                         <div className="h-full bg-brand rounded-full" style={{ width: `${p.confidence}%` }} />
                       </div>
-                      <span className="font-mono text-[8px] font-bold text-[#111111]/60">{p.confidence}%</span>
+
                     </div>
                   </motion.div>
                 ))}

@@ -17,10 +17,10 @@ const STYLE_PREFERENCES = [
 ];
 
 const BEHAVIOR_DATA = [
-  { metric: "Browse to Buy", value: "3.2 days", trend: "↓ Faster" },
-  { metric: "Avg Cart Size", value: "2.4 items", trend: "↑ Growing" },
-  { metric: "Return Rate", value: "4.1%", trend: "↓ Lower" },
-  { metric: "Review Rate", value: "68%", trend: "↑ Higher" },
+  { metric: "Top Location", value: "Lagos", trend: "Most orders" },
+  { metric: "Repeat Buyers", value: "34%", trend: "↑ Growing" },
+  { metric: "Avg. Order", value: "₦22.7K", trend: "↑ Higher" },
+  { metric: "Top Category", value: "Ankara", trend: "Best seller" },
 ];
 
 const REPEAT_SEGMENTS = [

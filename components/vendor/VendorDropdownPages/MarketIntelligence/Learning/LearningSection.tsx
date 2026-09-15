@@ -10,16 +10,16 @@ type LearningData = { badge: string; title: string; description: string; feature
 type LearningSectionProps = { data: LearningData };
 
 const AI_TIMELINE = [
-  { week: "Week 1", accuracy: 64, insights: 3, label: "Learning Baseline" },
-  { week: "Week 4", accuracy: 78, insights: 8, label: "Pattern Recognition" },
-  { week: "Week 8", accuracy: 87, insights: 14, label: "Predictive Mode" },
-  { week: "Week 12", accuracy: 94, insights: 22, label: "Full Intelligence" },
+  { week: "Week 1", accuracy: 64, insights: "Baseline", label: "First look at your data" },
+  { week: "Week 4", accuracy: 78, insights: "Patterns", label: "Knows your best sellers" },
+  { week: "Week 8", accuracy: 87, insights: "Trends", label: "Spots what’s changing" },
+  { week: "Week 12", accuracy: 94, insights: "Tuned", label: "Digest tuned to you" },
 ];
 
 const INTERACTION_LOG = [
-  { event: "Customer browsed Ankara 3x without buying", learning: "Trigger price-drop alert after 3rd visit", status: "active" },
-  { event: "Bulk orders spike every Friday", learning: "Auto-feature weekend deals on Thursday", status: "active" },
-  { event: "Reviews mention 'runs small'", learning: "Suggest size guide update for Kaftan line", status: "new" },
+  { event: "Repeat buyers doubled this month", learning: "Digest highlighted your loyal-customer growth", status: "active" },
+  { event: "Bulk orders spike every Friday", learning: "Assistant suggests prepping stock midweek", status: "active" },
+  { event: "Reviews mention 'runs small'", learning: "Assistant suggests updating your size guide", status: "new" },
 ];
 
 export function LearningSection({ data }: LearningSectionProps) {
@@ -49,11 +49,11 @@ export function LearningSection({ data }: LearningSectionProps) {
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
                 <div className="h-8 w-8 rounded-xl bg-brand-light text-brand-darker flex items-center justify-center"><BrainCircuit className="h-3.5 w-3.5" /></div>
-                <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">AI Accuracy Growth</span>
+                <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">Sharper Every Week</span>
               </div>
               <div className="flex items-center gap-1.5 bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20">
                 <ArrowUpRight className="h-3 w-3 text-emerald-400" />
-                <span className="font-mono text-[8px] font-bold text-emerald-400 uppercase tracking-widest">+47% in 12 wks</span>
+                <span className="font-mono text-[8px] font-bold text-emerald-400 uppercase tracking-widest">More data, better answers</span>
               </div>
             </div>
 
@@ -65,8 +65,7 @@ export function LearningSection({ data }: LearningSectionProps) {
                     transition={{ delay: 0.4 + i * 0.15, duration: 0.6, ease: "easeOut" }}
                     className="w-full rounded-xl bg-white/10 hover:bg-white/20 transition-colors cursor-pointer relative group">
                     <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-brand-light text-brand-darker px-2 py-1 rounded-lg text-center whitespace-nowrap">
-                      <span className="font-mono text-[8px] font-bold block">{t.accuracy}%</span>
-                      <span className="font-mono text-[6px] text-black/50">{t.insights} insights</span>
+                      <span className="font-mono text-[8px] font-bold block">{t.insights}</span>
                     </div>
                   </motion.div>
                   <span className="font-mono text-[7px] text-white/20 text-center">{t.week}</span>
@@ -77,7 +76,7 @@ export function LearningSection({ data }: LearningSectionProps) {
 
             {/* Summary */}
             <div className="grid grid-cols-3 gap-3 pt-4 border-t border-white/5">
-              {[{ l: "Accuracy", v: "94%" }, { l: "Insights/week", v: "22" }, { l: "Predictions", v: "Active" }].map((s, i) => (
+              {[{ l: "Weekly Digest", v: "Active" }, { l: "Ask Anytime", v: "24/7" }, { l: "Grounded In", v: "Your data" }].map((s, i) => (
                 <div key={i} className="text-center">
                   <span className="font-mono text-[7px] text-white/20 uppercase tracking-widest block">{s.l}</span>
                   <span className="font-display text-sm font-bold text-white">{s.v}</span>
@@ -91,7 +90,7 @@ export function LearningSection({ data }: LearningSectionProps) {
             className="rounded-[2rem] sm:rounded-[3rem] bg-white/[0.03] border border-white/5 p-5 sm:p-8 transition-all duration-500 hover:bg-white/[0.06]">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-8 w-8 rounded-xl bg-brand-light text-brand-darker flex items-center justify-center"><MessageSquareText className="h-3.5 w-3.5" /></div>
-              <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">Learning Log</span>
+              <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">Insight Log</span>
             </div>
 
             <div className="flex flex-col gap-4 mb-6">

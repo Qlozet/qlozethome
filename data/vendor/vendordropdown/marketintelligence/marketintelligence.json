@@ -80,7 +80,7 @@
     "description": "Qlozet helps you identify where your business can grow. Stay ahead—not behind.",
     "features": [
       {
-        "title": "Emerging trends in your niche",
+        "title": "What’s rising in your own shop",
         "icon": "Zap"
       },
       {
@@ -88,7 +88,7 @@
         "icon": "Search"
       },
       {
-        "title": "Demand signals across the platform",
+        "title": "Where your customers are",
         "icon": "Globe"
       }
     ]
@@ -122,11 +122,11 @@
         "icon": "BrainCircuit"
       },
       {
-        "title": "Learns from customer interactions",
+        "title": "Grounded in your live sales data",
         "icon": "MessageSquareText"
       },
       {
-        "title": "Improves recommendations continuously",
+        "title": "A weekly digest of what changed",
         "icon": "RefreshCcw"
       }
     ]

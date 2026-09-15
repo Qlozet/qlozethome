@@ -10,9 +10,9 @@ type AssistantData = { badge: string; title: string; description: string; featur
 type AssistantSectionProps = { data: AssistantData };
 
 const AI_MESSAGES = [
-  { type: "insight", text: "Your Ankara Maxi Dress is trending 3x above average. Consider restocking and featuring it in your storefront.", icon: TrendingUp, time: "2m ago" },
-  { type: "action", text: "Customers who buy your Agbada Set also look at Kaftans. Add a Kaftan to capture cross-sell revenue.", icon: Target, time: "15m ago" },
-  { type: "alert", text: "Your conversion rate dropped 12% this week. Try adjusting pricing on your top 3 products.", icon: AlertCircle, time: "1h ago" },
+  { type: "insight", text: "Your Ankara Maxi Dress led your sales this week. Consider restocking and featuring it in your storefront.", icon: TrendingUp, time: "2m ago" },
+  { type: "action", text: "Customers who buy your Agbada Set often order Kaftans too. Add one to capture cross-sell revenue.", icon: Target, time: "15m ago" },
+  { type: "alert", text: "Orders dipped this week. Want me to compare your top products’ pricing against last month?", icon: AlertCircle, time: "1h ago" },
 ];
 
 export function AIAssistantSection({ data }: AssistantSectionProps) {

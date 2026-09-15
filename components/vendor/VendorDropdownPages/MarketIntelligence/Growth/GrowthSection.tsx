@@ -10,22 +10,22 @@ type GrowthData = { badge: string; title: string; description: string; features:
 type GrowthSectionProps = { data: GrowthData };
 
 const TRENDING_ITEMS = [
-  { name: "Two-Piece Sets", growth: "+180%", heat: 95, status: "Surging" },
-  { name: "Organza Fabrics", growth: "+120%", heat: 82, status: "Rising" },
-  { name: "Pastel Palettes", growth: "+67%", heat: 68, status: "Emerging" },
+  { name: "Two-Piece Sets", growth: "+64%", heat: 95, status: "Surging" },
+  { name: "Organza Fabrics", growth: "+38%", heat: 82, status: "Rising" },
+  { name: "Pastel Palettes", growth: "+21%", heat: 68, status: "Emerging" },
 ];
 
 const OPPORTUNITIES = [
-  { category: "Plus-Size Custom", demand: "High", gap: "Low Supply", score: 94 },
-  { category: "Bridal Ankara", demand: "Very High", gap: "Moderate", score: 88 },
-  { category: "Kids Bespoke", demand: "Medium", gap: "No Supply", score: 76 },
+  { category: "Plus-Size Custom", demand: "High", gap: "Few requests met", score: "Hot" },
+  { category: "Bridal Ankara", demand: "Very High", gap: "Quotes going unclaimed", score: "Strong" },
+  { category: "Kids Bespoke", demand: "Medium", gap: "Rarely offered", score: "Rising" },
 ];
 
 const PLATFORM_SIGNALS = [
-  { region: "Lagos", searches: "12.4K", growth: "+34%" },
-  { region: "Abuja", searches: "8.7K", growth: "+28%" },
-  { region: "London", searches: "3.2K", growth: "+52%" },
-  { region: "New York", searches: "2.1K", growth: "+41%" },
+  { region: "Lagos", searches: "412", growth: "+34%" },
+  { region: "Abuja", searches: "218", growth: "+28%" },
+  { region: "Port Harcourt", searches: "96", growth: "+18%" },
+  { region: "Ibadan", searches: "54", growth: "+12%" },
 ];
 
 export function GrowthSection({ data }: GrowthSectionProps) {
@@ -78,7 +78,7 @@ export function GrowthSection({ data }: GrowthSectionProps) {
               <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">{data.features[1]?.title}</span>
             </div>
             <div className="bg-white/[0.03] rounded-2xl border border-white/5 p-5">
-              <span className="font-mono text-[7px] font-bold text-white/30 uppercase tracking-widest mb-4 block">Opportunity Score</span>
+              <span className="font-mono text-[7px] font-bold text-white/30 uppercase tracking-widest mb-4 block">AI Suggestions</span>
               {OPPORTUNITIES.map((o, i) => (
                 <motion.div key={i} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
                   transition={{ delay: 0.4 + i * 0.1 }}
@@ -109,7 +109,7 @@ export function GrowthSection({ data }: GrowthSectionProps) {
               <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">{data.features[2]?.title}</span>
             </div>
             <div className="bg-white/[0.03] rounded-2xl border border-white/5 p-5">
-              <span className="font-mono text-[7px] font-bold text-white/30 uppercase tracking-widest mb-4 block">Platform Searches by Region</span>
+              <span className="font-mono text-[7px] font-bold text-white/30 uppercase tracking-widest mb-4 block">Your Customers by City</span>
               {PLATFORM_SIGNALS.map((p, i) => (
                 <motion.div key={i} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
                   transition={{ delay: 0.4 + i * 0.08 }}
