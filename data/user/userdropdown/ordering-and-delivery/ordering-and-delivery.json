@@ -25,13 +25,13 @@
     {
       "id": "vendor",
       "badge": "Section 2",
-      "title": "Smart Vendor Assignment",
+      "title": "Your Vendor, Your Choice",
       "subtitle": "The Right Hands for Your Outfit",
-      "description": "Qlozet ensures your order goes to the best vendor for the job.",
+      "description": "Ready-to-wear ships straight from the shop you pick. Custom pieces go to the tailor you choose from competing quotes.",
       "features": [
-        "Matched based on expertise",
-        "Optimized for speed and quality",
-        "Balanced vendor workload for efficiency"
+        "Verified vendors with real ratings",
+        "Compare quotes for custom orders",
+        "You decide who makes it"
       ],
       "footer": "Your outfit is always in expert hands."
     },
@@ -40,7 +40,7 @@
       "badge": "Section 3",
       "title": "Transparent Production Process",
       "subtitle": "See Your Outfit Come to Life",
-      "description": "Stay informed as your outfit moves through each stage of production.",
+      "description": "Stay informed as your outfit is made — bespoke orders include direct chat with your vendor while they work.",
       "features": [
         "Order received",
         "In production",

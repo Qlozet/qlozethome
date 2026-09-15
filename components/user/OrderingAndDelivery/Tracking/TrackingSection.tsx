@@ -18,10 +18,10 @@ type TrackingSectionProps = {
 };
 
 const WAYPOINTS = [
-  { label: "Studio", x: "15%", y: "75%" },
-  { label: "Hub A", x: "40%", y: "45%" },
-  { label: "Hub B", x: "65%", y: "55%" },
-  { label: "Destination", x: "85%", y: "25%" },
+  { label: "Vendor Studio", x: "15%", y: "75%" },
+  { label: "Picked Up", x: "40%", y: "45%" },
+  { label: "In Transit", x: "65%", y: "55%" },
+  { label: "Your Door", x: "85%", y: "25%" },
 ];
 
 export function TrackingSection({ data }: TrackingSectionProps) {
@@ -104,7 +104,7 @@ export function TrackingSection({ data }: TrackingSectionProps) {
                   <span className="font-mono text-[9px] uppercase tracking-widest text-black/40">QL-294-ZX</span>
                   <div className="ml-auto flex items-center gap-2">
                     <div className="h-1.5 w-1.5 rounded-full bg-brand-darker animate-pulse" />
-                    <span className="font-display text-[8px] font-bold uppercase tracking-widest text-brand-darker leading-none">Live</span>
+                    <span className="font-display text-[8px] font-bold uppercase tracking-widest text-brand-darker leading-none">Updates</span>
                   </div>
                 </div>
 
@@ -176,7 +176,7 @@ export function TrackingSection({ data }: TrackingSectionProps) {
                       <span className="font-display text-[9px] font-bold uppercase tracking-widest">En Route</span>
                     </div>
                     <div className="h-4 w-px bg-white/10" />
-                    <span className="font-ui text-[9px] text-white/50">ETA: 35 min</span>
+                    <span className="font-ui text-[9px] text-white/50">Est. 3–7 days</span>
                   </div>
                   <Link href="/waitlist">
                     <div className="h-10 w-10 bg-white/10 rounded-xl flex items-center justify-center hover:bg-white/20 transition-all">
@@ -194,9 +194,9 @@ export function TrackingSection({ data }: TrackingSectionProps) {
               >
                 <div className="flex items-center gap-2">
                   <div className="h-1.5 w-1.5 rounded-full bg-brand-darker" />
-                  <span className="font-display text-[8px] font-bold uppercase tracking-widest text-black/40">Hub Transfer</span>
+                  <span className="font-display text-[8px] font-bold uppercase tracking-widest text-black/40">Order Status</span>
                 </div>
-                <span className="font-mono text-[8px] font-bold text-black">In Progress</span>
+                <span className="font-mono text-[8px] font-bold text-black">In Transit</span>
               </motion.div>
             </motion.div>
           </div>

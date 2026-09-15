@@ -22,7 +22,7 @@ const VENDORS = [
     name: "Atelier 08-D",
     initials: "A8",
     specialty: "Silk & Kaftan Expert",
-    match: 98,
+    quote: "₦85,000",
     skills: ["Silk Tailoring", "Embroidery", "Bespoke Fit"],
     orders: 342,
     rating: 4.9,
@@ -31,7 +31,7 @@ const VENDORS = [
     name: "Studio Ade",
     initials: "SA",
     specialty: "Contemporary Agbada",
-    match: 91,
+    quote: "₦92,500",
     skills: ["Agbada", "Modern Cuts", "Linen"],
     orders: 218,
     rating: 4.8,
@@ -40,7 +40,7 @@ const VENDORS = [
     name: "Maison Kola",
     initials: "MK",
     specialty: "Ankara Fusion",
-    match: 87,
+    quote: "₦78,000",
     skills: ["Ankara", "Pattern Work", "Mixed Media"],
     orders: 156,
     rating: 4.7,
@@ -52,7 +52,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
   const [isMatching, setIsMatching] = useState(true);
 
   useEffect(() => {
-    // Simulate matching animation
+    // Brief loading beat before the quotes appear
     const timer = setTimeout(() => setIsMatching(false), 2000);
     return () => clearTimeout(timer);
   }, []);
@@ -134,7 +134,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
             </motion.p>
           </div>
 
-          {/* Left: Vendor Matchmaking Console */}
+          {/* Left: Quote Comparison Console */}
           <div className="relative mt-20 lg:mt-0 lg:w-1/2 order-1 lg:order-1">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -150,11 +150,11 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                     <div className="h-8 w-8 rounded-xl bg-brand-darker flex items-center justify-center">
                       <Zap className="h-3.5 w-3.5 text-white" />
                     </div>
-                    <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black">Vendor Match</span>
+                    <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black">Compare Quotes</span>
                   </div>
                   <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-darker/10 border border-brand-darker/20">
                     <div className="h-1.5 w-1.5 rounded-full bg-brand-darker animate-pulse" />
-                    <span className="font-mono text-[8px] font-bold text-brand-darker uppercase tracking-widest leading-none">AI Matching</span>
+                    <span className="font-mono text-[8px] font-bold text-brand-darker uppercase tracking-widest leading-none">You Choose</span>
                   </div>
                 </div>
 
@@ -190,10 +190,10 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                           <span className={`font-ui text-[10px] ${isSelected ? "text-white/50" : "text-black/40"}`}>{v.specialty}</span>
                         </div>
 
-                        {/* Match Score */}
+                        {/* Quoted Price */}
                         <div className="flex flex-col items-end shrink-0">
-                          <span className={`font-mono text-lg font-bold ${isSelected ? "text-[#EDEAEA]" : "text-brand-darker"}`}>{v.match}%</span>
-                          <span className={`font-mono text-[7px] uppercase tracking-widest ${isSelected ? "text-white/30" : "text-black/30"}`}>Match</span>
+                          <span className={`font-mono text-sm font-bold ${isSelected ? "text-[#EDEAEA]" : "text-brand-darker"}`}>{v.quote}</span>
+                          <span className={`font-mono text-[7px] uppercase tracking-widest ${isSelected ? "text-white/30" : "text-black/30"}`}>Quote</span>
                         </div>
 
                         {/* Selected indicator */}
@@ -256,7 +256,7 @@ export function VendorAssignmentSection({ data }: VendorAssignmentSectionProps) 
                 transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
                 className="absolute -top-3 -left-3 z-20 px-5 py-3 bg-brand-darker text-white rounded-2xl shadow-2xl font-display text-[10px] font-bold uppercase tracking-widest border-4 border-white"
               >
-                Best Match
+                Your Pick
               </motion.div>
             </motion.div>
           </div>

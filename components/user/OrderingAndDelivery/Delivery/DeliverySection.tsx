@@ -127,7 +127,7 @@ export function DeliverySection({ data }: DeliverySectionProps) {
                     {[
                       { icon: Package, label: "Packed", done: true },
                       { icon: Truck, label: "Shipped", done: true },
-                      { icon: MapPin, label: "Nearby", done: false },
+                      { icon: MapPin, label: "In Transit", done: false },
                       { icon: CheckCircle2, label: "Delivered", done: false },
                     ].map((step, i) => (
                       <motion.div

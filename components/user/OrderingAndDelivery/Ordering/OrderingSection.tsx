@@ -117,7 +117,7 @@ export function OrderingSection({ data }: OrderingSectionProps) {
                   <span className="font-ui text-[10px] text-black/40">Custom Tailored · Mandarin Collar</span>
                   <span className="font-ui text-[10px] text-black/30">Size: Custom Fit</span>
                 </div>
-                <div className="ml-auto flex items-center font-display text-sm font-bold text-black">$240.00</div>
+                <div className="ml-auto flex items-center font-display text-sm font-bold text-black">₦110,000</div>
               </motion.div>
 
               {/* Delivery Option */}
@@ -129,8 +129,8 @@ export function OrderingSection({ data }: OrderingSectionProps) {
                 className="flex items-center gap-3 p-4 rounded-2xl bg-white border border-black/5"
               >
                 <Sparkles className="h-4 w-4 text-brand-darker" />
-                <span className="font-ui text-[10px] text-black/60">Express Delivery</span>
-                <span className="ml-auto font-display text-[10px] font-bold text-brand-darker uppercase tracking-widest">FREE</span>
+                <span className="font-ui text-[10px] text-black/60">Delivery · Est. 3–7 days</span>
+                <span className="ml-auto font-display text-[10px] font-bold text-brand-darker uppercase tracking-widest">₦3,500</span>
               </motion.div>
 
               {/* Pricing Summary */}
@@ -143,15 +143,15 @@ export function OrderingSection({ data }: OrderingSectionProps) {
               >
                 <div className="flex justify-between font-ui text-[10px] uppercase tracking-widest text-black/40">
                   <span>Order Subtotal</span>
-                  <span>$240.00</span>
+                  <span>₦110,000</span>
                 </div>
                 <div className="flex justify-between font-ui text-[10px] uppercase tracking-widest text-black/40">
                   <span>Logistics & Transit</span>
-                  <span className="text-brand-darker font-bold">FREE</span>
+                  <span>₦3,500</span>
                 </div>
                 <div className="flex justify-between font-display text-lg font-bold text-black pt-2">
                   <span>Total Amount</span>
-                  <span>$240.00</span>
+                  <span>₦113,500</span>
                 </div>
               </motion.div>
 
