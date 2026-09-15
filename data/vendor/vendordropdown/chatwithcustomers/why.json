@@ -3,24 +3,24 @@
   "title": "Why you will love it",
   "tools": [
     {
-      "icon": "Sparkles",
-      "title": "Smart Nudges",
-      "description": "Auto prompts for missing info— measurements, address, fabric choice."
-    },
-    {
-      "icon": "Languages",
-      "title": "Auto-Translate",
-      "description": "Translate messages inline to reduce friction."
-    },
-    {
       "icon": "Zap",
-      "title": "Quick Templates",
-      "description": "One-tap replies for common requests and approvals."
+      "title": "Real-Time",
+      "description": "Messages land instantly, with notifications on both sides."
+    },
+    {
+      "icon": "Sparkles",
+      "title": "Design in View",
+      "description": "The order’s design, styles, and measurements sit right beside the chat."
     },
     {
       "icon": "Users",
-      "title": "Roles & Mentions",
-      "description": "Loop-in teammates; @mention the right person to unblock work."
+      "title": "One Thread per Order",
+      "description": "Each bespoke order gets its own conversation—no crossed wires."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "On the Record",
+      "description": "Transcripts are saved and reviewable if a dispute ever comes up."
     }
   ]
 }

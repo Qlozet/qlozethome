@@ -2,40 +2,40 @@
   "title": "Less drift, more clarity, everything on record.",
   "items": [
     {
-      "id": "operational-focus",
+      "id": "tied-to-order",
       "image": "/image/lilacspiral.png",
-      "title": "Operational focus",
-      "description": "Chat tied to stages avoids endless threads and side DMs."
+      "title": "Tied to the order",
+      "description": "Every thread lives on a bespoke order—no side DMs, no crossed wires."
     },
     {
-      "id": "compliance-evidence",
+      "id": "on-the-record",
       "image": "/image/lilacline.png",
-      "title": "Compliance & evidence",
+      "title": "On the record",
       "description": "Time-stamped transcripts support dispute resolution."
     },
     {
-      "id": "fewer-tickets",
+      "id": "right-on-time",
       "image": "/image/lilacgraph.png",
-      "title": "Fewer tickets",
-      "description": "Nudges collect missing info before support is needed."
+      "title": "Right on time",
+      "description": "Chat opens while the order is in production and stays open through delivery."
     },
     {
       "id": "rich-context",
       "image": "/image/lilaccube.png",
       "title": "Rich context",
-      "description": "Attach measurements, sketches, and fabric photos inline."
+      "description": "The design, styles, and measurements sit right beside the conversation."
     },
     {
-      "id": "multi-language",
+      "id": "instant",
       "image": "/image/lilacglobe.png",
-      "title": "Multi-language",
-      "description": "Translate both ways to serve diaspora customers."
+      "title": "Instant delivery",
+      "description": "Messages land in real time, with notifications on both sides."
     },
     {
-      "id": "escalation-paths",
+      "id": "oversight",
       "image": "/image/lilacloop.png",
-      "title": "Escalation paths",
-      "description": "Flags and timers auto-escalate to admins when needed."
+      "title": "Oversight built in",
+      "description": "Qlozet support can review a conversation if a dispute ever comes up."
     }
   ]
 }

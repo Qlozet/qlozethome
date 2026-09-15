@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles, Languages, Zap, Users } from "lucide-react";
+import { Sparkles, Languages, Zap, Users, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
 type WhyData = typeof import("@/data/vendor/vendordropdown/chatwithcustomers/why.json");
@@ -9,7 +9,8 @@ const iconMap: Record<string, any> = {
   Sparkles,
   Languages,
   Zap,
-  Users
+  Users,
+  ShieldCheck,
 };
 
 type WhySectionProps = {

@@ -5,27 +5,25 @@
       "id": "customer-asks",
       "icon": "MessageCircle",
       "title": "Customer asks a question",
-      "description": "Order-specific queries appear in a threaded inbox linked to the order details."
+      "description": "Questions arrive in a thread pinned to the order, right beside its design details."
     },
     {
       "id": "you-reply",
       "icon": "Reply",
-      "title": "You reply or escalate",
-      "description": "Answer directly, attach images, or forward to your tailor for fit adjustments."
+      "title": "You reply in real time",
+      "description": "Answer instantly—the design spec and the customer’s measurements sit next to the conversation."
     },
     {
       "id": "automated-updates",
       "icon": "Activity",
       "title": "Automated updates",
-      "description": "Shipping, milestone, and exception notifications go out automatically to keep customers informed."
+      "description": "Status and delivery notifications go out automatically, so chat stays for the real questions."
     },
     {
       "id": "history-context",
       "icon": "History",
       "title": "Full history & context",
-      "description": "Every conversation is saved with order references, measurements, and past alterations."
+      "description": "Every conversation is saved with the order, its measurements, and design references."
     }
   ]
 }
-
-
