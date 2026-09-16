@@ -26,19 +26,19 @@
   "styling": {
     "badge": "Personalized Styling",
     "title": "Style That Understands You",
-    "description": "Qlozet’s AI Stylist goes beyond trends—it understands you. Every recommendation is tailored to fit your identity.",
+    "description": "Qlozet’s AI goes beyond numbers—it understands proportion. Every suggestion is grounded in your actual body and taste.",
     "options": [
       {
-        "title": "Daily Suggestions",
-        "description": "Fresh ideas every morning."
+        "title": "Fit Guidance",
+        "description": "Cuts and silhouettes that flatter your body type."
       },
       {
-        "title": "Occasion-based",
-        "description": "Perfect for events or work."
+        "title": "Personalized Feed",
+        "description": "Discover picks tuned to what you love."
       },
       {
-        "title": "Style Evolution",
-        "description": "Adapts to your changing taste."
+        "title": "Design Your Own",
+        "description": "Take your fit profile into the bespoke studio."
       }
     ]
   },
@@ -69,8 +69,8 @@
     "steps": [
       "Scan your body",
       "Get measurements",
-      "Receive styling",
-      "Shop instantly"
+      "Save your fit profile",
+      "Order made-to-measure"
     ]
   },
   "diversity": {
