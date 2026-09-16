@@ -114,12 +114,15 @@ export function HeroSection({ data }: HeroSectionProps) {
             style={{ y }}
             className="relative mt-8 lg:mt-0 lg:w-2/5"
           >
-            <div className="group relative aspect-[3/4] sm:aspect-[4/5] w-full overflow-hidden rounded-[2rem] sm:rounded-[3rem] bg-zinc-100 shadow-2xl shadow-black/10">
+            <div className="group relative aspect-[3/4] sm:aspect-[4/5] w-full overflow-hidden rounded-[2rem] sm:rounded-[3rem] bg-brand-light shadow-2xl shadow-black/10">
+              {/* Contain (not cover): the phone screenshot keeps its native
+                  proportions on the backdrop instead of being upscaled. */}
               <Image
                 src={data.image.src}
                 alt={data.image.alt}
                 fill
-                className="object-cover object-top transition-transform duration-1000 group-hover:scale-105"
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-contain p-6 sm:p-10 drop-shadow-2xl transition-transform duration-1000 group-hover:scale-[1.03]"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
