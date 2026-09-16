@@ -119,7 +119,7 @@ export function HeroSection({ data }: HeroSectionProps) {
                 src={data.image.src}
                 alt={data.image.alt}
                 fill
-                className="object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
+                className="object-cover object-top transition-transform duration-1000 group-hover:scale-105"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
