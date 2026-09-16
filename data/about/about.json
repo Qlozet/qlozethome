@@ -4,8 +4,8 @@
     "title": "Defining the Digital Atelier",
     "description": "Beyond the screen, we are building the registry for the modern wardrobe. A fusion of architectural precision and sartorial soul.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop",
-      "alt": "Minimalist atelier workspace"
+      "src": "/image/tailorwork.png",
+      "alt": "Tailor at work in the atelier"
     },
     "scrollPrompt": {
       "down": "Discover Our Story"
@@ -17,8 +17,8 @@
     "title": "Redefining the relationship between person and garment.",
     "paragraphs": [
       "Qlozet was born from a simple observation: the digital world has failed the physical wardrobe. While everything else moved forward, our relationship with what we wear remained static, fragmented, and disconnected.",
-      "We envisioned a system where your style isn't just a collection of items, but a living data set—a digital twin of your sartorial identity. By combining advanced AI measurement with curator-led aesthetic intelligence, we've created the world's first true Digital Atelier.",
-      "Our mission is to empower individuals to own their fit, their style, and their data. From bespoke tailoring to curated designer drops, Qlozet is the architecture of modern fashion."
+      "We envisioned a system where your style isn't just a collection of items, but a living data set—a digital twin of your sartorial identity. By combining advanced AI measurement with curator-led aesthetic intelligence, we're building a true Digital Atelier.",
+      "Our mission is to empower individuals to own their fit, their style, and their data. From bespoke tailoring to curated designer pieces, Qlozet is the architecture of modern fashion."
     ]
   },
   "values": {
@@ -33,7 +33,7 @@
       },
       {
         "title": "Curated Soul",
-        "description": "Technology without taste is noise. We partner with the world's most visionary designers to ensure every drop has a story.",
+        "description": "Technology without taste is noise. We partner with visionary designers and tailors to ensure every piece has a story.",
         "icon": "brush"
       },
       {
@@ -52,8 +52,8 @@
     "title": "Step into the Atelier.",
     "description": "Experience the future of personal style today.",
     "primaryAction": {
-      "label": "Join the Elite",
-      "href": "/signup"
+      "label": "Join the Waitlist",
+      "href": "/waitlist"
     },
     "secondaryAction": {
       "label": "Explore Works",

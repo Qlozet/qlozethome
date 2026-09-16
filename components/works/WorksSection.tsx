@@ -31,12 +31,17 @@ export function WorksSection({ data }: WorksSectionProps) {
               src={data.video.thumbnail}
               alt={data.video.alt}
               fill
-              className="object-cover grayscale-[0.8] brightness-50 transition-all duration-[2s] group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-100"
+              className={
+                data.video.url
+                  ? "object-cover grayscale-[0.8] brightness-50 transition-all duration-[2s] group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-100"
+                  : "object-cover brightness-90 transition-transform duration-[2s] group-hover:scale-[1.02]"
+              }
               sizes="100vw"
               priority
             />
 
-            {/* Massive Play Button Overlay */}
+            {/* Massive Play Button Overlay (only when there is a video to play) */}
+            {data.video.url && (
             <div className="absolute inset-0 z-20 flex flex-col items-center justify-center">
               <button
                 onClick={() => setIsPlaying(true)}
@@ -59,6 +64,7 @@ export function WorksSection({ data }: WorksSectionProps) {
                 </div>
               </button>
             </div>
+            )}
           </div>
         ) : (
           <iframe

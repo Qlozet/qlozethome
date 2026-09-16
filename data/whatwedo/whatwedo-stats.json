@@ -3,24 +3,23 @@
   "stats": [
     {
       "id": "creators",
-      "value": "2,500+",
-      "label": "NG creators onboarded"
+      "value": "2-in-1",
+      "label": "Ready-to-wear + bespoke"
     },
     {
       "id": "diaspora",
-      "value": "10k+",
-      "label": "Diaspora orders served"
+      "value": "AI",
+      "label": "Measurements from your phone"
     },
     {
       "id": "refit",
-      "value": "45%",
-      "label": "Avg. refit reduction"
+      "value": "0",
+      "label": "Vendor listing fees"
     },
     {
       "id": "jobs",
-      "value": "5k+",
-      "label": "Local jobs supported"
+      "value": "₦",
+      "label": "Naira-first, built for Nigeria"
     }
   ]
 }
-
