@@ -42,15 +42,15 @@
         }
       ],
       "cta": {
-        "label": "TRY FOR FREE",
-        "href": "/signup?plan=light"
+        "label": "JOIN THE WAITLIST",
+        "href": "/vendor/waitlist"
       }
     },
     {
       "id": "premium",
       "name": "Premium",
       "price": {
-        "usd": 140000,
+        "usd": 100,
         "ngn": 140000
       },
       "period": "yr",
@@ -98,8 +98,8 @@
         }
       ],
       "cta": {
-        "label": "GET STARTED",
-        "href": "/signup?plan=premium"
+        "label": "JOIN THE WAITLIST",
+        "href": "/vendor/waitlist"
       }
     },
     {
@@ -170,10 +170,9 @@
         }
       ],
       "cta": {
-        "label": "CONTACT US",
-        "href": "/contact"
+        "label": "TALK TO US",
+        "href": "/vendor/waitlist"
       }
     }
   ]
 }
-

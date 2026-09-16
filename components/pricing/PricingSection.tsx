@@ -10,7 +10,7 @@ type PricingSectionProps = {
 };
 
 export function PricingSection({ data }: PricingSectionProps) {
-  const [currency, setCurrency] = useState<"usd" | "ngn">("usd");
+  const [currency, setCurrency] = useState<"usd" | "ngn">("ngn");
 
   const containerVariants = {
     hidden: { opacity: 0 },
