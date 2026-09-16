@@ -1,41 +1,41 @@
 {
-  "title": "Why vendors us it – save time, sell faster, and showcase your craft beautifully.",
+  "title": "Why vendors love it — briefs you can see, price, and craft with confidence.",
   "items": [
     {
       "id": "speed-to-market",
       "image": "/image/orangeline.png",
-      "title": "Speed to market",
-      "description": "Go from idea to listing in a single session."
+      "title": "No more guesswork",
+      "description": "The design is agreed visually before you commit to anything."
     },
     {
       "id": "fit-aware-previews",
       "image": "/image/orangetrianglegroup.png",
-      "title": "Fit-aware previews",
-      "description": "Leverage customer measurements to suggest size/fit notes."
+      "title": "Measurements attached",
+      "description": "Saved body measurements arrive with the order—no re-measuring sessions."
     },
     {
       "id": "brand-safety",
       "image": "/image/orangehexagongroup.png",
-      "title": "Brand safety",
-      "description": "Style guidelines and filters keep visuals on-brand."
+      "title": "Quote on your terms",
+      "description": "Price each request with line items—fabric, labor, finishing."
     },
     {
       "id": "photo-assist",
       "image": "/image/orangevector.png",
-      "title": "Photo assist",
-      "description": "Blend studio shots with AI for consistent catalogs."
+      "title": "References included",
+      "description": "Customer reference photos and notes travel with the design."
     },
     {
       "id": "option-overlays",
       "image": "/image/controlgroup.png",
-      "title": "Option overlays",
-      "description": "Necklines, sleeves, trims appear as tappable tags in the UI."
+      "title": "Styles spelled out",
+      "description": "Necklines, sleeves, and trims listed piece by piece from the style library."
     },
     {
       "id": "auto-descriptions",
       "image": "/image/orangegrade.png",
-      "title": "Auto descriptions",
-      "description": "Generate product copy and fashion tags you can edit."
+      "title": "Chat while you work",
+      "description": "A dedicated order chat keeps questions and approvals on record."
     }
   ]
 }

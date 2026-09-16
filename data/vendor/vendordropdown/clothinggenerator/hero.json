@@ -1,11 +1,11 @@
 {
   "id": "clothinggenerator",
   "badge": "Qlozet For Vendors",
-  "title": "Clothing Design Generator—turn ideas into visuals fast",
-  "description": "Generate on‑brand outfit visuals from prompts, fabric swatches, or reference photos. Measurement‑aware templates help you preview options and convert buyers faster.",
+  "title": "AI-designed briefs—delivered straight to your workshop",
+  "description": "Customers design outfits in the Qlozet studio—AI visuals generated from prompts, fabric picks, and reference photos. You receive the finished brief as a quote request, measurements included.",
   "cta": {
-    "label": "Request a demo",
-    "href": "/demo"
+    "label": "Join the waitlist",
+    "href": "/vendor/waitlist"
   },
   "image": {
     "src": "/image/bespoke-outfit-2.png",

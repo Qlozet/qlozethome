@@ -1,28 +1,26 @@
 {
   "id": "clothing-generator-what",
-  "title": "What you can create",
+  "title": "What arrives with every request",
   "tools": [
     {
       "icon": "Sparkles",
-      "title": "Design variations",
-      "description": "Generate multiple style options from a single concept or inspiration image."
+      "title": "AI outfit visuals",
+      "description": "See the customer’s design rendered before you quote—no guessing from a text description."
     },
     {
       "icon": "Grid",
-      "title": "Custom patterns",
-      "description": "Create unique patterns and prints tailored to your brand aesthetic."
+      "title": "Style selections",
+      "description": "Necklines, sleeves, fits, and lengths chosen from the style library, spelled out per piece."
     },
     {
       "icon": "Palette",
-      "title": "Fabric combinations",
-      "description": "Explore different fabric textures and color combinations visually."
+      "title": "Fabric & accessory picks",
+      "description": "The fabric direction and finishing touches the customer already chose."
     },
     {
       "icon": "FileText",
-      "title": "Tech packs",
-      "description": "Export production-ready specifications for your manufacturing team."
+      "title": "Measurements & notes",
+      "description": "Saved body measurements and reference photos attached to the order—ready for production."
     }
   ]
 }
-
-
