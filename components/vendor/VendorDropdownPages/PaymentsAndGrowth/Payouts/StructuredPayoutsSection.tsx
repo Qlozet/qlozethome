@@ -16,10 +16,13 @@ type StructuredPayoutsSectionProps = {
   data: PayoutData;
 };
 
+// A fixed schedule: available 14 days after the customer pays, whatever
+// happens to the order. Never shown as held until delivery (that would be
+// escrow, which Qlozet does not operate).
 const MILESTONES = [
-  { phase: "Order Paid", pct: "100%", status: "Secured", active: true, amount: "₦85,000" },
-  { phase: "In Transit", pct: "Held", status: "Pending", active: true, amount: "₦85,000" },
-  { phase: "Delivery Confirmed", pct: "90%", status: "Released", active: false, amount: "₦76,500" }
+  { phase: "Customer Pays", pct: "Day 0", status: "Payout date set", active: true, amount: "₦85,000" },
+  { phase: "Earnings Available", pct: "Day 14", status: "After 10% commission", active: true, amount: "₦76,500" },
+  { phase: "Withdraw", pct: "Any time", status: "To your bank", active: false, amount: "₦76,500" }
 ];
 
 export function StructuredPayoutsSection({ data }: StructuredPayoutsSectionProps) {
@@ -119,7 +122,7 @@ export function StructuredPayoutsSection({ data }: StructuredPayoutsSectionProps
                {/* Progress Bar */}
                <div className="mt-6 pt-5 border-t border-brand-darker/5">
                   <div className="flex items-center justify-between mb-2">
-                     <span className="font-mono text-[8px] font-bold text-brand-darker/60 uppercase tracking-widest">Payout Progress</span>
+                     <span className="font-mono text-[8px] font-bold text-brand-darker/60 uppercase tracking-widest">Day 7 of 14</span>
                      <span className="font-mono text-[9px] font-bold text-brand-darker/70">50%</span>
                   </div>
                   <div className="h-2 bg-zinc-200 rounded-full overflow-hidden">

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 // Canonical terms of service. Like /privacy, every revision is a git
 // commit — that history is the version record.
 
-const EFFECTIVE_DATE = "12 September 2026";
+const EFFECTIVE_DATE = "30 October 2026";
 
 // Deployed shop URL — override with NEXT_PUBLIC_SHOP_URL when the custom
 // domain is live.
@@ -159,8 +159,10 @@ export default function TermsPage() {
                 returned within the return window stated in our Help Center,
                 provided they are unworn and in original condition. Approved
                 refunds are credited to your Qlozet wallet, from which you can
-                spend or withdraw. Disputes you raise are reviewed by our team,
-                and vendor payouts are held while a dispute is open.
+                spend or withdraw. You can report a problem with an order (a
+                dispute) up to 30 days after delivery; our team reviews it and
+                decides the outcome. Refunds are paid by Qlozet and do not
+                depend on whether the vendor has already been paid.
               </p>
             </Section>
 
@@ -183,9 +185,26 @@ export default function TermsPage() {
                 </li>
                 <li>
                   Qlozet deducts the platform commission and applicable fees
-                  from each sale; the schedule in force is shown in your vendor
-                  dashboard. Earnings are released per the payout schedule,
-                  with holds for open disputes.
+                  from each sale; the rates in force are shown in your vendor
+                  dashboard.
+                </li>
+                <li>
+                  <strong>Payout schedule.</strong> Your earnings from an order
+                  become available to withdraw 14 days after the customer pays
+                  for it. This applies to every order type, including bespoke
+                  and tailored work. The date is fixed at payment and does not
+                  depend on delivery, the return window, buyer confirmation or
+                  any dispute. You can withdraw your available balance to your
+                  verified bank account at any time, subject to the minimum
+                  shown in your dashboard (currently ₦2,000).
+                </li>
+                <li>
+                  Refunds for returns, cancellations or disputes decided in the
+                  customer&apos;s favour are taken from your earnings for that
+                  order. If those earnings have already become available, the
+                  amount is deducted from your balance; any shortfall is owed
+                  to Qlozet and is recovered from your next earnings before you
+                  can withdraw again.
                 </li>
                 <li>
                   Vendors commit to their stated turnaround times. Late

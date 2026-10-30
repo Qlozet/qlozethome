@@ -106,7 +106,7 @@ export function SecurePaymentsSection({ data }: SecurePaymentsSectionProps) {
                <div className="flex items-center justify-center gap-6 pt-4 border-t border-brand-darker/5">
                   <div className="flex items-center gap-2">
                      <Lock className="h-3 w-3 text-brand-darker/30" />
-                     <span className="font-mono text-[8px] font-bold text-brand-darker/50 uppercase tracking-widest">Escrow Protected</span>
+                     <span className="font-mono text-[8px] font-bold text-brand-darker/50 uppercase tracking-widest">Secure Checkout</span>
                   </div>
                   <div className="h-3 w-px bg-brand-darker/10" />
                   <div className="flex items-center gap-2">
