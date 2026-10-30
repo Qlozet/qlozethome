@@ -1,1 +1,0 @@
-export { VendorIntegrations } from "./IntegrationsSection";
