@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 // Canonical terms of service. Like /privacy, every revision is a git
 // commit — that history is the version record.
 
-const EFFECTIVE_DATE = "30 October 2026";
+const EFFECTIVE_DATE = "31 October 2026";
 
 // Deployed shop URL — override with NEXT_PUBLIC_SHOP_URL when the custom
 // domain is live.
@@ -142,8 +142,23 @@ export default function TermsPage() {
                   are estimates and should be reviewed before ordering.
                 </li>
                 <li>
-                  Quotes from tailors are offers; a quote you accept and pay
-                  for becomes a binding order at that price.
+                  Quotes from tailors are offers; a quote you accept becomes a
+                  binding order at that price.
+                </li>
+                <li>
+                  <strong>Deposit and balance.</strong> When you accept a
+                  quote you pay a deposit (currently 50% of the tailor&apos;s
+                  price, plus any fabric from another vendor in full). When
+                  the tailor finishes, they send you photos of the piece; you
+                  then pay the balance, or ask for changes. Paying the balance
+                  approves the photos, and the tailor ships after it is paid.
+                </li>
+                <li>
+                  You have 14 days from the photos to pay the balance (the
+                  time is paused while the tailor makes changes you asked
+                  for). If it is not paid in that time, the order closes, the
+                  deposit is not refunded because it covers the tailor&apos;s
+                  work, and the garment is not shipped.
                 </li>
                 <li>
                   Because they are made for you, bespoke items can only be
@@ -155,7 +170,12 @@ export default function TermsPage() {
 
             <Section id="returns" title="5. Cancellations, returns & refunds">
               <p>
-                You can cancel an order before it ships. Delivered items can be
+                You can cancel an order before it ships. Cancelling a tailored
+                or bespoke item after the tailor has confirmed it carries a
+                cancellation fee (currently 30% of the tailor&apos;s price,
+                never more than you paid), paid to the tailor; the rest is
+                refunded. Cancelling a bespoke order after the tailor has sent
+                photos of the finished piece forfeits the deposit. Delivered items can be
                 returned within the return window stated in our Help Center,
                 provided they are unworn and in original condition. Approved
                 refunds are credited to your Qlozet wallet, from which you can
@@ -192,7 +212,9 @@ export default function TermsPage() {
                   <strong>Payout schedule.</strong> Your earnings from an order
                   become available to withdraw 14 days after the customer pays
                   for it. This applies to every order type, including bespoke
-                  and tailored work. The date is fixed at payment and does not
+                  and tailored work. A bespoke order is paid in two parts
+                  (deposit, then balance); each part follows this schedule
+                  from the day it is paid. The date is fixed at payment and does not
                   depend on delivery, the return window, buyer confirmation or
                   any dispute. You can withdraw your available balance to your
                   verified bank account at any time, subject to the minimum
