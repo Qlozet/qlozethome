@@ -148,7 +148,9 @@ export default function TermsPage() {
                 <li>
                   <strong>Deposit and balance.</strong> When you accept a
                   quote you pay a deposit (currently 50% of the tailor&apos;s
-                  price, plus any fabric from another vendor in full). When
+                  price, or the cost of the fabric in the quote if that is
+                  more, plus any fabric from another vendor in full). The
+                  fabric price is shown on the quote before you accept. When
                   the tailor finishes, they send you photos of the piece; you
                   then pay the balance, or ask for changes. Paying the balance
                   approves the photos, and the tailor ships after it is paid.
