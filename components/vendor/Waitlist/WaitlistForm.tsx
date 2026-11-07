@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 const businessTypes = [
@@ -22,6 +22,12 @@ export function WaitlistForm() {
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  // Bot checks: a hidden field people leave empty, and how long the form was open.
+  const [website, setWebsite] = useState("");
+  const shownAt = useRef(0);
+  useEffect(() => {
+    shownAt.current = Date.now();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,7 +43,9 @@ export function WaitlistForm() {
           businessName: formData.businessName,
           businessEmail: formData.email,
           phoneNumber: formData.phone,
-          businessType: formData.businessType
+          businessType: formData.businessType,
+          website,
+          form_ms: Date.now() - shownAt.current
         }),
       });
       
@@ -82,6 +90,19 @@ export function WaitlistForm() {
       className="flex w-full flex-col gap-10"
       onSubmit={handleSubmit}
     >
+      {/* Bot trap: hidden from people, filled in by bots (backend drops those). */}
+      <div aria-hidden="true" style={{ position: "absolute", left: "-10000px", width: 1, height: 1, overflow: "hidden" }}>
+        <label htmlFor="website">Website</label>
+        <input
+          type="text"
+          id="website"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+          value={website}
+          onChange={(e) => setWebsite(e.target.value)}
+        />
+      </div>
       <div className="grid gap-x-12 gap-y-10 sm:grid-cols-2">
         {/* Full Name */}
         <motion.div variants={itemVariants} className="flex flex-col gap-3">
