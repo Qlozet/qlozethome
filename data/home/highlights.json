@@ -5,7 +5,7 @@
       "id": "ai-fit-styling",
       "eyebrow": "",
       "title": "Perfect Fit. Smarter Style.",
-      "description": "Your body is unique — your clothes should be too. Our AI captures precise measurements and pairs them with personalized styling, so every piece fits like it was made for you.",
+      "description": "Your body is unique. Your clothes should be too. Our AI captures precise measurements and pairs them with personalized styling, so every piece fits like it was made for you.",
       "cta": {
         "label": "Get Your Perfect Fit",
         "href": "/measurement"
@@ -24,7 +24,7 @@
     {
       "id": "custom-ready-to-wear",
       "eyebrow": "",
-      "title": "Shop or Create — Your Choice",
+      "title": "Shop or Create: Your Choice",
       "description": "Browse curated collections from top designers or design your own outfit from scratch. Mix fabrics, styles, and preferences to create something truly yours.",
       "cta": {
         "label": "Explore Fashion",
@@ -45,7 +45,7 @@
       "id": "ai-design-creation",
       "eyebrow": "",
       "title": "Turn Ideas Into Outfits",
-      "description": "Describe it. Generate it. Wear it. Use AI to bring your fashion ideas to life — upload inspiration or fabric swatches and preview your design before it goes into production.",
+      "description": "Describe it. Generate it. Wear it. Use AI to bring your fashion ideas to life. Upload inspiration or fabric swatches and preview your design before it goes into production.",
       "cta": {
         "label": "Start Designing",
         "href": "/designyouroutfit"
@@ -85,7 +85,7 @@
       "id": "seamless-delivery",
       "eyebrow": "",
       "title": "From Design to Doorstep",
-      "description": "We handle everything after you choose your outfit. From smart vendor matching to real-time order tracking and reliable delivery — your bespoke piece arrives exactly as promised.",
+      "description": "We handle everything after you choose your outfit. From comparing tailors' quotes to order tracking and delivery. You follow your piece every step of the way.",
       "cta": {
         "label": "Learn More",
         "href": "#process"
@@ -96,7 +96,7 @@
       },
       "phoneImage": "/image/happy-delivery.jpg",
       "bullets": [
-        "Smart vendor matching",
+        "Choose your maker from real quotes",
         "Real-time order tracking",
         "Reliable delivery"
       ]

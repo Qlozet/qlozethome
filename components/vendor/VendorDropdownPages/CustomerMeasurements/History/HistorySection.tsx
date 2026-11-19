@@ -20,7 +20,7 @@ type HistorySectionProps = {
 const events = [
   {
     date: "Oct 2025",
-    label: "Initial Profile",
+    label: "Order copy",
     order: "ORD-941",
     note: "Shoulder adjusted +1cm per request",
     status: "Archived" as const,
@@ -32,7 +32,7 @@ const events = [
   },
   {
     date: "Dec 2025",
-    label: "Winter Update",
+    label: "Question sent",
     order: "ORD-102",
     note: "Winter coat. Sleeves +2cm",
     status: "Archived" as const,
@@ -44,7 +44,7 @@ const events = [
   },
   {
     date: "Mar 2026",
-    label: "Active Profile",
+    label: "Corrected copy",
     order: "ORD-334",
     note: "Base profile updated",
     status: "Current" as const,
@@ -156,7 +156,7 @@ export function HistorySection({ data }: HistorySectionProps) {
                       <History className="h-4 w-4 text-white" strokeWidth={1.5} />
                     </div>
                     <div className="flex flex-col">
-                      <span className="font-display text-sm font-bold text-brand-darker leading-none">Michael Chen</span>
+                      <span className="font-display text-sm font-bold text-brand-darker leading-none">Michael C.</span>
                       <span className="font-mono text-[8px] uppercase tracking-widest text-brand-darker/35 mt-0.5">CUST-8820</span>
                     </div>
                   </div>
@@ -253,7 +253,7 @@ export function HistorySection({ data }: HistorySectionProps) {
                 >
                   <div className="flex items-center gap-2">
                     <LineChart className="h-3.5 w-3.5 text-brand-darker/25" strokeWidth={1.5} />
-                    <span className="font-mono text-[8px] text-brand-darker/35 uppercase tracking-widest">3 snapshots · 5 months</span>
+                    <span className="font-mono text-[8px] text-brand-darker/35 uppercase tracking-widest">1 question · answered</span>
                   </div>
                   <span className="font-mono text-[7px] text-brand-darker/40 font-bold uppercase tracking-widest">Auto-tracked</span>
                 </motion.div>

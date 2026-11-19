@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Revenue & Scale",
     "title": "Earn Seamlessly. Grow Confidently.",
-    "description": "Qlozet gives you the tools to not only get paid—but to scale your business with confidence. From secure transactions to growth-driven features, everything is built to help you succeed.",
+    "description": "Qlozet gives you the tools to not only get paid but to scale your business with confidence. From secure transactions to growth-driven features, everything is built to help you succeed.",
     "cta": {
       "label": "Start Earning on Qlozet",
       "href": "/vendor/waitlist"
@@ -20,7 +20,7 @@
         "Multiple payment options for customers",
         "Protected transactions for vendors"
       ],
-      "closing": "Your earnings are safe—always."
+      "closing": "Your earnings are safe. Always."
     },
     {
       "id": "payouts",
@@ -37,7 +37,7 @@
     {
       "id": "growth",
       "badge": "Built for Growth",
-      "title": "More Than Payments—A Growth Engine",
+      "title": "More Than Payments: A Growth Engine",
       "description": "Qlozet helps you increase your revenue, not just collect it.",
       "features": [
         "Access to a growing customer base",
@@ -74,13 +74,13 @@
       "id": "scale",
       "badge": "Scale Without Limits",
       "title": "Grow Beyond Boundaries",
-      "description": "Qlozet enables you to expand your business across regions and markets.",
+      "description": "Qlozet takes your business beyond your neighbourhood, across Nigeria.",
       "features": [
         "Reach customers far beyond your neighborhood",
         "Handle increased order volume with ease",
         "Scale without operational complexity"
       ],
-      "closing": "From small business to global brand."
+      "closing": "From small business to national brand."
     },
     {
       "id": "simplicity",
@@ -92,12 +92,12 @@
         "Organized financial tracking",
         "Reduced administrative burden"
       ],
-      "closing": "Run your business—without the headaches."
+      "closing": "Run your business without the headaches."
     }
   ],
   "closing": {
     "title": "Get Paid. Grow Faster. Scale Smarter.",
-    "description": "Qlozet turns your work into earnings—and your earnings into growth.",
+    "description": "Qlozet turns your work into earnings, and your earnings into growth.",
     "primaryAction": {
       "label": "Start Selling & Earning Today",
       "href": "/vendor/waitlist"

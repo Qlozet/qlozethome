@@ -1,8 +1,8 @@
 {
   "hero": {
     "badge": "AI Design Engine",
-    "title": "From Idea to Outfit—Instantly.",
-    "description": "What if you could describe your outfit… and see it come to life? With Qlozet’s AI Design Engine, you can turn inspiration, ideas, and imagination into fully visualized fashion designs—ready to be created.",
+    "title": "From Idea to Outfit, Instantly.",
+    "description": "What if you could describe your outfit… and see it come to life? With Qlozet’s AI Design Engine, you can turn inspiration, ideas, and imagination into fully visualized fashion designs, ready to be created.",
     "cta": {
       "label": "Start Designing",
       "href": "#inspiration"
@@ -12,7 +12,7 @@
     "id": "inspiration",
     "badge": "Create From Anything",
     "title": "Your Ideas, Fully Realized",
-    "description": "Start with whatever you have—or nothing at all. Qlozet transforms your input into a complete outfit concept.",
+    "description": "Start with whatever you have, or with nothing at all. Qlozet transforms your input into a complete outfit concept.",
     "features": [
       {
         "title": "Describe your outfit in words",
@@ -31,7 +31,7 @@
   "generation": {
     "badge": "AI Generation",
     "title": "Watch Your Outfit Come to Life",
-    "description": "Our AI generates detailed, realistic outfit designs tailored to your input. From concept to visual—within seconds.",
+    "description": "Our AI generates detailed, realistic outfit designs tailored to your input. From concept to visual in moments.",
     "features": [
       {
         "title": "High-quality visual renders",
@@ -50,7 +50,7 @@
   "precision": {
     "badge": "Precision",
     "title": "Designed Exactly How You Want It",
-    "description": "Qlozet ensures your design respects every detail. What you choose is what gets created—no surprises.",
+    "description": "Qlozet ensures your design respects every detail. What you choose is what gets created. No surprises.",
     "features": [
       {
         "title": "Use real fabric references",
@@ -68,7 +68,7 @@
   },
   "production": {
     "badge": "Production Ready",
-    "title": "Not Just Concepts—Real Clothing",
+    "title": "Not Just Concepts: Real Clothing",
     "description": "Every design generated is meant to be made. Designs aligned with real tailoring workflows.",
     "features": [
       {
@@ -80,14 +80,14 @@
         "icon": "Store"
       },
       {
-        "title": "Compare quotes from expert tailors — you choose who makes it",
+        "title": "Compare quotes from expert tailors and choose who makes it",
         "icon": "Send"
       }
     ]
   },
   "refinement": {
     "badge": "Iteration",
-    "title": "Design Is a Process—We Make It Easy",
+    "title": "Design Is a Process, and We Make It Easy",
     "description": "Iterate, adjust, and improve your outfit until it’s exactly right. You’re in full creative control.",
     "features": [
       {
@@ -107,7 +107,7 @@
   "tailored": {
     "badge": "Personalized",
     "title": "Every Design Fits You",
-    "description": "Attach your saved measurement profile and your chosen tailor makes the real garment to your exact size. Not just beautiful on screen—accurate on you.",
+    "description": "Attach your saved measurement profile and your chosen tailor makes the real garment to your exact size. Not just beautiful on screen. Accurate on you.",
     "features": [
       {
         "title": "Integrated with your fit profile",
@@ -176,7 +176,7 @@
   "closing": {
     "id": "design-cta",
     "title": "You Don’t Have to Imagine It Anymore.",
-    "description": "Now, you can see it. Refine it. Create it. Wear it. Qlozet is redefining how fashion is designed—by putting creativity directly in your hands.",
+    "description": "Now, you can see it. Refine it. Create it. Wear it. Qlozet is redefining how fashion is designed by putting creativity directly in your hands.",
     "primaryAction": {
       "label": "Start Creating Your Outfit",
       "href": "/waitlist"

@@ -164,7 +164,7 @@ export function LogisticsSimpleSection({ data }: LogisticsSimpleSectionProps) {
                  <div className="absolute bottom-10 px-10 w-full flex justify-between items-end">
                     <div className="flex flex-col gap-1">
                        <span className="font-display text-[7px] font-bold text-[#111111]/20 uppercase tracking-[0.3em]">Manual Effort</span>
-                       <span className="font-display text-[9px] font-medium text-brand-darker uppercase tracking-widest tabular-nums font-bold">Reduced by 98%</span>
+                       <span className="font-display text-[9px] font-medium text-brand-darker uppercase tracking-widest tabular-nums font-bold">Handled for you</span>
                     </div>
                     <div className="flex flex-col items-end gap-1">
                        <span className="font-display text-[7px] font-bold text-[#111111]/20 uppercase tracking-[0.3em]">System</span>

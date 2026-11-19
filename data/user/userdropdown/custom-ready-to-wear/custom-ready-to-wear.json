@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Fashion Ecosystem",
     "title": "Shop It. Customize It. Own It.",
-    "description": "Whether you want something ready to wear or something made just for you—Qlozet gives you both. One platform. Endless possibilities.",
+    "description": "Whether you want something ready to wear or something made just for you. Qlozet gives you both. One platform. Endless possibilities.",
     "cta": {
       "label": "Explore Fashion",
       "href": "#marketplace"
@@ -50,7 +50,7 @@
   "mixmatch": {
     "badge": "Empowerment",
     "title": "Create Without Limits",
-    "description": "Qlozet lets you combine your fabric, your design, and your choice of tailor into one outfit. You’re not restricted—you're empowered.",
+    "description": "Qlozet lets you combine your fabric, your design, and your choice of tailor into one outfit. You’re not restricted. You're empowered.",
     "features": [
       {
         "title": "Pick the fabric and finishing you want",
@@ -69,7 +69,7 @@
   "style": {
     "badge": "Personalized Style",
     "title": "Your Style, Your Rules",
-    "description": "Every piece—whether ready-made or custom—can align with your personal style. Fashion that reflects who you are.",
+    "description": "Every piece, whether ready-made or custom, can align with your personal style. Fashion that reflects who you are.",
     "features": [
       {
         "title": "Adapt outfits to your preferences",
@@ -161,7 +161,7 @@
   "ecosystem": {
     "badge": "Global Reach",
     "title": "A Global Fashion Ecosystem",
-    "description": "Qlozet connects customers with designers and vendors across regions—bringing diverse fashion styles into one platform.",
+    "description": "Qlozet connects customers with designers and vendors across regions, bringing diverse fashion styles into one platform.",
     "features": [
       {
         "title": "Access African and global fashion",
@@ -172,7 +172,7 @@
         "icon": "Dna"
       },
       {
-        "title": "Support creative talent worldwide",
+        "title": "Support independent creative talent",
         "icon": "Heart"
       }
     ]

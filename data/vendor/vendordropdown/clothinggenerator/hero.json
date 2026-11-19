@@ -1,8 +1,8 @@
 {
   "id": "clothinggenerator",
   "badge": "Qlozet For Vendors",
-  "title": "AI-designed briefs—delivered straight to your workshop",
-  "description": "Customers design outfits in the Qlozet studio—AI visuals generated from prompts, fabric picks, and reference photos. You receive the finished brief as a quote request, measurements included.",
+  "title": "AI-designed briefs, delivered straight to your workshop",
+  "description": "Customers design outfits in the Qlozet studio, with AI visuals generated from prompts, fabric picks, and reference photos. You receive the finished brief as a quote request, measurements included.",
   "cta": {
     "label": "Join the waitlist",
     "href": "/vendor/waitlist"

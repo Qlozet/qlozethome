@@ -108,7 +108,7 @@ export function ProfileSection({ data }: ProfileSectionProps) {
                            <div className="w-full h-full bg-[url('/image/seun.png')] bg-cover bg-center" />
                         </div>
                         <div className="flex flex-col items-center">
-                           <span className="font-display font-bold text-sm text-brand-darker group-hover:text-white transition-colors">Michael Chen</span>
+                           <span className="font-display font-bold text-sm text-brand-darker group-hover:text-white transition-colors">Michael C.</span>
                            <span className="font-mono text-[10px] text-zinc-500 group-hover:text-zinc-400 transition-colors uppercase tracking-widest mt-1">CUST-8820</span>
                         </div>
                      </motion.div>

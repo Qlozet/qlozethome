@@ -140,7 +140,7 @@ export function LogisticsHero({ data }: LogisticsHeroProps) {
                     {[
                        { icon: MapPin, label: "01: Order Packed", desc: "Ready to ship", id: 'pickup', color: 'text-brand-darker' },
                        { icon: Truck, label: "02: In Transit", desc: "Customer notified", id: 'transit', color: 'text-[#111111]/70' },
-                       { icon: ArrowUpRight, label: "03: Delivered", desc: "Payout released", id: 'final', color: 'text-[#111111]/40' },
+                       { icon: ArrowUpRight, label: "03: Delivered", desc: "Order complete", id: 'final', color: 'text-[#111111]/40' },
                     ].map((step, i) => (
                        <motion.div 
                          key={step.id} 

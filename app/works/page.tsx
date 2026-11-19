@@ -19,17 +19,17 @@ const blueprintSteps = [
   {
     num: "02",
     title: "AI Measurement",
-    desc: "Shoppers generate precise 3D body twins via mobile cameras. The algorithm extracts exact tailoring nodes for a flawless bespoke fit."
+    desc: "Shoppers scan themselves hands-free with their phone. Only an outline is sent, and the model returns the measurements a tailor needs."
   },
   {
     num: "03",
     title: "Order Generation",
-    desc: "Detailed technical order sheets are automatically generated for the tailor, eliminating human transcription errors."
+    desc: "Every order reaches the tailor with the design, style choices, fabric and measurements attached. Nothing copied by hand."
   },
   {
     num: "04",
-    title: "Global Logistics",
-    desc: "Direct integration with global carriers ensures transparent pickup tracking, quality control checkpoints, and seamless delivery."
+    title: "Delivery",
+    desc: "Shipping labels and courier pickups from the dashboard, with the customer notified at every step."
   }
 ];
 

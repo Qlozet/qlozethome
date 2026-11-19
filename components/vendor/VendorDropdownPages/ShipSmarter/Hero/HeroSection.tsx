@@ -84,7 +84,7 @@ export function HeroSection({ data }: HeroSectionProps) {
               className="max-w-[1200px] font-display text-5xl font-medium leading-[1.05] tracking-tighter text-white sm:text-7xl lg:text-[7rem]"
             >
               <span className="bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
-                Ship smarter&mdash;
+                Ship smarter:
               </span>
               <br />
               labels, tracking, <br /> and SLAs

@@ -35,7 +35,7 @@ export function VendorPartnershipCTA() {
                  We Grow<br/>When You Grow.
               </motion.h2>
               <p className="font-ui text-base leading-relaxed text-white/50 sm:text-lg max-w-md italic">
-                 Qlozet is designed to support your journey—not just host your products.
+                 Qlozet is designed to support your journey, not just host your products.
               </p>
            </div>
            
@@ -64,7 +64,7 @@ export function VendorPartnershipCTA() {
                  transition={{ delay: 0.4 }}
                  className="font-ui text-base leading-relaxed text-white/50 sm:text-lg"
               >
-                 You're not just a vendor—<br/>you're a partner.
+                 You're not just a vendor.<br/>You're a partner.
               </motion.p>
            </div>
         </div>

@@ -179,7 +179,7 @@ export function FinancialSimplicitySection({ data }: FinancialSimplicitySectionP
               <div className="absolute top-10 left-10">
                  <div className="flex items-center gap-2">
                     <div className="h-1 w-1 rounded-full bg-brand-darker/20" />
-                    <span className="font-display text-[8px] text-zinc-400 font-bold uppercase tracking-widest">Simplification Delta: 99.8%</span>
+                    <span className="font-display text-[8px] text-zinc-400 font-bold uppercase tracking-widest">Every fee itemised</span>
                  </div>
               </div>
 

@@ -116,7 +116,7 @@ export function ConsistencySection({ data }: ConsistencySectionProps) {
                 <div className="flex items-center justify-between gap-3">
                   <div className="flex flex-col gap-0.5">
                     <span className="font-mono text-[9px] uppercase tracking-widest text-white/30">Consistency Engine</span>
-                    <span className="font-display text-base sm:text-lg font-medium text-white leading-none">Profile Lock™</span>
+                    <span className="font-display text-base sm:text-lg font-medium text-white leading-none">One Profile</span>
                   </div>
                   <div className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 shrink-0">
                     <RefreshCw className="h-3 w-3 text-white/70" />
@@ -227,7 +227,7 @@ export function ConsistencySection({ data }: ConsistencySectionProps) {
                 >
                   <span className="font-mono text-[8px] text-white/25 uppercase tracking-widest">Zero measurement re-entry</span>
                   <div className="flex items-center gap-1.5">
-                    <span className="font-mono text-[8px] text-white/70 font-bold">100% Match Rate</span>
+                    <span className="font-mono text-[8px] text-white/70 font-bold">Same numbers on every order</span>
                     <ShieldCheck className="h-3 w-3 text-white/70" />
                   </div>
                 </motion.div>

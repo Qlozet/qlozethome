@@ -35,8 +35,8 @@ export function AdaptabilitySection({ data }: AdaptabilitySectionProps) {
         { val: "₦180K", label: "Revenue" },
       ],
       tasks: [
-        { text: "Custom Kaftan — Mrs. Adeyemi", status: "In Progress", statusColor: "text-amber-600 bg-amber-50" },
-        { text: "Linen Set — Due Friday", status: "Pending", statusColor: "text-sky-600 bg-sky-50" },
+        { text: "Custom Kaftan · Mrs. Adeyemi", status: "In Progress", statusColor: "text-amber-600 bg-amber-50" },
+        { text: "Linen Set · Due Friday", status: "Pending", statusColor: "text-sky-600 bg-sky-50" },
       ],
     },
     {

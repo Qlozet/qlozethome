@@ -5,7 +5,7 @@
     {
       "icon": "Sparkles",
       "title": "AI outfit visuals",
-      "description": "See the customer’s design rendered before you quote—no guessing from a text description."
+      "description": "See the customer’s design rendered before you quote. No guessing from a text description."
     },
     {
       "icon": "Grid",
@@ -20,7 +20,7 @@
     {
       "icon": "FileText",
       "title": "Measurements & notes",
-      "description": "Saved body measurements and reference photos attached to the order—ready for production."
+      "description": "Saved body measurements and reference photos attached to the order, ready for production."
     }
   ]
 }

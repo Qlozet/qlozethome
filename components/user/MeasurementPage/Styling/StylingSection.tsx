@@ -83,7 +83,7 @@ export function StylingSection({ data }: StylingSectionProps) {
                   {/* Digital Suggestion Tag */}
                   <div className="absolute top-8 right-8 flex items-center gap-2 px-3 py-1 bg-brand-darker text-white rounded-full opacity-0 translate-y-4 transition-all group-hover:opacity-100 group-hover:translate-y-0">
                     <div className="h-1 w-1 rounded-full bg-[#00F0FF] animate-pulse" />
-                    <span className="font-display text-[8px] font-bold uppercase tracking-widest">AI Match: 99%</span>
+                    <span className="font-display text-[8px] font-bold uppercase tracking-widest">Picked for you</span>
                   </div>
                 </motion.div>
                );

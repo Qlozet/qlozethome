@@ -70,7 +70,7 @@ export function VendorWhyQlozet() {
               transition={{ delay: 0.1 }}
               className="font-display max-w-4xl text-5xl sm:text-7xl font-medium leading-[1.05] tracking-tight text-[#111111] mb-6"
             >
-              More Than a Marketplace—<br />
+              More Than a Marketplace.<br />
               <span className="font-display text-2xl sm:text-3xl font-medium text-[#111111]/60">A Growth Platform.</span>
             </motion.h2>
 

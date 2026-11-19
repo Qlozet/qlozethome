@@ -17,7 +17,7 @@
     "title": "Redefining the relationship between person and garment.",
     "paragraphs": [
       "Qlozet was born from a simple observation: the digital world has failed the physical wardrobe. While everything else moved forward, our relationship with what we wear remained static, fragmented, and disconnected.",
-      "We envisioned a system where your style isn't just a collection of items, but a living data set—a digital twin of your sartorial identity. By combining advanced AI measurement with curator-led aesthetic intelligence, we're building a true Digital Atelier.",
+      "We envisioned a system where your style isn't just a collection of items, but a living profile of your fit and taste. By combining advanced AI measurement with curator-led aesthetic intelligence, we're building a true Digital Atelier.",
       "Our mission is to empower individuals to own their fit, their style, and their data. From bespoke tailoring to curated designer pieces, Qlozet is the architecture of modern fashion."
     ]
   },
@@ -38,12 +38,12 @@
       },
       {
         "title": "Circular Future",
-        "description": "The most sustainable garment is the one that fits perfectly and lasts for years. We design for longevity and resale.",
+        "description": "The most sustainable garment is the one that fits and lasts. Made-to-measure means fewer returns and less waste.",
         "icon": "global"
       },
       {
         "title": "Digital Autonomy",
-        "description": "Your wardrobe data belongs to you. We provide the tools to manage, monetize, and master your collection.",
+        "description": "Your wardrobe data belongs to you. Your measurements are yours to edit or delete at any time, and they're only shared with the tailor making your order.",
         "icon": "shop"
       }
     ]

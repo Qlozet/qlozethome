@@ -18,7 +18,7 @@ type RefinementSectionProps = { data: RefinementData };
 const ITERATIONS = [
   { version: "v1.0", image: "/image/bespoke-kaftan-pattern.png", changes: "Initial concept" },
   { version: "v1.1", image: "/image/bespoke-kaftan-brown-8.png", changes: "Adjusted neckline, gold embroidery added" },
-  { version: "v2.0", image: "/image/bespoke-kaftan-blue-1.png", changes: "Final — sleeve length refined, fit perfected" }
+  { version: "v2.0", image: "/image/bespoke-kaftan-blue-1.png", changes: "Final: sleeve length refined, fit perfected" }
 ];
 
 export function RefinementSection({ data }: RefinementSectionProps) {

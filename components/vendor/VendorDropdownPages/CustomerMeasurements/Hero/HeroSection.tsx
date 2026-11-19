@@ -159,7 +159,7 @@ export function HeroSection({ data }: HeroSectionProps) {
 
                   {/* Points label */}
                   <div className="absolute bottom-2 right-3">
-                    <span className="font-mono text-[8px] text-white/70/70">142 pts</span>
+                    <span className="font-mono text-[8px] text-white/70/70">Saved</span>
                   </div>
                 </div>
 

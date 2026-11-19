@@ -6,13 +6,13 @@
       "id": "customers",
       "icon": "/image/people.png",
       "title": "Customers",
-      "description": "Personalized fit, custom design, transparent delivery and after-care."
+      "description": "Personalized fit, custom design and transparent delivery."
     },
     {
       "id": "designers-tailors",
       "icon": "/image/tux.png",
       "title": "Designers & Tailors",
-      "description": "Order pipeline, style templates, measurement guardrails, QC workflows."
+      "description": "Order pipeline, style library, measurement checks and production steps."
     },
     {
       "id": "fabric-accessories",
@@ -24,7 +24,7 @@
       "id": "logistics-partners",
       "icon": "/image/shopping-cart.png",
       "title": "Logistics Partners",
-      "description": "Pickup requests, shipping labels, zone-based SLAs, and delivery status APIs."
+      "description": "Pickup requests, shipping labels and delivery status updates."
     }
   ],
   "orderFlow": {
@@ -32,7 +32,7 @@
     "steps": [
       {
         "id": "step-1",
-        "text": "Capture measurements (photo + height) → verify with AI overlays."
+        "text": "Capture measurements: a hands-free phone scan, two photos, a quick estimate, or your tailor's numbers."
       },
       {
         "id": "step-2",
@@ -44,11 +44,11 @@
       },
       {
         "id": "step-4",
-        "text": "Vendor accepts with lead time → production tracker + QC checkpoints."
+        "text": "Tailors quote with a timeline → you pick one and pay a deposit → production steps tracked."
       },
       {
         "id": "step-5",
-        "text": "Delivery & fit confirmation → alterations/after-care if needed."
+        "text": "Photos of the finished piece → pay the balance → delivery, with support if anything is wrong."
       }
     ]
   }

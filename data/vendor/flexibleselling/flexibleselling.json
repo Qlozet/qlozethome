@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Vendor Excellence",
     "title": "Sell Your Way. No Restrictions.",
-    "description": "Every fashion business is different—and Qlozet is built to support that. Whether you sell ready-made pieces, custom designs, or both, you have full control over how you operate.",
+    "description": "Every fashion business is different, and Qlozet is built to support that. Whether you sell ready-made pieces, custom designs, or both, you have full control over how you operate.",
     "cta": {
       "label": "Start Selling Your Way",
       "href": "/vendor/waitlist"
@@ -14,7 +14,7 @@
       "id": "models",
       "badge": "Multiple Selling Models",
       "title": "One Platform. Many Ways to Sell.",
-      "description": "Qlozet supports different types of fashion businesses—so you’re never forced into a single model.",
+      "description": "Qlozet supports different types of fashion businesses, so you’re never forced into a single model.",
       "features": [
         "Sell ready-to-wear products",
         "Offer made-to-measure custom clothing",
@@ -42,14 +42,14 @@
       "features": [
         "Base pricing for products",
         "Add customization costs",
-        "Include rush fees or complexity charges"
+        "Price fabric by the yard or by the piece"
       ],
       "closing": "Your pricing, your rules."
     },
     {
       "id": "resources",
       "badge": "Fabric & Resource Flexibility",
-      "title": "Work With What You Have—or Expand",
+      "title": "Work With What You Have, or Expand",
       "description": "Qlozet allows flexible sourcing and collaboration.",
       "features": [
         "Use your own fabrics",
@@ -62,19 +62,19 @@
       "id": "workflow",
       "badge": "Order Workflow Control",
       "title": "Control Your Workflow",
-      "description": "Ready-to-wear sells directly — custom requests come to you for review and quoting.",
+      "description": "Ready-to-wear sells directly. Custom requests come to you for review and quoting.",
       "features": [
         "Accept direct orders",
         "Review and approve requests",
         "Quote custom requests at your price"
       ],
-      "closing": "You choose how you work—not the platform."
+      "closing": "You choose how you work, not the platform."
     },
     {
       "id": "adaptability",
       "badge": "Business Style Adaptation",
       "title": "Built Around You",
-      "description": "Whether you’re a solo tailor, a growing brand, or a large workshop—Qlozet adapts to your workflow.",
+      "description": "Whether you’re a solo tailor, a growing brand, or a large workshop, Qlozet adapts to your workflow.",
       "features": [
         "Works for small and large-scale vendors",
         "Supports different production styles",
@@ -86,7 +86,7 @@
       "id": "scaling",
       "badge": "Scale at Your Own Pace",
       "title": "Start Simple. Expand Easily.",
-      "description": "You don’t need everything at once—Qlozet grows with you.",
+      "description": "You don’t need everything at once. Qlozet grows with you.",
       "features": [
         "Begin with basic listings",
         "Add customization over time",
@@ -97,7 +97,7 @@
     {
       "id": "freedom",
       "badge": "Freedom Without Complexity",
-      "title": "Flexible—but Still Simple",
+      "title": "Flexible, but Still Simple",
       "description": "Despite all the options, Qlozet keeps everything easy to manage.",
       "features": [
         "Clean, intuitive interface",
@@ -109,7 +109,7 @@
   ],
   "closing": {
     "title": "Your Business. Your Rules. Your Growth.",
-    "description": "Qlozet gives you the flexibility to run your fashion business exactly how you want—without compromise.",
+    "description": "Qlozet gives you the flexibility to run your fashion business exactly how you want, without compromise.",
     "primaryAction": {
       "label": "Start Selling Your Way on Qlozet",
       "href": "/vendor/waitlist"

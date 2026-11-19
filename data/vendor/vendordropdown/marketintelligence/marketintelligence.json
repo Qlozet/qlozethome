@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Intelligence",
     "title": "Smarter Decisions. Faster Growth.",
-    "description": "Qlozet gives you more than a storefront—it gives you intelligence. Understand your business, your customers, and your opportunities with AI-powered insights designed to help you grow.",
+    "description": "Qlozet gives you more than a storefront. It gives you intelligence. Understand your business, your customers, and your opportunities with AI-powered insights designed to help you grow.",
     "cta": {
       "label": "Unlock Insights",
       "href": "#analytics"
@@ -20,7 +20,7 @@
     "id": "analytics",
     "badge": "Performance",
     "title": "See What’s Driving Your Business",
-    "description": "Track your performance with clear, actionable data. Know what works—so you can do more of it.",
+    "description": "Track your performance with clear, actionable data. Know what works, so you can do more of it.",
     "features": [
       {
         "title": "Revenue and order trends",
@@ -58,7 +58,7 @@
   "customerInsights": {
     "badge": "Customers",
     "title": "Understand Your Customers Better",
-    "description": "Learn what your customers want—and deliver it consistently. The better you understand them, the better you sell.",
+    "description": "Learn what your customers want and deliver it consistently. The better you understand them, the better you sell.",
     "features": [
       {
         "title": "Style and preference trends",
@@ -77,7 +77,7 @@
   "growth": {
     "badge": "Opportunities",
     "title": "Find What’s Next",
-    "description": "Qlozet helps you identify where your business can grow. Stay ahead—not behind.",
+    "description": "Qlozet helps you identify where your business can grow. Stay ahead, not behind.",
     "features": [
       {
         "title": "What’s rising in your own shop",

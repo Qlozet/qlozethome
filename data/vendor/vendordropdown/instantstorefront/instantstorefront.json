@@ -1,7 +1,7 @@
 {
   "hero": {
     "badge": "Digital Storefront & Sales",
-    "title": "Your Fashion Business—Fully Online.",
+    "title": "Your Fashion Business, Fully Online.",
     "description": "Build, manage, and grow your brand with a powerful digital storefront designed for fashion. No website. No complexity. No limits.",
     "cta": {
       "label": "Start Selling on Qlozet",
@@ -15,7 +15,7 @@
   "setup": {
     "badge": "Instant Storefront",
     "title": "Launch in Minutes, Not Months",
-    "description": "Create a professional online store without writing a single line of code. Focus on your craft—we handle the rest.",
+    "description": "Create a professional online store without writing a single line of code. Focus on your craft. We handle the rest.",
     "features": [
       {
         "title": "Beautiful Storefront",
@@ -58,17 +58,17 @@
   "trust": {
     "badge": "Built-In Trust",
     "title": "Verified. Rated. Trusted.",
-    "description": "Trust is built into every storefront. Get verified, collect real reviews, and let secure payments do the reassuring for you.",
+    "description": "Trust is built into every storefront. Get verified, collect real reviews, and get paid on a fixed schedule.",
     "points": [
       "Verified badge once your business is approved",
       "Star ratings and reviews from real customers",
-      "Payments held securely until delivery is confirmed"
+      "Earnings available 14 days after the customer pays"
     ]
   },
   "pricing": {
     "badge": "Flexible Pricing",
     "title": "Price Your Work Your Way",
-    "description": "Maintain full control over how you charge for your products and services. You define your value—we support it.",
+    "description": "Maintain full control over how you charge for your products and services. You define your value. We support it.",
     "options": [
       {
         "label": "Base Prices",
@@ -79,25 +79,25 @@
         "description": "Add fees for specific design tweaks."
       },
       {
-        "label": "Performance Fees",
-        "description": "Include rush or complexity surcharges."
+        "label": "Fabric Pricing",
+        "description": "Sell fabric by the yard, by the piece, or both."
       }
     ]
   },
   "reach": {
     "badge": "Global Brand",
     "title": "From Local Talent to Global Brand",
-    "description": "Expand beyond your immediate environment and reach customers everywhere. Your audience is no longer limited by location.",
+    "description": "Reach customers across Nigeria, not just the ones who walk past your shop.",
     "stats": [
       "Regional Markets",
-      "International Exposure",
+      "Nationwide Reach",
       "Brand Visibility"
     ]
   },
   "integrated": {
     "badge": "Smart Experience",
     "title": "Designed for Fashion Businesses",
-    "description": "Everything works together—so you don’t have to. Specialized tools for specialized creators.",
+    "description": "Everything works together, so you don’t have to. Specialized tools for specialized creators.",
     "tools": [
       "Custom & Ready-to-Wear Support",
       "Integrated Measurement Tools",
@@ -107,7 +107,7 @@
   "direct": {
     "badge": "Direct Access",
     "title": "Connect With Real Buyers",
-    "description": "Build relationships with customers who value your work. It’s not just selling—it’s building a brand.",
+    "description": "Build relationships with customers who value your work. It’s not just selling. It’s building a brand.",
     "features": [
       "Direct Order Management",
       "Real-time Communication",
@@ -121,12 +121,12 @@
     "phases": [
       "Start Small",
       "Grow Fast",
-      "Scale Globally"
+      "Scale Nationwide"
     ]
   },
   "closing": {
     "title": "Your Store. Your Brand. Your Future.",
-    "description": "Qlozet gives you everything you need to succeed in modern fashion—without the usual barriers. Start building your brand today.",
+    "description": "Qlozet gives you everything you need to succeed in modern fashion, without the usual barriers. Start building your brand today.",
     "cta": {
       "label": "Create Your Storefront Now",
       "href": "/vendor/waitlist"

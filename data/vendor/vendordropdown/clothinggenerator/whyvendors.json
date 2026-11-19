@@ -1,5 +1,5 @@
 {
-  "title": "Why vendors love it — briefs you can see, price, and craft with confidence.",
+  "title": "Why vendors love it: briefs you can see, price, and craft with confidence.",
   "items": [
     {
       "id": "speed-to-market",
@@ -11,13 +11,13 @@
       "id": "fit-aware-previews",
       "image": "/image/orangetrianglegroup.png",
       "title": "Measurements attached",
-      "description": "Saved body measurements arrive with the order—no re-measuring sessions."
+      "description": "Saved body measurements arrive with the order. No re-measuring sessions."
     },
     {
       "id": "brand-safety",
       "image": "/image/orangehexagongroup.png",
       "title": "Quote on your terms",
-      "description": "Price each request with line items—fabric, labor, finishing."
+      "description": "Set your price and timeline for each request; the fabric is priced for you from the listing."
     },
     {
       "id": "photo-assist",

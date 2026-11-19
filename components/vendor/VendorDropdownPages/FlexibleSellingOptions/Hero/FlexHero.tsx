@@ -26,8 +26,8 @@ const TICKER_ITEMS = [
 const LIVE_ORDERS = [
   { id: "ORD-2491", type: "RTW", item: "Silk Ankara Blouse", status: "Paid", color: "text-[#111111] bg-brand-light", dot: "bg-brand-light" },
   { id: "ORD-2490", type: "Custom", item: "Bespoke Agbada Set", status: "Measuring", color: "text-sky-600 bg-sky-50", dot: "bg-sky-500" },
-  { id: "ORD-2489", type: "RTW", item: "Linen Trousers — Sz 32", status: "Shipped", color: "text-violet-600 bg-violet-50", dot: "bg-violet-500" },
-  { id: "ORD-2488", type: "Custom", item: "Wedding Gown — Custom Fit", status: "In Review", color: "text-amber-600 bg-amber-50", dot: "bg-amber-500" },
+  { id: "ORD-2489", type: "RTW", item: "Linen Trousers · Sz 32", status: "Shipped", color: "text-violet-600 bg-violet-50", dot: "bg-violet-500" },
+  { id: "ORD-2488", type: "Custom", item: "Wedding Gown · Custom Fit", status: "In Review", color: "text-amber-600 bg-amber-50", dot: "bg-amber-500" },
 ];
 
 const MODES = [
@@ -162,7 +162,7 @@ export function FlexHero({ data }: FlexHeroProps) {
                     </div>
                     <div className="flex flex-col gap-0">
                       <span className="font-display text-[10px] font-bold uppercase tracking-widest text-brand-darker">Vendor Dashboard</span>
-                      <span className="font-mono text-[7px] text-brand-darker/20">qlozet.com/vendor/store</span>
+                      <span className="font-mono text-[7px] text-brand-darker/20">shop.qlozet.app/s/your-store</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 rounded-full bg-brand-light border border-brand-darker/20 px-3 py-1.5">
@@ -290,8 +290,8 @@ export function FlexHero({ data }: FlexHeroProps) {
                   <TrendingUp className="h-3.5 w-3.5 text-brand-darker" />
                 </div>
                 <div className="flex flex-col gap-0">
-                  <span className="font-display text-[8px] font-bold text-brand-darker">+18% Revenue</span>
-                  <span className="font-display text-[6px] text-[#111111]/25">After enabling all modes</span>
+                  <span className="font-display text-[8px] font-bold text-brand-darker">Both modes</span>
+                  <span className="font-display text-[6px] text-[#111111]/25">Ready-made and custom</span>
                 </div>
               </motion.div>
             </div>

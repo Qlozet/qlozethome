@@ -27,7 +27,7 @@ const VENDORS = [
     id: 3,
     name: "Menswear Atelier",
     specialty: "Fabric Specialist",
-    location: "London, UK",
+    location: "Abuja, Nigeria",
     image: "/image/slim-man-2.jpg",
     tags: ["Premium Wool", "Italian Linen", "Luxury Cotton"],
     rating: "5.0"

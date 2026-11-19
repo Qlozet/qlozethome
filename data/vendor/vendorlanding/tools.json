@@ -1,12 +1,12 @@
 {
   "id": "vendor-tools",
   "title": "Infrastructure for Modern Ateliers",
-  "subtitle": "From parametric style templates to digital fabric skus—Qlozet provides the technical foundation for artisanal growth.",
+  "subtitle": "From parametric style templates to digital fabric skus. Qlozet provides the technical foundation for artisanal growth.",
   "items": [
     {
       "icon": "Component",
       "title": "Parametric Design",
-      "description": "Define styles with dynamic inputs—necklines, sleeves, and textures—with automated pricing logic."
+      "description": "Define styles with dynamic inputs, necklines, sleeves, and textures, with automated pricing logic."
     },
     {
       "icon": "Database",

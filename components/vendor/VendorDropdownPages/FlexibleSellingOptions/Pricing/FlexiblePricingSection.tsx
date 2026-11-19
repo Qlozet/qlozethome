@@ -21,7 +21,7 @@ export function FlexiblePricingSection({ data }: FlexiblePricingSectionProps) {
     { label: "Base Garment", amount: 85, pct: 53, color: "bg-[#1e1008]" },
     { label: "Premium Fabric", amount: 35, pct: 22, color: "bg-[#25140b]" },
     { label: "Custom Sleeves", amount: 15, pct: 9, color: "bg-[#381f10]" },
-    { label: "Rush Fee", amount: 25, pct: 16, color: "bg-[#604230]" },
+    { label: "Finishing", amount: 25, pct: 16, color: "bg-[#604230]" },
   ];
 
   return (

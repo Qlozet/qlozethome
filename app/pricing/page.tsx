@@ -17,17 +17,17 @@ export default function PricingPage() {
             <div className="flex items-center gap-4">
               <span className="inline-flex h-px w-12 bg-white/40" />
               <span className="font-display text-[10px] font-bold uppercase tracking-[0.5em] text-white/60">
-                Atelier Access
+                For Vendors
               </span>
             </div>
             
             <h1 className="font-display max-w-5xl text-6xl font-medium leading-[1] tracking-tighter text-white sm:text-8xl lg:text-9xl">
               Pricing <br />
-              <span className="text-white/40">Standards</span>
+              <span className="text-white/40">Kept Simple</span>
             </h1>
             
             <p className="max-w-2xl font-ui text-lg leading-relaxed text-white/50">
-              Select the tier that aligns with your creative volume. From independent designers to global ateliers, we provide the architecture for growth.
+              One way to sell, whatever your size: free to join, a commission only when you make a sale, and payouts on a fixed schedule.
             </p>
           </div>
         </section>

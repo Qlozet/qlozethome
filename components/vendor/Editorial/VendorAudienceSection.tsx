@@ -72,7 +72,7 @@ export function VendorAudienceSection() {
               viewport={{ once: true }}
               className="text-2xl sm:text-4xl lg:text-5xl font-display font-medium text-white max-w-4xl leading-[1.2]"
            >
-              If you create fashion— <br/>
+              If you create fashion, <br/>
               <span className="text-white/40 italic">you belong here.</span>
            </motion.p>
         </div>

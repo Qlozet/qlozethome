@@ -1,20 +1,20 @@
 {
   "id": "download",
-  "title": "Download Qlozet Mobile App",
-  "description": "The Qlozet Mobile App brings personalized fashion to your fingertips. Users can scan their body using the AI measurement tool, customize outfits with real-time previews, chat with vendors, track orders, and manage their wardrobe anytime, anywhere. It’s built for simplicity, style, and on-the-go access to the entire Qlozet ecosystem.",
+  "title": "The Qlozet app is on its way",
+  "description": "Scan your body hands-free, design an outfit with AI, chat with your tailor and follow every order, all from your phone. The apps are in testing now; until they reach the stores, everything works on the web.",
   "image": {
     "src": "/image/downloadapp.png",
     "alt": "Qlozet mobile app preview"
   },
   "storeLinks": [
     {
-      "label": "Download on the App Store",
-      "href": "https://apple.com/app-store",
+      "label": "App Store",
+      "href": "",
       "icon": "/image/astore.png"
     },
     {
-      "label": "Get it on Google Play",
-      "href": "https://play.google.com",
+      "label": "Google Play",
+      "href": "",
       "icon": "/image/gplay.png"
     }
   ]

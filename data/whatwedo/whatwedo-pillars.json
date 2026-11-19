@@ -1,6 +1,6 @@
 {
   "title": "What we do for you",
-  "subtitle": "Four pillars unify our ecosystem—precision, personalization, productivity, and trust.",
+  "subtitle": "Four pillars unify our ecosystem: precision, personalization, productivity, and trust.",
   "tabs": [
     {
       "id": "customer",
@@ -16,13 +16,13 @@
           "id": "custom-pieces",
           "icon": "/image/tux.png",
           "title": "Custom pieces",
-          "description": "Choose silhouettes, fabrics, and finishes. Preview with style overlays."
+          "description": "Choose styles, fabrics and finishes, and see your design generated before it's made."
         },
         {
           "id": "track-relax",
           "icon": "/image/box.png",
           "title": "Track & relax",
-          "description": "Production milestones, delivery ETAs, and after-care in one place."
+          "description": "Production steps, delivery estimates and support in one place."
         }
       ]
     },
@@ -40,13 +40,13 @@
           "id": "order-orchestration",
           "icon": "/image/chart.png",
           "title": "Analytics",
-          "description": "See top sellers, conversion funnels, and reorder alerts."
+          "description": "See your best sellers, sales trends and what's changing."
         },
         {
           "id": "analytics-insights",
           "icon": "/image/hierarchy.png",
           "title": "Production ops",
-          "description": "Order pipeline, QC checklists, and team roles in a clean dashboard."
+          "description": "Order pipeline, production steps and team roles in a clean dashboard."
         }
       ]
     },
@@ -64,13 +64,13 @@
           "id": "material-catalog",
           "icon": "/image/chart.png",
           "title": "Analytics",
-          "description": "See top sellers, conversion funnels, and reorder alerts."
+          "description": "See your best sellers, sales trends and what's changing."
         },
         {
           "id": "quality-assurance",
           "icon": "/image/shield-tick.png",
           "title": "Trust layer",
-          "description": "KYC, dispute flows, and payout protections for serious business."
+          "description": "Verified businesses, dispute resolution and a fixed payout schedule."
         }
       ]
     },
@@ -94,7 +94,7 @@
           "id": "returns-support",
           "icon": "/image/tux.png",
           "title": "Returns & support",
-          "description": "Handle alterations, returns, and customer support with streamlined workflows."
+          "description": "Returns, refunds and customer support with clear rules for both sides."
         }
       ]
     }

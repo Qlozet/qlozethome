@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ElementType } from "react";
 
 type DownloadData = typeof import("@/data/home/download.json");
 
@@ -33,12 +34,15 @@ export function DownloadSection({ data, dark = false }: DownloadSectionProps) {
             <div className="flex flex-wrap gap-4">
               {data.storeLinks.map((store) => {
                 const isApple = store.label.toLowerCase().includes("apple") || store.label.toLowerCase().includes("app store");
-                
+                // No store link yet: show the badge as "coming soon", not as a link.
+                const live = Boolean(store.href);
+                const Badge = (live ? Link : "div") as ElementType;
+
                 return (
-                  <Link
+                  <Badge
                     key={store.label}
-                    href={store.href}
-                    className={`group relative flex items-center gap-4 overflow-hidden rounded-xl border px-6 py-3 transition-all duration-500 hover:-translate-y-1 active:scale-[0.98] ${
+                    {...(live ? { href: store.href } : { "aria-label": store.label })}
+                    className={`group relative flex items-center gap-4 overflow-hidden rounded-xl border px-6 py-3 transition-all duration-500 ${live ? "hover:-translate-y-1 active:scale-[0.98]" : "opacity-60"} ${
                       dark 
                         ? "border-white/10 bg-gradient-to-b from-white/10 to-transparent backdrop-blur-md hover:border-white/20 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]" 
                         : "border-black/5 bg-gradient-to-b from-[#2A2A2A] to-black hover:from-[#3A3A3A] hover:to-[#111111] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)]"
@@ -60,7 +64,7 @@ export function DownloadSection({ data, dark = false }: DownloadSectionProps) {
                     {/* Lettering */}
                     <div className="relative z-10 flex flex-col items-start leading-tight">
                       <span className="font-ui text-[10px] font-bold uppercase tracking-wider text-white/40">
-                        {isApple ? "Download on the" : "GET IT ON"}
+                        {!live ? "Coming soon to" : isApple ? "Download on the" : "GET IT ON"}
                       </span>
                       <span className="font-display text-lg font-medium text-white">
                         {isApple ? "App Store" : "Google Play"}
@@ -68,8 +72,10 @@ export function DownloadSection({ data, dark = false }: DownloadSectionProps) {
                     </div>
 
                     {/* Premium Shine Effect */}
-                    <div className="absolute inset-0 translate-x-[-100%] bg-gradient-to-r from-transparent via-white/5 to-transparent transition-transform duration-1000 group-hover:translate-x-[100%]" />
-                  </Link>
+                    {live && (
+                      <div className="absolute inset-0 translate-x-[-100%] bg-gradient-to-r from-transparent via-white/5 to-transparent transition-transform duration-1000 group-hover:translate-x-[100%]" />
+                    )}
+                  </Badge>
                 );
               })}
             </div>

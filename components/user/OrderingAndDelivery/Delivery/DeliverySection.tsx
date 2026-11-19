@@ -156,7 +156,7 @@ export function DeliverySection({ data }: DeliverySectionProps) {
                       </div>
                       <div className="flex flex-col gap-0.5">
                         <span className="font-display text-[9px] font-bold text-white uppercase tracking-widest">Express Courier</span>
-                        <span className="font-ui text-[8px] text-white/30">DHL Express · Tracked</span>
+                        <span className="font-ui text-[8px] text-white/30">Courier · Tracked</span>
                       </div>
                     </div>
                     <div className="flex flex-col items-end gap-0.5">

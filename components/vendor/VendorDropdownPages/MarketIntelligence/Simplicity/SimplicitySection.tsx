@@ -60,9 +60,9 @@ export function SimplicitySection({ data }: SimplicitySectionProps) {
                   <span className="font-display text-[10px] font-bold uppercase tracking-widest text-brand-darker">Today's Recommendations</span>
                 </div>
                 {[
-                  { text: "Restock Ankara Maxi Dress — selling 3x faster than predicted", priority: "High" },
+                  { text: "Restock Ankara Maxi Dress: your best seller this week", priority: "High" },
                   { text: "Lower price on Linen Shorts by 10% to match demand", priority: "Medium" },
-                  { text: "Your Agbada Set review score improved — feature it!", priority: "Low" },
+                  { text: "Your Agbada Set review score improved. Feature it!", priority: "Low" },
                 ].map((rec, i) => (
                   <motion.div key={i} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
                     transition={{ delay: 0.5 + i * 0.1 }}

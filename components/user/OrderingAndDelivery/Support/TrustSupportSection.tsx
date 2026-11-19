@@ -94,7 +94,7 @@ export function TrustSupportSection({ data }: TrustSupportSectionProps) {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <LifeBuoy className="h-6 w-6 text-black/40" />
-                  <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black/40">24/7 Concierge</span>
+                  <span className="font-display text-[10px] font-bold uppercase tracking-widest text-black/40">Qlozet Support</span>
                 </div>
                 <div className="h-2 w-2 rounded-full bg-brand-darker animate-pulse" />
               </div>

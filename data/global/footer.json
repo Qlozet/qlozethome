@@ -6,19 +6,36 @@
   },
   "columns": [
     {
-      "title": "Solutions",
+      "title": "Shoppers",
       "links": [
         {
-          "label": "Qlozet for Vendors",
+          "label": "Body measurement",
+          "href": "/measurement"
+        },
+        {
+          "label": "Design your outfit",
+          "href": "/designyouroutfit"
+        },
+        {
+          "label": "Fabrics",
+          "href": "/fabric"
+        }
+      ]
+    },
+    {
+      "title": "Vendors",
+      "links": [
+        {
+          "label": "Sell on Qlozet",
           "href": "/vendor"
         },
         {
-          "label": "Brand Network",
-          "href": "#partners"
+          "label": "Pricing",
+          "href": "/pricing"
         },
         {
-          "label": "Smart Fit",
-          "href": "#highlights"
+          "label": "How it works",
+          "href": "/works"
         }
       ]
     },
@@ -30,49 +47,28 @@
           "href": "/about"
         },
         {
-          "label": "Careers",
-          "href": "#"
-        },
-        {
-          "label": "Press",
-          "href": "#"
+          "label": "What we do",
+          "href": "/whatwedo"
         }
       ]
     },
     {
-      "title": "Customer Care",
+      "title": "Help",
       "links": [
         {
-          "label": "Support",
-          "href": "#faq"
+          "label": "FAQ",
+          "href": "/#faq"
         },
         {
-          "label": "Track Orders",
-          "href": "#shopping"
+          "label": "Contact support",
+          "href": "HELP_URL"
         },
         {
-          "label": "Return Policy",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "title": "Tailor Your Region",
-      "links": [
-        {
-          "label": "United States",
-          "href": "#"
-        },
-        {
-          "label": "United Kingdom",
-          "href": "#"
-        },
-        {
-          "label": "Nigeria",
-          "href": "#"
+          "label": "Returns & refunds",
+          "href": "/terms#returns"
         }
       ]
     }
   ],
-  "bottomText": "© 2025 Qlozet. All rights reserved."
+  "bottomText": "Qlozet. All rights reserved."
 }

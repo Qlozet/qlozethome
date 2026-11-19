@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Start With the Fabric",
     "title": "Build the Outfit.",
-    "description": "Every great outfit begins with the right fabric. Explore a curated collection of premium textiles—from bold statement prints to timeless classics—ready to bring your vision to life.",
+    "description": "Every great outfit begins with the right fabric. Explore a curated collection of premium textiles, from bold statement prints to timeless classics, ready to bring your vision to life.",
     "cta": {
       "label": "Join Waitlist",
       "href": "/waitlist"
@@ -32,7 +32,7 @@
         "Browse by occasion (casual, formal, traditional)",
         "Smart search for faster discovery"
       ],
-      "closing": "From idea to fabric—instantly."
+      "closing": "From idea to fabric, instantly."
     },
     {
       "id": "details",

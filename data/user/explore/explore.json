@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Fashion Discovery",
     "title": "Discover Fashion You Won’t Find Anywhere Else.",
-    "description": "Explore a curated world of designers, fabrics, and styles—tailored to your taste and powered by Qlozet.",
+    "description": "Explore a curated world of designers, fabrics, and styles, tailored to your taste and powered by Qlozet.",
     "cta": {
       "label": "Start Exploring",
       "href": "#vendors"
@@ -30,7 +30,7 @@
       "Organized by categories and styles",
       "Clean, visual browsing experience"
     ],
-    "closing": "Find what you love—faster."
+    "closing": "Find what you love, faster."
   },
   "discovery": {
     "id": "discovery",
@@ -47,14 +47,14 @@
   "ecosystem": {
     "id": "ecosystem",
     "badge": "More Than Just Clothing",
-    "title": "Everything Fashion—In One Place",
+    "title": "Everything Fashion, in One Place",
     "description": "Qlozet brings together all elements of fashion into a single ecosystem.",
     "features": [
       "Shop fabrics for custom designs",
       "Discover accessories to complete your look",
       "Explore full outfit combinations"
     ],
-    "closing": "It’s not just shopping—it’s building your style."
+    "closing": "It’s not just shopping. It’s building your style."
   },
   "inspiration": {
     "id": "inspiration",
@@ -78,7 +78,7 @@
       "Save items for later",
       "Smooth and fast checkout"
     ],
-    "closing": "Inspiration to action—without friction."
+    "closing": "Inspiration to action, without friction."
   },
   "personalization": {
     "id": "personalization",
@@ -94,7 +94,7 @@
   },
   "closing": {
     "title": "Your Next Favorite Outfit Is Waiting.",
-    "description": "Explore new designers. Discover new styles. Create your own. Qlozet brings fashion closer to you—than ever before.",
+    "description": "Explore new designers. Discover new styles. Create your own. Qlozet brings fashion closer to you than ever before.",
     "primaryAction": {
       "label": "Start Exploring Now",
       "href": "/waitlist"

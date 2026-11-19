@@ -33,7 +33,7 @@ const MODES = [
       {
         icon: User,
         label: "Customer Orders",
-        note: "Adeola buys Silk Kaftan — Size M",
+        note: "Adeola buys Silk Kaftan · Size M",
         statusColor: "bg-brand-light text-brand-darker/40",
         active: true,
       },
@@ -69,7 +69,7 @@ const MODES = [
     tag: "Recommended",
     tagStyle: "bg-sky-50 text-sky-600 border border-sky-200",
     accentColor: "bg-sky-500",
-    summary: "You review every incoming request before committing — full control over your workload.",
+    summary: "You review every incoming request before committing. Full control over your workload.",
     steps: [
       {
         icon: User,
@@ -110,7 +110,7 @@ const MODES = [
     tag: "Custom Pricing",
     tagStyle: "bg-amber-50 text-amber-600 border border-amber-200",
     accentColor: "bg-amber-500",
-    summary: "Client describes what they need — you respond with a price offer. Both agree before anything starts.",
+    summary: "Client describes what they need. You respond with a price offer. Both agree before anything starts.",
     steps: [
       {
         icon: User,
@@ -129,7 +129,7 @@ const MODES = [
       {
         icon: Star,
         label: "Client Accepts",
-        note: "Order confirmed — work begins",
+        note: "Order confirmed. Work begins",
         statusColor: "bg-brand-light text-[#111111]/30",
         active: false,
       },

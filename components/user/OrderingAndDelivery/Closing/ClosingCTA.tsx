@@ -30,7 +30,7 @@ export function ClosingCTA({ data }: ClosingCTAProps) {
               className="flex items-center gap-3 rounded-full bg-white/5 border border-white/10 px-6 py-2"
             >
               <div className="h-2 w-2 rounded-full bg-white animate-pulse" />
-              <span className="font-display text-[10px] font-bold uppercase tracking-[0.3em] text-white/60">Ready to Ship Globally</span>
+              <span className="font-display text-[10px] font-bold uppercase tracking-[0.3em] text-white/60">Delivered Nationwide</span>
             </motion.div>
 
             <div className="flex flex-col gap-6">

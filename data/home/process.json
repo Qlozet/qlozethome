@@ -2,11 +2,11 @@
   "id": "process",
   "eyebrow": "From scan to style in days",
   "title": "Three simple steps tailored around you",
-  "description": "Measure once, customize endlessly, and receive your handcrafted outfit in record time.",
+  "description": "Measure once, customize endlessly, and receive your handcrafted outfit, made by the tailor you choose.",
   "steps": [
     {
       "title": "Measure",
-      "description": "Use your device to capture accurate body measurements in minutes with guided prompts and visual cues.",
+      "description": "Use your device to capture your body measurements in about a minute, guided by voice.",
       "icon": "/svg/measure.svg"
     },
     {

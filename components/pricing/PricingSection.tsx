@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 type PricingData = typeof import("@/data/pricing/pricing.json");
 
@@ -9,137 +8,85 @@ type PricingSectionProps = {
   data: PricingData;
 };
 
+const ease = [0.22, 1, 0.36, 1] as const;
+
 export function PricingSection({ data }: PricingSectionProps) {
-  const [currency, setCurrency] = useState<"usd" | "ngn">("ngn");
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.2 }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { y: 40, opacity: 0 },
-    visible: { 
-      y: 0, 
-      opacity: 1,
-      transition: { 
-        duration: 0.8, 
-        ease: [0.22, 1, 0.36, 1] as any 
-      }
-    }
-  };
+  const { plan, notes } = data;
 
   return (
     <main className="flex flex-col px-6 pb-24 sm:pb-32" data-theme="dark">
-      <div className="mx-auto w-full max-w-[94rem]">
-        {/* Currency Toggle - Minimalist Editorial version */}
-        <div className="mb-24 flex items-center justify-start gap-6">
-          <span className={`font-display text-xs font-bold uppercase tracking-[0.3em] transition-colors duration-500 ${currency === "ngn" ? "text-white" : "text-white/30"}`}>
-            {data.currency.ngn}
-          </span>
-          <button
-            onClick={() => setCurrency(currency === "usd" ? "ngn" : "usd")}
-            className="group relative h-7 w-14 rounded-full bg-white/10 p-1 transition-all duration-500 hover:bg-white/20"
-            aria-label="Toggle currency"
-          >
-            <div
-              className={`h-5 w-5 rounded-full bg-white transition-all duration-500 shadow-xl ${currency === "usd" ? "translate-x-7" : "translate-x-0"}`}
-            />
-          </button>
-          <span className={`font-display text-xs font-bold uppercase tracking-[0.3em] transition-colors duration-500 ${currency === "usd" ? "text-white" : "text-white/30"}`}>
-            {data.currency.usd}
-          </span>
-        </div>
-
-        {/* Pricing Cards Architecture */}
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+      <div className="mx-auto grid w-full max-w-[94rem] gap-8 lg:grid-cols-[1.25fr_1fr]">
+        {/* The one plan */}
+        <motion.div
+          initial={{ y: 40, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
-          className="grid w-full gap-8 lg:grid-cols-3"
+          transition={{ duration: 0.8, ease }}
+          className="flex flex-col gap-10 rounded-[3rem] bg-white p-10 text-[#111111] shadow-2xl shadow-black/20 sm:p-14"
         >
-          {data.plans.map((plan) => {
-            const isFeatured = plan.id === "premium";
-            
-            return (
-              <motion.div
-                variants={cardVariants}
-                key={plan.id}
-                className={`flex flex-col gap-10 rounded-[3rem] p-10 transition-all duration-700 hover:scale-[1.02] ${
-                  isFeatured 
-                    ? "bg-white text-[#111111] shadow-2xl shadow-black/20" 
-                    : "bg-white/5 border border-white/10 text-white backdrop-blur-xl"
-                }`}
-              >
-                <div className="flex flex-col gap-8">
-                  <div className="flex items-center justify-between">
-                    <h2 className={`font-display text-2xl font-medium tracking-tight ${isFeatured ? "text-[#111111]" : "text-white"}`}>
-                      {plan.name}
-                    </h2>
-                    {isFeatured && (
-                      <span className="rounded-full bg-brand-button px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white">
-                        Recommended
-                      </span>
-                    )}
-                  </div>
+          <h2 className="font-display text-2xl font-medium tracking-tight">{plan.name}</h2>
 
-                  <div className="flex items-baseline gap-3">
-                    <span className={`font-display text-5xl font-medium tracking-tighter sm:text-7xl ${isFeatured ? "text-[#111111]" : "text-white"}`}>
-                      {plan.price[currency] === "*" ? "Custom" : plan.price[currency].toLocaleString()}
-                    </span>
-                    <span className={`font-ui text-sm uppercase tracking-widest ${isFeatured ? "text-[#111111]/40" : "text-white/40"}`}>
-                      {plan.price[currency] !== "*" && `/ ${plan.period}`}
-                    </span>
-                  </div>
-                </div>
+          <div className="flex flex-wrap items-end gap-x-12 gap-y-6">
+            <div className="flex items-baseline gap-3">
+              <span className="font-display text-6xl font-medium tracking-tighter sm:text-8xl">{plan.price}</span>
+              <span className="font-ui text-sm uppercase tracking-widest text-[#111111]/40">{plan.period}</span>
+            </div>
+            <div className="flex flex-col gap-1 pb-2">
+              <span className="font-display text-4xl font-medium tracking-tighter sm:text-5xl">{plan.commission}</span>
+              <span className="font-ui text-sm text-[#111111]/50">{plan.commissionNote}</span>
+            </div>
+          </div>
 
-                <div className="flex flex-col gap-6">
-                  {plan.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-start gap-4">
-                      <svg
-                        className={`h-5 w-5 shrink-0 mt-0.5 ${isFeatured ? "text-[#111111]" : "text-white/60"}`}
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                      <p className={`font-ui text-sm leading-relaxed ${isFeatured ? "text-[#111111]/60" : "text-white/40"}`}>
-                        {feature.highlight && feature.highlightText ? (
-                          <>
-                            {feature.text.split(feature.highlightText)[0]}
-                            <span className={`font-bold italic ${isFeatured ? "text-[#111111]" : "text-white"}`}>
-                              {feature.highlightText}
-                            </span>
-                            {feature.text.split(feature.highlightText)[1]}
-                          </>
-                        ) : (
-                          feature.text
-                        )}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-
-                <a
-                  href={plan.cta.href}
-                  className={`mt-auto flex items-center justify-center rounded-full px-10 py-5 text-xs font-bold uppercase tracking-[0.3em] transition-all hover:scale-105 active:scale-[0.98] ${
-                    isFeatured
-                      ? "bg-brand-button text-white hover:bg-brand shadow-xl"
-                      : "bg-white text-brand-button hover:bg-brand-light shadow-2xl"
-                  }`}
+          <ul className="flex flex-col gap-5">
+            {plan.features.map((feature) => (
+              <li key={feature} className="flex items-start gap-4">
+                <svg
+                  className="mt-0.5 h-5 w-5 shrink-0 text-[#111111]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  aria-hidden="true"
                 >
-                  {plan.cta.label}
-                </a>
-              </motion.div>
-            );
-          })}
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="font-ui text-sm leading-relaxed text-[#111111]/70">{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href={plan.cta.href}
+            className="mt-auto flex items-center justify-center rounded-full bg-brand-button px-10 py-5 text-xs font-bold uppercase tracking-[0.3em] text-white shadow-xl transition-all hover:scale-105 hover:bg-brand active:scale-[0.98]"
+          >
+            {plan.cta.label}
+          </a>
         </motion.div>
+
+        {/* How the money works */}
+        <div className="flex flex-col gap-8">
+          {notes.map((note, i) => (
+            <motion.div
+              key={note.title}
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease, delay: 0.15 * (i + 1) }}
+              className="flex flex-col gap-4 rounded-[2.5rem] border border-white/10 bg-white/5 p-10 backdrop-blur-xl"
+            >
+              <h3 className="font-display text-xl font-medium tracking-tight text-white">{note.title}</h3>
+              <p className="font-ui text-sm leading-relaxed text-white/60">{note.text}</p>
+              {"cta" in note && note.cta && (
+                <a
+                  href={note.cta.href}
+                  className="mt-2 flex w-fit items-center justify-center rounded-full bg-white px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] text-brand-button shadow-2xl transition-all hover:scale-105 hover:bg-brand-light active:scale-[0.98]"
+                >
+                  {note.cta.label}
+                </a>
+              )}
+            </motion.div>
+          ))}
+        </div>
       </div>
     </main>
   );

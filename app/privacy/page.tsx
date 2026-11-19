@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SHOP_URL } from "@/lib/links";
 
 import navbarData from "@/data/global/navbar.json";
 import footerData from "@/data/global/footer.json";
@@ -9,24 +10,20 @@ import footerData from "@/data/global/footer.json";
 export const metadata: Metadata = {
   title: "Privacy Policy | Qlozet",
   description:
-    "How Qlozet collects, uses, stores and protects your data — including body measurements and photos used by our AI fitting tools.",
+    "How Qlozet collects, uses, stores and protects your data, including your body measurements.",
 };
 
 // The canonical privacy policy. Linked from the shop, the vendor console,
 // app-store listings and the waitlist. Content reflects what the platform
 // actually does today; changes to data practices must update this page
-// (each revision is a git commit — that history is the version record).
+// (each revision is a git commit; that history is the version record).
 
-const EFFECTIVE_DATE = "12 September 2026";
+const EFFECTIVE_DATE = "19 November 2026";
 
-// Deployed shop URL — override with NEXT_PUBLIC_SHOP_URL when the custom
-// domain is live.
-const SHOP_URL =
-  process.env.NEXT_PUBLIC_SHOP_URL ?? "https://qlozet-shop.vercel.app";
 
 const sections = [
   { id: "what-we-collect", title: "1. What we collect" },
-  { id: "measurements-and-photos", title: "2. Body measurements & photos" },
+  { id: "measurements-and-photos", title: "2. Body measurements" },
   { id: "how-we-use-data", title: "3. How we use your data" },
   { id: "sharing", title: "4. Who we share it with" },
   { id: "payments", title: "5. Payments" },
@@ -104,30 +101,30 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul className="flex list-disc flex-col gap-2 pl-6">
                 <li>
-                  <strong className="text-[#111111]">Account details</strong> —
+                  <strong className="text-[#111111]">Account details:</strong>
                   your name, email address, phone number and password (stored
                   hashed, never in plain text).
                 </li>
                 <li>
-                  <strong className="text-[#111111]">Order information</strong>{" "}
-                  — what you buy, delivery addresses, order history, returns
+                  <strong className="text-[#111111]">Order information:</strong>{" "}
+                  what you buy, delivery addresses, order history, returns
                   and support conversations.
                 </li>
                 <li>
                   <strong className="text-[#111111]">
                     Fit &amp; style data
-                  </strong>{" "}
-                  — body measurements you enter or generate with our AI tools,
+                  :</strong>{" "}
+                  body measurements you enter or generate with our AI tools,
                   saved measurement profiles, bespoke designs you create, and
                   style preferences.
                 </li>
                 <li>
-                  <strong className="text-[#111111]">Vendor details</strong> —
+                  <strong className="text-[#111111]">Vendor details:</strong>
                   if you sell on Qlozet: business name, contact details,
                   products, and payout account information.
                 </li>
                 <li>
-                  <strong className="text-[#111111]">Usage data</strong> —
+                  <strong className="text-[#111111]">Usage data:</strong>
                   pages viewed, items browsed and device information, used to
                   personalise recommendations and keep the platform secure.
                 </li>
@@ -136,19 +133,29 @@ export default function PrivacyPolicyPage() {
 
             <Section
               id="measurements-and-photos"
-              title="2. Body measurements & photos"
+              title="2. Body measurements"
             >
               <p>
-                Our AI measurement tool can estimate your body measurements
-                from photos you choose to upload, together with your height,
-                weight and gender. We treat this as sensitive data and handle
-                it with extra care:
+                Our AI measurement tools estimate your body measurements from
+                your height, weight and gender, together with either a body
+                scan, two photos, or your answers to a few questions about
+                your shape. We treat this as sensitive data and handle it with
+                extra care:
               </p>
               <ul className="flex list-disc flex-col gap-2 pl-6">
                 <li>
-                  Photos are used <strong className="text-[#111111]">only</strong>{" "}
-                  to run the measurement prediction you asked for. They are not
-                  used for advertising and are not shared with vendors.
+                  <strong className="text-[#111111]">No photo of you leaves your phone.</strong>{" "}
+                  For a body scan or two photos, the Qlozet app turns each
+                  picture into a plain outline of your body on your phone, and
+                  only those outlines are sent to us. They are held in memory
+                  just long enough to measure you, then discarded. They are
+                  never saved, never used for advertising and never shared
+                  with vendors.
+                </li>
+                <li>
+                  If you photograph your tailor&apos;s measurement book so we
+                  can fill in your numbers, that photo is read once to copy the
+                  numbers and is not kept.
                 </li>
                 <li>
                   The resulting measurements are saved to your profile so you
@@ -158,8 +165,7 @@ export default function PrivacyPolicyPage() {
                 <li>
                   When you place a tailored order, a snapshot of the
                   measurements you selected is shared with the vendor making
-                  your garment — that is the point of the feature — but your
-                  photos never are.
+                  your garment. That is the point of the feature.
                 </li>
               </ul>
             </Section>
@@ -175,7 +181,7 @@ export default function PrivacyPolicyPage() {
                   To personalise your shopping feed and recommendations.
                 </li>
                 <li>
-                  To send transactional notifications — order updates, support
+                  To send transactional notifications: order updates, support
                   replies, wallet credits (including automatic late-delivery
                   compensation).
                 </li>
@@ -192,20 +198,20 @@ export default function PrivacyPolicyPage() {
             <Section id="sharing" title="4. Who we share it with">
               <ul className="flex list-disc flex-col gap-2 pl-6">
                 <li>
-                  <strong className="text-[#111111]">Vendors</strong> — the
+                  <strong className="text-[#111111]">Vendors:</strong> the
                   vendor fulfilling your order sees what they need to fulfil
                   it: your order details, delivery information and, for
                   tailored orders, the measurement snapshot you attached.
                 </li>
                 <li>
-                  <strong className="text-[#111111]">Service providers</strong>{" "}
-                  — payment processors, cloud hosting and media storage, AI
+                  <strong className="text-[#111111]">Service providers:</strong>{" "}
+                  payment processors, cloud hosting and media storage, AI
                   processing infrastructure, and courier/logistics partners who
                   deliver your orders. Each receives only what its service
                   requires.
                 </li>
                 <li>
-                  <strong className="text-[#111111]">Authorities</strong> —
+                  <strong className="text-[#111111]">Authorities:</strong>
                   when the law genuinely requires it.
                 </li>
               </ul>
@@ -214,19 +220,20 @@ export default function PrivacyPolicyPage() {
             <Section id="payments" title="5. Payments">
               <p>
                 Card and bank payments are processed by our payment partners
-                (currently Paystack, and Stripe for some international
+                (currently Paystack, with Flutterwave as a backup for naira
                 payments). Your full card details go directly to them and are
                 never stored on Qlozet&apos;s servers. We keep transaction
-                records — amounts, references and status — to run wallets,
+                records (amounts, references and status) to run wallets,
                 refunds and vendor payouts.
               </p>
             </Section>
 
             <Section id="storage-and-security" title="6. Storage & security">
               <p>
-                Your data is stored in secured cloud databases; images are
-                stored with our media hosting provider. Access inside Qlozet is
-                role-restricted — support staff see only what their role needs.
+                Your data is stored in secured cloud databases; images such
+                as product photos, designs and reviews are stored with our
+                media hosting provider. Body scan outlines are never stored. Access inside Qlozet is
+                role-restricted. Support staff see only what their role needs.
                 Data moves over encrypted connections (HTTPS), and passwords
                 are stored hashed.
               </p>
@@ -250,8 +257,8 @@ export default function PrivacyPolicyPage() {
 
             <Section id="your-rights" title="8. Your rights">
               <p>
-                Under the Nigeria Data Protection Act (NDPA) — and, where it
-                applies, the UK/EU GDPR — you can:
+                Under the Nigeria Data Protection Act (NDPA) and, where it
+                applies, the UK/EU GDPR, you can:
               </p>
               <ul className="flex list-disc flex-col gap-2 pl-6">
                 <li>Ask for a copy of the personal data we hold about you.</li>
@@ -301,8 +308,8 @@ export default function PrivacyPolicyPage() {
                   className="font-medium text-brand-hover underline underline-offset-4"
                 >
                   Qlozet Help Center
-                </Link>{" "}
-                — support tickets go straight to us and you can follow the
+                </Link>
+                . Support tickets go straight to us and you can follow the
                 conversation in your account.
               </p>
             </Section>

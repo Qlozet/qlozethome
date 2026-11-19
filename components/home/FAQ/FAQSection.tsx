@@ -1,5 +1,6 @@
 "use client";
 
+import { HELP_URL } from "@/lib/links";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -55,17 +56,17 @@ export function FAQSection({ data, dark = false }: FAQSectionProps) {
                 {data.title}
               </motion.h2>
               <motion.p variants={itemVariants} className={`max-w-sm font-ui text-lg leading-relaxed ${dark ? 'text-white/50' : 'text-black/50'}`}>
-                Architectural Fit. Global Discovery. Scalable Craft. Find answers to your technical and operational inquiries.
+                Quick answers about measurements, delivery, bespoke orders and selling on Qlozet.
               </motion.p>
             </div>
             
             <motion.div variants={itemVariants} className="flex flex-col gap-4 pt-4">
               <p className={`font-display text-[10px] font-bold uppercase tracking-widest ${dark ? 'text-white/20' : 'text-black/20'}`}>Still have questions?</p>
               <a 
-                href="mailto:support@qlozet.com" 
+                href={HELP_URL} 
                 className={`group flex w-fit items-center gap-4 border-b pb-2 font-display text-[10px] font-bold uppercase tracking-[0.3em] transition-all ${dark ? 'border-white/10 text-white hover:border-white' : 'border-brand/10 text-brand hover:border-brand'}`}
               >
-                Contact our styling team
+                Contact support
                 <div className={`h-px transition-all duration-500 group-hover:w-12 ${dark ? 'bg-white w-8' : 'bg-brand w-8'}`} />
               </a>
             </motion.div>

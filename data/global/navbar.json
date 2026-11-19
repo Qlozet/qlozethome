@@ -71,12 +71,12 @@
             },
             {
               "title": "Clothing Generator",
-              "description": "Generate on visuals from prompts, fabric swatches, or reference photos",
+              "description": "Receive AI-designed briefs, ready to quote",
               "href": "/clothinggenerator"
             },
             {
               "title": "Chat with customers",
-              "description": "Time-boxed chat windows open automatically at key stages",
+              "description": "A chat on every bespoke order while it's being made",
               "href": "/chatwithcustomers"
             },
             {

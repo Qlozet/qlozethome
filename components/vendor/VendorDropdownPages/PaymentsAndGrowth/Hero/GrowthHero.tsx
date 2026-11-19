@@ -150,7 +150,7 @@ export function GrowthHero({ data }: GrowthHeroProps) {
                    </div>
                    <div className="flex-1 flex flex-col gap-0.5">
                       <span className="font-display text-[10px] font-bold text-brand-darker uppercase tracking-wider">Custom Suit Order</span>
-                      <span className="font-mono text-[8px] text-[#111111]/40">Just now — Milestone 1 Released</span>
+                      <span className="font-mono text-[8px] text-[#111111]/40">Just now · Deposit received</span>
                    </div>
                    <span className="font-display text-sm font-bold text-emerald-600">+₦85K</span>
                 </motion.div>

@@ -107,8 +107,8 @@ export function HeroSection({ data }: HeroSectionProps) {
                 ))}
               </div>
               <div className="flex flex-col gap-0.5">
-                <span className="font-display text-[10px] font-bold text-black uppercase tracking-wider">2,400+ Designs Created</span>
-                <span className="font-mono text-[8px] text-black/30 uppercase tracking-widest">This month alone</span>
+                <span className="font-display text-[10px] font-bold text-black uppercase tracking-wider">Your Design</span>
+                <span className="font-mono text-[8px] text-black/30 uppercase tracking-widest">Ready to refine</span>
               </div>
             </motion.div>
           </div>

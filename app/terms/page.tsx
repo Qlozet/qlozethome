@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SHOP_URL } from "@/lib/links";
 
 import navbarData from "@/data/global/navbar.json";
 import footerData from "@/data/global/footer.json";
@@ -13,14 +14,10 @@ export const metadata: Metadata = {
 };
 
 // Canonical terms of service. Like /privacy, every revision is a git
-// commit — that history is the version record.
+// commit; that history is the version record.
 
 const EFFECTIVE_DATE = "31 October 2026";
 
-// Deployed shop URL — override with NEXT_PUBLIC_SHOP_URL when the custom
-// domain is live.
-const SHOP_URL =
-  process.env.NEXT_PUBLIC_SHOP_URL ?? "https://qlozet-shop.vercel.app";
 
 const sections = [
   { id: "the-service", title: "1. What Qlozet is" },
@@ -96,7 +93,7 @@ export default function TermsPage() {
             <Section id="the-service" title="1. What Qlozet is">
               <p>
                 Qlozet is a marketplace. Independent vendors and tailors list,
-                sell and make the products; Qlozet provides the platform —
+                sell and make the products; Qlozet provides the platform:
                 discovery, fit tools, payments, delivery coordination and
                 buyer protection. When you buy, your purchase contract for the
                 item is with the vendor; these terms govern your use of the
@@ -107,7 +104,7 @@ export default function TermsPage() {
             <Section id="accounts" title="2. Accounts">
               <p>
                 You need an account to buy or sell. Keep your credentials
-                private — activity on your account is your responsibility.
+                private. Activity on your account is your responsibility.
                 You must be at least 18 and give accurate information. We may
                 suspend accounts involved in fraud, abuse or breach of these
                 terms.
@@ -122,7 +119,7 @@ export default function TermsPage() {
                 </li>
                 <li>
                   Delivery estimates shown on product pages are honest
-                  estimates, not guarantees — but late delivery has teeth: if a
+                  estimates, not guarantees. But late delivery has teeth: if a
                   vendor misses their promised window, our On-Time Promise
                   automatically credits compensation to your wallet.
                 </li>
@@ -233,7 +230,7 @@ export default function TermsPage() {
                 <li>
                   Vendors commit to their stated turnaround times. Late
                   fulfilment incurs the compensation penalties described in the
-                  vendor dashboard — the same money credited to the affected
+                  vendor dashboard. The same money credited to the affected
                   customer.
                 </li>
               </ul>
@@ -241,7 +238,7 @@ export default function TermsPage() {
 
             <Section id="content" title="8. Your content & our AI tools">
               <p>
-                You keep ownership of content you upload — photos, reviews,
+                You keep ownership of content you upload: photos, reviews,
                 designs. You grant Qlozet a licence to host and display it as
                 needed to run the marketplace (for example, showing your
                 review, or sending your bespoke design to the tailors you

@@ -121,22 +121,6 @@ export function TrustSection({ data }: TrustSectionProps) {
                   <span className="font-ui text-[11px] text-[#111111]/40">from customer reviews</span>
                 </div>
 
-                {/* Review Snippet */}
-                <div className="px-6 sm:px-8 py-5 border-b border-brand-darker/5">
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.7 }}
-                    className="rounded-2xl bg-brand-light p-4 flex flex-col gap-2"
-                  >
-                    <p className="font-ui text-[12px] leading-relaxed text-[#111111]/70 italic">
-                      &ldquo;The agbada fit perfectly — exactly like the photos. Coming back for a second piece.&rdquo;
-                    </p>
-                    <span className="font-display text-[9px] font-bold uppercase tracking-widest text-[#111111]/30">Chioma A. &middot; Delivered Order</span>
-                  </motion.div>
-                </div>
-
                 {/* Secure Payment Row */}
                 <div className="flex items-center gap-3 px-6 sm:px-8 py-5 bg-brand-darker">
                   <div className="h-8 w-8 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
@@ -144,7 +128,7 @@ export function TrustSection({ data }: TrustSectionProps) {
                   </div>
                   <div className="flex flex-col gap-0.5">
                     <span className="font-display text-[10px] font-bold uppercase tracking-widest text-white">Secure Payments</span>
-                    <span className="font-ui text-[10px] text-white/50">Held safely, released to you after delivery is confirmed</span>
+                    <span className="font-ui text-[10px] text-white/50">Paid out 14 days after the customer pays</span>
                   </div>
                 </div>
               </div>

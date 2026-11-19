@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Precision Tailoring",
     "title": "Every Measurement. Perfectly Captured.",
-    "description": "Qlozet gives you accurate customer measurements and detailed specifications—so you can deliver perfectly fitted clothing every time. No guesswork. No errors. Just precision.",
+    "description": "Qlozet gives you accurate customer measurements and detailed specifications, so you can make it right without a fitting session.",
     "cta": {
       "label": "View Customer Details",
       "href": "#customer-profile"
@@ -11,18 +11,18 @@
   "sections": [
     {
       "id": "customer-profile",
-      "badge": "Section 1 — Complete Customer Profile",
+      "badge": "Section 1: Complete Customer Profile",
       "title": "Everything You Need, In One Place",
-      "description": "Access all relevant customer information instantly. Understand your customer before you start.",
+      "description": "Everything you need to make and send the order, and nothing you don't. Customers' contact details stay private.",
       "features": [
-        "Customer details and order history",
+        "Order details and delivery area",
         "Style preferences and notes",
-        "Previous designs and fittings"
+        "The approved design for bespoke orders"
       ]
     },
     {
       "id": "accurate-measurements",
-      "badge": "Section 2 — Accurate Body Measurements",
+      "badge": "Section 2: Accurate Body Measurements",
       "title": "Precision You Can Trust",
       "description": "Qlozet provides detailed, AI-generated body measurements ready for production. Built for accuracy. Designed for real production.",
       "features": [
@@ -33,20 +33,20 @@
     },
     {
       "id": "ai-insights",
-      "badge": "Section 3 — AI-Enhanced Measurement Insights",
-      "title": "More Than Just Numbers",
-      "description": "Qlozet goes beyond raw measurements to help you understand the body better. Helping you make better tailoring decisions.",
+      "badge": "Section 3: Measurement Checks",
+      "title": "Nothing Missing",
+      "description": "Customers can't order a made-to-measure piece until every measurement it needs is filled in.",
       "features": [
-        "Proportion insights",
-        "Fit recommendations",
-        "Measurement consistency checks"
+        "Required measurements per garment",
+        "Checked before the order reaches you",
+        "How each measurement was taken"
       ]
     },
     {
       "id": "design-specs",
-      "badge": "Section 4 — Design Specifications & Notes",
+      "badge": "Section 4: Design Specifications & Notes",
       "title": "Clear Instructions for Every Order",
-      "description": "Get all customization details alongside measurements. Everything aligned—nothing missing.",
+      "description": "Get all customization details alongside measurements. Everything aligned. Nothing missing.",
       "features": [
         "Style selections (neckline, sleeve, fit, etc.)",
         "Fabric and material references",
@@ -55,18 +55,18 @@
     },
     {
       "id": "consistency",
-      "badge": "Section 5 — Measurement Consistency",
+      "badge": "Section 5: Measurement Consistency",
       "title": "Reliable Across Every Order",
       "description": "Once a customer’s measurements are captured, they remain consistent across orders. Consistency builds confidence.",
       "features": [
         "No repeated measuring",
-        "Standardized sizing across vendors",
-        "Improved long-term accuracy"
+        "The same profile, whichever vendor they choose",
+        "Customers update it once, for every order"
       ]
     },
     {
       "id": "error-reduction",
-      "badge": "Section 6 — Error Reduction & Confidence",
+      "badge": "Section 6: Error Reduction & Confidence",
       "title": "Minimize Mistakes. Maximize Quality",
       "description": "Accurate data reduces costly errors and rework. Get it right the first time.",
       "features": [
@@ -77,18 +77,18 @@
     },
     {
       "id": "history",
-      "badge": "Section 7 — Measurement History",
-      "title": "Track Changes Over Time",
-      "description": "View how customer measurements evolve. A smarter way to tailor repeat customers.",
+      "badge": "Section 7: Ask the Customer",
+      "title": "Something Look Off?",
+      "description": "Ask the customer about a measurement from the order. Their answer corrects the copy you work from.",
       "features": [
-        "Historical measurement data",
-        "Previous order references",
-        "Better long-term fit adjustments"
+        "Questions sent from the order",
+        "Answers update the order's measurements",
+        "Fewer surprises at delivery"
       ]
     },
     {
       "id": "integration",
-      "badge": "Section 8 — Seamless Integration",
+      "badge": "Section 8: Seamless Integration",
       "title": "Connected to Your Workflow",
       "description": "Measurement data integrates directly into your order and production process. Everything flows together.",
       "features": [
@@ -100,7 +100,7 @@
   ],
   "conversion": {
     "title": "Precision Is Your Advantage",
-    "description": "With Qlozet, you don’t just get measurements—you get confidence in every stitch. Deliver better fits. Reduce errors. Build trust with every customer.",
+    "description": "With Qlozet, you don’t just get measurements. You get confidence in every stitch. Deliver better fits. Reduce errors. Build trust with every customer.",
     "primaryAction": {
       "label": "Start Creating with Precision",
       "href": "/vendor/waitlist"

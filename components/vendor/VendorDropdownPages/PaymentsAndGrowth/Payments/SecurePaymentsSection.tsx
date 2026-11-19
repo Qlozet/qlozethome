@@ -19,7 +19,7 @@ type SecurePaymentsSectionProps = {
 const PAYMENT_METHODS = [
   { name: "Bank Transfer", icon: "🏦", status: "Verified" },
   { name: "Card Payment", icon: "💳", status: "Secured" },
-  { name: "Mobile Money", icon: "📱", status: "Active" }
+  { name: "USSD", icon: "📱", status: "Active" }
 ];
 
 export function SecurePaymentsSection({ data }: SecurePaymentsSectionProps) {
@@ -80,7 +80,7 @@ export function SecurePaymentsSection({ data }: SecurePaymentsSectionProps) {
                      </motion.div>
                   </div>
                   <span className="font-display text-sm font-bold text-brand-darker uppercase tracking-wider block mb-1">End-to-End Encrypted</span>
-                  <span className="font-mono text-[9px] text-brand-darker/60 uppercase tracking-widest">256-bit SSL · PCI DSS Compliant</span>
+                  <span className="font-mono text-[9px] text-brand-darker/60 uppercase tracking-widest">Card details go straight to Paystack</span>
                </motion.div>
 
                {/* Payment Methods */}

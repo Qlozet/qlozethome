@@ -9,7 +9,7 @@ export function VendorCapabilitiesGrid() {
       {
          title: "Digital Storefront & Sales",
          desc: "Launch your online store instantly and start selling.",
-         bullets: ["No website required", "Manage products easily", "Reach customers globally"],
+         bullets: ["No website required", "Manage products easily", "Reach customers nationwide"],
          link: "/instantstorefront",
          delay: 0.1,
          colSpan: "lg:col-span-8",
@@ -45,7 +45,7 @@ export function VendorCapabilitiesGrid() {
       },
       {
          title: "Flexible Selling",
-         desc: "Sell your way—with full control.",
+         desc: "Sell your way, with full control.",
          bullets: ["Custom or ready-to-wear", "Set your own pricing"],
          link: "/flexiblesellingoptions",
          delay: 0.5,

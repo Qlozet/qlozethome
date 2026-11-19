@@ -5,9 +5,9 @@ import { Check } from "lucide-react";
 
 export function VendorGlobalScale() {
   const globalPoints = [
-    "Sell locally and internationally",
+    "Sell beyond your city",
     "Expand your brand reach",
-    "Access new markets effortlessly"
+    "Reach customers across Nigeria"
   ];
 
   const scalePoints = [
@@ -32,11 +32,11 @@ export function VendorGlobalScale() {
               <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#111111]/50 mb-8 block border-l-2 border-brand-darker pl-4">04 // Grow Beyond Your Location</span>
               
               <h3 className="font-display max-w-4xl text-5xl sm:text-7xl font-medium mb-8 leading-[1.1] tracking-tight">
-                 Reach Customers<br/>Everywhere.
+                 Reach Customers<br/>Nationwide.
               </h3>
               
               <p className="font-ui text-base leading-relaxed text-[#111111]/50 sm:text-lg mb-12 max-w-sm">
-                 Qlozet connects you to a global audience—so your business isn’t limited by location.
+                 Qlozet connects you to customers across Nigeria, so your business isn’t limited by your location.
               </p>
 
               <ul className="space-y-6 mb-16 flex-1">
@@ -81,7 +81,7 @@ export function VendorGlobalScale() {
               </div>
 
               <p className="font-display text-2xl sm:text-3xl text-zinc-400 italic">
-                 We remove the friction—<br/>
+                 We remove the friction<br/>
                  so you can move faster.
               </p>
            </motion.div>

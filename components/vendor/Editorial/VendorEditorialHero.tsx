@@ -63,10 +63,10 @@ export function VendorEditorialHero() {
              className="lg:col-span-8 flex flex-col gap-6 font-ui text-lg leading-relaxed text-white/40 sm:text-2xl lg:text-3xl"
            >
              <p className="text-white max-w-3xl">
-               Sell your designs, reach new customers, and grow your brand—all on one platform. No website. No complexity. Just results.
+               Sell your designs, reach new customers, and grow your brand, all on one platform. No website. No complexity. Just results.
              </p>
              <p className="text-zinc-500 text-lg sm:text-xl">
-               Whether you're a tailor, designer, or fabric vendor—Qlozet is built for you.
+               Whether you're a tailor, designer, or fabric vendor, Qlozet is built for you.
              </p>
            </motion.div>
 

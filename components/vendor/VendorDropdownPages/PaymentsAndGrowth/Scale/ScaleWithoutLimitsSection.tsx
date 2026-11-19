@@ -18,9 +18,9 @@ type ScaleWithoutLimitsSectionProps = {
 
 const REGIONS = [
   { name: "Lagos, Nigeria", orders: "2,340", flag: "🇳🇬" },
-  { name: "London, UK", orders: "890", flag: "🇬🇧" },
-  { name: "New York, USA", orders: "1,120", flag: "🇺🇸" },
-  { name: "Dubai, UAE", orders: "560", flag: "🇦🇪" }
+  { name: "Abuja, Nigeria", orders: "890", flag: "🇳🇬" },
+  { name: "Port Harcourt, Nigeria", orders: "1,120", flag: "🇳🇬" },
+  { name: "Ibadan, Nigeria", orders: "560", flag: "🇳🇬" }
 ];
 
 export function ScaleWithoutLimitsSection({ data }: ScaleWithoutLimitsSectionProps) {

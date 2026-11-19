@@ -98,7 +98,7 @@ export function InsightsSection({ data }: InsightsSectionProps) {
                         <BrainCircuit className="h-5 w-5 text-white/70" />
                         <div className="flex flex-col">
                            <span className="font-mono text-[10px] text-zinc-400 uppercase tracking-widest">Analysis Engine</span>
-                           <span className="font-display text-sm font-bold text-white">Posture & Proportion</span>
+                           <span className="font-display text-sm font-bold text-white">Measurement Checks</span>
                         </div>
                      </div>
                      <div className="px-3 py-1 bg-white/10 border border-white/15 rounded-full">
@@ -118,10 +118,10 @@ export function InsightsSection({ data }: InsightsSectionProps) {
                         className="bg-zinc-800/80 backdrop-blur-sm border border-white/10 rounded-2xl p-5 shadow-2xl relative z-20 group hover:border-white/20 transition-colors mr-12"
                      >
                         <div className="flex justify-between items-start mb-3">
-                           <span className="font-display text-[10px] uppercase tracking-widest text-white/70 font-bold">Fit Recommendation</span>
+                           <span className="font-display text-[10px] uppercase tracking-widest text-white/70 font-bold">Measurement Check</span>
                            <CheckSquare className="h-4 w-4 text-white/30 group-hover:text-white/70 transition-colors" />
                         </div>
-                        <p className="font-ui text-white text-sm">Shoulder slope detected at 15°. Recommend adjusting armhole depth by +1.5cm for optimal mobility.</p>
+                        <p className="font-ui text-white text-sm">Every measurement this agbada needs is filled in.</p>
                      </motion.div>
 
                      {/* Suggestion 2 */}
@@ -133,10 +133,10 @@ export function InsightsSection({ data }: InsightsSectionProps) {
                         className="bg-black/60 backdrop-blur-md border border-white/5 rounded-2xl p-5 shadow-2xl relative z-10 group hover:border-white/20 transition-colors ml-12"
                      >
                         <div className="flex justify-between items-start mb-3">
-                           <span className="font-display text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Proportion Mapping</span>
+                           <span className="font-display text-[10px] uppercase tracking-widest text-zinc-400 font-bold">How It Was Taken</span>
                            <Ratio className="h-4 w-4 text-white/30" />
                         </div>
-                        <p className="font-ui text-white/70 text-sm">Leg-to-torso ratio indicates high waist styling will provide the best aesthetic balance.</p>
+                        <p className="font-ui text-white/70 text-sm">Body scan, reviewed by the customer before ordering.</p>
                      </motion.div>
 
                   </div>
@@ -156,7 +156,7 @@ export function InsightsSection({ data }: InsightsSectionProps) {
                      />
                   </motion.div>
                   <div className="text-center">
-                     <span className="font-mono text-[8px] text-zinc-500 uppercase tracking-widest">Continuous Learning Active</span>
+                     <span className="font-mono text-[8px] text-zinc-500 uppercase tracking-widest">Checked before the order reaches you</span>
                   </div>
 
                </div>

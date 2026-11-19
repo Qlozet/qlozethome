@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Logistics & Delivery",
     "title": "Deliver With Confidence. Every Time.",
-    "description": "Qlozet keeps every delivery organized—clear statuses, automatic customer updates, and payouts on a fixed schedule. You ship, we handle the coordination.",
+    "description": "Qlozet keeps every delivery organized: clear statuses, automatic customer updates, and payouts on a fixed schedule. You ship, we handle the coordination.",
     "cta": {
       "label": "Start Delivering with Qlozet",
       "href": "/vendor/waitlist"
@@ -13,11 +13,11 @@
     {
       "id": "end-to-end",
       "badge": "End-to-End Logistics",
-      "title": "From Vendor to Customer—Seamlessly",
-      "description": "Qlozet keeps the whole delivery journey organized—friction-free for both you and your customers.",
+      "title": "From Vendor to Customer, Seamlessly",
+      "description": "Qlozet keeps the whole delivery journey organized and friction-free for both you and your customers.",
       "features": [
         "Order details and delivery address in one place",
-        "One-tap status updates—packed, in transit, delivered",
+        "One-tap status updates: packed, in transit, delivered",
         "Customers notified automatically at every step"
       ],
       "closing": "One system. Complete control."
@@ -26,7 +26,7 @@
       "id": "network",
       "badge": "Reliable Network",
       "title": "Reach Customers Nationwide",
-      "description": "Ship with the courier you trust—Qlozet keeps customers informed and expectations clear wherever they are.",
+      "description": "Ship with the courier you trust. Qlozet keeps customers informed and expectations clear wherever they are.",
       "features": [
         "Use the courier that works for you",
         "Wide coverage across regions",
@@ -50,7 +50,7 @@
       "id": "packaging",
       "badge": "Branded Packaging",
       "title": "Deliver Your Brand Experience",
-      "description": "Make every delivery feel premium and professional—your packaging is part of the experience.",
+      "description": "Make every delivery feel premium and professional. Your packaging is part of the experience.",
       "features": [
         "Pack and present it your way",
         "Clean, professional presentation",
@@ -62,13 +62,13 @@
       "id": "simplicity",
       "badge": "Simple Logistics",
       "title": "No Complexity. No Stress.",
-      "description": "Qlozet removes the burden of keeping everyone updated—statuses, notifications, and payouts flow on their own.",
+      "description": "Qlozet removes the burden of keeping everyone updated: statuses, notifications, and payouts flow on their own.",
       "features": [
         "Automatic customer notifications",
         "Integrated delivery system",
         "Reduced operational effort"
       ],
-      "closing": "Focus on production—we handle delivery."
+      "closing": "Focus on production. We handle delivery."
     },
     {
       "id": "fulfillment",
@@ -86,7 +86,7 @@
       "id": "execution",
       "badge": "Reliable Execution",
       "title": "Consistency You Can Trust",
-      "description": "We help you deliver reliably at every step—so every order arrives the way you promised.",
+      "description": "We help you deliver reliably at every step, so every order arrives the way you promised.",
       "features": [
         "On-time delivery focus",
         "Secure handling of products",
