@@ -1,2 +1,0 @@
-export { EmpowerSection } from "./EmpowerSection";
-

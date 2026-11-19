@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "badge": "Market Intelligence",
+    "title": "Know how your store is doing, at a glance.",
+    "description": "Your dashboard shows orders, earnings and returns for the period you pick, compared with the one before. Ask the Business Assistant anything else.",
+    "cta": {
+      "label": "Join the waitlist",
+      "href": "/vendor/waitlist"
+    }
+  },
+  "assistant": {
+    "badge": "Business Assistant",
+    "title": "Ask about your store in plain words",
+    "description": "What sold best this month? Which orders need you? When is the next payout? The assistant answers from your own sales, orders, stock and wallet, with charts when they help.",
+    "points": [
+      "Sales, earnings and payouts",
+      "Top products and low stock",
+      "Listings that are missing something"
+    ]
+  },
+  "actions": {
+    "badge": "You stay in charge",
+    "title": "It prepares the change. You tap Confirm.",
+    "description": "The assistant can get an action ready, like confirming an order, sending a quote, updating stock or creating a discount. Nothing happens until you confirm it.",
+    "points": [
+      "Every change shown before it's made",
+      "Confirm or dismiss",
+      "Nothing changes without you"
+    ]
+  },
+  "digest": {
+    "badge": "Weekly Digest",
+    "title": "Your week, summed up every Sunday",
+    "description": "A short read on how the week went, with a few suggestions for what to do next. Each one links straight to the page where you can act on it.",
+    "points": [
+      "A few sentences, not a report",
+      "Suggestions you can act on",
+      "Waiting in your console on Sunday"
+    ]
+  },
+  "customers": {
+    "badge": "Customers",
+    "title": "See who buys from you",
+    "description": "Where your customers are, what they shop and who they are, with each customer's order history. Their contact details stay private.",
+    "points": [
+      "Customer locations",
+      "What they shop",
+      "Order history for each customer"
+    ]
+  },
+  "closing": {
+    "title": "Turn Data Into Growth",
+    "description": "Your numbers, your customers and an assistant that knows your store. Spend less time guessing.",
+    "cta": {
+      "label": "Join the waitlist",
+      "href": "/vendor/waitlist"
+    }
+  }
+}

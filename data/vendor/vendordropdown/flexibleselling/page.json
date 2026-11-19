@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "badge": "Flexible Selling",
+    "title": "Sell what's ready. Make what's asked for.",
+    "description": "List pieces you already have, or offer clothes you make to order with the styles and fabrics shoppers choose. A checklist shows what each listing still needs before it goes live.",
+    "cta": {
+      "label": "Join the waitlist",
+      "href": "/vendor/waitlist"
+    }
+  },
+  "styles": {
+    "badge": "Made to order",
+    "title": "Price every style choice",
+    "description": "Offer the necklines, sleeves and finishes you make, each with its own price. One style per part is the default: it's included in the price shoppers see, and it's what they get if they don't change it.",
+    "points": [
+      "Styles grouped by part of the garment",
+      "Make the style in your photos the default",
+      "Extra cost per size, added on top"
+    ]
+  },
+  "fabric": {
+    "badge": "Fabric",
+    "title": "By the yard, by the piece, or both",
+    "description": "Sell fabric the way your customers buy it. Set a price per yard with a minimum cut, a price for a whole piece, or both, and the form shows what shoppers will pay.",
+    "points": [
+      "Yards stay your stock count",
+      "Set a minimum cut",
+      "Show what a full piece saves"
+    ]
+  },
+  "capacity": {
+    "badge": "Your workload",
+    "title": "Take on what you can make",
+    "description": "Set how many orders you can have in progress at once. When you're at your limit, shoppers see your store as fully booked until you finish one. Choose whether to take bespoke requests and fabric from other vendors.",
+    "points": [
+      "Order capacity, or no limit",
+      "Bespoke requests on or off",
+      "Accept a customer's fabric from another store"
+    ]
+  },
+  "closing": {
+    "title": "Your Business. Your Rules. Your Growth.",
+    "description": "Ready-to-wear, made to order, fabric and accessories, all from one store.",
+    "primaryAction": {
+      "label": "Join the waitlist",
+      "href": "/vendor/waitlist"
+    }
+  }
+}
