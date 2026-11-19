@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { FAQSection } from "@/components/home/FAQ";
 import { VendorCTA } from "@/components/vendor/VendorLandingPage/CTA/CTASection";
 import { FeatureSection, LiveHero } from "@/components/live/kit";
-import { AskCustomer, NeedsCheck, OrderMeasurements, ProductionSteps, QuoteForm } from "@/components/live/tailor";
+import { AskCustomer, NeedsCheck, OrderMeasurements, PreshipScene, QuoteForm } from "@/components/live/tailor";
 
 import navbarData from "@/data/global/navbar.json";
 import footerData from "@/data/global/footer.json";
@@ -17,7 +17,7 @@ export default function CustomerMeasurementsPage() {
       <LiveHero copy={page.hero} cta={page.hero.cta} visual={<OrderMeasurements />} />
       <FeatureSection id="needs" copy={page.needs} visual={<NeedsCheck />} flip tint />
       <FeatureSection id="ask" copy={page.ask} visual={<AskCustomer />} />
-      <FeatureSection id="production" copy={page.production} visual={<ProductionSteps />} flip tint />
+      <FeatureSection id="production" copy={page.production} visual={<PreshipScene />} flip tint />
       <FeatureSection id="quote" copy={page.quote} visual={<QuoteForm />} />
       <FAQSection data={faqData} />
       <VendorCTA data={page.conversion as any} />

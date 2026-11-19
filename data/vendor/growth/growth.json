@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Payments & Payouts",
     "title": "Get paid on a schedule you can plan around.",
-    "description": "Every order's earnings become available 14 days after the customer pays. No waiting on delivery confirmations, and no guessing when money will land.",
+    "description": "Every payment reaches your wallet balance 14 days after the customer pays. Next payouts shows what's on the way and when, so there's no guessing.",
     "cta": {
       "label": "Join the waitlist",
       "href": "/vendor/waitlist"
@@ -11,11 +11,11 @@
   "breakdown": {
     "badge": "Every order, itemised",
     "title": "See what you earn before you ship",
-    "description": "Each order shows the price, the commission and what reaches you, along with the day it becomes yours to withdraw.",
+    "description": "Each order's Payment card shows the items subtotal, the platform commission and your earnings. Delivery is paid by the customer, on top.",
     "points": [
       "10% commission, only on what you sell",
       "No monthly fee and no listing fee",
-      "A release date on every order"
+      "Every payment's date under Next payouts"
     ]
   },
   "bespoke": {
@@ -34,8 +34,8 @@
     "description": "Send your available balance to your verified bank account at any time. Every payout is listed in your history.",
     "points": [
       "Minimum withdrawal ₦2,000",
-      "Paid to your verified business account",
-      "Every payout in your history"
+      "Paid to your registered bank account",
+      "Every withdrawal in your transactions"
     ]
   },
   "closing": {

@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Customer & Measurement",
     "title": "Every order arrives ready to cut.",
-    "description": "Bespoke and made-to-measure orders come with the measurements the customer approved, the set they used and how it was taken. Their contact details stay private; you talk in the order's chat.",
+    "description": "Made-to-measure and bespoke orders come with the customer's measurements, locked at order time, along with the set they used and how it was taken. Their contact details stay private; on bespoke orders you talk in the order's chat.",
     "cta": {
       "label": "Join the waitlist",
       "href": "/vendor/waitlist"
@@ -10,41 +10,41 @@
   },
   "needs": {
     "badge": "Nothing missing",
-    "title": "Orders can't be placed without what you need",
-    "description": "Every garment has a list of the measurements it needs. Customers can't order until they're all in, and rough estimates are flagged so you know what to confirm.",
+    "title": "Know what to confirm before you cut",
+    "description": "Customers can't order a made-to-measure piece until every measurement it needs is in. On the order, numbers worth checking are marked Verify, with a note of what to confirm for that garment.",
     "points": [
-      "A list of needed measurements for each garment",
-      "Helpful extras shown when the customer has them",
-      "Rough estimates flagged"
+      "The measurements each garment needs, checked at checkout",
+      "\"Verify\" on rough estimates",
+      "Extras you may want, listed for you"
     ]
   },
   "ask": {
     "badge": "Ask before you cut",
     "title": "Something look off? Ask the customer",
-    "description": "Send a question about any measurement from the order. The customer replies from their order, and their answer corrects the copy you work from.",
+    "description": "Ask about any measurement from the order. The customer gets a notification and an email, and their answer corrects the numbers for that order.",
     "points": [
-      "One tap from the order",
-      "The order's measurements update with the answer",
-      "You're told exactly what changed"
+      "Pick the measurements and write your question",
+      "See exactly what changed, like Waist 80 → 82",
+      "Made-to-order pieces can't be returned, so checking pays"
     ]
   },
   "production": {
-    "badge": "Production",
-    "title": "Tick off each step as you go",
-    "description": "Mark the cut, the sewing, the finishing and your quality check. Then send photos of the finished piece; the customer approves them and pays the balance before you ship.",
+    "badge": "Pre-ship approval",
+    "title": "Show them the finished piece",
+    "description": "Photograph the finished piece and send it for approval. The customer approves and pays the balance before you ship, or tells you what to change.",
     "points": [
-      "The customer sees progress without asking",
-      "Photos approved before shipping",
+      "Up to 8 photos and a note",
+      "Changes caught before it ships, not after",
       "Balance paid before it leaves your workshop"
     ]
   },
   "quote": {
     "badge": "Quoting",
     "title": "Quote with the whole brief in front of you",
-    "description": "Quote requests arrive with the design, front and back, the styles and the customer's measurements. Price your work, set your days, and the fabric is priced from its listing.",
+    "description": "Quote requests arrive with the design, front and back, the styles and the customer's measurements. Add your line items, the fabric you need and the days until you ship.",
     "points": [
       "Your price, your timeline",
-      "Fabric priced for you",
+      "Agree to the bespoke terms once, in the quote",
       "The customer pays a deposit when they accept"
     ]
   },
