@@ -1,134 +1,48 @@
 {
   "hero": {
-    "badge": "Digital Storefront & Sales",
-    "title": "Your Fashion Business, Fully Online.",
-    "description": "Build, manage, and grow your brand with a powerful digital storefront designed for fashion. No website. No complexity. No limits.",
-    "cta": {
-      "label": "Start Selling on Qlozet",
-      "href": "/vendor/waitlist"
-    },
-    "image": {
-      "src": "/image/storefront-mobile.png",
-      "alt": "Qlozet vendor storefront on mobile"
-    }
-  },
-  "setup": {
     "badge": "Instant Storefront",
-    "title": "Launch in Minutes, Not Months",
-    "description": "Create a professional online store without writing a single line of code. Focus on your craft. We handle the rest.",
-    "features": [
-      {
-        "title": "Beautiful Storefront",
-        "description": "Ready-to-use, professional design."
-      },
-      {
-        "title": "No Technical Setup",
-        "description": "Zero coding required."
-      },
-      {
-        "title": "Fully Optimized",
-        "description": "Mobile and web ready."
-      }
-    ]
-  },
-  "showcase": {
-    "badge": "Product Showcase",
-    "title": "Present Your Work at Its Best",
-    "description": "Upload and organize your products effortlessly. Your designs deserve to be seen.",
-    "items": [
-      "Clothing",
-      "Fabrics",
-      "Accessories"
-    ],
-    "image": {
-      "src": "/image/product-showcase.png",
-      "alt": "Product gallery"
+    "title": "Your own store on Qlozet, ready when you are.",
+    "description": "Every vendor gets a store page shoppers can browse, follow and buy from: your cover photo, your logo, your colours and all your pieces. No website to build.",
+    "cta": {
+      "label": "Join the waitlist",
+      "href": "/vendor/waitlist"
     }
   },
-  "sales": {
-    "badge": "Built for Sales",
-    "title": "Turn Creativity Into Revenue",
-    "description": "Qlozet connects you with customers who are ready to buy. More exposure. More orders. More growth.",
-    "benefits": [
-      "Access a growing customer base",
-      "Receive ready-to-wear & custom orders",
-      "Increase visibility effortlessly"
-    ]
-  },
-  "trust": {
-    "badge": "Built-In Trust",
-    "title": "Verified. Rated. Trusted.",
-    "description": "Trust is built into every storefront. Get verified, collect real reviews, and get paid on a fixed schedule.",
+  "profile": {
+    "badge": "Make it yours",
+    "title": "Set it up from your console",
+    "description": "Store profile is where your store page comes together. Add a cover photo and logo, pick your store colour, and tell shoppers who you are. A progress bar shows what's left.",
     "points": [
-      "Verified badge once your business is approved",
-      "Star ratings and reviews from real customers",
-      "Earnings available 14 days after the customer pays"
+      "Cover photo, logo and store colour",
+      "About the store, contact and social links",
+      "View storefront to see it as shoppers do"
     ]
   },
-  "pricing": {
-    "badge": "Flexible Pricing",
-    "title": "Price Your Work Your Way",
-    "description": "Maintain full control over how you charge for your products and services. You define your value. We support it.",
-    "options": [
-      {
-        "label": "Base Prices",
-        "description": "Set fixed rates for standard pieces."
-      },
-      {
-        "label": "Customization Costs",
-        "description": "Add fees for specific design tweaks."
-      },
-      {
-        "label": "Fabric Pricing",
-        "description": "Sell fabric by the yard, by the piece, or both."
-      }
+  "address": {
+    "badge": "Your store address",
+    "title": "One link for your bio, WhatsApp and cards",
+    "description": "Pick a name and your store lives at shop.qlozet.app/s/your-name. Shared anywhere, it shows a preview with your cover, logo, location and how many pieces you have.",
+    "points": [
+      "Check it's free, then save",
+      "Copy or share in one tap",
+      "Change it later and old links still work"
     ]
   },
-  "reach": {
-    "badge": "Global Brand",
-    "title": "From Local Talent to Global Brand",
-    "description": "Reach customers across Nigeria, not just the ones who walk past your shop.",
-    "stats": [
-      "Regional Markets",
-      "Nationwide Reach",
-      "Brand Visibility"
-    ]
-  },
-  "integrated": {
-    "badge": "Smart Experience",
-    "title": "Designed for Fashion Businesses",
-    "description": "Everything works together, so you don’t have to. Specialized tools for specialized creators.",
-    "tools": [
-      "Custom & Ready-to-Wear Support",
-      "Integrated Measurement Tools",
-      "Production & Delivery Sync"
-    ]
-  },
-  "direct": {
-    "badge": "Direct Access",
-    "title": "Connect With Real Buyers",
-    "description": "Build relationships with customers who value your work. It’s not just selling. It’s building a brand.",
-    "features": [
-      "Direct Order Management",
-      "Real-time Communication",
-      "Trust & Loyalty Building"
-    ]
-  },
-  "scalable": {
-    "badge": "Scalable Growth",
-    "title": "Simple, Powerful, Scalable",
-    "description": "Whether you’re just starting or scaling up, Qlozet adapts to you. Your growth, simplified.",
-    "phases": [
-      "Start Small",
-      "Grow Fast",
-      "Scale Nationwide"
+  "reviews": {
+    "badge": "Reviews",
+    "title": "Let your buyers do the talking",
+    "description": "Ratings from people who bought your pieces add up to your store's score, shown at the top of your page. Shoppers can read every review before they order.",
+    "points": [
+      "Your average rating on your store page",
+      "Star breakdown and written reviews",
+      "Only people who bought and received it can review"
     ]
   },
   "closing": {
     "title": "Your Store. Your Brand. Your Future.",
-    "description": "Qlozet gives you everything you need to succeed in modern fashion, without the usual barriers. Start building your brand today.",
+    "description": "Qlozet gives you a store page, payments and delivery from day one. Start building your brand today.",
     "cta": {
-      "label": "Create Your Storefront Now",
+      "label": "Join the waitlist",
       "href": "/vendor/waitlist"
     }
   }

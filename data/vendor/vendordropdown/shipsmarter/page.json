@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "badge": "Ship Smarter",
+    "title": "Confirm it, print the label, hand it over.",
+    "description": "When an order comes in, confirm it and tap Fulfill Order. Qlozet books the courier your customer chose and gives you a label to print. The courier collects from your address.",
+    "cta": {
+      "label": "Join the waitlist",
+      "href": "/vendor/waitlist"
+    }
+  },
+  "quotes": {
+    "badge": "Live courier quotes",
+    "title": "Customers choose the courier, and pay for it",
+    "description": "At checkout, shoppers see live prices from couriers for the trip from your address to theirs, and pick the one that suits them. Delivery is paid by the customer, never by you.",
+    "points": [
+      "Real quotes, not flat zone fees",
+      "Cheapest and fastest options marked",
+      "Each store in a cart quoted on its own"
+    ]
+  },
+  "updates": {
+    "badge": "Automatic updates",
+    "title": "Every scan updates the order for you",
+    "description": "Once the courier has it, their scans move the order along: shipped, in transit, delivered. Your customer gets a notification and an email at each step. You don't mark anything by hand.",
+    "points": [
+      "Tracking number on the order",
+      "Customers told when it's out for delivery",
+      "You're told when it's delivered"
+    ]
+  },
+  "shipby": {
+    "badge": "Ship by",
+    "title": "A clear date on every order",
+    "description": "Each order shows when it needs to ship, from the making time you set on the product. Shipping late takes 5% of the items a day from your earnings, up to 25%, and it goes to the customer.",
+    "points": [
+      "Confirm within 24 hours of the order",
+      "Clocks pause while you wait on the customer",
+      "A reminder before the date comes"
+    ]
+  },
+  "closing": {
+    "title": "Spend your time on the making.",
+    "description": "Labels, couriers and customer updates are handled. You confirm, print and pack.",
+    "primaryAction": {
+      "label": "Join the waitlist",
+      "href": "/vendor/waitlist"
+    }
+  }
+}

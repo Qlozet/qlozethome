@@ -1,38 +1,26 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { HeroSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Hero/HeroSection";
-import { SetupSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Setup/SetupSection";
-import { ShowcaseSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Showcase/ShowcaseSection";
-import { SalesSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Sales/SalesSection";
-import { TrustSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Trust/TrustSection";
-import { PricingSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Pricing/PricingSection";
-import { ReachSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Reach/ReachSection";
-import { IntegratedSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Integrated/IntegratedSection";
-import { DirectSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Direct/DirectSection";
-import { ScalableSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Scalable/ScalableSection";
+import { FAQSection } from "@/components/home/FAQ";
 import { ClosingSection } from "@/components/vendor/VendorDropdownPages/InstantStorefront/Closing/ClosingSection";
+import { FeatureSection, LiveHero } from "@/components/live/kit";
+import { ReviewsScene, StoreLinkScene, StoreProfileScene, StorefrontScene } from "@/components/live/storefront";
 
 import navbarData from "@/data/global/navbar.json";
 import footerData from "@/data/global/footer.json";
-import storefrontData from "@/data/vendor/vendordropdown/instantstorefront/instantstorefront.json";
+import faqData from "@/data/home/faq.json";
+import page from "@/data/vendor/vendordropdown/instantstorefront/instantstorefront.json";
 
 export default function InstantStorefrontPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Header data={navbarData} />
-      <HeroSection data={storefrontData.hero} />
-      <SetupSection data={storefrontData.setup} />
-      <ShowcaseSection data={storefrontData.showcase} />
-      <SalesSection data={storefrontData.sales} />
-      <TrustSection data={storefrontData.trust} />
-      <PricingSection data={storefrontData.pricing} />
-      <ReachSection data={storefrontData.reach} />
-      <IntegratedSection data={storefrontData.integrated} />
-      <DirectSection data={storefrontData.direct} />
-      <ScalableSection data={storefrontData.scalable} />
-      <ClosingSection data={storefrontData.closing} />
+      <LiveHero copy={page.hero} cta={page.hero.cta} visual={<StorefrontScene />} />
+      <FeatureSection id="profile" copy={page.profile} visual={<StoreProfileScene />} flip tint />
+      <FeatureSection id="address" copy={page.address} visual={<StoreLinkScene />} />
+      <FeatureSection id="reviews" copy={page.reviews} visual={<ReviewsScene />} flip tint />
+      <FAQSection data={faqData} />
+      <ClosingSection data={page.closing} />
       <Footer data={footerData} />
     </div>
   );
 }
-
