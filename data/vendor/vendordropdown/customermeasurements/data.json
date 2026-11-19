@@ -1,117 +1,67 @@
 {
   "hero": {
-    "badge": "Precision Tailoring",
-    "title": "Every Measurement. Perfectly Captured.",
-    "description": "Qlozet gives you accurate customer measurements and detailed specifications, so you can make it right without a fitting session.",
+    "badge": "Customer & Measurement",
+    "title": "Every order arrives ready to cut.",
+    "description": "Bespoke and made-to-measure orders come with the measurements the customer approved, the set they used and how it was taken. Their contact details stay private; you talk in the order's chat.",
     "cta": {
-      "label": "View Customer Details",
-      "href": "#customer-profile"
+      "label": "Join the waitlist",
+      "href": "/vendor/waitlist"
     }
   },
-  "sections": [
-    {
-      "id": "customer-profile",
-      "badge": "Section 1: Complete Customer Profile",
-      "title": "Everything You Need, In One Place",
-      "description": "Everything you need to make and send the order, and nothing you don't. Customers' contact details stay private.",
-      "features": [
-        "Order details and delivery area",
-        "Style preferences and notes",
-        "The approved design for bespoke orders"
-      ]
-    },
-    {
-      "id": "accurate-measurements",
-      "badge": "Section 2: Accurate Body Measurements",
-      "title": "Precision You Can Trust",
-      "description": "Qlozet provides detailed, AI-generated body measurements ready for production. Built for accuracy. Designed for real production.",
-      "features": [
-        "Chest, waist, hips, shoulders, and more",
-        "Consistent measurement standards",
-        "Available in cm and inches"
-      ]
-    },
-    {
-      "id": "ai-insights",
-      "badge": "Section 3: Measurement Checks",
-      "title": "Nothing Missing",
-      "description": "Customers can't order a made-to-measure piece until every measurement it needs is filled in.",
-      "features": [
-        "Required measurements per garment",
-        "Checked before the order reaches you",
-        "How each measurement was taken"
-      ]
-    },
-    {
-      "id": "design-specs",
-      "badge": "Section 4: Design Specifications & Notes",
-      "title": "Clear Instructions for Every Order",
-      "description": "Get all customization details alongside measurements. Everything aligned. Nothing missing.",
-      "features": [
-        "Style selections (neckline, sleeve, fit, etc.)",
-        "Fabric and material references",
-        "Customer-specific notes"
-      ]
-    },
-    {
-      "id": "consistency",
-      "badge": "Section 5: Measurement Consistency",
-      "title": "Reliable Across Every Order",
-      "description": "Once a customer’s measurements are captured, they remain consistent across orders. Consistency builds confidence.",
-      "features": [
-        "No repeated measuring",
-        "The same profile, whichever vendor they choose",
-        "Customers update it once, for every order"
-      ]
-    },
-    {
-      "id": "error-reduction",
-      "badge": "Section 6: Error Reduction & Confidence",
-      "title": "Minimize Mistakes. Maximize Quality",
-      "description": "Accurate data reduces costly errors and rework. Get it right the first time.",
-      "features": [
-        "Fewer fitting issues",
-        "Reduced alterations",
-        "Higher customer satisfaction"
-      ]
-    },
-    {
-      "id": "history",
-      "badge": "Section 7: Ask the Customer",
-      "title": "Something Look Off?",
-      "description": "Ask the customer about a measurement from the order. Their answer corrects the copy you work from.",
-      "features": [
-        "Questions sent from the order",
-        "Answers update the order's measurements",
-        "Fewer surprises at delivery"
-      ]
-    },
-    {
-      "id": "integration",
-      "badge": "Section 8: Seamless Integration",
-      "title": "Connected to Your Workflow",
-      "description": "Measurement data integrates directly into your order and production process. Everything flows together.",
-      "features": [
-        "Linked to every order",
-        "Accessible during production",
-        "No manual data transfer"
-      ]
-    }
-  ],
+  "needs": {
+    "badge": "Nothing missing",
+    "title": "Orders can't be placed without what you need",
+    "description": "Every garment has a list of the measurements it needs. Customers can't order until they're all in, and rough estimates are flagged so you know what to confirm.",
+    "points": [
+      "A list of needed measurements for each garment",
+      "Helpful extras shown when the customer has them",
+      "Rough estimates flagged"
+    ]
+  },
+  "ask": {
+    "badge": "Ask before you cut",
+    "title": "Something look off? Ask the customer",
+    "description": "Send a question about any measurement from the order. The customer replies from their order, and their answer corrects the copy you work from.",
+    "points": [
+      "One tap from the order",
+      "The order's measurements update with the answer",
+      "You're told exactly what changed"
+    ]
+  },
+  "production": {
+    "badge": "Production",
+    "title": "Tick off each step as you go",
+    "description": "Mark the cut, the sewing, the finishing and your quality check. Then send photos of the finished piece; the customer approves them and pays the balance before you ship.",
+    "points": [
+      "The customer sees progress without asking",
+      "Photos approved before shipping",
+      "Balance paid before it leaves your workshop"
+    ]
+  },
+  "quote": {
+    "badge": "Quoting",
+    "title": "Quote with the whole brief in front of you",
+    "description": "Quote requests arrive with the design, front and back, the styles and the customer's measurements. Price your work, set your days, and the fabric is priced from its listing.",
+    "points": [
+      "Your price, your timeline",
+      "Fabric priced for you",
+      "The customer pays a deposit when they accept"
+    ]
+  },
   "conversion": {
-    "title": "Precision Is Your Advantage",
-    "description": "With Qlozet, you don’t just get measurements. You get confidence in every stitch. Deliver better fits. Reduce errors. Build trust with every customer.",
+    "title": "Make it right the first time.",
+    "description": "Join the vendor waitlist and get orders that arrive with everything you need to cut.",
     "primaryAction": {
-      "label": "Start Creating with Precision",
+      "label": "Join the waitlist",
       "href": "/vendor/waitlist"
-    },
-    "secondaryAction": {
-      "label": "Learn More",
-      "href": "#"
     },
     "image": {
       "src": "/image/man-measurement-pose.png",
       "alt": "High tech tailoring and measurement visualization"
+    },
+    "secondaryAction": {
+      "label": "See pricing",
+      "href": "/pricing"
     }
   }
 }

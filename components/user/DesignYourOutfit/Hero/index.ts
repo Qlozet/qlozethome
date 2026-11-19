@@ -1,2 +1,0 @@
-export { DesignYourOutfitHero } from "./DesignYourOutfitHeroSection";
-

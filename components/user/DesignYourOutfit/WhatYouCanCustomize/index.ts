@@ -1,3 +1,0 @@
-export { WhatsCustomizeSection } from "./WhatYouCanCustomizeSection";
-
-
