@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "badge": "Qlozet For Vendors",
+    "title": "AI-designed outfits, sent to you to quote.",
+    "description": "Customers design outfits in the Qlozet studio and send them to tailors they choose. Each one reaches you as a quote request, ready to price.",
+    "cta": {
+      "label": "Join the waitlist",
+      "href": "/vendor/waitlist"
+    }
+  },
+  "detail": {
+    "badge": "What to make",
+    "title": "The whole design, spelled out",
+    "description": "Open a request to see the version to make, the style choices, the fabric and the customer's note. Other versions they liked are there for ideas.",
+    "points": [
+      "The exact version to make",
+      "Style choices listed one by one",
+      "Customer notes and reference images"
+    ]
+  },
+  "status": {
+    "badge": "From request to order",
+    "title": "Quote it, and win the order",
+    "description": "Send your price and the days you need. When the customer accepts, they pay a deposit and the request becomes an order.",
+    "points": [
+      "Save a draft, send when ready",
+      "Your quote shown on the request",
+      "A deposit paid when they choose you"
+    ]
+  },
+  "styles": {
+    "badge": "Your style library",
+    "title": "AI images for your own styles",
+    "description": "Add the necklines, sleeves and finishes you offer to your style library. Upload a photo or sketch, or describe the style and generate an image with AI.",
+    "points": [
+      "Name it, describe it, generate it",
+      "Regenerate until it looks right",
+      "Each image uses a few tokens"
+    ]
+  }
+}

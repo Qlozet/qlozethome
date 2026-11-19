@@ -1,32 +1,27 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { HeroSection } from "@/components/vendor/VendorDropdownPages/ClothingGenerator/Hero";
-import { HowItWorksSection } from "@/components/vendor/VendorDropdownPages/ClothingGenerator/HowItWorks";
-import { WhyVendorsSection } from "@/components/vendor/VendorDropdownPages/ClothingGenerator/WhyVendors";
-import { WhatSection } from "@/components/vendor/VendorDropdownPages/ClothingGenerator/What";
 import { FAQSection } from "@/components/home/FAQ";
 import { VendorCTA } from "@/components/vendor/VendorLandingPage/CTA";
+import { FeatureSection, LiveHero } from "@/components/live/kit";
+import { DesignDetailScene, QuoteRequestsScene, RequestStatusScene, StyleImageScene } from "@/components/live/generator";
+
 import navbarData from "@/data/global/navbar.json";
 import footerData from "@/data/global/footer.json";
 import faqData from "@/data/home/faq.json";
 import ctaData from "@/data/vendor/vendorlanding/cta.json";
-import heroData from "@/data/vendor/vendordropdown/clothinggenerator/hero.json";
-import howItWorksData from "@/data/vendor/vendordropdown/clothinggenerator/howitworks.json";
-import whyVendorsData from "@/data/vendor/vendordropdown/clothinggenerator/whyvendors.json";
-import whatData from "@/data/vendor/vendordropdown/clothinggenerator/what.json";
+import page from "@/data/vendor/vendordropdown/clothinggenerator/page.json";
 
 export default function ClothingGeneratorPage() {
   return (
-    <div className="min-h-screen selection:bg-brand-darker selection:text-white bg-white text-zinc-900">
+    <div className="min-h-screen bg-white">
       <Header data={navbarData} />
-      <HeroSection data={heroData} />
-      <WhatSection data={whatData} />
-      <HowItWorksSection data={howItWorksData} />
-      <WhyVendorsSection data={whyVendorsData} />
+      <LiveHero copy={page.hero} cta={page.hero.cta} visual={<QuoteRequestsScene />} />
+      <FeatureSection id="what-to-make" copy={page.detail} visual={<DesignDetailScene />} flip tint />
+      <FeatureSection id="quote" copy={page.status} visual={<RequestStatusScene />} />
+      <FeatureSection id="styles" copy={page.styles} visual={<StyleImageScene />} flip tint />
       <FAQSection data={faqData} />
       <VendorCTA data={ctaData} />
       <Footer data={footerData} />
     </div>
   );
 }
-
