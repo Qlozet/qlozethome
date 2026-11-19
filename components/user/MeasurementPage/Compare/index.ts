@@ -1,2 +1,0 @@
-export { CompareSection } from "./CompareSection";
-

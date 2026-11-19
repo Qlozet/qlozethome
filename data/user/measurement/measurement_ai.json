@@ -1,93 +1,59 @@
 {
   "hero": {
-    "badge": "AI Fit & Styling",
-    "title": "Perfect Fit. Effortless Style. Powered by AI.",
-    "description": "Your body is unique. Your clothes should be too. Qlozet uses advanced AI to understand your body, your taste, and your lifestyle.",
+    "badge": "AI Body Measurement",
+    "title": "Your measurements, in about a minute.",
+    "description": "Prop your phone up, step back and follow the voice. Qlozet takes a front and a side view by itself and turns them into the measurements a tailor needs.",
     "cta": {
-      "label": "Get Started",
+      "label": "Join the waitlist",
       "href": "/waitlist"
-    },
-    "image": {
-      "src": "/image/body2.png",
-      "alt": "AI Fit visualization"
     }
   },
-  "biometric": {
-    "badge": "AI Body Measurement",
-    "title": "Your Measurements. Instantly.",
-    "description": "Forget traditional measuring methods. With just your phone, Qlozet takes your body measurements in about a minute, hands-free, with your phone guiding you by voice.",
-    "features": [
-      "No tailor visits required",
-      "Only an outline leaves your phone",
-      "Works anytime, anywhere",
-      "Securely saved to profile"
+  "ways": {
+    "badge": "Four ways to measure",
+    "title": "Pick the way that suits you",
+    "description": "A body scan is the most accurate. If you'd rather not scan, there's always another way, and you can change any number afterwards.",
+    "points": [
+      "Body scan: about a minute, hands-free",
+      "Two photos: someone can take them for you",
+      "Quick estimate: your height, weight and a few questions about your shape",
+      "Your own numbers: type them in, or snap your tailor's book"
     ]
   },
-  "styling": {
-    "badge": "Personalized Styling",
-    "title": "Style That Understands You",
-    "description": "Qlozet’s AI goes beyond numbers. It understands proportion. Every suggestion is grounded in your actual body and taste.",
-    "options": [
-      {
-        "title": "Fit Guidance",
-        "description": "Cuts and silhouettes that flatter your body type."
-      },
-      {
-        "title": "Personalized Feed",
-        "description": "Discover picks tuned to what you love."
-      },
-      {
-        "title": "Design Your Own",
-        "description": "Take your fit profile into the bespoke studio."
-      }
+  "privacy": {
+    "badge": "Private by design",
+    "title": "Only an outline leaves your phone",
+    "description": "Your phone turns each picture into a plain outline of your body. That outline is all we receive. It's measured, then discarded.",
+    "points": [
+      "No photo of you is uploaded",
+      "Outlines are never stored",
+      "Your measurements stay yours to edit or delete"
     ]
   },
-  "profile": {
-    "badge": "Digital Fit Profile",
-    "title": "Your Body, Digitally Remembered",
-    "description": "Once captured, Qlozet builds your personal fit profile, so every future order is faster and easier.",
-    "benefits": [
-      "Saved for instant checkout",
-      "Consistent fit across vendors",
-      "No repeated input required"
+  "result": {
+    "badge": "Check and save",
+    "title": "Review it, then make it yours",
+    "description": "Your measurements arrive as a list you can check. Change any number that seems off, then save the set for your orders.",
+    "points": [
+      "Edit any number before you save",
+      "Make it your default with one switch",
+      "Keep more than one set"
     ]
   },
-  "confidence": {
-    "badge": "Fit Confidence",
-    "title": "Made for Your Measurements",
-    "description": "Less sizing guesswork. Made-to-measure pieces are cut to the measurements you attach, and you can review them before you order.",
-    "stats": [
-      "Better fit accuracy",
-      "Fewer returns",
-      "Confidence in every order"
-    ]
-  },
-  "experience": {
-    "badge": "Seamless Experience",
-    "title": "From Scan to Style in Minutes",
-    "description": "We’ve removed the friction from fashion. Simple. Fast. Powerful.",
-    "steps": [
-      "Scan your body",
-      "Get measurements",
-      "Save your fit profile",
-      "Order made-to-measure"
-    ]
-  },
-  "diversity": {
-    "badge": "Designed for Everyone",
-    "title": "Real People. Real Bodies. Real Style.",
-    "description": "Qlozet is built for diversity across body types, cultures, and fashion preferences.",
-    "features": [
-      "Inclusive sizing and styling",
-      "African fashion support",
-      "Unique identity focus"
+  "order": {
+    "badge": "Made to measure",
+    "title": "Nothing missing when you order",
+    "description": "Each outfit knows which measurements it needs. Pick a saved set at checkout and we check it has them all before you pay.",
+    "points": [
+      "Your measurements travel with every made-to-measure order",
+      "Missing numbers are flagged before you pay",
+      "Your tailor works from the numbers you approved"
     ]
   },
   "closing": {
-    "title": "The Future of Fashion Starts With You",
-    "description": "No more guessing. No more settling. Just clothing made for your body and your taste.",
+    "title": "Measure once. Order made to measure.",
+    "description": "Join the waitlist to be among the first to try the hands-free scan.",
     "cta": {
-      "label": "Start Your Fit Journey Today",
+      "label": "Join the waitlist",
       "href": "/waitlist"
     }
   }

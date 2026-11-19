@@ -1,1 +1,0 @@
-export { MeasurementHero } from "./MeasurementHeroSection";

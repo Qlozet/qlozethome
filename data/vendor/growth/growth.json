@@ -1,105 +1,48 @@
 {
   "hero": {
-    "badge": "Revenue & Scale",
-    "title": "Earn Seamlessly. Grow Confidently.",
-    "description": "Qlozet gives you the tools to not only get paid but to scale your business with confidence. From secure transactions to growth-driven features, everything is built to help you succeed.",
+    "badge": "Payments & Payouts",
+    "title": "Get paid on a schedule you can plan around.",
+    "description": "Every order's earnings become available 14 days after the customer pays. No waiting on delivery confirmations, and no guessing when money will land.",
     "cta": {
-      "label": "Start Earning on Qlozet",
+      "label": "Join the waitlist",
       "href": "/vendor/waitlist"
-    },
-    "closing": "Focus on your craft. We handle the rest."
-  },
-  "sections": [
-    {
-      "id": "payments",
-      "badge": "Secure Payments",
-      "title": "Fast. Safe. Reliable.",
-      "description": "Every transaction on Qlozet is designed with security and trust at its core.",
-      "features": [
-        "Secure payment processing",
-        "Multiple payment options for customers",
-        "Protected transactions for vendors"
-      ],
-      "closing": "Your earnings are safe. Always."
-    },
-    {
-      "id": "payouts",
-      "badge": "Structured Payouts",
-      "title": "Clarity in Every Payment",
-      "description": "Get paid through a structured system designed for reliability and transparency.",
-      "features": [
-        "Clear breakdown of earnings",
-        "Earnings available 14 days after the customer pays",
-        "Withdraw to your bank whenever you like"
-      ],
-      "closing": "No confusion. No surprises."
-    },
-    {
-      "id": "growth",
-      "badge": "Built for Growth",
-      "title": "More Than Payments: A Growth Engine",
-      "description": "Qlozet helps you increase your revenue, not just collect it.",
-      "features": [
-        "Access to a growing customer base",
-        "Increased order opportunities",
-        "Tools designed to boost visibility"
-      ],
-      "closing": "Your growth is built into the platform."
-    },
-    {
-      "id": "visibility",
-      "badge": "Promotion & Visibility",
-      "title": "Get Seen. Get Chosen.",
-      "description": "Promote your products and reach more customers directly on Qlozet.",
-      "features": [
-        "Top Shops placement for high-rated stores",
-        "Deals that surface on the customer explore feed",
-        "Increased product visibility"
-      ],
-      "closing": "Stand out where it matters most."
-    },
-    {
-      "id": "earnings",
-      "badge": "Transparent Earnings",
-      "title": "Know Exactly What You Earn",
-      "description": "Stay fully informed about your revenue and performance.",
-      "features": [
-        "Clear commission structure",
-        "Real-time earnings tracking",
-        "Full visibility into transactions"
-      ],
-      "closing": "What you earn is always clear."
-    },
-    {
-      "id": "scale",
-      "badge": "Scale Without Limits",
-      "title": "Grow Beyond Boundaries",
-      "description": "Qlozet takes your business beyond your neighbourhood, across Nigeria.",
-      "features": [
-        "Reach customers far beyond your neighborhood",
-        "Handle increased order volume with ease",
-        "Scale without operational complexity"
-      ],
-      "closing": "From small business to national brand."
-    },
-    {
-      "id": "simplicity",
-      "badge": "Financial Simplicity",
-      "title": "Less Stress. More Focus.",
-      "description": "We simplify the financial side of your business so you can focus on what matters.",
-      "features": [
-        "Automated payment flows",
-        "Organized financial tracking",
-        "Reduced administrative burden"
-      ],
-      "closing": "Run your business without the headaches."
     }
-  ],
+  },
+  "breakdown": {
+    "badge": "Every order, itemised",
+    "title": "See what you earn before you ship",
+    "description": "Each order shows the price, the commission and what reaches you, along with the day it becomes yours to withdraw.",
+    "points": [
+      "10% commission, only on what you sell",
+      "No monthly fee and no listing fee",
+      "A release date on every order"
+    ]
+  },
+  "bespoke": {
+    "badge": "Bespoke work",
+    "title": "Paid in two parts, on the same schedule",
+    "description": "The customer pays a deposit when they accept your quote and the balance when they approve photos of the finished piece. Each part reaches you 14 days after it's paid.",
+    "points": [
+      "Deposit as soon as your quote is accepted",
+      "Balance paid before you ship",
+      "A cancellation fee paid to you if they cancel after you confirm"
+    ]
+  },
+  "withdraw": {
+    "badge": "Withdrawals",
+    "title": "Withdraw whenever you like",
+    "description": "Send your available balance to your verified bank account at any time. Every payout is listed in your history.",
+    "points": [
+      "Minimum withdrawal ₦2,000",
+      "Paid to your verified business account",
+      "Every payout in your history"
+    ]
+  },
   "closing": {
-    "title": "Get Paid. Grow Faster. Scale Smarter.",
-    "description": "Qlozet turns your work into earnings, and your earnings into growth.",
+    "title": "Get paid. Plan ahead.",
+    "description": "Join the vendor waitlist and sell with payouts you can count on.",
     "primaryAction": {
-      "label": "Start Selling & Earning Today",
+      "label": "Join the waitlist",
       "href": "/vendor/waitlist"
     }
   }
