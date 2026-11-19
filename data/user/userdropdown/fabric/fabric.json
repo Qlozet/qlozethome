@@ -1,117 +1,48 @@
 {
   "hero": {
-    "badge": "Start With the Fabric",
-    "title": "Build the Outfit.",
-    "description": "Every great outfit begins with the right fabric. Explore a curated collection of premium textiles, from bold statement prints to timeless classics, ready to bring your vision to life.",
+    "badge": "Fabrics",
+    "title": "Buy it by the yard or by the piece.",
+    "description": "Fabric vendors sell full pieces, cuts by the yard, or both. Pick how much you need and the price is worked out as you go.",
     "cta": {
-      "label": "Join Waitlist",
+      "label": "Join the waitlist",
       "href": "/waitlist"
-    },
-    "closing": "Choose the fabric. Define the style."
-  },
-  "sections": [
-    {
-      "id": "discover",
-      "badge": "Discover Premium Fabrics",
-      "title": "A World of Textiles",
-      "description": "Browse fabrics sourced from trusted vendors and designers across regions.",
-      "features": [
-        "Ankara, lace, silk, cotton, and more",
-        "Unique prints and premium materials",
-        "Verified fabric vendors"
-      ],
-      "closing": "Each fabric tells a story."
-    },
-    {
-      "id": "find",
-      "badge": "Find Your Perfect Fabric",
-      "title": "Search, Filter, Discover",
-      "description": "Quickly find fabrics that match your vision.",
-      "features": [
-        "Filter by color, pattern, material, and style",
-        "Browse by occasion (casual, formal, traditional)",
-        "Smart search for faster discovery"
-      ],
-      "closing": "From idea to fabric, instantly."
-    },
-    {
-      "id": "details",
-      "badge": "See the Details",
-      "title": "Experience the Texture",
-      "description": "Zoom in and explore every detail before you choose.",
-      "features": [
-        "High-quality fabric visuals",
-        "Close-up texture views",
-        "Accurate representation of colors and patterns"
-      ],
-      "closing": "What you see is what you get."
-    },
-    {
-      "id": "use",
-      "badge": "Use Fabric Your Way",
-      "title": "From Fabric to Outfit",
-      "description": "Once you find the perfect fabric, you have full control over how you want to use it.",
-      "features": [
-        "Use it to design custom clothing",
-        "Pair it with your preferred designer",
-        "Save it for future inspiration"
-      ],
-      "closing": "Your fabric, your creation."
-    },
-    {
-      "id": "connect",
-      "badge": "Connect With Fabric Vendors",
-      "title": "Source From Trusted Vendors",
-      "description": "Buy or use fabrics directly from verified vendors on Qlozet.",
-      "features": [
-        "Transparent sourcing",
-        "Reliable quality",
-        "Seamless integration into your order"
-      ],
-      "closing": "Quality you can trust."
-    },
-    {
-      "id": "inspiration",
-      "badge": "Inspiration & Combinations",
-      "title": "See What’s Possible",
-      "description": "Get inspired by how fabrics come to life in real designs.",
-      "features": [
-        "Outfit examples using selected fabrics",
-        "Style suggestions and combinations",
-        "Trending fabric styles"
-      ],
-      "closing": "Imagine it. Create it. Wear it."
-    },
-    {
-      "id": "personalized",
-      "badge": "Personalized Fabric Discovery",
-      "title": "Fabrics Tailored to Your Taste",
-      "description": "Qlozet learns your preferences and shows fabrics you’re more likely to love.",
-      "features": [
-        "Personalized recommendations",
-        "Style-based suggestions",
-        "Evolving discovery experience"
-      ],
-      "closing": "The more you explore, the better it gets."
-    },
-    {
-      "id": "seamless",
-      "badge": "Seamless Experience",
-      "title": "From Fabric to Final Outfit",
-      "description": "Everything connects effortlessly within Qlozet.",
-      "features": [
-        "Add fabric directly to your design",
-        "Save and revisit anytime",
-        "Smooth transition to customization or checkout"
-      ],
-      "closing": "No friction. Just flow."
     }
-  ],
+  },
+  "use": {
+    "badge": "Use Fabric",
+    "title": "Have it made into something",
+    "description": "Found a fabric you love? Apply it to one of your studio designs, or to a customizable outfit from your wishlist that accepts your own fabric.",
+    "points": [
+      "For a bespoke design or a customizable outfit",
+      "Replaces the outfit's own colourways",
+      "Switch back to the vendor's fabric any time"
+    ]
+  },
+  "studio": {
+    "badge": "In the studio",
+    "title": "Every vendor's fabric, in one place",
+    "description": "When you design in the studio, search fabrics from every vendor by name, material, pattern or colour. Not sure yet? Let the tailor choose.",
+    "points": [
+      "Search lace, silk, ankara, blue…",
+      "Material, pattern and vendor on every swatch",
+      "Or leave it to your tailor"
+    ]
+  },
+  "delivery": {
+    "badge": "Delivery",
+    "title": "Sent straight to your tailor",
+    "description": "When the fabric and the tailor are different vendors, checkout adds a delivery leg that takes the fabric straight to your tailor, with its own courier and dates.",
+    "points": [
+      "\"Fabric to your tailor\" at checkout",
+      "Its own courier, price and arrival dates",
+      "No collecting and dropping off yourself"
+    ]
+  },
   "conversion": {
-    "title": "The Right Fabric Changes Everything",
-    "description": "Your outfit starts here. Choose better fabrics, create better designs, and wear something truly yours.",
+    "title": "Start with the fabric.",
+    "description": "Join the waitlist to buy fabric and have it made into something that's yours.",
     "primaryAction": {
-      "label": "Join Waitlist",
+      "label": "Join the waitlist",
       "href": "/waitlist"
     }
   }

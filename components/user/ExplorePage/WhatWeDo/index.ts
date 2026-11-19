@@ -1,2 +1,0 @@
-export { WhatWeDoSection } from "./WhatWeDoSection";
-

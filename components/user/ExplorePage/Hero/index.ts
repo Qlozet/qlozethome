@@ -1,1 +1,0 @@
-export { ExploreHero } from "./ExploreHeroSection";

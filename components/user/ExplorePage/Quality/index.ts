@@ -1,3 +1,0 @@
-export { PillarsSection } from "./QualitySection";
-
-

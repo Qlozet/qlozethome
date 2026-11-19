@@ -1,2 +1,0 @@
-export { PerksSection } from "./PerksSection";
-
