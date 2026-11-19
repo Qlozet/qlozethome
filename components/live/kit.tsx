@@ -48,7 +48,9 @@ export function useCountUp(to: number, run: boolean, ms = 900, from = 0) {
     let raf = 0;
     const start = performance.now();
     const tick = (now: number) => {
-      const p = Math.min(1, (now - start) / ms);
+      // A frame's timestamp can be a little before `start`; clamp, or the
+      // ease curve runs backwards into large negative numbers.
+      const p = Math.max(0, Math.min(1, (now - start) / ms));
       setV(from + (to - from) * (1 - Math.pow(1 - p, 3)));
       if (p < 1) raf = requestAnimationFrame(tick);
     };

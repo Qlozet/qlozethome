@@ -1,125 +1,58 @@
 {
   "hero": {
-    "badge": "Logistics & Delivery",
-    "title": "From Design to Doorstep, Handled With Care.",
-    "description": "Once you’ve chosen your outfit, Qlozet takes care of everything else. From production to delivery, every step is managed with precision, transparency, and care.",
+    "badge": "Ordering & Delivery",
+    "title": "Pick a courier, pay, and follow it to your door.",
+    "description": "At checkout you see each courier's price and arrival dates for every vendor in your bag. Pay by card, bank transfer, USSD or your Qlozet wallet.",
     "cta": {
-      "label": "Track Your Order",
-      "href": "#tracking"
+      "label": "Join the waitlist",
+      "href": "/waitlist"
     }
   },
-  "sections": [
-    {
-      "id": "ordering",
-      "badge": "Section 1",
-      "title": "Effortless Ordering",
-      "subtitle": "Simple. Clear. Instant.",
-      "description": "Placing an order on Qlozet is designed to feel effortless, whether you're buying ready-to-wear or custom-made.",
-      "features": [
-        "Clear pricing and breakdowns",
-        "Easy vendor selection",
-        "Guided checkout experience"
-      ],
-      "footer": "Everything you need. Nothing you don’t."
-    },
-    {
-      "id": "vendor",
-      "badge": "Section 2",
-      "title": "Your Vendor, Your Choice",
-      "subtitle": "The Right Hands for Your Outfit",
-      "description": "Ready-to-wear ships straight from the shop you pick. Custom pieces go to the tailor you choose from competing quotes.",
-      "features": [
-        "Verified vendors with real ratings",
-        "Compare quotes for custom orders",
-        "You decide who makes it"
-      ],
-      "footer": "Your outfit is always in expert hands."
-    },
-    {
-      "id": "production",
-      "badge": "Section 3",
-      "title": "Transparent Production Process",
-      "subtitle": "See Your Outfit Come to Life",
-      "description": "Stay informed as your outfit is made. Bespoke orders include direct chat with your vendor while they work.",
-      "features": [
-        "Order received",
-        "In production",
-        "Quality check",
-        "Ready for delivery"
-      ],
-      "footer": "No more wondering. Always knowing."
-    },
-    {
-      "id": "tracking",
-      "badge": "Section 4",
-      "title": "Real-Time Order Tracking",
-      "subtitle": "Track Every Step",
-      "description": "Monitor your order from start to finish with real-time updates.",
-      "features": [
-        "Live status updates",
-        "Delivery progress visibility",
-        "Notifications at every stage"
-      ],
-      "footer": "Your order, always within reach."
-    },
-    {
-      "id": "delivery",
-      "badge": "Section 5",
-      "title": "Reliable Delivery",
-      "subtitle": "Fast. Secure. Dependable.",
-      "description": "Vendors ship with trusted couriers, and if a delivery runs late, our On-Time Promise credits compensation to your wallet.",
-      "features": [
-        "Timely delivery",
-        "Secure handling",
-        "Wide delivery coverage"
-      ],
-      "footer": "Delivered with care, every time."
-    },
-    {
-      "id": "packaging",
-      "badge": "Section 6",
-      "title": "Packed by Your Maker",
-      "subtitle": "Ready to Wear or Gift",
-      "description": "Your vendor packs your order in their own packaging, ready to wear or gift.",
-      "features": [
-        "Clean, premium presentation",
-        "Your vendor's own branding",
-        "Ready to wear or gift"
-      ],
-      "footer": "Because first impressions matter."
-    },
-    {
-      "id": "support",
-      "badge": "Section 7",
-      "title": "Trust & Support",
-      "subtitle": "We’ve Got You Covered",
-      "description": "Qlozet ensures a smooth experience, even when things need adjustment.",
-      "features": [
-        "Support for order issues",
-        "Clear communication channels",
-        "Resolution-focused approach"
-      ],
-      "footer": "Your satisfaction is our priority."
-    },
-    {
-      "id": "simplicity",
-      "badge": "Section 8",
-      "title": "End-to-End Simplicity",
-      "subtitle": "Everything, Connected",
-      "description": "From the moment you design or select your outfit to the moment it arrives, everything flows seamlessly.",
-      "features": [
-        "Unified platform experience",
-        "No switching between services",
-        "Fully integrated process"
-      ],
-      "footer": "One journey. One platform. Zero friction."
-    }
-  ],
+  "estimate": {
+    "badge": "Before you buy",
+    "title": "Know when it should arrive",
+    "description": "Every product shows its estimated delivery dates, and made-to-measure pieces include the vendor's making time.",
+    "points": [
+      "Delivery dates on the product page",
+      "Making time included for made-to-measure",
+      "Couriers and arrival dates compared at checkout"
+    ]
+  },
+  "tracking": {
+    "badge": "Tracking",
+    "title": "Follow every parcel",
+    "description": "Each parcel has its own timeline, from booking with the courier to your door, with a tracking code and a link to the courier's site.",
+    "points": [
+      "A timeline for every parcel",
+      "Tracking code and courier link",
+      "A notification when it ships, goes out for delivery and arrives"
+    ]
+  },
+  "ontime": {
+    "badge": "On-Time Promise",
+    "title": "Late from the vendor? You're paid for it",
+    "description": "If a vendor ships your order late, we credit compensation to your wallet automatically: 5% of their items for each day late, up to 25%. No need to ask.",
+    "points": [
+      "Credited automatically, every day it's late",
+      "Money in your wallet to spend or withdraw",
+      "Orders very late are cancelled and refunded in full"
+    ]
+  },
+  "problems": {
+    "badge": "If something's wrong",
+    "title": "Report a problem in a few taps",
+    "description": "Tell us what happened and we open a case with the vendor. Ready-to-wear can be returned within 7 days of delivery, and refunds go to your Qlozet wallet.",
+    "points": [
+      "Damaged, wrong, missing or not as described",
+      "7-day returns on ready-to-wear",
+      "Refunds to your wallet, to spend or withdraw"
+    ]
+  },
   "conversion": {
-    "title": "Fashion, Without the Hassle",
-    "description": "Qlozet removes the complexity from ordering custom and ready-to-wear clothing. All you have to do is choose. We handle the rest.",
+    "title": "Order with confidence.",
+    "description": "Join the waitlist and be among the first to shop on Qlozet.",
     "cta": {
-      "label": "Start Your Order Today",
+      "label": "Join the waitlist",
       "href": "/waitlist"
     }
   }

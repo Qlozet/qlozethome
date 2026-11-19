@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "badge": "Qlozet For Vendors",
+    "title": "Talk to the customer while you make it.",
+    "description": "Every bespoke order has its own chat, so questions about fit, fabric and finishing get answered in one place, on the order.",
+    "cta": {
+      "label": "Join the waitlist",
+      "href": "/vendor/waitlist"
+    }
+  },
+  "customer": {
+    "badge": "Both sides",
+    "title": "One thread, on the order",
+    "description": "The customer chats from their order in the Qlozet shop. Their contact details stay private; the order's chat is how you reach each other.",
+    "points": [
+      "One conversation per bespoke order",
+      "No phone numbers swapped",
+      "Every message timed and kept with the order"
+    ]
+  },
+  "opens": {
+    "badge": "When it opens",
+    "title": "Opens when the work starts",
+    "description": "The chat opens once the order is in production and stays open while it's on the way, so conversations are about the piece you're making.",
+    "points": [
+      "Open in production and in transit",
+      "The design and measurements are on the same order",
+      "Questions about measurements have their own tool too"
+    ]
+  },
+  "alerts": {
+    "badge": "Notifications",
+    "title": "Never miss a message",
+    "description": "New messages show on the order's Message button and as a notification, for you and for the customer.",
+    "points": [
+      "\"New message on QL-2051\" for you",
+      "\"Your tailor replied\" for the customer",
+      "A burst of messages stays one notification"
+    ]
+  }
+}
