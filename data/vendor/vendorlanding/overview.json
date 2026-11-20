@@ -1,0 +1,145 @@
+{
+  "hero": {
+    "badge": "Sell on Qlozet",
+    "title": "Your fashion business, run from one place.",
+    "description": "A store page, orders, shipping labels and payouts in one console, built for tailors, designers and fabric sellers. Free to join. You pay 10% only when you sell.",
+    "cta": {
+      "label": "Join the waitlist",
+      "href": "/vendor/waitlist"
+    }
+  },
+  "features": {
+    "badge": "What you get",
+    "title": "Everything a fashion business needs, already built",
+    "items": [
+      {
+        "title": "Instant storefront",
+        "text": "Your own store page with your cover, logo and colours, and a link for your bio.",
+        "chip": "shop.qlozet.app/s/your-store",
+        "href": "/instantstorefront"
+      },
+      {
+        "title": "Flexible selling",
+        "text": "Ready to wear, made to order with priced styles, fabric by the yard or the piece.",
+        "chip": "Ready to publish?",
+        "href": "/flexiblesellingoptions"
+      },
+      {
+        "title": "Ship smarter",
+        "text": "Confirm the order, print the label, and the courier collects from you.",
+        "chip": "Print Label",
+        "href": "/shipsmarter"
+      },
+      {
+        "title": "Quote requests",
+        "text": "Customers design outfits in the studio and send them to you to price.",
+        "chip": "Submit quote",
+        "href": "/clothinggenerator"
+      },
+      {
+        "title": "Chat with customers",
+        "text": "A chat with the customer on every bespoke order while you make it.",
+        "href": "/chatwithcustomers"
+      },
+      {
+        "title": "Customers and measurements",
+        "text": "Each order arrives with the measurements it needs, checked before checkout.",
+        "href": "/customermeasurements"
+      },
+      {
+        "title": "Payments",
+        "text": "See what you earn on every order, and withdraw to your bank when it's ready.",
+        "chip": "Your earnings",
+        "href": "/paymentsandgrowth"
+      },
+      {
+        "title": "Market intelligence",
+        "text": "A dashboard, a business assistant that knows your store, and a weekly digest.",
+        "chip": "Business Assistant",
+        "href": "/marketintelligence"
+      }
+    ]
+  },
+  "money": {
+    "badge": "What it costs",
+    "title": "Free to join. 10% when you sell.",
+    "description": "No monthly fee and no listing fee. Every order shows the commission and what you earn before you ship, and delivery is paid by the customer.",
+    "points": [
+      "10% commission, only on sales",
+      "Earnings ready 14 days after the customer pays",
+      "Withdraw to your bank whenever you like"
+    ]
+  },
+  "steps": {
+    "badge": "How it works",
+    "title": "From sign-up to your first payout",
+    "items": [
+      {
+        "title": "Create your vendor account",
+        "text": "Sign up for a store in the vendor console."
+      },
+      {
+        "title": "Verify your business",
+        "text": "A quick check of your business details, done from the console."
+      },
+      {
+        "title": "Set up your store",
+        "text": "Add your cover photo, logo, store colour and the address of your store page."
+      },
+      {
+        "title": "List your pieces",
+        "text": "Ready to wear, made to order, fabric or accessories. A checklist shows what each listing needs."
+      },
+      {
+        "title": "Confirm orders and print the label",
+        "text": "Confirm within 24 hours, make or pack it, then tap Fulfill Order and print the label."
+      },
+      {
+        "title": "The courier collects",
+        "text": "The customer is updated at every scan until it's delivered."
+      },
+      {
+        "title": "Get paid",
+        "text": "Your earnings reach your wallet 14 days after the customer paid. Withdraw to your bank."
+      }
+    ]
+  },
+  "audience": {
+    "badge": "Who it's for",
+    "title": "If you make or sell fashion, it's built for you",
+    "items": [
+      {
+        "title": "Tailors",
+        "text": "Made-to-measure orders and bespoke quotes, with the measurements attached.",
+        "image": "/image/tailorwork.png"
+      },
+      {
+        "title": "Fashion designers",
+        "text": "Ready-to-wear collections and made-to-order pieces with your own styles.",
+        "image": "/image/custom-outfit-1.png"
+      },
+      {
+        "title": "Fabric sellers",
+        "text": "Sell by the yard or the piece, to shoppers and to tailors.",
+        "image": "/image/fabric-1.jpg"
+      },
+      {
+        "title": "Accessory makers",
+        "text": "Bags, caps and jewellery in every colour and size you make.",
+        "image": "/image/totebag.png"
+      }
+    ]
+  },
+  "closing": {
+    "title": "Your store is waiting.",
+    "description": "Join the waitlist and we'll let you know as soon as your place opens.",
+    "cta": {
+      "label": "Join the waitlist",
+      "href": "/vendor/waitlist"
+    },
+    "secondary": {
+      "label": "See pricing",
+      "href": "/pricing"
+    }
+  }
+}

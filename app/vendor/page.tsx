@@ -1,32 +1,27 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { VendorEditorialHero } from "@/components/vendor/Editorial/VendorEditorialHero";
-import { VendorWhyQlozet } from "@/components/vendor/Editorial/VendorWhyQlozet";
-import { VendorCapabilitiesGrid } from "@/components/vendor/Editorial/VendorCapabilitiesGrid";
-import { VendorAudienceSection } from "@/components/vendor/Editorial/VendorAudienceSection";
-import { VendorGlobalScale } from "@/components/vendor/Editorial/VendorGlobalScale";
-import { VendorProcessTimeline } from "@/components/vendor/Editorial/VendorProcessTimeline";
-import { VendorPartnershipCTA } from "@/components/vendor/Editorial/VendorPartnershipCTA";
+import { FAQSection } from "@/components/home/FAQ";
+import { FeatureSection, LiveHero } from "@/components/live/kit";
+import { OrderDrawerScene } from "@/components/live/shipping";
+import { OrderBreakdown } from "@/components/live/payouts";
+import { VendorAudience, VendorClosing, VendorFeatureGrid, VendorSteps } from "@/components/live/vendor-overview";
 
 import navbarData from "@/data/global/navbar.json";
 import footerData from "@/data/global/footer.json";
+import faqData from "@/data/home/faq.json";
+import page from "@/data/vendor/vendorlanding/overview.json";
 
 export default function VendorPage() {
   return (
-    <div id="top" className="bg-white text-[#111111] selection:bg-brand-darker selection:text-white overflow-x-hidden w-full">
+    <div className="min-h-screen bg-white">
       <Header data={navbarData} />
-
-      <main className="flex flex-col w-full">
-        {/* Core Sections based on the newly approved copy */}
-        <VendorEditorialHero />
-        <VendorWhyQlozet />
-        <VendorCapabilitiesGrid />
-        <VendorAudienceSection />
-        <VendorGlobalScale />
-        <VendorProcessTimeline />
-        <VendorPartnershipCTA />
-      </main>
-
+      <LiveHero copy={page.hero} cta={page.hero.cta} visual={<OrderDrawerScene />} />
+      <VendorFeatureGrid {...page.features} />
+      <FeatureSection id="pricing" copy={page.money} visual={<OrderBreakdown />} flip tint />
+      <VendorSteps {...page.steps} />
+      <VendorAudience {...page.audience} />
+      <FAQSection data={faqData} />
+      <VendorClosing {...page.closing} />
       <Footer data={footerData} />
     </div>
   );
