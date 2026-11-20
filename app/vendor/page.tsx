@@ -1,9 +1,8 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FAQSection } from "@/components/home/FAQ";
-import { FeatureSection, LiveHero } from "@/components/live/kit";
-import { OrderDrawerScene } from "@/components/live/shipping";
-import { OrderBreakdown } from "@/components/live/payouts";
+import { FeatureSection } from "@/components/live/kit";
+import { EarningsCalculator, VendorJourneyHero } from "@/components/live/vendor-hero";
 import { VendorAudience, VendorClosing, VendorFeatureGrid, VendorSteps } from "@/components/live/vendor-overview";
 
 import navbarData from "@/data/global/navbar.json";
@@ -15,9 +14,9 @@ export default function VendorPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header data={navbarData} />
-      <LiveHero copy={page.hero} cta={page.hero.cta} visual={<OrderDrawerScene />} />
+      <VendorJourneyHero copy={page.hero} cta={page.hero.cta} secondary={page.closing.secondary} />
       <VendorFeatureGrid {...page.features} />
-      <FeatureSection id="pricing" copy={page.money} visual={<OrderBreakdown />} flip tint />
+      <FeatureSection id="pricing" copy={page.money} visual={<EarningsCalculator />} flip tint />
       <VendorSteps {...page.steps} />
       <VendorAudience {...page.audience} />
       <FAQSection data={faqData} />
