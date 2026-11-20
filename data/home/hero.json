@@ -1,17 +1,18 @@
 {
   "id": "hero",
   "title": "Your Style, Your Way",
-  "description": "Where advanced fit intelligence meets curated sartorial soul. Experience a digital atelier that truly understands the human form.",
+  "description": "Clothes made to your measurements by Nigerian tailors and designers, or ready to wear from their stores. Measure with your phone, design in the studio, and follow every order to your door.",
   "primaryAction": {
     "label": "Request Early Access",
     "href": "/waitlist"
   },
   "scrollPrompt": {
-    "up": "Scroll Up",
-    "down": "Scroll Down"
+    "up": "Scroll down",
+    "down": "Scroll down"
   },
   "image": {
     "src": "/image/heroimage.png",
     "alt": "Stylish woman showcasing Qlozet fashion"
-  }
+  },
+  "eyebrow": "Made to measure · Ready to wear"
 }

@@ -20,8 +20,10 @@ export function HeroSection({ data }: HeroSectionProps) {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
+  // Text starts visible (only a small rise), so the first frame, a slow
+  // phone and a link preview all show what Qlozet is.
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
@@ -32,7 +34,7 @@ export function HeroSection({ data }: HeroSectionProps) {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 1, y: 16 },
     visible: { 
       opacity: 1, 
       y: 0,
@@ -76,7 +78,7 @@ export function HeroSection({ data }: HeroSectionProps) {
             <motion.div variants={itemVariants} className="flex items-center gap-6">
               <span className="inline-flex h-px w-16 bg-white/40 sm:block hidden" />
               <span className="font-display text-[11px] font-bold uppercase tracking-[0.5em] text-white/50">
-                Editorial Issue No. 01 / Digital Atelier Standard
+                {data.eyebrow}
               </span>
             </motion.div>
             
@@ -89,7 +91,7 @@ export function HeroSection({ data }: HeroSectionProps) {
             
             <motion.p 
               variants={itemVariants}
-              className="max-w-xl font-ui text-lg leading-relaxed text-white/40 sm:text-2xl"
+              className="max-w-xl font-ui text-lg leading-relaxed text-white/70 sm:text-2xl"
             >
               {data.description}
             </motion.p>
@@ -107,27 +109,14 @@ export function HeroSection({ data }: HeroSectionProps) {
         </div>
       </div>
 
-      {/* Floating Meta Annotation */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        className="absolute bottom-12 right-12 z-20 hidden lg:block"
-      >
-        <div className="flex flex-col items-end gap-2 text-right">
-          <span className="font-display text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">Est. 2024</span>
-          <span className="font-ui text-[8px] uppercase tracking-[0.2em] text-white/20">Digital Atelier Standard</span>
-        </div>
-      </motion.div>
-
       {/* Scroll Prompt */}
       <div className="absolute bottom-12 left-1/2 z-10 -translate-x-1/2">
         <Link
-          href="#top"
+          href="#why"
           className="flex flex-col items-center gap-4 text-[10px] font-bold uppercase tracking-[0.5em] text-white/40 transition-all hover:text-white"
         >
           <div className="h-12 w-px bg-gradient-to-b from-transparent via-white/50 to-transparent" />
-          <span>{data.scrollPrompt.up || "Begin Journey"}</span>
+          <span>{data.scrollPrompt.down}</span>
         </Link>
       </div>
     </section>

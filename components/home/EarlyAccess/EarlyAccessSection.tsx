@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CustomerWaitlistForm } from "@/components/user/Waitlist/CustomerWaitlistForm";
 
 type EarlyAccessData = typeof import("@/data/home/early-access.json");
 
@@ -40,7 +41,7 @@ export function EarlyAccessSection({ data }: EarlyAccessSectionProps) {
               {/* Text Content */}
               <div className="flex flex-col gap-6">
                 <span className="font-display text-[10px] font-semibold uppercase tracking-[0.4em] text-[#3A3A3A]/40">
-                  Exclusive Entry
+                  Early access
                 </span>
                 <h3 className="font-display text-4xl font-medium leading-[1.05] tracking-tight text-[#111111] sm:text-6xl">
                   {data.title}
@@ -52,20 +53,7 @@ export function EarlyAccessSection({ data }: EarlyAccessSectionProps) {
 
               {/* Registration Form */}
               <div className="flex flex-col gap-8">
-                <form className="flex w-full flex-col gap-4 sm:flex-row">
-                  <input
-                    type="email"
-                    required
-                    placeholder={data.placeholder}
-                    className="flex-1 rounded-full border border-brand/10 bg-[#F8F8F8] px-8 py-5 font-ui text-sm text-brand outline-none transition-all focus:border-brand/30 focus:bg-white"
-                  />
-                  <button
-                    type="submit"
-                    className="rounded-full bg-brand-button px-12 py-5 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-xl shadow-brand-button/20 transition-all hover:scale-[1.05] hover:bg-brand active:scale-[0.98]"
-                  >
-                    {data.button}
-                  </button>
-                </form>
+                <CustomerWaitlistForm />
 
                 {/* Footnote Logo */}
                 <div className="flex items-center gap-4 opacity-20">

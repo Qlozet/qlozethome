@@ -1,26 +1,26 @@
 {
   "id": "why",
-  "eyebrow": "The Qlozet Philosophy",
-  "title": "The New Standard of Personal Style",
+  "eyebrow": "Why Qlozet",
+  "title": "Fashion made around you",
   "cards": [
     {
-      "title": "Structural Precision",
-      "description": "Our AI engine maps your form with architectural accuracy, ensuring every garment feels like a second skin.",
+      "title": "Made to your measurements",
+      "description": "Measure with your phone in about a minute. Every made-to-measure order reaches your tailor with the numbers it needs.",
       "icon": "Ruler"
     },
     {
-      "title": "Curated Craftsmanship",
-      "description": "Discover exclusive collections defined by uncompromised fabrics and artisanal attention to detail.",
+      "title": "Real makers, real stores",
+      "description": "Shop independent tailors, designers and fabric sellers, each with their own store, ratings and reviews.",
       "icon": "Palette"
     },
     {
-      "title": "Empowering the Avant-Garde",
-      "description": "A sophisticated platform for visionary labels to showcase their craft and connect with customers who value their work.",
+      "title": "Design it yourself",
+      "description": "Create an outfit in the AI studio, send it to tailors you choose, and pick the quote you like.",
       "icon": "Sparkles"
     },
     {
-      "title": "Borderless Sourcing",
-      "description": "Direct access to independent tailors and design houses. Sophistication, delivered with speed and security.",
+      "title": "Orders that look after you",
+      "description": "If an order ships late you are credited automatically, and refunds go straight to your Qlozet wallet.",
       "icon": "Globe"
     }
   ]

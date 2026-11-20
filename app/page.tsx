@@ -8,7 +8,6 @@ import { HeroSection } from "@/components/home/Hero";
 import { HighlightsSection } from "@/components/home/Highlights";
 import { PartnersSection } from "@/components/home/Partners";
 import { ProcessSection } from "@/components/home/Process";
-import { ShoppingSection } from "@/components/home/Shopping";
 import { WhySection } from "@/components/home/Why";
 import { VendorWorksSection } from "@/components/home/VendorWorks";
 
@@ -21,7 +20,6 @@ import highlightsData from "@/data/home/highlights.json";
 import navbarData from "@/data/global/navbar.json";
 import partnersData from "@/data/home/partners.json";
 import processData from "@/data/home/process.json";
-import shoppingData from "@/data/home/shopping.json";
 import whyData from "@/data/home/why.json";
 import vendorWorksData from "@/data/home/vendor-works.json";
 
@@ -43,7 +41,6 @@ export default function Home() {
         <HighlightsSection data={highlightsData} />
 
         {/* Commerce & Tech */}
-        <ShoppingSection data={shoppingData} />
         <DownloadSection data={downloadData} />
         <VendorWorksSection data={vendorWorksData} />
 
