@@ -278,7 +278,9 @@ export function Header({ data }: HeaderProps) {
                             </div>
 
                             <div className="grid grid-cols-1 gap-1">
-                              {link.dropdown.vendors.features.map((feature: any, idx: number) => (
+                              {link.dropdown.vendors.features.map((feature: any, idx: number) => {
+                                const isSpecial = feature.title === "Sell with us";
+                                return (
                                 <motion.div
                                   key={idx}
                                   initial={{ opacity: 0, y: 10 }}
@@ -289,15 +291,23 @@ export function Header({ data }: HeaderProps) {
                                     href={feature.href}
                                     className="group flex flex-col gap-0.5 rounded-2xl px-4 py-3 transition-all duration-300 hover:bg-zinc-50"
                                   >
-                                    <h4 className="font-display text-sm font-semibold text-zinc-900 transition-colors group-hover:text-black">
-                                      {feature.title}
-                                    </h4>
+                                    <div className="flex items-center gap-2">
+                                      <h4 className={`font-display text-sm font-semibold text-zinc-900 transition-colors group-hover:text-black ${isSpecial ? "underline decoration-zinc-300 underline-offset-4" : ""}`}>
+                                        {feature.title}
+                                      </h4>
+                                      {isSpecial && (
+                                        <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 text-zinc-400 transition-transform group-hover:translate-x-1">
+                                          <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 6.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
+                                        </svg>
+                                      )}
+                                    </div>
                                     <p className="font-ui text-[11px] leading-snug text-zinc-400 transition-colors group-hover:text-zinc-500">
                                       {feature.description}
                                     </p>
                                   </Link>
                                 </motion.div>
-                              ))}
+                                );
+                              })}
                             </div>
                           </motion.div>
                         </div>

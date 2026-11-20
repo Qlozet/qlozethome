@@ -55,6 +55,11 @@
           "icon": "/image/vend.png",
           "features": [
             {
+              "title": "Sell with us",
+              "description": "Free to join. 10% only when you sell.",
+              "href": "/vendor"
+            },
+            {
               "title": "Flexible selling options",
               "description": "Products, customization, & pricing",
               "href": "/flexiblesellingoptions"
