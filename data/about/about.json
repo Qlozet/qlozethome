@@ -56,8 +56,8 @@
       "href": "/waitlist"
     },
     "secondaryAction": {
-      "label": "Explore Works",
-      "href": "/works"
+      "label": "How Qlozet works",
+      "href": "/#process"
     }
   }
 }

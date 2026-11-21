@@ -59,7 +59,7 @@ export function VendorFeatureGrid({ badge, title, items }: { badge: string; titl
 
 export function VendorSteps({ badge, title, items }: { badge: string; title: string; items: { title: string; text: string }[] }) {
   return (
-    <section className="w-full bg-white py-24 sm:py-32" data-theme="light">
+    <section id="how-it-works" className="scroll-mt-24 w-full bg-white py-24 sm:py-32" data-theme="light">
       <div className="mx-auto grid max-w-[94rem] grid-cols-[minmax(0,1fr)] gap-14 px-6 md:px-10 lg:grid-cols-[1fr_1.2fr] lg:gap-24">
         <div className="lg:sticky lg:top-32 lg:self-start">
           <Heading badge={badge} title={title} />
