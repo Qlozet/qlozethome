@@ -15,7 +15,7 @@ export function FAQSection({ data, dark = false }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
@@ -26,7 +26,7 @@ export function FAQSection({ data, dark = false }: FAQSectionProps) {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 1, y: 12 },
     visible: {
       opacity: 1,
       y: 0,

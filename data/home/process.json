@@ -1,8 +1,8 @@
 {
   "id": "process",
-  "eyebrow": "From scan to style in days",
+  "eyebrow": "How it works",
   "title": "Three simple steps tailored around you",
-  "description": "Measure once, customize endlessly, and receive your handcrafted outfit, made by the tailor you choose.",
+  "description": "Measure once, choose what you want, and get it made by the tailor you pick.",
   "steps": [
     {
       "title": "Measure",
@@ -11,7 +11,7 @@
     },
     {
       "title": "Pick a design",
-      "description": "Explore curated designer collections, filter by occasion, fabric, and mood, then customize every detail.",
+      "description": "Shop ready to wear from Nigerian stores, or design your own outfit in the studio and choose a tailor’s quote.",
       "icon": "/svg/picker.svg"
     },
     {
@@ -21,7 +21,7 @@
     }
   ],
   "cta": {
-    "label": "Start Shopping",
+    "label": "Join the waitlist",
     "href": "#early-access"
   }
 }

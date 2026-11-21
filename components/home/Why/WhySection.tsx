@@ -23,7 +23,7 @@ const iconMap: Record<string, any> = {
 
 // Animation variants
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 1 },
   visible: {
     opacity: 1,
     transition: { staggerChildren: 0.15, delayChildren: 0.3 }
@@ -31,7 +31,7 @@ const containerVariants = {
 };
 
 const itemVariants: import("framer-motion").Variants = {
-  hidden: { y: 40, opacity: 0 },
+  hidden: { y: 16, opacity: 1 },
   visible: {
     y: 0,
     opacity: 1,
@@ -51,7 +51,7 @@ export function WhySection({ data, scrollPrompt }: WhySectionProps) {
     >
       <div id="why-content" className="mx-auto max-w-[94rem] px-4 sm:px-6 md:px-10 lg:px-10">
         <motion.div 
-          initial={{ y: 30, opacity: 0 }}
+          initial={{ y: 16, opacity: 1 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1 }}
@@ -60,7 +60,7 @@ export function WhySection({ data, scrollPrompt }: WhySectionProps) {
           <div className="flex items-center gap-4">
             <span className="inline-flex h-px w-12 bg-[#3A3A3A]/20" />
             <span className="font-display text-[10px] font-bold uppercase tracking-[0.4em] text-[#3A3A3A]/40">
-              The Architecture of Choice
+              {data.eyebrow}
             </span>
           </div>
           <h2 className="font-display max-w-4xl text-5xl font-medium leading-[1.05] tracking-tight text-[#111111] sm:text-7xl">

@@ -20,7 +20,7 @@ export function DownloadSection({ data, dark = false }: DownloadSectionProps) {
         <div className={`max-w-xl space-y-10 ${dark ? "text-white" : "text-[#111111]"}`}>
           <div className="flex flex-col gap-6">
             <span className={`font-display text-[10px] font-bold uppercase tracking-[0.4em] ${dark ? "text-white/40" : "text-[#3A3A3A]/40"}`}>
-              Mobile Extension
+              The apps
             </span>
             <h2 className="font-display text-5xl font-medium leading-[1.05] tracking-tight sm:text-7xl">
               {data.title}

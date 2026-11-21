@@ -16,7 +16,7 @@ export function ProcessSection({ data }: ProcessSectionProps) {
           <div className="flex items-center gap-4 text-white/40">
             <span className="inline-flex h-px w-12 bg-white/20" />
             <span className="font-display text-[10px] font-bold uppercase tracking-[0.4em]">
-              The Lifecycle
+              {data.eyebrow}
             </span>
           </div>
           <h2 className="font-display max-w-4xl text-5xl font-medium leading-[1.05] tracking-tight text-white sm:text-7xl">
