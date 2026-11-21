@@ -15,7 +15,7 @@ type ValuesSectionProps = {
 };
 
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 1 },
   visible: {
     opacity: 1,
     transition: { staggerChildren: 0.1, delayChildren: 0.2 }
@@ -23,7 +23,7 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { y: 12, opacity: 1 },
   visible: {
     y: 0,
     opacity: 1,
@@ -39,7 +39,7 @@ export function ValuesSection({ data }: ValuesSectionProps) {
     <section id={data.id} className="relative z-10 bg-brand-light px-6 md:px-10 lg:px-10 py-24 sm:py-32 scroll-mt-32" data-theme="light">
       <div className="mx-auto max-w-[94rem] px-4 sm:px-6 md:px-10 lg:px-10">
         <motion.div 
-          initial={{ y: 20, opacity: 0 }}
+          initial={{ y: 12, opacity: 1 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           className="mb-24 flex flex-col gap-8"
@@ -80,6 +80,18 @@ export function ValuesSection({ data }: ValuesSectionProps) {
                     <path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08" />
                     <path d="M7.07 14.94c-3.91.35-5.59 5.42-2.11 7.17 2.11 1.05 5.1-.5 6.06-2.1" />
                     <path d="m16.6 7.6 2.6 2.6" />
+                  </svg>
+                )}
+                {card.icon === 'clock' && (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                )}
+                {card.icon === 'lock' && (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+                    <rect x="3" y="11" width="18" height="11" rx="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                   </svg>
                 )}
                 {card.icon === 'global' && (

@@ -1,2 +1,0 @@
-export { EcosystemSection } from "./EcosystemSection";
-

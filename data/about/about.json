@@ -1,63 +1,90 @@
 {
   "hero": {
     "id": "about-hero",
-    "title": "Defining the Digital Atelier",
-    "description": "Beyond the screen, we are building the registry for the modern wardrobe. A fusion of architectural precision and sartorial soul.",
+    "eyebrow": "About Qlozet",
+    "title": "Clothes made for you.",
+    "description": "Qlozet is a Nigerian marketplace where you get clothes made to your measurements, or buy ready to wear, from independent tailors, designers and fabric sellers.",
     "image": {
       "src": "/image/tailorwork.png",
-      "alt": "Tailor at work in the atelier"
+      "alt": "A tailor at work"
     },
     "scrollPrompt": {
-      "down": "Discover Our Story"
+      "down": "Why we built it"
     }
   },
   "story": {
     "id": "our-story",
-    "tagline": "The Qlozet Narrative",
-    "title": "Redefining the relationship between person and garment.",
+    "tagline": "Why we built it",
+    "title": "Getting clothes made should not be this hard.",
     "paragraphs": [
-      "Qlozet was born from a simple observation: the digital world has failed the physical wardrobe. While everything else moved forward, our relationship with what we wear remained static, fragmented, and disconnected.",
-      "We envisioned a system where your style isn't just a collection of items, but a living profile of your fit and taste. By combining advanced AI measurement with curator-led aesthetic intelligence, we're building a true Digital Atelier.",
-      "Our mission is to empower individuals to own their fit, their style, and their data. From bespoke tailoring to curated designer pieces, Qlozet is the architecture of modern fashion."
+      "Anyone who has had clothes made knows the routine: trips to be measured, prices that shift, and a ready date that keeps moving.",
+      "On the other side are gifted tailors, designers and fabric sellers whose work rarely reaches people beyond their street, with orders kept in notebooks and chats.",
+      "Qlozet puts both sides in one place. Your measurements come from your phone, the price and timeline are agreed before you pay, and every order is tracked all the way to your door."
     ]
   },
   "values": {
-    "id": "core-values",
-    "tagline": "The Pillars of our Practice",
-    "title": "Principles that guide our architectural approach to fashion.",
+    "id": "our-promises",
+    "tagline": "What we promise",
+    "title": "Rules that look after both sides.",
     "cards": [
       {
-        "title": "Architectural Precision",
-        "description": "We believe fit is the foundation. Our AI measurement engine treats the human form with the respect of a structural blueprint.",
+        "title": "Fit comes first",
+        "description": "Measure with your phone in about a minute. Every made-to-measure order reaches the tailor with the numbers it needs, and they can ask you if something looks off.",
         "icon": "ruler"
       },
       {
-        "title": "Curated Soul",
-        "description": "Technology without taste is noise. We partner with visionary designers and tailors to ensure every piece has a story.",
-        "icon": "brush"
+        "title": "Deadlines that count",
+        "description": "Every order has a ship-by date. If a vendor ships late, you are credited automatically, and long-overdue orders are cancelled and refunded.",
+        "icon": "clock"
       },
       {
-        "title": "Circular Future",
-        "description": "The most sustainable garment is the one that fits and lasts. Made-to-measure means fewer returns and less waste.",
-        "icon": "global"
+        "title": "Your details stay yours",
+        "description": "Your measurements go only to the tailor making your order. Vendors see your first name and area, not your full contact details.",
+        "icon": "lock"
       },
       {
-        "title": "Digital Autonomy",
-        "description": "Your wardrobe data belongs to you. Your measurements are yours to edit or delete at any time, and they're only shared with the tailor making your order.",
+        "title": "Fair to makers",
+        "description": "Free to join, 10% only when they sell, and paid on a fixed schedule, 14 days after the customer pays.",
         "icon": "shop"
       }
     ]
   },
+  "flow": {
+    "badge": "A bespoke order",
+    "title": "From your idea to your door",
+    "items": [
+      {
+        "title": "Measure",
+        "text": "A hands-free body scan, two photos, a quick estimate, or the numbers from your tailor's book."
+      },
+      {
+        "title": "Design it",
+        "text": "Pick a garment, choose the styles and a fabric in the studio, and the AI draws your outfit."
+      },
+      {
+        "title": "Get quotes",
+        "text": "Send it to tailors you choose. Each one quotes a price and a timeline."
+      },
+      {
+        "title": "Pay a deposit",
+        "text": "Accept the quote you like and pay the deposit. Your tailor starts work and you can chat as it's made."
+      },
+      {
+        "title": "Approve and receive",
+        "text": "See photos of the finished piece, pay the balance, and follow it to your door."
+      }
+    ]
+  },
   "cta": {
-    "title": "Step into the Atelier.",
-    "description": "Experience the future of personal style today.",
+    "title": "Be first in line.",
+    "description": "Qlozet is opening soon. Join the waitlist to hear when it does, or see what it offers if you make or sell fashion.",
     "primaryAction": {
-      "label": "Join the Waitlist",
+      "label": "Join the waitlist",
       "href": "/waitlist"
     },
     "secondaryAction": {
-      "label": "How Qlozet works",
-      "href": "/#process"
+      "label": "Sell with us",
+      "href": "/vendor"
     }
   }
 }

@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { AboutHero } from "@/components/about/AboutHero";
 import { StorySection } from "@/components/about/StorySection";
 import { ValuesSection } from "@/components/about/ValuesSection";
+import { VendorSteps } from "@/components/live/vendor-overview";
 import Link from "next/link";
 
 import navbarData from "@/data/global/navbar.json";
@@ -20,6 +21,8 @@ export default function AboutPage() {
         <StorySection data={aboutData.story} />
         
         <ValuesSection data={aboutData.values} />
+
+        <VendorSteps {...aboutData.flow} />
 
         {/* CTA Section */}
         <section className="relative overflow-hidden bg-brand-darker py-24 sm:py-32" data-theme="dark">

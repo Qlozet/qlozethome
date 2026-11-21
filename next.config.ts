@@ -13,7 +13,10 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     // The old How it works page was folded into /vendor.
-    return [{ source: "/works", destination: "/vendor#how-it-works", permanent: true }];
+    return [
+      { source: "/works", destination: "/vendor#how-it-works", permanent: true },
+      { source: "/whatwedo", destination: "/about", permanent: true },
+    ];
   },
   async rewrites() {
     // Proxy /api requests to the backend to avoid CORS issues

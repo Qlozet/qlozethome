@@ -6,6 +6,7 @@ import { useRef } from "react";
 type AboutHeroProps = {
   data: {
     id: string;
+    eyebrow: string;
     title: string;
     description: string;
     image: {
@@ -28,8 +29,9 @@ export function AboutHero({ data }: AboutHeroProps) {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
+  // Visible from the first frame; only a small rise.
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
@@ -40,7 +42,7 @@ export function AboutHero({ data }: AboutHeroProps) {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 1, y: 16 },
     visible: { 
       opacity: 1, 
       y: 0,
@@ -80,7 +82,7 @@ export function AboutHero({ data }: AboutHeroProps) {
             <motion.div variants={itemVariants} className="flex items-center gap-6">
               <span className="inline-flex h-px w-16 bg-white/40 sm:block hidden" />
               <span className="font-display text-[11px] font-bold uppercase tracking-[0.5em] text-white/50">
-                The Qlozet Registry
+                {data.eyebrow}
               </span>
             </motion.div>
             
@@ -93,7 +95,7 @@ export function AboutHero({ data }: AboutHeroProps) {
             
             <motion.p 
               variants={itemVariants}
-              className="max-w-2xl font-ui text-lg leading-relaxed text-white/50 sm:text-xl lg:text-2xl"
+              className="max-w-2xl font-ui text-lg leading-relaxed text-white/70 sm:text-xl lg:text-2xl"
             >
               {data.description}
             </motion.p>

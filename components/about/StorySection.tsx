@@ -17,7 +17,7 @@ export function StorySection({ data }: StorySectionProps) {
         <div className="grid gap-16 lg:grid-cols-2">
           {/* Tagline & Title */}
           <motion.div 
-            initial={{ y: 30, opacity: 0 }}
+            initial={{ y: 16, opacity: 1 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1 }}
@@ -39,7 +39,7 @@ export function StorySection({ data }: StorySectionProps) {
             {data.paragraphs.map((p, idx) => (
               <motion.p
                 key={idx}
-                initial={{ y: 20, opacity: 0 }}
+                initial={{ y: 12, opacity: 1 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}

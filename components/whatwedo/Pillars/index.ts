@@ -1,2 +1,0 @@
-export { PillarsSection } from "./PillarsSection";
-
