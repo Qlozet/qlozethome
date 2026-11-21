@@ -22,7 +22,7 @@ export function Footer({ data }: FooterProps) {
                   QLZT
                 </Link>
                 <p className="max-w-md font-ui text-base leading-relaxed text-white/50">
-                  Made-to-measure and ready-to-wear fashion from independent tailors and designers, built in Nigeria.
+                  Made-to-measure and ready-to-wear fashion from independent tailors and designers.
                 </p>
               </div>
 

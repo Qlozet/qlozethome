@@ -1,7 +1,7 @@
 {
   "id": "hero",
   "title": "Your Style, Your Way",
-  "description": "Clothes made to your measurements by Nigerian tailors and designers, or ready to wear from their stores. Measure with your phone, design in the studio, and follow every order to your door.",
+  "description": "Clothes made to your measurements by independent tailors and designers, or ready to wear from their stores. Measure with your phone, design in the studio, and follow every order to your door.",
   "primaryAction": {
     "label": "Request Early Access",
     "href": "/waitlist"
