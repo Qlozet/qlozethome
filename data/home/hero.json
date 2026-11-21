@@ -1,9 +1,9 @@
 {
   "id": "hero",
   "title": "Your Style, Your Way",
-  "description": "Clothes made to your measurements by independent tailors and designers, or ready to wear from their stores. Measure with your phone, design in the studio, and follow every order to your door.",
+  "description": "Clothes made to your measurements by independent tailors and designers, or ready to wear from their stores.",
   "primaryAction": {
-    "label": "Request Early Access",
+    "label": "Join the waitlist",
     "href": "/waitlist"
   },
   "scrollPrompt": {
@@ -14,5 +14,9 @@
     "src": "/image/heroimage.png",
     "alt": "Stylish woman showcasing Qlozet fashion"
   },
-  "eyebrow": "Made to measure · Ready to wear"
+  "eyebrow": "Made to measure · Ready to wear",
+  "secondaryAction": {
+    "label": "Selling? Join as a maker",
+    "href": "/vendor"
+  }
 }

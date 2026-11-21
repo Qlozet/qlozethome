@@ -50,8 +50,8 @@ export function HeroSection({ data }: HeroSectionProps) {
       {/* Background Layer with Parallax-lite effect */}
       <motion.div 
         style={{ y, opacity }}
-        initial={{ scale: 1.15, filter: "blur(10px)", opacity: 0 }}
-        animate={{ scale: 1, filter: "blur(0px)", opacity: 1 }}
+        initial={{ scale: 1.06 }}
+        animate={{ scale: 1 }}
         transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] as any }}
         className="absolute inset-0"
       >
@@ -59,21 +59,21 @@ export function HeroSection({ data }: HeroSectionProps) {
           src={data.image.src}
           alt={data.image.alt}
           fill
-          className="object-cover object-top grayscale-[0.2] brightness-[0.4] transition-all duration-1000 hover:scale-105 hover:grayscale-0 hover:brightness-75"
+          className="object-cover object-top grayscale-[0.1] brightness-[0.6]"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
       </motion.div>
 
       {/* Content Layer - Unified Absolute Layout */}
       <div className="absolute inset-0 mx-auto z-10 w-full max-w-[94rem]">
-        <div className="flex h-full flex-col justify-center gap-12 px-6 md:px-10 lg:px-10 pt-20">
+        <div className="flex h-full flex-col justify-center gap-12 px-6 pb-24 pt-20 md:px-10 lg:px-10">
           <motion.div 
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-col gap-10"
+            className="flex flex-col gap-8"
           >
             <motion.div variants={itemVariants} className="flex items-center gap-6">
               <span className="inline-flex h-px w-16 bg-white/40 sm:block hidden" />
@@ -96,14 +96,22 @@ export function HeroSection({ data }: HeroSectionProps) {
               {data.description}
             </motion.p>
 
-            <motion.div variants={itemVariants} className="flex flex-col gap-6 pt-6 sm:flex-row sm:items-center">
+            <motion.div variants={itemVariants} className="flex flex-col items-start gap-6 pt-4 sm:flex-row sm:items-center sm:gap-10">
               <Link
                 href={data.primaryAction.href}
-                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-white px-16 py-6 text-[10px] font-bold uppercase tracking-[0.4em] text-black shadow-2xl transition-all hover:scale-105 active:scale-[0.98]"
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-white px-12 py-5 text-[10px] font-bold uppercase tracking-[0.4em] text-black shadow-2xl transition-all hover:scale-105 active:scale-[0.98]"
               >
                 <span className="relative z-10">{data.primaryAction.label}</span>
                 <div className="absolute inset-0 -translate-x-full bg-zinc-100 transition-transform duration-500 group-hover:translate-x-0" />
               </Link>
+              {data.secondaryAction && (
+                <Link
+                  href={data.secondaryAction.href}
+                  className="font-ui text-base text-white/70 underline decoration-white/30 underline-offset-8 transition-colors hover:text-white hover:decoration-white"
+                >
+                  {data.secondaryAction.label}
+                </Link>
+              )}
             </motion.div>
           </motion.div>
         </div>
