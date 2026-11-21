@@ -1,27 +1,27 @@
 {
   "id": "why",
   "eyebrow": "Why Qlozet",
-  "title": "Fashion made around you",
+  "title": "Built so you can trust it",
   "cards": [
     {
-      "title": "Made to your measurements",
-      "description": "Measure with your phone in about a minute. Every made-to-measure order reaches your tailor with the numbers it needs.",
+      "title": "Your tailor checks your numbers",
+      "description": "If a measurement looks off, your tailor asks you before cutting, and your answer updates the order.",
       "icon": "Ruler"
     },
     {
-      "title": "Real makers, real stores",
-      "description": "Shop independent tailors, designers and fabric sellers, each with their own store, ratings and reviews.",
-      "icon": "Palette"
+      "title": "See it before it ships",
+      "description": "Bespoke pieces come with photos of the finished outfit, and you pay the balance only after you have seen them.",
+      "icon": "Camera"
     },
     {
-      "title": "Design it yourself",
-      "description": "Create an outfit in the AI studio, send it to tailors you choose, and pick the quote you like.",
-      "icon": "Sparkles"
+      "title": "Late means credit",
+      "description": "If a maker ships late you are credited automatically. If they abandon an order, it is cancelled and you are refunded.",
+      "icon": "Clock"
     },
     {
-      "title": "Orders that look after you",
-      "description": "If an order ships late you are credited automatically, and refunds go straight to your Qlozet wallet.",
-      "icon": "Globe"
+      "title": "Your details stay yours",
+      "description": "A scan sends an outline of you, never a photo. Makers see only your short name and area.",
+      "icon": "Lock"
     }
   ]
 }

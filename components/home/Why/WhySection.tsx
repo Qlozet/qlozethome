@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Ruler, Palette, Sparkles, Globe } from "lucide-react";
+import { Ruler, Camera, Clock, Lock } from "lucide-react";
 
 type WhyData = typeof import("@/data/home/why.json");
 
@@ -16,9 +16,9 @@ type WhySectionProps = {
 
 const iconMap: Record<string, any> = {
   Ruler,
-  Palette,
-  Sparkles,
-  Globe
+  Camera,
+  Clock,
+  Lock
 };
 
 // Animation variants
@@ -83,7 +83,7 @@ export function WhySection({ data, scrollPrompt }: WhySectionProps) {
             >
               <div className="relative h-12 w-12 transition-all duration-500 group-hover:scale-110">
                 {(() => {
-                  const Icon = iconMap[card.icon] || Globe;
+                  const Icon = iconMap[card.icon] || Ruler;
                   return <Icon className="h-full w-full stroke-[1.5] text-[#3A3A3A] opacity-80 group-hover:opacity-100" />;
                 })()}
               </div>
