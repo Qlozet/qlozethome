@@ -1,22 +1,22 @@
 {
   "id": "process",
   "eyebrow": "How it works",
-  "title": "Three simple steps tailored around you",
-  "description": "Measure once, choose what you want, and get it made by the tailor you pick.",
+  "title": "From your measurements to your door",
+  "description": "Measure once, choose your outfit, and a tailor makes it for you. Buying ready to wear? Just pick your size.",
   "steps": [
     {
       "title": "Measure",
-      "description": "Use your device to capture your body measurements in about a minute, guided by voice.",
+      "description": "Measure yourself with your phone in about a minute, no tape needed. Already have your numbers from a tailor? Type them in.",
       "icon": "/svg/measure.svg"
     },
     {
-      "title": "Pick a design",
-      "description": "Shop ready to wear from independent stores, or design your own outfit in the studio and choose a tailor’s quote.",
+      "title": "Choose",
+      "description": "Pick an outfit from a tailor’s store, or design your own and let tailors send you a price.",
       "icon": "/svg/picker.svg"
     },
     {
-      "title": "Tailored & delivered",
-      "description": "Your tailor makes it to your measurements. For bespoke pieces you see photos of the finished outfit before it ships, then follow it to your door.",
+      "title": "Made and delivered",
+      "description": "Your tailor makes it to your measurements and sends it to you. Follow it all the way to your door.",
       "icon": "/svg/seam.svg"
     }
   ],
