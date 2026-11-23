@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Ruler, Camera, Clock, Lock } from "lucide-react";
+import { Ruler, Store, Camera, ShieldCheck } from "lucide-react";
 
 type WhyData = typeof import("@/data/home/why.json");
 
@@ -16,9 +16,9 @@ type WhySectionProps = {
 
 const iconMap: Record<string, any> = {
   Ruler,
+  Store,
   Camera,
-  Clock,
-  Lock
+  ShieldCheck
 };
 
 // Animation variants

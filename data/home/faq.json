@@ -7,6 +7,10 @@
       "answer": "Four ways: a hands-free body scan where your phone guides you by voice, two photos, a quick estimate from your height, weight and a few questions about your shape, or the numbers from your tailor's book. Only an outline of your body leaves your phone. No photo is uploaded or kept."
     },
     {
+      "question": "Who sees my details?",
+      "answer": "Your tailor sees your short name, your area and the measurements they need to make your order. Nothing else. When you measure with your phone, only an outline of your body is sent, never a photo."
+    },
+    {
       "question": "How long does delivery take?",
       "answer": "Ready-to-wear shows a delivery estimate on every product. For made-to-measure and bespoke pieces, your tailor gives you their timeline in the quote, before you pay. If a vendor misses their promised window, our On-Time Promise credits compensation to your wallet."
     },

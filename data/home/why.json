@@ -1,27 +1,27 @@
 {
   "id": "why",
   "eyebrow": "Why Qlozet",
-  "title": "Built so you can trust it",
+  "title": "Clothes that fit, from tailors you can trust",
   "cards": [
     {
-      "title": "Your tailor checks your numbers",
-      "description": "If a measurement looks off, your tailor asks you before cutting, and your answer updates the order.",
+      "title": "Made to fit you",
+      "description": "Every piece is made to your body, not a standard size. Measure once with your phone and use it for every order.",
       "icon": "Ruler"
     },
     {
-      "title": "See it before it ships",
-      "description": "Bespoke pieces come with photos of the finished outfit, and you pay the balance only after you have seen them.",
+      "title": "Good tailors in one place",
+      "description": "Browse independent tailors and designers, see their work and prices, and pick the one you like.",
+      "icon": "Store"
+    },
+    {
+      "title": "See it before you pay in full",
+      "description": "For custom outfits you see photos of the finished piece before it ships, and pay the rest only then.",
       "icon": "Camera"
     },
     {
-      "title": "Late means credit",
-      "description": "If a maker ships late you are credited automatically. If they abandon an order, it is cancelled and you are refunded.",
-      "icon": "Clock"
-    },
-    {
-      "title": "Your details stay yours",
-      "description": "A scan sends an outline of you, never a photo. Makers see only your short name and area.",
-      "icon": "Lock"
+      "title": "Covered if something goes wrong",
+      "description": "If your order is late, you get credit automatically. If it never ships, you get your money back.",
+      "icon": "ShieldCheck"
     }
   ]
 }
